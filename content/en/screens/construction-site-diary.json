@@ -1,0 +1,42 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a site engineer's diary entry for one day on a building site, submitted and waiting for the project manager to sign it off.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "PRJ-2026-0033 · Lagoonside Court, Ikoyi" },
+  "nav": [
+    { "label": "Construction", "items": [{ "label": "Progress billing" }, { "label": "Site diary", "active": true }, { "label": "Snag list" }, { "label": "Subcontractors", "badge": "3" }] },
+    { "label": "Entries", "items": [{ "label": "Fri 16 Oct · rain, then dry", "badge": "New" }, { "label": "Thu 15 Oct · dry, hot" }, { "label": "Wed 14 Oct · dry" }, { "label": "Tue 13 Oct · light rain" }, { "label": "Mon 12 Oct · dry" }] }
+  ],
+  "title": "Friday 16 October 2026",
+  "subtitle": "Written by Segun Oladipo, site engineer · submitted 17:42 · rain 07:00 to 10:00, then dry, 29°C",
+  "actions": [{ "label": "Return it with a note" }, { "label": "Sign off", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "On site", "value": "47", "note": "31 own staff · 16 subcontract" },
+      { "icon": "clock", "label": "Hours lost", "value": "3", "change": { "tone": "warn", "text": "Rain, 07:00 to 10:00" } },
+      { "icon": "box", "label": "Equipment", "value": "5 items", "note": "Mixer, 2 hoists, 2 vibrators" },
+      { "icon": "check", "label": "Safety", "value": "No incidents", "note": "Toolbox talk at 07:30" }
+    ] },
+    { "type": "cards", "columns": 3, "items": [
+      { "title": "Work done", "body": "Floor 5 slab: formwork finished, 60% of the reinforcement fixed. Floor 4 block walls: grids A to C complete. Roof trusses delivered and counted, 14 of 14." },
+      { "title": "Delays and problems", "body": "No concrete until 10:30 because of the rain. Cement arrived 2 hours late and the supplier was told. An electrical conduit clashes at grid D on floor 4, waiting for the engineer's answer." },
+      { "title": "Instructions and visitors", "body": "Architect's instruction AI-0018: move the floor 5 door openings 150 mm. The client's surveyor visited from 11:00 to 12:30." }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Photos", "columns": [{ "label": "Photo" }, { "label": "Taken" }], "rows": [
+        ["Floor 5 formwork", "16:05"],
+        ["Conduit clash, grid D, floor 4", "14:20"],
+        ["Truss delivery", "12:10"],
+        ["Rain on site", "08:15"]
+      ] },
+      { "type": "table", "title": "Hours lost this month", "columns": [{ "label": "Why" }, { "label": "Hours", "numeric": true }], "rows": [
+        ["Weather", "11"],
+        ["Late deliveries", "4"],
+        ["Waiting for information", "2"],
+        [{ "strong": "October so far" }, "17"]
+      ] }
+    ] }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a clinic's consent and record settings: the consent wordings with their versions, who may open a record, the idle lock and how long records are kept.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "AP", "name": "Ayomide Physiotherapy Clinic", "place": "Bodija" },
+  "nav": [
+    { "label": "Client records", "items": [{ "label": "Clients" }, { "label": "Access log" }, { "label": "Data requests" }, { "label": "Consent and settings", "active": true }] }
+  ],
+  "title": "Consent and settings",
+  "subtitle": "What clients agree to, who may open a record and how long it is kept. A change to a wording makes a new version.",
+  "actions": [{ "label": "Discard" }, { "label": "Save changes", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "table", "title": "What clients are asked to agree to", "columns": [{ "label": "Consent" }, { "label": "Wording" }, { "label": "Version" }, { "label": "Valid for" }], "rows": [
+      [{ "strong": "Treatment" }, "I agree to be assessed and treated and for notes to be kept.", "2", "24 months"],
+      [{ "strong": "Share with my insurer" }, "I agree that my insurer may receive the information needed for a claim. Nothing is sent without it.", "1", "24 months"],
+      [{ "strong": "Photos for my record" }, "I agree to photos of the treated area being kept in my record. No photo is kept without it.", { "pill": "info", "text": "3 · changed" }, "12 months"]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Who can open a record", "items": [
+        { "label": "The treating practitioner", "value": "Opens their own clients' records with no question" },
+        { "label": "Other clinical staff", "value": "Must give a reason, which is logged" },
+        { "label": "Front desk and managers", "value": "Name, phone, bookings and consent state only" },
+        { "label": "Break-glass", "value": "Anyone clinical, in an emergency, with a written reason; announced at once" },
+        { "label": "Owner", "value": "The only default role with clinical access" }
+      ] },
+      { "type": "kv", "title": "Keeping records", "items": [
+        { "label": "An open record locks after", "value": "5 minutes without use" },
+        { "label": "Adult records", "value": "Kept 7 years after the last visit" },
+        { "label": "Children's records", "value": "Kept until they turn 18, plus the adult period" },
+        { "label": "Clients under 18", "value": "Need a guardian; consent is the guardian's" },
+        { "label": "Privacy officer", "value": "Ayomide Oladipo · applies the retention rules" },
+        { "label": "Data requests", "value": "Due 30 days from receipt" },
+        { "label": "Encryption", "value": "Clinical fields encrypted again with this organisation's own key · always on" }
+      ] }
+    ] }
+  ]
+}

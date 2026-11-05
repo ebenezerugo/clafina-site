@@ -1,0 +1,43 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a hotel's rate plans, seasons and special dates, with a busy weekend added and each step from base rate to the night's price.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "MC", "name": "Marina Court Hotel", "place": "Calabar" },
+  "nav": [
+    { "label": "Accommodation", "items": [{ "label": "Front desk" }, { "label": "Room rack" }, { "label": "Housekeeping" }, { "label": "Folios" }] },
+    { "label": "Set-up", "items": [{ "label": "Rates", "active": true }, { "label": "Channels" }, { "label": "Night audit" }] }
+  ],
+  "title": "Rate plans and seasons",
+  "subtitle": "What a night costs, for which guest and when. A plan sits beside the base rate; a season moves it up or down.",
+  "actions": [{ "label": "Add a special date" }, { "label": "New rate plan", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "table", "title": "Rate plans", "columns": [{ "label": "Plan" }, { "label": "Terms" }, { "label": "Standard", "numeric": true }, { "label": "Deluxe", "numeric": true }, { "label": "Suite", "numeric": true }], "rows": [
+      ["Base rate", "Everyone, every night · cancel free to 48 h before", { "money": 65000 }, { "money": 95000 }, { "money": 180000 }],
+      ["Bed and breakfast", "Adds breakfast for two · cancel free to 48 h before", { "money": 74000 }, { "money": 104000 }, { "money": 189000 }],
+      ["Non-refundable", "10% off · paid in full · no refund, no changes", { "money": 58500 }, { "money": 85500 }, { "money": 162000 }],
+      ["Weekly stay", "7 nights or more · 15% off", { "money": 55250 }, { "money": 80750 }, { "money": 153000 }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Seasons and special dates", "columns": [{ "label": "When" }, { "label": "What it does" }, { "label": "State" }], "rows": [
+        ["Rainy season · 1 Jun to 31 Oct, each year", "10% off every plan on the base rate", { "pill": "good", "text": "On now" }],
+        ["Festive peak · 15 Dec to 5 Jan, each year", "30% on every plan on the base rate", { "pill": "neutral", "text": "Coming" }],
+        ["Trade fair weekend · Fri 27 to Sat 28 Nov", "Sets Deluxe at ₦125,000 · 2 nights or more", { "pill": "info", "text": "Just added" }],
+        ["New year's eve · Thu 31 Dec", "Closes the night on non-refundable", { "pill": "neutral", "text": "Coming" }]
+      ] },
+      { "type": "kv", "title": "Try a price · Deluxe, base rate, Fri 27 and Sat 28 Nov", "items": [
+        { "label": "Base rate", "value": { "money": 95000 } },
+        { "label": "Season", "value": "None in November" },
+        { "label": "Weekend, 10% up", "value": { "money": 104500 } },
+        { "label": "Special date sets the price", "value": { "money": 125000 } },
+        { "label": "Minimum stay", "value": "2 nights · met" },
+        { "label": "2 nights", "value": { "strong": "₦250,000" } }
+      ] }
+    ] },
+    { "type": "kv", "title": "Rules on every plan", "items": [
+      { "label": "Weekend nights (Fri, Sat)", "value": "10% up on every plan" },
+      { "label": "Taxes and the service charge", "value": "Added on the folio, not in the rate" }
+    ] }
+  ]
+}

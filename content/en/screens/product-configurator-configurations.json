@@ -1,0 +1,31 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: saved desk configurations, each with its exact choices, product version and what it came to, as drafts, quoted or cancelled.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "OF", "name": "Oyelaran Office Furniture", "place": "Ikeja workshop" },
+  "nav": [
+    { "label": "Configurator", "items": [{ "label": "Configurable products" }, { "label": "Options and rules" }, { "label": "Configure and quote" }, { "label": "Configurations", "active": true }] }
+  ],
+  "title": "Configurations",
+  "subtitle": "Each keeps its exact choices, the product version and what it came to. The list updates live.",
+  "actions": [{ "label": "Configure and quote", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "table", "label": "All", "value": "9" },
+      { "icon": "clock", "label": "Drafts", "value": "3" },
+      { "icon": "receipt", "label": "Quoted", "value": "5" },
+      { "icon": "down", "label": "Cancelled", "value": "1" }
+    ] },
+    { "type": "attention", "title": "A customer called back", "items": [
+      { "tone": "info", "icon": "phone", "title": "Mrs Nwankwo wants the 160 cm width", "body": "CFG-2026-0043 is a draft, so it can be changed. At 160 cm it comes to ₦224,000.", "action": "Change the draft" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Number" }, { "label": "Executive desk ED-1600 v3" }, { "label": "Qty", "numeric": true }, { "label": "For" }, { "label": "Total", "numeric": true }, { "label": "Lead time" }, { "label": "State" }], "rows": [
+      ["CFG-2026-0044", "160 × 70 · Mahogany · Matte · 2 drawers · cable port", "4", "Ojo and Partners", { "money": 1254000 }, "13 working days", { "pill": "info", "text": "Quoted · QT-2026-0188" }],
+      ["CFG-2026-0043", "140 × 60 · Oak veneer · Gloss · 1 drawer · no cable port", "1", "Mrs Ifeoma Nwankwo", { "money": 202000 }, "10 working days", { "pill": "neutral", "text": "Draft" }],
+      ["CFG-2026-0042", "180 × 80 · Gmelina · Matte · 3 drawers · cable port", "2", "Lagoon View Hotel", { "money": 563000 }, "10 working days", { "pill": "info", "text": "Quoted · QT-2026-0183" }],
+      ["CFG-2026-0039", "120 × 60 · Oak veneer · Matte · no drawers · no cable port", "6", "Eko Tutors Ltd", { "money": 1002000 }, "10 working days", { "pill": "warn", "text": "Cancelled" }]
+    ] }
+  ]
+}

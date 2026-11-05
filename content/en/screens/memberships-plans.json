@@ -1,0 +1,40 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a gym's plans, from a monthly membership to a corporate plan with named seats, with the billing rules set once for all of them.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "HF", "name": "Harmattan Fitness Club", "place": "Lekki" },
+  "nav": [
+    { "label": "Memberships", "items": [{ "label": "Members" }, { "label": "Plans", "active": true }, { "label": "Billing runs" }, { "label": "Contracts and retainers" }, { "label": "Front desk" }] }
+  ],
+  "title": "Plans",
+  "subtitle": "What members buy. A price change applies to new members; existing members keep their price until you move them.",
+  "actions": [{ "label": "New plan", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Active members", "value": "499", "note": "60 of them on corporate seats" },
+      { "icon": "money", "label": "A month from plans", "value": { "money": 10900000 }, "note": "Day passes not included" },
+      { "icon": "alert", "label": "Payment overdue", "value": "9", "note": "₦225,000 owed" }
+    ] },
+    { "type": "cards", "columns": 3, "items": [
+      { "title": "Monthly Unlimited", "body": "Gym floor and every class. Renews on the 1st. Freeze up to 30 days a year. 214 members.", "value": { "money": 25000 }, "pill": { "tone": "info", "text": "₦5,350,000 a month" } },
+      { "title": "Annual", "body": "Everything in Monthly, paid once a year. Reminder 30 days before it renews. 96 members.", "value": { "money": 250000 }, "pill": { "tone": "info", "text": "₦2,000,000 a month, spread" } },
+      { "title": "10-class pack", "body": "Any 10 classes in 60 days. Does not renew; top up when used. No gym floor. 71 members.", "value": { "money": 40000 }, "pill": { "tone": "info", "text": "₦1,420,000 a month" } },
+      { "title": "Student", "body": "Gym floor and off-peak classes. Student ID checked when they join. No freezes. 58 members.", "value": { "money": 15000 }, "pill": { "tone": "info", "text": "₦870,000 a month" } },
+      { "title": "Corporate · 10 seats", "body": "One invoice to the company for ten named members. If the company owes, its seats stop at the door. 6 companies.", "value": { "money": 210000 }, "pill": { "tone": "info", "text": "₦1,260,000 a month" } },
+      { "title": "Day pass", "body": "Gym floor for one day, sold at the desk. The QR card is emailed. 154 sold in October.", "value": { "money": 3500 }, "pill": { "tone": "neutral", "text": "₦539,000 in October" } }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Billing, set once for all plans", "items": [
+        { "label": "Bills on", "value": "The 1st of the month" },
+        { "label": "Reminders", "value": "Day 1, 3 and 7 after the due date" },
+        { "label": "Access paused after", "value": "7 days unpaid" },
+        { "label": "First part-month", "value": "Charged by the day from joining" }
+      ] },
+      { "type": "attention", "title": "Price change waiting", "items": [
+        { "tone": "info", "icon": "up", "title": "Monthly Unlimited goes to ₦27,500 for new members on 1 Nov", "body": "The 214 members on it keep ₦25,000 until you move them. Each one you move shows as a price change on the next billing run.", "action": "Move members from a date" }
+      ] }
+    ] }
+  ]
+}

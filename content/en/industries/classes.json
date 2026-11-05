@@ -1,0 +1,236 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "CLASSES.md",
+    "MEMBERSHIPS.md",
+    "BOOKINGS.md",
+    "INDUSTRY_PACKS.md",
+    "ROADMAP.md",
+    "commerce-web/docs/features.md",
+    "docs/industry-facts.md#industry-classes"
+  ],
+  "meta": {
+    "title": "Classes: the timetable, the waiting list and check-in · Clafina",
+    "description": "A class week coloured by places left, a waiting list that offers the freed place by itself, class packs as credits and check-in at the door. The Classes pack for Clafina."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Classes",
+    "title": "Every place booked once, and the next in line offered the one that opens.",
+    "lede": "For studios, gyms and anyone running a timetable of classes with places. Plans, class packs and drop-ins all book the same way.",
+    "screen": "classes-schedule"
+  },
+  "business": {
+    "name": "Tamarind Movement Studio",
+    "place": "Wuse II, Abuja",
+    "label": true,
+    "about": "A studio with two rooms and five teachers, running spin, yoga, pilates and dance from early morning. Some people come on a monthly plan, others on a class pack."
+  },
+  "dayTitle": "A day at Tamarind Movement Studio",
+  "moments": [
+    {
+      "time": "06:00",
+      "title": "One place left in the early spin class",
+      "problem": "Two people at the desk book the last place in the same moment, one for a caller on the phone and one for someone standing in front of them.",
+      "handles": "While a booking takes a place, the class is held for it, so two people can never take the last one. The second person goes onto the waiting list, in the order they asked.",
+      "surface": "web"
+    },
+    {
+      "time": "08:00",
+      "title": "A plan, a pack and a drop-in",
+      "problem": "Zainab is on a monthly plan, Tolu bought a class pack, and a visitor just wants tonight's yoga. Who pays how?",
+      "handles": "Zainab books on her plan when it allows that class at that time. Tolu's booking takes the credits that run out soonest. The visitor is invoiced a drop-in, if the class has a price. Nobody has to remember the rules.",
+      "surface": "web"
+    },
+    {
+      "time": "10:00",
+      "title": "Someone cancels this evening's yoga",
+      "problem": "Kunle can't make it tonight. Is the credit his to keep?",
+      "handles": "Cancelling is free until the number of hours before the class that you set, and the credit comes back. After that it is a late cancel, and the credit is kept if your setting says so.",
+      "surface": "web"
+    },
+    {
+      "time": "10:01",
+      "title": "The freed place goes to the first in line",
+      "problem": "The class is full and three people are waiting. Nobody has time to phone round.",
+      "handles": "The first person waiting is offered the place by email for a set number of minutes. If she doesn't take it, the offer lapses and the next person is offered it. Staff can also offer the place to anyone on the list.",
+      "surface": "web",
+      "screen": "classes-class"
+    },
+    {
+      "time": "17:30",
+      "title": "Doors open for the evening yoga",
+      "problem": "Twenty people arrive in a few minutes and the queue backs up to the street.",
+      "handles": "Check-in uses the same front desk as memberships: scan a code or pick a name from the class list. Each visit is counted once. If someone is stopped, the reason is shown, and staff can let them in once with a reason. A walk-in can be booked at the door when there is a free place, and doors open and close at the minutes you set around the start.",
+      "surface": "web",
+      "screen": "classes-checkin"
+    },
+    {
+      "time": "19:05",
+      "title": "Class is over",
+      "problem": "Who booked and didn't come?",
+      "handles": "At the end of the class, the no-shows are marked, with the credit kept if you set it that way. Any offer still open lapses and the class is closed. The owner sees it all on her phone.",
+      "surface": "phone",
+      "screen": "classes-today-phone"
+    },
+    {
+      "time": "20:00",
+      "title": "A teacher is ill for tomorrow",
+      "problem": "Hauwa can't teach the morning class. Everyone booked needs to know, and to get their credit back.",
+      "handles": "Cancelling the class cancels every place, gives every credit back and emails everyone who was booked. To tell a class something without cancelling, staff can message everyone in it.",
+      "surface": "web"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Class schedule",
+      "meaning": "The week's classes, coloured by places left: open, almost full or full."
+    },
+    {
+      "word": "Class pack",
+      "meaning": "A number of classes bought up front as credits, good for a set number of days."
+    },
+    {
+      "word": "Credits",
+      "meaning": "What a class pack holds. A booking takes the credits that run out soonest."
+    },
+    {
+      "word": "Drop-in",
+      "meaning": "One class paid for on its own, invoiced at the class's price."
+    },
+    {
+      "word": "Waiting list",
+      "meaning": "People waiting for a full class, in the order they asked."
+    },
+    {
+      "word": "Offer",
+      "meaning": "A freed place offered by email to the next person waiting, for a set time."
+    },
+    {
+      "word": "Late cancel",
+      "meaning": "A cancel after the free cancel time. The credit can be kept."
+    },
+    {
+      "word": "No-show",
+      "meaning": "Booked but didn't come, marked when the class ends."
+    },
+    {
+      "word": "Doors open",
+      "meaning": "When check-in for a class opens and closes, set in minutes around the start."
+    }
+  ],
+  "switchesTitle": "What the Classes pack switches on",
+  "switchesOn": [
+    {
+      "text": "A Classes menu: class schedule, check-in, class packs and teachers' pay"
+    },
+    {
+      "text": "Class types and classes, once or weekly, with the room, teacher, places, length, drop-in price and credits"
+    },
+    {
+      "text": "No double booking of the last place, and a waiting list in order"
+    },
+    {
+      "text": "Paying with a plan, class pack credits or a drop-in invoice"
+    },
+    {
+      "text": "Free cancel time, late cancels and no-shows, each set the way you work"
+    },
+    {
+      "text": "Waiting-list offers by email that lapse to the next person"
+    },
+    {
+      "text": "Check-in through the memberships front desk, with walk-ins and a once-off let-in"
+    },
+    {
+      "text": "Class packs sold as credits, with every credit used or returned kept on record"
+    },
+    {
+      "text": "Teachers' pay worked out each month from classes taught and people who came"
+    },
+    {
+      "text": "How far ahead people can book, as a setting"
+    },
+    {
+      "text": "The place kind studio"
+    },
+    {
+      "text": "A booking screen for members to book their own classes",
+      "prelaunch": "industry-classes"
+    },
+    {
+      "text": "Waiting-list offers by WhatsApp or text message",
+      "prelaunch": "industry-classes"
+    },
+    {
+      "text": "Teachers' pay sent into payroll",
+      "prelaunch": "industry-classes"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "industry-memberships",
+      "text": "Members book on their plan, and check-in asks the same rule as the memberships front desk."
+    },
+    {
+      "route": "product-bookings",
+      "text": "Classes are built on Bookings, the same engine behind every booking in Clafina."
+    },
+    {
+      "route": "product-sales",
+      "text": "Drop-ins and class packs are invoiced on the normal customer invoice."
+    },
+    {
+      "route": "product-crm",
+      "text": "Everyone who books, member or not, is a customer in your CRM."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a studio uses",
+  "modules": [
+    "product-bookings",
+    "product-sales",
+    "product-crm",
+    "product-mobile"
+  ],
+  "faqTitle": "Questions studios ask",
+  "faq": [
+    {
+      "q": "Do I need the Memberships pack too?",
+      "a": "No. Anyone with class pack credits can book without it, and drop-ins are invoiced. Switch on Memberships as well if your people come on monthly plans."
+    },
+    {
+      "q": "What stops two people taking the last place?",
+      "a": "While one booking takes a place, the class is held for it. The second person goes onto the waiting list instead."
+    },
+    {
+      "q": "What happens when someone cancels?",
+      "a": "Before the free cancel time, the credit comes back and the place is offered to the first person waiting. After it, the credit is kept if your setting says so."
+    },
+    {
+      "q": "Do class pack credits last for ever?",
+      "a": "No. Each pack is good for the number of days you set, and a booking takes the credits that run out soonest."
+    },
+    {
+      "q": "How is teachers' pay worked out?",
+      "a": "Classes taught times the rate for a class, plus people who came times the rate for each, at the rates in force on the first day of the month."
+    },
+    {
+      "q": "Can members book their own classes?",
+      "a": "Yes. Members have their own booking screen, where they book a class, see their credits and cancel within your rules.",
+      "prelaunch": "industry-classes"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-memberships",
+    "industry-courses",
+    "industry-events"
+  ],
+  "cta": {
+    "title": "Put your timetable in.",
+    "body": "Start free, switch on the Classes pack and add your week. Sell class packs and check people in from the first day."
+  }
+}

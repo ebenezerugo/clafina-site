@@ -1,0 +1,52 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a drinks distributor's day board, with six vans on their routes, a load sheet and the stops in order.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "AD", "name": "Aremu Drinks Distribution", "place": "Ikeja warehouse" },
+  "nav": [
+    { "label": "Distribution", "items": [{ "label": "Routes and van loads", "active": true }, { "label": "Settle a van", "badge": "1" }, { "label": "Empties and deposits" }, { "label": "Storage billing" }] }
+  ],
+  "title": "Routes and van loads · Monday 19 October",
+  "subtitle": "Which van goes where today, what is loaded and what comes back. Each van is a moving location with its own stock.",
+  "actions": [{ "label": "Routes" }, { "label": "Load a van", "primary": true, "icon": "box" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "box", "label": "Vans working today", "value": "6", "note": "Of 8 · 2 in the workshop" },
+      { "icon": "check", "label": "Stops planned", "value": "102", "note": "65 visited so far" },
+      { "icon": "sales", "label": "Sold from vans today", "value": { "money": 18400000 }, "note": "₦16.9m last Monday" },
+      { "icon": "up", "label": "Empties expected back", "value": "1,260", "note": "Crates and bottles" }
+    ] },
+    { "type": "table", "title": "Today's van loads", "columns": [{ "label": "Van and driver" }, { "label": "Route" }, { "label": "Stops", "numeric": true }, { "label": "Load value", "numeric": true }, { "label": "State" }], "rows": [
+      ["Van LND-418 · Segun Adebayo", "R1 Ikeja and Agege", "18", { "money": 4920000 }, { "pill": "info", "text": "Out · 12 of 18" }],
+      ["Van KJA-203 · Ibrahim Danjuma", "R2 Surulere and Yaba", "22", { "money": 5380000 }, { "pill": "info", "text": "Out · 15 of 22" }],
+      ["Van LND-776 · Peter Ikenna", "R3 Lekki and VI", "16", { "money": 4100000 }, { "pill": "neutral", "text": "Loading" }],
+      ["Van EKY-092 · Musa Danladi", "R4 Ikorodu", "14", { "money": 3610000 }, { "pill": "info", "text": "Out · 9 of 14" }],
+      ["Van LND-551 · Chika Obi", "R5 Ajah", "12", { "money": 3200000 }, { "pill": "warn", "text": "Back, to settle" }],
+      ["Van LND-099 · Tunde Raji", "R6 Mushin", "20", { "money": 4850000 }, { "pill": "info", "text": "Out · 17 of 20" }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Load sheet · van LND-418 · loaded 06:10 by Aisha Bello", "columns": [{ "label": "Item" }, { "label": "Loaded", "numeric": true }, { "label": "Value", "numeric": true }], "rows": [
+        ["Lager 60 cl", "120 crates", { "money": 1560000 }],
+        ["Premium cola 50 cl", "90 crates", { "money": 648000 }],
+        ["Malt drink 33 cl", "80 crates", { "money": 820000 }],
+        ["Bottled water 75 cl", "60 packs", { "money": 186000 }],
+        ["Gin 20 cl", "40 cartons", { "money": 1706000 }],
+        [{ "strong": "Load value" }, "", { "money": 4920000 }]
+      ] },
+      { "type": "table", "title": "Stops, in order · route R1", "columns": [{ "label": "Stop", "numeric": true }, { "label": "Customer" }, { "label": "State" }], "rows": [
+        ["12", "Mama Tola Stores, Ikeja", { "pill": "good", "text": "Done 11:40 · ₦286,000" }],
+        ["13", "Okechukwu Bar, Agege", { "pill": "info", "text": "Next · about 12:15" }],
+        ["14", "Ajibola Supermarket, Agege", { "pill": "neutral", "text": "Planned 12:45" }]
+      ] }
+    ] },
+    { "type": "table", "title": "Routes this week: stops each route makes on each day", "columns": [{ "label": "Route" }, { "label": "Mon", "numeric": true }, { "label": "Tue", "numeric": true }, { "label": "Wed", "numeric": true }, { "label": "Thu", "numeric": true }, { "label": "Fri", "numeric": true }, { "label": "Sat", "numeric": true }], "rows": [
+      ["R1 Ikeja and Agege", "18", "No stops", "No stops", "18", "No stops", "12"],
+      ["R2 Surulere and Yaba", "22", "No stops", "20", "No stops", "22", "No stops"]
+    ] },
+    { "type": "attention", "title": "On the road", "items": [
+      { "tone": "info", "icon": "phone", "title": "Drivers' phones work offline", "body": "Sales, payments and empties come in as each phone syncs.", "action": "See the stops" }
+    ] }
+  ]
+}

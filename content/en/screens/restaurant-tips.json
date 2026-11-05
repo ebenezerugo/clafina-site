@@ -1,0 +1,36 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a restaurant's tip run for one week, pooled by hours worked and role points, with each share paid in cash or added to payroll.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RT", "name": "Red Tile Kitchen", "place": "Bodija, Ibadan" },
+  "nav": [
+    { "label": "Restaurant", "items": [{ "label": "Floor" }, { "label": "Menus" }, { "label": "Kitchen" }, { "label": "Recipes" }, { "label": "Dish costs" }, { "label": "Waste" }, { "label": "Prices" }, { "label": "Tips", "active": true }] },
+    { "label": "Tip runs", "items": [{ "label": "12 to 18 Oct", "badge": "Draft", "active": true }, { "label": "5 to 11 Oct", "badge": "Approved" }, { "label": "28 Sep to 4 Oct", "badge": "Paid" }] }
+  ],
+  "title": "Tips of 12 to 18 October",
+  "subtitle": "Policy: pool by hours worked, weighted by the role's points · 38 tabs. Draft: read it before anything is paid.",
+  "actions": [{ "label": "Void this run" }, { "label": "Share again with these hours" }, { "label": "Approve", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "money", "label": "Tips taken", "value": { "money": 178674 }, "note": "38 tabs closed in the week" },
+      { "icon": "home", "label": "Kept by the house", "value": { "money": 0 }, "note": "Your policy keeps none" },
+      { "icon": "users", "label": "Shared out", "value": { "money": 178674 }, "note": "Among 8 people" }
+    ] },
+    { "type": "table", "title": "Shares", "columns": [{ "label": "Person" }, { "label": "Role" }, { "label": "Hours", "numeric": true }, { "label": "Share", "numeric": true }, { "label": "Paid" }], "rows": [
+      [{ "avatar": "BE", "text": "Blessing Etim" }, "Waiter", "38:30", { "money": 31420 }, { "pill": "neutral", "text": "Waiting · payroll" }],
+      [{ "avatar": "CO", "text": "Chioma Obi" }, "Waiter", "36:00", { "money": 29380 }, { "pill": "neutral", "text": "Waiting · payroll" }],
+      [{ "avatar": "TA", "text": "Tolu Adeyemi" }, "Waiter", "30:00", { "money": 24480 }, { "pill": "info", "text": "Waiting · cash" }],
+      [{ "avatar": "SJ", "text": "Sade Johnson" }, "Runner", "34:00", { "money": 18500 }, { "pill": "info", "text": "Waiting · cash" }],
+      [{ "avatar": "UN", "text": "Ugo Nnamdi" }, "Runner", "28:00", { "money": 15300 }, { "pill": "info", "text": "Waiting · cash" }],
+      [{ "avatar": "FO", "text": "Femi Ogunleye" }, "Head chef", "40:00", { "money": 35900 }, { "pill": "neutral", "text": "Waiting · payroll" }],
+      [{ "avatar": "BA", "text": "Bola Akinwale" }, "Host", "40:00", { "money": 16200 }, { "pill": "neutral", "text": "Waiting · payroll" }],
+      [{ "avatar": "KA", "text": "Kayode Ali" }, "Bar", "32:00", { "money": 7494 }, { "pill": "neutral", "text": "Waiting · payroll" }],
+      [{ "strong": "Shared out" }, "", "278:30", { "money": 178674 }, ""]
+    ] },
+    { "type": "attention", "title": "When you approve", "items": [
+      { "tone": "info", "icon": "receipt", "title": "3 shares are paid in cash, 5 go into the 28 October payroll", "body": "The run is booked in the ledger as tips owed to staff. Payroll shares are marked paid when that payroll is.", "action": "See the booking" }
+    ] }
+  ]
+}

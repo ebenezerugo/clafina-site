@@ -1,0 +1,36 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a studio's class week, with each class coloured by places left and a waiting list on the full ones.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "TS", "name": "Tamarind Movement Studio", "place": "Wuse II" },
+  "nav": [
+    { "label": "Classes", "items": [{ "label": "Class schedule", "active": true }, { "label": "Check-in" }, { "label": "Class packs" }, { "label": "Teachers' pay" }] }
+  ],
+  "title": "Class schedule · 19 to 25 October 2026",
+  "subtitle": "The week's classes with their places left. A place that opens is offered to the first person waiting.",
+  "actions": [{ "label": "Check-in" }, { "label": "Add a class", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "table", "label": "Classes this week", "value": "12" },
+      { "icon": "users", "label": "Places booked", "value": "178 of 225" },
+      { "icon": "alert", "label": "Full", "value": "3", "note": "6 people waiting" },
+      { "icon": "clock", "label": "Book ahead", "value": "14 days" }
+    ] },
+    { "type": "table", "title": "This week", "columns": [{ "label": "Day" }, { "label": "Time" }, { "label": "Class" }, { "label": "Teacher" }, { "label": "Booked" }], "rows": [
+      ["Mon 19", "06:30", "Spin", "Aisha", { "pill": "warn", "text": "19 of 20 · almost full" }],
+      ["Mon 19", "12:30", "Express HIIT", "Tobi", { "pill": "good", "text": "12 of 16" }],
+      ["Mon 19", "18:00", "Vinyasa yoga", "Hauwa", { "pill": "bad", "text": "20 of 20 · 3 waiting" }],
+      ["Tue 20", "06:30", "Pilates", "Ngozi", { "pill": "bad", "text": "14 of 14 · 1 waiting" }],
+      ["Tue 20", "17:30", "Boxing fit", "Tobi", { "pill": "good", "text": "9 of 18" }],
+      ["Wed 21", "06:30", "Spin", "Aisha", { "pill": "good", "text": "11 of 20" }],
+      ["Wed 21", "18:00", "Vinyasa yoga", "Hauwa", { "pill": "warn", "text": "18 of 20 · almost full" }],
+      ["Thu 22", "19:00", "Dance cardio", "Chika", { "pill": "good", "text": "19 of 25" }],
+      ["Fri 23", "06:30", "Spin", "Aisha", { "pill": "bad", "text": "20 of 20 · 2 waiting" }],
+      ["Sat 24", "09:30", "Boot camp", "Tobi", { "pill": "warn", "text": "17 of 20 · almost full" }],
+      ["Sat 24", "11:00", "Kids dance", "Chika", { "pill": "warn", "text": "13 of 15 · almost full" }],
+      ["Sun 25", "09:00", "Yoga flow", "Hauwa", { "pill": "good", "text": "6 of 17" }]
+    ] }
+  ]
+}

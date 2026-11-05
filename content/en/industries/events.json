@@ -1,0 +1,240 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "EVENTS.md",
+    "INDUSTRY_PACKS.md",
+    "docs/industry-facts.md#industry-events"
+  ],
+  "meta": {
+    "title": "Events and ticketing: tickets, tables and the gate · Clafina",
+    "description": "Ticket types, seating plans, door sales and a gate that lets each ticket in once. The Events pack for Clafina, on the same invoices and customers."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Events and ticketing",
+    "title": "Sell every ticket once, and let every ticket in once.",
+    "lede": "Ticket types, tables and sessions, a gate that gives the reason when it refuses, and the event's takings on one page.",
+    "screen": "events-fair"
+  },
+  "business": {
+    "name": "Zamani Events",
+    "place": "Abuja",
+    "label": true,
+    "about": "An events company running the two-day Abuja Home and Living Fair, with talks, a workshop and a gala dinner."
+  },
+  "dayTitle": "Day one of the fair, with Zamani Events",
+  "moments": [
+    {
+      "time": "07:30",
+      "title": "How the fair was set up",
+      "problem": "Weeks ago, before a single ticket was sold, the fair needed its tickets, its sessions and its gala tables.",
+      "handles": "Hadiza made it as a draft, with ticket types that each have a price, a number, a sales window and a limit per order, and sessions with a room and a time. It could not go on sale until every gala table was drawn on the plan.",
+      "surface": "web"
+    },
+    {
+      "time": "08:00",
+      "title": "The gate opens and the queue is long",
+      "problem": "Hundreds of visitors are waiting, and some tickets are not what they seem.",
+      "handles": "Staff scan each ticket's QR code or type its number. A code that is forged, for another event, not paid or already used is refused with the reason, and every scan is recorded.",
+      "surface": "web",
+      "screen": "events-check-in"
+    },
+    {
+      "time": "09:30",
+      "title": "Into the opening talk",
+      "problem": "Visitors with a talk on their ticket head for the main hall.",
+      "handles": "A session scan is separate from the gate. A ticket gets into each session it admits to, once.",
+      "surface": "web"
+    },
+    {
+      "time": "10:30",
+      "title": "A company buys twenty passes on account",
+      "problem": "Gurara Builders wants passes for its staff for tomorrow, and will pay by invoice.",
+      "handles": "The sale makes an invoice through the usual invoice path. The tickets read not paid yet at the gate until it is paid, then become valid and are emailed.",
+      "surface": "web",
+      "screen": "events-order"
+    },
+    {
+      "time": "11:00",
+      "title": "People turn up without tickets",
+      "problem": "A family arrives at the gate, wanting to buy there and then.",
+      "handles": "Door sales use the same sale as every other ticket, paid in cash or by card and recorded at the door. The count of tickets left goes down at once.",
+      "surface": "web"
+    },
+    {
+      "time": "12:30",
+      "title": "Two buyers want the last gala table",
+      "problem": "One gala table is left, and two people ask for it within a minute of each other.",
+      "handles": "The table is held for a few minutes for the first buyer while she pays. The second is refused, and told which table it was. Two sales can never take the last ticket or table.",
+      "surface": "web",
+      "screen": "events-gala-tables"
+    },
+    {
+      "time": "14:00",
+      "title": "A buyer cannot come",
+      "problem": "A visitor who bought a two-day pass has been called away and asks for her money back.",
+      "handles": "Within the refund window it is free; after it, a reason is asked for. The tickets are voided, the count goes back and the refund names the invoice to credit. A ticket already scanned in is never refunded.",
+      "surface": "web"
+    },
+    {
+      "time": "18:00",
+      "title": "What did day one bring in?",
+      "problem": "Before the gala, the team wants the day's figures.",
+      "handles": "The event page shows tickets by type, the gate's figures, sales by day, and what each sponsor agreed and has paid.",
+      "surface": "web"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Event",
+      "meaning": "A draft, on sale, closed or cancelled. Ticketed, free or for your own staff."
+    },
+    {
+      "word": "Session",
+      "meaning": "A part of the event with a room and a time, such as a talk or a dinner."
+    },
+    {
+      "word": "Ticket type",
+      "meaning": "A price, a number, a sales window, a limit per order and the sessions it admits to."
+    },
+    {
+      "word": "Invitation-only",
+      "meaning": "A ticket type that is given, not sold to the public."
+    },
+    {
+      "word": "Seating plan",
+      "meaning": "Numbered tables or seats that buyers choose."
+    },
+    {
+      "word": "Hold",
+      "meaning": "A table kept for a buyer for a few minutes while they pay."
+    },
+    {
+      "word": "Door sales",
+      "meaning": "Tickets sold at the gate on the day."
+    },
+    {
+      "word": "Gate and check-in",
+      "meaning": "Where each ticket is scanned in, once, with a reason for every refusal."
+    },
+    {
+      "word": "Refund window",
+      "meaning": "How long before the event a refund is free."
+    },
+    {
+      "word": "Sponsor",
+      "meaning": "A company backing the event, with what it agreed and what it has paid."
+    }
+  ],
+  "switchesTitle": "What the Events pack switches on",
+  "switchesOn": [
+    {
+      "text": "Events as drafts, on sale, closed or cancelled, with sessions and venues"
+    },
+    {
+      "text": "Ticket types with price, number, sales window, limit per order and invitation-only"
+    },
+    {
+      "text": "Seating plans of numbered tables or seats, held while a buyer pays"
+    },
+    {
+      "text": "One sale for the desk, the door and an invoice, so the last ticket is never sold twice"
+    },
+    {
+      "text": "Paying by cash, card, transfer or free at the desk or door, or on an invoice"
+    },
+    {
+      "text": "Tickets with a signed QR code and a readable number, emailed when paid"
+    },
+    {
+      "text": "A gate that lets each ticket in once and records every scan with its reason"
+    },
+    {
+      "text": "Refunds within a window, with a reason after it"
+    },
+    {
+      "text": "Sponsors with what each agreed and paid, and venues with a capacity"
+    },
+    {
+      "text": "Role templates for Box office, Door scanner and Events manager"
+    },
+    {
+      "text": "Scanning at the gate with no network",
+      "prelaunch": "industry-events"
+    },
+    {
+      "text": "A ticket page on your online shop",
+      "prelaunch": "industry-events"
+    },
+    {
+      "text": "Waiting lists, and passing a ticket on to someone else",
+      "prelaunch": "industry-events"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-sales",
+      "text": "A sale on account is made, approved and posted as an ordinary invoice."
+    },
+    {
+      "route": "product-crm",
+      "text": "Buyers and sponsors are customers, with their history."
+    },
+    {
+      "route": "product-finance",
+      "text": "Refunds are kept with the sale they belong to, in the same books."
+    },
+    {
+      "route": "product-tax",
+      "text": "Numbering and document settings for each place, on every ticket order and invoice."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina an events business uses",
+  "modules": [
+    "product-sales",
+    "product-crm",
+    "product-finance",
+    "product-payments"
+  ],
+  "faqTitle": "Questions event organisers ask",
+  "faq": [
+    {
+      "q": "Can two people buy the last ticket?",
+      "a": "No. Every sale claims its tickets first, so the last ticket or table goes to one buyer. A sale that is tried twice counts once."
+    },
+    {
+      "q": "What stops a ticket being used twice?",
+      "a": "Each ticket gets in once. If two desks scan the same ticket, only the first lets it in, and the second is refused with the reason."
+    },
+    {
+      "q": "Can a company pay by invoice?",
+      "a": "Yes. The sale makes an invoice, and the tickets become valid and are emailed when it is paid."
+    },
+    {
+      "q": "Can we sell at the door?",
+      "a": "Yes. Door sales use the same sale, paid in cash or by card and recorded."
+    },
+    {
+      "q": "What about refunds?",
+      "a": "Free within the refund window you set, and with a reason after it. A ticket already scanned in cannot be refunded."
+    },
+    {
+      "q": "Does the gate keep scanning if the network drops?",
+      "a": "Yes. Staff can scan tickets at the gate with no network.",
+      "prelaunch": "industry-events"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-classes",
+    "industry-restaurant",
+    "industry-accommodation"
+  ],
+  "cta": {
+    "title": "Put your next event on sale.",
+    "body": "Start free, switch on the Events pack, and draw your first seating plan."
+  }
+}

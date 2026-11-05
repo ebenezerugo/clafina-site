@@ -1,0 +1,65 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: configuring four executive desks for a customer, with the price line by line, the cost, the margin, the lead time and the parts against stock.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "OF", "name": "Oyelaran Office Furniture", "place": "Ikeja workshop" },
+  "nav": [
+    { "label": "Configurator", "items": [{ "label": "Configurable products" }, { "label": "Options and rules" }, { "label": "Configure and quote", "active": true }, { "label": "Configurations" }] }
+  ],
+  "title": "Configure and quote · Executive desk ED-1600",
+  "subtitle": "For Ojo and Partners · 4 desks · worked out as you choose",
+  "actions": [{ "label": "Start again" }, { "label": "Save and put on a quotation", "primary": true, "icon": "receipt" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "money", "label": "4 desks, before tax", "value": { "money": 1254000 }, "note": "₦313,500 each" },
+      { "icon": "box", "label": "Cost each", "value": { "money": 194300 } },
+      { "icon": "chart", "label": "Margin", "value": "38%" },
+      { "icon": "clock", "label": "Ready by", "value": "5 Nov", "note": "13 working days" }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Choices", "items": [
+        { "label": "Width", "value": "160 cm" },
+        { "label": "Depth", "value": "70 cm" },
+        { "label": "Material", "value": "Mahogany" },
+        { "label": "Finish", "value": "Matte" },
+        { "label": "Drawers", "value": "2" },
+        { "label": "Cable port", "value": "Yes" }
+      ] },
+      { "type": "table", "title": "Price, for one", "columns": [{ "label": "Line" }, { "label": "Amount", "numeric": true }], "rows": [
+        ["Base price", { "money": 185000 }],
+        ["Size 160 × 70 cm", { "money": 30000 }],
+        ["Material: Mahogany", { "money": 64000 }],
+        ["Two drawers and a cable port", { "money": 34500 }],
+        [{ "strong": "For one" }, { "money": 313500 }],
+        [{ "strong": "4 desks, before tax" }, { "money": 1254000 }]
+      ] }
+    ] },
+    { "type": "attention", "title": "As you chose", "items": [
+      { "tone": "info", "icon": "check", "title": "Gloss was set aside", "body": "Mahogany can't be glossed, so Matte is chosen." },
+      { "tone": "info", "icon": "clock", "title": "Mahogany takes 3 working days longer", "body": "The lead time is 13 working days instead of 10." },
+      { "tone": "warn", "icon": "receipt", "title": "This needs a quote", "body": "4 desks come to ₦1,254,000, over the ₦500,000 this product can be ordered at without one." }
+    ] },
+    { "type": "table", "title": "What it is made of, for 4 desks", "columns": [{ "label": "Part" }, { "label": "From" }, { "label": "Need", "numeric": true }, { "label": "On hand", "numeric": true }, { "label": "Stock" }], "rows": [
+      ["Mahogany top 160 × 70", "Width and Material", "4", "2", { "pill": "bad", "text": "2 short" }],
+      ["Mahogany edge band, 5.0 m roll", "Width", "4", "15", { "pill": "good", "text": "In stock" }],
+      ["Drawer unit, 2-drawer", "Drawers", "4", "9", { "pill": "good", "text": "In stock" }],
+      ["Drawer front, mahogany", "Drawers and Material", "8", "20", { "pill": "good", "text": "In stock" }],
+      ["Cable port grommet", "Cable port", "4", "40", { "pill": "good", "text": "In stock" }],
+      ["Legs, steel, black", "Base bill of materials", "16", "64", { "pill": "good", "text": "In stock" }],
+      ["Hardware pack", "Base bill of materials", "4", "30", { "pill": "good", "text": "In stock" }],
+      ["Matte lacquer, 1 L tin", "Finish", "4", "11", { "pill": "good", "text": "In stock" }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Cost, for one", "items": [
+        { "label": "Parts", "value": { "money": 161300 } },
+        { "label": "Labour, assembly and finish, 5.5 h", "value": { "money": 33000 } },
+        { "label": "Cost", "value": { "money": 194300 } }
+      ] },
+      { "type": "attention", "title": "Short parts", "items": [
+        { "tone": "warn", "icon": "cart", "title": "2 Mahogany tops are short", "body": "A new purchase order opens with the parts and quantities filled in.", "action": "Order the short parts" }
+      ] }
+    ] }
+  ]
+}

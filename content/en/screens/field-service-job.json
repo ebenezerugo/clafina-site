@@ -1,0 +1,55 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a solar technician's job on site, with the checklist part done, a low battery reading that will raise a follow-up, parts from the van and the invoice made as the job goes.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BW", "name": "Brightwire Power and Cooling", "place": "Lagos · Van 2 · Ayo Balogun" },
+  "nav": [
+    { "label": "Field service", "items": [{ "label": "Dispatch" }, { "label": "Jobs", "active": true }] },
+    { "label": "This job", "items": [{ "label": "Checklist", "active": true }, { "label": "Photos", "badge": "4" }, { "label": "Parts", "badge": "3" }, { "label": "Time" }, { "label": "Activity" }] }
+  ],
+  "title": "JOB-2026-0412 · Battery check and inverter fault",
+  "subtitle": "On site · Mrs Ngozi Ibe, 14 Palm Avenue, Lekki Phase 1 · window 11:00 to 13:00 · Ayo Balogun",
+  "actions": [{ "label": "Reassign" }, { "label": "Finish the job", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Inverter service, version 3 · 5 of 9 done", "columns": [{ "label": "Step" }, { "label": "Answer" }], "rows": [
+        ["Inverter off, isolator off, area safe", { "pill": "good", "text": "Ticked" }],
+        ["Photo of the fault code on the display", { "pill": "good", "text": "Photo added" }],
+        ["Battery bank voltage, 48 V system", { "pill": "warn", "text": "45.2 V · under 46 V, follow-up on finish" }],
+        ["Battery terminals checked for corrosion", { "pill": "good", "text": "Ticked" }],
+        ["Panel string readings, 3 strings", { "pill": "good", "text": "412 V · 409 V · 411 V" }],
+        ["Replace the 63 A fuse if blown", { "pill": "info", "text": "Doing now" }],
+        ["Restart and watch for 10 minutes", "Not done yet"],
+        ["Photo of the inverter running", "Required, not done yet"],
+        ["Customer shown the result", "Not done yet"]
+      ] },
+      { "type": "kv", "title": "Time on this job", "items": [
+        { "label": "Travelling", "value": "25 min" },
+        { "label": "On site", "value": "1 h 12 min, since 11:03" },
+        { "label": "Expected", "value": "2 h" },
+        { "label": "Asked for", "value": "Inverter beeps, no power at night" },
+        { "label": "On finish", "value": "Time on site goes to the timesheet" }
+      ] }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Parts used · from Van 2's stock", "columns": [{ "label": "Part" }, { "label": "Qty", "numeric": true }, { "label": "Amount", "numeric": true }], "rows": [
+        ["Fuse 63 A DC, 2-pole", "2", { "money": 9600 }],
+        ["MC4 connector pair", "4", { "money": 6800 }],
+        ["Cable tie pack", "1", { "money": 1200 }],
+        [{ "strong": "Parts" }, "7", { "money": 17600 }]
+      ] },
+      { "type": "table", "title": "Invoice on site · a draft made as the job goes", "columns": [{ "label": "Line" }, { "label": "Amount", "numeric": true }], "rows": [
+        ["Call-out and diagnosis", { "money": 15000 }],
+        ["Labour, 2 hours", { "money": 36000 }],
+        ["Parts", { "money": 17600 }],
+        ["VAT, 7.5%", { "money": 5145 }],
+        [{ "strong": "Total" }, { "money": 73745 }]
+      ] }
+    ] },
+    { "type": "attention", "title": "Before you can finish", "items": [
+      { "tone": "info", "icon": "check", "title": "4 steps to go, 1 of them required", "body": "Every required step answered, the customer's signature on the phone, then a payment reference or the invoice." }
+    ] }
+  ]
+}

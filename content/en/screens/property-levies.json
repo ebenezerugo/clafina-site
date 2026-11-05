@@ -1,0 +1,44 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: an estate's owners' association levy, with the approved budget by line, what each owner has paid and what has been spent.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "IG", "name": "Ivory Gate Property Managers", "place": "Ivory Court owners' association" },
+  "nav": [
+    { "label": "Property", "items": [{ "label": "Properties and units" }, { "label": "Leases" }, { "label": "Rent roll" }, { "label": "Inspections" }, { "label": "Tenant requests", "badge": "10" }, { "label": "Owners' levies", "active": true }] }
+  ],
+  "title": "Owners' levies · Ivory Court, 2026",
+  "subtitle": "Budget approved by the owners on 14 March. Shared equally across 24 flats and invoiced each quarter.",
+  "actions": [{ "label": "Budget" }, { "label": "Raise the levy", "primary": true, "icon": "receipt" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "chart", "label": "Levy for the year", "value": { "money": 38400000 }, "note": "24 flats · ₦1,600,000 each" },
+      { "icon": "receipt", "label": "Invoiced so far", "value": { "money": 28800000 }, "note": "3 of 4 quarters" },
+      { "icon": "check", "label": "Collected", "value": { "money": 24000000 } },
+      { "icon": "alert", "label": "Behind", "value": { "money": 4800000 }, "change": { "tone": "warn", "text": "5 owners" } }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Showing 6 of 18 owners", "columns": [{ "label": "Owner and flats" }, { "label": "Invoiced", "numeric": true }, { "label": "Paid", "numeric": true }, { "label": "Owing", "numeric": true }, { "label": "State" }], "rows": [
+        [{ "avatar": "BA", "text": "Mrs Bisi Adeyemi · 4B, 2B, 1C" }, { "money": 3600000 }, { "money": 3600000 }, { "money": 0 }, { "pill": "good", "text": "Up to date" }],
+        [{ "avatar": "YO", "text": "Mr Yemi Ogun · 2A, 2C" }, { "money": 2400000 }, { "money": 1200000 }, { "money": 1200000 }, { "pill": "warn", "text": "Behind 40 days" }],
+        [{ "avatar": "CO", "text": "Mr Chidi Okeke · 4A" }, { "money": 1200000 }, { "money": 400000 }, { "money": 800000 }, { "pill": "bad", "text": "Behind 72 days" }],
+        [{ "avatar": "CB", "text": "Mrs Chinwe Obi · 3A" }, { "money": 1200000 }, { "money": 400000 }, { "money": 800000 }, { "pill": "bad", "text": "Behind 72 days" }],
+        [{ "avatar": "RB", "text": "Mrs Ronke Balogun · 3C" }, { "money": 1200000 }, { "money": 1200000 }, { "money": 0 }, { "pill": "good", "text": "Up to date" }],
+        [{ "avatar": "SA", "text": "Mr Sola Ajibade · 3B" }, { "money": 1200000 }, { "money": 1200000 }, { "money": 0 }, { "pill": "good", "text": "Up to date" }]
+      ] },
+      { "type": "table", "title": "Where the levy goes", "columns": [{ "label": "Budget line" }, { "label": "Spent", "numeric": true }, { "label": "Budget", "numeric": true }], "rows": [
+        ["Security", { "money": 3100000 }, { "money": 9600000 }],
+        ["Power and diesel", { "money": 2900000 }, { "money": 8400000 }],
+        ["Cleaning and gardens", { "money": 1400000 }, { "money": 4800000 }],
+        ["Repairs and lifts", { "money": 1100000 }, { "money": 6000000 }],
+        ["Management fee", { "money": 600000 }, { "money": 4800000 }],
+        ["Reserve fund", { "money": 0 }, { "money": 4800000 }],
+        [{ "strong": "All lines" }, { "money": 9100000 }, { "money": 38400000 }]
+      ] }
+    ] },
+    { "type": "attention", "title": "Next", "items": [
+      { "tone": "info", "icon": "receipt", "title": "The fourth quarter is invoiced on 1 November", "body": "Each owner's share goes on their own invoice. Spending can never pass a line's budget or what the levy has collected." }
+    ] }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the crates and bottles each customer holds, the deposit that goes with them, and who is over their limit.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "AD", "name": "Aremu Drinks Distribution", "place": "Ikeja warehouse" },
+  "nav": [
+    { "label": "Distribution", "items": [{ "label": "Routes and van loads" }, { "label": "Settle a van", "badge": "1" }, { "label": "Empties and deposits", "active": true }, { "label": "Storage billing" }] },
+    { "label": "Customers", "items": [{ "label": "All", "badge": "312" }, { "label": "Over limit", "badge": "9" }, { "label": "Not returned in 60 days", "badge": "21" }, { "label": "Balanced", "badge": "190" }] }
+  ],
+  "search": "Find a customer",
+  "title": "Empties and deposits",
+  "subtitle": "Read from the empties ledger, oldest crate first. Counted in crates of 24 × 60 cl; bottles and kegs have their own lines.",
+  "actions": [{ "label": "Record empties returned", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "box", "label": "Crates out", "value": "14,820", "note": "With 312 customers" },
+      { "icon": "money", "label": "Deposits held", "value": { "money": 148200000 }, "note": "₦10,000 a crate" },
+      { "icon": "alert", "label": "Over their limit", "value": "9", "change": { "tone": "bad", "text": "Next delivery held" } },
+      { "icon": "up", "label": "Collected today", "value": "812", "note": "By 6 vans so far" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Customer" }, { "label": "Area and route" }, { "label": "Out", "numeric": true }, { "label": "Deposit held", "numeric": true }, { "label": "Limit", "numeric": true }, { "label": "State" }, { "label": "Oldest crate" }], "rows": [
+      ["Mama Tola Stores", "Ikeja · R1", "184", { "money": 1840000 }, "200", { "pill": "good", "text": "Within limit" }, "34 days"],
+      ["Okechukwu Bar", "Agege · R1", "420", { "money": 4200000 }, "400", { "pill": "bad", "text": "Over by 20" }, "71 days"],
+      ["Ajibola Supermarket", "Surulere · R2", "96", { "money": 960000 }, "150", { "pill": "good", "text": "Within limit" }, "12 days"],
+      ["Mushin Cash and Carry", "Mushin · R6", "612", { "money": 6120000 }, "600", { "pill": "bad", "text": "Over by 12" }, "58 days"],
+      ["Alade Wholesale", "Mushin · R6", "380", { "money": 3800000 }, "500", { "pill": "warn", "text": "Old crates" }, "88 days"],
+      ["Ikorodu Bakeries", "Ikorodu · R4", "210", { "money": 2100000 }, "250", { "pill": "good", "text": "Within limit" }, "22 days"]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Okechukwu Bar · movements, latest first", "columns": [{ "label": "Date" }, { "label": "Movement" }, { "label": "Crates", "numeric": true }, { "label": "Out after", "numeric": true }], "rows": [
+        ["17 Oct", "Delivered, van load VLD-1015", "+ 40", "420"],
+        ["15 Oct", "Collected by Segun", "− 36", "380"],
+        ["12 Oct", "Delivered, van load VLD-1004", "+ 60", "416"],
+        ["10 Oct", "Collected by Segun", "− 24", "356"]
+      ] },
+      { "type": "attention", "title": "Okechukwu Bar · terms 14 days · limit 400", "items": [
+        { "tone": "bad", "icon": "alert", "title": "The next delivery is held", "body": "He is 20 crates over his limit. Today's order adds 30, so the driver can deliver if 50 empties come back at the stop.", "action": "Open the customer" }
+      ] }
+    ] }
+  ]
+}

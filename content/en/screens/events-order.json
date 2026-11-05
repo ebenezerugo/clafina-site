@@ -1,0 +1,31 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a company's order for twenty two-day passes on account, with the invoice made and the tickets waiting until it is paid.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "ZE", "name": "Zamani Events", "place": "Abuja" },
+  "nav": [
+    { "label": "Events", "items": [{ "label": "Events" }, { "label": "Tickets sold", "active": true }, { "label": "Check-in" }, { "label": "Venues" }] }
+  ],
+  "title": "Order ORD-2026-0457 · Gurara Builders Ltd",
+  "subtitle": "Abuja Home and Living Fair · 20 two-day passes · on account",
+  "actions": [{ "label": "Send the invoice again" }, { "label": "Record payment", "primary": true, "icon": "money" }],
+  "blocks": [
+    { "type": "steps", "items": ["Ordered", "Invoice made", "Paid", "Tickets emailed"], "current": 1 },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Invoice INV-2026-0318", "items": [
+        { "label": "Two-day pass × 20 at ₦8,000", "value": { "money": 160000 } },
+        { "label": "VAT 7.5%", "value": { "money": 12000 } },
+        { "label": "To pay", "value": { "strong": "₦172,000" } },
+        { "label": "Made, approved and posted", "value": "By the usual invoice path" }
+      ] },
+      { "type": "kv", "title": "The tickets", "items": [
+        { "label": "Tickets", "value": "20 · HLF-4127-0440 to 0459" },
+        { "label": "At the gate", "value": { "pill": "warn", "text": "Not paid yet" } },
+        { "label": "When the invoice is paid", "value": "All 20 become valid and are emailed" },
+        { "label": "Held for this order", "value": "20 of the 800 two-day passes" }
+      ] }
+    ] }
+  ]
+}

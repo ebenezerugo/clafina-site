@@ -1,0 +1,244 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "FIELD_SERVICE.md",
+    "INDUSTRY_PACKS.md",
+    "ROADMAP.md",
+    "features.md",
+    "docs/industry-facts.md#industry-field-service"
+  ],
+  "meta": {
+    "title": "Field service: dispatch, checklists and the invoice on site · Clafina",
+    "description": "A dispatch board that refuses double bookings, checklists on the technician's phone, parts from the van and the invoice made before leaving. The Field service pack."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Field service",
+    "title": "The right technician, the right steps, the bill before they leave.",
+    "lede": "Share out the day's jobs, follow the checklist on the phone, take parts from the van and finish with the customer's signature.",
+    "screen": "field-service-dispatch"
+  },
+  "business": {
+    "name": "Brightwire Power and Cooling",
+    "place": "Lagos",
+    "label": true,
+    "about": "A service firm with five technicians in vans, installing and repairing air conditioning, solar systems and electrics across Lagos."
+  },
+  "dayTitle": "A day at Brightwire Power and Cooling",
+  "moments": [
+    {
+      "time": "07:00",
+      "title": "Sharing out the day",
+      "problem": "Fifteen jobs, five technicians, and nobody should be in two places at once.",
+      "handles": "The dispatch board shows jobs by technician and hour, with a list of jobs waiting for someone. Assigning a job sets the technician and the van. If two live jobs for the same technician would overlap, the board refuses and names the other job.",
+      "surface": "web"
+    },
+    {
+      "time": "07:45",
+      "title": "An urgent call",
+      "problem": "Chief Ade rings: the inverter is faulty and there was no power all night.",
+      "handles": "Bisi at the desk makes a new job with the customer, the site, a time window, a priority and the checklist for its job type. Service areas say which technicians cover Lekki.",
+      "surface": "web"
+    },
+    {
+      "time": "09:30",
+      "title": "Nobody has arrived",
+      "problem": "A socket job in Yaba opened at nine, and the customer is still waiting.",
+      "handles": "A job counts as late once the minutes you set have passed since its window opened and nobody is on site. The board shows each technician's last known position, and a late report from a phone that was offline never moves the pin backwards.",
+      "surface": "web"
+    },
+    {
+      "time": "11:00",
+      "title": "On site, and what comes first",
+      "problem": "Ayo arrives at Mrs Ibe's house and needs to know where to start.",
+      "handles": "He marks the job en route, then on site. His phone shows the next required step not yet done. The job keeps the checklist version it started with, even if the template changes later.",
+      "surface": "phone",
+      "screen": "field-service-job-phone"
+    },
+    {
+      "time": "11:40",
+      "title": "The battery reads low",
+      "problem": "The battery bank is below where it should be, and that means a return visit.",
+      "handles": "A checklist step can take a tick, a number, a photo, text or a part. A number outside its limits raises the step's follow-up job when this job is finished, and only once.",
+      "surface": "phone",
+      "screen": "field-service-checklists"
+    },
+    {
+      "time": "12:15",
+      "title": "A fuse from the van",
+      "problem": "A fuse has blown, and Ayo has spares in the van.",
+      "handles": "The part step issues the fuse from the van's stock, because a van is a stock location. If the van shows none, the part is still recorded as used with the reason, and the van is put right at the end of the day.",
+      "surface": "phone",
+      "screen": "field-service-job"
+    },
+    {
+      "time": "12:50",
+      "title": "Signed and billed before leaving",
+      "problem": "The work is done, and the customer should sign and be billed while Ayo is still there.",
+      "handles": "A job can be finished only when every required step is answered, the customer has signed if the checklist asks, and there is a payment reference or invoice lines. The invoice on site is the standard customer invoice, and the time on site goes to Ayo's timesheet.",
+      "surface": "phone"
+    },
+    {
+      "time": "16:30",
+      "title": "Planning tomorrow",
+      "problem": "Tomorrow's jobs need planning around traffic and the right skills, and customers want to know when to expect someone.",
+      "handles": "Routes are worked out for each van, jobs go to technicians with the right skills, and each customer is told their arrival window.",
+      "surface": "web",
+      "prelaunch": "industry-field-service"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Job",
+      "meaning": "A visit to a customer's site. The pack calls a task a job."
+    },
+    {
+      "word": "Dispatch",
+      "meaning": "The board where the day's jobs are given to technicians by the hour."
+    },
+    {
+      "word": "Window",
+      "meaning": "The time the customer expects someone. A job is late when the window has opened and nobody is on site."
+    },
+    {
+      "word": "En route and on site",
+      "meaning": "The steps between assigned and done that the technician marks from the phone."
+    },
+    {
+      "word": "Checklist",
+      "meaning": "The steps a technician follows on a job type, kept as versions."
+    },
+    {
+      "word": "Follow-up job",
+      "meaning": "A return visit raised by a reading outside its limits."
+    },
+    {
+      "word": "Van",
+      "meaning": "A technician's vehicle, which is also a stock location for parts."
+    },
+    {
+      "word": "Service area",
+      "meaning": "Where each place's technicians go."
+    },
+    {
+      "word": "Call-out",
+      "meaning": "The charge for coming out to the site, on the invoice with labour and parts."
+    }
+  ],
+  "switchesTitle": "What the Field service pack switches on",
+  "switchesOn": [
+    {
+      "text": "A Field service menu: dispatch and jobs for every day, checklists and service areas for setting up"
+    },
+    {
+      "text": "Jobs as project tasks with a customer, a site, a window and a priority, from waiting to done"
+    },
+    {
+      "text": "A dispatch board by technician and hour that refuses overlapping jobs and shows which are late"
+    },
+    {
+      "text": "Checklists in versions, with steps that take a tick, number, photo, text or part"
+    },
+    {
+      "text": "Follow-up jobs raised by a reading outside its limits"
+    },
+    {
+      "text": "Parts issued from the van's own stock"
+    },
+    {
+      "text": "Photos for each step and the customer's signature, kept as files"
+    },
+    {
+      "text": "Finishing with a payment reference or an invoice made on site"
+    },
+    {
+      "text": "Technicians' last known positions on a map"
+    },
+    {
+      "text": "The phone keeps the true time of each photo, signature and finish, even when it sends them later"
+    },
+    {
+      "text": "Jobs on the phone with no signal at all, sent when it is back",
+      "prelaunch": "industry-field-service"
+    },
+    {
+      "text": "Routes worked out for each van",
+      "prelaunch": "industry-field-service"
+    },
+    {
+      "text": "Technicians' skills matched to each job",
+      "prelaunch": "industry-field-service"
+    },
+    {
+      "text": "The customer told their arrival window",
+      "prelaunch": "industry-field-service"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-projects",
+      "text": "Every job is a project task, so its status and its hours move together, and time on site goes to timesheets."
+    },
+    {
+      "route": "product-stock",
+      "text": "Vans are stock locations, so a part used on a job leaves the van's count."
+    },
+    {
+      "route": "product-sales",
+      "text": "The invoice on site is the standard customer invoice."
+    },
+    {
+      "route": "product-mobile",
+      "text": "The technician's phone and the dispatch board see each change as it happens."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a service firm uses",
+  "modules": [
+    "product-projects",
+    "product-stock",
+    "product-sales",
+    "product-mobile",
+    "product-crm"
+  ],
+  "faqTitle": "Questions service firms ask",
+  "faq": [
+    {
+      "q": "Can a technician be booked on two jobs at once?",
+      "a": "No. If two live jobs for the same technician would overlap, the board refuses and names the other job."
+    },
+    {
+      "q": "How do I know a job is late?",
+      "a": "A job is late once the minutes you set have passed since its window opened and nobody is on site."
+    },
+    {
+      "q": "What if the van has run out of the part?",
+      "a": "The part is still recorded as used, with the reason, and the van is put right at the end of the day."
+    },
+    {
+      "q": "Can the customer pay on the spot?",
+      "a": "The technician makes the invoice on site and records the payment reference before finishing the job."
+    },
+    {
+      "q": "Does the checklist change for jobs already started?",
+      "a": "No. A job keeps the version it started with. A new version applies to jobs made after you save it."
+    },
+    {
+      "q": "Does the phone work where there is no signal?",
+      "a": "Working on a job with no signal at all, and sending it later, is on the way.",
+      "prelaunch": "industry-field-service"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-construction",
+    "industry-property",
+    "industry-rentals"
+  ],
+  "cta": {
+    "title": "Send your first job from Clafina.",
+    "body": "Start free, switch on the Field service pack and add your vans and checklists. Add technicians and service areas as you grow."
+  }
+}

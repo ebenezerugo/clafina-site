@@ -1,0 +1,45 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: settling a van at the end of its round. Payments, stock and empties are set against what was counted, and each difference is explained.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "AD", "name": "Aremu Drinks Distribution", "place": "Ikeja warehouse" },
+  "nav": [
+    { "label": "Distribution", "items": [{ "label": "Routes and van loads" }, { "label": "Settle a van", "active": true, "badge": "1" }, { "label": "Empties and deposits" }, { "label": "Storage billing" }] }
+  ],
+  "title": "Settle van LND-551",
+  "subtitle": "Chika Obi · route R5, Ajah · left 06:30, back 16:12 · 12 stops · loaded by Aisha Bello",
+  "actions": [{ "label": "Save and settle later" }, { "label": "Settle the van", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Payments, against sales", "columns": [{ "label": "Method" }, { "label": "Sold", "numeric": true }, { "label": "Counted", "numeric": true }, { "label": "Difference", "numeric": true }], "rows": [
+        ["Cash", { "money": 1200000 }, { "money": 1196500 }, { "money": -3500 }],
+        ["Bank transfer", { "money": 2100000 }, { "money": 2100000 }, { "money": 0 }],
+        ["Card", { "money": 900000 }, { "money": 900000 }, { "money": 0 }],
+        ["On account", { "money": 420000 }, { "money": 420000 }, { "money": 0 }],
+        [{ "strong": "Total" }, { "money": 4620000 }, { "money": 4616500 }, { "money": -3500 }]
+      ] },
+      { "type": "table", "title": "Stock: loaded less sold, against what is counted", "columns": [{ "label": "Item" }, { "label": "Loaded", "numeric": true }, { "label": "Sold", "numeric": true }, { "label": "Should be", "numeric": true }, { "label": "Counted", "numeric": true }, { "label": "Short", "numeric": true }], "rows": [
+        ["Lager 60 cl", "80", "72", "8", "8", "0"],
+        ["Premium cola 50 cl", "60", "51", "9", "9", "0"],
+        ["Malt drink 33 cl", "70", "64", "6", "4", "2"],
+        ["Bottled water 75 cl", "40", "36", "4", "4", "0"]
+      ] }
+    ] },
+    { "type": "row", "widths": "1fr 2fr", "blocks": [
+      { "type": "kv", "title": "Empties collected", "items": [
+        { "label": "Expected from the stops", "value": "64 crates" },
+        { "label": "Counted", "value": "61 crates" },
+        { "label": "Short", "value": { "pill": "warn", "text": "3 crates" } },
+        { "label": "Where", "value": "Stop 7 says collected, but the crates are not here" }
+      ] },
+      { "type": "attention", "title": "What the differences mean", "items": [
+        { "tone": "good", "icon": "check", "title": "Cash short ₦3,500 clears", "body": "It is under the ₦5,000 tolerance." },
+        { "tone": "warn", "icon": "box", "title": "Stock short: 2 crates of malt, ₦20,500", "body": "Goes to Chika Obi's account for a manager." },
+        { "tone": "warn", "icon": "alert", "title": "Empties short: 3 crates, ₦30,000 of deposit", "body": "Goes to Chika Obi's account for a manager." },
+        { "tone": "info", "icon": "users", "title": "₦50,500 to review", "body": "A manager clears it, charges the driver or writes it off.", "action": "Open the driver's account" }
+      ] }
+    ] }
+  ]
+}

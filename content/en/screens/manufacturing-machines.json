@@ -1,0 +1,40 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: machine status at a food plant, with one filler broken down, one labeller in planned maintenance and two services overdue.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RF", "name": "Riverbend Foods", "place": "Ikeja plant" },
+  "goTo": "Go to page…",
+  "search": "Search orders, products, machines…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "6" }] },
+    { "label": "Make", "items": [{ "label": "Production orders" }, { "label": "Work orders" }, { "label": "Materials" }, { "label": "Schedule" }, { "label": "Shop floor" }, { "label": "Machines", "active": true }, { "label": "Quality" }] }
+  ],
+  "title": "Machines",
+  "subtitle": "Which machines are running, which are stopped, and which services are due. 8 machines at Ikeja plant. Last 30 days.",
+  "actions": [{ "label": "Ask for maintenance", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "clock", "label": "Machine availability", "value": "91%", "change": { "tone": "good", "text": "2 pts better", "dir": "up" } },
+      { "icon": "alert", "label": "Broken down now", "value": "1", "note": "Filler FL-01 · 3 more breakdowns earlier this month" },
+      { "icon": "chart", "label": "Time between failures", "value": "138 h", "change": { "tone": "good", "text": "14 h longer", "dir": "up" } },
+      { "icon": "check", "label": "Time to repair", "value": "3.4 h", "change": { "tone": "good", "text": "0.6 h faster", "dir": "down" } }
+    ] },
+    { "type": "attention", "title": "Needs your attention", "items": [
+      { "tone": "bad", "icon": "alert", "title": "Repair FL-01 first", "body": "Groundnut oil 1L waits on it. The gasket kit is in stock at Ikeja warehouse; repair about 3 to 4 h. Emeka Nwosu is on it.", "action": "Open the job" },
+      { "tone": "info", "icon": "check", "title": "The breakdown was handled at 07:40", "body": "Operations on FL-01 were paused, every order waiting for it was scheduled again and the plant manager was told. FL-02 is in the same work centre; moving work to it is a person's decision.", "action": "See what it did" },
+      { "tone": "warn", "icon": "clock", "title": "2 services are overdue", "body": "Heat sealer SL-02 by 2 days and shrink wrapper SW-01 by 1 day.", "action": "Raise the work" }
+    ] },
+    { "type": "table", "title": "The machines now", "columns": [{ "label": "Machine" }, { "label": "Code" }, { "label": "State" }, { "label": "Service" }, { "label": "Note" }], "rows": [
+      ["Filler, line 1", "FL-01", { "pill": "bad", "text": "Broken down since 07:40" }, "Maintenance job open", "WO-2026-0148 waits on it"],
+      ["Filler, line 2", "FL-02", { "pill": "good", "text": "Running" }, "Next 24 Oct, in 5 days", "Same work centre as FL-01"],
+      ["Heat sealer", "SL-02", { "pill": "good", "text": "Running" }, { "pill": "warn", "text": "Overdue by 2 days" }, "Was due 17 Oct"],
+      ["Labeller", "LB-01", { "pill": "warn", "text": "In maintenance" }, "Planned service", "Back 20 Oct at 14:00, parts are in"],
+      ["Capper", "CP-01", { "pill": "good", "text": "Running" }, "Next 30 Oct, in 11 days", "Cap torque checked today"],
+      ["Packing line", "PK-01", { "pill": "good", "text": "Running" }, "Next 4 Nov, in 16 days", "Last breakdown 3 Oct"],
+      ["Pepper mixer", "MX-01", { "pill": "neutral", "text": "Idle" }, "Next 23 Oct, in 4 days", "No work order today"],
+      ["Shrink wrapper", "SW-01", { "pill": "good", "text": "Running" }, { "pill": "warn", "text": "Overdue by 1 day" }, "Was due 18 Oct"]
+    ] }
+  ]
+}

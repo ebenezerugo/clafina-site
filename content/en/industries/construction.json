@@ -1,0 +1,243 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "CONSTRUCTION.md",
+    "PROJECTS.md",
+    "INDUSTRY_PACKS.md",
+    "features.md",
+    "docs/industry-facts.md#industry-construction"
+  ],
+  "meta": {
+    "title": "Construction: valuations, retention and the site diary · Clafina",
+    "description": "Bill by stages, hold retention, manage variations, pay subcontractors against their papers and keep a signed site diary. The Construction pack."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Construction",
+    "title": "Measure it, value it, certify it, then invoice it.",
+    "lede": "Monthly valuations stage by stage, retention held and released, and subcontractors paid only when their papers are in order.",
+    "screen": "construction-valuation"
+  },
+  "business": {
+    "name": "Kanwa Construction",
+    "place": "Lagos",
+    "label": true,
+    "about": "A building contractor putting up Lagoonside Court, a six-floor block of flats in Ikoyi, for a developer on a fixed contract sum."
+  },
+  "dayTitle": "A day at Kanwa Construction",
+  "moments": [
+    {
+      "time": "08:00",
+      "title": "Walking unit 2A",
+      "problem": "The finishes in 2A are full of small faults, and each one belongs to a different trade.",
+      "handles": "Each snag records the floor, unit, place, trade and subcontractor, with photos before and after. It moves from open to fixed to closed, or is reopened. A plan view shows the open snags unit by unit.",
+      "surface": "web",
+      "screen": "construction-snags"
+    },
+    {
+      "time": "10:00",
+      "title": "Month end on site",
+      "problem": "The client owes for the work done since the last valuation, and it has to be measured properly.",
+      "handles": "A new valuation is opened, and Segun, the site engineer, measures how far each stage has come. A stage can never go below what the client has already been billed for, nor above the whole.",
+      "surface": "web"
+    },
+    {
+      "time": "11:00",
+      "title": "An extra column on floor 3",
+      "problem": "The client has asked for a column at grid D that was not in the drawings.",
+      "handles": "A variation is raised on its stage and moves from proposed to priced, agreed and instructed, or rejected. Once it reaches a state you bill for, it is valued with its stage. Its amount is fixed once any part of it has gone on a certificate.",
+      "surface": "web"
+    },
+    {
+      "time": "13:00",
+      "title": "Nothing billed before the last step",
+      "problem": "The surveyor and the project manager both need to see the valuation before the client is invoiced.",
+      "handles": "The valuation moves through measure, value, approve and certify. Only the person holding the current step can change a line, and the screen shows who it is waiting for. On certifying, Clafina holds the retention and makes the customer invoice for the net amount, with VAT and withholding tax on the certificate.",
+      "surface": "web"
+    },
+    {
+      "time": "14:30",
+      "title": "The plumber wants paying",
+      "problem": "Deepwell Plumbing has sent its payment certificate, but its tax clearance expired last month.",
+      "handles": "A missing or expired paper blocks the payment certificate, and papers that expire soon are flagged. Someone with the exception permission can let one certificate through with a reason, which is logged. Once approved, the certificate takes off retention and back-charges and makes a draft supplier bill.",
+      "surface": "web",
+      "screen": "construction-subcontractors"
+    },
+    {
+      "time": "15:30",
+      "title": "A clash at grid D",
+      "problem": "An electrical conduit clashes with the new column, and the engineer needs to answer before work goes on.",
+      "handles": "The question is raised as a request for information against the drawings, so the answer stays with the job.",
+      "surface": "web",
+      "prelaunch": "industry-construction"
+    },
+    {
+      "time": "17:42",
+      "title": "Writing the day down",
+      "problem": "The day's record has to be written while it is fresh.",
+      "handles": "Segun writes one diary entry for the day: the weather, who was on site, hours lost and why, equipment, safety, work done, delays, instructions and photos. An entry can never be made for a day still to come, and it can be changed until it is submitted.",
+      "surface": "web",
+      "screen": "construction-site-diary"
+    },
+    {
+      "time": "18:15",
+      "title": "Standing behind the record",
+      "problem": "The project manager has to agree with what the diary says.",
+      "handles": "She signs the entry off, which locks it, or returns it with a note. Hours lost are added up for the month.",
+      "surface": "web"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Contract sum",
+      "meaning": "What the client has agreed to pay for the whole job, split into stages."
+    },
+    {
+      "word": "Valuation",
+      "meaning": "A monthly measure of how much of each stage is built, and so what the client owes now."
+    },
+    {
+      "word": "Variation (VO)",
+      "meaning": "Extra or changed work the client asks for, valued with the stage it belongs to."
+    },
+    {
+      "word": "Certify",
+      "meaning": "The last step of a valuation. Only then is the client invoiced."
+    },
+    {
+      "word": "Retention",
+      "meaning": "Part of each valuation held back, released in part at practical completion and the rest after the defects period."
+    },
+    {
+      "word": "Defects period",
+      "meaning": "The months after completion when faults are put right before the last retention is released."
+    },
+    {
+      "word": "Site diary",
+      "meaning": "One entry a day by the site engineer, locked once the project manager signs it off."
+    },
+    {
+      "word": "Snag",
+      "meaning": "Something wrong or unfinished in a unit, with the trade that must put it right."
+    },
+    {
+      "word": "Papers",
+      "meaning": "A subcontractor's tax clearance, insurance and safety card, each with an expiry date."
+    },
+    {
+      "word": "Back-charge",
+      "meaning": "A cost taken off a subcontractor's payment, such as damage they caused."
+    }
+  ],
+  "switchesTitle": "What the Construction pack switches on",
+  "switchesOn": [
+    {
+      "text": "A Construction menu: progress billing, site diary, snag list and subcontractors, all on one contract chosen once"
+    },
+    {
+      "text": "One contract for each project, with the contract sum, retention, VAT and withholding tax rates and the defects period"
+    },
+    {
+      "text": "The contract sum split into stages, which can follow the project's milestones"
+    },
+    {
+      "text": "Variations from proposed to instructed, or rejected"
+    },
+    {
+      "text": "Valuations in four steps, each under its own permission, with the engineer's and the surveyor's figures kept on each line"
+    },
+    {
+      "text": "The customer invoice made only at the certify step"
+    },
+    {
+      "text": "Retention released in part at practical completion and the rest after the defects period, each part invoiced"
+    },
+    {
+      "text": "A site diary locked once it is signed off"
+    },
+    {
+      "text": "A snag list by floor, unit, trade and subcontractor, with photos and a plan view"
+    },
+    {
+      "text": "Subcontracts with papers that expire, and payment certificates that wait for them"
+    },
+    {
+      "text": "Drawings and requests for information",
+      "prelaunch": "industry-construction"
+    },
+    {
+      "text": "A Gantt chart, with hours lost feeding the programme",
+      "prelaunch": "industry-construction"
+    },
+    {
+      "text": "A portal where subcontractors see their own snags",
+      "prelaunch": "industry-construction"
+    },
+    {
+      "text": "The final account",
+      "prelaunch": "industry-construction"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-projects",
+      "text": "Every contract sits on a project, and its stages can follow the project's milestones."
+    },
+    {
+      "route": "product-sales",
+      "text": "Each valuation that passes the certify step, and each retention release, becomes a customer invoice."
+    },
+    {
+      "route": "product-purchasing",
+      "text": "Subcontractors are suppliers, and an approved payment certificate becomes a draft supplier bill."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a contractor uses",
+  "modules": [
+    "product-projects",
+    "product-sales",
+    "product-purchasing",
+    "product-finance"
+  ],
+  "faqTitle": "Questions contractors ask",
+  "faq": [
+    {
+      "q": "When is the client invoiced?",
+      "a": "Only at the certify step, the last of four. Before that the valuation is measured, valued and approved, and nothing is billed."
+    },
+    {
+      "q": "How is retention handled?",
+      "a": "It comes off each valuation. Part is released at practical completion and the rest after the defects period, and each part is invoiced."
+    },
+    {
+      "q": "Can a subcontractor be paid with an expired tax clearance?",
+      "a": "Not without an exception. Someone with that permission can let one certificate through with a reason, and the reason is logged."
+    },
+    {
+      "q": "Who can change a valuation line?",
+      "a": "Only the person holding the current step. The screen shows who it is waiting for."
+    },
+    {
+      "q": "Are the VAT and withholding tax rates fixed?",
+      "a": "No. They are settings you choose, set on each contract."
+    },
+    {
+      "q": "Can we raise requests for information against the drawings?",
+      "a": "Drawings and requests for information are on the way.",
+      "prelaunch": "industry-construction"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-property",
+    "industry-field-service",
+    "industry-manufacturing"
+  ],
+  "cta": {
+    "title": "Put your next valuation into Clafina.",
+    "body": "Start free, switch on the Construction pack and open a contract on your project. Add stages, subcontractors and the diary as the job runs."
+  }
+}

@@ -51,6 +51,14 @@ describe('IndustryStory', () => {
     s.moments[3]!.time = '10:00';
     expect(issues(s)).toContain('moments.3.time: moment times must rise: 11:00 then 10:00');
   });
+  it('keeps the page light: four day screens at most, none repeating the hero', () => {
+    const s = story();
+    s.moments.slice(0, 5).forEach((m, i) => Object.assign(m, { screen: `screen-${i}` }));
+    expect(issues(s)).toContain('moments: at most 4 moments carry a screen, found 5');
+    const t = story();
+    Object.assign(t.moments[2]!, { screen: 'till-sell' });
+    expect(issues(t)).toContain('moments.2.screen: repeats the hero screen');
+  });
   it('rejects an unknown surface and a bad time', () => {
     const s = story();
     s.moments[0]!.surface = 'kiosk';

@@ -1,0 +1,34 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: tenant requests at a property manager, each with a contractor, a cost and who pays, and two repairs waiting for the owners because they are over the spending limit.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "IG", "name": "Ivory Gate Property Managers", "place": "Lagos and Abuja" },
+  "nav": [
+    { "label": "Property", "items": [{ "label": "Properties and units" }, { "label": "Leases" }, { "label": "Rent roll" }, { "label": "Inspections" }, { "label": "Tenant requests", "active": true, "badge": "10" }, { "label": "Owners' levies" }] }
+  ],
+  "title": "Tenant requests",
+  "subtitle": "Faults and questions from tenants. Each one has a contractor, a cost and who pays.",
+  "actions": [{ "label": "New request", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "bell", "label": "Open requests", "value": "10", "note": "3 new, not assigned yet" },
+      { "icon": "alert", "label": "Urgent", "value": "2", "change": { "tone": "bad", "text": "No water, a roof leak" } },
+      { "icon": "users", "label": "Waiting for an owner", "value": "2", "note": "Over the ₦200,000 limit" },
+      { "icon": "check", "label": "Done this week", "value": "6" }
+    ] },
+    { "type": "attention", "title": "Waiting for the owners' decision", "items": [
+      { "tone": "warn", "icon": "money", "title": "REQ-0177 · Replace the water pump, Ivory Court pump room", "body": "Quote ₦1,850,000 from Clearflow Plumbing, paid from the owners' repairs line. Above ₦200,000 the owners decide before work starts. Asked 3 days ago.", "action": "Remind" },
+      { "tone": "info", "icon": "money", "title": "REQ-0172 · Repaint the lobby, Ivory Court ground floor", "body": "Quote ₦620,000 from Bright Coat Painters, paid from the owners' repairs line. Asked 6 days ago.", "action": "Remind" }
+    ] },
+    { "type": "table", "title": "Open and recently done", "columns": [{ "label": "Request" }, { "label": "Where and who" }, { "label": "Contractor" }, { "label": "Cost and who pays" }, { "label": "State" }], "rows": [
+      [{ "strong": "REQ-0188 · No water since morning" }, "Ivory Court 3C · Mr Dapo Akande · by phone, with a photo", "Not assigned yet", "Cost not set yet", { "pill": "bad", "text": "New · urgent" }],
+      [{ "strong": "REQ-0187 · Gate remote not working" }, "Palmgrove W-3 · Mr Ibim Jack · at the office", "Not assigned yet", "Cost not set yet", { "pill": "neutral", "text": "New" }],
+      [{ "strong": "REQ-0183 · Air conditioner not cooling" }, "Ivory Court 4B · Mrs Toyin Bello", "Polar Air Services · tomorrow 10:00", "₦35,000 · tenant", { "pill": "info", "text": "Assigned" }],
+      [{ "strong": "REQ-0181 · Roof leaking over the stairs" }, "Ivory Court · common area", "Ridgeline Roofing · on site", "₦185,000 · owners' budget", { "pill": "warn", "text": "In progress · urgent" }],
+      [{ "strong": "REQ-0179 · Broken window latch" }, "Ivory Court 2B · Mr Obinna Eze", "Oak and Iron Joinery", "₦12,000 · landlord", { "pill": "good", "text": "Done" }],
+      [{ "strong": "REQ-0170 · Blocked kitchen sink" }, "Ivory Court 1C · Greenleaf Pharmacy", "Clearflow Plumbing", "₦8,000 · tenant", { "pill": "good", "text": "Done" }]
+    ] }
+  ]
+}

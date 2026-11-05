@@ -1,0 +1,46 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a clinic's access log, with every opening, note, print and export, the reason given and what was flagged for the privacy officer.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "AP", "name": "Ayomide Physiotherapy Clinic", "place": "Bodija" },
+  "nav": [
+    { "label": "Client records", "items": [{ "label": "Clients" }, { "label": "Access log", "active": true, "badge": "3" }, { "label": "Data requests", "badge": "1" }, { "label": "Consent and settings" }] }
+  ],
+  "search": "Find a person or a client",
+  "title": "Access log",
+  "subtitle": "Everyone who opened, changed, printed or exported a client record, with the time and the reason. Written as it happens, never edited, kept 10 years.",
+  "actions": [{ "label": "Export the log" }, { "label": "Review flagged", "primary": true, "icon": "alert" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Records opened this week", "value": "1,284", "note": "by 11 people" },
+      { "icon": "alert", "label": "Flagged for a look", "value": "4", "note": "3 need an answer" },
+      { "icon": "receipt", "label": "Exports and prints", "value": "1", "note": "Reason kept" },
+      { "icon": "bell", "label": "Break-glass", "value": "1", "note": "Announced at once" }
+    ] },
+    { "type": "table", "title": "Latest first", "columns": [{ "label": "When" }, { "label": "Who" }, { "label": "What and why" }, { "label": "Flag" }], "rows": [
+      ["Today 19:40", { "avatar": "DO", "text": "Damilola Ogunsanya · physio" }, "Opened Mr Chuka Eneh · break-glass · “fell at home, his physio Tayo is off tonight”", { "pill": "bad", "text": "Break-glass" }],
+      ["Today 17:10", { "avatar": "AO", "text": "Ayomide Oladipo · privacy officer" }, "Exported Mrs Akinwale's record · her own copy request", { "pill": "warn", "text": "Export" }],
+      ["Today 11:32", { "avatar": "TA", "text": "Tayo Adebisi · physio" }, "Opened Mrs Folasade Akinwale · not her practitioner · “covering for Damilola”", { "pill": "info", "text": "Reason given" }],
+      ["Today 10:40", { "avatar": "DO", "text": "Damilola Ogunsanya · physio" }, "Signed a note for Mrs Folasade Akinwale · treating practitioner", { "pill": "neutral", "text": "None" }],
+      ["Today 10:02", { "avatar": "DO", "text": "Damilola Ogunsanya · physio" }, "Opened Mrs Folasade Akinwale · treating practitioner", { "pill": "neutral", "text": "None" }],
+      ["Today 08:05", { "avatar": "BK", "text": "Bukola Kehinde · front desk" }, "Opened the booking of Ms Nkechi Okoro · booking details only", { "pill": "neutral", "text": "None" }],
+      ["Yesterday 16:48", { "avatar": "DO", "text": "Damilola Ogunsanya · physio" }, "Opened 14 records in 3 minutes · treating practitioner for all 14", { "pill": "warn", "text": "Unusual speed" }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Data requests · due 30 days from receipt", "columns": [{ "label": "Request" }, { "label": "Due" }, { "label": "State" }], "rows": [
+        ["Copy · Mrs Folasade Akinwale · received 19 Oct", "18 Nov", { "pill": "good", "text": "Sent today" }],
+        ["Deletion · Mr Femi Ajala · received 2 Oct", "1 Nov", { "pill": "info", "text": "Open" }],
+        ["Correction · Mrs Grace Udo · received 16 Sep", "16 Oct", { "pill": "bad", "text": "Overdue" }]
+      ] },
+      { "type": "kv", "title": "What gets flagged", "items": [
+        { "label": "Not their client", "value": "Always asks a reason" },
+        { "label": "Break-glass", "value": "Written reason, announced at once" },
+        { "label": "Unusual speed", "value": "10 or more records in 5 minutes" },
+        { "label": "Searches", "value": "Name lookups with no visit, after 3" },
+        { "label": "Exports and prints", "value": "Always, with the reason" }
+      ] }
+    ] }
+  ]
+}
