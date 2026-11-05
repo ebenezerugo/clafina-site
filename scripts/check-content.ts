@@ -5,6 +5,7 @@ import { CONTENT_SCHEMAS } from '../src/content/registry';
 import { checkScreenSpec } from '../src/content/screen-spec';
 import { ProductContent } from '../src/content/product';
 import { IndustryStory } from '../src/content/industry';
+import { HelpCatalogue, HelpModuleGuide, NAMED_SERVICES } from '../src/content/help';
 import { LOCALE_CODES, isLocale } from '../src/config/locales';
 import { SWITCHES, localeIndexed } from '../src/config/switches';
 import { buildMode, type BuildMode } from '../src/lib/build-mode';
@@ -77,6 +78,41 @@ export function translationGaps(root: string): string[] {
   return gaps;
 }
 
+/** The help centre: the synced catalogue, and each module guide against it. */
+export function checkHelp(root: string): string[] {
+  const problems: string[] = [];
+  for (const locale of readdirSync(root).filter((d) => isLocale(d))) {
+    const file = join(root, locale, 'help', 'catalogue.json');
+    if (!existsSync(file)) continue;
+    const cat = HelpCatalogue.safeParse(JSON.parse(readFileSync(file, 'utf8')));
+    if (!cat.success) { problems.push(...cat.error.issues.map((i) => `${locale}/help/catalogue.json ${i.path.join('.')}: ${i.message}`)); continue; }
+    const modules = new Map(cat.data.sections.flatMap((s) => s.modules).map((m) => [m.slug, new Set(m.groups.flatMap((g) => g.pages.map((p) => p.href)))]));
+    const dir = join(root, locale, 'help', 'guides');
+    for (const f of existsSync(dir) ? readdirSync(dir).filter((x) => x.endsWith('.json')).sort() : []) {
+      const where = `${locale}/help/guides/${f}`;
+      const raw = readFileSync(join(dir, f), 'utf8');
+      const data = JSON.parse(raw) as Json;
+      textProblems(where, data, '', false, problems);
+      const named = raw.match(NAMED_SERVICES);
+      if (named) problems.push(`${where} names "${named[0]}"`);
+      const g = HelpModuleGuide.safeParse(data);
+      if (!g.success) { problems.push(...g.error.issues.map((i) => `${where} ${i.path.join('.')}: ${i.message}`)); continue; }
+      const slug = f.replace(/\.json$/, '');
+      const pages = modules.get(slug);
+      if (!pages) { problems.push(`${where} is not a module in the catalogue`); continue; }
+      if (g.data.module !== slug) problems.push(`${where} says module "${g.data.module}"`);
+      const slugs = new Set<string>();
+      g.data.articles.forEach((a, i) => {
+        if (slugs.has(a.slug)) problems.push(`${where} articles.${i} repeats the slug "${a.slug}"`);
+        slugs.add(a.slug);
+        if (!pages.has(a.page)) problems.push(`${where} articles.${i} page ${a.page} is not a page of this module`);
+      });
+      g.data.articles.forEach((a, i) => (a.related ?? []).forEach((r) => { if (!slugs.has(r)) problems.push(`${where} articles.${i} relates to unknown "${r}"`); }));
+    }
+  }
+  return problems;
+}
+
 /** Problems that must fail the build. In production, gaps in indexed languages count too. */
 export function checkContent(root: string, mode: BuildMode = buildMode()): string[] {
   const problems: string[] = [];
@@ -119,6 +155,7 @@ export function checkContent(root: string, mode: BuildMode = buildMode()): strin
       else if (data.spec === 1) problems.push(...checkScreenSpec(data).map((p) => `${where} ${p}`));
     }
   }
+  problems.push(...checkHelp(root));
   if (mode === 'production') {
     problems.push(...translationGaps(root).filter((g) => isLocale(g.split('/')[0] ?? '') && localeIndexed(g.split('/')[0] as never)));
   }

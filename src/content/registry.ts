@@ -4,6 +4,7 @@ import { HomeContent } from './schema';
 import { PlatformContent } from './platform';
 import { LeadPageContent } from './lead-page';
 import { ProductContent } from './product';
+import { HelpHome } from './help';
 import { IndustriesIndex } from './industry';
 
 /** Content files with a fixed shape, by id. The content check validates each file in every language. */
@@ -15,6 +16,7 @@ export const CONTENT_SCHEMAS: Record<string, z.ZodType> = {
   demo: LeadPageContent,
   'contact-sales': LeadPageContent,
   industries: IndustriesIndex,
+  help: HelpHome,
   // Product pages live at content/<locale>/product/<slug>.json and are checked by kind;
   // industry stories at content/<locale>/industries/<slug>.json the same way.
 };

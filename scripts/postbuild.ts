@@ -4,6 +4,7 @@ import { LOCALES } from '../src/config/locales';
 import { ROUTES } from '../src/config/routes';
 import { localeEnabled, localeIndexed, pageAvailable } from '../src/config/switches';
 import { SITE_ORIGIN, sitemapXml } from '../src/lib/seo';
+import { helpPaths } from '../src/lib/help';
 
 const OUT = 'out';
 const enabled = LOCALES.filter((l) => localeEnabled(l.code)).map((l) => l.code);
@@ -18,7 +19,7 @@ for (const locale of enabled) {
 }
 
 // One sitemap per indexed language, available pages only, plus the index and robots.txt.
-const paths = ROUTES.filter((r) => !('previewOnly' in r) && pageAvailable(r.id)).map((r) => r.path);
+const paths = [...ROUTES.filter((r) => !('previewOnly' in r) && pageAvailable(r.id)).map((r) => r.path), ...(pageAvailable('help') ? helpPaths() : [])];
 for (const locale of indexed) writeFileSync(join(OUT, `sitemap-${locale}.xml`), sitemapXml(locale, paths, indexed));
 writeFileSync(
   join(OUT, 'sitemap.xml'),

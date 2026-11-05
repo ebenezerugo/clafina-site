@@ -18,7 +18,8 @@
     "check:content": "tsx scripts/check-content.ts",
     "prebuild": "tsx scripts/generate-well-known.ts && tsx scripts/script-fonts.ts",
     "postbuild": "tsx scripts/postbuild.ts",
-    "check:links": "tsx scripts/check-links.ts"
+    "check:links": "tsx scripts/check-links.ts",
+    "sync:help": "tsx scripts/sync-help.ts"
   },
   "dependencies": {
     "next": "16.4.5",
