@@ -139,8 +139,8 @@
           "rest": "to add a record: the person, the kind, what it is, its number, when it was issued and when it expires, with a copy."
         },
         {
-          "lead": "Press Renew",
-          "rest": "on a record when the new one comes in, and give its new expiry."
+          "lead": "Change the record",
+          "rest": "when the new one comes in: give its new expiry and upload the new copy."
         }
       ]
     },
@@ -241,8 +241,8 @@
           "rest": "whether it is paid, and the most carried into the next year (or nothing)."
         },
         {
-          "lead": "Open Leave entitlements",
-          "rest": "and press Give this year's leave to everyone."
+          "lead": "Open Leave entitlements,",
+          "rest": "choose the year and press Give the year's leave to everyone. Each person gets each kind's days, plus what they carry over."
         },
         {
           "lead": "Check the list.",
@@ -491,11 +491,11 @@
       "slug": "set-goals",
       "title": "Set goals and follow their progress",
       "summary": "Give someone goals for the cycle, break them into tasks with boxes to tick, and watch progress move on the board.",
-      "page": "/hr/performance/goals",
+      "page": "/hr/performance/cycles",
       "steps": [
         {
-          "lead": "Press New goal",
-          "rest": "on Goals. Choose whose goal it is, how it is measured and its weight."
+          "lead": "Open the review cycle",
+          "rest": "and press New goal on its board. Choose whose goal it is, how it is measured and its weight."
         },
         {
           "lead": "Open the goal",
@@ -509,6 +509,9 @@
           "lead": "Move the goal",
           "rest": "between To do, In progress and Done."
         }
+      ],
+      "tips": [
+        "Goals lists every goal across cycles, with whose it is and its progress."
       ]
     }
   ]

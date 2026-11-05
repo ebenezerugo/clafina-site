@@ -1,0 +1,275 @@
+{
+  "kind": "help-module",
+  "module": "property",
+  "sources": [
+    "commerce-api/documentation/PROPERTY.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/property/presentation"
+  ],
+  "intro": "The property pack, for letting and managing buildings and estates: properties, units and their owners, leases with rent and deposits, the rent roll and landlords' statements, inspections, tenants' repairs and owners' levies. Switch the pack on in Organisation › Settings › Industry packs, at the places you manage.",
+  "start": [
+    "Turn the property pack on in Organisation › Settings › Industry packs.",
+    "Add your owners, then each property and its units, on Properties and units.",
+    "Make a lease for each let unit and sign it. Its rent falls due on its own from then.",
+    "Check the rent roll each month and record payments as they come in."
+  ],
+  "articles": [
+    {
+      "slug": "add-properties-and-units",
+      "title": "Add a property, its units and their owner",
+      "summary": "Record who owns the units and how they are paid, then the building and each unit in it with its asking rent.",
+      "page": "/property/units",
+      "steps": [
+        {
+          "lead": "Press Add an owner.",
+          "rest": "Choose the customer who owns the units and, if you pay them out, their supplier account. Set their fee and how much a repair may cost before they must say yes, then press Add the owner."
+        },
+        {
+          "lead": "Press Add a property,",
+          "rest": "give it a name, kind, area and address, and press Add the property."
+        },
+        {
+          "lead": "Press Add a unit",
+          "rest": "for each flat, shop or office. Enter its bedrooms, floor, asking rent and how often rent is paid, and choose its owner."
+        },
+        {
+          "lead": "Press Add the unit.",
+          "rest": "It shows as vacant until a lease is signed."
+        }
+      ],
+      "tips": [
+        "For an estate that charges levies by share, fill in each unit's share of the estate.",
+        "Choose Take off the market from a unit's actions while it cannot be let, and Put back on the market when it can."
+      ],
+      "related": [
+        "make-and-sign-a-lease"
+      ]
+    },
+    {
+      "slug": "make-and-sign-a-lease",
+      "title": "Make a lease and sign it",
+      "summary": "Choose the unit and the tenant, set the term and rent, sign the lease and record the caution deposit.",
+      "page": "/property/leases",
+      "steps": [
+        {
+          "lead": "Press New lease",
+          "rest": "on Leases."
+        },
+        {
+          "lead": "Choose the unit",
+          "rest": "and the tenant."
+        },
+        {
+          "lead": "Set the term and the rent:",
+          "rest": "when it starts and ends, the rent a period and whether it is paid a month, a quarter or a year, the caution deposit, the agency fee and the notice."
+        },
+        {
+          "lead": "Press Make the draft lease.",
+          "rest": "It shows as draft, to be signed."
+        },
+        {
+          "lead": "Press Sign the lease.",
+          "rest": "The rent due for each period is written out and the unit shows as let."
+        },
+        {
+          "lead": "Press Deposit received",
+          "rest": "when the tenant pays it, and press Record the deposit."
+        }
+      ],
+      "tips": [
+        "A unit can only have one lease in force at a time.",
+        "A short last period is charged by its days."
+      ],
+      "related": [
+        "renew-or-end-a-lease",
+        "collect-rent"
+      ]
+    },
+    {
+      "slug": "renew-or-end-a-lease",
+      "title": "Renew a lease, or end it",
+      "summary": "Remind the tenant, offer a new term with any rise, and turn an acceptance into the next lease. Or record notice and end it.",
+      "page": "/property/leases",
+      "steps": [
+        {
+          "lead": "Open the lease",
+          "rest": "from Leases. Those ending soon are under their own tab."
+        },
+        {
+          "lead": "Press Send a reminder",
+          "rest": "to tell the tenant it is coming to an end."
+        },
+        {
+          "lead": "Press Offer a renewal,",
+          "rest": "enter the rise as a percent and the day to answer by, and press Send the offer."
+        },
+        {
+          "lead": "Press Tenant accepts",
+          "rest": "with the new term's dates, and press Accept into a new lease. A draft lease follows on, with the deposit carried over and no agency fee again."
+        },
+        {
+          "lead": "If they say no, press Tenant declines.",
+          "rest": "The lease ends on its own day."
+        },
+        {
+          "lead": "To end it early, press Notice given,",
+          "rest": "enter the day, and press Record the notice. Or press End the lease. Rent after the new end is waived."
+        }
+      ],
+      "related": [
+        "make-and-sign-a-lease",
+        "inspect-and-settle-the-deposit"
+      ]
+    },
+    {
+      "slug": "collect-rent",
+      "title": "Invoice the rent and record payments",
+      "summary": "See what fell due this month and who is late, invoice the month's rent and record each payment.",
+      "page": "/property/rent-roll",
+      "steps": [
+        {
+          "lead": "Open Rent roll",
+          "rest": "and choose the month. Who owes, by how late shows what is late and by how many days."
+        },
+        {
+          "lead": "Press Invoice this month's rent",
+          "rest": "to invoice the rent due this month."
+        },
+        {
+          "lead": "Choose Record a payment",
+          "rest": "from the actions on a row when money comes in."
+        },
+        {
+          "lead": "Enter the amount, the day, how it was paid and the reference,",
+          "rest": "then press Record the payment. What is owing goes down."
+        }
+      ],
+      "tips": [
+        "Rent coming due soon is also invoiced on its own each day, as your settings say."
+      ],
+      "related": [
+        "issue-a-landlords-statement"
+      ]
+    },
+    {
+      "slug": "issue-a-landlords-statement",
+      "title": "Send a landlord their monthly statement",
+      "summary": "Show the rent you collected for their units, less your fee and repairs, and the payout you owe them.",
+      "page": "/property/rent-roll",
+      "steps": [
+        {
+          "lead": "Under A landlord's statement, choose the landlord",
+          "rest": "and press Show the statement."
+        },
+        {
+          "lead": "Check the rent received and the repairs.",
+          "rest": "The fee and the payout are worked out."
+        },
+        {
+          "lead": "Press Issue the statement.",
+          "rest": "The payout is billed to the landlord's supplier account, ready to pay."
+        }
+      ],
+      "related": [
+        "collect-rent"
+      ]
+    },
+    {
+      "slug": "inspect-and-settle-the-deposit",
+      "title": "Inspect a unit and settle the deposit",
+      "summary": "Book a move-in, routine or move-out inspection, go room by room, take any deductions from the deposit and refund the rest.",
+      "page": "/property/inspections",
+      "steps": [
+        {
+          "lead": "Press Book an inspection.",
+          "rest": "Choose the unit, the kind, when and the inspector, and press Book it."
+        },
+        {
+          "lead": "Go room by room.",
+          "rest": "For each item, choose how it is now (good, fair, damaged or missing), add a note, and press Save the rooms. Anything worse than last time is flagged."
+        },
+        {
+          "lead": "At a move-out, add each deduction",
+          "rest": "with the amount, why and a photo that shows it, and press Take it from the deposit."
+        },
+        {
+          "lead": "Press Finish the inspection.",
+          "rest": "The tenant is sent the report and may answer within the days your settings allow."
+        },
+        {
+          "lead": "Record what the tenant says,",
+          "rest": "then press Settle the deposit. The rest is refunded."
+        }
+      ],
+      "tips": [
+        "Deductions can only be made at a move-out inspection, and each needs a reason and a photo."
+      ],
+      "related": [
+        "renew-or-end-a-lease"
+      ]
+    },
+    {
+      "slug": "handle-a-tenant-request",
+      "title": "Handle a tenant's repair request",
+      "summary": "Log the problem, give it to a contractor with the cost and who pays, get the owner's yes where needed, and mark it done.",
+      "page": "/property/requests",
+      "steps": [
+        {
+          "lead": "Press New request.",
+          "rest": "Say where it is and what is wrong, how urgent it is, how it came in and who reported it. Press Log the request."
+        },
+        {
+          "lead": "Choose Assign a contractor",
+          "rest": "from its actions. Enter the contractor, when they are booked, the cost and who pays: the tenant, the landlord or the owners' fund. Press Assign it."
+        },
+        {
+          "lead": "If it waits for the owner,",
+          "rest": "choose The owner says yes or The owner says no once they answer."
+        },
+        {
+          "lead": "Choose Work has started",
+          "rest": "when the contractor begins."
+        },
+        {
+          "lead": "Choose Done,",
+          "rest": "enter the final cost and press It is done. The tenant is invoiced, the landlord's statement takes it off, or the owners' budget pays it."
+        }
+      ],
+      "tips": [
+        "A repair the landlord or the owners' fund pays waits for the owner's yes when it costs more than their limit."
+      ]
+    },
+    {
+      "slug": "raise-owners-levies",
+      "title": "Set an estate's budget and raise the owners' levy",
+      "summary": "Agree the year's budget and how it is shared, raise the levy on each owner, record what they pay and what is spent.",
+      "page": "/property/levies",
+      "steps": [
+        {
+          "lead": "Press New budget,",
+          "rest": "choose the year and how the levy is shared (equal for every unit, by floor area, or by each unit's share), add the budget lines and press Make the budget."
+        },
+        {
+          "lead": "Press Approve the budget",
+          "rest": "once the owners agree it."
+        },
+        {
+          "lead": "Press Raise the levy,",
+          "rest": "choose the period, what it raises and when it is due, and press Raise the levy. Each owner is charged their part."
+        },
+        {
+          "lead": "Choose Record a payment",
+          "rest": "from an owner's actions when they pay."
+        },
+        {
+          "lead": "Press Spend",
+          "rest": "under Where the levy goes when money is spent from a line, and press Record the spending."
+        }
+      ],
+      "tips": [
+        "A levy can only be raised on an approved budget, and only once a period.",
+        "Spending can never go past a line, nor past what the levy has collected."
+      ]
+    }
+  ]
+}

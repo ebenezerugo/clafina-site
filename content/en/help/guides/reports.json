@@ -1,0 +1,118 @@
+{
+  "kind": "help-module",
+  "module": "reports",
+  "sources": [
+    "commerce-api/documentation/ANALYTICS.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Every report you may read, from sales to stock to people, in one place. Find one, run it for the period you want, export it, and have it sent to people on a schedule.",
+  "start": [
+    "Find a report by its area of the business or its kind, or search for it by name.",
+    "Star the reports you use most. They wait at the top under Your reports and show on your dashboard.",
+    "Save your filters as a view, so the report opens the way you like it.",
+    "Schedule the reports others need, so they arrive by email without anyone asking."
+  ],
+  "articles": [
+    {
+      "slug": "run-and-export-a-report",
+      "title": "Run a report and export it",
+      "summary": "Choose the period, filters and grouping, then export the same figures as CSV, Excel or PDF.",
+      "page": "/reports",
+      "steps": [
+        {
+          "lead": "Find the report",
+          "rest": "by its area of the business, by its kind, or by searching for it, and open it."
+        },
+        {
+          "lead": "Choose the Period,",
+          "rest": "the Location and any filters. Group by adds rows up; Nothing — every row lists them all."
+        },
+        {
+          "lead": "Read the figures.",
+          "rest": "The first column opens the record behind each row. On a live report, a bar says New figures, and the rows move only when you press Update."
+        },
+        {
+          "lead": "Press Export",
+          "rest": "and choose CSV, Excel or PDF. The file has the same figures as the screen, with the period and filters written at the top."
+        }
+      ],
+      "tips": [
+        "A large export is made in the background and you are told when it is ready. It waits in My exports.",
+        "Narrow the filters or the period if an export is too large to make.",
+        "Only the reports you may read are listed."
+      ],
+      "related": [
+        "save-and-pin-a-report",
+        "schedule-a-report"
+      ]
+    },
+    {
+      "slug": "save-and-pin-a-report",
+      "title": "Keep a report the way you like it",
+      "summary": "Save your filters as a view and star a report to keep it at the top and on your dashboard.",
+      "page": "/reports",
+      "steps": [
+        {
+          "lead": "Set the report up",
+          "rest": "with the period, filters and grouping you want."
+        },
+        {
+          "lead": "Press Save as a view,",
+          "rest": "give it a View name and press Save. It is listed under My views, and nobody else sees it."
+        },
+        {
+          "lead": "Press the star",
+          "rest": "on a report. It joins Your reports at the top, and shows on your dashboard."
+        }
+      ],
+      "tips": [
+        "You can pin six reports.",
+        "Remove view takes a saved view away. Unstarring a report keeps its views."
+      ],
+      "related": [
+        "run-and-export-a-report"
+      ]
+    },
+    {
+      "slug": "schedule-a-report",
+      "title": "Get a report by email every week",
+      "summary": "Choose when and who gets it. Each person gets it only if they may read the report.",
+      "page": "/reports",
+      "steps": [
+        {
+          "lead": "Press New schedule,",
+          "rest": "or Schedule on the report itself."
+        },
+        {
+          "lead": "Choose the report and give it a name.",
+          "rest": "People see the name in the email and in Schedules."
+        },
+        {
+          "lead": "Say when:",
+          "rest": "how often, the day, the time and the time zone. The period moves on with each copy, such as last month."
+        },
+        {
+          "lead": "Choose who gets it:",
+          "rest": "find a person, or everyone with a role. Each person gets it only if they may read the report."
+        },
+        {
+          "lead": "Choose Send it as",
+          "rest": "CSV, Excel or PDF."
+        },
+        {
+          "lead": "Press Send me a test now",
+          "rest": "to see it first, then Save schedule."
+        }
+      ],
+      "tips": [
+        "An empty report is still sent, so silence means something is wrong.",
+        "Each copy is made as the person who gets it, so nobody sees more than they could read themselves.",
+        "In Schedules you can pause a schedule and resume it later."
+      ],
+      "related": [
+        "run-and-export-a-report"
+      ]
+    }
+  ]
+}

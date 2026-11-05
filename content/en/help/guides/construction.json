@@ -42,13 +42,13 @@
         },
         {
           "lead": "Press Certify for the client",
-          "rest": "once the client has certified it, say who certified it, and press Certify and invoice. The client's invoice is made for the net, with VAT."
+          "rest": "once the client agrees it, enter who signed it off for the client, and press Certify and invoice. The client's invoice is made for the net, with VAT."
         }
       ],
       "tips": [
         "Only one valuation can be open at a time on a contract.",
-        "A percent can never go below what the client has already certified, nor above 100.",
-        "Nothing is invoiced until a valuation is certified.",
+        "A percent can never go below what the client has already agreed, nor above 100.",
+        "Nothing is invoiced until you certify a valuation.",
         "Any step can send a valuation back to the engineer, with the reason.",
         "To change the work, choose Add a variation from the contract's actions. Once it is agreed or instructed, as your settings say, it is valued with its stage.",
         "Retention is released in two parts: choose Practical completion when the work is done, and Close the defects period when that ends. Each part is invoiced to the client."
@@ -110,7 +110,7 @@
         },
         {
           "lead": "Press Approve.",
-          "rest": "Their certified to date and retention move, and a draft supplier bill is made in Payables where your settings say so."
+          "rest": "Their total to date and what is held back move, and a draft supplier bill is made in Payables where your settings say so."
         }
       ],
       "tips": [

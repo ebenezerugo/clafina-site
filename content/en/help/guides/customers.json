@@ -1,0 +1,320 @@
+{
+  "kind": "help-module",
+  "module": "customers",
+  "sources": [
+    "commerce-api/documentation/CRM.md",
+    "commerce-api/documentation/ENGAGEMENT.md",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Everyone you sell to, people and companies, with what each owes and when they last bought. Follow your deals through a pipeline, keep track of calls and visits, gather customers into lists, and reward them with loyalty points.",
+  "start": [
+    "Add your customers with New customer, or bring them in at once with Import CSV.",
+    "Set a credit limit and payment terms for the customers who buy on credit.",
+    "Make a pipeline with the stages your sales go through, then add your open deals.",
+    "Turn on the loyalty scheme if you want invoices to earn points."
+  ],
+  "articles": [
+    {
+      "slug": "add-a-customer",
+      "title": "Add a customer",
+      "summary": "Add a person or an organisation. One that looks like a customer you already have is pointed out before you save.",
+      "page": "/customers/contacts",
+      "steps": [
+        {
+          "lead": "Press New customer.",
+          "rest": "Under Who is the customer?, choose A person or An organisation."
+        },
+        {
+          "lead": "Fill in their details.",
+          "rest": "For a person, their name, email and phone. For an organisation, its legal name as on its registration, which is printed on every invoice."
+        },
+        {
+          "lead": "Give the tax identification number (TIN)",
+          "rest": "for an organisation, if you have it. It is checked with the tax office after you save."
+        },
+        {
+          "lead": "Look at Is it one you already have?",
+          "rest": "if it appears. Open the match if it is the same customer, or press Add anyway."
+        },
+        {
+          "lead": "Press Add the person or Make the organisation.",
+          "rest": "They can be chosen on quotations and invoices at once. Nothing is shared with the customer."
+        }
+      ],
+      "tips": [
+        "Import CSV adds many customers at once and names any rows it refused. Export gives you the list back as a file.",
+        "Stage says how far along they are: lead, prospect or customer."
+      ],
+      "related": [
+        "see-what-a-customer-owes",
+        "merge-a-duplicate"
+      ]
+    },
+    {
+      "slug": "see-what-a-customer-owes",
+      "title": "See what a customer owes and set their credit limit",
+      "summary": "Open a customer for their balance, documents and statement, and set how much they may owe and when they pay.",
+      "page": "/customers/contacts",
+      "steps": [
+        {
+          "lead": "Find the customer",
+          "rest": "in the list. It shows what each owes, has overdue and when they last bought."
+        },
+        {
+          "lead": "Open them.",
+          "rest": "Their page shows the balance, Documents and payments, and What they owe, by age."
+        },
+        {
+          "lead": "Press Set a limit,",
+          "rest": "or Change the limit, under their credit."
+        },
+        {
+          "lead": "Enter the Credit limit and Payment terms,",
+          "rest": "then press Save their terms."
+        }
+      ],
+      "tips": [
+        "Press any document on their page to open it.",
+        "Accounts, under Customers, shows what each customer owes you and how much more they may owe."
+      ],
+      "related": [
+        "remind-customers-who-owe",
+        "add-a-customer"
+      ]
+    },
+    {
+      "slug": "merge-a-duplicate",
+      "title": "Merge a customer entered twice",
+      "summary": "Move everything from the duplicate to the customer you keep, then remove the duplicate. It cannot be undone.",
+      "page": "/customers/contacts",
+      "steps": [
+        {
+          "lead": "Open the customer you want to keep",
+          "rest": "and press Merge a duplicate."
+        },
+        {
+          "lead": "Find the duplicate",
+          "rest": "by name, and choose it."
+        },
+        {
+          "lead": "Press Merge the duplicate in.",
+          "rest": "Its documents, activities, lists, tickets and loyalty points become this customer's."
+        },
+        {
+          "lead": "Confirm with Merge, and the duplicate's name, in.",
+          "rest": "The duplicate is removed. Press Keep them apart instead if they are different customers."
+        }
+      ],
+      "related": [
+        "add-a-customer"
+      ]
+    },
+    {
+      "slug": "remind-customers-who-owe",
+      "title": "Remind customers who are late paying",
+      "summary": "Tick the customers on the list and send their overdue invoice reminders in one go.",
+      "page": "/customers/contacts",
+      "steps": [
+        {
+          "lead": "Tick the customers",
+          "rest": "on the list, or select all who match your filters."
+        },
+        {
+          "lead": "Press Send reminders.",
+          "rest": "It shows each overdue invoice as Will go or Skipped, and what the reminders ask for in all."
+        },
+        {
+          "lead": "Press Send, with the number of reminders,",
+          "rest": "such as Send 3 reminders. Customers with nothing overdue get nothing."
+        }
+      ],
+      "tips": [
+        "Send a message, beside it, writes one message to the customers you ticked, and Add to a list puts them on a list."
+      ],
+      "related": [
+        "see-what-a-customer-owes",
+        "make-a-customer-list"
+      ]
+    },
+    {
+      "slug": "log-an-activity",
+      "title": "Log a call, visit or follow-up",
+      "summary": "Keep a note of what you did with a customer, or a task with a due date, and mark it done when it is.",
+      "page": "/customers/activities",
+      "steps": [
+        {
+          "lead": "Press Log an activity",
+          "rest": "on Activities, or on the customer's own page."
+        },
+        {
+          "lead": "Choose the Kind,",
+          "rest": "such as a call, a meeting, a note or a task, and who it is about."
+        },
+        {
+          "lead": "Give the Subject,",
+          "rest": "and a due date and notes if you want."
+        },
+        {
+          "lead": "Press Log the activity.",
+          "rest": "It shows on the customer's page, newest first."
+        },
+        {
+          "lead": "Press Mark done",
+          "rest": "when it is finished, or Cancel it. Open again brings it back."
+        }
+      ],
+      "tips": [
+        "Tasks assigned to you also wait in your Inbox."
+      ]
+    },
+    {
+      "slug": "set-up-a-pipeline",
+      "title": "Set up the stages of your sales",
+      "summary": "Make a pipeline with the stages a deal moves through, each with its chance of winning.",
+      "page": "/customers/pipelines",
+      "steps": [
+        {
+          "lead": "Press New pipeline,",
+          "rest": "give it a name and press Make the pipeline."
+        },
+        {
+          "lead": "Press Add a stage.",
+          "rest": "Give its name and its chance of winning."
+        },
+        {
+          "lead": "Say what the stage means:",
+          "rest": "still open, won or lost."
+        },
+        {
+          "lead": "Press Add the stage.",
+          "rest": "Each new stage is added at the end, so add them in order."
+        }
+      ],
+      "related": [
+        "follow-a-deal"
+      ]
+    },
+    {
+      "slug": "follow-a-deal",
+      "title": "Follow a deal through your pipeline",
+      "summary": "A column for each stage, with what its deals are worth. Add a deal and move it on as it goes.",
+      "page": "/customers/deals",
+      "before": [
+        "You need a pipeline with stages."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Pipeline",
+          "rest": "at the top. Each stage is a column, with what its deals add up to."
+        },
+        {
+          "lead": "Press New deal.",
+          "rest": "Give its name, stage, amount and when it is expected to close, then press Add deal."
+        },
+        {
+          "lead": "Move the deal",
+          "rest": "by choosing its new stage, as the sale goes on."
+        }
+      ],
+      "tips": [
+        "Open deals shows what is still being worked on in the pipeline, and Oldest idle the deal that has waited longest."
+      ],
+      "related": [
+        "set-up-a-pipeline"
+      ]
+    },
+    {
+      "slug": "make-a-customer-list",
+      "title": "Gather customers into a list",
+      "summary": "Make a list of customers you want to reach together, ready for a campaign.",
+      "page": "/customers/lists",
+      "steps": [
+        {
+          "lead": "Press New list,",
+          "rest": "give it a name and what it is for, and press Make the list."
+        },
+        {
+          "lead": "Choose the list and press Add customers.",
+          "rest": "Find a customer by name, phone or email, and press Add."
+        },
+        {
+          "lead": "Press Done",
+          "rest": "when you have added everyone."
+        }
+      ],
+      "tips": [
+        "Take off removes someone from the list. They stay a customer.",
+        "A campaign's audience can be chosen from your lists."
+      ],
+      "related": [
+        "remind-customers-who-owe"
+      ]
+    },
+    {
+      "slug": "set-up-loyalty",
+      "title": "Reward customers with loyalty points",
+      "summary": "One switch, two numbers: invoices earn points, and customers may pay in them. Tiers reward those who earn most.",
+      "page": "/loyalty/scheme",
+      "steps": [
+        {
+          "lead": "Open Loyalty scheme",
+          "rest": "and switch on Invoices earn points, and customers may pay in them."
+        },
+        {
+          "lead": "Enter the points for each unit spent",
+          "rest": "and what a point is worth when spent, then press Save. The example shows the rule in words."
+        },
+        {
+          "lead": "Press New tier",
+          "rest": "to add a level such as silver or gold, with the points a member needs to reach it, and press Make the tier."
+        },
+        {
+          "lead": "Press Recalculate",
+          "rest": "after changing tiers, to place every member in the highest tier their earned points reach."
+        }
+      ],
+      "tips": [
+        "Points are earned when an invoice for a member is posted, on its amount before tax, once per invoice.",
+        "Voiding the invoice takes the points back.",
+        "A customer can pay a receipt in points. With too few, it is refused."
+      ],
+      "related": [
+        "enrol-a-member"
+      ]
+    },
+    {
+      "slug": "enrol-a-member",
+      "title": "Enrol a customer and change their points",
+      "summary": "Add a customer to the scheme in a tier, and adjust their points by hand with a reason.",
+      "page": "/loyalty/enrollments",
+      "before": [
+        "Turn the scheme on and make at least one tier first."
+      ],
+      "steps": [
+        {
+          "lead": "Press Enrol a customer",
+          "rest": "on Members."
+        },
+        {
+          "lead": "Choose the customer and a tier,",
+          "rest": "then press Enrol the customer. They earn from their next posted invoice."
+        },
+        {
+          "lead": "Press Adjust points",
+          "rest": "to give or take points by hand. Use a minus to take them."
+        },
+        {
+          "lead": "Say why and press Adjust the points.",
+          "rest": "The reason is kept on the Points ledger with every other change."
+        }
+      ],
+      "tips": [
+        "An adjustment is the only way points change by hand.",
+        "Points ledger shows every point a member earned, spent or was given, and why."
+      ],
+      "related": [
+        "set-up-loyalty"
+      ]
+    }
+  ]
+}
