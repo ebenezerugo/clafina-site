@@ -29,7 +29,7 @@ Success means:
 | Hosting | Static export (`next build` → `out/`) on Cloudflare Pages, plus Pages Functions for forms. |
 | CMS | Later. Content is structured so a headless CMS can replace the content files and the switch file. |
 | Languages | 20 at launch, all drafted; each stays a noindexed draft until a native speaker marks it reviewed. |
-| Packs | Every pack and module has working screens and mobile apps (owner, 5 Nov). Items each pack doc lists as "Not yet" appear only as "Coming next". |
+| Packs | Every pack and module has working screens and mobile apps (owner, 5 Nov). Every item the pack docs list as "Not yet" (Appendix A) will be built before the application goes live (owner, 5 Nov), so the site presents them as features. Each is tagged `prelaunch` and shown through the `prelaunchFeatures` switch (section 9). |
 | Switches | One switch system for the whole site: claims, pages, sections, languages, countries, features. |
 | Facts | Checkable facts (legal entity, address, emails, sign-in URL, store links, app IDs, socials, prices, partner terms, job openings) live in the settings file; everything else is written in full. |
 
@@ -113,6 +113,9 @@ clafina-site/
   `screen`), `packSwitchesOn[]`, `sharedCore[]`, `comingNext[]`, `faq[]`, `related[]`, `sources[]`.
 - Product page schema: `hero`, `jobs[3]`, `screenTour[]`, `features[]`, `connectsTo[]`, `surfaces[]`,
   `industries[]`, `comingNext[]`, `faq[]`, `sources[]`.
+- Any feature, moment or FAQ answer that depends on an Appendix A item carries `prelaunch: true`.
+  It reads as a normal feature; the tag only ties it to the `prelaunchFeatures` switch.
+  `comingNext[]` is kept for anything announced after launch and is empty at launch.
 - `sources[]` lists the product docs a page was written from; it is never rendered.
 - English is the master. A build report lists keys missing or stale in each language.
 - Each language has `status: draft | reviewed`, a reviewer and a date. Drafts are published, noindexed
@@ -183,6 +186,9 @@ exact behaviour where a mockup is ambiguous.
 `src/config/switches.ts` (moving into the CMS later) holds every switch with a default, a note on what
 it controls and a production rule where one applies.
 
+- **Pre-launch features:** `prelaunchFeatures` (on), with one sub-switch per industry and product
+  area, so any item not ready at go-live can be hidden on its own. Production needs `confirmedBy`
+  and a date, the same as the claim switches.
 - **Claims:** `livePayments`, `fiscalCertified`, `complianceLabels`, `uptime`, `metrics`. Content that
   makes one of these claims is tagged with its switch and disappears cleanly when it is off. Each
   claim's value lives beside its switch; until supplied it is a sample marked `sample: true`.
@@ -199,7 +205,8 @@ sample, or without a `confirmedBy` name and date.
 
 - Voice: plain, warm, short sentences, sentence case, no exclamation marks, no jargon. One claim, then
   proof (a screen, a fact, a named feature).
-- Built features may be claimed. "Not yet" items appear only under "Coming next", without dates.
+- Built features may be claimed. Appendix A items are claimed as features, tagged `prelaunch`.
+  Anything else not yet built appears only under "Coming next", without dates.
 - Claims in section 9 appear only through their switches.
 - Every invented business carries the "Illustrative example" label and a clearly fictional name; no
   real brands; screen numbers are illustrative.
@@ -268,7 +275,11 @@ left on.
 
 ## Appendix A. Industry facts (from `docs/product-source/`, 5 Nov 2026)
 
-| Industry | Kind | Trade words | Coming next (do not claim as built) |
+The right-hand column lists what the docs marked "Not yet" on 5 November. The owner confirmed all of
+it will be built before the application goes live, so the pages present it as features, tagged
+`prelaunch` (section 9).
+
+| Industry | Kind | Trade words | Built before go-live (`prelaunch`) |
 |---|---|---|---|
 | Retail | Core: till and online shop | till, shift, float, X/Z report, walk-in customer | iOS till; till units other than one; serial and batch at the till |
 | Restaurant | Pack | floor, covers, tabs, courses, stations, 86 | menu photos and languages |
@@ -288,7 +299,13 @@ left on.
 | Fundraising | Pack | Donor, gifts, campaigns, grants, tax receipts, pledges | gifts in the ledger; emailing receipts; giving page; soft credits, volunteers |
 | Product configurator | Pack | (doc not in this repo: read CONFIGURATOR.md before writing) | |
 
-Corrections the new pages must make against today's `industries.html`: property has no service
-charges yet; field service has no route planning; courses have no terms, fee statements or parent
-records; fundraising receipts are issued by action or yearly batch, not automatically; the till sells
-in one unit; retail and manufacturing are core, not packs.
+Corrections the new pages must make against today's `industries.html`:
+
+- Retail and manufacturing are core modules, not packs.
+- Property service charges, field service route planning and the other Appendix A items become
+  `prelaunch` features, not plain claims.
+- Claims that are neither built nor in Appendix A are dropped:
+  - course terms, fee statements and parent records;
+  - fundraising receipts issued the moment money arrives (they are issued by action or in a yearly
+    batch; emailing them is in Appendix A);
+  - a till that sells in several units.
