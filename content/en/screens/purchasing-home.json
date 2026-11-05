@@ -1,0 +1,44 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the procurement home, with what is still to come, what is late, each step of buying and what needs you first.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search suppliers, orders, bills…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Buy", "items": [{ "label": "Procurement", "active": true }, { "label": "Requisitions" }, { "label": "Requests for quote" }, { "label": "Purchase orders" }, { "label": "Goods received" }, { "label": "Supplier bills", "badge": "3" }, { "label": "Suppliers" }] }
+  ],
+  "title": "Procurement",
+  "subtitle": "What you have asked for, ordered and received, and what needs you first.",
+  "actions": [{ "label": "Ask for quotes" }, { "label": "Receive goods" }, { "label": "New purchase order", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "box", "label": "Still to come", "value": { "money": 15887000 }, "note": "Across 6 open orders" },
+      { "icon": "clock", "label": "Arriving this week", "value": { "money": 12640000 }, "note": "6 loads by Friday" },
+      { "icon": "alert", "label": "Late", "value": { "money": 9236000 }, "change": { "tone": "bad", "text": "3 orders" } },
+      { "icon": "receipt", "label": "Received, not yet billed", "value": { "money": 5730000 }, "note": "4 receipts" }
+    ] },
+    { "type": "cards", "columns": 3, "items": [
+      { "title": "Requisitions", "body": "1 waiting for approval", "value": "3" },
+      { "title": "Requests for quote", "body": "5 quotes in, 1 closes tomorrow", "value": "2" },
+      { "title": "Purchase orders", "body": "3 late, 1 to approve", "value": "7", "pill": { "tone": "warn", "text": "3 late" } },
+      { "title": "Goods received", "body": "This week, 1 to approve", "value": "6" },
+      { "title": "Inspections", "body": "14 cartons in doubt", "value": "2" },
+      { "title": "Supplier bills", "body": "To match and post", "value": "3" }
+    ] },
+    { "type": "attention", "title": "Needs your attention", "items": [
+      { "tone": "warn", "icon": "check", "title": "PO-2026-0147 is waiting for your approval", "body": "₦3,200,000 to Coastline Foods, asked 2 days ago. Your buyer cannot send it yet.", "action": "Review" },
+      { "tone": "bad", "icon": "clock", "title": "3 orders are past their promised date", "body": "Northgate Grains and Sugar is 5 days late with ₦6,284,000 of sugar. Harbour depot has 4 days of cover left.", "action": "Message supplier" },
+      { "tone": "info", "icon": "chart", "title": "RFQ-2026-0031 closes tomorrow", "body": "3 of 4 suppliers have quoted for vegetable oil. The lowest is ₦2,150 a carton under your last price.", "action": "Compare quotes" }
+    ] },
+    { "type": "table", "title": "Arriving this week", "columns": [{ "label": "Day" }, { "label": "Document" }, { "label": "From" }, { "label": "To" }, { "label": "State" }], "rows": [
+      ["Mon 19", "PO-2026-0145", "Coastline Foods", "Main store", { "pill": "info", "text": "1 of 2 loads in" }],
+      ["Tue 20", "PO-2026-0141", "Lantern Household Goods", "Market Road shop", { "pill": "neutral", "text": "2 lines left" }],
+      ["Wed 21", "TRF-2026-0071", "Harbour depot", "Main store", { "pill": "neutral", "text": "Transfer" }],
+      ["Thu 22", "PO-2026-0145", "Coastline Foods", "Main store", { "pill": "neutral", "text": "Balance" }]
+    ] }
+  ]
+}

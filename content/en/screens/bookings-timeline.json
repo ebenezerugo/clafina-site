@@ -1,0 +1,38 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a restaurant's bookings timeline for the day, with each table and room, the reservations held on them and those waiting for an answer.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "PC", "name": "Palm Court Kitchen", "place": "Garden branch" },
+  "goTo": "Go to page…",
+  "search": "Search guests, reservations, tables…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "4" }] },
+    { "label": "Bookings", "items": [{ "label": "Timeline", "active": true }, { "label": "Day sheet" }, { "label": "Reservations" }, { "label": "Waiting list", "badge": "2" }, { "label": "Offers" }, { "label": "Booking pages" }] }
+  ],
+  "title": "Timeline",
+  "subtitle": "Monday 19 October · what holds each table and room, now and ahead.",
+  "actions": [{ "label": "Week" }, { "label": "New reservation", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Covers expected today", "value": "86", "note": "24 reservations" },
+      { "icon": "check", "label": "Seated right now", "value": "38", "note": "10 tables in use" },
+      { "icon": "clock", "label": "Held, waiting for an answer", "value": "3", "change": { "tone": "warn", "text": "Lapse if not confirmed" } },
+      { "icon": "table", "label": "On the waiting list", "value": "2", "note": "For 20:00 and 20:30" }
+    ] },
+    { "type": "table", "title": "Drag a reservation to move it. Held ones lapse at the time shown.", "columns": [{ "label": "Table or room" }, { "label": "Lunch" }, { "label": "Afternoon" }, { "label": "Evening" }, { "label": "Late" }], "rows": [
+      ["T1 · 2 seats", "Ife A. · 2", "—", "—", "Kola M. · 2"],
+      ["T2 · 2 seats", "Here now · 2", "—", { "pill": "warn", "text": "Dayo B. · 2 · held" }, "—"],
+      ["T4 · 4 seats", "Here now · 4", "—", "Nneka L. · 4", "—"],
+      ["T5 · 4 seats", "—", "Sade E. · 3", { "pill": "warn", "text": "Zainab D. · 4 · held" }, "—"],
+      ["Private dining · 12 seats", { "pill": "bad", "text": "Wedding lunch · 12 · late" }, "—", { "pill": "warn", "text": "Temi W. · 10 · held" }, "—"],
+      ["Terrace · shared, 30 seats", "Walk-ins · 14 of 30", "—", "—", "—"]
+    ] },
+    { "type": "attention", "title": "Waiting for an answer", "items": [
+      { "tone": "warn", "icon": "clock", "title": "Dayo B. · T2 · 18:00 · 2 guests", "body": "Held until 14:00, then the table is free again.", "action": "Confirm" },
+      { "tone": "warn", "icon": "clock", "title": "Zainab D. · T5 · 19:30 · 4 guests", "body": "Held until 15:30.", "action": "Confirm" },
+      { "tone": "bad", "icon": "money", "title": "Temi W. · Private dining · 18:30 · 10 guests", "body": "Deposit not paid yet. Held until 17:00; it confirms itself when paid.", "action": "Send the payment link" }
+    ] }
+  ]
+}

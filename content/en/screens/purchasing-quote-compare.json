@@ -1,0 +1,38 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: quotes from three suppliers compared line by line, with the buyer awarding to one that is not the lowest and saying why.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search suppliers, orders, bills…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Buy", "items": [{ "label": "Procurement" }, { "label": "Requisitions" }, { "label": "Requests for quote", "active": true }, { "label": "Purchase orders" }, { "label": "Goods received" }, { "label": "Supplier bills", "badge": "3" }, { "label": "Suppliers" }] }
+  ],
+  "title": "Request for quote RFQ-2026-0031",
+  "subtitle": "Cooking oil, November · from PR-2026-0058 · for the main store · quotes close Tue 20 Oct",
+  "actions": [{ "label": "Remind suppliers" }, { "label": "Close without awarding" }],
+  "blocks": [
+    { "type": "steps", "items": ["Requisition", "Out to suppliers", "Compared", "Awarded", "Purchase order"], "current": 2 },
+    { "type": "table", "title": "Compare quotes: price per carton, lowest marked", "columns": [{ "label": "Line" },{ "label": "Meadowline Agro" }, { "label": "Northgate Grains and Sugar" }, { "label": "Lantern Household Goods" }], "rows": [
+      ["Vegetable oil 5L · 140 cartons", { "pill": "good", "text": "₦21,050 · lowest" }, "₦21,600", "₦22,150"],
+      ["Vegetable oil 2L · 90 cartons", { "pill": "good", "text": "₦13,980 · lowest" }, "₦14,250", "₦14,100"],
+      ["Vegetable oil 1L · 60 cartons", "₦16,450", { "pill": "good", "text": "₦16,200 · lowest" }, "₦16,900"],
+      [{ "strong": "Total before VAT" }, { "money": 5192200 }, { "money": 5278500 }, { "money": 5384000 }],
+      ["Delivers in", "9 days", "6 days", "3 days"],
+      ["Payment terms", "Net 14", "Net 30", "Net 30"],
+      ["On time, last 20 deliveries", "91%", "84%", "88%"]
+    ] },
+    { "type": "row", "widths": "2fr 1fr", "blocks": [
+      { "type": "attention", "title": "Award to Northgate Grains and Sugar", "items": [
+        { "tone": "warn", "icon": "alert", "title": "Not the lowest", "body": "Meadowline is ₦86,300 lower, so your settings ask you to say why. Your reason: net 30 keeps the cash two weeks longer, and 6 days is in time for the promotion. Anyone who approves the order sees it.", "action": "Award to Northgate" }
+      ] },
+      { "type": "kv", "title": "Still to quote", "items": [
+        { "label": "Coastline Foods", "value": { "pill": "neutral", "text": "Opened the link Sunday" } },
+        { "label": "Quotes needed", "value": "2 of 4, you have 3" }
+      ] }
+    ] }
+  ]
+}

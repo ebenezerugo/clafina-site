@@ -1,0 +1,40 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a supplier bill held back by the three-way match, with one line billed before it was received and one priced above the order.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search suppliers, orders, bills…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Buy", "items": [{ "label": "Procurement" }, { "label": "Purchase orders" }, { "label": "Goods received" }, { "label": "Supplier bills", "badge": "3", "active": true }, { "label": "Pay suppliers" }, { "label": "Suppliers" }] }
+  ],
+  "title": "Supplier bill BILL-2026-0219",
+  "subtitle": "From Lantern Household Goods · their LH/7782 · due 15 Nov (net 30) · for Market Road shop",
+  "actions": [{ "label": "Reject" }, { "label": "Approve", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "steps", "items": ["Received", "Matched", "Approved", "Posted", "Paid"], "current": 1 },
+    { "type": "attention", "title": "This bill cannot be posted yet. Two lines do not match.", "items": [
+      { "tone": "bad", "icon": "alert", "title": "Antiseptic liquid 500ml: 12 billed, none received", "body": "Your settings allow billing only what was received. Receive the 12 cartons first, or ask for a corrected invoice.", "action": "Receive" },
+      { "tone": "warn", "icon": "money", "title": "Bath soap 150g: ₦440 a carton above the order", "body": "That is ₦10,560 in all. Price differences go to purchase price variance when the bill is posted.", "action": "Message supplier" }
+    ] },
+    { "type": "table", "title": "Ordered, then received, then billed", "columns": [{ "label": "Item" }, { "label": "Ordered, PO-0141" }, { "label": "Received, GRN-0186" }, { "label": "On this bill" }, { "label": "Match" }], "rows": [
+      ["Bath soap 150g", "40 ctn at ₦11,000", "24 ctn", "24 ctn at ₦11,440", { "pill": "warn", "text": "Price +4%" }],
+      ["Antiseptic liquid 500ml", "30 ctn at ₦24,500", "Nothing yet", "12 ctn at ₦24,500", { "pill": "bad", "text": "Billed ahead by 12" }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "The bill", "items": [
+        { "label": "Before tax", "value": { "money": 568560 } },
+        { "label": "VAT 7.5%", "value": { "money": 42642 } },
+        { "label": "Total", "value": { "money": 611202 } }
+      ] },
+      { "type": "kv", "title": "The rules in force", "items": [
+        { "label": "Only bill what was received", "value": "On, 0% over" },
+        { "label": "Price differences go to", "value": "Price variance" },
+        { "label": "Approve bills above", "value": { "money": 500000 } }
+      ] }
+    ] }
+  ]
+}

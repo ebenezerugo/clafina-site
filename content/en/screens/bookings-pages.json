@@ -1,0 +1,36 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a restaurant's public booking pages, and what a guest sees when choosing a time for their table.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "PC", "name": "Palm Court Kitchen", "place": "Garden branch" },
+  "goTo": "Go to page…",
+  "search": "Search guests, reservations, tables…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "4" }] },
+    { "label": "Bookings", "items": [{ "label": "Timeline" }, { "label": "Day sheet" }, { "label": "Reservations" }, { "label": "Waiting list", "badge": "2" }, { "label": "Offers" }, { "label": "Booking pages", "active": true }] }
+  ],
+  "title": "Booking pages",
+  "subtitle": "Share the link. Guests choose, book and manage their booking without an account.",
+  "actions": [{ "label": "Make a page", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "table", "columns": [{ "label": "Page" }, { "label": "Offers" }, { "label": "Booked here", "numeric": true }, { "label": "State" }], "rows": [
+      [{ "strong": "Reserve a table" }, "Tables for two, four and six", "214", { "pill": "good", "text": "Open" }],
+      [{ "strong": "Private dining and events" }, "Private dining room, chef's table", "38", { "pill": "good", "text": "Open" }],
+      [{ "strong": "Easter brunch" }, "Table for four", "61", { "pill": "neutral", "text": "Withdrawn" }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "What your guest sees: Reserve a table", "items": [
+        { "label": "Guests", "value": "4" },
+        { "label": "Day", "value": "Saturday 24 October" },
+        { "label": "Free times", "value": "18:00 · 18:30 · 19:00 · 19:30 · 21:00" },
+        { "label": "20:30", "value": { "pill": "warn", "text": "Full: join the waiting list" } }
+      ] },
+      { "type": "steps", "items": ["What", "When", "Your details"], "current": 1 }
+    ] },
+    { "type": "attention", "title": "After they book", "items": [
+      { "tone": "info", "icon": "check", "title": "Hold 19:30 for me", "body": "The table is held while they finish. They get an email with a calendar file and a link to change or cancel, until 24 hours before.", "action": "Edit the page" }
+    ] }
+  ]
+}

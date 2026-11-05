@@ -1,0 +1,214 @@
+{
+  "kind": "product",
+  "sources": [
+    "STOCK.md",
+    "ROADMAP.md",
+    "STATUS.md",
+    "docs/product-facts.md#product-stock"
+  ],
+  "meta": {
+    "title": "Stock and warehouses · Clafina",
+    "description": "Know what you hold, where and what it is worth. Reorder levels, blind counts, transfers between places and valuation from one movement ledger."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Stock and warehouses",
+    "title": "Know what you hold, where, and what it is worth.",
+    "lede": "Every movement goes into one ledger that only ever adds lines. Stock levels, counts, transfers and the stock value in your books all come from it.",
+    "screen": "stock-levels"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Never run out",
+      "body": "Set reorder levels for each item in each place. When stock reaches them, one button orders what needs it."
+    },
+    {
+      "title": "Count with confidence",
+      "body": "Count on paper sheets or on a phone, blind if you like. Differences are posted as adjustments, and large ones wait for an approver."
+    },
+    {
+      "title": "Move stock under control",
+      "body": "Transfers between places are followed while in transit and go through approval. Moves between inventory types carry your own reasons."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "stock-reorder",
+      "title": "See what needs ordering, worst first",
+      "body": "Each item in each place has a minimum, a safety level, a reorder point and a quantity to order. The list shows where each one stands.",
+      "points": [
+        "Stock on its way between places is counted, but not sold",
+        "Sort your items into A, B and C classes",
+        "Order what needs it in one step"
+      ]
+    },
+    {
+      "screen": "stock-count",
+      "title": "Count, then approve",
+      "body": "A count sheet shows what has been counted and what differs. Approving it posts one adjustment for each line that does not agree.",
+      "points": [
+        "Blind counts hide what is expected",
+        "Cycle counts by stock class",
+        "Adjustments above a value go to an approver"
+      ]
+    },
+    {
+      "screen": "stock-count-phone",
+      "title": "Count on the shop floor",
+      "body": "Counters walk the shelves with a phone, find an item by name or code and save each count as they go.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in Stock",
+  "features": [
+    {
+      "title": "The ledger and its value",
+      "items": [
+        {
+          "text": "One movement ledger that only ever adds lines. See your stock as it stood on any past date."
+        },
+        {
+          "text": "Valuation by moving average or FIFO, with landed costs. The stock account in your books equals the value of your stock."
+        },
+        {
+          "text": "Name the vehicle or asset that carries a dispatch."
+        }
+      ]
+    },
+    {
+      "title": "Places and inventory types",
+      "items": [
+        {
+          "text": "Inventory types such as raw materials, work in progress and finished goods. Hide the built-in ones and add your own."
+        },
+        {
+          "text": "Stock kept for each inventory type, with settings for which types a sale draws from."
+        },
+        {
+          "text": "Type transfers with your organisation's own reasons, which can be reversed."
+        },
+        {
+          "text": "Transfers between places, followed while in transit and sent through approvals."
+        },
+        {
+          "text": "Each person moves stock only in the places they are allowed to.",
+          "prelaunch": "product-stock"
+        }
+      ]
+    },
+    {
+      "title": "Ordering and counting",
+      "items": [
+        {
+          "text": "Reorder levels for each item in each place: minimum, safety level, reorder point and quantity. Order what needs it in one step."
+        },
+        {
+          "text": "Stock classes A, B and C, and cycle counts."
+        },
+        {
+          "text": "Count sheets with blind counts, and counting on a phone."
+        },
+        {
+          "text": "Blind counts set for each role.",
+          "prelaunch": "product-stock"
+        },
+        {
+          "text": "On the phone, count by the carton or by the item, and see the bin each item sits in.",
+          "prelaunch": "product-stock"
+        }
+      ]
+    },
+    {
+      "title": "Products and units",
+      "items": [
+        {
+          "text": "Products with variants, and service items next to goods."
+        },
+        {
+          "text": "Units of measure with conversions between them."
+        },
+        {
+          "text": "Batches and expiry dates."
+        },
+        {
+          "text": "Conversions for a single product, and document lines written in any of its units.",
+          "prelaunch": "product-stock"
+        },
+        {
+          "text": "A price for each unit a product is sold in.",
+          "prelaunch": "product-stock"
+        }
+      ]
+    },
+    {
+      "title": "Control",
+      "items": [
+        {
+          "text": "Adjustment requests that go to an approver above a value you set."
+        },
+        {
+          "text": "A mode where stock changes only through documents, never by hand."
+        }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    {
+      "route": "product-sales",
+      "text": "Orders, waybills and credit notes move stock in the place they come from."
+    },
+    {
+      "route": "product-purchasing",
+      "text": "Goods received add stock, and orders start from what needs ordering."
+    },
+    {
+      "route": "product-finance",
+      "text": "Stock value and every adjustment post to the ledger by themselves."
+    },
+    {
+      "route": "product-manufacturing",
+      "text": "Production takes materials and puts finished goods into stock."
+    },
+    {
+      "route": "product-pos",
+      "text": "Tills sell from the same stock."
+    },
+    {
+      "route": "product-online-shop",
+      "text": "Your shop shows what is available to sell."
+    }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": [
+    "web",
+    "phone"
+  ],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-distribution",
+    "industry-manufacturing"
+  ],
+  "faqTitle": "Questions about Stock",
+  "faq": [
+    {
+      "q": "Can I see what I held on a past date?",
+      "a": "Yes. Every movement is kept in one ledger that only ever adds lines, so you can see your stock as it stood on any day."
+    },
+    {
+      "q": "Can counters count without seeing what is expected?",
+      "a": "Yes. Turn on blind counts and the expected number stays hidden until a count is saved."
+    },
+    {
+      "q": "Can I stop people changing stock by hand?",
+      "a": "Yes. Adjustments above a value go to an approver, and you can choose a mode where stock changes only through documents."
+    }
+  ],
+  "cta": {
+    "title": "See Stock with your own products.",
+    "body": "Start free, or book a demo and we will walk through a count from the first shelf to the approval."
+  }
+}

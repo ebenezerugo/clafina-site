@@ -1,0 +1,32 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the front desk's day sheet on a phone, with who is coming, who is here and who is late.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "PC", "name": "Palm Court Kitchen", "place": "Garden branch" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Bookings", "icon": "users", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Day sheet",
+  "subtitle": "Monday 19 October · 86 guests expected",
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Coming", "value": "14" },
+      { "icon": "check", "label": "Here now", "value": "3" },
+      { "icon": "clock", "label": "Held", "value": "3" },
+      { "icon": "alert", "label": "No-show", "value": "1" }
+    ] },
+    { "type": "attention", "title": "Late", "items": [
+      { "tone": "bad", "icon": "clock", "title": "Wedding lunch · 12 guests", "body": "Due at 12:00 in private dining. 1 h 20 late.", "action": "Check in" }
+    ] },
+    { "type": "table", "title": "Coming next", "columns": [{ "label": "Guest" }, { "label": "Time" }, { "label": "Where" }], "rows": [
+      ["Nneka L. · 4", "19:00", "T4"],
+      ["Ife A. · 2", "19:00", "T1"]
+    ] }
+  ]
+}

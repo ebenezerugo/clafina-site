@@ -1,0 +1,47 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a confirmed reservation for the private dining room, made by the guest on the booking page, with its deposit, history and cancellation terms.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "PC", "name": "Palm Court Kitchen", "place": "Garden branch" },
+  "goTo": "Go to page…",
+  "search": "Search guests, reservations, tables…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "4" }] },
+    { "label": "Bookings", "items": [{ "label": "Timeline" }, { "label": "Day sheet" }, { "label": "Reservations", "active": true }, { "label": "Waiting list", "badge": "2" }, { "label": "Offers" }, { "label": "Booking pages" }] }
+  ],
+  "title": "Reservation BK-2026-0412",
+  "subtitle": "Ife A. · Private dining room · Saturday 24 October, 19:00",
+  "actions": [{ "label": "Move or change" }, { "label": "Make the invoice" }, { "label": "Check in", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "steps", "items": ["Held", "Confirmed", "Checked in", "Completed"], "current": 1 },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "When and who", "items": [
+        { "label": "When", "value": "Sat 24 Oct, 19:00 to 22:00" },
+        { "label": "Party", "value": "8 guests" },
+        { "label": "Held on", "value": "Private dining room" },
+        { "label": "Made by", "value": "The guest, on the booking page" },
+        { "label": "Customer", "value": { "avatar": "LS", "text": "Lakeside Stores (linked)" } },
+        { "label": "Guest's note", "value": "Birthday dinner. A cake will come from outside." }
+      ] },
+      { "type": "kv", "title": "What it costs", "items": [
+        { "label": "Private dining room, 3 hours", "value": { "money": 150000 } },
+        { "label": "Service charge 10%", "value": { "money": 15000 } },
+        { "label": "VAT 7.5%", "value": { "money": 12375 } },
+        { "label": "Total", "value": { "strong": "₦177,375" } },
+        { "label": "Deposit paid", "value": { "pill": "good", "text": "₦70,950 of ₦70,950" } },
+        { "label": "Balance", "value": { "money": 106425 } }
+      ] }
+    ] },
+    { "type": "table", "title": "What happened", "columns": [{ "label": "When" }, { "label": "What" }], "rows": [
+      ["17 Oct 10:02", "The guest booked on the page. Held for 60 minutes."],
+      ["17 Oct 10:21", "Deposit paid by payment link. Confirmed by itself."],
+      ["18 Oct 09:00", "Reminder sent by email, with a calendar file."],
+      ["Today 08:15", "Seyi added a staff note."]
+    ] },
+    { "type": "attention", "title": "Settings that apply here", "items": [
+      { "tone": "info", "icon": "clock", "title": "Free to cancel until Thu 22 Oct, 19:00", "body": "After that the cancellation fee is a quarter of the total. A no-show keeps the whole deposit. The guest can move or cancel from their own link until 24 hours before." }
+    ] }
+  ]
+}

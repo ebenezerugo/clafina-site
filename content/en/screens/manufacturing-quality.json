@@ -1,0 +1,35 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the quality dashboard, with how inspections are going, open non-conformance reports and output awaiting release.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RF", "name": "Riverbend Foods", "place": "Main plant" },
+  "goTo": "Go to page…",
+  "search": "Search orders, products, machines…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "6" }] },
+    { "label": "Make", "items": [{ "label": "Production orders" }, { "label": "Work orders" }, { "label": "Schedule" }, { "label": "Shop floor" }, { "label": "Quality", "active": true }] }
+  ],
+  "title": "Quality",
+  "subtitle": "How well what you make passes its checks, and what is open because it did not. Last 30 days.",
+  "actions": [{ "label": "New inspection plan" }, { "label": "Decide on held lots", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "Inspections passed", "value": "206 of 214", "change": { "tone": "good", "text": "1.4 pts better", "dir": "up" } },
+      { "icon": "chart", "label": "First pass yield", "value": "94.1%", "change": { "tone": "good", "text": "0.6 pts better", "dir": "up" } },
+      { "icon": "down", "label": "Units scrapped", "value": "380", "change": { "tone": "good", "text": "71 fewer", "dir": "down" } },
+      { "icon": "alert", "label": "Reports still open", "value": "5", "change": { "tone": "bad", "text": "2 overdue" } }
+    ] },
+    { "type": "attention", "title": "What cannot move until someone decides", "items": [
+      { "tone": "bad", "icon": "alert", "title": "NCR-2026-0031 Cap leaks is 3 days overdue", "body": "Lot L-1019, 640 bottles on hold. The fix was due 16 Oct. Owner: Musa.", "action": "Open the report" },
+      { "tone": "warn", "icon": "clock", "title": "1 corrective action is overdue", "body": "Check cap torque every shift was due 14 Oct. Owner: Ronke.", "action": "Open the action" },
+      { "tone": "info", "icon": "box", "title": "3 lots are awaiting release", "body": "1,820 units are held until an inspector decides. They cannot be sold until then.", "action": "Decide on them" }
+    ] },
+    { "type": "table", "title": "Lots awaiting release", "columns": [{ "label": "Lot" }, { "label": "Product" }, { "label": "Units", "numeric": true }, { "label": "From" }, { "label": "State" }], "rows": [
+      ["L-1019", "Groundnut oil 1L", "640", "WO-2026-0141", { "pill": "bad", "text": "On hold, NCR open" }],
+      ["L-1022", "Pepper mix 200g", "900", "WO-2026-0144", { "pill": "warn", "text": "Inspection 2 waiting" }],
+      ["L-1023", "Table water 50cl", "280", "WO-2026-0146", { "pill": "neutral", "text": "Ready to decide" }]
+    ] }
+  ]
+}

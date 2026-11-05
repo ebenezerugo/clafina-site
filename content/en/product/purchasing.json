@@ -1,0 +1,213 @@
+{
+  "kind": "product",
+  "sources": [
+    "ROADMAP.md",
+    "STATUS.md",
+    "Trading-Network doc",
+    "docs/product-facts.md#product-purchasing"
+  ],
+  "meta": {
+    "title": "Purchasing and suppliers · Clafina",
+    "description": "Buy from requisition to payment. Compare quotes, receive in part or whole, match every bill to what arrived and keep suppliers' papers in date."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Purchasing and suppliers",
+    "title": "Buy at the right price, and pay only for what arrived.",
+    "lede": "Requisitions, requests for quote, purchase orders, goods received and supplier bills, each its own document. Stock and the books follow every step.",
+    "screen": "purchasing-home"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Order at the right price",
+      "body": "Ask several suppliers for quotes, compare them line by line and award the order. If you choose one that is not the lowest, your reason is kept."
+    },
+    {
+      "title": "Never pay for what never came",
+      "body": "Every supplier bill is matched to its order and to what you received. A bill that does not match waits until it does."
+    },
+    {
+      "title": "Suppliers you can trust",
+      "body": "Keep each supplier's papers with their expiry dates. When one runs out, buying from them stops until it is renewed."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "purchasing-quote-compare",
+      "title": "Compare quotes side by side",
+      "body": "Quotes come in through the supplier portal or are entered by hand. Each line shows every supplier's price, with the lowest marked, next to delivery times and terms.",
+      "points": [
+        "Award to an order in one step",
+        "Choosing a higher quote asks for a reason",
+        "Price lists and contracts feed the order price"
+      ]
+    },
+    {
+      "screen": "purchasing-bill-match",
+      "title": "Match every bill",
+      "body": "A bill is read like a sentence: ordered, then received, then billed. A line is fine when no more is billed than was received.",
+      "points": [
+        "Price differences go to purchase price variance",
+        "Bills above a value go to an approver",
+        "Pay with discount and withholding"
+      ]
+    },
+    {
+      "screen": "purchasing-receive-phone",
+      "title": "Receive at the door",
+      "body": "Whoever is at the dock counts each line on a phone against the order, in part or in whole.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in Purchasing",
+  "features": [
+    {
+      "title": "Asking and ordering",
+      "items": [
+        {
+          "text": "Requisitions, requests for quote, quote comparison and award to a purchase order."
+        },
+        {
+          "text": "Purchase orders sent as a PDF or a shared link."
+        },
+        {
+          "text": "Price lists and contracts that set the price on the order."
+        },
+        {
+          "text": "PDFs and Make a copy for every buying document."
+        }
+      ]
+    },
+    {
+      "title": "Receiving",
+      "items": [
+        {
+          "text": "Goods received in part or in whole, against the order."
+        },
+        {
+          "text": "Quality inspections and returns to the supplier."
+        },
+        {
+          "text": "Inspections that move the stock they check.",
+          "prelaunch": "product-purchasing"
+        },
+        {
+          "text": "Units of measure on every buying document, not only on goods received.",
+          "prelaunch": "product-purchasing"
+        }
+      ]
+    },
+    {
+      "title": "Bills and payments",
+      "items": [
+        {
+          "text": "Supplier bills with the three-way match and the variance shown."
+        },
+        {
+          "text": "Payments to suppliers with discount and withholding."
+        },
+        {
+          "text": "Buying posts to the ledger by itself: goods received not yet billed, landed cost and variances."
+        },
+        {
+          "text": "Filter bills by any kind of mismatch.",
+          "prelaunch": "product-purchasing"
+        },
+        {
+          "text": "Accept a bill that does not match, with the right to do so and a reason.",
+          "prelaunch": "product-purchasing"
+        },
+        {
+          "text": "Pay suppliers with your bank balance in view, and early-payment discounts and withholding applied by rule.",
+          "prelaunch": "product-purchasing"
+        }
+      ]
+    },
+    {
+      "title": "Suppliers",
+      "items": [
+        {
+          "text": "A full lifecycle of supplier statuses, with separate holds on buying and on paying."
+        },
+        {
+          "text": "A change to a supplier's bank account needs three people."
+        },
+        {
+          "text": "Papers with expiry dates. When one runs out, the supplier is restricted by itself."
+        },
+        {
+          "text": "Qualification questionnaires and evaluation programmes."
+        },
+        {
+          "text": "Scorecards from receipts, inspections, prices and disputes, with corrective actions."
+        },
+        {
+          "text": "A page for each supplier with everything you do with them, spend analysis and comparison."
+        },
+        {
+          "text": "A supplier portal where suppliers sign in with a code."
+        }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    {
+      "route": "product-stock",
+      "text": "Goods received add stock, and reorder levels start the next order."
+    },
+    {
+      "route": "product-finance",
+      "text": "Receipts, bills and variances post to the ledger, and buying is checked against budgets."
+    },
+    {
+      "route": "product-payments",
+      "text": "Pay suppliers from the bills that are due."
+    },
+    {
+      "route": "product-tax",
+      "text": "VAT and withholding are worked out on every bill."
+    },
+    {
+      "route": "product-manufacturing",
+      "text": "Materials that production is short of raise requisitions."
+    },
+    {
+      "route": "product-trading-network",
+      "text": "Suppliers and customers share one record across the trading network."
+    }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": [
+    "web",
+    "phone"
+  ],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-distribution",
+    "industry-retail",
+    "industry-manufacturing",
+    "industry-construction"
+  ],
+  "faqTitle": "Questions about Purchasing",
+  "faq": [
+    {
+      "q": "What stops us paying for goods that never arrived?",
+      "a": "The three-way match. Each bill is checked against its order and what you received, and a line billed ahead of the goods cannot be posted."
+    },
+    {
+      "q": "Can suppliers answer a request for quote without an account?",
+      "a": "Yes. They sign in to the supplier portal with a code, with no password to set up. You can also enter a quote they send you."
+    },
+    {
+      "q": "Who can change a supplier's bank account?",
+      "a": "No one alone. A change to a supplier's bank account needs three people before it is used."
+    }
+  ],
+  "cta": {
+    "title": "See Purchasing with your own suppliers.",
+    "body": "Start free, or book a demo and we will walk through a purchase from requisition to payment."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: counting stock on a phone during a blind count, one item at a time.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Stock", "icon": "box", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Month-end count",
+  "subtitle": "Main store · 212 of 340 counted",
+  "blocks": [
+    { "type": "kv", "title": "Bath soap 150g", "items": [
+      { "label": "Code", "value": "SOAP-150-CTN" },
+      { "label": "Packed as", "value": "Carton of 48" },
+      { "label": "Counted", "value": { "strong": "9 cartons" } }
+    ] },
+    { "type": "attention", "title": "Blind count", "items": [
+      { "tone": "info", "icon": "check", "title": "Expected stays hidden", "body": "You see what the ledger expects only after you save.", "action": "Save and next" }
+    ] },
+    { "type": "table", "title": "Just counted", "columns": [{ "label": "Item" }, { "label": "Counted", "numeric": true }], "rows": [
+      ["Vegetable oil 5L", "15"],
+      ["Semolina 1kg", "18"]
+    ] }
+  ]
+}

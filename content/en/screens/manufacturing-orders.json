@@ -1,0 +1,36 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: production orders at a food factory, with what each is making, whether its materials are held and when it will finish.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RF", "name": "Riverbend Foods", "place": "Main plant" },
+  "goTo": "Go to page…",
+  "search": "Search orders, products, machines…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "6" }] },
+    { "label": "Make", "items": [{ "label": "Production orders", "active": true }, { "label": "Work orders" }, { "label": "Schedule" }, { "label": "Shop floor" }, { "label": "Bills of materials" }, { "label": "Routings" }, { "label": "Quality" }] }
+  ],
+  "title": "Production orders",
+  "subtitle": "What is to be made, for whom and by when, and how far each order is planned.",
+  "actions": [{ "label": "Can we deliver by…?" }, { "label": "New production order", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "table", "label": "Open orders", "value": "12", "note": "2 still to plan" },
+      { "icon": "check", "label": "Planned, to release", "value": "3", "note": "Waiting to go to the floor" },
+      { "icon": "box", "label": "Short of materials", "value": "3", "change": { "tone": "bad", "text": "Cannot start" } },
+      { "icon": "clock", "label": "Late or going to be", "value": "3", "change": { "tone": "warn", "text": "At risk" } }
+    ] },
+    { "type": "table", "columns": [{ "label": "Order" }, { "label": "Status" }, { "label": "Materials" }, { "label": "Needed by" }, { "label": "Projected finish" }, { "label": "Made so far", "numeric": true }, { "label": "Source" }], "rows": [
+      ["PRO-2026-0061 · Groundnut oil 1L", { "pill": "info", "text": "In production" }, { "pill": "good", "text": "Held" }, "23 Oct", "24 Oct", "1,560 of 2,400", "SO-2026-0152"],
+      ["PRO-2026-0058 · Pepper mix 200g", { "pill": "info", "text": "In production" }, { "pill": "good", "text": "Held" }, "16 Oct", { "pill": "bad", "text": "20 Oct" }, "3,900 of 5,000", "By hand"],
+      ["PRO-2026-0063 · Table water 50cl, bag of 20", { "pill": "info", "text": "In production" }, { "pill": "warn", "text": "Part held" }, "21 Oct", "21 Oct", "420 of 800", "SO-2026-0149"],
+      ["PRO-2026-0062 · Pepper mix 200g", { "pill": "neutral", "text": "Released" }, { "pill": "warn", "text": "Part held" }, "26 Oct", "24 Oct", "0 of 5,000", "Plan"],
+      ["PRO-2026-0064 · Tomato paste 400g", { "pill": "neutral", "text": "Planned" }, { "pill": "bad", "text": "Short" }, "30 Oct", "Needs materials", "0 of 3,000", "SO-2026-0155"],
+      ["PRO-2026-0065 · Groundnut oil 4L", { "pill": "neutral", "text": "Draft" }, { "pill": "neutral", "text": "Not checked" }, "2 Nov", "Not planned", "0 of 600", "By hand"]
+    ] },
+    { "type": "attention", "title": "Each order makes its own work orders", "items": [
+      { "tone": "info", "icon": "check", "title": "One for the product, one for each sub-assembly", "body": "Planning holds the materials each work order needs, and what is short raises a purchase request.", "action": "See what is short" }
+    ] }
+  ]
+}
