@@ -14,7 +14,7 @@ export const NAV: { menus: NavMenu[]; links: RouteId[] } = {
         { id: 'money', items: ['product-finance', 'product-payments', 'product-tax', 'product-business-health'] },
         { id: 'selling', items: ['product-sales', 'product-crm', 'product-pos', 'product-online-shop', 'product-trading-network'] },
         { id: 'operations', items: ['product-stock', 'product-purchasing', 'product-manufacturing', 'product-bookings', 'product-projects', 'product-assets'] },
-        { id: 'people', items: ['product-hr', 'product-communication'] },
+        { id: 'people', items: ['product-hr', 'product-communication', 'product-email'] },
         { id: 'everywhere', items: ['product-mobile', 'product-assistant', 'product-capture', 'product-integrations'] },
       ],
     },

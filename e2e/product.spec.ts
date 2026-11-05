@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
 /** Every product page that is built. Each one gets the same checks. */
-const PRODUCTS = ['finance', 'payments', 'tax', 'business-health', 'sales', 'crm', 'pos', 'online-shop', 'trading-network', 'stock', 'purchasing', 'manufacturing', 'bookings', 'projects', 'assets', 'hr', 'communication', 'mobile', 'assistant', 'capture', 'integrations'];
+const PRODUCTS = ['finance', 'payments', 'tax', 'business-health', 'sales', 'crm', 'pos', 'online-shop', 'trading-network', 'stock', 'purchasing', 'manufacturing', 'bookings', 'projects', 'assets', 'hr', 'communication', 'mobile', 'assistant', 'capture', 'integrations', 'business-email'];
 
 for (const slug of PRODUCTS) {
   test.describe(`product page: ${slug}`, () => {

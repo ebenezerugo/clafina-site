@@ -1,0 +1,29 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a business mailbox in Clafina webmail, with new mail, a calendar invitation and a message waiting in Outbox.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "amaka@brightharbour.example" },
+  "search": "Search mail",
+  "nav": [
+    { "label": "Mail", "items": [{ "label": "Inbox", "active": true, "badge": "6" }, { "label": "Drafts" }, { "label": "Sent" }, { "label": "Outbox", "badge": "1" }, { "label": "Junk" }, { "label": "Archive" }] },
+    { "label": "Shared addresses", "items": [{ "label": "sales@", "badge": "3" }, { "label": "info@" }] }
+  ],
+  "title": "Inbox",
+  "subtitle": "amaka@brightharbour.example · 2.1 GB of 10 GB used",
+  "actions": [{ "label": "Out-of-office" }, { "label": "Write", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "attention", "title": "Waiting for you", "items": [
+      { "tone": "info", "icon": "clock", "title": "Tunde from Ring Road Haulage invited you to Delivery review, Thu 10:00", "body": "Accept and it goes into your Clafina calendar.", "action": "Accept" }
+    ] },
+    { "type": "table", "columns": [{ "label": "From" }, { "label": "Subject" }, { "label": "Received", "numeric": true }], "rows": [
+      [{ "avatar": "GV", "text": "Green Valley Mills" }, { "strong": "Price list for November" }, "09:42"],
+      [{ "avatar": "RR", "text": "Ring Road Haulage" }, { "strong": "Invitation: Delivery review" }, "09:15"],
+      [{ "avatar": "NK", "text": "Nkechi, Accounts" }, { "strong": "October statement attached" }, "08:58"],
+      [{ "avatar": "OS", "text": "Online shop" }, "Order 1042 is ready to collect", "08:31"],
+      [{ "avatar": "KU", "text": "Kunle" }, "Re: Count at the east depot", "Yesterday"],
+      [{ "avatar": "AD", "text": "Adaobi Stores" }, "Thank you for the quick delivery", "Yesterday"]
+    ] }
+  ]
+}

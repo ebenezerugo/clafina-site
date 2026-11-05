@@ -10,7 +10,7 @@ describe('footer model', () => {
   });
   it('lists every product and industry page', () => {
     const cols = footerModelFor(allBuilt, 'preview').columns;
-    expect(cols.find((c) => c.id === 'product')!.items.filter((i) => i.startsWith('product-'))).toHaveLength(21);
+    expect(cols.find((c) => c.id === 'product')!.items.filter((i) => i.startsWith('product-'))).toHaveLength(22);
     expect(cols.find((c) => c.id === 'industries')!.items).toHaveLength(18);
   });
   it('links every page except home somewhere', () => {
@@ -19,10 +19,16 @@ describe('footer model', () => {
   });
   it('drops pages that do not exist yet, and empty columns', () => {
     const cols = footerModel('preview').columns;
+<<<<<<< HEAD
     expect(cols.map((c) => c.id)).toEqual(['product', 'industries', 'company']);
     expect(cols[0]!.items).toHaveLength(24); // platform, 21 products, pricing, compare
     expect(cols[1]!.items).toEqual(['industries', 'industry-retail']);
     expect(cols[2]!.items).toEqual(['contact-sales', 'demo']);
+=======
+    expect(cols.map((c) => c.id)).toEqual(['product', 'company']);
+    expect(cols[0]!.items).toHaveLength(25); // platform, 22 products, pricing, compare
+    expect(cols[1]!.items).toEqual(['contact-sales', 'demo']);
+>>>>>>> 53913f2 (WIP business email)
   });
   it('shows socials, badges and company lines only once they are set', () => {
     const m = footerModel('preview');
