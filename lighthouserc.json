@@ -1,0 +1,18 @@
+{
+  "ci": {
+    "collect": {
+      "startServerCommand": "node scripts/serve-out.mjs",
+      "startServerReadyPattern": "Serving out/",
+      "url": ["http://127.0.0.1:4311/en/", "http://127.0.0.1:4311/ar/"],
+      "numberOfRuns": 1,
+      "settings": { "formFactor": "mobile", "screenEmulation": { "mobile": true, "width": 390, "height": 844, "deviceScaleFactor": 3 }, "throttlingMethod": "simulate" }
+    },
+    "assert": {
+      "assertMatrix": [
+        { "matchingUrlPattern": "/en/$", "assertions": { "categories:performance": ["error", { "minScore": 0.95 }], "categories:accessibility": ["error", { "minScore": 1 }], "categories:seo": ["error", { "minScore": 1 }] } },
+        { "matchingUrlPattern": "/ar/$", "assertions": { "categories:performance": ["error", { "minScore": 0.95 }], "categories:accessibility": ["error", { "minScore": 1 }] } }
+      ]
+    },
+    "upload": { "target": "filesystem", "outputDir": ".lighthouseci" }
+  }
+}

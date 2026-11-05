@@ -3,3 +3,13 @@ Thumbs.db
 *.log
 node_modules/
 .cache/
+.superpowers/
+node_modules/
+.next/
+out/
+test-results/
+playwright-report/
+.lighthouseci/
+next-env.d.ts
+*.tsbuildinfo
+public/fonts/

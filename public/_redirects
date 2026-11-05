@@ -1,0 +1,7 @@
+# The old static pages move to their new addresses.
+/index.html      /en/                 301
+/features.html   /en/platform/        301
+/industries.html /en/industries/      301
+/pricing.html    /en/pricing/         301
+/contact.html    /en/contact/         301
+/legal.html      /en/legal/privacy/   301
