@@ -1,5 +1,6 @@
 // Serves out/ the way Cloudflare Pages does: directory index.html, and the nearest 404.html with a 404 status.
 import { createServer } from 'node:http';
+import { gzipSync } from 'node:zlib';
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import { extname, join, normalize } from 'node:path';
 
@@ -34,6 +35,14 @@ createServer((req, res) => {
   const file = resolve(pathname);
   const status = file ? 200 : 404;
   const path = file ?? nearest404(pathname);
-  res.writeHead(status, { 'Content-Type': TYPES[extname(path)] ?? 'application/octet-stream' });
-  res.end(readFileSync(path));
+  const type = TYPES[extname(path)] ?? 'application/octet-stream';
+  const body = readFileSync(path);
+  // Cloudflare compresses text; do the same so local and CI measurements match what visitors get.
+  if (/text|javascript|json|xml|svg/.test(type) && /\bgzip\b/.test(req.headers['accept-encoding'] ?? '')) {
+    res.writeHead(status, { 'Content-Type': type, 'Content-Encoding': 'gzip', Vary: 'Accept-Encoding' });
+    res.end(gzipSync(body));
+    return;
+  }
+  res.writeHead(status, { 'Content-Type': type });
+  res.end(body);
 }).listen(PORT, () => console.log(`Serving out/ on http://127.0.0.1:${PORT}`));
