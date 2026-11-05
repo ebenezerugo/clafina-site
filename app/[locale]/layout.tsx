@@ -6,6 +6,8 @@ import { setRequestLocale, getMessages } from 'next-intl/server';
 import { LOCALES, isLocale, localeInfo } from '@/config/locales';
 import { localeEnabled } from '@/config/switches';
 import { fontClassFor } from '@/theme/fonts';
+import { Header } from '@/components/header/Header';
+import { SkipLink } from '@/components/SkipLink';
 
 export const dynamicParams = false;
 
@@ -21,7 +23,11 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   return (
     <html lang={locale} dir={localeInfo(locale).dir} className={fontClassFor(locale)}>
       <body className="bg-page text-ink antialiased">
-        <NextIntlClientProvider locale={locale} messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <SkipLink label={String((messages as { nav: { skip: string } }).nav.skip)} />
+          <Header locale={locale} />
+          <div id="main" tabIndex={-1}>{children}</div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
