@@ -10,3 +10,9 @@ export function stripLocale(pathname: string): string {
   const rest = pathname.replace(/^\/[^/]+/, '');
   return rest === '' ? '/' : rest;
 }
+
+/** Where the language switcher points: the same page, or the home page from the build-only 404 path. */
+export function switcherPath(pathname: string): string {
+  const rest = stripLocale(pathname);
+  return rest.startsWith('/not-found-page/') ? '/' : rest;
+}

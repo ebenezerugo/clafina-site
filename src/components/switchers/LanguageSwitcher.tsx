@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { stripLocale } from '@/lib/paths';
+import { switcherPath } from '@/lib/paths';
 
 export interface LanguageOption { code: string; endonym: string; hreflang: string; dir: 'ltr' | 'rtl' }
 
@@ -10,7 +10,7 @@ export function LanguageSwitcher({ current, options, label }: { current: string;
   const [open, setOpen] = useState(false);
   const id = useId();
   const pathname = usePathname() ?? `/${current}/`;
-  const rest = stripLocale(pathname);
+  const rest = switcherPath(pathname);
   const button = useRef<HTMLButtonElement>(null);
   const box = useRef<HTMLDivElement>(null);
   const currentName = options.find((o) => o.code === current)?.endonym ?? current;

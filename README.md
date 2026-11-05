@@ -1,113 +1,86 @@
 # clafina-site
 
-The public marketing site for **Clafina** — the business platform that unites books,
-stock, people, projects and an online shop, with a till, a phone app and an AI
-assistant reading the same records.
+The public website for **Clafina**: one business platform for books, stock, sales, people, projects
+and an online shop, with a till, a phone app and an AI assistant reading the same records.
 
-Static HTML, CSS and JavaScript. **No build step, no dependencies, no framework.** Open
-`index.html` in a browser, or serve the folder.
+Next.js (App Router, static export) with Tailwind, in 20 languages, deployed to Cloudflare Pages.
+The design is in `docs/superpowers/specs/2026-11-05-clafina-website-design.md`; the build plans are
+in `docs/superpowers/plans/`.
 
 ## Run it
 
 ```bash
-# any static server works; python is the one that is always there
-python3 -m http.server 4310
-# then open http://127.0.0.1:4310
+npm ci
+npm run dev            # http://localhost:4310
+npm run build          # static site in out/ (preview mode: every switch on)
+npm run serve:out      # serve out/ like Cloudflare does, on http://127.0.0.1:4311
 ```
 
-Do not use ports 3000, 4200 or 8088 — on this machine those belong to the ERP's dev
-servers.
+Do not use ports 3000, 4200 or 8088 on the development machine: those belong to the ERP's dev servers.
 
-## Pages
+## Checks
 
-| File | What it is |
+| Command | What it checks |
 |---|---|
-| `index.html` | Home: hero, the dashboard illustration, six surfaces, four feature pillars, industries, the counter and one-record stories, trust, call to action |
-| `features.html` | Everything the product does, in six sections with an in-page jump nav |
-| `industries.html` | The ten industry packs, plus the "not on the list" case for the core |
-| `pricing.html` | Plans, enterprise, what is always included, FAQ |
-| `contact.html` | Demo request form (client-side validation and a confirmation state) |
-| `legal.html` | Draft privacy notice and terms — `noindex`, and marked as a draft on the page |
+| `npm run typecheck` | TypeScript, strict |
+| `npm run lint` | ESLint with the Next.js rules |
+| `npm test` | Unit tests (Vitest) |
+| `npm run check:css` | No left/right classes (`ml-`, `pr-`, `text-left` …), so Arabic mirrors |
+| `npm run check:content` | Content shape, banned words, exclamation marks, the dropped taglines, claims outside their switches, labelled story businesses |
+| `npm run check:output` | `docs/`, `brand/` and Markdown never reach `out/` |
+| `npm run check:links` | Every internal link in `out/` resolves |
+| `npx playwright test` | Languages, right-to-left, menus, 404s, fonts, accessibility (axe) and screenshots |
+| `npx lhci autorun` | Phone Lighthouse: performance ≥ 95, accessibility 100, SEO 100 |
 
-Shared assets:
+CI runs all of them on every pull request (`.github/workflows/ci.yml`).
 
-```
-assets/
-├── css/site.css      one stylesheet: tokens, layout, components, responsive
-├── js/site.js        header state, mobile nav, scroll reveals, form validation
-└── img/favicon.svg   the mark
-```
+## Where things live
+
+| Path | What it holds |
+|---|---|
+| `app/[locale]/` | Every page, under its language: `/en/`, `/fr/pricing/` … |
+| `app/(root)/` | The plain language picker at `/` (the Pages Function redirects before it shows) |
+| `functions/index.ts` | Cloudflare Pages Function: sends `/` to the visitor's language |
+| `content/<locale>/` | Page copy. English is the master; other languages fall back to it key by key |
+| `messages/<locale>.json` | Interface strings: menus, footer, switchers, 404 |
+| `src/config/locales.ts` | The 20 languages: script, direction, review status |
+| `src/config/routes.ts` | Every page in the site map; a page shows only when `built` and switched on |
+| `src/config/switches.ts` | **Every switch** (claims, pre-launch features, pages, sections, languages, countries, features) |
+| `src/config/site.ts` | **Checkable facts** (company, emails, app and store links, app IDs, socials, CRM, Turnstile) |
+| `src/config/nav.ts` | The header menus |
+| `src/theme/tokens.css` | The only place colours, type, radius, shadow and motion are defined |
+| `src/brand/Logo.tsx` | The only place the logo is drawn |
+| `src/lib/links.ts` | The one builder for sign-up, app and open-in-app links |
+
+## Switches and settings
+
+Preview builds turn every switch on so the whole design can be reviewed. A production build
+(`npm run build:production`) refuses to run while:
+
+- a claim or pre-launch switch is on without `confirmedBy` and `confirmedAt`, or still holds a sample value;
+- a required fact in `src/config/site.ts` is still a placeholder.
+
+The CMS will take over both files later.
+
+## Languages
+
+Each language has a status in `src/config/locales.ts`. Drafts are published but marked `noindex` and
+left out of the sitemaps. When a native speaker has reviewed one, set `status: 'reviewed'` with
+the reviewer and date.
 
 ## Brand
 
-The identity kit lives in `brand/` — logo SVGs, PNG exports, palette tokens, the
-Manrope webfont, a one-page brand board and a six-page PDF. Start with
-`brand/README.md`, or open `brand/clafina-brand-guidelines.pdf`.
+The site ships with a neutral placeholder theme. The chosen brand replaces `src/theme/tokens.css`
+and `src/brand/Logo.tsx`; nothing else changes. Brand source files live in `brand/` and are never deployed.
 
-## Design
+## Deploy
 
-The site currently uses the **ERP's own** design tokens, taken from
-`commerce-web/src/theme/01-base/variables.css` and the "Commerce Black" system in
-`design-handoff/design-system-v2`:
+- Pull requests that pass CI deploy a preview to Cloudflare Pages (`.github/workflows/deploy.yml`).
+- Production deploys from `main` only when the repository variable `CLAFINA_PRODUCTION_ENABLED` is `true`,
+  and only through `npm run build:production`.
+- Secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`. Project: `clafina-site`.
+- Only `out/` and `functions/` are uploaded. `public/_headers` sets the security headers;
+  `public/_redirects` moves the old `.html` pages to their new addresses.
 
-| Token | Value | Used for |
-|---|---|---|
-| `--page` | `#fafafa` | the page ground |
-| `--card` | `#ffffff` | cards, panels, the product frame |
-| `--ink` | `#09090b` | text and the one black action in an area |
-| `--ink-soft` / `--ink-muted` | `#52525b` / `#71717a` | second lines, labels |
-| `--border` | `#e4e4e7` | every hairline — the site uses borders, not shadows |
-| `--primary` | `#18181b` | buttons, the CTA band, the chosen state |
-| `--good` / `--warn` / `--bad` | pairs | status only, never decoration |
-
-Rules worth keeping when you edit it:
-
-- **One black thing per area.** Each section has at most one filled primary action.
-- **Colour means state.** Green, amber and red carry meaning; they are not accents.
-- **Borders, not shadows.** Panels are separated by a hairline.
-- **Numbers line up.** Money and quantities use `font-variant-numeric: tabular-nums`.
-- **System sans only**, so the site loads with no webfont and matches the product.
-
-Change a token in `:root` and the whole site follows.
-
-## Accessibility
-
-- Skip link, landmarks, one `h1` per page, logical heading order.
-- Visible focus rings on everything interactive (`:focus-visible`, 2px, 3px offset).
-- The dashboard illustration is `role="img"` with a text alternative and marked
-  `aria-hidden` where it is decorative.
-- Contrast checked against WCAG AA: `--ink-soft` is 7.5:1 and `--ink-muted` 4.8:1 on
-  the page ground. Badge and pill pairs use `-ink` on `-fill`, never colour alone.
-- `prefers-reduced-motion` disables the reveals and smooth scrolling.
-- The mobile menu is a real `aria-expanded` toggle, closes on Escape, and returns focus.
-
-## Placeholders to replace before launch
-
-1. **Sign-in URL** — every `https://app.clafina.com/` link should point at the real
-   application host.
-2. **Pricing** — the amounts in `pricing.html` (₦0 / ₦25,000 / ₦75,000) are placeholders
-   for layout. The real price card is data in the billing catalogue
-   (`commerce-console`, per plan and currency); align the page with it.
-3. **Demo form** — `#demoForm` validates and shows a confirmation, then resets. It
-   **does not post anywhere yet**. Point it at a CRM or form endpoint and remove the
-   comment in `assets/js/site.js`.
-4. **Email addresses** — `hello@`, `support@`, `privacy@` and `security@clafina.com` are
-   assumed; confirm the real mailboxes.
-5. **Legal** — `legal.html` is a draft for a lawyer to review. It is `noindex` and says
-   so on the page.
-6. **Social preview image** — the artwork is ready at
-   `brand/clafina-social-preview.png` (1200×630); add it to the Open Graph and
-   Twitter tags.
-
-## Adding a page
-
-Copy the header and footer block from any page (they are identical apart from the
-`aria-current="page"` attribute), add the `<link>` to `assets/css/site.css`, and the
-`<script src="assets/js/site.js" defer>` before `</body>`. Add the icon `<symbol>`s the
-page uses to its sprite.
-
-## Deploying
-
-The folder is the artefact. Serve it from any static host — put `index.html` at the
-root, send `404` back to `index.html` only if you add client-side routing (there is
-none here). `legal.html` is intentionally `noindex` until it is signed off.
+The old static pages (`index.html`, `features.html` … and `assets/`) stay in the repository until
+phase 2 replaces them. They are not part of the build.

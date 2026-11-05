@@ -12,3 +12,4 @@ playwright-report/
 .lighthouseci/
 next-env.d.ts
 *.tsbuildinfo
+public/fonts/

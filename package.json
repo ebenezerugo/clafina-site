@@ -16,8 +16,9 @@
     "check:production": "tsx --tsconfig tsconfig.json scripts/check-production.ts",
     "check:css": "tsx scripts/check-logical-css.ts",
     "check:content": "tsx scripts/check-content.ts",
-    "prebuild": "tsx scripts/generate-well-known.ts",
-    "postbuild": "tsx scripts/postbuild.ts"
+    "prebuild": "tsx scripts/generate-well-known.ts && tsx scripts/script-fonts.ts",
+    "postbuild": "tsx scripts/postbuild.ts",
+    "check:links": "tsx scripts/check-links.ts"
   },
   "dependencies": {
     "next": "16.4.5",
@@ -28,6 +29,11 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
+    "@fontsource/noto-sans-arabic": "5.3.0",
+    "@fontsource/noto-sans-devanagari": "5.3.0",
+    "@fontsource/noto-sans-ethiopic": "5.3.0",
+    "@fontsource/noto-sans-jp": "5.3.1",
+    "@fontsource/noto-sans-sc": "5.3.1",
     "@lhci/cli": "0.16.0",
     "@playwright/test": "1.63.0",
     "@tailwindcss/postcss": "4.3.4",
