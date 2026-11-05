@@ -1,0 +1,132 @@
+{
+  "kind": "help-module",
+  "module": "projects",
+  "sources": [
+    "commerce-api/documentation/PROJECTS.md",
+    "commerce-web/src/app/features/projects/presentation",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "For work you sell by people's time or by the job: a project has a customer, a team, tasks on a board, a budget in hours and money, and a way of being billed. Approved time and milestones become invoices, and you see what each project earns and costs.",
+  "start": [
+    "Set your rules and your rate card in Projects settings: what each person costs and is billed at an hour.",
+    "Make your first project with New project, with its customer, dates, budget and how it is billed.",
+    "Put your team on it and add the tasks, then press Start the work.",
+    "Ask the team to fill in My timesheet each week, and approve the weeks under Timesheet approvals."
+  ],
+  "articles": [
+    {
+      "slug": "start-a-project",
+      "title": "Start a project for a customer",
+      "summary": "Make the project with its dates, budget and billing, put the team and tasks on it, and move it on to the work.",
+      "page": "/projects/all",
+      "steps": [
+        {
+          "lead": "Press New project.",
+          "rest": "Give it a name, a type, the customer and the project manager. Start from a template to copy its columns, milestones and tasks."
+        },
+        {
+          "lead": "Set the dates and the priority,",
+          "rest": "then choose how it is billed: fixed price, time and materials, milestones, or non-billable."
+        },
+        {
+          "lead": "Enter the budget:",
+          "rest": "in hours and in money, the contract value and the usual bill rate an hour. The summary shows the margin if it stays on budget."
+        },
+        {
+          "lead": "Press Make a draft, or Make and plan it.",
+          "rest": "Nothing is shared until you move it to planning."
+        },
+        {
+          "lead": "On the Overview tab, press Add to the team",
+          "rest": "for each person, and New milestone for the points the customer must accept."
+        },
+        {
+          "lead": "On the Tasks tab, press New task",
+          "rest": "for each piece of work, with its estimate, who has it and its due date. Move cards across the board as the work goes."
+        },
+        {
+          "lead": "Press Start the work.",
+          "rest": "The team can now log time on it. Later, Complete the project and Close the project finish it."
+        }
+      ],
+      "tips": [
+        "Your rules in Projects settings decide what a project needs before each step, such as a manager before planning, or every task done before it is completed.",
+        "Save a project you repeat with Save as a template, from its Actions menu.",
+        "Put on hold and Cancel the project each ask for a reason."
+      ],
+      "related": [
+        "approve-timesheets",
+        "bill-a-project"
+      ]
+    },
+    {
+      "slug": "approve-timesheets",
+      "title": "Log time and approve the team's timesheets",
+      "summary": "Each person fills in their week and sends it; an approver checks it and approves it or turns it back.",
+      "page": "/projects/approvals",
+      "steps": [
+        {
+          "lead": "Each person opens My timesheet",
+          "rest": "from their menu, presses Add a row and types the time into each day, such as 1.5, 1:30 or 90m. Or they press Start the timer."
+        },
+        {
+          "lead": "They press Send the week.",
+          "rest": "It is locked until it is approved or turned back."
+        },
+        {
+          "lead": "The approver opens Timesheet approvals",
+          "rest": "and chooses a week on the left, to see its hours by day and what is billable."
+        },
+        {
+          "lead": "Press Approve this week,",
+          "rest": "or say what to correct and press Turn back. Approving costs the hours at each person's rate and makes billable ones ready to invoice."
+        }
+      ],
+      "tips": [
+        "Nobody approves their own week: someone else must.",
+        "Where an approval policy holds the week, its approvers decide it in their Inbox.",
+        "An approved week that is not yet invoiced can be reopened, with a reason."
+      ],
+      "related": [
+        "start-a-project",
+        "bill-a-project"
+      ]
+    },
+    {
+      "slug": "bill-a-project",
+      "title": "Invoice a project",
+      "summary": "Turn approved time into an invoice, bill a fixed price by its schedule, and take a deposit or retainer up front.",
+      "page": "/projects/all",
+      "steps": [
+        {
+          "lead": "Open the project's Billing tab.",
+          "rest": "Waiting to be billed shows the approved, billable time and the invoice it would make."
+        },
+        {
+          "lead": "Press Draw up the invoice.",
+          "rest": "A draft sales invoice is made, which goes through the usual approval and posting. The time is marked invoiced, so it is billed once."
+        },
+        {
+          "lead": "For a fixed price or milestones, press Add an instalment",
+          "rest": "under Billing schedule, with an amount and a date, or tie it to a milestone. Press Invoice when it is ready."
+        },
+        {
+          "lead": "For a deposit or retainer, press Add a retainer,",
+          "rest": "then Invoice to fund it. Approved time is drawn from the balance first, where your settings say so."
+        },
+        {
+          "lead": "To pass a cost on, press Tag a cost",
+          "rest": "and tick Pass on to the customer. Draw up an invoice for them under Costs to pass on."
+        }
+      ],
+      "tips": [
+        "Time with no bill rate is never billed at nothing: Clafina stops and says how many entries lack one.",
+        "If an invoice is cancelled or voided, its time and costs can be billed again.",
+        "A milestone that needs acceptance is billed only once the customer accepts it."
+      ],
+      "related": [
+        "approve-timesheets"
+      ]
+    }
+  ]
+}

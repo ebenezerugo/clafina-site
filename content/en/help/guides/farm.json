@@ -1,0 +1,384 @@
+{
+  "kind": "help-module",
+  "module": "farm",
+  "sources": [
+    "commerce-api/documentation/FARM.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/farm/presentation"
+  ],
+  "intro": "The farm pack, for crops, poultry, fish, livestock and outgrowers: fields on the map, seasons budgeted from crop plans, the work and who did it, inputs, batches and animals, harvest and lots, and what each field and crop earned after every cost. The pack is switched on for each farm in Organisation › Settings › Industry packs.",
+  "start": [
+    "Turn the farm pack on at each farm in Organisation › Settings › Industry packs.",
+    "Open Farm settings and say what each farm farms: crops, poultry, fish, livestock or outgrowers. The pages that follow depend on it.",
+    "Add your fields and draw each boundary, so areas and costs a hectare are right.",
+    "Make a crop plan for each crop, then start a season from it on a field."
+  ],
+  "articles": [
+    {
+      "slug": "add-a-field",
+      "title": "Add a field and draw its boundary",
+      "summary": "Record the field with its soil and ownership, then draw, import or walk its boundary. The measured area is worked out for you.",
+      "page": "/farm/fields/list",
+      "steps": [
+        {
+          "lead": "Press New field",
+          "rest": "on Fields."
+        },
+        {
+          "lead": "Choose the farm and give it a name,",
+          "rest": "with the area on the title or lease, the soil type, irrigation and whether it is owned, leased or rented."
+        },
+        {
+          "lead": "Enter the lease or rent cost",
+          "rest": "if it is leased or rented, and what it is charged per. Press Make the field."
+        },
+        {
+          "lead": "On the field, press Draw the boundary",
+          "rest": "and click each corner of the field in order, then press Save the boundary."
+        },
+        {
+          "lead": "Or press Import a file or Walked points",
+          "rest": "to use a boundary from a file, or points walked in the field, one latitude and longitude a line."
+        },
+        {
+          "lead": "Check the area.",
+          "rest": "The drawn area shows beside the area on the title."
+        }
+      ],
+      "tips": [
+        "If a boundary overlaps another field, you are told. Give a reason to keep it, unless your settings refuse overlaps.",
+        "Add a soil test from the field's page to see it against its aims and last year's.",
+        "Retiring a field keeps its seasons."
+      ],
+      "related": [
+        "start-a-season"
+      ]
+    },
+    {
+      "slug": "make-a-crop-plan",
+      "title": "Make a crop plan",
+      "summary": "Set out the steps of work for a crop, with the inputs and their cost, the yield and the price. Seasons are budgeted from it.",
+      "page": "/farm/crop-plans",
+      "steps": [
+        {
+          "lead": "Press New crop plan",
+          "rest": "on Crop plans."
+        },
+        {
+          "lead": "Choose the crop and name the plan,",
+          "rest": "with the yield a hectare in tonnes and today's price a tonne."
+        },
+        {
+          "lead": "Press Add a step",
+          "rest": "for each piece of work. Give it a kind of work, a name, when it starts in days from planting, how long it lasts and its cost line."
+        },
+        {
+          "lead": "Press Add an input",
+          "rest": "on a step for the seed, fertiliser or chemicals it uses, with the quantity and unit cost."
+        },
+        {
+          "lead": "Press Make the plan.",
+          "rest": "The list shows its cost, yield and margin a hectare."
+        }
+      ],
+      "tips": [
+        "Changing a plan saves a new version. Seasons already started keep the version they were started from.",
+        "Once you have harvested a crop for a few seasons, the yield shown is your own average."
+      ],
+      "related": [
+        "start-a-season"
+      ]
+    },
+    {
+      "slug": "start-a-season",
+      "title": "Start a season on a field",
+      "summary": "Put a crop plan on a field: the budget, the tasks and the inputs needed follow from the plan and the field's area.",
+      "page": "/farm/seasons",
+      "steps": [
+        {
+          "lead": "Press Start a season",
+          "rest": "on Seasons."
+        },
+        {
+          "lead": "Choose the field",
+          "rest": "and the hectares under the crop."
+        },
+        {
+          "lead": "Choose the crop plan",
+          "rest": "and the variety, and name the season."
+        },
+        {
+          "lead": "Enter the planting day",
+          "rest": "and when the harvest is expected, and choose the supervisor."
+        },
+        {
+          "lead": "Check what happens next",
+          "rest": "and the budget by cost line, then press Start the season. The plan's steps become tasks from the planting day."
+        },
+        {
+          "lead": "Open the season to follow it.",
+          "rest": "Plan against actual shows each cost line's plan, actual and what is left."
+        }
+      ],
+      "tips": [
+        "Under Inputs still to buy, press Request what's short to make a draft purchase request for what the store cannot cover. Nothing is reserved.",
+        "Press Move planting on the season to move the planting day; its tasks move with it.",
+        "Press Close the season once it is harvested. Its value is fixed then."
+      ],
+      "related": [
+        "record-work-and-piece-pay",
+        "record-an-application"
+      ]
+    },
+    {
+      "slug": "record-work-and-piece-pay",
+      "title": "Record work done and pay by the piece",
+      "summary": "Record who worked on a task and how much, sign it off, and the labour is costed to the season and sent to payroll.",
+      "page": "/farm/tasks",
+      "steps": [
+        {
+          "lead": "Press New task",
+          "rest": "on Tasks and work if it did not come from a season's plan. Say what is to be done, the field, the kind of work and the days."
+        },
+        {
+          "lead": "Choose how it is paid,",
+          "rest": "by the day, the hour or the piece, with the rate and what a piece is counted in (a bag, a crate, a row). Press Make the task."
+        },
+        {
+          "lead": "Press Work on",
+          "rest": "beside the task, then Add a person for each worker, with the days, hours or pieces they did."
+        },
+        {
+          "lead": "Press Record the work.",
+          "rest": "Each line is priced at the task's rate. Where sign-off is on, it waits."
+        },
+        {
+          "lead": "Press Sign off the work.",
+          "rest": "The labour is costed to the season once, and the pay lines are made for payroll."
+        }
+      ],
+      "tips": [
+        "The rate is kept on each record, so changing it later moves nothing already recorded.",
+        "Pay lines shows the month's signed work by person, ready for the payroll run.",
+        "Casual workers can be staff without a sign-in."
+      ],
+      "related": [
+        "start-a-season"
+      ]
+    },
+    {
+      "slug": "record-an-application",
+      "title": "Record seed, fertiliser or a spray put on a field",
+      "summary": "Record what was applied, how much and by whom. It comes out of the store at cost, and any waiting period before harvest is held.",
+      "page": "/farm/inputs-applied",
+      "steps": [
+        {
+          "lead": "Press Record an application",
+          "rest": "on Inputs applied."
+        },
+        {
+          "lead": "Choose the season and the product,",
+          "rest": "then enter the quantity applied, the hectares covered and the method."
+        },
+        {
+          "lead": "Say who applied it and when,",
+          "rest": "and tick the protective equipment worn."
+        },
+        {
+          "lead": "Press Record it.",
+          "rest": "It comes out of the farm's store at cost, is charged to the season, and the weather at the time is kept with it."
+        }
+      ],
+      "tips": [
+        "A product with a waiting period holds the season's harvest until the period ends.",
+        "Missing equipment, an untrained applicator, a rate off the label or a crop the product is not approved for flags it as Needs a look. It stays in the register.",
+        "Press Export for the auditor for every application of your filter as a spreadsheet file."
+      ],
+      "related": [
+        "treat-a-scouting-finding"
+      ]
+    },
+    {
+      "slug": "treat-a-scouting-finding",
+      "title": "Report a pest or disease and treat it",
+      "summary": "Record what was found on a field, check a treatment against the weather, the store and the harvest, and put it on the calendar.",
+      "page": "/farm/scouting",
+      "steps": [
+        {
+          "lead": "Press Report a finding",
+          "rest": "on Scouting. Choose the field, what it is, how bad, what was found and how much of the field it covers, then press Report it."
+        },
+        {
+          "lead": "Add a photo.",
+          "rest": "Where your settings ask for photos, a report stays a draft and off the map until it has one."
+        },
+        {
+          "lead": "Open the report",
+          "rest": "and choose a suggested product under Treatment, or another one."
+        },
+        {
+          "lead": "Press Check it.",
+          "rest": "You see the weather on the day, the waiting period against the planned harvest, the stock in the store and the cost."
+        },
+        {
+          "lead": "Press Put it on the calendar.",
+          "rest": "A treatment task is made. When it is recorded, the report shows as treated."
+        },
+        {
+          "lead": "Press Close it",
+          "rest": "with a note once the problem is dealt with."
+        }
+      ],
+      "related": [
+        "record-an-application"
+      ]
+    },
+    {
+      "slug": "place-and-follow-a-batch",
+      "title": "Place a batch of birds, fish or animals and follow it",
+      "summary": "Place a batch from a goods receipt, record each day's feed, deaths and weight, give shots on schedule, then close or sell it.",
+      "page": "/farm/batches",
+      "before": [
+        "The birds, fingerlings or animals were received on a posted goods receipt at the farm."
+      ],
+      "steps": [
+        {
+          "lead": "Press Place a batch.",
+          "rest": "Choose the kind, the breed, the goods receipt and its line, and how many were placed."
+        },
+        {
+          "lead": "Choose where and when:",
+          "rest": "the farm, the house, pond or pen, and the day placed."
+        },
+        {
+          "lead": "Choose the vaccination schedule and the feed,",
+          "rest": "the target age and the supervisor, then press Place the batch. The schedule's shots fall due."
+        },
+        {
+          "lead": "Press Record the day",
+          "rest": "each day: feed eaten, water, a sample weight, and any deaths with their cause."
+        },
+        {
+          "lead": "Press Give a shot",
+          "rest": "when a shot or medicine is given. Choose the one due, or what was given and how."
+        },
+        {
+          "lead": "For layers, press Grade the eggs",
+          "rest": "with the count of each grade."
+        },
+        {
+          "lead": "Press Close or sell",
+          "rest": "at the end. Selling puts it into stock under the batch number, at its cost to date."
+        }
+      ],
+      "tips": [
+        "A batch inside a withdrawal period after a medicine cannot be sold, and its eggs go to stock that is not for sale.",
+        "Feed and medicine come out of the store at cost and are charged to the batch."
+      ],
+      "related": [
+        "record-a-harvest"
+      ]
+    },
+    {
+      "slug": "record-a-harvest",
+      "title": "Record a harvest and release the lot for sale",
+      "summary": "Weigh each load into the day's lot, record drying, release it for sale and note who bought it so it can be traced.",
+      "page": "/farm/harvest",
+      "steps": [
+        {
+          "lead": "Press Record a weighed load",
+          "rest": "on Harvest and lots. Choose the season and enter the scale reading, the moisture and the grade, then press Record the load."
+        },
+        {
+          "lead": "Find the lot.",
+          "rest": "Loads of the same season, day and grade go into one lot, received into stock under the lot number."
+        },
+        {
+          "lead": "Choose Dry on the lot",
+          "rest": "as it dries. Enter the weight now or the loss, and the moisture, then press Record the loss."
+        },
+        {
+          "lead": "Choose Release",
+          "rest": "once it is dry enough, enter how much, and press Release to sale."
+        },
+        {
+          "lead": "Choose Record a sale",
+          "rest": "when it is sold. Find the invoice or order, enter the buyer and kilos, and press Record the sale."
+        }
+      ],
+      "tips": [
+        "A field inside a waiting period after a spray warns when you harvest, or refuses it if your settings say so.",
+        "A lot above the release moisture in your settings cannot be released yet.",
+        "A lot's trace shows where it came from (the field, season, inputs and storage) and where it went."
+      ],
+      "related": [
+        "place-and-follow-a-batch",
+        "see-costs-and-profit"
+      ]
+    },
+    {
+      "slug": "pay-outgrowers",
+      "title": "Take in produce from outgrowers and pay them",
+      "summary": "Register growers in a scheme, weigh their deliveries at a collection point, and pay them what their produce earned less inputs advanced.",
+      "page": "/farm/payment-runs",
+      "steps": [
+        {
+          "lead": "On Outgrowers, press New scheme,",
+          "rest": "then Register a grower: their scheme, crop, kilos expected, price a kilo, window and how they are paid. Press Register the grower."
+        },
+        {
+          "lead": "Press Issue inputs on advance",
+          "rest": "on the grower if they need seed or fertiliser. Over their limit, it waits for approval before anything leaves the store."
+        },
+        {
+          "lead": "On Collection points, press Weigh a delivery.",
+          "rest": "Choose the grower and the point, enter the scale reading and grade, and press Receipt it. The grower gets a receipt at once."
+        },
+        {
+          "lead": "On Payment runs, press Draft a run.",
+          "rest": "Choose the scheme and the period, and press Draft it. Each grower's produce less their open advances, oldest first, is worked out."
+        },
+        {
+          "lead": "Check the run",
+          "rest": "and press Approve the run. A draft bill is made in Payables for each grower ready to be paid."
+        }
+      ],
+      "tips": [
+        "A grower with no payout details is held at the payment run, not dropped.",
+        "A delivery too wet, above the moisture in your settings, is rejected and worth nothing.",
+        "A grower who owes more than they delivered has the rest carried to the next run."
+      ]
+    },
+    {
+      "slug": "see-costs-and-profit",
+      "title": "See what each field and crop earned",
+      "summary": "See cost and profit by field, crop, season or hectare, from every cost charged where it happened.",
+      "page": "/farm/costs-profit",
+      "steps": [
+        {
+          "lead": "Open Costs and profit",
+          "rest": "and choose how to group it: by field, crop, season, hectare or farm."
+        },
+        {
+          "lead": "Choose the period",
+          "rest": "with From and To, and tick Compare with the year before if you like."
+        },
+        {
+          "lead": "Read the rows.",
+          "rest": "Each shows area, tonnes, revenue, cost, result and margin, with cost a hectare and a tonne."
+        },
+        {
+          "lead": "Press Export as CSV",
+          "rest": "to take the figures away."
+        }
+      ],
+      "tips": [
+        "Seasons not yet harvested show a forecast from the plan's yield and price, marked as a projection.",
+        "Labour, inputs, feed, medicine, machinery and land each reach a season or batch once, where they happen."
+      ],
+      "related": [
+        "record-a-harvest"
+      ]
+    }
+  ]
+}

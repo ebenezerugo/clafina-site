@@ -1,0 +1,119 @@
+{
+  "kind": "help-module",
+  "module": "support",
+  "sources": [
+    "commerce-api/documentation/CRM.md",
+    "commerce-api/documentation/COMMUNICATION.md",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Look after customers once they have bought: tickets for the problems they raise, conversations with customers and suppliers, and the visits and calls you book with them. You can see who has each one and how long it has waited.",
+  "start": [
+    "Open your first ticket for a customer problem, so the team can see who has it.",
+    "Answer the conversations that are assigned to you, then the unassigned ones.",
+    "Book your next customer visit or call in Appointments."
+  ],
+  "articles": [
+    {
+      "slug": "answer-a-ticket",
+      "title": "Answer a customer's ticket",
+      "summary": "Take the ticket, reply to the customer or leave a note only your team sees, then resolve it and ask how it went.",
+      "page": "/support/tickets",
+      "steps": [
+        {
+          "lead": "Press New ticket",
+          "rest": "for a new problem. Choose the customer, give the subject and what happened, set the priority and kind, and press Open ticket."
+        },
+        {
+          "lead": "Open the ticket",
+          "rest": "from the list. Mine shows yours, and Nobody yet the ones no one has taken."
+        },
+        {
+          "lead": "Press Take it",
+          "rest": "to make it yours, or give it to someone else under Owner."
+        },
+        {
+          "lead": "Choose Reply to the customer or Note for the team,",
+          "rest": "write it, and press Send reply or Add note. The customer sees replies; notes are only for your team."
+        },
+        {
+          "lead": "Set its status",
+          "rest": "as it moves: in progress, or waiting for the customer."
+        },
+        {
+          "lead": "Press Resolve ticket",
+          "rest": "when it is done. The customer is asked to rate how it went."
+        }
+      ],
+      "tips": [
+        "Each ticket shows when its first reply is due, set by its priority. Oldest unanswered first puts the longest waiting at the top.",
+        "Tickets that name an invoice or a waybill keep the link, so the next person sees what it is about.",
+        "If a critical ticket has nobody on it for a while, the people who manage tickets are told."
+      ],
+      "related": [
+        "answer-a-conversation"
+      ]
+    },
+    {
+      "slug": "answer-a-conversation",
+      "title": "Answer customers and suppliers in one place",
+      "summary": "Conversations with customers and suppliers, by who has them and how they stand. Reply, leave a note for colleagues, or send later.",
+      "page": "/conversations",
+      "steps": [
+        {
+          "lead": "Open Conversations",
+          "rest": "and choose which to see: Assigned to me, Unassigned, Everyone's or Starred."
+        },
+        {
+          "lead": "Open a conversation.",
+          "rest": "Each row says when the next reply is due, and whether a target was missed."
+        },
+        {
+          "lead": "Write your reply and send it.",
+          "rest": "Use a template for the answers you give often. Send later posts it at the time you choose."
+        },
+        {
+          "lead": "Switch to Private note",
+          "rest": "to write something only colleagues see. Type @ to mention someone."
+        },
+        {
+          "lead": "Change Who has it or the Status",
+          "rest": "as it moves on. A message to the customer leaves it waiting for them, and their reply opens it again."
+        }
+      ],
+      "tips": [
+        "New conversation starts one with a customer, a supplier or colleagues.",
+        "Service levels shows how quickly conversations are answered and resolved."
+      ],
+      "related": [
+        "answer-a-ticket"
+      ]
+    },
+    {
+      "slug": "book-an-appointment",
+      "title": "Book a visit or call with a customer",
+      "summary": "Book appointments by the week, mark how each went, and accept or turn down the times customers ask for.",
+      "page": "/support/appointments",
+      "steps": [
+        {
+          "lead": "Press Book an appointment.",
+          "rest": "Choose the customer, say what it is, when it starts and how long it is, and press Book it."
+        },
+        {
+          "lead": "Mark how it went",
+          "rest": "from Mark as…: confirmed, done, did not come, or cancelled."
+        },
+        {
+          "lead": "Look under Reservations",
+          "rest": "for the times customers asked for. Press Accept or Turn down."
+        },
+        {
+          "lead": "Press Book it on a reservation",
+          "rest": "to make the appointment it asked for, at the time asked for unless you choose another."
+        }
+      ],
+      "tips": [
+        "Previous week and Next week move through the calendar."
+      ]
+    }
+  ]
+}
