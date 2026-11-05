@@ -1,0 +1,28 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: connecting a business's own domain to Clafina email. Four records pass, one is still missing, and the domain goes live once all required records pass.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Lagos" },
+  "nav": [
+    { "label": "Email", "items": [{ "label": "Mailboxes" }, { "label": "Aliases" }, { "label": "Domains", "active": true }, { "label": "Policies" }, { "label": "Audit log" }] }
+  ],
+  "title": "brightharbour.example",
+  "subtitle": "Publish these records where your domain is managed, then press Verify.",
+  "actions": [{ "label": "Copy all records" }, { "label": "Verify", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "steps", "items": ["Add the domain", "Publish records", "Verify", "Live"], "current": 2 },
+    { "type": "table", "title": "Records", "columns": [{ "label": "Record" }, { "label": "What it does" }, { "label": "Needed" }, { "label": "Check" }], "rows": [
+      ["TXT _commerce-mail", "Proves the domain is yours", "Required", { "pill": "good", "text": "Found" }],
+      ["MX", "Mail for the domain comes to your mailboxes", "Required", { "pill": "good", "text": "Found" }],
+      ["TXT (SPF)", "Receivers trust the servers that send for you", "Required", { "pill": "good", "text": "Found" }],
+      ["TXT (DKIM)", "Every message you send is signed", "Required", { "pill": "good", "text": "Found" }],
+      ["TXT _dmarc", "Tells receivers what to do with mail that fails", "Required", { "pill": "bad", "text": "Missing" }],
+      ["CNAME autoconfig", "Mail apps set themselves up", "Recommended", { "pill": "warn", "text": "Not added" }]
+    ] },
+    { "type": "attention", "title": "One required record to go", "items": [
+      { "tone": "warn", "icon": "alert", "title": "Add the DMARC record, then press Verify", "body": "The domain goes live when every required record passes, so your first messages already reach inboxes properly.", "action": "Show the record" }
+    ] }
+  ]
+}

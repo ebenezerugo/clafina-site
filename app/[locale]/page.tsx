@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isLocale, type Locale } from '@/config/locales';
 import { NAV, navItemIds } from '@/config/nav';
 import { routeById } from '@/config/routes';
-import { pageAvailable } from '@/config/switches';
+import { mentionable, pageAvailable } from '@/config/switches';
 import { HomeContent } from '@/content/schema';
 import { loadContent } from '@/content/load';
 import { signupUrl } from '@/lib/links';
@@ -116,7 +116,7 @@ export default async function Home({ params }: Props) {
             <div key={g.id} className="min-w-0">
               <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{t(`nav.groups.${g.id}` as never)}</h3>
               <ul className="mt-4 grid gap-4">
-                {g.items.map((id) => {
+                {g.items.filter((id) => mentionable(id)).map((id) => {
                   const href = link(locale, id);
                   const name = t(`routes.${id}` as never);
                   return (

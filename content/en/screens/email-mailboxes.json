@@ -1,0 +1,27 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: an IT admin's list of mailboxes, with storage, daily sending allowance, forwarding and one mailbox held for review.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Lagos" },
+  "nav": [
+    { "label": "Email", "items": [{ "label": "Mailboxes", "active": true, "badge": "6" }, { "label": "Aliases" }, { "label": "Domains" }, { "label": "Policies" }, { "label": "Audit log" }] }
+  ],
+  "title": "Mailboxes",
+  "subtitle": "brightharbour.example · forwarding allowed to your own addresses only",
+  "actions": [{ "label": "Add alias" }, { "label": "New mailbox", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "attention", "title": "Needs you", "items": [
+      { "tone": "bad", "icon": "alert", "title": "store@ is held: it sent mail that looked like spam", "body": "Messages written in webmail wait in Outbox until you release it. See what was sent before you do.", "action": "Review and release" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Mailbox" }, { "label": "Storage", "numeric": true }, { "label": "Sent today", "numeric": true }, { "label": "Forwarding" }, { "label": "Status" }], "rows": [
+      [{ "avatar": "AO", "text": "amaka@ · Amaka Obi" }, "2.1 of 10 GB", "38 of 300", "Off", { "pill": "good", "text": "Active" }],
+      [{ "avatar": "KU", "text": "kunle@ · Kunle Ade" }, "0.8 of 5 GB", "12 of 300", "To dispatch@", { "pill": "good", "text": "Active" }],
+      [{ "avatar": "NK", "text": "nkechi@ · Nkechi Eze" }, "4.6 of 5 GB", "54 of 300", "Off", { "pill": "warn", "text": "Nearly full" }],
+      [{ "avatar": "TI", "text": "tobi@ · Tobi Ige" }, "1.2 of 5 GB", "0 of 300", "Off", { "pill": "info", "text": "Out of office to 14 Nov" }],
+      [{ "avatar": "ST", "text": "store@ · Lekki store" }, "0.3 of 5 GB", "300 of 300", "Off", { "pill": "bad", "text": "Held" }],
+      [{ "avatar": "FA", "text": "femi@ · Femi Bello" }, "0.0 of 5 GB", "0 of 300", "Off", { "pill": "neutral", "text": "Disabled · mail kept" }]
+    ] }
+  ]
+}

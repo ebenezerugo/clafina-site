@@ -1,0 +1,88 @@
+{
+  "kind": "product",
+  "sources": ["commerce-mail/README.md", "commerce-mail/docs/specs/2026-11-05-business-email-design.md", "commerce-mail/docs/admin-guide.md", "commerce-mail/docs/plans/2026-11-05-business-email-plan.md", "docs/product-facts.md#product-email"],
+  "meta": {
+    "title": "Business email on your own domain · Clafina",
+    "description": "Mailboxes on your own domain, managed in Clafina. Read mail in Clafina or in Outlook and phone mail apps, with forwarding, out-of-office and spam filtering."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Business email",
+    "title": "Email on your own domain, run from Clafina.",
+    "lede": "Give everyone a mailbox at your business's name. Read it in Clafina or in the mail app on any phone or computer, and manage it from the same place as the rest of the business.",
+    "screen": "email-inbox"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    { "title": "Your name on every message", "body": "Mailboxes like sales@ and amaka@ on your own domain, so every message carries your business's name." },
+    { "title": "One place to manage it", "body": "Add people, set their storage, reset passwords and see every change in one audit log, from the Clafina you already use." },
+    { "title": "Read it anywhere", "body": "Use webmail in Clafina, or Outlook, Apple Mail, Thunderbird and phone mail apps. They set themselves up from your address." }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "email-domain",
+      "title": "Connect your domain in a few steps",
+      "body": "Clafina shows the records to publish, and publishes them itself if it already manages your domain. The domain goes live only when every required record passes.",
+      "points": ["Proves the domain is yours before any mail flows", "Every message you send is signed", "Recommended records let mail apps set themselves up"]
+    },
+    {
+      "screen": "email-mailboxes",
+      "title": "Mailboxes your IT admin controls",
+      "body": "Each mailbox has its own storage and daily sending allowance. Suspend, disable or sign someone out everywhere, and keep their mail if they leave.",
+      "points": ["Aliases such as info@ and sales@ deliver to one or more people", "A mailbox that sends spam is held until you release it", "Every change, by you or a user, is in the audit log"]
+    },
+    {
+      "screen": "email-inbox",
+      "title": "Webmail inside Clafina",
+      "body": "Mail sits beside your invoices, customers and calendar. New mail appears as it arrives, and an invitation goes into your Clafina calendar with one answer.",
+      "points": ["Recipients fill in from your Clafina contacts", "Over the day's allowance, messages wait in Outbox and go out by themselves", "Spam goes to Junk"]
+    }
+  ],
+  "featuresTitle": "Everything a business mailbox needs",
+  "features": [
+    { "title": "Mailboxes and addresses", "items": [
+      { "text": "Mailboxes on your own domain, with a display name, storage and a daily sending allowance" },
+      { "text": "Aliases that deliver to one or more mailboxes and can be sent from" },
+      { "text": "name+anything@ reaches name@, so people can sort their own mail" },
+      { "text": "An address that does not exist bounces with a plain message, so guessed addresses never land" },
+      { "text": "Disable a mailbox and keep its mail, ready to restore" }
+    ] },
+    { "title": "For each person", "items": [
+      { "text": "Forwarding to up to ten addresses, keeping a copy or not" },
+      { "text": "Out-of-office replies with a start and an end, sent once per sender per day" },
+      { "text": "Calendar invitations answered in the message and added to the Clafina calendar" },
+      { "text": "IMAP, POP3 and sending from any mail app, set up by itself from the address" },
+      { "text": "A configuration profile for iPhone, iPad and Mac" }
+    ] },
+    { "title": "Control and safety", "items": [
+      { "text": "A forwarding policy for the organisation: allowed, own addresses only, or off" },
+      { "text": "Spam filtered on the way in and never forwarded" },
+      { "text": "Sending allowances for each mailbox and the organisation, with holds on mailboxes that send spam" },
+      { "text": "Each organisation's mail kept apart from every other's" },
+      { "text": "Encrypted backups kept off site, with a single mailbox restorable on its own" },
+      { "text": "An audit log of every change: who, what and when" }
+    ] }
+  ],
+  "connectsTitle": "Works with the rest of Clafina",
+  "connects": [
+    { "route": "product-communication", "text": "Email sits with chat, Meet and the shared inbox your team already uses." },
+    { "route": "product-bookings", "text": "Invitations you accept land in the same calendar as your bookings." },
+    { "route": "product-crm", "text": "Recipients fill in from your customers and contacts." },
+    { "route": "product-online-shop", "text": "Use the same domain for your shop and your mail." }
+  ],
+  "surfacesTitle": "Where you use it",
+  "surfaces": ["web"],
+  "industriesTitle": "Used across every trade",
+  "industries": ["industry-retail", "industry-distribution", "industry-construction", "industry-property"],
+  "faqTitle": "Questions about business email",
+  "faq": [
+    { "q": "Can I keep using Outlook or my phone's mail app?", "a": "Yes. Mailboxes work over IMAP, POP3 and sending with a password, and most mail apps set themselves up from your address once the recommended records are in place." },
+    { "q": "Do I need to move my domain?", "a": "No. You publish a few records where your domain is managed. If Clafina already manages it, Clafina publishes them for you." },
+    { "q": "Can mail be forwarded outside the business?", "a": "Yes, unless your admin sets the policy to your own addresses only, or turns forwarding off. Spam is never forwarded." },
+    { "q": "What happens when someone leaves?", "a": "Disable their mailbox. New mail to it is refused, and what is stored is kept, ready to restore or hand on." },
+    { "q": "Is there a catch-all address?", "a": "No. An address that does not exist bounces, so mail guessed at random never reaches you. Use aliases such as info@ and sales@ instead." },
+    { "q": "Can I send newsletters from it?", "a": "Business email is for people writing to people. Use Clafina's campaigns for mailing lists." }
+  ],
+  "cta": { "title": "Put your name on every message.", "body": "Connect your domain and give everyone on the team a mailbox at your business's name." }
+}

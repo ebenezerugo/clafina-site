@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { LOCALES, isLocale, type Locale } from '@/config/locales';
 import { ROUTES, routeById } from '@/config/routes';
-import { localeEnabled, pageAvailable } from '@/config/switches';
+import { localeEnabled, mentionable, pageAvailable } from '@/config/switches';
 import { visible } from '@/lib/visible';
 import { loadContent } from '@/content/load';
 import { ProductContent } from '@/content/product';
@@ -99,7 +99,7 @@ export default async function ProductPage({ params }: Props) {
 
       <Section id="connects" title={c.connectsTitle} tone="surface">
         <ul className="grid gap-4 md:grid-cols-2">
-          {c.connects.map((x) => {
+          {c.connects.filter((x) => mentionable(x.route)).map((x) => {
             const href = link(x.route);
             const name = t(`routes.${x.route}` as never);
             return <li key={x.route} className="rounded-xl border border-line bg-raised p-5">{href ? <a href={href} className="font-bold hover:underline">{name}</a> : <span className="font-bold">{name}</span>}<p className="mt-1 text-muted">{x.text}</p></li>;
@@ -113,7 +113,7 @@ export default async function ProductPage({ params }: Props) {
 
       <Section id="industries" title={c.industriesTitle} tone="surface">
         <ul className="flex flex-wrap gap-3">
-          {c.industries.map((id) => {
+          {c.industries.filter((id) => mentionable(id)).map((id) => {
             const href = link(id);
             const name = t(`routes.${id}` as never);
             return <li key={id}>{href ? <a href={href} className="inline-flex min-h-11 items-center rounded-full border border-line bg-raised px-4 font-medium hover:bg-surface">{name}</a> : <span className="inline-flex min-h-11 items-center rounded-full border border-line bg-raised px-4 font-medium">{name}</span>}</li>;

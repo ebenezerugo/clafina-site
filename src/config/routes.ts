@@ -7,9 +7,12 @@ export interface RouteDef {
   built: boolean;
   /** Internal pages built only in preview, never in production, menus, footer or sitemaps. */
   previewOnly?: true;
+  /** A whole page that is built before go-live: shown only while pre-launch features and its own area are on. */
+  prelaunch?: true;
 }
 
 const r = <const I extends string>(id: I, path: string, group: RouteGroup, built = false) => ({ id, path, group, built });
+const pre = <const I extends string>(id: I, path: string, group: RouteGroup) => ({ id, path, group, built: true, prelaunch: true as const });
 const internal = <const I extends string>(id: I, path: string) => ({ id, path, group: 'core' as RouteGroup, built: true, previewOnly: true as const });
 
 /** Every page in the site map (spec section 3). A page appears only when it is built and its switch is on. */
@@ -41,6 +44,7 @@ export const ROUTES = [
   r('product-assets', '/product/assets/', 'product', true),
   r('product-hr', '/product/hr/', 'product', true),
   r('product-communication', '/product/communication/', 'product', true),
+  pre('product-email', '/product/business-email/', 'product'),
   r('product-mobile', '/product/mobile/', 'product', true),
   r('product-assistant', '/product/assistant/', 'product', true),
   r('product-capture', '/product/capture/', 'product', true),

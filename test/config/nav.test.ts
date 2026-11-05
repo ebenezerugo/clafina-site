@@ -5,9 +5,9 @@ import { ROUTES } from '@/config/routes';
 const allBuilt = ROUTES.map((r) => ({ ...r, built: true }));
 
 describe('navigation', () => {
-  it('puts all 21 product pages in the Product menu, in five groups', () => {
+  it('puts all 22 product pages in the Product menu, in five groups', () => {
     const product = NAV.menus.find((m) => m.id === 'product')!;
-    expect(navItemIds(product)).toHaveLength(21);
+    expect(navItemIds(product)).toHaveLength(22);
     expect(product.groups.map((g) => g.id)).toEqual(['money', 'selling', 'operations', 'people', 'everywhere']);
   });
   it('lists the menus in order', () => {

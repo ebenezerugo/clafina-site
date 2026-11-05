@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { LOCALES, isLocale, type Locale } from '@/config/locales';
 import { ROUTES, routeById } from '@/config/routes';
-import { localeEnabled, pageAvailable } from '@/config/switches';
+import { localeEnabled, mentionable, pageAvailable } from '@/config/switches';
 import { loadContent } from '@/content/load';
 import { IndustryStory } from '@/content/industry';
 import { signupUrl } from '@/lib/links';
@@ -104,7 +104,7 @@ export default async function IndustryPage({ params }: Props) {
 
       <Section id="shares" title={c.sharesTitle}>
         <ul className="grid gap-4 md:grid-cols-2">
-          {c.shares.map((x) => {
+          {c.shares.filter((x) => mentionable(x.route)).map((x) => {
             const href = link(x.route);
             return <li key={x.route} className="rounded-xl border border-line bg-raised p-5">{href ? <a href={href} className="font-bold hover:underline">{name(x.route)}</a> : <span className="font-bold">{name(x.route)}</span>}<p className="mt-1 text-muted">{x.text}</p></li>;
           })}
@@ -113,7 +113,7 @@ export default async function IndustryPage({ params }: Props) {
 
       <Section id="modules" title={c.modulesTitle} tone="surface">
         <ul className="flex flex-wrap gap-3">
-          {c.modules.map((id) => { const href = link(id); return <li key={id}>{href ? <a href={href} className={`${chip} hover:bg-surface`}>{name(id)}</a> : <span className={chip}>{name(id)}</span>}</li>; })}
+          {c.modules.filter((id) => mentionable(id)).map((id) => { const href = link(id); return <li key={id}>{href ? <a href={href} className={`${chip} hover:bg-surface`}>{name(id)}</a> : <span className={chip}>{name(id)}</span>}</li>; })}
         </ul>
       </Section>
 
@@ -129,7 +129,7 @@ export default async function IndustryPage({ params }: Props) {
       {c.related.length > 0 && (
         <Section id="related" title={c.relatedTitle} tone="surface">
           <ul className="flex flex-wrap gap-3">
-            {c.related.map((id) => { const href = link(id); return <li key={id}>{href ? <a href={href} className={`${chip} hover:bg-surface`}>{name(id)}</a> : <span className={chip}>{name(id)}</span>}</li>; })}
+            {c.related.filter((id) => mentionable(id)).map((id) => { const href = link(id); return <li key={id}>{href ? <a href={href} className={`${chip} hover:bg-surface`}>{name(id)}</a> : <span className={chip}>{name(id)}</span>}</li>; })}
           </ul>
         </Section>
       )}
