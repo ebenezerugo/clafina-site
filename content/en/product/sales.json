@@ -1,0 +1,205 @@
+{
+  "kind": "product",
+  "sources": [
+    "SALES.md",
+    "TAX_ENGINE.md",
+    "MOBILE.md",
+    "docs/product-facts.md#product-sales"
+  ],
+  "meta": {
+    "title": "Sales and invoicing · Clafina",
+    "description": "Quotations customers can answer, proformas for payment before supply, waybills with signatures and invoices that post themselves."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Sales and invoicing",
+    "title": "From the first price to the money in the bank.",
+    "lede": "Quotations, orders, waybills, invoices and receipts, each usable on its own. Stock and the books follow every step without anyone typing it twice.",
+    "screen": "sales-home"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Quotes customers can answer",
+      "body": "Send a quotation as a link. The customer can accept it or propose other prices, and every offer is kept."
+    },
+    {
+      "title": "Paid before you supply",
+      "body": "Ask for the whole amount or a deposit with a proforma invoice. It is held as the customer's credit until the final invoice."
+    },
+    {
+      "title": "Delivered, and proved",
+      "body": "Waybills take stock out when they leave, are followed on the road and are signed for at the door."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "quotation-counter",
+      "title": "Answer a counter-offer in one place",
+      "body": "When a customer proposes other prices from the shared quotation, you see them next to yours, line by line.",
+      "points": [
+        "Within your discount limits, you can accept straight away",
+        "Above them, it goes to the approver you set",
+        "Every round of offers is kept"
+      ]
+    },
+    {
+      "screen": "invoices-list",
+      "title": "Know what is owed",
+      "body": "Invoices list what customers owe you, oldest first, with what is overdue and what is part paid.",
+      "points": [
+        "Record a payment against one or many invoices",
+        "Credit notes put goods back into stock",
+        "Copy an invoice to start the next one"
+      ]
+    },
+    {
+      "screen": "waybill-detail",
+      "title": "Follow every delivery",
+      "body": "A waybill shows where the goods are, who carries them and what they carry, until the customer signs.",
+      "points": [
+        "Stock leaves the store when it is dispatched",
+        "Customers sign or dispute on the shared page",
+        "Delivery notes print from your own design"
+      ]
+    },
+    {
+      "screen": "waybill-phone",
+      "title": "Hand over at the door",
+      "body": "The driver ticks what was unloaded and the customer signs on the phone.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in Sales",
+  "features": [
+    {
+      "title": "Documents",
+      "items": [
+        {
+          "text": "Quotations, sales orders, invoices and receipts, each usable on its own. Converting one into the next only fills it in for you."
+        },
+        {
+          "text": "Proforma invoices that ask for all or part of the amount before you supply. They are never posted."
+        },
+        {
+          "text": "Credit notes with goods back to stock, refunds and writing off a bad debt."
+        },
+        {
+          "text": "Service lines on any document, next to goods."
+        },
+        {
+          "text": "Gift cards."
+        }
+      ]
+    },
+    {
+      "title": "Prices and discounts",
+      "items": [
+        {
+          "text": "Prices taken from your price book: base, wholesale and quantity breaks."
+        },
+        {
+          "text": "Discount policies with limits for each person and thresholds that go to an approver."
+        },
+        {
+          "text": "A discount on the whole document, shared across its lines.",
+          "prelaunch": "product-sales"
+        }
+      ]
+    },
+    {
+      "title": "Stock and delivery",
+      "items": [
+        {
+          "text": "Sell in any unit: by the case, by the pack or one at a time, with stock counted correctly."
+        },
+        {
+          "text": "Waybills that are approved, dispatched with stock, followed, delivered, signed for or disputed."
+        },
+        {
+          "text": "Stock held for an order the moment it is confirmed.",
+          "prelaunch": "product-sales"
+        }
+      ]
+    },
+    {
+      "title": "Control",
+      "items": [
+        {
+          "text": "Approval policies for each kind of document, and numbering for each kind and each place."
+        },
+        {
+          "text": "PDFs from your own document designs, and till slips for receipt printers."
+        },
+        {
+          "text": "Each person sells only from the places they are allowed to.",
+          "prelaunch": "product-sales"
+        },
+        {
+          "text": "Void an invoice even after it has been part paid.",
+          "prelaunch": "product-sales"
+        },
+        {
+          "text": "Search every sales list by customer.",
+          "prelaunch": "product-sales"
+        }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    {
+      "route": "product-stock",
+      "text": "Orders and waybills move stock in the place they come from."
+    },
+    {
+      "route": "product-finance",
+      "text": "Invoices, receipts and credit notes post to the ledger by themselves."
+    },
+    {
+      "route": "product-tax",
+      "text": "VAT and withholding are worked out on every line."
+    },
+    {
+      "route": "product-payments",
+      "text": "Customers pay a shared invoice online, and the receipt follows."
+    },
+    {
+      "route": "product-crm",
+      "text": "Every document shows on the customer's page."
+    }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": [
+    "web",
+    "phone"
+  ],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-distribution",
+    "industry-manufacturing",
+    "industry-construction",
+    "industry-field-service"
+  ],
+  "faqTitle": "Questions about Sales",
+  "faq": [
+    {
+      "q": "Can a customer answer a quotation without an account?",
+      "a": "Yes. You share the quotation as a link; they can accept it or propose other prices from that page, and every offer is kept."
+    },
+    {
+      "q": "Can I take a deposit before I supply?",
+      "a": "Yes. A proforma invoice asks for the whole amount or a deposit. The money is held as the customer's credit and applied to the final invoice."
+    },
+    {
+      "q": "Can I sell by the carton and count stock one by one?",
+      "a": "Yes. Each line has its own unit, so stock moves by the right number of items."
+    }
+  ],
+  "cta": {
+    "title": "See Sales with your own documents.",
+    "body": "Start free, or book a demo and we will walk through a sale from quotation to receipt."
+  }
+}

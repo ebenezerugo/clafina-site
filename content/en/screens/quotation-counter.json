@@ -1,0 +1,175 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a quotation the customer has answered from its shared page, asking for lower prices, with the counter-offer laid out line by line.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": {
+    "initials": "BH",
+    "name": "Bright Harbour Traders",
+    "place": "Main store"
+  },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    {
+      "items": [
+        {
+          "label": "Dashboard"
+        },
+        {
+          "label": "Inbox",
+          "badge": "9"
+        }
+      ]
+    },
+    {
+      "label": "Sell",
+      "items": [
+        {
+          "label": "Sales"
+        },
+        {
+          "label": "Quotations",
+          "active": true
+        },
+        {
+          "label": "Sales orders"
+        },
+        {
+          "label": "Waybills"
+        },
+        {
+          "label": "Invoices",
+          "badge": "7"
+        },
+        {
+          "label": "Receipts"
+        }
+      ]
+    }
+  ],
+  "title": "Quotation QUO-0221",
+  "subtitle": "Corner Shop Provisions · 3 items · VAT included",
+  "actions": [
+    {
+      "label": "Download PDF"
+    },
+    {
+      "label": "Answer their offer",
+      "primary": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "steps",
+      "items": [
+        "Drafted",
+        "Approved",
+        "Sent",
+        "Countered",
+        "Accepted",
+        "Order"
+      ],
+      "current": 3
+    },
+    {
+      "type": "row",
+      "widths": "2fr 1fr",
+      "blocks": [
+        {
+          "type": "table",
+          "title": "Their offer: 12% below what you quoted",
+          "columns": [
+            {
+              "label": "Item"
+            },
+            {
+              "label": "Quantity",
+              "numeric": true
+            },
+            {
+              "label": "You offered",
+              "numeric": true
+            },
+            {
+              "label": "They ask",
+              "numeric": true
+            }
+          ],
+          "rows": [
+            [
+              "Powdered milk 400g",
+              "30 cartons",
+              {
+                "money": 38500
+              },
+              {
+                "money": 34000
+              }
+            ],
+            [
+              "Instant noodles 70g",
+              "50 cartons",
+              {
+                "money": 9800
+              },
+              {
+                "money": 8600
+              }
+            ],
+            [
+              "Granulated sugar 50kg",
+              "10 bags",
+              {
+                "money": 78500
+              },
+              {
+                "money": 69000
+              }
+            ]
+          ]
+        },
+        {
+          "type": "kv",
+          "title": "Corner Shop Provisions",
+          "items": [
+            {
+              "label": "Prices",
+              "value": "Wholesale"
+            },
+            {
+              "label": "Terms",
+              "value": "Net 14"
+            },
+            {
+              "label": "Owes",
+              "value": {
+                "money": 0
+              }
+            },
+            {
+              "label": "Credit limit",
+              "value": {
+                "money": 1500000
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "attention",
+      "title": "Waiting for you",
+      "items": [
+        {
+          "tone": "good",
+          "icon": "check",
+          "title": "Within your discount limit",
+          "body": "12% is the most you may give on wholesale. Accepting their prices accepts the quotation; no approver is needed.",
+          "action": "Accept their prices"
+        }
+      ]
+    }
+  ]
+}
