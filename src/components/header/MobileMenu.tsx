@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { Menu, MenuItem } from './MegaMenu';
 
-/** Below 1024 px: one toggle, a panel from the start side, focus kept inside while open, Escape closes. */
+const FOCUSABLE = 'a[href], button, select, summary';
+
+/** Below 1024 px: one toggle, a panel from the start side; Tab cycles through the toggle and the panel while open, Escape closes. */
 export function MobileMenu({ menus, links, labels, actions }: {
   menus: Menu[];
   links: MenuItem[];
@@ -15,17 +17,22 @@ export function MobileMenu({ menus, links, labels, actions }: {
   const panel = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!open) return;
-    const first = panel.current?.querySelector<HTMLElement>('a, button, select');
-    first?.focus();
+    if (!open || !panel.current) return;
+    const focusables = (): HTMLElement[] => {
+      const inPanel = [...panel.current!.querySelectorAll<HTMLElement>(FOCUSABLE)].filter(
+        (el) => !el.closest('[hidden]') && !(el.tagName !== 'SUMMARY' && el.closest('details:not([open])')),
+      );
+      return toggle.current ? [toggle.current, ...inPanel] : inPanel;
+    };
+    focusables()[1]?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') { setOpen(false); toggle.current?.focus(); return; }
-      if (e.key !== 'Tab' || !panel.current) return;
-      const focusable = [...panel.current.querySelectorAll<HTMLElement>('a, button, select')].filter((el) => !el.closest('[hidden]'));
-      const firstEl = focusable[0];
-      const lastEl = focusable[focusable.length - 1];
-      if (e.shiftKey && document.activeElement === firstEl) { e.preventDefault(); lastEl?.focus(); }
-      else if (!e.shiftKey && document.activeElement === lastEl) { e.preventDefault(); firstEl?.focus(); }
+      if (e.key !== 'Tab') return;
+      const list = focusables();
+      const index = list.indexOf(document.activeElement as HTMLElement);
+      const next = e.shiftKey ? (index <= 0 ? list.length - 1 : index - 1) : (index === list.length - 1 || index < 0 ? 0 : index + 1);
+      e.preventDefault();
+      list[next]?.focus();
     };
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';

@@ -31,3 +31,15 @@ describe('app links', () => {
     expect(openInAppUrl('/restaurant/floor')).toBe('https://clafina.com/open/restaurant/floor');
   });
 });
+
+describe('withCampaign', () => {
+  it('adds campaign tags to a sign-up link, encoded, keeping its own parameters', async () => {
+    const { withCampaign } = await import('@/lib/campaign');
+    expect(withCampaign('https://app.clafina.com/signup?lang=fr', { utm_source: 'x y', utm_campaign: 'a&b"c' }))
+      .toBe('https://app.clafina.com/signup?lang=fr&utm_source=x+y&utm_campaign=a%26b%22c');
+  });
+  it('leaves a link alone when there is no campaign', async () => {
+    const { withCampaign } = await import('@/lib/campaign');
+    expect(withCampaign('https://app.clafina.com/signup?lang=fr', {})).toBe('https://app.clafina.com/signup?lang=fr');
+  });
+});

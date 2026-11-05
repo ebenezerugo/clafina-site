@@ -27,3 +27,16 @@ describe('checkContent', () => {
     expect(translationGaps('test/fixtures/content')).toContain('fr/story.json is missing');
   });
 });
+
+describe('claim and pre-launch names', () => {
+  const problems = checkContent('test/fixtures/content-claims', 'preview');
+  it('rejects a misspelt claim switch', () => {
+    expect(problems).toContain('en/page.json items[0] names unknown claim switch "claims.uptme"');
+  });
+  it('rejects an unknown pre-launch area', () => {
+    expect(problems).toContain('en/page.json items[1] names unknown pre-launch area "industry-nope"');
+  });
+  it('accepts real names', () => {
+    expect(problems.some((p) => p.includes('items[2]'))).toBe(false);
+  });
+});

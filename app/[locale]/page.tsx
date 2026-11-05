@@ -46,7 +46,7 @@ export default async function Home({ params }: Props) {
         <h1 className="mt-4 max-w-4xl text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">{hero.title}</h1>
         <p className="mt-6 max-w-2xl text-xl text-muted">{hero.lede}</p>
         <div className="mt-10 flex flex-wrap gap-3">
-          <a href={signupUrl({ locale })} className="inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-on-primary hover:bg-primary-hover">{hero.primaryCta}</a>
+          <a href={signupUrl({ locale })} data-signup="" className="inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-on-primary hover:bg-primary-hover">{hero.primaryCta}</a>
           {demo && <a href={demo} className="inline-flex min-h-12 items-center rounded-full border border-line px-6 font-semibold hover:bg-surface">{hero.secondaryCta}</a>}
         </div>
       </section>

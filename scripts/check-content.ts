@@ -3,13 +3,16 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CONTENT_SCHEMAS } from '../src/content/schema';
 import { LOCALE_CODES, isLocale } from '../src/config/locales';
-import { localeIndexed } from '../src/config/switches';
+import { SWITCHES, localeIndexed } from '../src/config/switches';
 import { buildMode, type BuildMode } from '../src/lib/build-mode';
 
 const BANNED = ['leverage', 'seamless', 'world-class', 'revolutionary', 'synergy', 'cutting-edge', 'best-in-class'];
 const TAGLINES = ['business operating system', 'clarity in every operation'];
 const NOT_COPY = new Set(['kind', 'claim', 'prelaunch', 'sources', 'id', 'slug', 'screen', 'surface', 'href']);
 const CLAIM_PATTERN = /\d+(?:[.,]\d+)?\s?%|\b(?:certified|compliant)\b/i;
+
+const CLAIM_KEYS = new Set(Object.keys(SWITCHES.claims).map((k) => `claims.${k}`));
+const PRELAUNCH_AREAS = new Set(Object.keys(SWITCHES.prelaunch));
 
 type Json = string | number | boolean | null | Json[] | { [k: string]: Json };
 
@@ -40,7 +43,9 @@ function textProblems(where: string, node: Json, path: string, inClaim: boolean,
     return;
   }
   if (node && typeof node === 'object') {
-    const claimed = inClaim || typeof node.claim === 'string';
+    if (typeof node.claim === 'string' && !CLAIM_KEYS.has(node.claim)) out.push(`${where} ${path} names unknown claim switch "${node.claim}"`);
+    if (typeof node.prelaunch === 'string' && !PRELAUNCH_AREAS.has(node.prelaunch)) out.push(`${where} ${path} names unknown pre-launch area "${node.prelaunch}"`);
+    const claimed = inClaim || (typeof node.claim === 'string' && CLAIM_KEYS.has(node.claim));
     for (const [k, v] of Object.entries(node)) {
       if (NOT_COPY.has(k)) continue;
       textProblems(where, v, path ? `${path}.${k}` : k, claimed, out);

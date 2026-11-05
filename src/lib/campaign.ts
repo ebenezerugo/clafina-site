@@ -11,3 +11,15 @@ export function campaignFrom(search: string): Campaign {
   }
   return out;
 }
+
+/** A sign-up link with the visitor's campaign tags added after its own parameters. */
+export function withCampaign(href: string, campaign: Campaign): string {
+  const url = new URL(href);
+  for (const key of CAMPAIGN_KEYS) {
+    const value = campaign[key];
+    if (value) url.searchParams.set(key, value);
+  }
+  return url.toString();
+}
+
+export const CAMPAIGN_STORAGE_KEY = 'clafina.campaign';

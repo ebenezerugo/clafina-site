@@ -11,6 +11,7 @@ import type { CSSProperties } from 'react';
 import { Header } from '@/components/header/Header';
 import { SkipLink } from '@/components/SkipLink';
 import { Footer } from '@/components/footer/Footer';
+import { CampaignLinks } from '@/components/CampaignLinks';
 
 export const dynamicParams = false;
 
@@ -34,6 +35,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <Header locale={locale} />
           <div id="main" tabIndex={-1}>{children}</div>
           <Footer locale={locale} />
+          <CampaignLinks />
         </NextIntlClientProvider>
       </body>
     </html>

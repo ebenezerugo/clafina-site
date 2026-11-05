@@ -25,3 +25,27 @@ test('Escape closes the mobile menu and returns focus', async ({ page }) => {
   await expect(page.getByTestId('mobile-menu')).toBeHidden();
   await expect(page.getByRole('button', { name: 'Open menu' })).toBeFocused();
 });
+
+test('Tab stays inside the open mobile menu, including its close button', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/en/');
+  const toggle = page.getByRole('button', { name: 'Open menu' });
+  await toggle.click();
+  const panel = page.getByTestId('mobile-menu');
+  await expect(panel.locator(':focus')).toHaveCount(1);
+  let reachedToggle = false;
+  for (let i = 0; i < 6; i++) {
+    await page.keyboard.press('Tab');
+    reachedToggle ||= await page.evaluate(() => document.activeElement?.getAttribute('aria-controls') === 'mobile-menu');
+    const inside = await page.evaluate(() => {
+      const el = document.activeElement;
+      return !!el && (!!el.closest('#mobile-menu') || el.getAttribute('aria-controls') === 'mobile-menu');
+    });
+    expect(inside).toBe(true);
+  }
+  expect(reachedToggle).toBe(true);
+  await page.keyboard.press('Shift+Tab');
+  await page.keyboard.press('Shift+Tab');
+  await page.keyboard.press('Shift+Tab');
+  expect(await page.evaluate(() => !!document.activeElement?.closest('header'))).toBe(true);
+});

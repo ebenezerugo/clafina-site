@@ -11,30 +11,43 @@ permissions:
 
 jobs:
   preview:
-    # Every passing pull request gets a preview with all switches on.
-    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request'
+    # Previews only for branches of this repository. The job deploys the site CI already built and
+    # uploaded; it never installs or runs pull-request code next to the Cloudflare secrets.
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.workflow_run.head_sha }}
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
+      - name: Check the branch name
         env:
-          CLAFINA_BUILD: preview
-      - run: npm run check:output
-      - run: npx wrangler pages deploy out --project-name clafina-site --branch "${{ github.event.workflow_run.head_branch }}"
+          HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+        run: |
+          if [ "$HEAD_BRANCH" = "main" ]; then echo "Refusing to publish a preview to main"; exit 1; fi
+          SAFE=$(printf '%s' "$HEAD_BRANCH" | tr -c 'A-Za-z0-9-' '-' | cut -c1-28)
+          echo "PREVIEW_BRANCH=preview-$SAFE" >> "$GITHUB_ENV"
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: site
+      - name: Deploy the preview
+        working-directory: site
+        run: npx --yes wrangler@4.157.0 pages deploy out --project-name clafina-site --branch "$PREVIEW_BRANCH"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
   production:
     # Production stays off until the repository variable CLAFINA_PRODUCTION_ENABLED is "true".
-    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_branch == 'main' && vars.CLAFINA_PRODUCTION_ENABLED == 'true'
+    # It builds from main of this repository only, in production mode.
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository &&
+      vars.CLAFINA_PRODUCTION_ENABLED == 'true'
     runs-on: ubuntu-latest
     environment: production
     steps:
