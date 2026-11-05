@@ -8,7 +8,7 @@ import { buildMode, type BuildMode } from '../src/lib/build-mode';
 
 const BANNED = ['leverage', 'seamless', 'world-class', 'revolutionary', 'synergy', 'cutting-edge', 'best-in-class'];
 const TAGLINES = ['business operating system', 'clarity in every operation'];
-const NOT_COPY = new Set(['kind', 'claim', 'prelaunch', 'sources', 'id', 'slug', 'screen', 'surface', 'href']);
+const NOT_COPY = new Set(['kind', 'claim', 'prelaunch', 'sources', 'id', 'slug', 'screen', 'surface', 'href', 'icon', 'tone', 'initials', 'currency']);
 const CLAIM_PATTERN = /\d+(?:[.,]\d+)?\s?%|\b(?:certified|compliant)\b/i;
 
 const CLAIM_KEYS = new Set(Object.keys(SWITCHES.claims).map((k) => `claims.${k}`));
@@ -26,7 +26,7 @@ function read(root: string, locale: string, file: string): Json {
   return JSON.parse(readFileSync(join(root, locale, file), 'utf8')) as Json;
 }
 
-function textProblems(where: string, node: Json, path: string, inClaim: boolean, out: string[]): void {
+function textProblems(where: string, node: Json, path: string, inClaim: boolean, out: string[], allowFigures = false): void {
   if (typeof node === 'string') {
     const lower = node.toLowerCase();
     for (const word of BANNED) {
@@ -35,11 +35,11 @@ function textProblems(where: string, node: Json, path: string, inClaim: boolean,
     if (node.includes('!')) out.push(`${where} ${path} has an exclamation mark`);
     if (TAGLINES.some((t) => lower.includes(t))) out.push(`${where} ${path} uses a dropped tagline`);
     const claim = node.match(CLAIM_PATTERN);
-    if (claim && !inClaim) out.push(`${where} ${path} says "${claim[0]}" outside a claim`);
+    if (claim && !inClaim && !allowFigures) out.push(`${where} ${path} says "${claim[0]}" outside a claim`);
     return;
   }
   if (Array.isArray(node)) {
-    node.forEach((child, i) => textProblems(where, child, `${path}[${i}]`, inClaim, out));
+    node.forEach((child, i) => textProblems(where, child, `${path}[${i}]`, inClaim, out, allowFigures));
     return;
   }
   if (node && typeof node === 'object') {
@@ -48,7 +48,7 @@ function textProblems(where: string, node: Json, path: string, inClaim: boolean,
     const claimed = inClaim || (typeof node.claim === 'string' && CLAIM_KEYS.has(node.claim));
     for (const [k, v] of Object.entries(node)) {
       if (NOT_COPY.has(k)) continue;
-      textProblems(where, v, path ? `${path}.${k}` : k, claimed, out);
+      textProblems(where, v, path ? `${path}.${k}` : k, claimed, out, allowFigures);
     }
   }
 }
@@ -88,6 +88,17 @@ export function checkContent(root: string, mode: BuildMode = buildMode()): strin
         const b = data.illustrativeBusiness;
         if (!b || typeof b !== 'object' || Array.isArray(b) || b.label !== true) problems.push(`${where} has no labelled illustrative business`);
       }
+    }
+  }
+  // Product screens: illustrative figures are fine, but every file must say it is illustrative.
+  for (const locale of readdirSync(root).filter((d) => isLocale(d))) {
+    const dir = join(root, locale, 'screens');
+    if (!existsSync(dir)) continue;
+    for (const file of readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
+      const where = `${locale}/screens/${file}`;
+      const data = JSON.parse(readFileSync(join(dir, file), 'utf8')) as Json;
+      textProblems(where, data, '', false, problems, true);
+      if (!data || typeof data !== 'object' || Array.isArray(data) || data.illustrative !== true) problems.push(`${where} is not marked illustrative`);
     }
   }
   if (mode === 'production') {

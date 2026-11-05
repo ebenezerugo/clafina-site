@@ -1,0 +1,146 @@
+{
+  "illustrative": true,
+  "label": "Illustrative example: the till during service. The menu with stock left, the order for table 6 with service charge and VAT, and the payment buttons.",
+  "currency": "NGN",
+  "search": "Search the menu or scan a barcode",
+  "online": "Online",
+  "cashier": {
+    "initials": "KO",
+    "name": "Kemi",
+    "role": "Cashier · Till 2"
+  },
+  "categories": [
+    {
+      "name": "All",
+      "count": 48,
+      "active": true
+    },
+    {
+      "name": "Rice dishes",
+      "count": 9
+    },
+    {
+      "name": "Swallow",
+      "count": 7
+    },
+    {
+      "name": "Grills",
+      "count": 6
+    },
+    {
+      "name": "Drinks",
+      "count": 12
+    }
+  ],
+  "items": [
+    {
+      "name": "Jollof rice and chicken",
+      "price": 4500,
+      "stock": "24 left · 61 sold today",
+      "initials": "JR"
+    },
+    {
+      "name": "Fried rice and turkey",
+      "price": 5200,
+      "stock": "18 left",
+      "initials": "FR"
+    },
+    {
+      "name": "Pounded yam and egusi",
+      "price": 4800,
+      "stock": "12 left",
+      "initials": "PY"
+    },
+    {
+      "name": "Suya platter",
+      "price": 6000,
+      "stock": "9 left",
+      "initials": "SU"
+    },
+    {
+      "name": "Moi moi",
+      "price": 1200,
+      "stock": "3 left",
+      "initials": "MM",
+      "flag": "Low"
+    },
+    {
+      "name": "Small chops (10)",
+      "price": 3500,
+      "stock": "15 left",
+      "initials": "SC"
+    },
+    {
+      "name": "Chapman",
+      "price": 1800,
+      "stock": "Made to order",
+      "initials": "CH"
+    },
+    {
+      "name": "Puff-puff",
+      "price": 1000,
+      "stock": "Sold out",
+      "initials": "PP",
+      "flag": "Sold out"
+    }
+  ],
+  "order": {
+    "title": "Order #1047",
+    "meta": "Table 6 · 3 guests",
+    "types": [
+      "Dine in",
+      "Take away",
+      "Delivery"
+    ],
+    "lines": [
+      {
+        "name": "Jollof rice and chicken",
+        "detail": "Extra plantain · Seat 1, 2",
+        "qty": 2,
+        "total": 10000
+      },
+      {
+        "name": "Suya platter",
+        "detail": "Less pepper · Seat 3",
+        "qty": 1,
+        "total": 6000
+      },
+      {
+        "name": "Chapman",
+        "detail": "Large · Seat 1, 3",
+        "qty": 2,
+        "total": 3600
+      },
+      {
+        "name": "Moi moi",
+        "detail": "Seat 2",
+        "qty": 1,
+        "total": 1200
+      }
+    ],
+    "warning": "Moi moi is running low: 3 left.",
+    "totals": [
+      {
+        "label": "Subtotal",
+        "amount": 20800
+      },
+      {
+        "label": "Service charge (5%)",
+        "amount": 1040
+      },
+      {
+        "label": "VAT (7.5%)",
+        "amount": 1560
+      }
+    ],
+    "totalLabel": "Total",
+    "total": 23400,
+    "pay": [
+      "Cash",
+      "Transfer",
+      "Card",
+      "More"
+    ],
+    "charge": "Charge"
+  }
+}

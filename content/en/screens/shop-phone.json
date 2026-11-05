@@ -1,0 +1,51 @@
+{
+  "illustrative": true,
+  "label": "Illustrative example: a restaurant's own online shop on a phone, built with Storefront Studio in the restaurant's colours. Pickup tonight, the rice dishes and an order of two.",
+  "currency": "NGN",
+  "shop": {
+    "initials": "RT",
+    "name": "Red Tile Kitchen"
+  },
+  "pickup": {
+    "title": "Pickup · today 7:30 pm",
+    "place": "Open until 10 pm"
+  },
+  "categories": [
+    "Featured",
+    "Rice dishes",
+    "Swallow and soups",
+    "Grills"
+  ],
+  "active": "Rice dishes",
+  "sectionCount": "9 dishes",
+  "dishes": [
+    {
+      "name": "Jollof rice and chicken",
+      "note": "Party-style jollof, fried chicken, plantain",
+      "price": 4500,
+      "tag": "Spicy"
+    },
+    {
+      "name": "Fried rice and turkey",
+      "note": "Mixed vegetables, spicy turkey wing",
+      "price": 5200,
+      "tag": "Chef's pick"
+    },
+    {
+      "name": "Ofada rice and ayamase",
+      "note": "Local rice, green pepper stew",
+      "price": 5000,
+      "tag": "Spicy"
+    },
+    {
+      "name": "Coconut rice and fish",
+      "note": "Coconut milk rice, grilled croaker",
+      "price": 4800
+    }
+  ],
+  "basket": {
+    "count": 2,
+    "label": "View order",
+    "amount": 7800
+  }
+}

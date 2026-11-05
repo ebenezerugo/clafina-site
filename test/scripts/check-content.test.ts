@@ -40,3 +40,12 @@ describe('claim and pre-launch names', () => {
     expect(problems.some((p) => p.includes('items[2]'))).toBe(false);
   });
 });
+
+describe('screen content', () => {
+  it('requires the illustrative mark and keeps copy rules, but allows figures', () => {
+    expect(checkContent('test/fixtures/content-screens', 'preview')).toEqual([
+      'en/screens/bang.json title has an exclamation mark',
+      'en/screens/no-label.json is not marked illustrative',
+    ]);
+  });
+});

@@ -7,6 +7,11 @@ import { ScaledScreen } from '@/screens/kit/ScaledScreen';
 import { AppFrame, PhoneFrame } from '@/screens/kit/frames';
 import { AttentionRow, Avatar, Card, DataTable, KitButton, Pill, Progress, StatCard } from '@/screens/kit/parts';
 import { formatMoney } from '@/screens/kit/money';
+import { SalesHome } from '@/screens/SalesHome';
+import { PhoneHome } from '@/screens/PhoneHome';
+import { TillSell } from '@/screens/TillSell';
+import { ShopPhone } from '@/screens/ShopPhone';
+import { LedgerEntry } from '@/screens/LedgerEntry';
 
 export const metadata: Metadata = { title: 'Screen kit · Clafina', robots: { index: false, follow: false } };
 
@@ -82,6 +87,16 @@ export default async function ScreenGallery({ params }: { params: Promise<{ loca
               </Card>
             </PhoneFrame>
           </ScaledScreen>
+        </div>
+      </section>
+      <section aria-labelledby="screens-real" className="grid gap-6">
+        <h2 id="screens-real" className="text-xl font-bold">Screens used on the site</h2>
+        <SalesHome locale={raw} />
+        <TillSell locale={raw} />
+        <LedgerEntry locale={raw} />
+        <div className="grid gap-6 sm:grid-cols-2">
+          <PhoneHome locale={raw} />
+          <ShopPhone locale={raw} />
         </div>
       </section>
     </main>

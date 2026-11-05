@@ -1,0 +1,128 @@
+{
+  "illustrative": true,
+  "label": "Illustrative example: the Sales home page in the web app. Money waiting at each step from quotation to receipt, and the sales that need someone to act.",
+  "currency": "NGN",
+  "org": {
+    "initials": "BH",
+    "name": "Bright Harbour Traders",
+    "place": "Main store"
+  },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    {
+      "items": [
+        {
+          "label": "Dashboard"
+        },
+        {
+          "label": "Inbox",
+          "badge": "9"
+        }
+      ]
+    },
+    {
+      "label": "Sell",
+      "items": [
+        {
+          "label": "Sales",
+          "active": true
+        },
+        {
+          "label": "Quotations"
+        },
+        {
+          "label": "Sales orders"
+        },
+        {
+          "label": "Waybills"
+        },
+        {
+          "label": "Invoices",
+          "badge": "7"
+        },
+        {
+          "label": "Receipts"
+        }
+      ]
+    },
+    {
+      "label": "Money",
+      "items": [
+        {
+          "label": "Accounts"
+        },
+        {
+          "label": "Reports"
+        }
+      ]
+    },
+    {
+      "label": "People",
+      "items": [
+        {
+          "label": "Staff"
+        },
+        {
+          "label": "Payroll"
+        }
+      ]
+    }
+  ],
+  "title": "Sales",
+  "subtitle": "Everything between a customer asking for a price and the money reaching your bank.",
+  "newQuote": "New quotation",
+  "newInvoice": "New invoice",
+  "pipelineTitle": "From quotation to money in the bank",
+  "pipeline": [
+    {
+      "label": "Quotations",
+      "amount": 6840000,
+      "note": "14 open, 3 expire this week"
+    },
+    {
+      "label": "Sales orders",
+      "amount": 4120000,
+      "note": "9 to fulfil, 2 late"
+    },
+    {
+      "label": "Waybills",
+      "amount": null,
+      "note": "5 on the way, 3 to sign off"
+    },
+    {
+      "label": "Invoices",
+      "amount": 6730400,
+      "note": "25 owed to you, 7 overdue"
+    },
+    {
+      "label": "Receipts",
+      "amount": 9372500,
+      "note": "63 received this month"
+    }
+  ],
+  "attentionTitle": "Needs your attention",
+  "attention": [
+    {
+      "tone": "warn",
+      "icon": "receipt",
+      "title": "A customer countered quotation QUO-0221",
+      "body": "They offered 12% below your price. 12% is the most you may give, so you can accept.",
+      "action": "Review the offer"
+    },
+    {
+      "tone": "bad",
+      "icon": "alert",
+      "title": "2 orders are late for delivery",
+      "body": "Waybill WB-0097 to the market store is a day behind.",
+      "action": "See late orders"
+    },
+    {
+      "tone": "info",
+      "icon": "check",
+      "title": "4 delivered orders are not invoiced",
+      "body": "The goods have arrived, but nobody has asked for the money yet.",
+      "action": "Invoice them"
+    }
+  ]
+}
