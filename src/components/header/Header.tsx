@@ -32,7 +32,7 @@ export async function Header({ locale }: { locale: Locale }) {
         </div>
         <div className="hidden items-center gap-2 lg:flex">
           <a href={signIn} className="inline-flex min-h-11 items-center rounded-md px-3 text-[15px] font-medium text-ink hover:bg-surface">{t('nav.signIn')}</a>
-          <a href={startFree} data-signup="" className="inline-flex min-h-11 items-center rounded-full bg-primary px-5 text-[15px] font-semibold text-on-primary hover:bg-primary-hover">{t('nav.startFree')}</a>
+          <a href={startFree} data-signup="" className="inline-flex min-h-11 items-center rounded-control bg-primary px-5 text-[15px] font-semibold text-on-primary hover:bg-primary-hover">{t('nav.startFree')}</a>
         </div>
         <MobileMenu
           menus={menus}
@@ -40,8 +40,8 @@ export async function Header({ locale }: { locale: Locale }) {
           labels={{ open: t('nav.openMenu'), close: t('nav.closeMenu'), nav: t('nav.label') }}
           actions={
             <>
-              <a href={signIn} className="inline-flex min-h-11 items-center justify-center rounded-full border border-line font-medium">{t('nav.signIn')}</a>
-              <a href={startFree} data-signup="" className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary font-semibold text-on-primary">{t('nav.startFree')}</a>
+              <a href={signIn} className="inline-flex min-h-11 items-center justify-center rounded-control border border-line font-medium">{t('nav.signIn')}</a>
+              <a href={startFree} data-signup="" className="inline-flex min-h-11 items-center justify-center rounded-control bg-primary font-semibold text-on-primary">{t('nav.startFree')}</a>
             </>
           }
         />

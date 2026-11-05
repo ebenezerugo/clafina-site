@@ -34,8 +34,8 @@ export function IllustrativeLabel({ text }: { text: string }) {
 export function CtaButtons({ primary, secondary }: { primary: { href: string; label: string }; secondary?: { href: string; label: string } | null }) {
   return (
     <div className="flex flex-wrap gap-3">
-      <a href={primary.href} data-signup="" className="inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-on-primary hover:bg-primary-hover">{primary.label}</a>
-      {secondary && <a href={secondary.href} className="inline-flex min-h-12 items-center rounded-full border border-line px-6 font-semibold hover:bg-surface">{secondary.label}</a>}
+      <a href={primary.href} data-signup="" className="inline-flex min-h-12 items-center rounded-control bg-primary px-6 font-semibold text-on-primary hover:bg-primary-hover">{primary.label}</a>
+      {secondary && <a href={secondary.href} className="inline-flex min-h-12 items-center rounded-control border border-line px-6 font-semibold hover:bg-surface">{secondary.label}</a>}
     </div>
   );
 }

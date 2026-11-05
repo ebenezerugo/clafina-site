@@ -139,8 +139,8 @@ export default async function IndustryPage({ params }: Props) {
           <h2 id="cta-title" className="max-w-3xl text-4xl font-extrabold tracking-tight">{c.cta.title}</h2>
           <p className="mt-4 max-w-2xl text-lg opacity-80">{c.cta.body}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href={signupUrl({ locale })} data-signup="" className="inline-flex min-h-12 items-center rounded-full bg-page px-6 font-semibold text-ink">{t('nav.startFree')}</a>
-            {demo && <a href={demo} className="inline-flex min-h-12 items-center rounded-full border border-page/40 px-6 font-semibold">{t('routes.demo')}</a>}
+            <a href={signupUrl({ locale })} data-signup="" className="inline-flex min-h-12 items-center rounded-control bg-page px-6 font-semibold text-ink">{t('nav.startFree')}</a>
+            {demo && <a href={demo} className="inline-flex min-h-12 items-center rounded-control border border-page/40 px-6 font-semibold">{t('routes.demo')}</a>}
           </div>
         </div>
       </section>

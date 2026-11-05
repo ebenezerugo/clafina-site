@@ -29,6 +29,8 @@
   --r-md: 10px;
   --r-lg: 16px;
   --r-xl: 24px;
+  /* Buttons: the same radius as the app's buttons (commerce-web --radius: 0.5rem). */
+  --r-control: 8px;
   --sh-sm: 0 1px 2px rgb(17 21 28 / 0.06);
   --sh-md: 0 4px 16px rgb(17 21 28 / 0.08);
   --sh-lg: 0 16px 48px rgb(17 21 28 / 0.12);

@@ -13,7 +13,7 @@ export default function GlobalNotFound() {
           <p className="mt-4 text-lg text-muted">The address may be mistyped, or the page may have moved.</p>
           {/* A full page load is intended: the language picker has its own root layout. */}
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-          <a href="/" className="mt-8 inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-on-primary">Choose your language</a>
+          <a href="/" className="mt-8 inline-flex min-h-12 items-center rounded-control bg-primary px-6 font-semibold text-on-primary">Choose your language</a>
         </main>
       </body>
     </html>
