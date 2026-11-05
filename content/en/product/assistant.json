@@ -1,0 +1,143 @@
+{
+  "kind": "product",
+  "sources": [
+    "assistant.md",
+    "Commerce-AI-Product-Document.md",
+    "ROADMAP.md",
+    "docs/product-facts.md#product-assistant"
+  ],
+  "meta": {
+    "title": "AI assistant · Clafina",
+    "description": "Minutes and drafts from a meeting voice note, reports in plain words, and work done as you. Nothing is sent until you confirm."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "AI assistant",
+    "title": "Ask in words. Check, then confirm.",
+    "lede": "Turn a meeting voice note into minutes and drafts, ask for any report, and let the assistant do the work across the app as you. It never sends, posts or pays by itself.",
+    "screen": "assistant-chat"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Leave a meeting with the work drafted",
+      "body": "Record the conversation. You get the minutes, the next steps, and the quotation, tasks and messages ready to check."
+    },
+    {
+      "title": "Ask for any report",
+      "body": "Ask in plain words and get a table or a chart. Save it as a report or add it to your dashboard."
+    },
+    {
+      "title": "Get work done, safely",
+      "body": "The assistant uses the app the way you do, with your permissions. It drafts; you confirm."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "assistant-meeting",
+      "title": "Minutes and drafts from a voice note",
+      "body": "Decisions, agreements and next steps, with who does what and by when, and the drafts that follow.",
+      "points": [
+        "Where this came from plays the moment in the recording",
+        "It asks when something is unclear",
+        "Change this, and every revision is kept"
+      ]
+    },
+    {
+      "screen": "assistant-chat",
+      "title": "Answers from your own records",
+      "body": "Ask a question and get the answer with the figures behind it, from the records you are allowed to open.",
+      "points": [
+        "Save as report, or Add to dashboard",
+        "Drafts to check, each with its own confirm",
+        "Share a conversation read-only"
+      ]
+    },
+    {
+      "screen": "assistant-record-phone",
+      "title": "Record on the phone",
+      "body": "Start a recording at the table and stop when you are done. The minutes and drafts wait in the Assistant.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in the assistant",
+  "features": [
+    {
+      "title": "Meetings",
+      "items": [
+        { "text": "Record a voice note in the browser or on the phone, or attach one. You get the transcript, minutes and next steps." },
+        { "text": "Draft cards for quotations, sales orders, purchase orders, requests for quotation, tasks, calendar events and messages." },
+        { "text": "Where this came from plays the moment in the recording behind each draft." },
+        { "text": "Questions when something is unclear, Change this, and the full revision history." },
+        { "text": "Copy as minutes to share the notes." },
+        { "text": "Live dictation, with the words appearing as you speak.", "prelaunch": "product-assistant" },
+        { "text": "Service lines in drafted quotations and orders, next to goods.", "prelaunch": "product-assistant" }
+      ]
+    },
+    {
+      "title": "Answers and reports",
+      "items": [
+        { "text": "Answers from your records and documents, shown only to people allowed to open them." },
+        { "text": "Reports on request as a table or a chart. Save as report, or Add to dashboard." },
+        { "text": "Share a conversation read-only." }
+      ]
+    },
+    {
+      "title": "Doing the work",
+      "items": [
+        { "text": "Acts as you, with your permissions, and every action is recorded." },
+        { "text": "Never sends, posts or pays by itself. Each draft waits for your yes." },
+        { "text": "Can use every part of the app through its own tools. Long jobs come back as tasks." }
+      ]
+    },
+    {
+      "title": "Wherever you work",
+      "items": [
+        { "text": "The Assistant page, and a drawer on every page of the app." },
+        { "text": "In your team's chat platform, for colleagues who have linked their accounts." },
+        { "text": "An MCP server, so outside AI tools can read, draft and confirm with your sign-in." },
+        { "text": "Suggested replies, summaries and translation in your messages." },
+        { "text": "Ask a person from our team when the assistant cannot help.", "prelaunch": "product-assistant" },
+        { "text": "Choose to share your corrections, and help the assistant pick the right step more often.", "prelaunch": "product-assistant" }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-sales", "text": "Quotations and sales orders are drafted from what was agreed." },
+    { "route": "product-purchasing", "text": "Purchase orders and requests for quotation are drafted for you to check." },
+    { "route": "product-business-health", "text": "Reports you ask for can be saved or added to a dashboard." },
+    { "route": "product-crm", "text": "Next steps become tasks on the customer's page." },
+    { "route": "product-communication", "text": "Meetings in Meet, calendar events and messages all start from a draft." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["assistant", "web", "phone", "meet"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-distribution",
+    "industry-field-service",
+    "industry-construction",
+    "industry-property",
+    "industry-manufacturing"
+  ],
+  "faqTitle": "Questions about the assistant",
+  "faq": [
+    {
+      "q": "Can the assistant send or pay something without me?",
+      "a": "No. It drafts, and nothing is sent, posted or paid until you confirm. Each draft needs its own yes."
+    },
+    {
+      "q": "Can it see records I am not allowed to open?",
+      "a": "No. Answers come only from records you may open. It acts as you, with your permissions, and every action is recorded."
+    },
+    {
+      "q": "How do I know a draft matches what was said?",
+      "a": "Each draft says where it came from. Tap it to hear that moment in the recording."
+    }
+  ],
+  "cta": {
+    "title": "Bring a meeting, leave with the work drafted.",
+    "body": "Start free, or book a demo and we will turn a recorded meeting into minutes, a quotation and tasks."
+  }
+}

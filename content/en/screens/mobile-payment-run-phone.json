@@ -1,0 +1,38 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a payment run waiting for the owner on the phone, with the bills in it, the transfer preview and the cash left after.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell", "active": true },
+    { "label": "New", "icon": "plus" },
+    { "label": "Money", "icon": "money" },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Payment run PR-0031",
+  "subtitle": "Payment runs waiting for you · 3 bills · prepared by Kemi",
+  "blocks": [
+    { "type": "table", "title": "Bills in this run", "columns": [{ "label": "Supplier" }, { "label": "Amount", "numeric": true }], "rows": [
+      ["Ring Road Haulage", { "money": 1450000 }],
+      ["Northgate Power", { "money": 180000 }],
+      ["Green Valley Mills", { "money": 620000 }]
+    ] },
+    { "type": "kv", "title": "Transfer preview", "items": [
+      { "label": "From", "value": "Operating account" },
+      { "label": "Total", "value": { "money": 2250000 } },
+      { "label": "Cash after", "value": { "money": 6664250 } }
+    ] },
+    { "type": "attention", "title": "Your answer", "items": [
+      {
+        "tone": "warn",
+        "icon": "check",
+        "title": "Approve or decline",
+        "body": "Declining asks for a reason. Approving needs a connection.",
+        "action": "Approve"
+      }
+    ] }
+  ]
+}

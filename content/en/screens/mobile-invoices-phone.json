@@ -1,0 +1,30 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: sales invoices on the phone, with what is overdue, what is sent and how many days late each one is.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Sales", "icon": "sales", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Sales invoices",
+  "subtitle": "Invoices you sent to customers, and whether they are paid.",
+  "actions": [{ "label": "New invoice", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "alert", "label": "Overdue", "value": { "money": 1840000 }, "change": { "tone": "bad", "text": "7 invoices" } },
+      { "icon": "receipt", "label": "Sent", "value": { "money": 4890400 }, "note": "18 invoices, waiting for payment" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Customer" }, { "label": "Status" }, { "label": "Amount", "numeric": true }], "rows": [
+      [{ "avatar": "TS", "text": "Tide Street Stores" }, { "pill": "info", "text": "Due 2 Nov" }, { "money": 1284500 }],
+      [{ "avatar": "KM", "text": "Kite Market Co." }, { "pill": "info", "text": "Due 31 Oct" }, { "money": 742000 }],
+      [{ "avatar": "SG", "text": "Sandgate Hardware" }, { "pill": "bad", "text": "3 days late" }, { "money": 170000 }],
+      [{ "avatar": "SG", "text": "Sandgate Hardware" }, { "pill": "good", "text": "Paid" }, { "money": 1106000 }]
+    ] }
+  ]
+}

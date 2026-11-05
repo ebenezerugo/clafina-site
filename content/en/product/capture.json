@@ -1,0 +1,137 @@
+{
+  "kind": "product",
+  "sources": [
+    "Capture-Product-Document.md",
+    "capture.md",
+    "ROADMAP.md",
+    "docs/product-facts.md#product-capture"
+  ],
+  "meta": {
+    "title": "Document capture · Clafina",
+    "description": "Photograph, upload or forward a bill or receipt. It is read for you, checked for duplicates and made into a draft beside the original."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Document capture",
+    "title": "Send the bill. Check the draft.",
+    "lede": "Photograph a receipt, forward a supplier's email or pick a file from Drive. Clafina reads it and gives you a draft to check, not a typing job.",
+    "screen": "capture-inbox"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Stop keying in bills",
+      "body": "Supplier bills and receipts are read for you, with the supplier matched and the coding suggested."
+    },
+    {
+      "title": "Catch duplicates first",
+      "body": "A possible duplicate has to be answered before the draft is made, so nothing is paid twice."
+    },
+    {
+      "title": "Keep the original close",
+      "body": "The original stays in Drive, next to the bill or expense claim it became."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "capture-inbox",
+      "title": "Everything sent in, in one place",
+      "body": "The capture inbox shows what came in, how it came, how sure the reading is and what is left to check.",
+      "points": [
+        "Tabs for ready to review, reading, draft made and could not be read",
+        "A band at the top for what needs you",
+        "Measures for managers"
+      ]
+    },
+    {
+      "screen": "capture-review",
+      "title": "Check it beside the original",
+      "body": "Each field is boxed on the picture, with how sure the reading is in words and the reasons to look again.",
+      "points": [
+        "The supplier is matched, and it says why",
+        "Coding is suggested from your history",
+        "Make the draft bill. Nothing is posted"
+      ]
+    },
+    {
+      "screen": "capture-camera-phone",
+      "title": "Snap it at the counter",
+      "body": "The camera page tells you when to hold steady, and waits and tries again on a weak connection.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in Capture",
+  "features": [
+    {
+      "title": "Sending it in",
+      "items": [
+        { "text": "Capture from a photo, an upload, a Drive file, an email forwarded to your capture address, or your team's chat platform." },
+        { "text": "Fill from a document on forms, and Create from this file in Drive." },
+        { "text": "A phone camera page that tells you when to hold steady." },
+        { "text": "Waits and tries again on a weak connection." },
+        { "text": "Capture in the phone app, kept in a queue until you have a signal.", "prelaunch": "product-capture" }
+      ]
+    },
+    {
+      "title": "What it reads",
+      "items": [
+        { "text": "Fourteen kinds of document: bills, receipts, purchase orders, delivery notes, customers' orders, requests for quotation, products, assets, journal vouchers, count sheets and more." },
+        { "text": "Long documents read page by page, with progress as each page is done.", "prelaunch": "product-capture" }
+      ]
+    },
+    {
+      "title": "Checking",
+      "items": [
+        { "text": "Review beside the original: boxes on the picture, how sure the reading is in words, and reasons to check." },
+        { "text": "The supplier matched, with why: the same tax number, or chosen before." },
+        { "text": "Coding suggested from your own history." },
+        { "text": "Duplicate checks that must be answered before you go on." }
+      ]
+    },
+    {
+      "title": "Drafts and records",
+      "items": [
+        { "text": "Makes a draft bill or expense claim for you to submit. Nothing is posted." },
+        { "text": "An inbox with tabs, a band for what needs attention, and measures for managers." },
+        { "text": "Originals kept in Drive." }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-purchasing", "text": "Supplier bills arrive as drafts, matched to the right supplier." },
+    { "route": "product-finance", "text": "Receipts become draft expense claims, coded from your history." },
+    { "route": "product-assistant", "text": "Capture from your team's chat platform, where the assistant already works." },
+    { "route": "product-mobile", "text": "Photograph a receipt from the phone." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["web", "phone", "assistant"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-distribution",
+    "industry-restaurant",
+    "industry-construction",
+    "industry-field-service"
+  ],
+  "faqTitle": "Questions about Capture",
+  "faq": [
+    {
+      "q": "Does a captured bill post to the books by itself?",
+      "a": "No. Capture makes a draft bill or expense claim. You open it, check it and submit it."
+    },
+    {
+      "q": "What if the same bill is sent in twice?",
+      "a": "Capture flags it as a possible duplicate, and you have to answer before a draft is made."
+    },
+    {
+      "q": "Can I send a bill without opening the app?",
+      "a": "Yes. Forward the email to your capture address, or send the file in your team's chat platform."
+    }
+  ],
+  "cta": {
+    "title": "Send us a bill and watch it become a draft.",
+    "body": "Start free, or book a demo and we will capture a few of your own bills and receipts together."
+  }
+}

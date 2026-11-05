@@ -1,0 +1,31 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the capture camera page on a phone, holding steady over a fuel receipt, with the last few captures below.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus", "active": true },
+    { "label": "Sales", "icon": "sales" },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Capture",
+  "subtitle": "Photograph a bill or receipt. It is read for you to check later.",
+  "actions": [{ "label": "Photos" }, { "label": "Drive" }],
+  "blocks": [
+    { "type": "attention", "title": "In the camera", "items": [
+      { "tone": "good", "icon": "receipt", "title": "Receipt found: hold steady", "body": "Roadside fuel station · Diesel 35 L · ₦38,500, VAT included." }
+    ] },
+    { "type": "kv", "items": [
+      { "label": "Make this as", "value": "Let Clafina decide" }
+    ] },
+    { "type": "table", "title": "Just captured", "columns": [{ "label": "Document" }, { "label": "Status" }], "rows": [
+      ["Roadside fuel station · ₦38,500 · just now", { "pill": "info", "text": "Reading" }],
+      ["Corner Café · ₦12,400 · yesterday", { "pill": "good", "text": "Draft made" }],
+      ["dark-photo.jpg · too dark to read", { "pill": "warn", "text": "Try again" }]
+    ] }
+  ]
+}

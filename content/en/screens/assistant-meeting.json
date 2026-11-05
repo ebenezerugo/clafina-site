@@ -1,0 +1,54 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: minutes the assistant wrote from a 14-minute voice note of a customer visit, with decisions, next steps and the drafts it made, each tied to a moment in the recording.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search conversations",
+  "nav": [
+    { "label": "Conversations", "items": [
+      { "label": "Overdue invoices and reminders" },
+      { "label": "Visit to Corner Shop Provisions", "badge": "4", "active": true },
+      { "label": "September stock write-offs" }
+    ] }
+  ],
+  "title": "Visit to Corner Shop Provisions",
+  "subtitle": "Friday 16 October · 14 min voice note from the phone · Tayo, Bola and Musa",
+  "actions": [{ "label": "Share" }, { "label": "Copy as minutes", "primary": true }],
+  "blocks": [
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "kv", "title": "Meeting notes", "items": [
+        { "label": "Decision", "value": "Move Corner Shop Provisions to a monthly retainer on 1 November." },
+        { "label": "Decision", "value": "Deliver every Monday and Thursday from the main store." },
+        { "label": "Bola agreed", "value": "Pays ₦300,000 a month, in advance." },
+        { "label": "Tayo agreed", "value": "Holds 40 cartons of powdered milk for them." }
+      ] },
+      { "type": "cards", "columns": 1, "items": [
+        { "title": "Where this came from", "body": "08:41 · Tayo: “Let us confirm the price list in the quotation. I will send it by Wednesday.”" }
+      ] }
+    ] },
+    { "type": "table", "title": "Next steps", "columns": [{ "label": "What" }, { "label": "Who" }, { "label": "By" }, { "label": "I drafted" }], "rows": [
+      ["Send the monthly retainer quotation", { "avatar": "TA", "text": "Tayo" }, "21 Oct", { "pill": "warn", "text": "Quotation · needs you" }],
+      ["Confirm the Monday delivery slot", { "avatar": "MU", "text": "Musa" }, "23 Oct", { "pill": "info", "text": "Task" }],
+      ["Visit again to review the retainer", { "avatar": "TA", "text": "Tayo" }, "29 Nov", { "pill": "info", "text": "Meeting" }]
+    ] },
+    { "type": "attention", "title": "Drafts to check: 4", "items": [
+      {
+        "tone": "warn",
+        "icon": "help",
+        "title": "Quotation: which price list?",
+        "body": "Wholesale is ₦38,500 a carton; the old retainer rate is ₦36,000. From 08:41 in the recording.",
+        "action": "Answer"
+      },
+      {
+        "tone": "info",
+        "icon": "check",
+        "title": "Message: confirm the retainer to Bola",
+        "body": "“Thank you for today. As agreed, the retainer starts on 1 November…” From 11:20 in the recording. Nothing happens until you confirm.",
+        "action": "Confirm"
+      }
+    ] }
+  ]
+}
