@@ -8,6 +8,7 @@ import { localeEnabled } from '@/config/switches';
 import { fontClassFor } from '@/theme/fonts';
 import { Header } from '@/components/header/Header';
 import { SkipLink } from '@/components/SkipLink';
+import { Footer } from '@/components/footer/Footer';
 
 export const dynamicParams = false;
 
@@ -27,6 +28,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <SkipLink label={String((messages as { nav: { skip: string } }).nav.skip)} />
           <Header locale={locale} />
           <div id="main" tabIndex={-1}>{children}</div>
+          <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>
