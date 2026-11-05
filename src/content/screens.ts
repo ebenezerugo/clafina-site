@@ -9,7 +9,7 @@ const attention = z.object({ tone, icon, title: z.string(), body: z.string(), ac
 
 export const SalesHomeScreen = z.object({
   ...base, org, nav, goTo: z.string(), search: z.string(), title: z.string(), subtitle: z.string(), newQuote: z.string(), newInvoice: z.string(),
-  pipelineTitle: z.string(), pipeline: z.array(z.object({ label: z.string(), amount: z.number().nullable(), note: z.string() })),
+  pipelineTitle: z.string(), pipeline: z.array(z.object({ label: z.string(), amount: z.number(), note: z.string() })),
   attentionTitle: z.string(), attention: z.array(attention),
 });
 

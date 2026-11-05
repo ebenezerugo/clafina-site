@@ -18,7 +18,7 @@ export function SalesHome({ locale }: { locale: Locale }) {
             {c.pipeline.map((step, i) => (
               <div key={step.label} className="s-card" style={{ background: i === 3 ? 'var(--s-chip)' : undefined }}>
                 <span className="s-sub" style={{ fontWeight: 600 }}>{i + 1} · {step.label}</span>
-                <span className="s-stat-value" style={{ fontSize: 20 }}>{step.amount === null ? '—' : m(step.amount)}</span>
+                <span className="s-stat-value" style={{ fontSize: 20 }}>{m(step.amount)}</span>
                 <span className="s-sub">{step.note}</span>
               </div>
             ))}
