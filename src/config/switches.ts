@@ -40,6 +40,9 @@ export const SWITCHES = {
     features: on('Features the product docs marked Not yet, built before go-live (spec Appendix A).'),
     ...(Object.fromEntries(prelaunchAreas.map((id) => [id, on(`Pre-launch features on ${id}.`)])) as Keyed<PrelaunchArea>),
   },
+  pricing: {
+    plans: on('Plans and prices on Pricing, Compare and Home. Proposed tiers from the PRD (13 Oct), not final; Nigeria prices and limits are samples.', { sample: true }),
+  },
   pages: Object.fromEntries(ROUTES.map((r) => [r.id, on(`The ${r.id} page.`)])) as Keyed<RouteId>,
   sections: {} as Record<string, Switch>,
   languages: Object.fromEntries(LOCALES.map((l) => [l.code, { on: true, indexed: true, note: `${l.englishName}.` }])) as Keyed<Locale, LanguageSwitch>,
@@ -91,7 +94,7 @@ export function localeIndexed(code: Locale): boolean {
   return s.on && s.indexed && localeInfo(code).status === 'reviewed';
 }
 
-const NEEDS_CONFIRMATION = new Set(['claims', 'prelaunch']);
+const NEEDS_CONFIRMATION = new Set(['claims', 'prelaunch', 'pricing']);
 
 /** Reasons a production build must not ship with the switches as stored. */
 export function productionProblems(): string[] {
