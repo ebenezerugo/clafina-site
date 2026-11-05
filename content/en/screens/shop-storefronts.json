@@ -19,7 +19,7 @@
     { "type": "table", "columns": [{ "label": "Storefront" }, { "label": "Status" }, { "label": "Last published" }, { "label": "Changes waiting" }, { "label": "Sales, 30 days", "numeric": true }], "rows": [
       [{ "avatar": "BH", "text": "Bright Harbour shop · shop.brightharbour.example" }, { "pill": "good", "text": "Live" }, "Fri 16 Oct · v14", "5, 1 awaiting approval", { "money": 4820000 }],
       [{ "avatar": "BT", "text": "Bright Harbour Trade · trade.brightharbour.example" }, { "pill": "good", "text": "Live" }, "Wed 14 Oct · v8", "3 changes", { "money": 86400000 }],
-      [{ "avatar": "BE", "text": "Harbour Electrics · electrics.brightharbour.example" }, { "pill": "neutral", "text": "Draft" }, "Never published", "31 changes in v1", "—"]
+      [{ "avatar": "BE", "text": "Harbour Electrics · electrics.brightharbour.example" }, { "pill": "neutral", "text": "Draft" }, "Never published", "31 changes in v1", "Not live yet"]
     ] },
     { "type": "attention", "title": "Needs attention", "items": [
       { "tone": "bad", "icon": "alert", "title": "1 error blocks v9 of Bright Harbour Trade", "body": "An image has no description. Fix it before the release can be approved.", "action": "Open publishing" },

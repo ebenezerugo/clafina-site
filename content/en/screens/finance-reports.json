@@ -32,7 +32,7 @@
       [{ "strong": "Gross profit" }, { "money": 4440000 }, { "money": 3930000 }, "+13.0%"],
       ["Salaries and wages", { "money": 1350000 }, { "money": 1290000 }, "+4.7%"],
       ["Utilities", { "money": 212000 }, { "money": 196000 }, "+8.2%"],
-      ["Rent", { "pill": "warn", "text": "Waiting for approval" }, "—", "—"],
+      ["Rent", { "pill": "warn", "text": "Waiting for approval" }, "Posted at month end", "Not comparable"],
       ["General expenses", { "money": 563200 }, { "money": 302900 }, "+85.9%"],
       [{ "strong": "Operating profit" }, { "money": 2314800 }, { "money": 2141100 }, "+8.1%"]
     ] }

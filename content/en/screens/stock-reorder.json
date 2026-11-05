@@ -28,7 +28,7 @@
       ["Semolina 1kg · Main store · class B", "18", "min 10 · safety 15 · reorder 20", { "pill": "warn", "text": "At the reorder point" }, "4 days", "52"],
       ["Granulated sugar 50kg · Main store · class A", "22", "min 10 · safety 18 · reorder 25", { "pill": "warn", "text": "At the reorder point" }, "5 days", "40"],
       ["Powdered milk 400g · Main store · class A", "38 (+60 on the way)", "min 20 · safety 30 · reorder 40", { "pill": "warn", "text": "At the reorder point" }, "3 days", "142"],
-      ["Chocolate drink 400g · Main store · class A", "44", "min 15 · safety 22 · reorder 30", { "pill": "good", "text": "Fine" }, "9 days", "—"]
+      ["Chocolate drink 400g · Main store · class A", "44", "min 15 · safety 22 · reorder 30", { "pill": "good", "text": "Fine" }, "9 days", "Not needed"]
     ] },
     { "type": "attention", "title": "How it is counted", "items": [
       { "tone": "info", "icon": "clock", "title": "Stock on its way is counted, not available", "body": "Stock moving between places shows against its levels, but cannot be sold until it arrives.", "action": "See transfers" }

@@ -34,10 +34,10 @@
       ["RRH-Sept-invoice.pdf · email", "Ring Road Haulage · RRH-2210", "High · 1 to check", { "pill": "warn", "text": "Ready to review" }, { "money": 1450000 }],
       ["IMG_4417.jpg · camera", "Roadside fuel station · 004417", "Medium · 3 to check", { "pill": "warn", "text": "Ready to review" }, { "money": 38500 }],
       ["Valley-credit-note.pdf · Drive", "Green Valley Mills · CN-0311", "High", { "pill": "bad", "text": "Possible duplicate" }, { "money": 92000 }],
-      ["scan0042.pdf · upload", "—", "—", { "pill": "info", "text": "Reading" }, "—"],
+      ["scan0042.pdf · upload", "Being read", "Being read", { "pill": "info", "text": "Reading" }, "Being read"],
       ["Northgate-Sept.pdf · email", "Northgate Power · NP-88213", "High · nothing to check", { "pill": "good", "text": "Draft made" }, { "money": 180000 }],
       ["lunch-receipt.jpg · chat", "Corner Café · 7731", "High · nothing to check", { "pill": "good", "text": "Draft made" }, { "money": 12400 }],
-      ["dark-photo.jpg · camera", "Too dark to read. Try again with the light on.", "—", { "pill": "neutral", "text": "Could not be read" }, "—"]
+      ["dark-photo.jpg · camera", "Too dark to read. Try again with the light on.", "None", { "pill": "neutral", "text": "Could not be read" }, "Not read"]
     ] }
   ]
 }
