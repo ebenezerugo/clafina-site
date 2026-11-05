@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import type { Locale } from '@/config/locales';
+import type { Locale } from '../config/locales';
 import type en from '../../messages/en.json';
 
 export type Messages = typeof en;
