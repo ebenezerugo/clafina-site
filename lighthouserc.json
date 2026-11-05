@@ -7,7 +7,8 @@
         "http://127.0.0.1:4311/en/",
         "http://127.0.0.1:4311/ar/",
         "http://127.0.0.1:4311/en/platform/",
-        "http://127.0.0.1:4311/en/pricing/"
+        "http://127.0.0.1:4311/en/pricing/",
+        "http://127.0.0.1:4311/en/product/pos/"
       ],
       "numberOfRuns": 3,
       "settings": {
@@ -66,7 +67,7 @@
           "aggregationMethod": "median-run"
         },
         {
-          "matchingUrlPattern": "/en/(platform|pricing)/$",
+          "matchingUrlPattern": "/en/(platform|pricing|product/pos)/$",
           "aggregationMethod": "median-run",
           "assertions": {
             "categories:performance": [
