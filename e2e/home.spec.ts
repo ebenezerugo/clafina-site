@@ -50,6 +50,8 @@ test('home looks the same', async ({ page }) => {
   for (const l of ['en', 'ar']) {
     await page.goto(`/${l}/`);
     await page.evaluate(() => document.fonts.ready);
+    // Printed so a height difference between machines can be traced to one section.
+    console.log(`section heights ${l}:`, JSON.stringify(await page.evaluate(() => [...document.querySelectorAll('header, main > section, footer')].map((s) => `${s.id || s.tagName}=${Math.round(s.getBoundingClientRect().height)}`))));
     await expect(page).toHaveScreenshot(`home-${l}.png`, { fullPage: true });
   }
 });
