@@ -1,0 +1,315 @@
+{
+  "kind": "help-module",
+  "module": "drive",
+  "sources": [
+    "commerce-api/documentation/DRIVE.md",
+    "commerce-api/documentation/MEET.md"
+  ],
+  "intro": "Where the business keeps its files: your own drive, drives shared by a team, and the files that sit on invoices, staff records and other records. Share them with colleagues or with people outside, ask for files and signatures, and make documents from templates.",
+  "start": [
+    "Open My Drive and upload a few files or a folder, so you see how files and their details are kept.",
+    "Make a shared drive for a team, such as Finance, and add its members.",
+    "Share a file with a colleague, then try a link for someone outside.",
+    "Ask a supplier or a customer for a document with a file request."
+  ],
+  "articles": [
+    {
+      "slug": "upload-files",
+      "title": "Upload files and folders",
+      "summary": "Send files, or a whole folder, into a drive. Each one is checked before it is ready, and its details are kept.",
+      "page": "/drive",
+      "steps": [
+        {
+          "lead": "Open the drive and the folder",
+          "rest": "where the files belong. New folder makes one here."
+        },
+        {
+          "lead": "Press Upload",
+          "rest": "and choose Upload files or Upload a folder. You can also drop files onto the page."
+        },
+        {
+          "lead": "Watch them go.",
+          "rest": "Each file shows its progress, and you can keep working in the app while they upload."
+        },
+        {
+          "lead": "Open a file's Actions",
+          "rest": "to preview it, see its details and versions, star it, move it or make a copy."
+        }
+      ],
+      "tips": [
+        "Upload a new version keeps the history: any earlier version can be restored.",
+        "Check out keeps others from changing a file while you work on it. Let go when you are done.",
+        "A file is said to be being checked until its scan is done, and blocked if something harmful was found in it."
+      ],
+      "related": [
+        "share-with-colleagues",
+        "restore-from-the-trash"
+      ]
+    },
+    {
+      "slug": "share-with-colleagues",
+      "title": "Share a file or folder with colleagues",
+      "summary": "Give a person, a group, a role, a place or everyone access, as a role you choose, for as long as you choose.",
+      "page": "/drive/shared-by-me",
+      "steps": [
+        {
+          "lead": "Open the Actions of the file or folder",
+          "rest": "and press Share."
+        },
+        {
+          "lead": "Choose who to share with:",
+          "rest": "a person, a group, everyone with a role, everyone at a place, or everyone in the organisation."
+        },
+        {
+          "lead": "Find them and choose the role",
+          "rest": "they have, such as viewer or editor."
+        },
+        {
+          "lead": "Set From and Until if it is for a while,",
+          "rest": "and tick Here only, not what is inside, to keep it to this folder alone."
+        },
+        {
+          "lead": "Press Share.",
+          "rest": "They are told it was shared with them, and it shows under their Shared with me."
+        }
+      ],
+      "tips": [
+        "Access given on a folder above is changed where it was given.",
+        "Shared by me lists everything you shared, and lets you stop each share."
+      ],
+      "related": [
+        "share-outside-with-a-link",
+        "make-a-shared-drive"
+      ]
+    },
+    {
+      "slug": "share-outside-with-a-link",
+      "title": "Share a file with someone outside the business",
+      "summary": "Make a link to a file or a folder, choose who may open it and for how long, and see each time it was opened.",
+      "page": "/drive/links",
+      "steps": [
+        {
+          "lead": "Open the Actions of the file or folder",
+          "rest": "and press Share outside."
+        },
+        {
+          "lead": "Press New link",
+          "rest": "and give it a name, such as For the auditors."
+        },
+        {
+          "lead": "Choose who may open it:",
+          "rest": "anyone with the link, anyone with the link and its passcode, or only the people you name, who prove their address with an emailed code."
+        },
+        {
+          "lead": "Choose what they may do",
+          "rest": "(view only, or download too), how many downloads, and when it opens and stops."
+        },
+        {
+          "lead": "Press Make the link.",
+          "rest": "Copy the link, and the passcode if there is one. The passcode is shown once, so give it to them separately."
+        }
+      ],
+      "after": "Shared links lists every link you gave out. Each can be suspended, changed or revoked, and its access log says who opened it and when.",
+      "tips": [
+        "A link to a folder reaches what is inside it, and nothing else.",
+        "You are told when someone opens your link, as your organisation's settings say."
+      ],
+      "related": [
+        "share-with-colleagues",
+        "ask-for-files"
+      ]
+    },
+    {
+      "slug": "ask-for-files",
+      "title": "Ask someone outside for documents",
+      "summary": "Send a file request: each person gets their own link to upload what you asked for, and is reminded until they do.",
+      "page": "/drive/requests",
+      "steps": [
+        {
+          "lead": "Press New request",
+          "rest": "on File requests, or Ask for files in the folder they should land in."
+        },
+        {
+          "lead": "Say what you are asking for,",
+          "rest": "with guidance if it helps, and choose where the files land."
+        },
+        {
+          "lead": "Name each document you need.",
+          "rest": "Say if it is required, which file types, how many files and how large. Ask for something else adds another."
+        },
+        {
+          "lead": "Add the people you are asking,",
+          "rest": "by email. Ask someone else adds another."
+        },
+        {
+          "lead": "Set the due date",
+          "rest": "and tick the reminders, and the emailed code if they must prove their address first."
+        },
+        {
+          "lead": "Press Send.",
+          "rest": "Each person is emailed a link of their own. Save as a draft keeps it to send later."
+        }
+      ],
+      "after": "Open the request to see what each person sent. Accept a file, or Turn back with a note, which they are emailed.",
+      "tips": [
+        "Remind those still to send reminds only the people who have not sent everything, at most once a day.",
+        "Files sent to you are checked for harmful content like any upload, and stay where they landed in Drive."
+      ],
+      "related": [
+        "share-outside-with-a-link"
+      ]
+    },
+    {
+      "slug": "ask-for-signatures",
+      "title": "Send a document to be signed",
+      "summary": "Choose the file and who signs, in order or all at once, place the signatures and send it. People outside need no account.",
+      "page": "/drive/signatures",
+      "steps": [
+        {
+          "lead": "Press Ask for a signature",
+          "rest": "on Signatures, and find the file: a PDF, or a Word, Excel or PowerPoint file."
+        },
+        {
+          "lead": "Add who signs:",
+          "rest": "a member by name, or someone outside by name and email."
+        },
+        {
+          "lead": "Choose the order:",
+          "rest": "one after another as listed, or all at once. Set how long it waits and how often it reminds."
+        },
+        {
+          "lead": "Press Next: place the signatures.",
+          "rest": "Put each signer's signature where it belongs, or Place a signature and date for each."
+        },
+        {
+          "lead": "Press Send for signature.",
+          "rest": "Only those whose turn it is are asked. Nothing is sent until you press it."
+        }
+      ],
+      "after": "Signatures shows each request as out for signature, a draft, signed, or declined, cancelled or expired, with how many have signed.",
+      "related": [
+        "make-a-document-from-a-template"
+      ]
+    },
+    {
+      "slug": "make-a-document-from-a-template",
+      "title": "Make a document from a template",
+      "summary": "Fill a letter, certificate or notice from a customer, a member of staff or another record, and file it in Drive.",
+      "page": "/drive/templates",
+      "steps": [
+        {
+          "lead": "Open the template's Actions",
+          "rest": "on Drive templates, and press Generate."
+        },
+        {
+          "lead": "Find the record it is filled from,",
+          "rest": "such as a customer or an invoice, or type what it asks for."
+        },
+        {
+          "lead": "Choose Make it as and Put it in:",
+          "rest": "the kind of file, and the folder it is filed in."
+        },
+        {
+          "lead": "Tick Ask for it to be signed once it is made",
+          "rest": "if it needs signatures, and say who signs."
+        },
+        {
+          "lead": "Press Preview,",
+          "rest": "then Generate. Choose several records to make one file for each."
+        }
+      ],
+      "tips": [
+        "Those who write templates make them with New template. A template is retired, never deleted, and every change is kept as a version."
+      ],
+      "related": [
+        "ask-for-signatures"
+      ]
+    },
+    {
+      "slug": "make-a-shared-drive",
+      "title": "Make a drive for a team",
+      "summary": "A shared drive belongs to the team, not to one person. Give it members, and their files stay when someone leaves.",
+      "page": "/drive/shared",
+      "steps": [
+        {
+          "lead": "Press New shared drive",
+          "rest": "on Shared drives."
+        },
+        {
+          "lead": "Give it a name",
+          "rest": "and say what it is for."
+        },
+        {
+          "lead": "Press Make the shared drive.",
+          "rest": "It shows under Drives you can open."
+        },
+        {
+          "lead": "Open its menu and press Members",
+          "rest": "to give people, groups or roles access to it."
+        }
+      ],
+      "tips": [
+        "For a team or a project with its own drives, members and discussion, press New workspace. An archived workspace can still be read, but not changed."
+      ],
+      "related": [
+        "share-with-colleagues"
+      ]
+    },
+    {
+      "slug": "restore-from-the-trash",
+      "title": "Get back a file you deleted",
+      "summary": "Files and folders put in the trash wait there for a while. Restore them, or remove them for good.",
+      "page": "/drive/trash",
+      "steps": [
+        {
+          "lead": "Open Trash.",
+          "rest": "It shows what you put there, or a drive's trash if you choose one, with when each goes for good."
+        },
+        {
+          "lead": "Open the item's Actions",
+          "rest": "and press Restore. It goes back to its folder, or to the top of the drive if its folder is gone."
+        }
+      ],
+      "tips": [
+        "A folder comes back with everything that was in it.",
+        "Remove for good is only for owners and managers of the file, and cannot be undone.",
+        "The trash empties itself after the number of days your organisation chose."
+      ],
+      "related": [
+        "upload-files"
+      ]
+    },
+    {
+      "slug": "file-documents-sent-by-email",
+      "title": "Turn emailed documents into files",
+      "summary": "Give Drive an email address. Attachments sent to it land in the folder you chose, or wait for someone to file them.",
+      "page": "/drive/inbox",
+      "steps": [
+        {
+          "lead": "Open the Inboxes tab",
+          "rest": "on Drive inbox and press New inbox."
+        },
+        {
+          "lead": "Give it a name and an address,",
+          "rest": "and choose where the mail comes from: one of your email channels, or forwarded to the app."
+        },
+        {
+          "lead": "Choose where its files land,",
+          "rest": "who may send to it, and who is told when something waits."
+        },
+        {
+          "lead": "Press Make the inbox.",
+          "rest": "Mail sent to the address is listed under Waiting."
+        },
+        {
+          "lead": "Open a message that waits",
+          "rest": "and press File them, after choosing the folder."
+        }
+      ],
+      "tips": [
+        "Files are saved with the rights of whoever saved the inbox.",
+        "A message can take a minute or two to show after it is sent."
+      ]
+    }
+  ]
+}

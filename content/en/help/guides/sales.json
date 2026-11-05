@@ -1,0 +1,265 @@
+{
+  "kind": "help-module",
+  "module": "sales",
+  "sources": [
+    "commerce-api/documentation/SALES.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Everything between a customer asking for a price and the money reaching your bank: quotations, orders, delivery, invoices and receipts. Every document starts as a draft you can change; after that, you cancel or void it instead.",
+  "start": [
+    "Check your taxes in Sell › Sales › Tax, so invoices charge them correctly.",
+    "Set your discount policies, so a discount past your limit waits for an approver.",
+    "Make your first invoice, submit it and post it. The customer then owes it.",
+    "Record the payment when it comes in. The invoice shows as paid."
+  ],
+  "articles": [
+    {
+      "slug": "make-a-quotation",
+      "title": "Make a quotation and turn it into an order",
+      "summary": "Offer a price, send it, and when the customer accepts, make the sales order from it in one step.",
+      "page": "/sales/quotations",
+      "steps": [
+        {
+          "lead": "Press New",
+          "rest": "on Quotations."
+        },
+        {
+          "lead": "Choose the customer",
+          "rest": "and where you sell from, then add the items. Prices come from the price book for that location."
+        },
+        {
+          "lead": "Press Submit.",
+          "rest": "With an approval policy, it waits for an approver; with none, it is approved at once."
+        },
+        {
+          "lead": "Send it to the customer,",
+          "rest": "or share it as a link or PDF. It shows as sent."
+        },
+        {
+          "lead": "Mark what the customer said:",
+          "rest": "accepted or declined."
+        },
+        {
+          "lead": "Press Make a sales order",
+          "rest": "on an accepted quotation. The order opens, with the same lines and prices."
+        }
+      ],
+      "tips": [
+        "A quotation can only be edited while it is a draft.",
+        "Only quotations with product lines can become a sales order."
+      ],
+      "related": [
+        "fulfil-and-invoice-an-order",
+        "send-an-invoice"
+      ]
+    },
+    {
+      "slug": "fulfil-and-invoice-an-order",
+      "title": "Fulfil a sales order and invoice it",
+      "summary": "Confirm the order, let the goods go out, then make the invoice at the order's prices.",
+      "page": "/sales/orders",
+      "steps": [
+        {
+          "lead": "Open the sales order",
+          "rest": "and press Confirm once it is approved."
+        },
+        {
+          "lead": "Press Fulfil",
+          "rest": "when the goods leave. They come out of stock, unless a waybill dispatches the order."
+        },
+        {
+          "lead": "Press Invoice it.",
+          "rest": "A draft invoice opens at the order's prices, due by its payment terms."
+        },
+        {
+          "lead": "Check the invoice,",
+          "rest": "then submit and post it."
+        }
+      ],
+      "related": [
+        "send-goods-with-a-waybill",
+        "send-an-invoice"
+      ]
+    },
+    {
+      "slug": "send-goods-with-a-waybill",
+      "title": "Send goods with a waybill",
+      "summary": "Make the delivery note for what is going out, say who carries it, and mark when it arrives.",
+      "page": "/sales/waybills",
+      "steps": [
+        {
+          "lead": "Open Waybills",
+          "rest": "and make a waybill for the order going out. It fills in what the order still has to deliver."
+        },
+        {
+          "lead": "Say who carries it,",
+          "rest": "with the vehicle and driver where your settings ask for them, and check the lines."
+        },
+        {
+          "lead": "Dispatch it.",
+          "rest": "It is in transit, and its goods leave stock as it goes."
+        },
+        {
+          "lead": "Mark it delivered",
+          "rest": "when it arrives, and name who signed for it."
+        }
+      ],
+      "related": [
+        "fulfil-and-invoice-an-order"
+      ],
+      "tips": [
+        "If the customer says something is wrong, mark the waybill disputed, then settle it."
+      ]
+    },
+    {
+      "slug": "send-an-invoice",
+      "title": "Send an invoice and get paid",
+      "summary": "Make the invoice, post it and send it: the customer gets the PDF and a way to pay, and you see when they pay.",
+      "page": "/sales/invoices",
+      "steps": [
+        {
+          "lead": "Press New invoice",
+          "rest": "at the top right of Invoices."
+        },
+        {
+          "lead": "Choose a customer.",
+          "rest": "Their email and terms fill in."
+        },
+        {
+          "lead": "Add what you sold.",
+          "rest": "VAT is worked out for you."
+        },
+        {
+          "lead": "Submit and post it.",
+          "rest": "With an approval policy, it waits for an approver first. Once posted, the customer owes it."
+        },
+        {
+          "lead": "Press Send invoice.",
+          "rest": "They get a PDF and a pay link."
+        }
+      ],
+      "tips": [
+        "Totals are worked out from the lines: quantity times price, less the discount, plus the tax.",
+        "An invoice with a payment on it cannot be voided. Void the receipts that paid it first."
+      ],
+      "related": [
+        "record-a-payment",
+        "ask-for-payment-before-you-supply"
+      ]
+    },
+    {
+      "slug": "record-a-payment",
+      "title": "Record a payment against an invoice",
+      "summary": "Press Record payment on the invoice, enter the amount and how it came in, and still owed goes down.",
+      "page": "/sales/receipts",
+      "steps": [
+        {
+          "lead": "Open the invoice",
+          "rest": "from the list."
+        },
+        {
+          "lead": "Press Record payment.",
+          "rest": "Enter the amount and how it came in. A receipt never applies more than it brought in."
+        },
+        {
+          "lead": "Press Save.",
+          "rest": "Still owed goes down; at nothing the invoice is Paid."
+        }
+      ],
+      "tips": [
+        "Money a receipt does not apply is held as credit on the customer's account, where your settings allow it.",
+        "Voiding a receipt makes each invoice it paid owed again."
+      ],
+      "related": [
+        "send-an-invoice"
+      ]
+    },
+    {
+      "slug": "ask-for-payment-before-you-supply",
+      "title": "Ask for payment before you supply",
+      "summary": "Send a proforma invoice, take the payment, and supply once it is in.",
+      "page": "/sales/proformas",
+      "steps": [
+        {
+          "lead": "Press New",
+          "rest": "on Proforma invoices, choose the customer and add the items."
+        },
+        {
+          "lead": "Submit it and send it",
+          "rest": "to the customer."
+        },
+        {
+          "lead": "Record the payment",
+          "rest": "when it comes in, then supply the goods."
+        }
+      ],
+      "related": [
+        "send-an-invoice"
+      ]
+    },
+    {
+      "slug": "set-up-a-recurring-invoice",
+      "title": "Invoice the same customer every month",
+      "summary": "A schedule raises an invoice to the customer each period, posted and emailed with its pay link.",
+      "page": "/sales/recurring-invoices",
+      "steps": [
+        {
+          "lead": "Open Recurring invoices",
+          "rest": "and press New."
+        },
+        {
+          "lead": "Choose the customer, the items",
+          "rest": "and how often it repeats, and whether you bill in advance or in arrears."
+        },
+        {
+          "lead": "Submit it for approval.",
+          "rest": "Once approved, it raises the invoice on each of its dates. You can pause it and start it again."
+        }
+      ],
+      "related": [
+        "send-an-invoice"
+      ]
+    },
+    {
+      "slug": "give-a-refund",
+      "title": "Give money back to a customer",
+      "summary": "Pay money back out of credit the customer holds, with the reason, so the books and the customer's account agree.",
+      "page": "/sales/refunds",
+      "steps": [
+        {
+          "lead": "Open Refunds",
+          "rest": "and press New."
+        },
+        {
+          "lead": "Choose the customer",
+          "rest": "and the credit it comes from, such as a payment that was never applied to an invoice."
+        },
+        {
+          "lead": "Choose the account the money is paid from,",
+          "rest": "the amount and the reason, then post it."
+        }
+      ]
+    },
+    {
+      "slug": "limit-discounts",
+      "title": "Set how far a discount may go",
+      "summary": "A discount policy decides how much staff may give, and sends anything past it to an approver.",
+      "page": "/sales/discount-policies",
+      "steps": [
+        {
+          "lead": "Open Discount policies",
+          "rest": "and press New."
+        },
+        {
+          "lead": "Set the limit",
+          "rest": "and who approves a discount past it."
+        },
+        {
+          "lead": "Save it.",
+          "rest": "A document with a bigger discount waits for that approver."
+        }
+      ]
+    }
+  ]
+}

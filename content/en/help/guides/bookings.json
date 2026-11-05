@@ -1,0 +1,164 @@
+{
+  "kind": "help-module",
+  "module": "bookings",
+  "sources": [
+    "commerce-api/documentation/BOOKINGS.md",
+    "commerce-web/src/app/features/bookings/presentation"
+  ],
+  "intro": "One place for everything that is booked: rooms, tables, a stylist's chair, an appointment, a machine or a vehicle. Bookings is not a pack of its own: it is the booking engine the restaurant, accommodation and other packs share, and it never lets the same thing be booked twice.",
+  "start": [
+    "Add what can be booked in Rooms, tables and staff, grouped into room types, areas or teams.",
+    "Make the offers guests book in Offers and rates, with how long each lasts and what it costs.",
+    "Set your opening hours and the days you are closed in Hours and closures.",
+    "Check Booking rules: cancelling, no-shows, what guests may change themselves and the waiting list.",
+    "Make a booking page and share its link, so guests can book without an account."
+  ],
+  "articles": [
+    {
+      "slug": "add-what-can-be-booked",
+      "title": "Add the rooms, tables and staff that can be booked",
+      "summary": "A resource is anything a booking uses: a room, a table, a person, a vehicle. Group them into room types, dining areas or teams.",
+      "page": "/bookings/setup/resources",
+      "steps": [
+        { "lead": "Press Add", "rest": "beside Room types, areas and teams, name the group and choose what it is, such as a room type or a dining area. Press Save." },
+        { "lead": "Press Add", "rest": "above the resources to add one: its name, kind and the group it belongs to." },
+        { "lead": "Say how many it takes,", "rest": "and for a table the fewest it is laid for and the tables it can be joined to. Press Save." }
+      ],
+      "tips": [
+        "Retire a resource rather than delete it. One with bookings still to come cannot be retired.",
+        "Once a resource is saved, choose Edit from its Actions to add photographs and papers."
+      ],
+      "related": ["make-an-offer"]
+    },
+    {
+      "slug": "make-an-offer",
+      "title": "Make something guests can book",
+      "summary": "An offer is what a guest books: a service, a table, a stay or a hire, drawn from your resources, with its length and price.",
+      "page": "/bookings/setup/offers",
+      "before": ["The resources it draws on, from Rooms, tables and staff."],
+      "steps": [
+        { "lead": "Press Add an offer", "rest": "on Offers and rates." },
+        { "lead": "Say what it is:", "rest": "its kind, a code, the name guests see, and the group it is drawn from." },
+        { "lead": "Say when and how long:", "rest": "check-in and check-out for a stay, or start times, the longest it lasts and buffers for a timed offer. Add the least notice and how far ahead it can be booked." },
+        { "lead": "Say what it costs:", "rest": "priced from a catalogue item's price book, or its own rate. Press Save." },
+        { "lead": "Press Add a plan", "rest": "under Rate plans move the rate, to change the rate on certain days or in a season." }
+      ],
+      "tips": [
+        "Plans never stack: the highest priority that applies prices the booking.",
+        "A price from the price book means a customer's own prices and promotions apply."
+      ],
+      "related": ["add-what-can-be-booked", "set-opening-hours"]
+    },
+    {
+      "slug": "set-opening-hours",
+      "title": "Set opening hours and closures",
+      "summary": "Say when you take bookings each day of the week, and add the days you are closed or open on other hours.",
+      "page": "/bookings/setup/hours",
+      "steps": [
+        { "lead": "Choose the time zone", "rest": "and set the hours for each day. A day with no hours is closed." },
+        { "lead": "Press Add a break-split", "rest": "for a day with a break in it, then Save the hours." },
+        { "lead": "Under Closures and special days, enter the dates,", "rest": "whether you are closed all day or open on your own hours, for the whole place or one resource, and why. Press Add." }
+      ],
+      "tips": [
+        "A closure says how many reservations it reaches. It does not move them, so contact those guests.",
+        "Stays ignore opening hours, as a room is let all night, but not closures."
+      ]
+    },
+    {
+      "slug": "take-a-reservation",
+      "title": "Take a reservation",
+      "summary": "Choose what is booked and when, and who it is for. The best free room, table or person is chosen for you unless you name one.",
+      "page": "/bookings/reservations",
+      "steps": [
+        { "lead": "Press New reservation", "rest": "on Reservations, the Timeline or the Day sheet." },
+        { "lead": "Choose what is booked", "rest": "and the guests, then the dates or the day and time." },
+        { "lead": "Leave Give it to on The best fit,", "rest": "or choose the rooms or resources yourself." },
+        { "lead": "Find the customer", "rest": "or enter their name, email and phone." },
+        { "lead": "Press Reserve.", "rest": "Or tick Hold it for the guest instead of confirming it, and press Hold." }
+      ],
+      "tips": [
+        "If someone books the same time a moment before you, you are told it has just been taken, and nothing is saved.",
+        "A held reservation lapses when its hold runs out, and its room or table is free again."
+      ],
+      "related": ["run-the-day", "change-or-cancel-a-reservation"]
+    },
+    {
+      "slug": "run-the-day",
+      "title": "Run the day at the front desk or host stand",
+      "summary": "The day sheet shows who is coming, here and leaving today, each with the one thing it needs next.",
+      "page": "/bookings/day-sheet",
+      "steps": [
+        { "lead": "Open the Day sheet.", "rest": "Use the arrows or Today to change the day." },
+        { "lead": "Press Confirm", "rest": "on a booking waiting for an answer." },
+        { "lead": "Press Check in, Seat or Arrived", "rest": "when the guest comes, depending on what they booked." },
+        { "lead": "Press Check out or Complete", "rest": "when they leave. Finishing early frees the room or table from that moment." },
+        { "lead": "Choose Mark no-show", "rest": "from Actions for someone who never came, once the grace time in your rules has passed." }
+      ],
+      "related": ["take-a-reservation", "change-or-cancel-a-reservation"]
+    },
+    {
+      "slug": "change-or-cancel-a-reservation",
+      "title": "Move, cancel or invoice a reservation",
+      "summary": "Move a booking to another time or room, cancel it with the fee said first, or make the invoice once it is done.",
+      "page": "/bookings/reservations",
+      "steps": [
+        { "lead": "Open the reservation", "rest": "from the list. Search by guest, email, phone or number." },
+        { "lead": "Press Move or change", "rest": "for another time, dates, party or room, and press Move. If the new time cannot be had, nothing changes." },
+        { "lead": "To cancel, press Cancel…", "rest": "The fee, if any, is shown first. Press Cancel the reservation." },
+        { "lead": "Press Make the invoice", "rest": "on a completed reservation. The invoice fills in from it." }
+      ],
+      "tips": [
+        "On the Timeline you can drag a bar to another time or row. A refusal is said in words and nothing changes.",
+        "Someone allowed to cancel bookings can waive the fee."
+      ],
+      "related": ["take-a-reservation"]
+    },
+    {
+      "slug": "use-the-waiting-list",
+      "title": "Keep a waiting list for when you are full",
+      "summary": "Guests wait for full dates or times. When a place frees up, the first in line is held it for a short time.",
+      "page": "/bookings/waitlist",
+      "steps": [
+        { "lead": "Press Add a guest", "rest": "on Waiting list." },
+        { "lead": "Say what they want", "rest": "and when, with their name, email and phone. Press Add." },
+        { "lead": "When a place frees up,", "rest": "the first in line is held it and told. You can also press Offer a place yourself, in queue order." },
+        { "lead": "Press Skip", "rest": "to pass an offered place to the next in line." }
+      ],
+      "tips": [
+        "A freed place is held for 15 minutes unless your booking rules say otherwise."
+      ],
+      "related": ["set-booking-rules"]
+    },
+    {
+      "slug": "share-a-booking-page",
+      "title": "Let guests book online",
+      "summary": "A booking page is a link guests open without an account, to book, move or cancel their own booking.",
+      "page": "/bookings/setup/pages",
+      "steps": [
+        { "lead": "Press Make a page", "rest": "on Booking pages." },
+        { "lead": "Give it a title,", "rest": "a few words for guests and what they read after booking." },
+        { "lead": "Tick the offers on the page", "rest": "and press Save." },
+        { "lead": "Press Copy the link", "rest": "and share it wherever guests find you." }
+      ],
+      "tips": [
+        "Press Withdraw to stop the link working. Bookings made through it stay.",
+        "Guests are emailed when they book, when it changes and before it starts."
+      ],
+      "related": ["set-booking-rules"]
+    },
+    {
+      "slug": "set-booking-rules",
+      "title": "Set cancellation and no-show fees",
+      "summary": "Booking rules decide when cancelling is free, what a late cancel or no-show costs, what guests may change and how the waiting list works.",
+      "page": "/bookings/setup/rules",
+      "steps": [
+        { "lead": "Open Booking rules", "rest": "and choose Every place or This place." },
+        { "lead": "Set Free cancellation until", "rest": "and the cancellation fee after it." },
+        { "lead": "Set the no-show fee", "rest": "and how long after the start a guest can be marked a no-show." },
+        { "lead": "Say whether guests may move or cancel their own booking,", "rest": "and until when, and whether the waiting list is on." },
+        { "lead": "Press Save.", "rest": "Back to the standard puts a rule back as it was." }
+      ],
+      "related": ["change-or-cancel-a-reservation", "use-the-waiting-list"]
+    }
+  ]
+}

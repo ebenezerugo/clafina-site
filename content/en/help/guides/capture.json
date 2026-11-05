@@ -1,0 +1,124 @@
+{
+  "kind": "help-module",
+  "module": "capture",
+  "sources": [
+    "commerce-api/documentation/COMMERCE_AI.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Capture reads a photo or file of a bill or receipt for you to check, then makes a draft. Nothing is posted until you say so: the draft goes through its own submit and approval like any other.",
+  "start": [
+    "Press New capture and photograph or upload a supplier bill.",
+    "Check what was read beside the original, and make the draft bill.",
+    "Set up the capture address in Settings, so suppliers' emailed bills arrive here by themselves."
+  ],
+  "articles": [
+    {
+      "slug": "capture-a-bill",
+      "title": "Have a bill or receipt read for you",
+      "summary": "Photograph or upload it, check what was read beside the original, then make the draft bill or expense claim.",
+      "page": "/capture",
+      "steps": [
+        {
+          "lead": "Press New capture.",
+          "rest": "On a phone, use Take a photo. Elsewhere, Upload a file, drop a file here or Choose from Drive."
+        },
+        {
+          "lead": "Say what it is:",
+          "rest": "Supplier bill or Expense receipt, or let Clafina decide."
+        },
+        {
+          "lead": "Wait for it to be read.",
+          "rest": "The row shows the step it is at, and you are told when it is ready. You can leave the page."
+        },
+        {
+          "lead": "Press Check on a row that is ready.",
+          "rest": "The original is on the left, with boxes on what was read."
+        },
+        {
+          "lead": "Look at the fields in amber.",
+          "rest": "Each says why it needs a look. Press a box to see its field, and correct anything that is wrong."
+        },
+        {
+          "lead": "Press Make the draft bill",
+          "rest": "or Make the draft expense claim. You open, check and submit the draft from there."
+        }
+      ],
+      "tips": [
+        "The original stays attached to the bill it made, so anyone checking later sees what it came from.",
+        "Your corrections are remembered for your organisation only, so the next bill from that supplier needs fewer.",
+        "Most create forms also have Fill from a document, which fills that form from a file for you to check and save."
+      ],
+      "related": [
+        "when-capture-is-not-sure",
+        "email-bills-in"
+      ]
+    },
+    {
+      "slug": "email-bills-in",
+      "title": "Email bills straight into Capture",
+      "summary": "Make a capture address and forward bills to it. They appear in Capture, read and waiting for you.",
+      "page": "/capture",
+      "before": [
+        "You need permission to manage Capture, and an email channel that reads a mailbox (Communication › Channels)."
+      ],
+      "steps": [
+        {
+          "lead": "Open Settings",
+          "rest": "from the Capture page."
+        },
+        {
+          "lead": "Choose the Mailbox (email channel)",
+          "rest": "that reads your mail. Give an address of your own if you want one."
+        },
+        {
+          "lead": "Press Make the address.",
+          "rest": "Press Copy the address to share it with your team and suppliers."
+        },
+        {
+          "lead": "Forward a bill to it.",
+          "rest": "PDFs and pictures attached are read, and it appears in Capture in about a minute."
+        }
+      ],
+      "tips": [
+        "The address is also shown on an empty Capture page.",
+        "Who may email documents in, and which kinds are drafted without anyone opening them, are in Capture's settings.",
+        "Stop taking mail turns the address off."
+      ],
+      "related": [
+        "capture-a-bill"
+      ]
+    },
+    {
+      "slug": "when-capture-is-not-sure",
+      "title": "When Capture is not sure what a document is",
+      "summary": "Say which form a document is for, deal with a possible copy, or reject what should not be in the books.",
+      "page": "/capture",
+      "steps": [
+        {
+          "lead": "Open the capture.",
+          "rest": "When it was not sure what the document is, it says so and waits for you. The list's filter shows these as Not sorted yet."
+        },
+        {
+          "lead": "Choose the kind of document and press Read it as this.",
+          "rest": "It is read again as that."
+        },
+        {
+          "lead": "Check a warning that it may be a copy.",
+          "rest": "This may already be in the books shows the bill like it. If it is a different one, press This is not a duplicate to go on."
+        },
+        {
+          "lead": "Press Reject the capture",
+          "rest": "if it should not be in the books. Nothing is made from it."
+        }
+      ],
+      "tips": [
+        "A row that Could not be read says what to do next. Try again, or capture a clearer photo.",
+        "Open in its form, filled opens the document's own form with what was read, for you to finish and save."
+      ],
+      "related": [
+        "capture-a-bill"
+      ]
+    }
+  ]
+}

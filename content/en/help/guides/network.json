@@ -1,0 +1,328 @@
+{
+  "kind": "help-module",
+  "module": "network",
+  "sources": [
+    "commerce-api/documentation/TRADING_NETWORK.md"
+  ],
+  "intro": "Trade with the businesses you buy from and sell to, connected to yours. Orders, delivery notes, invoices and payment advice travel between your books and theirs, and you settle up with statements, netting, disputes and returns.",
+  "start": [
+    "Turn the network on and send your documents for verification in Settings › Network. Only verified businesses can be found or connect.",
+    "Connect with a supplier or a customer you trade with, and choose what travels between you.",
+    "Map their product codes to yours in Item maps, so their orders arrive with the right items.",
+    "Send your first purchase order to a connected supplier from its page."
+  ],
+  "articles": [
+    {
+      "slug": "connect-with-a-partner",
+      "title": "Connect with a business you trade with",
+      "summary": "Find a verified business by its network ID or registration number, or swap a code, and connect once both agree.",
+      "page": "/network/connections",
+      "before": [
+        "Your business must have the network turned on and be verified. Connections says so if it is not, with a link to do it."
+      ],
+      "steps": [
+        {
+          "lead": "Press Connect",
+          "rest": "on Connections."
+        },
+        {
+          "lead": "Say what you are to them:",
+          "rest": "the buyer, the seller, or both."
+        },
+        {
+          "lead": "Find the business",
+          "rest": "by its network ID or registration number, and press Find."
+        },
+        {
+          "lead": "Press Ask … to connect,",
+          "rest": "with a note for them if you want. It waits for them to accept."
+        }
+      ],
+      "after": "When they accept, the connection is active and they are named as your customer or supplier. Open the connection to choose what you send and what you accept, under What travels.",
+      "tips": [
+        "Give out a code makes a code or link to hand to them; they choose Use a code. A code is used once.",
+        "A request to you shows first on Connections. Open its menu to Accept or Decline.",
+        "Pause stops documents travelling for a while; only the side that paused can resume. End keeps the history on both sides."
+      ],
+      "related": [
+        "map-their-codes-to-yours",
+        "deal-with-a-received-document"
+      ]
+    },
+    {
+      "slug": "map-their-codes-to-yours",
+      "title": "Match a partner's product codes to yours",
+      "summary": "An item map says which of your products a partner's code means, so their orders arrive with your items on them.",
+      "page": "/network/item-maps",
+      "steps": [
+        {
+          "lead": "Press Add a map",
+          "rest": "on Item maps."
+        },
+        {
+          "lead": "Choose the partner",
+          "rest": "and whether their code is an item code or a barcode."
+        },
+        {
+          "lead": "Type their code",
+          "rest": "and what they call it, then choose your product."
+        },
+        {
+          "lead": "Press Save the map.",
+          "rest": "Their next document with that code arrives with your product on the line."
+        }
+      ],
+      "tips": [
+        "Without a map, lines are matched by barcode, then by item code. A line that matches nothing arrives as a description, flagged for you.",
+        "Retire this map stops it matching. Lines already matched stay as they are."
+      ],
+      "related": [
+        "deal-with-a-received-document"
+      ]
+    },
+    {
+      "slug": "deal-with-a-received-document",
+      "title": "Deal with a document a partner sent you",
+      "summary": "A partner's order arrives as a draft in your own books. Check it, then answer it, and they see your answer.",
+      "page": "/network/received",
+      "steps": [
+        {
+          "lead": "Open the Needs you tab",
+          "rest": "on Received documents."
+        },
+        {
+          "lead": "Open the document.",
+          "rest": "A customer's purchase order arrives as your draft sales order, with its lines matched to your products."
+        },
+        {
+          "lead": "Check the lines,",
+          "rest": "especially any flagged because they match none of your products."
+        },
+        {
+          "lead": "Answer it",
+          "rest": "from the document: answer the order, share a status, or send the delivery note."
+        }
+      ],
+      "tips": [
+        "A later change from the partner arrives as a change request, never written over your draft. Accept or Decline it.",
+        "Set aside moves a document out of Needs you without acting on it.",
+        "Sent documents lists what you sent, with what happened to each. Send again tries one that did not arrive."
+      ],
+      "related": [
+        "map-their-codes-to-yours",
+        "reconcile-a-statement"
+      ]
+    },
+    {
+      "slug": "reconcile-a-statement",
+      "title": "Agree what is owed with a partner",
+      "summary": "Send your ledger for a period and ask for theirs. The two are set side by side, and every difference is named.",
+      "page": "/network/statements",
+      "steps": [
+        {
+          "lead": "Press Reconcile a statement",
+          "rest": "on Statements."
+        },
+        {
+          "lead": "Choose the partner,",
+          "rest": "and which statement: what they owe you, or what you owe them."
+        },
+        {
+          "lead": "Give the first and last day",
+          "rest": "of the period."
+        },
+        {
+          "lead": "Press Send my ledger and ask for theirs.",
+          "rest": "When they answer, the statement shows both closing balances and the difference."
+        },
+        {
+          "lead": "Read the entries.",
+          "rest": "Each is matched, differs, only on one side, in transit or disputed, and together they add up to the difference."
+        }
+      ],
+      "related": [
+        "raise-a-dispute",
+        "net-what-you-owe-each-other"
+      ]
+    },
+    {
+      "slug": "raise-a-dispute",
+      "title": "Dispute a bill from a supplier",
+      "summary": "Tell the supplier what is wrong with a bill that came over the network, and settle it with them.",
+      "page": "/network/disputes",
+      "steps": [
+        {
+          "lead": "Open the bill",
+          "rest": "in your payables."
+        },
+        {
+          "lead": "Press Dispute this bill.",
+          "rest": "Choose what is wrong and tell them in plain words. They read it on their invoice."
+        },
+        {
+          "lead": "Give the amount in dispute",
+          "rest": "if it is not the whole bill."
+        },
+        {
+          "lead": "Press Send the dispute.",
+          "rest": "It shows on Disputes as open until it is resolved or withdrawn."
+        }
+      ],
+      "tips": [
+        "A bill that does not match its order and what was received cannot be submitted or posted. An owner or administrator can let it go forward, with a reason.",
+        "Goods going back are a return: press Send goods back on the receipt, and it shows on Returns."
+      ],
+      "related": [
+        "reconcile-a-statement",
+        "send-payment-advice"
+      ]
+    },
+    {
+      "slug": "send-payment-advice",
+      "title": "Tell a supplier you have paid",
+      "summary": "Send payment advice with a payment, so the supplier knows which invoices it pays without asking.",
+      "page": "/network/remittances",
+      "steps": [
+        {
+          "lead": "Open the payment",
+          "rest": "to the connected supplier."
+        },
+        {
+          "lead": "Press Tell the supplier about this payment.",
+          "rest": "Say which invoices it pays, or the netting whose net amount it pays."
+        },
+        {
+          "lead": "Press Send the payment advice.",
+          "rest": "It shows on Payment advice as sent."
+        }
+      ],
+      "after": "Payment advice from your customers shows on the same page, to allocate to their invoices.",
+      "related": [
+        "net-what-you-owe-each-other"
+      ]
+    },
+    {
+      "slug": "net-what-you-owe-each-other",
+      "title": "Set what you owe a partner against what they owe you",
+      "summary": "Propose a netting: the invoices and bills chosen clear each other, and only the difference is paid.",
+      "page": "/network/nettings",
+      "steps": [
+        {
+          "lead": "Press Propose a netting",
+          "rest": "on Netting, and choose the partner."
+        },
+        {
+          "lead": "Choose the documents issued up to a day,",
+          "rest": "and the currencies to net."
+        },
+        {
+          "lead": "Tick what to include,",
+          "rest": "and read What would be proposed. Offer to pay the net amounts as one payment if you want."
+        },
+        {
+          "lead": "Press Propose to …",
+          "rest": "with the partner's name. They agree to the terms, counter with other terms, or decline."
+        },
+        {
+          "lead": "Press Post my clearing entries",
+          "rest": "once both agree. What is left to pay shows in each currency."
+        }
+      ],
+      "tips": [
+        "Take back my terms frees the documents to be netted again.",
+        "In a group, the centre can call the group into one round."
+      ],
+      "related": [
+        "reconcile-a-statement",
+        "send-payment-advice"
+      ]
+    },
+    {
+      "slug": "share-a-catalogue",
+      "title": "Share a catalogue with your customers",
+      "summary": "Publish your products and prices to chosen customers. They can order from it, and each new version replaces the last.",
+      "page": "/network/catalogues",
+      "steps": [
+        {
+          "lead": "Open Yours",
+          "rest": "on Catalogues and press New catalogue."
+        },
+        {
+          "lead": "Give it a name and choose the kind:",
+          "rest": "a catalogue or a price list, priced from the list or wholesale price, with the dates it holds."
+        },
+        {
+          "lead": "Press Make the catalogue,",
+          "rest": "then add products, or Add every product for sale with a price."
+        },
+        {
+          "lead": "Choose who it is for:",
+          "rest": "add each connected customer under Who it is for."
+        },
+        {
+          "lead": "Press Check before publishing,",
+          "rest": "then Publish. The page lists what was left out, and why."
+        }
+      ],
+      "tips": [
+        "Catalogues from your suppliers are under From your suppliers. Ordering from one makes a draft purchase order, which goes through your own approvals."
+      ],
+      "related": [
+        "answer-a-request-for-quote"
+      ]
+    },
+    {
+      "slug": "answer-a-request-for-quote",
+      "title": "Answer a customer's request for a quote",
+      "summary": "Match what they ask for to your products, price it, and send the quote back over the network.",
+      "page": "/network/quote-requests",
+      "steps": [
+        {
+          "lead": "Open the request",
+          "rest": "on Requests for quote. Those to quote say so."
+        },
+        {
+          "lead": "Press Match it",
+          "rest": "beside each line that is not matched, and add it to the quotation. It is priced from your price book."
+        },
+        {
+          "lead": "Give when you deliver within,",
+          "rest": "if you want to."
+        },
+        {
+          "lead": "Press Send the quote.",
+          "rest": "They see it beside the other quotes they asked for."
+        }
+      ],
+      "tips": [
+        "Will not quote? Say why, then press Decline to quote."
+      ],
+      "related": [
+        "share-a-catalogue"
+      ]
+    },
+    {
+      "slug": "take-a-document-from-a-link",
+      "title": "Bring in documents shared with you before you joined",
+      "summary": "Orders, quotations and invoices sent to your address by link can be taken into your books as drafts.",
+      "page": "/network/from-links",
+      "steps": [
+        {
+          "lead": "Open From your links.",
+          "rest": "Open documents are listed first. History holds closed ones to read."
+        },
+        {
+          "lead": "Press View",
+          "rest": "on a document's menu to read it."
+        },
+        {
+          "lead": "Press Take as a draft.",
+          "rest": "It becomes a draft in your books, under your own rules, for you to check."
+        }
+      ],
+      "tips": [
+        "Set aside leaves a document you do not need."
+      ]
+    }
+  ]
+}

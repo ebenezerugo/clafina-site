@@ -1,0 +1,219 @@
+{
+  "kind": "help-module",
+  "module": "business-insights",
+  "sources": [
+    "commerce-api/documentation/BUSINESS_INTELLIGENCE.md",
+    "commerce-api/documentation/BUSINESS_HEALTH.md",
+    "commerce-web/src/app/features/bi/presentation",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "How the business is doing, read straight from your own books: margins, cash, customers, operations and risk, each number with what it means, what moved it and whether to trust it yet. Nothing here changes your records; it only reads them.",
+  "start": [
+    "Open the Executive summary and choose a period at the top. Each card says what its number means.",
+    "Press How this is worked out on a card you rely on, to see the figures it is made of.",
+    "Set a target on the numbers that matter to you, so a card says when it needs a look.",
+    "Press Customise to keep the cards you read and put the rest away."
+  ],
+  "articles": [
+    {
+      "slug": "read-a-number",
+      "title": "Find out how a number is worked out",
+      "summary": "Every card opens to the figures it is made of, taken from your own records, with a link to the records behind each one.",
+      "page": "/insights/executive",
+      "steps": [
+        {
+          "lead": "Choose the period",
+          "rest": "at the top: this month, last month, the last 3 or 12 months, or this year."
+        },
+        {
+          "lead": "Press How this is worked out",
+          "rest": "under the number. A panel opens beside the card."
+        },
+        {
+          "lead": "Read What goes into it.",
+          "rest": "Each row is a figure the number is made of. A figure you may not see says so, and is never shown."
+        },
+        {
+          "lead": "Press See report",
+          "rest": "on a row to open the records behind it."
+        },
+        {
+          "lead": "Read What moved it and What it assumes,",
+          "rest": "then press Close, or Esc, to go back to the card."
+        }
+      ],
+      "tips": [
+        "Provisional means something it depends on is not in yet, such as a journal entry waiting to be posted. The reason is written under it.",
+        "A forecast is a look ahead, never a fact. The dashed chip says so."
+      ],
+      "related": [
+        "set-a-target",
+        "check-the-figures-agree"
+      ]
+    },
+    {
+      "slug": "set-a-target",
+      "title": "Set a target for a number",
+      "summary": "Say what a number should be at least or at most, and the line to warn from, so its card tells you when it needs a look.",
+      "page": "/insights/executive",
+      "steps": [
+        {
+          "lead": "Open How this is worked out",
+          "rest": "on the card."
+        },
+        {
+          "lead": "Choose At least or At most:",
+          "rest": "a floor the number should stay above, or a ceiling it should stay below."
+        },
+        {
+          "lead": "Enter the target and Warn from.",
+          "rest": "Between the two, the card says Needs a look; past the warning line, Needs action."
+        },
+        {
+          "lead": "Press Save the target.",
+          "rest": "The card shows how far it is from the target today."
+        }
+      ],
+      "tips": [
+        "Only people who manage the alerts of that part of the business can set a target.",
+        "Back to the default removes your target."
+      ],
+      "related": [
+        "read-a-number"
+      ]
+    },
+    {
+      "slug": "customise-a-dashboard",
+      "title": "Choose which cards a dashboard shows",
+      "summary": "Switch cards on and off, drag them into order and size them. Your arrangement is yours; others keep theirs.",
+      "page": "/insights/executive",
+      "steps": [
+        {
+          "lead": "Press Customise",
+          "rest": "at the top of the dashboard."
+        },
+        {
+          "lead": "Switch a card on to add it,",
+          "rest": "or off to put it away. Only numbers you may read are listed, and nothing is deleted."
+        },
+        {
+          "lead": "Drag a card, or use its arrows,",
+          "rest": "to change the order. The size chip sets how wide it is."
+        },
+        {
+          "lead": "Press Save.",
+          "rest": "The page becomes your own arrangement. Back to the default gives you the standard page again."
+        }
+      ],
+      "tips": [
+        "If you may change roles, open Defaults for a role, choose the role and press Set as the role default. People who arranged their own keep theirs."
+      ]
+    },
+    {
+      "slug": "see-when-cash-runs-short",
+      "title": "See where cash is heading over the next 90 days",
+      "summary": "Cash today, three versions of the next 90 days, and the first day any of them falls below the cash you want to keep.",
+      "page": "/insights/cash-flow",
+      "steps": [
+        {
+          "lead": "Open Cash flow.",
+          "rest": "Cash so far shows the balance for each of the last 30 days, from your bank and cash accounts."
+        },
+        {
+          "lead": "Read the three scenarios:",
+          "rest": "base case, optimistic and adverse. The grey band is the range between them."
+        },
+        {
+          "lead": "Look at First shortfall.",
+          "rest": "It is the first day a scenario goes under your minimum, marked by the red dashed line. None means it never does."
+        },
+        {
+          "lead": "Open What the forecast assumes",
+          "rest": "to see what each scenario is built on."
+        },
+        {
+          "lead": "Press Make a forecast now",
+          "rest": "if you changed something today and want to see it. A new one is also made every morning."
+        }
+      ],
+      "tips": [
+        "The forecast is made from what is owed to you, what you owe, and your usual spending. It is an estimate, not a promise."
+      ]
+    },
+    {
+      "slug": "see-profit-by-department",
+      "title": "See profit by department, project or cost centre",
+      "summary": "Cut profit and loss by a tag on your entries, and see what was never given one.",
+      "page": "/insights/profitability",
+      "steps": [
+        {
+          "lead": "Open Profitability",
+          "rest": "and choose the period."
+        },
+        {
+          "lead": "Choose what to cut by:",
+          "rest": "department, project or cost centre."
+        },
+        {
+          "lead": "Read each row:",
+          "rest": "revenue, gross profit, gross margin, running costs and operating profit."
+        },
+        {
+          "lead": "Check Not allocated.",
+          "rest": "It is what was booked without that tag. Tag entries in Finance to make it smaller."
+        }
+      ]
+    },
+    {
+      "slug": "see-what-customers-cost",
+      "title": "See what it costs to win a customer",
+      "summary": "Customers won, spend and cost per customer by channel, and whether they come back, month by month.",
+      "page": "/insights/customer",
+      "steps": [
+        {
+          "lead": "Open Customers and growth.",
+          "rest": "Customers by channel shows new customers, spend and cost per customer for each channel."
+        },
+        {
+          "lead": "Read the spend.",
+          "rest": "It comes from the books first: the bills and expense claims tagged to your campaigns."
+        },
+        {
+          "lead": "Press Record spend",
+          "rest": "only for money that never went through the books. Choose the channel, what it was, when it was spent and the amount, then press Record the spend."
+        },
+        {
+          "lead": "Read Do they come back?",
+          "rest": "Each row is the customers first sold to in a month; each column is the share who bought again that many months later."
+        }
+      ],
+      "tips": [
+        "Spend you record by hand counts toward the channel's cost per customer. It does not change the books.",
+        "Recorded the wrong spend? Open its Actions and choose Take it out of CAC."
+      ]
+    },
+    {
+      "slug": "check-the-figures-agree",
+      "title": "Check the figures agree with the books",
+      "summary": "A badge on each dashboard says whether its figures were checked against the ledger, and what differs when they do not.",
+      "page": "/insights/risk",
+      "steps": [
+        {
+          "lead": "Look at the badge",
+          "rest": "at the top of the dashboard: Agrees with the books, Checking the books, or Does not agree with the books."
+        },
+        {
+          "lead": "Press Why?",
+          "rest": "if it does not agree. It says what differs, and See the accounts opens them."
+        },
+        {
+          "lead": "Press Check again",
+          "rest": "on Risk and compliance once the entries are fixed."
+        }
+      ],
+      "related": [
+        "read-a-number"
+      ]
+    }
+  ]
+}

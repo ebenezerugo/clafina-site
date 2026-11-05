@@ -1,0 +1,120 @@
+{
+  "kind": "help-module",
+  "module": "dashboard",
+  "sources": [
+    "commerce-api/documentation/DASHBOARD.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Your daily summary: what sold today, who owes what, what is waiting for you and where your money went. Each card shows only what your permissions let you read, and you choose which cards you see.",
+  "start": [
+    "Work through Set up your business at the top. It ticks itself off as you go, then goes away.",
+    "Choose a location, if you have more than one, to see the figures for that place.",
+    "Press Customise and switch on the cards you want, in the order you want them.",
+    "Use New sale, Record payment and Add product at the top right for the jobs you do every day."
+  ],
+  "articles": [
+    {
+      "slug": "read-your-day",
+      "title": "Read your day on the dashboard",
+      "summary": "Sales today, cash, what is owed and what is low on stock, for the place you choose, with what needs you first.",
+      "page": "/dashboard",
+      "steps": [
+        {
+          "lead": "Open Dashboard.",
+          "rest": "The cards show today's figures, worked out for the places you may see."
+        },
+        {
+          "lead": "Choose a location",
+          "rest": "if you have more than one, or keep All locations. A card about bank accounts, staff or payroll says Whole organisation, as it belongs to no one place."
+        },
+        {
+          "lead": "Look at Needs your attention first.",
+          "rest": "It lists what wants you today, such as a tax return falling due or customers who are late paying."
+        },
+        {
+          "lead": "Press a figure or a row",
+          "rest": "to open the record behind it, or See all for the full list."
+        }
+      ],
+      "tips": [
+        "The page updates by itself. There is no refresh button: it tells you when it is up to date.",
+        "Money in several currencies is shown in your books' currency, with what is held in each other currency beside it.",
+        "A card that cannot be worked out says so, with Try again. It never pretends there is nothing there."
+      ],
+      "related": [
+        "customise-your-dashboard"
+      ]
+    },
+    {
+      "slug": "customise-your-dashboard",
+      "title": "Choose what shows on your dashboard",
+      "summary": "Show, hide, reorder and resize the cards. Only what you may read is offered.",
+      "page": "/dashboard",
+      "steps": [
+        {
+          "lead": "Press Customise",
+          "rest": "at the top right. The drawer opens on My dashboard."
+        },
+        {
+          "lead": "Switch a card on",
+          "rest": "under What is available to add it. Search the cards, for example for cash or approvals."
+        },
+        {
+          "lead": "Arrange Your page, in order.",
+          "rest": "Drag the cards, or use Move up and Move down. The map shows how the page will sit."
+        },
+        {
+          "lead": "Choose a size",
+          "rest": "for a card where it offers more than one. A chart is never squeezed into a small tile."
+        },
+        {
+          "lead": "Press Save.",
+          "rest": "The page is now your own arrangement."
+        }
+      ],
+      "tips": [
+        "Back to the default puts your page back to your role's default, or the standard page.",
+        "A card added to Clafina later is offered to you, switched off, and never forced onto your page."
+      ],
+      "related": [
+        "set-a-default-for-a-role",
+        "read-your-day"
+      ]
+    },
+    {
+      "slug": "set-a-default-for-a-role",
+      "title": "Set the dashboard a role starts with",
+      "summary": "Give everyone in a role a sensible page until they arrange their own.",
+      "page": "/dashboard",
+      "before": [
+        "You need permission to change roles."
+      ],
+      "steps": [
+        {
+          "lead": "Press Customise",
+          "rest": "and open the Defaults for a role tab."
+        },
+        {
+          "lead": "Choose a role.",
+          "rest": "It opens on the standard page for what that role can read, so you start from something sensible."
+        },
+        {
+          "lead": "Switch cards on or off and arrange them,",
+          "rest": "from every card there is."
+        },
+        {
+          "lead": "Press Save as the default.",
+          "rest": "Members of the role get this page until they arrange their own."
+        }
+      ],
+      "tips": [
+        "Each member still sees only the cards their own permissions allow.",
+        "Back to the standard removes the role's default."
+      ],
+      "related": [
+        "customise-your-dashboard"
+      ]
+    }
+  ]
+}

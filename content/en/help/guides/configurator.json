@@ -1,0 +1,133 @@
+{
+  "kind": "help-module",
+  "module": "configurator",
+  "sources": [
+    "commerce-api/documentation/CONFIGURATOR.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/configurator/presentation"
+  ],
+  "intro": "The product configurator pack, for made-to-order products: set out the options a customer chooses from and the rules between them, then price a configuration and put it on a quotation, with its cost, margin, parts and lead time worked out as you go. Switch the pack on in Organisation › Settings › Industry packs.",
+  "start": [
+    "Turn the product configurator pack on in Organisation › Settings › Industry packs.",
+    "Make a product configurable on Configurable products, with its base price, cost and lead time.",
+    "Add its options, values and rules, and check them with Try it.",
+    "Publish the product, then configure it for a customer and put it on a quotation."
+  ],
+  "articles": [
+    {
+      "slug": "make-a-product-configurable",
+      "title": "Make a product configurable",
+      "summary": "Choose the product it sells as, set its base price, cost and lead time, add the options a customer picks from, then publish it.",
+      "page": "/configurator/products",
+      "steps": [
+        {
+          "lead": "Press Make a product configurable",
+          "rest": "on Configurable products."
+        },
+        {
+          "lead": "Choose the product it sells as,",
+          "rest": "then give it a name, a base price, a base cost and the lead time before options. Choose the bill of materials it starts from, if it has one."
+        },
+        {
+          "lead": "Press Make it configurable.",
+          "rest": "It opens as a draft."
+        },
+        {
+          "lead": "Press Add an option",
+          "rest": "for each thing the customer chooses. Give it a label and say whether it is asked as a choice, a number or yes or no."
+        },
+        {
+          "lead": "Press Add a value",
+          "rest": "for each answer, with its price change (a fixed amount or a percent of the base), any lead days it adds and any parts it adds to the bill of materials."
+        },
+        {
+          "lead": "Choose Publish",
+          "rest": "from the actions when it is ready. It can now be configured for customers."
+        }
+      ],
+      "tips": [
+        "Tick The customer must choose on an option that needs an answer. Publishing needs a value for every such option.",
+        "Retiring a product keeps the configurations already saved."
+      ],
+      "related": [
+        "add-rules-to-a-product",
+        "configure-and-quote"
+      ]
+    },
+    {
+      "slug": "add-rules-to-a-product",
+      "title": "Add rules so only sensible choices can be made",
+      "summary": "Rules stop combinations that cannot be built, limit one option by another, and add parts or time when a choice needs them.",
+      "page": "/configurator/options",
+      "steps": [
+        {
+          "lead": "Open the product",
+          "rest": "from Options and rules, and press Add a rule."
+        },
+        {
+          "lead": "Choose the rule:",
+          "rest": "Not allowed, Needs, Adds a part or Takes longer."
+        },
+        {
+          "lead": "Under When, say what sets it off,",
+          "rest": "such as one option being set a certain way, or a number from one amount to another."
+        },
+        {
+          "lead": "Under Then, say what happens:",
+          "rest": "the values the option cannot be or can only be, the part it adds and its price, or the working days added."
+        },
+        {
+          "lead": "Press Add the rule.",
+          "rest": "It shows as a plain sentence under Rules. Switch it off or on later without deleting it."
+        },
+        {
+          "lead": "Check it with Try it.",
+          "rest": "Choose any options and see the price, cost and lead time worked out. Nothing is saved."
+        }
+      ],
+      "tips": [
+        "If a rule rules out a default value, the first allowed value is used instead and you are told why."
+      ],
+      "related": [
+        "make-a-product-configurable"
+      ]
+    },
+    {
+      "slug": "configure-and-quote",
+      "title": "Configure a product for a customer and quote it",
+      "summary": "Choose the options and see the price, margin, parts, stock and lead time at once, then save it and put it on a quotation.",
+      "page": "/configurator/configure",
+      "steps": [
+        {
+          "lead": "Open Configure and quote",
+          "rest": "and choose the product and the customer."
+        },
+        {
+          "lead": "Make the choices",
+          "rest": "and set how many. Anything not allowed says why."
+        },
+        {
+          "lead": "Check the figures:",
+          "rest": "the price, the cost, margin and time, and the bill of materials with what is in stock and what is short."
+        },
+        {
+          "lead": "Add notes for the workshop,",
+          "rest": "if they need to know something."
+        },
+        {
+          "lead": "Press Save and put on a quotation.",
+          "rest": "The quotation is made with one line for the configuration at its configured price. Or press Save the configuration to keep it as a draft."
+        }
+      ],
+      "tips": [
+        "A configuration cannot be saved while something blocks it, such as a required option left empty. The page says what it is.",
+        "A margin under your minimum is flagged, and your settings can refuse the quote.",
+        "Price books, discounts and approval limits apply on the quotation, after the configured price.",
+        "On Configurations, a draft can be changed or cancelled from Actions, and a quoted one links to its quotation."
+      ],
+      "related": [
+        "make-a-product-configurable"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,518 @@
+{
+  "kind": "help-module",
+  "module": "human-resources",
+  "sources": [
+    "commerce-api/documentation/HR.md",
+    "commerce-web/src/app/features/hr/presentation",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "The people you employ: how the organisation is divided, who works there and what is kept about them, their shifts, attendance and leave, their pay and payslips, and their reviews and goals. Every member of your organisation is staff, and each person sees their own record on their profile.",
+  "start": [
+    "Make your departments, teams and jobs, so each person has a place.",
+    "Add your staff, with their department, team, job and pay group.",
+    "Set your kinds of leave, then give the year's leave to everyone.",
+    "Set up pay: a pay group, its periods, your salary components and tax tables, then each person's salary structure.",
+    "Make your shifts and a rotation plan, and fill the rota for the weeks ahead."
+  ],
+  "articles": [
+    {
+      "slug": "set-up-departments-and-teams",
+      "title": "Set up departments, teams and jobs",
+      "summary": "Divide the organisation into departments, put teams in them with a lead, and list the jobs people do.",
+      "page": "/hr/departments",
+      "steps": [
+        {
+          "lead": "Press New department",
+          "rest": "on Departments. Give it a name, what it does and where it is."
+        },
+        {
+          "lead": "Open Teams and press New team.",
+          "rest": "Choose its department and who leads it."
+        },
+        {
+          "lead": "Choose how the team works:",
+          "rest": "everyone works one shift, or people rotate between shifts. For one shift, choose its shift."
+        },
+        {
+          "lead": "Open Jobs",
+          "rest": "and add the jobs people do. Each list shows how many people are in it."
+        }
+      ],
+      "tips": [
+        "A team's lead is the manager who decides that team's leave and rates their reviews."
+      ],
+      "related": [
+        "add-a-person"
+      ]
+    },
+    {
+      "slug": "add-a-person",
+      "title": "Add a new member of staff",
+      "summary": "Add someone with their work email, where they work and the day they start. The rest of their record can come later.",
+      "page": "/hr/staff",
+      "steps": [
+        {
+          "lead": "Press Add a person",
+          "rest": "on Staff."
+        },
+        {
+          "lead": "Enter their name and work email.",
+          "rest": "Their work email is how they are told things."
+        },
+        {
+          "lead": "Choose their department, team and job,",
+          "rest": "and give their staff number, the date hired and their first day of work. Pay counts from the first day."
+        },
+        {
+          "lead": "Choose their pay group,",
+          "rest": "so payroll runs for that group pay them."
+        },
+        {
+          "lead": "Save, then open the person",
+          "rest": "to add contracts, right to work, documents, next of kin, education and experience. Each takes an uploaded copy."
+        }
+      ],
+      "related": [
+        "give-someone-a-salary",
+        "record-someone-leaving"
+      ]
+    },
+    {
+      "slug": "record-someone-leaving",
+      "title": "Record that someone is leaving",
+      "summary": "Give their last day and why. Until that day they show as working their notice; after it, as left.",
+      "page": "/hr/staff",
+      "steps": [
+        {
+          "lead": "Open the person",
+          "rest": "from Staff."
+        },
+        {
+          "lead": "Press Record an exit.",
+          "rest": "Give their last day, why they are leaving, and a note if you want."
+        },
+        {
+          "lead": "Press Record the exit.",
+          "rest": "They show as working their notice until the last day, then as left. Their record is kept."
+        }
+      ],
+      "tips": [
+        "Recorded by mistake? Press Reinstate on their page.",
+        "Payroll stops paying someone once they have left before a period begins."
+      ]
+    },
+    {
+      "slug": "answer-a-change-request",
+      "title": "Answer a request to change someone's details",
+      "summary": "When someone suggests a change to their own record, HR sees what it says now and what they ask for, and approves or refuses it.",
+      "page": "/hr/change-requests",
+      "steps": [
+        {
+          "lead": "Open Change requests.",
+          "rest": "What is waiting for HR is on the first tab."
+        },
+        {
+          "lead": "Press Answer",
+          "rest": "on the request. You see what it says now, what they ask for and what they said."
+        },
+        {
+          "lead": "Press Approve or Refuse.",
+          "rest": "When you refuse, write why, so they know. The request moves to its tab."
+        }
+      ],
+      "tips": [
+        "People ask from their own profile: My details › Suggest a change."
+      ]
+    },
+    {
+      "slug": "keep-compliance-in-date",
+      "title": "Keep certificates and checks in date",
+      "summary": "See whose licences, training, checks and medicals have expired or expire within 30 days, and renew them in place.",
+      "page": "/hr/compliance",
+      "steps": [
+        {
+          "lead": "Open Compliance.",
+          "rest": "It opens on what has expired or expires within 30 days, soonest first."
+        },
+        {
+          "lead": "Press Add compliance",
+          "rest": "to add a record: the person, the kind, what it is, its number, when it was issued and when it expires, with a copy."
+        },
+        {
+          "lead": "Change the record",
+          "rest": "when the new one comes in: give its new expiry and upload the new copy."
+        }
+      ]
+    },
+    {
+      "slug": "set-up-shifts-and-the-rota",
+      "title": "Set up shifts and fill the rota",
+      "summary": "Make your shifts, put them in a rotation plan for a team, and fill the rota for the weeks ahead in one go.",
+      "page": "/hr/rotations",
+      "before": [
+        "Make each shift on Shifts with New shift: its hours, break, the people needed and its team."
+      ],
+      "steps": [
+        {
+          "lead": "Press New plan",
+          "rest": "on Rotation plans and choose the team."
+        },
+        {
+          "lead": "Choose the shifts, in turn,",
+          "rest": "and the working days."
+        },
+        {
+          "lead": "Choose how places are filled:",
+          "rest": "one shift a day each and report places left empty, or fill every place, doubling people up if need be."
+        },
+        {
+          "lead": "Choose how often people move on",
+          "rest": "(every day, week or month) and the grace for clocking in."
+        },
+        {
+          "lead": "Press Fill the rota,",
+          "rest": "with the days from and to. Holidays and approved leave are left out, and anyone already on the rota stays as they are."
+        }
+      ],
+      "tips": [
+        "Fill the rota twice and it adds nothing new.",
+        "To change one day, open Rota, press Put them on the shift, or Take off on a place."
+      ],
+      "related": [
+        "see-who-is-in"
+      ]
+    },
+    {
+      "slug": "see-who-is-in",
+      "title": "See who came in today, and who is late",
+      "summary": "Everyone on the rota for a day, when they clocked in and out, who is late and who is not in.",
+      "page": "/hr/attendance",
+      "steps": [
+        {
+          "lead": "Open Attendance",
+          "rest": "and choose the day and team."
+        },
+        {
+          "lead": "Read the counts:",
+          "rest": "on the rota, in, late and not in."
+        },
+        {
+          "lead": "Press Clock in or Clock out",
+          "rest": "on someone's row to record it for them."
+        }
+      ],
+      "tips": [
+        "Clocking in after the shift's grace is late; clocking out before its end is leaving early.",
+        "Whether people clock themselves in, and whether no clock-in becomes absent, are set in Document settings › Attendance and rotas."
+      ]
+    },
+    {
+      "slug": "add-a-holiday",
+      "title": "Add a public holiday",
+      "summary": "Holidays are kept per place, and are left out of the rota and of leave counts.",
+      "page": "/hr/holidays",
+      "steps": [
+        {
+          "lead": "Press New holiday",
+          "rest": "on Holidays."
+        },
+        {
+          "lead": "Give its name and date,",
+          "rest": "and where it is kept, or the whole organisation."
+        },
+        {
+          "lead": "Save it.",
+          "rest": "It shows under Coming up, and leave asked for that day does not count it."
+        }
+      ]
+    },
+    {
+      "slug": "set-up-leave",
+      "title": "Set up leave and give everyone this year's days",
+      "summary": "Make each kind of leave with its days a year and carry-over, then give the year's leave to everyone in one step.",
+      "page": "/hr/leave/categories",
+      "steps": [
+        {
+          "lead": "Press New kind of leave",
+          "rest": "on Kinds of leave."
+        },
+        {
+          "lead": "Give its name and days a year,",
+          "rest": "whether it is paid, and the most carried into the next year (or nothing)."
+        },
+        {
+          "lead": "Open Leave entitlements,",
+          "rest": "choose the year and press Give the year's leave to everyone. Each person gets each kind's days, plus what they carry over."
+        },
+        {
+          "lead": "Check the list.",
+          "rest": "Each person has the days given, carried over, taken, waiting and what they can still ask for."
+        }
+      ],
+      "tips": [
+        "Giving the year's leave twice adds nothing: only people with no entitlement yet get one.",
+        "Leave that has begun is corrected by changing the entitlement, not by cancelling it."
+      ],
+      "related": [
+        "decide-on-leave"
+      ]
+    },
+    {
+      "slug": "decide-on-leave",
+      "title": "Approve or refuse a leave request",
+      "summary": "See the person's balance, the notice they gave and who else is away, then decide.",
+      "page": "/hr/leave/requests",
+      "steps": [
+        {
+          "lead": "Open Leave requests.",
+          "rest": "Waiting for a decision is the first tab."
+        },
+        {
+          "lead": "Press Decide",
+          "rest": "on a request. The side panel shows the balance now and after this, the notice given, and the cover on the rota for each day."
+        },
+        {
+          "lead": "Press Decide in Inbox",
+          "rest": "and approve or refuse it there, saying why when you refuse."
+        }
+      ],
+      "after": "Approved, the days come off the balance and the person is left off the rota. Refused, nothing is taken.",
+      "tips": [
+        "People ask from their own profile: My leave › Ask for leave. To record leave for someone, press Ask for leave on someone's behalf.",
+        "Cancelling an approved leave that has not begun gives the days back."
+      ]
+    },
+    {
+      "slug": "set-up-payroll",
+      "title": "Set up payroll",
+      "summary": "A pay group, its periods, your salary components and the tax table, so a run can work out everyone's pay.",
+      "page": "/hr/payroll/groups",
+      "steps": [
+        {
+          "lead": "Press New pay group",
+          "rest": "on Pay groups: its name, currency, how often it is paid, the country taxed in, and a minimum net if you want one."
+        },
+        {
+          "lead": "Open Payroll periods",
+          "rest": "and press Make the periods for the group's year."
+        },
+        {
+          "lead": "Open Salary components",
+          "rest": "and add each part of pay, such as housing or pension: its kind, whether it is part of gross pay, taxed or taken before tax."
+        },
+        {
+          "lead": "Open Tax tables",
+          "rest": "and press New tax table: the country, residents or non-residents, from when, and a flat rate or brackets."
+        }
+      ],
+      "tips": [
+        "A component paid by the employer, on top of pay, is never in the person's gross, tax or net, but reaches the books.",
+        "Name who a component or tax table is paid over to, so a paid run can pay it on."
+      ],
+      "related": [
+        "give-someone-a-salary",
+        "run-payroll"
+      ]
+    },
+    {
+      "slug": "give-someone-a-salary",
+      "title": "Set or raise someone's salary",
+      "summary": "Give a person a base salary and the components added or taken each period, from a date.",
+      "page": "/hr/payroll/structures",
+      "steps": [
+        {
+          "lead": "Open Salary structures.",
+          "rest": "It shows each person's pay group and salary today, and who is not set to be paid."
+        },
+        {
+          "lead": "Open the person",
+          "rest": "and go to their pay."
+        },
+        {
+          "lead": "Press New salary structure.",
+          "rest": "Give the base salary, the currency and the day it starts."
+        },
+        {
+          "lead": "Add the components",
+          "rest": "added or taken each period, each as an amount or a percent."
+        },
+        {
+          "lead": "Press Save the structure.",
+          "rest": "For a raise, add a new one from the day it starts. Earlier ones are kept."
+        }
+      ]
+    },
+    {
+      "slug": "run-payroll",
+      "title": "Run payroll and pay everyone",
+      "summary": "Make a run for a pay group's period, calculate it, check each person, approve it and pay it. Paying posts to the books and makes the payslips.",
+      "page": "/hr/payroll/runs",
+      "steps": [
+        {
+          "lead": "Press New payroll run",
+          "rest": "on Payroll runs, and choose the pay group, the period and the pay date."
+        },
+        {
+          "lead": "Press Calculate",
+          "rest": "on the run. Each person's base, gross, tax, deductions and net appear."
+        },
+        {
+          "lead": "Check the lines.",
+          "rest": "Anyone paid below the group's minimum net is marked. Change what is wrong and press Calculate again."
+        },
+        {
+          "lead": "Press Approve this run.",
+          "rest": "It is ready to pay."
+        },
+        {
+          "lead": "Choose Pay from",
+          "rest": "the account net pay leaves, or say it was paid outside the app."
+        },
+        {
+          "lead": "Press Pay.",
+          "rest": "It is posted to the books and a payslip is made for each person."
+        }
+      ],
+      "tips": [
+        "To send net pay to each person through Finance, use Ask to pay in the run's Payment section. Each person needs an approved account in Beneficiaries.",
+        "People find their payslips on their own profile, under My payslips."
+      ],
+      "related": [
+        "pay-over-tax-and-pension",
+        "void-a-payroll-run"
+      ]
+    },
+    {
+      "slug": "pay-over-tax-and-pension",
+      "title": "Pay over tax and pension from a paid run",
+      "summary": "A paid run shows what it owes for tax, pension and other deductions, and makes the payment request for each.",
+      "page": "/hr/payroll/runs",
+      "steps": [
+        {
+          "lead": "Open the paid run",
+          "rest": "and go to Paying over. Each line shows what is owed, paid over and outstanding."
+        },
+        {
+          "lead": "Press Remit",
+          "rest": "on a line. The payee comes from the salary component or the tax table."
+        },
+        {
+          "lead": "Choose Pay from, how, and their account,",
+          "rest": "then press Make the payment request."
+        },
+        {
+          "lead": "Approve and pay it",
+          "rest": "in Finance › Payment requests, like any other payment."
+        }
+      ],
+      "related": [
+        "run-payroll"
+      ]
+    },
+    {
+      "slug": "void-a-payroll-run",
+      "title": "Void a payroll run",
+      "summary": "Reverse a run in the books and say how the money comes back. The run and its payslips are kept, marked void.",
+      "page": "/hr/payroll/runs",
+      "before": [
+        "Cancel any payment request made from the run, or get a paid one back first."
+      ],
+      "steps": [
+        {
+          "lead": "Open the run",
+          "rest": "and press Void."
+        },
+        {
+          "lead": "Say how the money comes back:",
+          "rest": "it was returned to the bank (and the account it came back into), or recover it from the employees."
+        },
+        {
+          "lead": "Confirm.",
+          "rest": "The run is reversed in the books and kept, marked void."
+        }
+      ]
+    },
+    {
+      "slug": "run-a-review-cycle",
+      "title": "Run a review cycle",
+      "summary": "Make a cycle with its dates, launch it so everyone gets a review, and close it once every review is finalised.",
+      "page": "/hr/performance/cycles",
+      "before": [
+        "List the competencies people are rated on in Competencies, each with its weight."
+      ],
+      "steps": [
+        {
+          "lead": "Press New cycle",
+          "rest": "on Review cycles: its name, the period, and when self-assessments and managers' ratings are due."
+        },
+        {
+          "lead": "Open the cycle and press Launch the cycle.",
+          "rest": "Everyone in it gets a review, rated by their team's lead, with the competencies in use and their goals."
+        },
+        {
+          "lead": "Follow the reviews",
+          "rest": "on the cycle's page. Press Review the newcomers for anyone who joined since."
+        },
+        {
+          "lead": "Press Close the cycle",
+          "rest": "once every review is finalised. It can be reopened."
+        }
+      ],
+      "related": [
+        "give-a-review",
+        "set-goals"
+      ]
+    },
+    {
+      "slug": "give-a-review",
+      "title": "Rate someone's performance review",
+      "summary": "The person rates themselves first; their manager then rates each line, writes a summary and finalises it.",
+      "page": "/hr/performance/reviews",
+      "steps": [
+        {
+          "lead": "Open the review.",
+          "rest": "Once the person has submitted, you see their own rating and summary."
+        },
+        {
+          "lead": "Rate each competency and goal.",
+          "rest": "A low rating needs a reason."
+        },
+        {
+          "lead": "Write your summary,",
+          "rest": "then press Finalise. It is scored and shown to the person."
+        }
+      ],
+      "after": "The person reads it and acknowledges it, with a comment.",
+      "tips": [
+        "HR can change who rates a review, and reopen a finalised one. Its scores are cleared and it goes back to its manager."
+      ]
+    },
+    {
+      "slug": "set-goals",
+      "title": "Set goals and follow their progress",
+      "summary": "Give someone goals for the cycle, break them into tasks with boxes to tick, and watch progress move on the board.",
+      "page": "/hr/performance/cycles",
+      "steps": [
+        {
+          "lead": "Open the review cycle",
+          "rest": "and press New goal on its board. Choose whose goal it is, how it is measured and its weight."
+        },
+        {
+          "lead": "Open the goal",
+          "rest": "and add its tasks, each with boxes to tick."
+        },
+        {
+          "lead": "Tick boxes as work is done.",
+          "rest": "The task's progress follows, and the goal's follows its tasks."
+        },
+        {
+          "lead": "Move the goal",
+          "rest": "between To do, In progress and Done."
+        }
+      ],
+      "tips": [
+        "Goals lists every goal across cycles, with whose it is and its progress."
+      ]
+    }
+  ]
+}

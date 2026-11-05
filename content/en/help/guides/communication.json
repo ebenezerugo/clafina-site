@@ -1,0 +1,362 @@
+{
+  "kind": "help-module",
+  "module": "communication",
+  "sources": [
+    "commerce-api/documentation/COMMUNICATION.md",
+    "commerce-api/documentation/MEET.md",
+    "commerce-api/documentation/MESSAGING.md",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "How your team talks to each other and to the people outside: messages and channels with colleagues, calls and meetings in your own rooms, announcements for everyone, and the email addresses, numbers and chat accounts that conversations with customers come in through.",
+  "start": [
+    "Connect your email address, number or chat account in Channels, so conversations with customers come in and replies go out.",
+    "Say what each chat account is for in Chat platforms: customer conversations, Capture or the assistant.",
+    "Open Messages and make a channel for a team or a topic.",
+    "Try Start now on Meet, so you know how the waiting screen and the room work before your first meeting with a customer."
+  ],
+  "articles": [
+    {
+      "slug": "send-a-message",
+      "title": "Send a message to a colleague",
+      "summary": "Write to one colleague, or a few at once, and attach files or name a document in the same message.",
+      "page": "/messages",
+      "steps": [
+        {
+          "lead": "Press New",
+          "rest": "at the top right of Messages, and choose Message."
+        },
+        {
+          "lead": "Choose who it is to.",
+          "rest": "One colleague is a conversation between the two of you; up to eight make a group."
+        },
+        {
+          "lead": "Press Start the conversation.",
+          "rest": "It opens beside the list."
+        },
+        {
+          "lead": "Write and press Send.",
+          "rest": "Enter sends, and Shift Enter adds a line. They are told when you write."
+        }
+      ],
+      "tips": [
+        "Use the paperclip to attach a file, and Link a document to name an invoice or a quotation. A colleague sees the document's details only if they may read it.",
+        "Save keeps a message under Saved. Pin keeps it at the top of the chat for everyone in it.",
+        "People cannot be added to a group later. Start a new message with everyone you want in it."
+      ],
+      "related": [
+        "make-a-channel",
+        "call-from-a-chat"
+      ]
+    },
+    {
+      "slug": "make-a-channel",
+      "title": "Make a channel for a team or a topic",
+      "summary": "A place to talk about one thing: say who it is for and who can find it, then invite the people you want.",
+      "page": "/messages",
+      "steps": [
+        {
+          "lead": "Press New",
+          "rest": "on Messages and choose Channel."
+        },
+        {
+          "lead": "Give it a name and a topic,",
+          "rest": "and choose who it is for and who may find it: public, or private for those invited."
+        },
+        {
+          "lead": "Invite colleagues",
+          "rest": "if you want to, now or later."
+        },
+        {
+          "lead": "Press Make the channel.",
+          "rest": "It shows in the list, and the people you invited are in it."
+        }
+      ],
+      "tips": [
+        "A channel for a department or a team takes its staff in, and lets them go when they move. A channel for everyone is always public.",
+        "Others find public channels with Browse channels and press Join. Mute stops a busy channel from telling you about every message.",
+        "Every meeting gets a private channel of its own, with what was said in the room, its files and its recording."
+      ],
+      "related": [
+        "send-a-message",
+        "call-from-a-chat"
+      ]
+    },
+    {
+      "slug": "call-from-a-chat",
+      "title": "Call the people in a chat",
+      "summary": "Press Call in a channel or a direct message and everyone else in it is rung. The call is left as a card in the thread.",
+      "page": "/messages",
+      "steps": [
+        {
+          "lead": "Open the channel or the direct message.",
+          "rest": "You need to be in it."
+        },
+        {
+          "lead": "Press Call.",
+          "rest": "Everyone else in it is rung, with their voice only to start."
+        },
+        {
+          "lead": "They answer from the ring,",
+          "rest": "or join from the card the call leaves in the thread."
+        },
+        {
+          "lead": "Leave when you are done.",
+          "rest": "When the room empties, the card closes and says how long the call lasted."
+        }
+      ],
+      "tips": [
+        "A ring nobody answers in thirty seconds becomes a missed call in their Inbox, with Call back.",
+        "Someone who cannot talk can decline and reply with a message instead. It goes to your direct message."
+      ],
+      "related": [
+        "start-a-meeting-now"
+      ]
+    },
+    {
+      "slug": "start-a-meeting-now",
+      "title": "Start a meeting now and let people in",
+      "summary": "Open your own room in one step, choose camera or voice, share the code and let in the people who knock.",
+      "page": "/meet",
+      "steps": [
+        {
+          "lead": "Press Start now",
+          "rest": "on Meet. Your room opens on the waiting screen."
+        },
+        {
+          "lead": "Choose Join with video or Join with voice only.",
+          "rest": "Voice only is lighter on a slow connection. You can turn the camera on later."
+        },
+        {
+          "lead": "Share the room code, or press Copy the link.",
+          "rest": "Colleagues come straight in. Anyone else says their name and waits to be let in."
+        },
+        {
+          "lead": "Press Let in",
+          "rest": "beside each person waiting, or Turn away."
+        },
+        {
+          "lead": "Press Leave",
+          "rest": "when you are done. A meeting started now ends once the room is empty."
+        }
+      ],
+      "tips": [
+        "Lock the meeting to stop anyone else joining. Those waiting are told.",
+        "A recording is filed in the organiser's own Drive, in a folder called Meeting recordings.",
+        "A meeting started now is on your calendar like any other, with its record, chat and files. Start it again opens the same room for another hour."
+      ],
+      "related": [
+        "join-a-meeting",
+        "take-meeting-notes"
+      ]
+    },
+    {
+      "slug": "join-a-meeting",
+      "title": "Join a meeting with its code",
+      "summary": "Type the room code from the invitation, or scan the QR on the host's screen, and choose camera or voice.",
+      "page": "/meet",
+      "steps": [
+        {
+          "lead": "Type the code into Room code",
+          "rest": "on the Join card, or press Scan to read the QR on the host's screen."
+        },
+        {
+          "lead": "Press Join.",
+          "rest": "The waiting screen opens."
+        },
+        {
+          "lead": "Choose Join with video or Join with voice only.",
+          "rest": "You are in, or you wait until a host lets you in."
+        }
+      ],
+      "tips": [
+        "A code is your organisation's short name and eight letters and digits. It can be typed as it was heard, in capitals or not, with or without the gaps.",
+        "The invitation email and the meeting on your calendar both carry Join the meeting."
+      ],
+      "related": [
+        "start-a-meeting-now"
+      ]
+    },
+    {
+      "slug": "take-meeting-notes",
+      "title": "Have the minutes of a meeting written for you",
+      "summary": "For a meeting in the room with you: the assistant listens, then gives you minutes and drafts to confirm.",
+      "page": "/meet",
+      "before": [
+        "Your organisation must allow meetings to be recorded. If it does not, the Take notes card says so."
+      ],
+      "steps": [
+        {
+          "lead": "Press Start taking notes",
+          "rest": "on the Take notes card when the meeting begins."
+        },
+        {
+          "lead": "Let it listen.",
+          "rest": "Pause and Resume as you need. The meeting is on your calendar, without a room."
+        },
+        {
+          "lead": "Press Stop, write it up",
+          "rest": "when the meeting ends."
+        },
+        {
+          "lead": "Wait for Minutes ready.",
+          "rest": "You are told when the minutes are set out, with how many drafts there are to check."
+        },
+        {
+          "lead": "Confirm, change or turn down each draft.",
+          "rest": "A task or a message is made only when you confirm it. Nothing is sent before."
+        }
+      ],
+      "related": [
+        "start-a-meeting-now"
+      ]
+    },
+    {
+      "slug": "publish-an-announcement",
+      "title": "Tell everyone something with an announcement",
+      "summary": "Write it once, say how urgent it is and who it is for, and see who has read or acknowledged it.",
+      "page": "/announcements",
+      "steps": [
+        {
+          "lead": "Press Write an announcement",
+          "rest": "on Announcements."
+        },
+        {
+          "lead": "Say what it says:",
+          "rest": "a title, and the words in plain language."
+        },
+        {
+          "lead": "Choose how urgent it is:",
+          "rest": "low, normal, high or critical. A critical one stays on top of every screen until it is acknowledged."
+        },
+        {
+          "lead": "Say who it is for, and when.",
+          "rest": "With nothing chosen, it goes to everyone. Set Publish at to send it later, and Expires at to take it out of the feed."
+        },
+        {
+          "lead": "Choose how people outside the app are reached,",
+          "rest": "and tick Ask everyone to acknowledge it if they must confirm they read it."
+        },
+        {
+          "lead": "Press Publish.",
+          "rest": "Where an approval policy asks, the button is Send for approval, and nothing goes until it is approved."
+        }
+      ],
+      "after": "Open the announcement to see who it reached, who read it and who acknowledged it. Remind who has not acknowledged sends them a nudge.",
+      "tips": [
+        "Opening an announcement marks it read for you. A critical one asks you to press I have read and understood this.",
+        "Retract takes a published announcement back."
+      ]
+    },
+    {
+      "slug": "connect-a-channel",
+      "title": "Connect an email address, number or chat account",
+      "summary": "Add your own address or account, so conversations with customers come in through it and replies go out through it.",
+      "page": "/admin/channels",
+      "steps": [
+        {
+          "lead": "Press Connect a channel",
+          "rest": "on Channels."
+        },
+        {
+          "lead": "Choose what it is and its provider,",
+          "rest": "then give it a name and the address or number it sends from."
+        },
+        {
+          "lead": "Enter its credentials.",
+          "rest": "They are sealed when saved and never shown again."
+        },
+        {
+          "lead": "Choose its order:",
+          "rest": "primary, or a backup that is tried when the primary fails."
+        },
+        {
+          "lead": "Press Connect.",
+          "rest": "Then press Copy webhook and give the address to your provider, or Copy website snippet for website chat."
+        }
+      ],
+      "tips": [
+        "A channel that keeps failing says so, with the error, on its row.",
+        "Retire stops a channel sending and taking in. Its conversations stay.",
+        "Until you connect a channel, people outside are reached by email with a link."
+      ],
+      "related": [
+        "choose-what-a-chat-account-does",
+        "set-sending-limits"
+      ]
+    },
+    {
+      "slug": "choose-what-a-chat-account-does",
+      "title": "Choose what a chat account is used for",
+      "summary": "Each chat account can carry customer conversations, take documents into Capture, and let colleagues talk to the assistant.",
+      "page": "/messaging",
+      "before": [
+        "Connect the account first, in Channels."
+      ],
+      "steps": [
+        {
+          "lead": "Open Chat platforms.",
+          "rest": "Each account shows what came in and went out this week, and how many colleagues linked their chat."
+        },
+        {
+          "lead": "Press What it is used for",
+          "rest": "on the account."
+        },
+        {
+          "lead": "Tick what it does:",
+          "rest": "Customer conversations, Capture, or The assistant."
+        },
+        {
+          "lead": "Say who files from outside are kept with,",
+          "rest": "and the welcome words someone new is sent, if you want any."
+        },
+        {
+          "lead": "Press Save what it is used for.",
+          "rest": "Then Check the connection to see that it works."
+        }
+      ],
+      "tips": [
+        "Colleagues link their own chat to their sign-in from Link my chat. The chat then acts as them, with their own permissions.",
+        "Nothing the assistant proposes in a chat is done until the colleague confirms it.",
+        "An account in sandbox mode talks to no real platform. Use its Sandbox console to try messages as someone writing in."
+      ],
+      "related": [
+        "connect-a-channel"
+      ]
+    },
+    {
+      "slug": "set-sending-limits",
+      "title": "See what is sent, and set the limits",
+      "summary": "Every message passes one gate. See what was sent, what waits and what failed, and set how much may go out.",
+      "page": "/sending",
+      "steps": [
+        {
+          "lead": "Open Sending and limits.",
+          "rest": "The figures show what was sent today, what is waiting for room, what failed and what was not repeated."
+        },
+        {
+          "lead": "Press See why on Failed",
+          "rest": "to list the messages that did not go, with the reason for each."
+        },
+        {
+          "lead": "Press Change the limits.",
+          "rest": "Set how many messages each channel may send in a minute, an hour and a day, and how many one person may get."
+        },
+        {
+          "lead": "Set quiet hours if you want them,",
+          "rest": "and read What this changes, worked out from today's traffic."
+        },
+        {
+          "lead": "Press Save the limits.",
+          "rest": "The change takes effect within half a minute."
+        }
+      ],
+      "tips": [
+        "Over a limit, a message waits for the next window and goes then. It is never dropped.",
+        "Reminders, notifications and summaries wait out the quiet hours. Codes, and what a person sends by hand, are not held."
+      ],
+      "related": [
+        "connect-a-channel"
+      ]
+    }
+  ]
+}

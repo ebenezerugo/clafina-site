@@ -1,0 +1,68 @@
+{
+  "kind": "help-module",
+  "module": "courses",
+  "sources": [
+    "commerce-api/documentation/COURSES.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/courses/presentation"
+  ],
+  "intro": "The courses pack: training for your staff and courses you sell to customers, built from modules and lessons, with quizzes and certificates. Switch it on in Settings › Industry packs.",
+  "start": [
+    "Switch the courses pack on in Settings › Industry packs.",
+    "Make your first course on Courses, and say who can take it: staff, customers or both.",
+    "Add its modules and lessons in the builder, then publish it.",
+    "Enrol people on Learners and progress. Staff and customers can also join a published course themselves from My learning, under Join a course."
+  ],
+  "articles": [
+    {
+      "slug": "build-a-course",
+      "title": "Build a course and publish it",
+      "summary": "Make the course, add modules and lessons (video, reading, quiz or live session), then publish it once every lesson is ready.",
+      "page": "/courses",
+      "steps": [
+        { "lead": "Press New course", "rest": "on Courses. Give it a title and summary, say who can take it, and any price for customers. Press Make the course." },
+        { "lead": "Choose Open the builder", "rest": "from the course's Actions." },
+        { "lead": "Choose Add a module", "rest": "from Actions, give it a title and press Add the module." },
+        { "lead": "Press Add a lesson,", "rest": "choose its kind and press Add the lesson." },
+        { "lead": "Fill in the lesson:", "rest": "the video with its length and how much must be watched, the reading, or the quiz's pass mark. Press Save the lesson." },
+        { "lead": "For a quiz, press Add a question", "rest": "for each one, with its choices, the right answer and its points. Press Save the question." },
+        { "lead": "Choose Course settings", "rest": "from Actions to set the pass mark, retakes and the certificate it gives." },
+        { "lead": "Choose Publish", "rest": "from Actions. If a lesson is not ready, the builder says what is missing." }
+      ],
+      "tips": [
+        "Staff invited to a draft course are enrolled when it is published.",
+        "A quiz can draw a few questions from a bigger bank, so each try is different."
+      ],
+      "related": ["enrol-learners"]
+    },
+    {
+      "slug": "enrol-learners",
+      "title": "Enrol people and see how they are doing",
+      "summary": "Enrol staff or customers, approve places and payments, and see each learner's progress and where people stop.",
+      "page": "/courses/learners",
+      "steps": [
+        { "lead": "Open Learners and progress", "rest": "from the course's Actions on Courses." },
+        { "lead": "Press Enrol someone,", "rest": "choose a member of staff or a customer, and press Enrol." },
+        { "lead": "Approve a place or confirm a payment", "rest": "from the learner's Actions, where the course asks for one." },
+        { "lead": "Check each learner's progress,", "rest": "score and when they were last here. Where people stop names the lesson most people do not get past." }
+      ],
+      "tips": [
+        "A customer's priced place is invoiced. Staff are never invoiced.",
+        "When a learner finishes, their certificate is given and shows on Certificates. For staff, it is added to their HR record."
+      ],
+      "related": ["build-a-course", "check-or-revoke-a-certificate"]
+    },
+    {
+      "slug": "check-or-revoke-a-certificate",
+      "title": "Check or revoke a certificate",
+      "summary": "See the certificates a course has given, check one by its verification code, or revoke one with the reason.",
+      "page": "/courses/certificates",
+      "steps": [
+        { "lead": "Choose the course", "rest": "on Certificates to see who has one, their score, and when it runs out." },
+        { "lead": "Enter a verification code", "rest": "and press Check to see whether a certificate is real and still good." },
+        { "lead": "To revoke one, choose Revoke", "rest": "from its Actions, say why, and press Revoke." }
+      ],
+      "related": ["enrol-learners"]
+    }
+  ]
+}

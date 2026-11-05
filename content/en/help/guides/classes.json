@@ -1,0 +1,70 @@
+{
+  "kind": "help-module",
+  "module": "classes",
+  "sources": [
+    "commerce-api/documentation/CLASSES.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/classes/presentation"
+  ],
+  "intro": "The classes and check-in pack, for studios, gyms and schools: a week of classes with places and a waiting list, check-in at the door, class packs and teachers' pay. Switch it on in Settings › Industry packs; members book on their plan where the memberships pack is on too.",
+  "start": [
+    "Switch the classes and check-in pack on in Settings › Industry packs.",
+    "Add the kinds of class you teach on Class schedule, then the classes themselves.",
+    "Make the class packs you sell on Class packs, for people without a plan.",
+    "Set each teacher's rate on Teachers' pay, so the month's pay is worked out for you."
+  ],
+  "articles": [
+    {
+      "slug": "build-the-schedule",
+      "title": "Put classes on the schedule and book people in",
+      "summary": "Add the kinds of class you teach, put classes on the week, then book people into them. When a class is full, they join the waiting list.",
+      "page": "/classes/schedule",
+      "steps": [
+        { "lead": "Press Add a kind of class.", "rest": "Give it a name, its length in minutes, a drop-in price and the credits a booking takes. Press Add the kind of class." },
+        { "lead": "Press Add a class,", "rest": "choose the kind, when it starts and how many places. To repeat it, say for how many weeks. Press Add the class." },
+        { "lead": "Open the class", "rest": "from its Actions, and press Add someone." },
+        { "lead": "Choose a customer or enter a member's number,", "rest": "and how they pay: their plan, a class credit or a drop-in. Press Book the place." },
+        { "lead": "Press Offer", "rest": "beside someone on the waiting list to offer them a place that has come free." }
+      ],
+      "tips": [
+        "When someone cancels, the first person waiting is offered the place by email for a short time, then the next.",
+        "Cancelling late can keep the credit, as your settings say.",
+        "Message all writes to everyone on a class. Cancel the class gives every credit back and tells everyone."
+      ],
+      "related": ["check-people-in", "sell-a-class-pack"]
+    },
+    {
+      "slug": "check-people-in",
+      "title": "Check people in at the door",
+      "summary": "Scan or type a member in. Their plan or booking is checked, and you see who is in, who is still to come and who was turned away, and why.",
+      "page": "/classes/check-in",
+      "steps": [
+        { "lead": "Choose the class", "rest": "on Check-in. The doors open a little before it starts." },
+        { "lead": "Scan their card or fob, or type their member's number,", "rest": "and press Check in." },
+        { "lead": "If they are turned away,", "rest": "the reason is shown. To let them in anyway, choose Let in once, give the reason and press Let them in once." },
+        { "lead": "For a walk-in, find the customer", "rest": "and press Book at the door and check in, while there is a free place." }
+      ],
+      "tips": [
+        "Someone paying with a credit or a drop-in is checked in from the class list, under Actions.",
+        "Those booked who never come are marked no-shows when the class ends."
+      ],
+      "related": ["build-the-schedule"]
+    },
+    {
+      "slug": "sell-a-class-pack",
+      "title": "Sell a pack of class credits",
+      "summary": "A class pack is a number of classes for a price, good for a number of days. Sell one and the customer books with its credits.",
+      "page": "/classes/packs",
+      "steps": [
+        { "lead": "Press New pack", "rest": "on Class packs." },
+        { "lead": "Give it a name,", "rest": "the classes in it, the price and how many days it is good for. Press Add the pack." },
+        { "lead": "Choose Sell to a customer", "rest": "from the pack's Actions, and choose the customer." },
+        { "lead": "Press Sell the pack.", "rest": "The customer is invoiced, and their credits show under What a customer has left." }
+      ],
+      "tips": [
+        "A booking takes the credits that run out soonest first."
+      ],
+      "related": ["build-the-schedule"]
+    }
+  ]
+}

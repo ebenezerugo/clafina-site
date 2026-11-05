@@ -1,0 +1,276 @@
+{
+  "kind": "help-module",
+  "module": "your-account",
+  "sources": [
+    "commerce-api/documentation/BILLING_HELP_PERSONAL.md",
+    "commerce-api/documentation/AUTH.md",
+    "commerce-api/documentation/MESSAGING.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Your own pages: your staff record, leave and payslips, the money you spent for the business, your hours and tasks, and how you sign in, what reaches you and how the app looks for you.",
+  "start": [
+    "Turn on two-step sign-in in Account settings, so a code is emailed after your password.",
+    "Choose which notifications reach you, and how, in My notifications.",
+    "Open My profile and check what HR keeps about you."
+  ],
+  "articles": [
+    {
+      "slug": "change-your-password",
+      "title": "Change your password or turn on two-step sign-in",
+      "summary": "Change your password, and turn on two-step sign-in so a code is emailed after your password.",
+      "page": "/settings/profile",
+      "steps": [
+        {
+          "lead": "Open Account settings.",
+          "rest": "Under Password, give your current password, the new one, and confirm it."
+        },
+        {
+          "lead": "Press Update password.",
+          "rest": "You are told your password was updated."
+        },
+        {
+          "lead": "Under Two-step sign-in, give your password",
+          "rest": "and press Turn on two-step sign-in."
+        }
+      ],
+      "after": "Next time you sign in, a six-digit code is emailed to you after your password. It works once, for an hour.",
+      "tips": [
+        "Turning two-step sign-in off asks for your password too: an open session is not enough."
+      ],
+      "related": [
+        "sign-out-a-device"
+      ]
+    },
+    {
+      "slug": "sign-out-a-device",
+      "title": "Sign out a device you do not know",
+      "summary": "See everywhere you are signed in, sign out one device or every other one, then change your password.",
+      "page": "/settings/profile",
+      "steps": [
+        {
+          "lead": "Open Where you are signed in",
+          "rest": "in Account settings. This device is marked."
+        },
+        {
+          "lead": "Press Sign out",
+          "rest": "beside a device you do not know, or Sign out everywhere else."
+        },
+        {
+          "lead": "Change your password",
+          "rest": "straight after."
+        }
+      ],
+      "related": [
+        "change-your-password"
+      ]
+    },
+    {
+      "slug": "leave-or-close-your-account",
+      "title": "Leave an organisation or close your account",
+      "summary": "Leaving ends your access to this organisation now. Closing waits 14 days, so you can change your mind.",
+      "page": "/settings/profile",
+      "before": [
+        "The only owner of an organisation cannot leave it or close their account. Make someone else an owner first."
+      ],
+      "steps": [
+        {
+          "lead": "Open Leave or close your account",
+          "rest": "in Account settings."
+        },
+        {
+          "lead": "Press Leave… or Close my account…",
+          "rest": "and give your password."
+        },
+        {
+          "lead": "Confirm it.",
+          "rest": "Leaving ends your access here at once. Your account closes after 14 days."
+        }
+      ],
+      "tips": [
+        "Until it closes, you can press Keep my account. Nothing is deleted.",
+        "What you made stays with the organisation when you leave."
+      ]
+    },
+    {
+      "slug": "choose-your-notifications",
+      "title": "Choose what reaches you, and how",
+      "summary": "One switch for each area and channel, and each notification your way. Those that need you always arrive in the app.",
+      "page": "/settings/notifications",
+      "steps": [
+        {
+          "lead": "Find the area",
+          "rest": "in the list, or search for the notification."
+        },
+        {
+          "lead": "Turn off the channels",
+          "rest": "you do not want it on. Open the area to choose one by one."
+        },
+        {
+          "lead": "It is saved at once.",
+          "rest": "Notifications that need you still reach you in the app."
+        }
+      ],
+      "tips": [
+        "A half-filled switch means some notifications in that area are on for that channel and some are off.",
+        "Your exceptions, under the list, shows what you set differently. Reset puts one back, or Reset this area clears a whole area.",
+        "Open the Weekly digest tab to turn the digest on, and press Send me last week's now to see one at once."
+      ]
+    },
+    {
+      "slug": "use-dark-mode",
+      "title": "Use dark mode, compact rows or another font",
+      "summary": "Choose how the app looks for you, if your organisation lets you choose. It follows you to every device.",
+      "page": "/settings/appearance",
+      "steps": [
+        {
+          "lead": "Under Colour mode, press Dark",
+          "rest": "(or Black for the darkest). It changes at once on every device you sign in on."
+        },
+        {
+          "lead": "Under Density, press Compact",
+          "rest": "to fit more rows in a list. Comfortable goes back."
+        },
+        {
+          "lead": "Press Back to my organisation's look",
+          "rest": "to clear your own choices and follow the organisation again."
+        }
+      ],
+      "tips": [
+        "Device follows your computer or phone. Your organisation may lock some of these."
+      ]
+    },
+    {
+      "slug": "claim-an-expense",
+      "title": "Claim back money you spent for the business",
+      "summary": "Make a claim, add the receipt and the amount, and submit it. Your approver is told, and you see when it is paid.",
+      "page": "/me/expenses",
+      "steps": [
+        {
+          "lead": "Press New claim",
+          "rest": "on My expenses."
+        },
+        {
+          "lead": "Say what the claim is for,",
+          "rest": "and its currency."
+        },
+        {
+          "lead": "Add each expense:",
+          "rest": "the day, the category, who paid, the amount and the purpose. Attach receipt adds the receipt to the line."
+        },
+        {
+          "lead": "Press Submit for approval.",
+          "rest": "It is held to your policy, and your approver decides it. Save as draft keeps it to finish later."
+        }
+      ],
+      "after": "The claim shows on My expenses with what is owed to you. Once approved, it is paid, or taken off an advance you were given.",
+      "tips": [
+        "Ask for an advance asks for money before you spend it.",
+        "Fill from a document reads a receipt for you."
+      ]
+    },
+    {
+      "slug": "fill-in-your-timesheet",
+      "title": "Fill in your timesheet",
+      "summary": "Enter your hours by project and day, or run the timer, then send the week for approval.",
+      "page": "/me/timesheet",
+      "steps": [
+        {
+          "lead": "Press Add a row",
+          "rest": "and choose the project and the task."
+        },
+        {
+          "lead": "Type the time into each day,",
+          "rest": "as 1.5, 1:30 or 90m. Click a day to say what was done and whether it is billable."
+        },
+        {
+          "lead": "Or start the timer:",
+          "rest": "choose the project, press Start, and Stop when you finish."
+        },
+        {
+          "lead": "Press Send the week",
+          "rest": "when it is complete. Take it back lets you change it before it is decided."
+        }
+      ]
+    },
+    {
+      "slug": "ask-for-leave",
+      "title": "Ask for leave",
+      "summary": "Choose the kind and the days. Whoever decides is told, and you see the answer on My profile.",
+      "page": "/me",
+      "steps": [
+        {
+          "lead": "Press See my leave",
+          "rest": "on My profile. Your balances and requests are there."
+        },
+        {
+          "lead": "Press Ask for leave.",
+          "rest": "Choose the kind, the first day and the last day, and a reason if you want."
+        },
+        {
+          "lead": "Press Ask for the leave.",
+          "rest": "Whoever decides is told, and you are told when they answer."
+        }
+      ],
+      "tips": [
+        "Leave is counted in working days. Holidays are not taken from you.",
+        "Open the payslips, on My profile, lists each month's payslip to open or download."
+      ],
+      "related": [
+        "fix-your-hr-record"
+      ]
+    },
+    {
+      "slug": "fix-your-hr-record",
+      "title": "Something in my HR record is wrong",
+      "summary": "Ask HR to change it: say which detail and what it should say. You are told when they answer.",
+      "page": "/me",
+      "steps": [
+        {
+          "lead": "Press Ask HR to change something",
+          "rest": "on My profile."
+        },
+        {
+          "lead": "Choose what should change,",
+          "rest": "then what it says now and what it should say."
+        },
+        {
+          "lead": "Press Ask HR to change it.",
+          "rest": "It shows under Your requests to HR until they answer."
+        }
+      ],
+      "related": [
+        "ask-for-leave"
+      ]
+    },
+    {
+      "slug": "link-your-chat",
+      "title": "Talk to the assistant from your chat app",
+      "summary": "Link your chat account to your sign-in with a code. The chat then acts as you, with your own permissions.",
+      "page": "/messaging/link",
+      "before": [
+        "An administrator must switch on the assistant or Capture for a chat account first."
+      ],
+      "steps": [
+        {
+          "lead": "Press Get a code",
+          "rest": "beside the account on Link my chat."
+        },
+        {
+          "lead": "Send the code from your chat,",
+          "rest": "as LINK and the code. Open the chat with the code ready does it for you, where the platform allows."
+        },
+        {
+          "lead": "See it turn to Linked.",
+          "rest": "The page changes the moment the code arrives."
+        }
+      ],
+      "after": "Send questions, voice notes, pictures and documents from the chat. Anything the assistant proposes waits for your Confirm.",
+      "tips": [
+        "A code works once, for a short time. Ask for another if it runs out.",
+        "Disconnect, or UNLINK sent from the chat, ends the link.",
+        "My connected agents lists the AI agents you connected, each acting as you. Revoke stops one at once."
+      ]
+    }
+  ]
+}

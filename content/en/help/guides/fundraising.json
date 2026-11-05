@@ -1,0 +1,260 @@
+{
+  "kind": "help-module",
+  "module": "fundraising",
+  "sources": [
+    "commerce-api/documentation/FUNDRAISING.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/fundraising/presentation"
+  ],
+  "intro": "The fundraising pack, for charities and foundations: donors and what they give, campaigns against their goal, grants from application to final report, money that may only be spent on what it was given for, and tax receipts. With the pack on, a customer is called a donor. Switch it on in Organisation › Settings › Industry packs.",
+  "start": [
+    "Turn the fundraising pack on in Organisation › Settings › Industry packs.",
+    "Check your receipt wording, registration number and signatory in the fundraising settings, so tax receipts read correctly.",
+    "Add your donors, starting from customers you already have.",
+    "Make a campaign with its goal and budget lines, then record gifts against it."
+  ],
+  "articles": [
+    {
+      "slug": "add-a-donor",
+      "title": "Add a donor",
+      "summary": "Make a customer a donor, and say how they like to be asked and how they want their receipts.",
+      "page": "/fundraising/donors",
+      "steps": [
+        {
+          "lead": "Press Add a donor",
+          "rest": "on Donors."
+        },
+        {
+          "lead": "Choose the customer,",
+          "rest": "the name shown, and whether they are a person or a company."
+        },
+        {
+          "lead": "Say how to ask them:",
+          "rest": "how they like to be asked, how often, and what they give to."
+        },
+        {
+          "lead": "Choose their receipts:",
+          "rest": "a receipt for each gift, one receipt a year, or none."
+        },
+        {
+          "lead": "Press Add the donor.",
+          "rest": "They appear in the list, grouped as major, monthly giver, new this year, lapsed or regular as they give."
+        }
+      ],
+      "tips": [
+        "Open the card from Actions to see what a donor has given by year, their pledges, their latest gifts and a suggested next ask."
+      ],
+      "related": [
+        "record-a-gift",
+        "take-a-pledge"
+      ]
+    },
+    {
+      "slug": "record-a-gift",
+      "title": "Record a gift and say thank you",
+      "summary": "Enter the money that came in, what it is for and how it came, then record how you thanked the donor.",
+      "page": "/fundraising/gifts",
+      "steps": [
+        {
+          "lead": "Press Record a gift",
+          "rest": "on Gifts, and choose the donor."
+        },
+        {
+          "lead": "Enter the amount and the day it was received,",
+          "rest": "how it was paid, how it came, and its reference."
+        },
+        {
+          "lead": "Choose what it is for:",
+          "rest": "a campaign or grant, the general fund, or a named purpose."
+        },
+        {
+          "lead": "Choose the Finance receipt it came by,",
+          "rest": "if the money is already in your books. Each receipt can be linked to one gift only."
+        },
+        {
+          "lead": "Press Record the gift.",
+          "rest": "The donor's totals and the campaign's progress move at once."
+        },
+        {
+          "lead": "Choose Say thank you",
+          "rest": "from the gift's actions and say how they were thanked: a call, a personal note, an email or a visit."
+        }
+      ],
+      "tips": [
+        "Tick Anonymous for a gift that needs no receipt and no name on lists.",
+        "To give money back, choose Refund from the gift's actions and say why. A gift that already has a tax receipt cannot be refunded until that receipt is voided."
+      ],
+      "related": [
+        "issue-tax-receipts",
+        "take-a-pledge"
+      ]
+    },
+    {
+      "slug": "take-a-pledge",
+      "title": "Record a pledge and remind the donor",
+      "summary": "Note a promise to give by a date, follow it on the donor's card, and send a reminder while it is open.",
+      "page": "/fundraising/donors",
+      "steps": [
+        {
+          "lead": "Choose Make a pledge",
+          "rest": "from the donor's actions on Donors."
+        },
+        {
+          "lead": "Enter the amount promised",
+          "rest": "and the date it is due by, then press Make the pledge."
+        },
+        {
+          "lead": "Follow it on the donor's card,",
+          "rest": "under Pledges. It shows what has been paid so far."
+        },
+        {
+          "lead": "Press Remind",
+          "rest": "if it is late, or Cancel if it will not be paid."
+        }
+      ],
+      "tips": [
+        "Reminders are limited in number and spaced apart, as your settings say."
+      ],
+      "related": [
+        "record-a-gift"
+      ]
+    },
+    {
+      "slug": "run-a-campaign",
+      "title": "Run a campaign towards a goal",
+      "summary": "Set the goal and dates, go live, and follow what is raised week by week against the goal.",
+      "page": "/fundraising/campaigns",
+      "steps": [
+        {
+          "lead": "Press New campaign",
+          "rest": "on Campaigns."
+        },
+        {
+          "lead": "Give it a title, purpose and goal,",
+          "rest": "with the day it starts and ends."
+        },
+        {
+          "lead": "Leave Restricted ticked",
+          "rest": "if the money may only be spent on the campaign's own lines."
+        },
+        {
+          "lead": "Press Make the campaign.",
+          "rest": "It starts as a draft."
+        },
+        {
+          "lead": "Choose Go live",
+          "rest": "from its actions. Gifts can now be recorded for it."
+        },
+        {
+          "lead": "Choose How it is going",
+          "rest": "to see raised, week by week, the latest gifts, and where the money goes. Choose End it when it is over."
+        }
+      ],
+      "tips": [
+        "The dashed line on the chart carries the pace of the last four weeks to the end date. It is a forecast, not money in."
+      ],
+      "related": [
+        "spend-restricted-money",
+        "record-a-gift"
+      ]
+    },
+    {
+      "slug": "spend-restricted-money",
+      "title": "Spend restricted money on what it was given for",
+      "summary": "Set the budget lines of a campaign or grant, then record each spend against a line so nothing goes where it should not.",
+      "page": "/fundraising/campaigns",
+      "steps": [
+        {
+          "lead": "Open the campaign or grant",
+          "rest": "and go to Where the money goes."
+        },
+        {
+          "lead": "Press Add a line",
+          "rest": "for each thing the money may be spent on, with its budget, then press Add the line."
+        },
+        {
+          "lead": "Press Spend on a line",
+          "rest": "when you spend. Choose the line, the amount, the day and what it was for, then press Record the spend."
+        },
+        {
+          "lead": "Check Spent and Left",
+          "rest": "on each line."
+        }
+      ],
+      "tips": [
+        "A spend is refused off the fund's lines, over what a line has left, or over what has come in and not been spent.",
+        "A spend made by mistake is voided, never deleted."
+      ],
+      "related": [
+        "run-a-campaign",
+        "follow-a-grant"
+      ]
+    },
+    {
+      "slug": "follow-a-grant",
+      "title": "Follow a grant from application to report",
+      "summary": "Move a grant through its stages, note the next step, record payments as they arrive and the reports you owe the funder.",
+      "page": "/fundraising/grants",
+      "steps": [
+        {
+          "lead": "Press New grant",
+          "rest": "on Grants. Enter the funder, the programme, the amount asked for, the next step and when it is due, then press Add the grant."
+        },
+        {
+          "lead": "Press Move it on",
+          "rest": "as it goes: applied, needs information, awarded, reporting, closed or declined. Say the amount awarded when it is."
+        },
+        {
+          "lead": "Press Expect a payment",
+          "rest": "for each payment the funder will make, and Record it received when the money comes."
+        },
+        {
+          "lead": "Press Promise a report",
+          "rest": "for each report you owe, with its due date."
+        },
+        {
+          "lead": "Press Submit",
+          "rest": "when you send it, attach the report, and press Mark it submitted. Press Funder accepted it when they do."
+        }
+      ],
+      "related": [
+        "spend-restricted-money"
+      ]
+    },
+    {
+      "slug": "issue-tax-receipts",
+      "title": "Issue tax receipts, one by one or for the year",
+      "summary": "Issue the receipts waiting for gifts, or make the year-end batch, one receipt a donor for the year's gifts.",
+      "page": "/fundraising/tax-receipts",
+      "steps": [
+        {
+          "lead": "Open Tax receipts.",
+          "rest": "Gifts that need their own receipt wait there."
+        },
+        {
+          "lead": "Press Issue receipts",
+          "rest": "to issue all those waiting at once. The button shows how many there are."
+        },
+        {
+          "lead": "For the year, press Year-end batch,",
+          "rest": "choose the year and press Issue the year's receipts. Each donor who gets one receipt a year gets it for that year's gifts."
+        },
+        {
+          "lead": "Choose See what the donor receives",
+          "rest": "to read a receipt's wording."
+        },
+        {
+          "lead": "Once you have sent it, choose Record it sent",
+          "rest": "and enter the email it went to, or Record it bounced if it came back."
+        }
+      ],
+      "tips": [
+        "To correct a receipt, choose Void it, say why, and tick Issue a new receipt in its place. Voiding puts its gifts back to waiting.",
+        "Anonymous gifts, and donors who want no receipts, never get one."
+      ],
+      "related": [
+        "record-a-gift"
+      ]
+    }
+  ]
+}

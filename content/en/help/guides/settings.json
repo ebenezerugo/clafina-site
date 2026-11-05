@@ -1,0 +1,315 @@
+{
+  "kind": "help-module",
+  "module": "settings",
+  "sources": [
+    "commerce-api/documentation/DOCUMENT_SETTINGS.md",
+    "commerce-api/documentation/NUMBERING.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-api/documentation/WALLET_VERIFICATION.md",
+    "commerce-api/documentation/APPEARANCE.md",
+    "commerce-api/documentation/COMMUNICATION.md",
+    "commerce-api/documentation/TRADING_NETWORK.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "How your organisation is set up: its name and places, the features that suit your kind of business, how documents are numbered and behave, how the app looks, and the connections to the outside.",
+  "start": [
+    "Check your organisation's name, number and contact details in Organisation. They print on invoices, quotations and emails.",
+    "Add each shop, warehouse or office in Locations.",
+    "Switch on the industry pack that fits the work at each place.",
+    "Go through Document settings with the guided setup, so each document behaves the way you work."
+  ],
+  "articles": [
+    {
+      "slug": "set-your-organisation-details",
+      "title": "Set your organisation's name and details",
+      "summary": "Your name, registration number and contact details are used on invoices, quotations and emails.",
+      "page": "/admin/general",
+      "steps": [
+        {
+          "lead": "Open Organisation.",
+          "rest": "Under Who you are, give the organisation name, its identification number and its industry."
+        },
+        {
+          "lead": "Fill in How to reach you:",
+          "rest": "the website, email and phone customers should use."
+        },
+        {
+          "lead": "Press Save organisation details.",
+          "rest": "New documents and emails carry them."
+        }
+      ],
+      "tips": [
+        "The logo, colours and the small print at the foot of documents are set in Studio › Brand."
+      ],
+      "related": [
+        "add-a-location"
+      ]
+    },
+    {
+      "slug": "add-a-location",
+      "title": "Add a second shop or warehouse",
+      "summary": "Add a place. Stock, numbers and people can then be kept for each place.",
+      "page": "/admin/locations",
+      "steps": [
+        {
+          "lead": "Press Add location",
+          "rest": "on Locations."
+        },
+        {
+          "lead": "Give it a name and its address.",
+          "rest": "The address prints on documents made at this place."
+        },
+        {
+          "lead": "Set its currency, language, time zone and date format,",
+          "rest": "and its working hours, day by day."
+        },
+        {
+          "lead": "Press Create.",
+          "rest": "The place is listed, and can be chosen on documents, stock and people's access."
+        }
+      ],
+      "related": [
+        "switch-on-an-industry-pack"
+      ]
+    },
+    {
+      "slug": "switch-on-an-industry-pack",
+      "title": "Switch on the features for your kind of business",
+      "summary": "An industry pack adds the pages, words and starting settings a kind of business needs, at the places that do that work.",
+      "page": "/packs",
+      "steps": [
+        {
+          "lead": "Find the pack",
+          "rest": "under Add a pack, and press See what it adds."
+        },
+        {
+          "lead": "Choose where it should be on:",
+          "rest": "every place, only the places you choose, or off everywhere."
+        },
+        {
+          "lead": "Tick the places",
+          "rest": "it runs at. Each says when it suits the pack."
+        },
+        {
+          "lead": "Press Turn on",
+          "rest": "with the pack's name. Its pages appear in the menu for people at those places."
+        }
+      ],
+      "tips": [
+        "Turning a pack off hides it and keeps every record.",
+        "Where two packs name the same thing differently, choose the word on Your words.",
+        "When an update is ready, the pack says so. An update only replaces a setting nobody changed."
+      ],
+      "related": [
+        "add-a-location",
+        "change-how-a-document-behaves"
+      ]
+    },
+    {
+      "slug": "verify-your-business",
+      "title": "Verify your business to open wallets",
+      "summary": "Wallets, receiving accounts, payouts and bill payments open once the business and its directors are checked.",
+      "page": "/admin/verification",
+      "steps": [
+        {
+          "lead": "Press Switch on wallets",
+          "rest": "if wallets are not on yet."
+        },
+        {
+          "lead": "Enter the registration (RC) number and press Save the number.",
+          "rest": "Then press Check with the registry."
+        },
+        {
+          "lead": "See the registered name and directors",
+          "rest": "filled in for you."
+        },
+        {
+          "lead": "Check each director.",
+          "rest": "Press Check with BVN or NIN and enter their 11 digits."
+        },
+        {
+          "lead": "Attach documents",
+          "rest": "from Drive: the registration certificate, identification and proof of address."
+        }
+      ],
+      "tips": [
+        "In review means a check is with the registry and has not answered. It is not a failure: do not ask again. The page updates by itself.",
+        "Needs attention means a check did not match. Read the reason under the item, correct the number or the name, then press Check again.",
+        "Once a number has been used for a check, only its last four digits are shown."
+      ]
+    },
+    {
+      "slug": "set-the-look-for-everyone",
+      "title": "Set how the app looks for everyone",
+      "summary": "Choose the brand colour, colour mode, density and font, and which of them people may change for themselves.",
+      "page": "/admin/appearance",
+      "steps": [
+        {
+          "lead": "Choose a colour",
+          "rest": "or type its code."
+        },
+        {
+          "lead": "Check the contrast line.",
+          "rest": "It says if text on it would be hard to read."
+        },
+        {
+          "lead": "Turn on People may choose their own",
+          "rest": "beside the colour mode, density or font you want to leave to each person."
+        },
+        {
+          "lead": "Press Save.",
+          "rest": "Everyone sees it at once."
+        }
+      ],
+      "tips": [
+        "The count beside each setting says how many people already chose their own."
+      ]
+    },
+    {
+      "slug": "change-invoice-numbers",
+      "title": "Change how invoice numbers look",
+      "summary": "Change the parts of a number and when the count starts again. Numbers already issued keep theirs.",
+      "page": "/admin/numbering",
+      "steps": [
+        {
+          "lead": "Open the document's series",
+          "rest": "on Number series, such as invoices."
+        },
+        {
+          "lead": "Say where it applies:",
+          "rest": "all places, or Add numbers for one place to give a place its own."
+        },
+        {
+          "lead": "Build the number.",
+          "rest": "Add a part for your own letters, the year, the month or a place code, and move them into order. The preview changes as you type."
+        },
+        {
+          "lead": "Choose when the count starts again:",
+          "rest": "never, each year, each month or each day."
+        },
+        {
+          "lead": "Press Save series.",
+          "rest": "The next document is numbered the new way."
+        }
+      ],
+      "tips": [
+        "Numbers already issued do not change. Nothing is renumbered.",
+        "A number is never issued twice. A series that starts again each year must show the year in it."
+      ]
+    },
+    {
+      "slug": "change-how-a-document-behaves",
+      "title": "Change how a document behaves",
+      "summary": "Each kind of document is a set of questions: approvals, prices, what it may be made from. Answer them for your business.",
+      "page": "/admin/document-settings",
+      "steps": [
+        {
+          "lead": "Press Start guided setup,",
+          "rest": "or open the kind of document you want to change, or search all the settings."
+        },
+        {
+          "lead": "Read each question in plain words,",
+          "rest": "with an example from your own answers, and choose. The recommended answer is marked."
+        },
+        {
+          "lead": "Press Save changes.",
+          "rest": "Documents follow it from then on."
+        }
+      ],
+      "tips": [
+        "Start from a preset sets many answers at once. Press See what changes before Apply. Most businesses pick Balanced.",
+        "A setting can be set for one place, where it says so. A place follows the organisation for everything it leaves alone.",
+        "Changed from the default lists what you changed. Reset takes one back."
+      ],
+      "related": [
+        "change-invoice-numbers"
+      ]
+    },
+    {
+      "slug": "set-up-the-weekly-digest",
+      "title": "Choose who gets the weekly digest",
+      "summary": "The weekly summary of your business goes to your team unless they say no. Choose who, when and what is in it.",
+      "page": "/settings/notifications/digest",
+      "steps": [
+        {
+          "lead": "Under Who gets it, turn on the roles.",
+          "rest": "People who join later with them get it too."
+        },
+        {
+          "lead": "Choose the day and the time.",
+          "rest": "Each person gets it in their own time zone."
+        },
+        {
+          "lead": "Press Save changes,",
+          "rest": "then Apply to current people to switch on those already here."
+        },
+        {
+          "lead": "Press Send a test to me.",
+          "rest": "It reaches you the way the team would get it."
+        }
+      ],
+      "tips": [
+        "Changing the default does not undo the choices people made for themselves.",
+        "Milestones are quiet notes when something real happens, like a first sale. They are set beside the digest."
+      ]
+    },
+    {
+      "slug": "route-conversations",
+      "title": "Choose who gets each conversation",
+      "summary": "Routing rules give a new conversation to a person or a team, and can set its priority, status and tags.",
+      "page": "/admin/routing",
+      "steps": [
+        {
+          "lead": "Press New rule",
+          "rest": "on Routing, and give it a name."
+        },
+        {
+          "lead": "Say which new conversations it takes,",
+          "rest": "such as those that come in by a channel or account, or say certain words."
+        },
+        {
+          "lead": "Choose who to give it to:",
+          "rest": "a person, or a team as a whole, each in turn, or whoever has least open."
+        },
+        {
+          "lead": "Set the priority, status and tags",
+          "rest": "if it should change them, then tick In use."
+        },
+        {
+          "lead": "Press Save rule.",
+          "rest": "Try it shows which rules a message would meet before it arrives."
+        }
+      ],
+      "tips": [
+        "Rules run in order. Let the rules after this one add to it lets a later rule add its tags too.",
+        "How fast each conversation must be answered is set in Service levels."
+      ]
+    },
+    {
+      "slug": "join-the-network",
+      "title": "Join the trading network",
+      "summary": "Turn the network on, set what partners see about you, and send your documents for verification.",
+      "page": "/admin/network",
+      "steps": [
+        {
+          "lead": "Turn on Use the network.",
+          "rest": "Your business gets a network ID."
+        },
+        {
+          "lead": "Fill in the names and numbers partners see,",
+          "rest": "your contact and address, and the addresses people can find you by."
+        },
+        {
+          "lead": "Choose the documents you send and accept,",
+          "rest": "then press Save the profile."
+        },
+        {
+          "lead": "Press Start a verification request",
+          "rest": "on the verification tab, attach each document asked for, and send it for review."
+        }
+      ],
+      "after": "Once verified, other verified businesses can find you and ask to connect. The verified tag is lost if the legal name or a number changes, until it is checked again."
+    }
+  ]
+}

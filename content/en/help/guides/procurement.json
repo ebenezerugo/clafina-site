@@ -1,0 +1,257 @@
+{
+  "kind": "help-module",
+  "module": "procurement",
+  "sources": [
+    "commerce-api/documentation/PROCUREMENT.md",
+    "commerce-web/src/app/features/procurement/presentation",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Buying, from someone asking for something to the goods on your shelf: requisitions, requests for quote, purchase orders, goods received, inspections and returns. Each step is its own document; a later one can start from an earlier one, or stand alone.",
+  "start": [
+    "Add the suppliers you buy from in Buy › Suppliers, with their terms.",
+    "Make a requisition for what is needed and send it for approval.",
+    "Turn the approved requisition into a purchase order and send it to the supplier.",
+    "Receive the goods against the order when they arrive. They go into stock once the receipt is approved."
+  ],
+  "articles": [
+    {
+      "slug": "ask-to-buy-something",
+      "title": "Ask for something to be bought",
+      "summary": "Make a requisition for what is needed, where and roughly what it costs. Nothing is ordered until someone approves it.",
+      "page": "/procurement/requisitions",
+      "steps": [
+        {
+          "lead": "Press New requisition",
+          "rest": "on Requisitions."
+        },
+        {
+          "lead": "Say what it is for:",
+          "rest": "the place the goods are wanted at, and the currency."
+        },
+        {
+          "lead": "Add what is wanted,",
+          "rest": "with quantities and an estimated price on each line. Name a preferred supplier if you have one."
+        },
+        {
+          "lead": "Press Save and send for approval.",
+          "rest": "Or press Save as draft to finish it later."
+        },
+        {
+          "lead": "Once it is approved,",
+          "rest": "press Ask for quotes to get prices, or Make an order to buy straight away."
+        }
+      ],
+      "tips": [
+        "With no approval policy and more than one person in the organisation, someone other than the person who asked approves it.",
+        "A requisition can only be changed while it is a draft."
+      ],
+      "related": [
+        "get-quotes-from-suppliers",
+        "make-a-purchase-order"
+      ]
+    },
+    {
+      "slug": "get-quotes-from-suppliers",
+      "title": "Get quotes from suppliers and choose one",
+      "summary": "Ask several suppliers to price the same items, compare their quotes side by side and award one. The order is then made for that supplier.",
+      "page": "/procurement/rfqs",
+      "steps": [
+        {
+          "lead": "Press New request for quote,",
+          "rest": "or Ask for quotes on an approved requisition."
+        },
+        {
+          "lead": "Give it a title,",
+          "rest": "the place the goods are wanted, the date quotes are due by and what suppliers should price. Press Save as draft."
+        },
+        {
+          "lead": "Press Send for approval.",
+          "rest": "With no approval policy, it is approved at once."
+        },
+        {
+          "lead": "Press Send to suppliers.",
+          "rest": "Under Suppliers asked, choose each supplier and press Ask them. Each gets a link of their own."
+        },
+        {
+          "lead": "Press Enter their quote",
+          "rest": "when a supplier sends prices by email or phone: a price for every item, how long they take to deliver and their payment terms."
+        },
+        {
+          "lead": "Compare the quotes.",
+          "rest": "Compare quotes shows each supplier's price for each item, the lowest and highest, and how each compares with what you last paid."
+        },
+        {
+          "lead": "Press Choose",
+          "rest": "on the quote you want, then Award. If it is not the lowest, say why. The other quotes are set aside."
+        },
+        {
+          "lead": "Press Make the order.",
+          "rest": "A purchase order opens for that supplier, at their prices."
+        }
+      ],
+      "tips": [
+        "Shortlist the quotes you like before you choose one.",
+        "If no quote suits you, press Close without awarding."
+      ],
+      "related": [
+        "ask-to-buy-something",
+        "make-a-purchase-order"
+      ]
+    },
+    {
+      "slug": "make-a-purchase-order",
+      "title": "Order from a supplier",
+      "summary": "Make the purchase order, send it to the supplier, and follow what has arrived and what is late.",
+      "page": "/procurement/orders",
+      "steps": [
+        {
+          "lead": "Press New purchase order,",
+          "rest": "or Make an order on an approved requisition."
+        },
+        {
+          "lead": "Choose the supplier",
+          "rest": "and the place the goods are received at."
+        },
+        {
+          "lead": "Set the dates and the money:",
+          "rest": "ordered on, expected by and the currency."
+        },
+        {
+          "lead": "Add what you are buying.",
+          "rest": "Each line shows the supplier's list price, and what your settings allow you to change."
+        },
+        {
+          "lead": "Press Save and send.",
+          "rest": "With an approval policy, or a second person to approve it, it waits for approval first. Approved, it is sent."
+        },
+        {
+          "lead": "Share it with the supplier",
+          "rest": "as a PDF, by email or as a link."
+        }
+      ],
+      "after": "The order shows what has been received, billed and is still to come, line by line. An order still waiting for goods after its expected date shows as late.",
+      "tips": [
+        "Make a copy of an order you place often, from the order's menu.",
+        "Close an order when nothing more will come; cancel it if it should never have gone out."
+      ],
+      "related": [
+        "receive-goods",
+        "get-quotes-from-suppliers"
+      ]
+    },
+    {
+      "slug": "receive-goods",
+      "title": "Receive goods from a supplier",
+      "summary": "Count what came in against the order. The goods go into stock when the receipt is approved, and the bill can follow from it.",
+      "page": "/procurement/grns",
+      "steps": [
+        {
+          "lead": "Press Receive goods",
+          "rest": "on the order, or on Goods received for goods that came without one, where your settings allow it."
+        },
+        {
+          "lead": "Say who delivered, and where to:",
+          "rest": "the place it was received at, the day, who took delivery and the delivery note number."
+        },
+        {
+          "lead": "Enter what came.",
+          "rest": "Count each line in any unit of the item, such as boxes or each. Add a batch or expiry where the item needs one."
+        },
+        {
+          "lead": "Press Save and receive.",
+          "rest": "Nothing is counted into stock until you do. With an approval policy, it waits for an approver."
+        },
+        {
+          "lead": "Once it is approved,",
+          "rest": "the goods are in stock and the order shows them as received. Press Bill it to enter the supplier's bill."
+        }
+      ],
+      "tips": [
+        "You cannot receive more than the order asked for, beyond the allowance in your settings.",
+        "The Not yet billed tab lists receipts still waiting for the supplier's bill."
+      ],
+      "related": [
+        "check-goods-that-arrived",
+        "return-goods-to-a-supplier"
+      ]
+    },
+    {
+      "slug": "check-goods-that-arrived",
+      "title": "Check the quality of goods that arrived",
+      "summary": "Inspect an approved receipt, record what passed and what failed, and say what happens to the rejected goods.",
+      "page": "/procurement/inspections",
+      "steps": [
+        {
+          "lead": "Press Inspect",
+          "rest": "on an approved receipt, or Inspect goods on Inspections."
+        },
+        {
+          "lead": "Say how many of each item you inspected",
+          "rest": "and how many you rejected."
+        },
+        {
+          "lead": "For rejected goods, choose what happens to them",
+          "rest": "(return, rework, scrap or quarantine) and why."
+        },
+        {
+          "lead": "Press Save and complete.",
+          "rest": "Once complete, it is final."
+        },
+        {
+          "lead": "Press Return rejected goods",
+          "rest": "to send them back. The return fills in from the rejected lines."
+        }
+      ],
+      "tips": [
+        "An inspection moves no stock: what was received is already in stock. Rejected goods leave by a return to the supplier, or a stock adjustment for scrap."
+      ],
+      "related": [
+        "receive-goods",
+        "return-goods-to-a-supplier"
+      ]
+    },
+    {
+      "slug": "return-goods-to-a-supplier",
+      "title": "Send goods back to a supplier",
+      "summary": "Make a return with the reason, and once it is approved, send a debit note to ask for their credit.",
+      "page": "/procurement/returns",
+      "steps": [
+        {
+          "lead": "Press Return goods",
+          "rest": "on the receipt, or Return goods on Returns to suppliers."
+        },
+        {
+          "lead": "Choose what goes back",
+          "rest": "and how many. You cannot send back more than came on the receipt."
+        },
+        {
+          "lead": "Give the reason.",
+          "rest": "It is printed on the return note the driver takes back."
+        },
+        {
+          "lead": "Press Send for approval.",
+          "rest": "Stock only changes when the return is approved. Then the goods leave stock, at what they cost on the receipt."
+        },
+        {
+          "lead": "Press Make a debit note",
+          "rest": "on the approved return. It lists what went back, at cost, with VAT."
+        },
+        {
+          "lead": "Press Send",
+          "rest": "on the debit note. The supplier gets it by email, with the return note if you tick it."
+        },
+        {
+          "lead": "Press Link their credit note",
+          "rest": "when it comes. Once their credit notes cover it, the debit note and the return show as credited."
+        }
+      ],
+      "tips": [
+        "A debit note posts nothing. Their credit note, entered under Finance › Adjustments, is what lowers what you owe them."
+      ],
+      "related": [
+        "check-goods-that-arrived",
+        "receive-goods"
+      ]
+    }
+  ]
+}

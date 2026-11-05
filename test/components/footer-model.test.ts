@@ -19,10 +19,11 @@ describe('footer model', () => {
   });
   it('drops pages that do not exist yet, and empty columns', () => {
     const cols = footerModel('preview').columns;
-    expect(cols.map((c) => c.id)).toEqual(['product', 'industries', 'company']);
+    expect(cols.map((c) => c.id)).toEqual(['product', 'industries', 'resources', 'company']);
     expect(cols[0]!.items).toHaveLength(25); // platform, 22 products, pricing, compare
     expect(cols[1]!.items).toHaveLength(18); // the index and 17 stories
-    expect(cols[2]!.items).toEqual(['contact-sales', 'demo']);
+    expect(cols[2]!.items).toEqual(['help']);
+    expect(cols[3]!.items).toEqual(['contact-sales', 'demo']);
   });
   it('shows socials, badges and company lines only once they are set', () => {
     const m = footerModel('preview');

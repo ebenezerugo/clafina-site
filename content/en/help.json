@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "Help centre · Clafina",
+    "description": "The complete guide to Clafina: every module and every page, step by step, in the words the app uses."
+  },
+  "hero": {
+    "eyebrow": "Help centre",
+    "title": "How do you want to get it done?",
+    "lede": "The guide to every part of Clafina, in the same words and the same order as the app's own menu. Search for a task, or open the part of the business you work in.",
+    "search": "Search the guide, for example: send an invoice"
+  },
+  "startTitle": "New to Clafina? Start here",
+  "moduleStart": "Getting started",
+  "stepsTitle": "Steps",
+  "beforeTitle": "Before you start",
+  "tipsTitle": "Good to know",
+  "relatedTitle": "Related",
+  "start": [
+    "Sign up and create your organisation with its first location. Your books start ready: your currency, a chart of accounts for your country and the current year.",
+    "Add your products and their prices in Products.",
+    "Invite your team from People and access, and give each person a role.",
+    "Make your first sale: an invoice in Sales, or a sale at the till.",
+    "Open the Dashboard each morning: how the business is doing today, and what needs you."
+  ],
+  "questionsTitle": "Questions people ask",
+  "sectionsTitle": "Every part of Clafina",
+  "pagesLabel": "pages",
+  "articlesLabel": "how-tos",
+  "openInApp": "Open in Clafina",
+  "onThisPage": "In this guide",
+  "everyPage": "Every page, in the menu's order",
+  "howTo": "How to",
+  "words": "Words on this page",
+  "numbers": "How the numbers are worked out",
+  "noResults": "Nothing matches yet. Try fewer words, or open the part of Clafina below.",
+  "stillStuck": {
+    "title": "Still stuck?",
+    "body": "In the app, press Help on any page. It explains that page, lets you ask the Assistant, and sends a case to our team with what you were looking at."
+  }
+}

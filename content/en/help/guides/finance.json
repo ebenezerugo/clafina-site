@@ -1,0 +1,656 @@
+{
+  "kind": "help-module",
+  "module": "finance",
+  "sources": [
+    "commerce-api/documentation/FINANCE.md",
+    "commerce-api/documentation/FINANCE_MANAGEMENT.md",
+    "commerce-api/documentation/WALLET_BILLS.md",
+    "commerce-api/documentation/WALLET_CARDS.md",
+    "commerce-api/documentation/WALLET_FOREIGN_ACCOUNTS.md",
+    "commerce-api/documentation/BUSINESS_INTELLIGENCE.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Where your money is, every movement of it, and the books it is kept in: paying people with approval, money coming in, banks and reconciliation, budgets, journal entries, closing the month and the reports. Money paid or received is never deleted; a mistake is reversed, with the reason kept.",
+  "start": [
+    "Check your books in Finance › Books and posting: the base currency, the month your year starts, and bring in opening balances from your old records.",
+    "Add every bank, cash and wallet account in Financial accounts, so balances and payments have somewhere to come from.",
+    "Add the people you pay in Beneficiaries, and have their accounts approved.",
+    "Import your latest bank statement, then reconcile it, so the books and the bank agree from the start."
+  ],
+  "articles": [
+    {
+      "slug": "ask-to-pay-someone",
+      "title": "Ask to pay someone, and get it approved",
+      "summary": "Write a payment request for a supplier's invoices or anything else, have it approved, then pay it now, on a date, or by hand.",
+      "page": "/finance/spend/payment-requests",
+      "before": [
+        "The person you pay needs an approved account in Beneficiaries."
+      ],
+      "steps": [
+        {
+          "lead": "Press Ask to pay",
+          "rest": "on Payment requests."
+        },
+        {
+          "lead": "Choose what it is for and who it goes to.",
+          "rest": "For a supplier, tick the invoices still owed and say how much each one settles, withholds or takes as a discount."
+        },
+        {
+          "lead": "Choose Into, How and From:",
+          "rest": "their account, the way it is paid, and the account it leaves. What is paid is worked out for you."
+        },
+        {
+          "lead": "Press Submit for approval.",
+          "rest": "If it looks like a payment already asked for, say why it is not a duplicate. You never approve your own request."
+        },
+        {
+          "lead": "Once approved, pay it:",
+          "rest": "Pay now, Pay on a date…, or Record as paid by hand with the bank's reference."
+        },
+        {
+          "lead": "Confirm it was paid",
+          "rest": "for a payment made by hand. Someone other than whoever recorded it confirms it."
+        }
+      ],
+      "after": "Paid, it is settled in the books and the person paid is emailed a remittance advice.",
+      "tips": [
+        "If the payment gives no answer, it shows as unknown. Press Verify with the provider: it is never sent twice.",
+        "Money the bank sends back? Press It came back. The invoices are owed again."
+      ],
+      "related": [
+        "add-a-beneficiary",
+        "pay-many-at-once"
+      ]
+    },
+    {
+      "slug": "add-a-beneficiary",
+      "title": "Add someone you pay, and their bank account",
+      "summary": "Save a supplier, member of staff or anyone else you pay, with an account checked with the bank and approved before it is used.",
+      "page": "/finance/spend/beneficiaries",
+      "steps": [
+        {
+          "lead": "Press Add a beneficiary",
+          "rest": "and choose the kind and who it is, or type a name for someone else."
+        },
+        {
+          "lead": "Press Add an account",
+          "rest": "on the beneficiary, and enter the bank and account number."
+        },
+        {
+          "lead": "Press Check with the bank.",
+          "rest": "The name the bank holds is shown beside the name you gave."
+        },
+        {
+          "lead": "Press Save the account.",
+          "rest": "If the names differ, or no bank could check it, say why. It is paid only once it is approved."
+        }
+      ],
+      "tips": [
+        "An account is never edited. Use Change to another account; the old one retires when the new one is approved.",
+        "Only the last four digits are shown, unless you have permission to see the whole number."
+      ]
+    },
+    {
+      "slug": "pay-many-at-once",
+      "title": "Pay many approved payments in one run",
+      "summary": "Put approved payments from one account into a batch, have it approved once, and pay it or write the bank file.",
+      "page": "/finance/spend/batches",
+      "steps": [
+        {
+          "lead": "Press New batch",
+          "rest": "on Payment batches. Give it a name and choose how it is paid."
+        },
+        {
+          "lead": "Tick the approved payments.",
+          "rest": "They are grouped by the account they are paid from, and the total adds up as you tick."
+        },
+        {
+          "lead": "Press Submit for approval.",
+          "rest": "The run is approved once, by someone other than you."
+        },
+        {
+          "lead": "Press Pay it,",
+          "rest": "or Write the bank file to upload at your bank yourself."
+        },
+        {
+          "lead": "Mark each line Paid or Not paid",
+          "rest": "as the bank reports, or press All paid, as the bank reports."
+        }
+      ],
+      "tips": [
+        "To pay suppliers' bills straight from what is due, press Pay bills and tick the bills.",
+        "Before anything is paid, Call it off frees its payments again."
+      ],
+      "related": [
+        "ask-to-pay-someone"
+      ]
+    },
+    {
+      "slug": "set-up-a-recurring-payment",
+      "title": "Pay rent or a subscription every month",
+      "summary": "A recurring payment raises a payment request ahead of each date, approved once as a standing order.",
+      "page": "/finance/spend/recurring",
+      "steps": [
+        {
+          "lead": "Press New recurring payment",
+          "rest": "on Recurring payments."
+        },
+        {
+          "lead": "Choose the beneficiary, what it is for and the amount,",
+          "rest": "with the account it is paid from and how."
+        },
+        {
+          "lead": "Choose how often and when:",
+          "rest": "every month on a day, from a start date, and when it ends. The next dates are shown before you save."
+        },
+        {
+          "lead": "Choose what happens then:",
+          "rest": "leave each request for review, submit it, or carry it through under this approval."
+        },
+        {
+          "lead": "Press Submit for approval.",
+          "rest": "Once approved, it raises a request on each date, once."
+        }
+      ],
+      "tips": [
+        "Pause it, Skip the next date or End it from its page. Changing the amount or dates sends it back for approval.",
+        "All recurring shows every repeating payment, invoice and bill, and What falls when shows them month by month."
+      ]
+    },
+    {
+      "slug": "approve-and-repay-expenses",
+      "title": "Approve a staff expense claim and pay it back",
+      "summary": "Approve or send back what staff spent for the business. Approved, it is booked and the person is repaid through a payment request.",
+      "page": "/finance/spend/expenses",
+      "before": [
+        "Set your categories and policies on the Categories and policies tab: the expense account each posts to, limits, and when a receipt is needed."
+      ],
+      "steps": [
+        {
+          "lead": "Open the Claims tab",
+          "rest": "and open a claim. You see each line, its receipt, and anything past the policy."
+        },
+        {
+          "lead": "Open the claim's Actions",
+          "rest": "and choose Approve, or Send back with why. You never approve your own claim."
+        },
+        {
+          "lead": "Approved, it is posted to the books",
+          "rest": "and what the person is owed becomes a payment request to repay them."
+        },
+        {
+          "lead": "Choose Ask to reimburse",
+          "rest": "if the claim is waiting, for example because the person had no approved account yet."
+        }
+      ],
+      "after": "When the payment request is paid, the claim shows as reimbursed.",
+      "tips": [
+        "Staff make claims from My expenses › New claim.",
+        "Cash advances are on their own tab: approve, issue, and record cash handed back."
+      ]
+    },
+    {
+      "slug": "pay-a-bill-from-a-wallet",
+      "title": "Pay airtime, data, electricity or cable TV from a wallet",
+      "summary": "Pay a bill from one of your wallets, see the fee before you confirm, and keep the receipt and any token.",
+      "page": "/finance/spend/bills",
+      "before": [
+        "Your business must be verified for wallets, under Settings › Organisation › Verification."
+      ],
+      "steps": [
+        {
+          "lead": "Press Pay a bill",
+          "rest": "and choose the wallet and what you are paying."
+        },
+        {
+          "lead": "Fill in the details.",
+          "rest": "For electricity and government payments, press Check to see whose number it is and what is owed."
+        },
+        {
+          "lead": "Review.",
+          "rest": "You see the amount, the fee, the total and what the wallet will have after."
+        },
+        {
+          "lead": "Press Pay.",
+          "rest": "If the connection drops, press Check status: it is never paid twice."
+        }
+      ],
+      "tips": [
+        "Processing means the network has not answered yet. The money stays held; do not pay again.",
+        "To find an electricity token, open the row's Actions and choose View receipt."
+      ],
+      "related": [
+        "categorise-card-and-bill-spending"
+      ]
+    },
+    {
+      "slug": "issue-a-card",
+      "title": "Give a team member a virtual card",
+      "summary": "Issue a card for a budget, put money on it, set its limits, and freeze it if it is lost.",
+      "page": "/finance/spend/cards",
+      "steps": [
+        {
+          "lead": "Press Issue a card",
+          "rest": "and choose the wallet the card draws on and the member who holds it."
+        },
+        {
+          "lead": "Add what it is for,",
+          "rest": "a budget line if you use one, and any limits."
+        },
+        {
+          "lead": "Review.",
+          "rest": "You see the fee, the total and what the wallet will have after."
+        },
+        {
+          "lead": "Press Issue the card.",
+          "rest": "If the connection drops, press Check status: the card is never issued twice."
+        },
+        {
+          "lead": "Put money on it:",
+          "rest": "open the row's Actions and choose Put money on. Take money back gives it back to the wallet."
+        }
+      ],
+      "tips": [
+        "Lost card? Open the row's Actions and choose Freeze. Unfreeze to use it again.",
+        "Show card details reveals the number, code and expiry, and hides them again after a minute."
+      ],
+      "related": [
+        "categorise-card-and-bill-spending"
+      ]
+    },
+    {
+      "slug": "categorise-card-and-bill-spending",
+      "title": "Put card and bill spending in an expense account",
+      "summary": "Each card payment and bill becomes an expense to categorise and keep a receipt for. Team members see their own.",
+      "page": "/finance/spend/company-expenses",
+      "steps": [
+        {
+          "lead": "Open the row's Actions",
+          "rest": "on an expense to categorise, and choose Categorise."
+        },
+        {
+          "lead": "Choose the expense account",
+          "rest": "and add a note if you want."
+        },
+        {
+          "lead": "Attach the receipt.",
+          "rest": "Upload a file or attach one from Drive."
+        }
+      ]
+    },
+    {
+      "slug": "identify-money-that-came-in",
+      "title": "Find out whose money came in",
+      "summary": "Record money that arrived with no known payer, then match it to a customer's invoices, classify it, or send it back.",
+      "page": "/finance/receive/unidentified",
+      "steps": [
+        {
+          "lead": "Press Record money in,",
+          "rest": "with where it landed, when, the amount, and the reference, sender or narration as the statement shows it."
+        },
+        {
+          "lead": "Open its Actions and choose Identify as a customer's.",
+          "rest": "Who it may be from lists customers, surest first, with the reasons. Press Use on one, or find the customer."
+        },
+        {
+          "lead": "Say what it settles.",
+          "rest": "Oldest invoices fill in first; add any tax withheld, a small amount written off, or what the bank kept."
+        },
+        {
+          "lead": "Press Record.",
+          "rest": "The customer's receipt is made and posted. Anything left is credit on their account."
+        }
+      ],
+      "tips": [
+        "Not a customer's? Classify as another receipt, or Return to the payer with the reference of the transfer back.",
+        "Hand on gives it to a colleague, and Add a note keeps what was tried."
+      ],
+      "related": [
+        "reconcile-a-bank-account"
+      ]
+    },
+    {
+      "slug": "add-a-financial-account",
+      "title": "Add a bank, cash or wallet account",
+      "summary": "Add every place money is held, with a minimum balance and what is restricted, and see what is really available.",
+      "page": "/finance/treasury/accounts",
+      "steps": [
+        {
+          "lead": "Press Add an account",
+          "rest": "on Financial accounts."
+        },
+        {
+          "lead": "Choose the kind:",
+          "rest": "bank, cash, petty cash, mobile money, wallet or card. The fields follow the kind."
+        },
+        {
+          "lead": "Fill in its name, currency and details.",
+          "rest": "A card is kept by its last four digits only."
+        },
+        {
+          "lead": "Choose its ledger account,",
+          "rest": "or let it make one of its own. Add a minimum balance and what is restricted if you want."
+        },
+        {
+          "lead": "Press Add account.",
+          "rest": "Its card shows what is available, the book balance and what the bank last said."
+        }
+      ],
+      "tips": [
+        "Available is the book balance, less what is restricted and what is on its way out.",
+        "A changed restricted amount or minimum needs a reason, and goes in the audit trail."
+      ]
+    },
+    {
+      "slug": "move-money-between-accounts",
+      "title": "Move money between your own accounts",
+      "summary": "Move money between banks, pay cash into the bank or draw it out, and confirm each side against its statement.",
+      "page": "/finance/transfers",
+      "steps": [
+        {
+          "lead": "Press New transfer",
+          "rest": "on Transfers and choose the kind."
+        },
+        {
+          "lead": "Choose the accounts it leaves and arrives in,",
+          "rest": "the amount, and the bank's fee if any. Across currencies, say what arrives."
+        },
+        {
+          "lead": "Press Ask for the transfer.",
+          "rest": "Where a policy says so, an approver says yes first."
+        },
+        {
+          "lead": "Choose Send it",
+          "rest": "when the bank has it, with the bank's reference. The money moves into cash in transit."
+        },
+        {
+          "lead": "Choose It arrived",
+          "rest": "when it reaches the other account, and Its leaving is on the statement when the bank shows it."
+        }
+      ],
+      "tips": [
+        "A transfer is never counted as money in or out.",
+        "It failed before it arrived? Mark it failed, and the money is back in the account it left."
+      ]
+    },
+    {
+      "slug": "import-a-bank-statement",
+      "title": "Import a bank statement",
+      "summary": "Bring in your bank's file, check it adds up, and add only the lines that are new.",
+      "page": "/finance/statements",
+      "steps": [
+        {
+          "lead": "Press Import a statement",
+          "rest": "and choose the account and the bank's file."
+        },
+        {
+          "lead": "For a spreadsheet file, choose its column mapping,",
+          "rest": "or press Add a column mapping and say which column holds the date, description and amounts."
+        },
+        {
+          "lead": "Check the preview.",
+          "rest": "It shows the lines, which are new, the balances, and whether it adds up."
+        },
+        {
+          "lead": "Press Import the lines.",
+          "rest": "Lines already brought in are left out, so an overlapping file is safe."
+        }
+      ],
+      "tips": [
+        "If the file has no closing balance, copy it from the bank's statement when asked."
+      ],
+      "related": [
+        "reconcile-a-bank-account"
+      ]
+    },
+    {
+      "slug": "reconcile-a-bank-account",
+      "title": "Reconcile a bank account",
+      "summary": "Match the statement to the books line by line, settle what differs, and have someone else approve it.",
+      "page": "/finance/reconciliation",
+      "before": [
+        "Import the statement first, on Statements."
+      ],
+      "steps": [
+        {
+          "lead": "Press Reconcile an account,",
+          "rest": "choose the account and the statement's last day. For the first one, give the start and the opening balance."
+        },
+        {
+          "lead": "Press Start, and match by rule.",
+          "rest": "Lines with the same reference, amount and date are matched for you."
+        },
+        {
+          "lead": "Match the rest by hand.",
+          "rest": "Under To match, choose statement lines and book entries side by side and press Match selected, with why."
+        },
+        {
+          "lead": "Press Find exceptions, then resolve each one:",
+          "rest": "post an adjustment such as bank charges, record it as money to identify, or mark it a timing difference or accepted."
+        },
+        {
+          "lead": "Press Submit for approval",
+          "rest": "once the difference is nothing. Someone else presses Approve and lock, and the account is locked through that day."
+        }
+      ],
+      "tips": [
+        "Reopen it, with a reason, to change anything. The lock lifts with it.",
+        "Download the report for your records."
+      ]
+    },
+    {
+      "slug": "open-a-foreign-account",
+      "title": "Get paid in dollars, euros or pounds",
+      "summary": "Open an account that receives a foreign currency into a wallet in that currency, and share its details with the payer.",
+      "page": "/finance/wallets/foreign-accounts",
+      "before": [
+        "You need a wallet in that currency. Open one on Wallets with New wallet."
+      ],
+      "steps": [
+        {
+          "lead": "Press Open a foreign account",
+          "rest": "and choose the currency."
+        },
+        {
+          "lead": "Choose the wallet that holds it.",
+          "rest": "It must be a wallet in that currency. For euros, choose the country too."
+        },
+        {
+          "lead": "Review and open.",
+          "rest": "The details to share appear as soon as it is open."
+        },
+        {
+          "lead": "Send your details to the payer:",
+          "rest": "open the row's Actions, choose Show details to share, then Copy all or Share."
+        }
+      ],
+      "tips": [
+        "Accounts can receive US dollars, euros, pounds, cedis and Kenyan shillings.",
+        "Opening means it is being set up. The details appear by themselves."
+      ]
+    },
+    {
+      "slug": "write-a-journal-entry",
+      "title": "Write a journal entry",
+      "summary": "Write debits and credits straight into the books, check them before you send, and have the entry approved and posted.",
+      "page": "/finance/journals",
+      "steps": [
+        {
+          "lead": "Press New entry",
+          "rest": "on Journal entries."
+        },
+        {
+          "lead": "Give the date and why,",
+          "rest": "in a sentence the approver reads."
+        },
+        {
+          "lead": "Add the lines.",
+          "rest": "Each is a debit or a credit on an account, never both, and there are at least two."
+        },
+        {
+          "lead": "Read Check before you send.",
+          "rest": "It says whether the entry balances, the period is open and every account takes postings."
+        },
+        {
+          "lead": "Press Save and send for approval,",
+          "rest": "or Save as draft. With no approver needed, it is approved on sending."
+        },
+        {
+          "lead": "Press Post",
+          "rest": "once it is approved. It is in the ledger and every report."
+        }
+      ],
+      "tips": [
+        "A posted entry is not changed: Reverse the entry makes one with debits and credits swapped.",
+        "Make it recur repeats a posted entry on a schedule, after approval."
+      ]
+    },
+    {
+      "slug": "make-a-credit-or-debit-note",
+      "title": "Make a credit or debit note",
+      "summary": "Take something off what a customer or supplier owes, or add to it, with the reason, applied to their invoices.",
+      "page": "/finance/adjustments",
+      "steps": [
+        {
+          "lead": "Press New note",
+          "rest": "on Credit and debit notes."
+        },
+        {
+          "lead": "Choose what kind and who it is with:",
+          "rest": "a customer or a supplier, and the reason, such as goods returned or a price corrected."
+        },
+        {
+          "lead": "Add the lines",
+          "rest": "against items, a service or ledger accounts, with tax. The totals are worked out for you."
+        },
+        {
+          "lead": "Say which invoices it applies to,",
+          "rest": "and how much to each."
+        },
+        {
+          "lead": "Press Save and send for approval,",
+          "rest": "then Post and apply once approved. A credit note takes it off what is owed; a debit note adds to it."
+        }
+      ],
+      "tips": [
+        "To pay a customer back the credit, use the posted note's Payment section."
+      ]
+    },
+    {
+      "slug": "close-a-month",
+      "title": "Close a month",
+      "summary": "Each period has a checklist. When every check passes, close it, and nothing more can be posted into it.",
+      "page": "/finance/fiscal-calendar",
+      "steps": [
+        {
+          "lead": "Open Fiscal calendar",
+          "rest": "and choose the period."
+        },
+        {
+          "lead": "Read the checklist.",
+          "rest": "Each No says what to put right, such as journals not yet posted or balances not yet revalued."
+        },
+        {
+          "lead": "Press Put it right",
+          "rest": "beside each one to open the screen that fixes it."
+        },
+        {
+          "lead": "Press Preview revaluation",
+          "rest": "if you hold foreign-currency balances, then Revalue."
+        },
+        {
+          "lead": "Press Close",
+          "rest": "with the period's name once it says Ready to close. Nothing more can be posted into it."
+        }
+      ],
+      "tips": [
+        "Close anyway… lets you close with checks still failing. A reason is needed and kept.",
+        "Once every period is closed, Close the year moves the year's profit to retained earnings."
+      ]
+    },
+    {
+      "slug": "set-a-budget",
+      "title": "Set a budget and hold spending to it",
+      "summary": "Plan a year's amount per account, get it approved, and make it active so requisitions, orders and bills are checked against it.",
+      "page": "/finance/budgets",
+      "steps": [
+        {
+          "lead": "Press New budget,",
+          "rest": "give it a name and choose the fiscal year."
+        },
+        {
+          "lead": "Add the accounts",
+          "rest": "and the amount for the year. It is spread over the months."
+        },
+        {
+          "lead": "Open Its control",
+          "rest": "and choose how it controls: only warn or block when spending goes over, at which stages, and the thresholds to tell its owner at."
+        },
+        {
+          "lead": "Press Submit for approval,",
+          "rest": "then Activate once approved. Spending is now held against it."
+        }
+      ],
+      "after": "Each line shows what is spent, committed and still available, against the budget.",
+      "tips": [
+        "To move money between lines or change one, press Revise or transfer. It is approved like the budget."
+      ]
+    },
+    {
+      "slug": "record-a-loan",
+      "title": "Record a loan and its repayments",
+      "summary": "Add money you borrowed with its rate and term. The instalments are worked out and join the cash forecast.",
+      "page": "/finance/loans",
+      "steps": [
+        {
+          "lead": "Press Add a loan",
+          "rest": "on Loans."
+        },
+        {
+          "lead": "Give the lender, the amount borrowed, the interest a year and the term,",
+          "rest": "and the day it was lent."
+        },
+        {
+          "lead": "Choose how often instalments fall and how it is repaid:",
+          "rest": "equal payments, equal principal, or interest only, with any grace period."
+        },
+        {
+          "lead": "Press Add the loan.",
+          "rest": "Its instalments are worked out, always repaying the amount borrowed exactly."
+        },
+        {
+          "lead": "Choose Mark an instalment paid",
+          "rest": "when you pay one, with the amount and the day."
+        }
+      ]
+    },
+    {
+      "slug": "run-a-finance-report",
+      "title": "Run the profit and loss or balance sheet",
+      "summary": "Profit and loss, balance sheet, cash flow, trial balance and what is owed, for any span, compared and downloaded.",
+      "page": "/finance/reports",
+      "steps": [
+        {
+          "lead": "Open Finance reports",
+          "rest": "and choose the report."
+        },
+        {
+          "lead": "Choose the span",
+          "rest": "or the day it is as at, and what to compare with if you want."
+        },
+        {
+          "lead": "Read it.",
+          "rest": "Entries in the span not yet posted are counted apart, with what profit would be once they post."
+        },
+        {
+          "lead": "Press Download",
+          "rest": "for a PDF or spreadsheet."
+        }
+      ],
+      "tips": [
+        "The VAT return checks itself against the VAT accounts. Clafina does not file for you: file it with the tax authority yourself."
+      ]
+    }
+  ]
+}

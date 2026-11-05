@@ -1,0 +1,253 @@
+{
+  "kind": "help-module",
+  "module": "products",
+  "sources": [
+    "commerce-api/documentation/CATALOGUE.md",
+    "commerce-api/documentation/UNIT_OF_MEASURE.md",
+    "commerce-web/src/app/features/products/presentation",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "Everything you sell or stock, and what it sells for. A product is the family, such as a cordless drill; each variant is the item itself, such as the blue one, with its own code, stock and price at each place.",
+  "start": [
+    "Add your first item with Add an item: a name, a price and how many you have.",
+    "If you have many items, bring them in from a spreadsheet with Import.",
+    "Add the services you charge for, such as delivery or labour, under Service items.",
+    "Check your prices on Price books, place by place, with what each item costs you and the margin."
+  ],
+  "articles": [
+    {
+      "slug": "add-an-item",
+      "title": "Add an item to sell",
+      "summary": "Three questions: what it is, what it sells for and how many you have. Everything else is decided for you, and you can change it later.",
+      "page": "/products",
+      "steps": [
+        {
+          "lead": "Press Add an item",
+          "rest": "on Products, and choose Add an item — three questions."
+        },
+        {
+          "lead": "Give it a name,",
+          "rest": "as customers know it."
+        },
+        {
+          "lead": "Enter the selling price,",
+          "rest": "and what it costs you if you want to see the margin."
+        },
+        {
+          "lead": "Enter how many you have now,",
+          "rest": "counted today, and the unit you count in."
+        },
+        {
+          "lead": "Open More details if you need them:",
+          "rest": "kinds, barcode, reorder level, wholesale price or brand. None is needed to start selling."
+        },
+        {
+          "lead": "Press Save.",
+          "rest": "It can be sold at once. Save and add another keeps the drawer open for the next one."
+        }
+      ],
+      "after": "The drawer says what it decided for you: where the stock is kept, the category, the currency, the unit and the code. Change any of it on the product.",
+      "tips": [
+        "A code (SKU) is made from the name if you leave it blank, and never the same as another item's.",
+        "To stop selling something but keep its history, archive it. Deleting retires it for good."
+      ],
+      "related": [
+        "add-a-product-with-variants",
+        "import-products"
+      ]
+    },
+    {
+      "slug": "add-a-product-with-variants",
+      "title": "Add a product that comes in sizes or colours",
+      "summary": "Use the full form to set what the variants differ by, then add each variant with its own code, stock and price.",
+      "page": "/products",
+      "steps": [
+        {
+          "lead": "Press Add an item",
+          "rest": "and choose Full form — every field."
+        },
+        {
+          "lead": "Give it a name and a product code,",
+          "rest": "and choose its category."
+        },
+        {
+          "lead": "Turn on Customers choose between variants,",
+          "rest": "then press + Add an attribute for each option, such as Size or Colour, with its values."
+        },
+        {
+          "lead": "Press Continue,",
+          "rest": "then Add a variant for each kind. Give each its stock and its selling and wholesale price at each place."
+        },
+        {
+          "lead": "Press Done.",
+          "rest": "The product and its variants can be stocked and sold."
+        }
+      ],
+      "tips": [
+        "A product sold one way still has one variant: the variant carries the code and the stock.",
+        "To add a variant later, open the product and press Add a variant."
+      ],
+      "related": [
+        "add-an-item"
+      ]
+    },
+    {
+      "slug": "import-products",
+      "title": "Bring in products from a spreadsheet",
+      "summary": "Download the template, fill it in or paste into the grid, and import new items, update ones you have, or both.",
+      "page": "/products",
+      "steps": [
+        {
+          "lead": "Press Import",
+          "rest": "on Products."
+        },
+        {
+          "lead": "Choose the place the stock is for.",
+          "rest": "Quantities and prices land there. The item itself belongs to the whole organisation."
+        },
+        {
+          "lead": "Say what happens when a row is already in the catalogue:",
+          "rest": "add new items only, update the ones you have, or both."
+        },
+        {
+          "lead": "Press Download template,",
+          "rest": "fill it in and press Upload a file. Or type and paste straight into the grid."
+        },
+        {
+          "lead": "Press Import.",
+          "rest": "Rows with a problem are shown, so you can fix them and try again."
+        }
+      ],
+      "tips": [
+        "Rows sharing a name with a variant label become one product with several variants.",
+        "When updating, a blank cell changes nothing.",
+        "Save for later keeps the grid so you can finish it another time."
+      ],
+      "related": [
+        "add-an-item"
+      ]
+    },
+    {
+      "slug": "change-prices",
+      "title": "Change what items sell for",
+      "summary": "Change one price where it stands, or re-price many at once by a percentage or an amount, and see every new price before you save.",
+      "page": "/products/price-books",
+      "steps": [
+        {
+          "lead": "Open Price books.",
+          "rest": "Each row is one item at one place, with what it costs you, its selling and wholesale price and the margin."
+        },
+        {
+          "lead": "Press a price to change it,",
+          "rest": "enter the new one and press Save the price."
+        },
+        {
+          "lead": "To change many, tick the rows and press Re-price….",
+          "rest": "Choose the selling or wholesale price, by a percentage or an amount, and how to round."
+        },
+        {
+          "lead": "Check the After column,",
+          "rest": "then press Re-price. Nothing is saved until you do."
+        }
+      ],
+      "tips": [
+        "Every change is kept in the price history, with who made it and why. Your settings may ask for a reason.",
+        "Where prices change by request, the buttons read Send the request and Ask to re-price, and the change waits for approval."
+      ],
+      "related": [
+        "ask-for-a-price-change"
+      ]
+    },
+    {
+      "slug": "ask-for-a-price-change",
+      "title": "Ask for a price change and follow it",
+      "summary": "Where prices change by request, a change waits for approval and applies on the day you choose.",
+      "page": "/products/price-changes",
+      "steps": [
+        {
+          "lead": "Change the price on Price books",
+          "rest": "as usual, or open the variant on the item's page and press Change price."
+        },
+        {
+          "lead": "Say why,",
+          "rest": "and when it takes effect. Left empty, it applies the day the request is approved."
+        },
+        {
+          "lead": "Press Send the request.",
+          "rest": "It goes to the approver, through the approvals inbox."
+        },
+        {
+          "lead": "Follow it on Price change requests.",
+          "rest": "The tabs show those waiting for approval, waiting for their day, applied, rejected and called off."
+        }
+      ],
+      "tips": [
+        "Open a request and press Call it off to withdraw it before it is decided.",
+        "A cost, and the first price of a new item, are not held to requests."
+      ],
+      "related": [
+        "change-prices"
+      ]
+    },
+    {
+      "slug": "add-a-service-item",
+      "title": "Add a service you charge for",
+      "summary": "Delivery, labour or a call-out: work you charge for by time or by the job. It is not stock, so it has no shelf and no receipt.",
+      "page": "/products/service-items",
+      "steps": [
+        {
+          "lead": "Press Add a service",
+          "rest": "on Service items."
+        },
+        {
+          "lead": "Give it a name.",
+          "rest": "It is shown on quotations, invoices and purchase requisitions."
+        },
+        {
+          "lead": "Set the rate and what it is charged per:",
+          "rest": "an hour, a day, a visit, or the job as a whole. Each document can change the rate."
+        },
+        {
+          "lead": "Give it a short code",
+          "rest": "that stays put, such as INSTALL, and a tax category if it is not standard-rated."
+        },
+        {
+          "lead": "Press Add service.",
+          "rest": "With Offered on, it can be chosen on new quotations and invoices."
+        }
+      ],
+      "tips": [
+        "Switch Offered off to stop using it. It stays on the documents that already name it.",
+        "On a bill, a service posts to its own expense account."
+      ]
+    },
+    {
+      "slug": "add-a-unit-of-measure",
+      "title": "Add a unit, such as a crate or a carton",
+      "summary": "Say how many of another unit it holds, so you can buy in cartons and sell in each.",
+      "page": "/products/units",
+      "steps": [
+        {
+          "lead": "Press Add a unit",
+          "rest": "on Units of measure."
+        },
+        {
+          "lead": "Write the new unit in a sentence:",
+          "rest": "its name, such as Carton of 20, how many it holds and of which unit."
+        },
+        {
+          "lead": "Press Add unit.",
+          "rest": "It can be used on documents at once."
+        },
+        {
+          "lead": "Use Try a conversion",
+          "rest": "to check a unit before you use it on a document."
+        }
+      ],
+      "tips": [
+        "Units are retired, never deleted: an order that says 4 crates has to go on saying so.",
+        "A unit converts only within what it measures: you cannot turn kilos into boxes."
+      ]
+    }
+  ]
+}

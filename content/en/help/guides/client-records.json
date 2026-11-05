@@ -1,0 +1,71 @@
+{
+  "kind": "help-module",
+  "module": "client-records",
+  "sources": [
+    "commerce-api/documentation/CLIENT_RECORDS.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/client-records/presentation"
+  ],
+  "intro": "The client records pack, for clinics, therapists, vets, opticians and salons that keep a record of each client. Switch it on in Settings › Industry packs. The front desk sees names, phones, visits and consent only; clinical notes open to the care team, and every look is logged.",
+  "start": [
+    "Switch the client records pack on in Settings › Industry packs.",
+    "Check the wording of each consent on Consent and privacy, and how long each lasts.",
+    "Register your first client on Clients, and record their consent to treatment.",
+    "Add the practitioners who treat them to the client's care team."
+  ],
+  "articles": [
+    {
+      "slug": "register-a-client",
+      "title": "Register a client and record their consent",
+      "summary": "Add the client with their contact details, then record what they agree to. A child needs a guardian, and their consent is the guardian's.",
+      "page": "/client-records/clients",
+      "steps": [
+        { "lead": "Press Register a client", "rest": "on Clients." },
+        { "lead": "Enter their full name, phone, email and date of birth.", "rest": "For a minor, add the guardian's name and phone." },
+        { "lead": "Press Register.", "rest": "They get a client number, and the list shows whether treatment consent is in place." },
+        { "lead": "Open the client and press Record consent", "rest": "for each purpose they agree to, say who signed, and press Save consent." },
+        { "lead": "Press Add to care team", "rest": "for each practitioner who treats them." }
+      ],
+      "tips": [
+        "Without valid consent, what needs it is blocked, such as a photo or sharing with an insurer.",
+        "Press Withdraw on a consent when the client takes it back, and give the reason."
+      ],
+      "related": ["open-a-record"]
+    },
+    {
+      "slug": "open-a-record",
+      "title": "Open a record and write a note",
+      "summary": "Open the clinical record, write and sign notes, record measurements and add documents. Each time it is opened is logged.",
+      "page": "/client-records/clients",
+      "steps": [
+        { "lead": "Choose Open record… from the client's Actions.", "rest": "The care team opens it at once; anyone else writes why they need it." },
+        { "lead": "Under Notes, press Write a note,", "rest": "choose the kind and write it." },
+        { "lead": "Press Save draft", "rest": "to come back to it, or sign it to make it final." },
+        { "lead": "Record measurements, prescriptions and advice,", "rest": "and attach documents and photos as you need them." },
+        { "lead": "Press Lock now", "rest": "when you step away. The record also locks by itself after a few idle minutes." }
+      ],
+      "tips": [
+        "A signed note never changes. Press Correct to add a correction that names the first note.",
+        "In an emergency, someone outside the care team can break the glass with a written reason. The privacy officer is told at once.",
+        "To print or share a record, use Print or share this record, say who it is for and why, and press Export. That is logged too."
+      ],
+      "related": ["register-a-client", "answer-a-data-request"]
+    },
+    {
+      "slug": "answer-a-data-request",
+      "title": "Answer a request for a copy, correction or deletion",
+      "summary": "Record what the client asked for and decide it within 30 days. Overdue requests are marked.",
+      "page": "/client-records/data-requests",
+      "steps": [
+        { "lead": "Press Record a request", "rest": "on Data requests." },
+        { "lead": "Choose the client and what is asked:", "rest": "a copy of the record, a correction or deletion. Add the details and press Record." },
+        { "lead": "Press Decide", "rest": "when it is done or refused, say what was done or why it was refused, and press Save decision." }
+      ],
+      "tips": [
+        "Nothing is ever deleted by hand. A deletion decided as done erases the clinical content and keeps the client as an erased client with their number.",
+        "Records whose retention has run out are listed here, for the privacy officer to review and erase."
+      ],
+      "related": ["open-a-record"]
+    }
+  ]
+}

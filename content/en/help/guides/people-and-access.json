@@ -1,0 +1,127 @@
+{
+  "kind": "help-module",
+  "module": "people-and-access",
+  "sources": [
+    "commerce-api/documentation/ACCESS.md",
+    "commerce-api/documentation/APPROVALS.md",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Who can sign in to your organisation, what each person may see and do, and where. People hold a role at a place; a role is a set of permissions; groups and approval policies decide whose yes a document needs.",
+  "start": [
+    "Look through Roles and see what each one can do, in plain words, before you invite anyone.",
+    "Invite your colleagues as the role that fits, at the places they work.",
+    "Make a group, such as the finance team, if several people should be able to approve.",
+    "Add an approval policy for the documents that must wait for a yes."
+  ],
+  "articles": [
+    {
+      "slug": "invite-a-colleague",
+      "title": "Invite a colleague and choose what they may do",
+      "summary": "Send an invitation as a role at the places it applies to. They get an email to accept it and set their password.",
+      "page": "/people/members",
+      "steps": [
+        {
+          "lead": "Press Invite people",
+          "rest": "on People."
+        },
+        {
+          "lead": "Say who you are inviting:",
+          "rest": "one email address, or many at once. Everyone here is invited as the same role."
+        },
+        {
+          "lead": "Choose what they will be able to do.",
+          "rest": "See what each role can do opens the roles beside it."
+        },
+        {
+          "lead": "Choose where:",
+          "rest": "all places, or the ones they work at. Add another role gives them a second role somewhere else."
+        },
+        {
+          "lead": "Press Send invitation.",
+          "rest": "Nothing is sent until you press it. Anyone who could not be invited is listed, with why."
+        }
+      ],
+      "after": "They show on People as invited until they accept. An invitation lasts a week. Resend the invitation makes a new link and the old one stops working; Revoke the invitation stops it.",
+      "tips": [
+        "Only an owner can make someone an owner, and an organisation always keeps at least one.",
+        "To change what someone holds later, open their row's Actions and press Open their access. Removing their last role takes them out of the organisation; their account stays."
+      ],
+      "related": [
+        "change-what-a-role-may-do"
+      ]
+    },
+    {
+      "slug": "change-what-a-role-may-do",
+      "title": "Change what a role may do",
+      "summary": "Open the role, switch on what it may see and change, and every person holding it gets the change.",
+      "page": "/people/roles",
+      "steps": [
+        {
+          "lead": "Choose the role",
+          "rest": "on Roles. It says what it can see, change and approve, in plain words, and who holds it."
+        },
+        {
+          "lead": "Press Edit role.",
+          "rest": "Or press New role, and start from a template or from nothing."
+        },
+        {
+          "lead": "Tick the permissions",
+          "rest": "it should carry, area by area. Find a permission searches them all."
+        },
+        {
+          "lead": "Press Save changes.",
+          "rest": "Someone already signed in sees the change after they sign in again."
+        }
+      ],
+      "tips": [
+        "Give this role to someone here gives the role to a person at a place, from the role itself.",
+        "Compare roles sets two roles side by side.",
+        "A role that makes its holder an owner can only be changed by an owner."
+      ],
+      "related": [
+        "invite-a-colleague",
+        "set-up-an-approval-policy"
+      ]
+    },
+    {
+      "slug": "set-up-an-approval-policy",
+      "title": "Make a document wait for someone's yes",
+      "summary": "An approval policy says which documents wait, when, and who approves them, in order. Without one, documents go straight through.",
+      "page": "/people/approvals",
+      "steps": [
+        {
+          "lead": "Press New policy",
+          "rest": "on Approvals."
+        },
+        {
+          "lead": "Name it and choose the kind of document,",
+          "rest": "such as quotations or supplier bills."
+        },
+        {
+          "lead": "Say when it applies,",
+          "rest": "for example when its amount is over a figure, or only at one place. Leave it empty to cover every one."
+        },
+        {
+          "lead": "Add who approves, in order.",
+          "rest": "Each step asks people, a role or a group, and says whether any one of them or all of them must agree."
+        },
+        {
+          "lead": "Give a step a deadline",
+          "rest": "if it needs one, and who else is asked when it passes."
+        },
+        {
+          "lead": "Press Save and switch on.",
+          "rest": "Who would be asked shows who a document like this would wait for."
+        }
+      ],
+      "tips": [
+        "A group gathers the people a policy can ask. Make one on Groups with New group; it gives nobody any permission.",
+        "Switching a policy off sends its documents straight through again. Those already waiting go on waiting until decided or withdrawn.",
+        "Try it: who would be asked? checks a kind of document, an amount and a place before any real document arrives."
+      ],
+      "related": [
+        "change-what-a-role-may-do"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "kind": "help-module",
+  "module": "distribution",
+  "sources": [
+    "commerce-api/documentation/DISTRIBUTION.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/distribution/presentation"
+  ],
+  "intro": "The distribution pack, for selling from vans on routes: load a van, sell and collect at each stop, count it back at the end of the day, keep track of crates and deposits, and bill storage clients each month if you run a warehouse for others. Switch the pack on in Organisation › Settings › Industry packs.",
+  "start": [
+    "Turn the distribution pack on in Organisation › Settings › Industry packs, at your warehouses.",
+    "Add your vans and routes on Routes and van loads, and put each customer on a route for a weekday.",
+    "Add your returnable items, such as crates and bottles, with their deposit, on Empties and deposits.",
+    "Start your first van load, send it out, and settle it when it comes back."
+  ],
+  "articles": [
+    {
+      "slug": "load-a-van-and-run-its-route",
+      "title": "Load a van and sell along its route",
+      "summary": "Start the day's load, put the goods on, send the van out, and enter what was sold and paid at each stop.",
+      "page": "/distribution/routes",
+      "before": [
+        "The van, the route and the customers on it for that weekday are set up on Routes and van loads."
+      ],
+      "steps": [
+        {
+          "lead": "Press Start a van load,",
+          "rest": "choose the van, the route and the day, then press Start the load."
+        },
+        {
+          "lead": "Press Load the van",
+          "rest": "and add the goods going out, with how many and the price each. The load sheet fills in."
+        },
+        {
+          "lead": "Press Send it out",
+          "rest": "when the van leaves. Its stops are the route's customers for that weekday, in order."
+        },
+        {
+          "lead": "Press Enter this stop",
+          "rest": "at each customer. Enter what was sold, then what was paid by each method."
+        },
+        {
+          "lead": "Say how it went,",
+          "rest": "and tick The delivery failed if it did: the goods stay on the van. Press Save the stop."
+        },
+        {
+          "lead": "Press Bring it back",
+          "rest": "when the van returns. It waits on Settle a van to be counted."
+        }
+      ],
+      "tips": [
+        "A stop cannot sell more than is left on the van, and payments cannot be more than was sold there.",
+        "If a delivery would leave a customer holding more crates than their limit, it is refused and you are told how many must come back first.",
+        "To take crates back from a customer, choose Record a collection from their actions on Empties and deposits."
+      ],
+      "related": [
+        "settle-a-van"
+      ]
+    },
+    {
+      "slug": "settle-a-van",
+      "title": "Settle a van at the end of the day",
+      "summary": "Count the money, stock and empties the van brings back against what it sold, and deal with anything that does not agree.",
+      "page": "/distribution/settlement",
+      "steps": [
+        {
+          "lead": "Press Settle",
+          "rest": "on the van under Vans back."
+        },
+        {
+          "lead": "Under Payments counted,",
+          "rest": "enter the money counted for each method."
+        },
+        {
+          "lead": "Under Stock counted back,",
+          "rest": "enter what is left of each line. What it should be is shown beside it."
+        },
+        {
+          "lead": "Under Empties counted,",
+          "rest": "enter the empties that came back against those expected."
+        },
+        {
+          "lead": "Press See what it comes to.",
+          "rest": "Each difference is shown, with what it means."
+        },
+        {
+          "lead": "Press Settle the van.",
+          "rest": "A small cash shortfall within your tolerance clears; every other difference goes to the driver's account for review."
+        },
+        {
+          "lead": "Under Drivers' differences, choose",
+          "rest": "Charge the driver or Write it off for each one."
+        }
+      ],
+      "related": [
+        "load-a-van-and-run-its-route"
+      ]
+    },
+    {
+      "slug": "bill-storage-for-the-month",
+      "title": "Bill your storage clients for the month",
+      "summary": "Record each client's pallets and goods in and out, work out the month from their rate card, and make the invoices.",
+      "page": "/distribution/storage",
+      "before": [
+        "Each client has a rate card. Add one with Add a rate card, and add clients with Add a client."
+      ],
+      "steps": [
+        {
+          "lead": "Press Count pallets",
+          "rest": "for a client each day, with how many are in the cold room, and press Record the count."
+        },
+        {
+          "lead": "Press Goods in or out",
+          "rest": "for pallets received, cases sent and any service, and press Record it."
+        },
+        {
+          "lead": "Choose the month",
+          "rest": "and press Work out the month. Each client's storage, in and out, insurance and total are shown."
+        },
+        {
+          "lead": "Press Make the invoices,",
+          "rest": "then Make them. One invoice is made for each client, and the month is fixed."
+        }
+      ],
+      "tips": [
+        "Pallets are charged on the month's average or its peak, whichever the client's settings say.",
+        "A client below the monthly minimum on their rate card is topped up to it.",
+        "Insurance is left off for a client who insures their own stock."
+      ]
+    }
+  ]
+}

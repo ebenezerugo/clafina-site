@@ -1,0 +1,118 @@
+{
+  "kind": "help-module",
+  "module": "marketing",
+  "sources": [
+    "commerce-api/documentation/COMMUNICATION.md",
+    "commerce-api/documentation/CAMPAIGN_COST.md"
+  ],
+  "intro": "Send one message to many customers at once, by email, SMS, a chat app or in the app, and see how it did: who opened it, who clicked and the sales that followed. People are only sent what they agreed to, and every campaign can wait for an approver before it goes.",
+  "start": [
+    "Check your campaign categories, so people can choose which kinds of message they get.",
+    "Save an audience for the customers you write to most.",
+    "Write your first campaign, send yourself a test, then send it for review."
+  ],
+  "articles": [
+    {
+      "slug": "send-a-campaign",
+      "title": "Send a campaign to your customers",
+      "summary": "Write the message, choose who it is for, see who it will reach, then send it now or at a time you choose.",
+      "page": "/campaigns",
+      "steps": [
+        {
+          "lead": "Press New campaign.",
+          "rest": "Give it a name, choose the channel and the category it belongs to."
+        },
+        {
+          "lead": "Write the message",
+          "rest": "on the Message tab. Add their first name or their way off the list where you want them. Press Send test to see it yourself."
+        },
+        {
+          "lead": "Choose who it is for",
+          "rest": "on the Audience tab: one of your saved audiences, or people chosen just for this campaign."
+        },
+        {
+          "lead": "Open Reach and preview.",
+          "rest": "It shows how many will be sent it, who is left out and why, and the message as one person will see it."
+        },
+        {
+          "lead": "Press Send for review.",
+          "rest": "With an approval policy, it waits for an approver. With none, the button says Approve and continue, and it is approved at once."
+        },
+        {
+          "lead": "Press Send now, or Schedule",
+          "rest": "and choose the day and the time. Nothing is sent until it is approved and you choose a time."
+        }
+      ],
+      "after": "Once it has gone, Results shows how many were delivered, opened, clicked and replied, and the sales that followed it.",
+      "tips": [
+        "Pause stops anything more from going until you resume it.",
+        "Cost shows the campaign's budget beside what the books say it cost.",
+        "Duplicate starts a new campaign from one you sent before."
+      ],
+      "related": [
+        "build-an-audience",
+        "set-campaign-categories"
+      ]
+    },
+    {
+      "slug": "build-an-audience",
+      "title": "Save an audience to send campaigns to",
+      "summary": "Choose who a campaign goes to by who they are, what they bought and what they owe, and keep it to use again.",
+      "page": "/campaigns/audiences",
+      "steps": [
+        {
+          "lead": "Press New audience",
+          "rest": "and give it a name, and what it is for."
+        },
+        {
+          "lead": "Add who it is for:",
+          "rest": "customers and leads, suppliers or colleagues."
+        },
+        {
+          "lead": "Narrow it down",
+          "rest": "by who they are, what they bought, whether they are owing us or settled up, or one of your customer lists."
+        },
+        {
+          "lead": "Add anyone to leave out",
+          "rest": "under Except, and read the audience back In plain words."
+        },
+        {
+          "lead": "Press Save.",
+          "rest": "It can be chosen on any campaign."
+        }
+      ],
+      "tips": [
+        "Retire the audience when you no longer need it."
+      ],
+      "related": [
+        "send-a-campaign"
+      ]
+    },
+    {
+      "slug": "set-campaign-categories",
+      "title": "Set the kinds of message people can choose",
+      "summary": "Categories say what a message is about. Marketing ones need consent; people choose which they get.",
+      "page": "/campaigns/settings",
+      "steps": [
+        {
+          "lead": "Press New category,",
+          "rest": "give it a name and say what it covers. It is shown to people choosing what they get."
+        },
+        {
+          "lead": "Choose its Kind:",
+          "rest": "Marketing, which needs their consent, or Informational, which goes to everyone who has not turned it off."
+        },
+        {
+          "lead": "Press Suppress an address",
+          "rest": "to stop anything going to an email address or phone number, such as one that asked you to stop."
+        }
+      ],
+      "tips": [
+        "Addresses that bounced, were marked as spam or replied STOP are added to Suppressed addresses for you."
+      ],
+      "related": [
+        "send-a-campaign"
+      ]
+    }
+  ]
+}

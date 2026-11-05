@@ -20,7 +20,7 @@ describe('navigation', () => {
   });
   it('drops pages, groups and menus that are not available', () => {
     const visible = visibleNavFor(ROUTES, 'preview');
-    expect(visible.menus.map((m) => m.id)).toEqual(['product', 'industries']);
+    expect(visible.menus.map((m) => m.id)).toEqual(['product', 'industries', 'resources']);
     expect(visible.links).toEqual(['pricing']);
     const full = visibleNavFor(allBuilt, 'preview');
     expect(full.menus.map((m) => m.id)).toEqual(['product', 'industries', 'solutions', 'resources']);

@@ -87,7 +87,7 @@ export const ROUTES = [
   r('resources-guides', '/resources/guides/', 'resource'),
   r('resources-templates', '/resources/templates/', 'resource'),
   r('resources-glossary', '/resources/glossary/', 'resource'),
-  r('help', '/help/', 'resource'),
+  r('help', '/help/', 'resource', true),
   r('whats-new', '/whats-new/', 'resource'),
 
   r('partners-accountants', '/partners/accountants/', 'partner'),
