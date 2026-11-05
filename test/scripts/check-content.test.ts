@@ -17,7 +17,7 @@ describe('checkContent', () => {
     expect(problems).toContain('en/story.json has no labelled illustrative business');
   });
   it('catches the dropped taglines', () => {
-    expect(checkContent('test/fixtures/content-taglines', 'preview')).toEqual(['en/home.json hero.title uses a dropped tagline']);
+    expect(checkContent('test/fixtures/content-taglines', 'preview')).toEqual(['en/tagline.json hero.title uses a dropped tagline']);
   });
   it('passes the real content', () => {
     expect(checkContent('content', 'preview')).toEqual([]);
