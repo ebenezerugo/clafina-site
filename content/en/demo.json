@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Book a demo · Clafina",
+    "description": "Tell us about your business and we will show you the Clafina screens your team would use."
+  },
+  "eyebrow": "Book a demo",
+  "title": "See Clafina with your own trade's screens.",
+  "lede": "Tell us a little about the business. We will set up a demo around the work you actually do.",
+  "expect": [
+    {
+      "title": "Your trade, not a generic tour",
+      "body": "We show the pack for your trade: the restaurant floor, the hotel's front desk or the farm's fields."
+    },
+    {
+      "title": "Your numbers in your currency",
+      "body": "Examples in your currency and, where we can, your language."
+    },
+    {
+      "title": "Questions answered on the call",
+      "body": "Bring the person who keeps your books and the person who runs the floor."
+    }
+  ],
+  "form": {
+    "steps": [
+      "Your business",
+      "Your trade",
+      "Your team",
+      "When and what"
+    ],
+    "stepOf": "Step {n} of {total}",
+    "fields": {
+      "name": "Your name",
+      "email": "Work email",
+      "company": "Business name",
+      "country": "Country",
+      "industry": "What does your business do?",
+      "teamSize": "How many people work there?",
+      "slot": "Good times to talk (optional)",
+      "message": "Anything we should know? (optional)"
+    },
+    "slotHint": "For example: weekday mornings, Lagos time.",
+    "other": "Something else",
+    "teamSizes": {
+      "1-5": "1 to 5",
+      "6-20": "6 to 20",
+      "21-100": "21 to 100",
+      "101-500": "101 to 500",
+      "500+": "More than 500"
+    },
+    "errors": {
+      "required": "Please fill this in.",
+      "email": "Please enter an email address like name@business.com.",
+      "choose": "Please choose one.",
+      "generic": "Please check this."
+    },
+    "next": "Continue",
+    "back": "Back",
+    "send": "Send",
+    "sending": "Sending…",
+    "notConnected": "The form is not connected yet, so nothing was sent.",
+    "notConnectedEmail": "Please email us at {email} instead.",
+    "failed": "Something went wrong and nothing was sent. Please try again in a minute.",
+    "botFailed": "We could not confirm you are not a robot. Please try again.",
+    "sent": "Thanks. We have your request and will be in touch soon.",
+    "privacy": "We use these details only to answer you."
+  }
+}

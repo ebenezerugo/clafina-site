@@ -13,7 +13,7 @@ describe('routes', () => {
     expect(new Set(ROUTES.map((r) => r.id)).size).toBe(ROUTES.length);
   });
   it('lists the pages built so far', () => {
-    expect(ROUTES.filter((r) => r.built && !('previewOnly' in r)).map((r) => r.id)).toEqual(['home', 'platform', 'pricing', 'pricing-compare']);
+    expect(ROUTES.filter((r) => r.built && !('previewOnly' in r)).map((r) => r.id)).toEqual(['home', 'platform', 'pricing', 'pricing-compare', 'demo', 'contact-sales']);
   });
   it('writes paths with leading and trailing slashes', () => {
     expect(ROUTES.every((r) => r.path.startsWith('/') && r.path.endsWith('/'))).toBe(true);

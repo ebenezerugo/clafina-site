@@ -28,6 +28,11 @@ function nearest404(pathname) {
 
 createServer((req, res) => {
   const { pathname } = new URL(req.url ?? '/', 'http://localhost');
+  // Behave like functions/api/lead.ts without a CRM or Turnstile configured.
+  if (pathname === '/api/lead') {
+    res.writeHead(req.method === 'POST' ? 503 : 405, { 'Content-Type': 'application/json' }).end(req.method === 'POST' ? '{"error":"not_connected"}' : '');
+    return;
+  }
   if (!pathname.endsWith('/') && !extname(pathname) && resolve(pathname + '/')) {
     res.writeHead(308, { Location: pathname + '/' }).end();
     return;

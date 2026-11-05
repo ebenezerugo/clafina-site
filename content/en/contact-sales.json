@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Contact sales · Clafina",
+    "description": "Talk to Clafina about plans for many branches, your own rules or moving from another system."
+  },
+  "eyebrow": "Contact sales",
+  "title": "Talk to us about your business.",
+  "lede": "Many branches, your own approval rules, or moving from another system: tell us what you need.",
+  "expect": [
+    {
+      "title": "A plan that fits",
+      "body": "We look at your branches, tills and team and suggest the right plan."
+    },
+    {
+      "title": "Moving your data",
+      "body": "We explain how customers, products, stock and balances come across."
+    },
+    {
+      "title": "Your rules",
+      "body": "Approvals, roles and controls set up the way your business works."
+    }
+  ],
+  "form": {
+    "steps": [
+      "Your business",
+      "Your trade",
+      "Your team",
+      "When and what"
+    ],
+    "stepOf": "Step {n} of {total}",
+    "fields": {
+      "name": "Your name",
+      "email": "Work email",
+      "company": "Business name",
+      "country": "Country",
+      "industry": "What does your business do?",
+      "teamSize": "How many people work there?",
+      "slot": "Good times to talk (optional)",
+      "message": "Anything we should know? (optional)"
+    },
+    "slotHint": "For example: weekday mornings, Lagos time.",
+    "other": "Something else",
+    "teamSizes": {
+      "1-5": "1 to 5",
+      "6-20": "6 to 20",
+      "21-100": "21 to 100",
+      "101-500": "101 to 500",
+      "500+": "More than 500"
+    },
+    "errors": {
+      "required": "Please fill this in.",
+      "email": "Please enter an email address like name@business.com.",
+      "choose": "Please choose one.",
+      "generic": "Please check this."
+    },
+    "next": "Continue",
+    "back": "Back",
+    "send": "Send",
+    "sending": "Sending…",
+    "notConnected": "The form is not connected yet, so nothing was sent.",
+    "notConnectedEmail": "Please email us at {email} instead.",
+    "failed": "Something went wrong and nothing was sent. Please try again in a minute.",
+    "botFailed": "We could not confirm you are not a robot. Please try again.",
+    "sent": "Thanks. We have your request and will be in touch soon.",
+    "privacy": "We use these details only to answer you."
+  }
+}
