@@ -1,0 +1,163 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a waybill on its way to a customer, a day late, with where it was last seen, what it carries and who has handled it.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": {
+    "initials": "BH",
+    "name": "Bright Harbour Traders",
+    "place": "Main store"
+  },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    {
+      "items": [
+        {
+          "label": "Dashboard"
+        },
+        {
+          "label": "Inbox",
+          "badge": "9"
+        }
+      ]
+    },
+    {
+      "label": "Sell",
+      "items": [
+        {
+          "label": "Sales"
+        },
+        {
+          "label": "Quotations"
+        },
+        {
+          "label": "Sales orders"
+        },
+        {
+          "label": "Waybills",
+          "active": true
+        },
+        {
+          "label": "Invoices",
+          "badge": "7"
+        },
+        {
+          "label": "Receipts"
+        }
+      ]
+    }
+  ],
+  "title": "Waybill WB-0097",
+  "subtitle": "To Market Lane Mart · for sales order SO-0144 · from the main store",
+  "actions": [
+    {
+      "label": "Delivery note (PDF)"
+    },
+    {
+      "label": "Mark delivered",
+      "primary": true,
+      "icon": "check"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "steps",
+      "items": [
+        "Drafted",
+        "Approved",
+        "Dispatched",
+        "Delivered",
+        "Signed for"
+      ],
+      "current": 3
+    },
+    {
+      "type": "row",
+      "widths": "1fr 1fr",
+      "blocks": [
+        {
+          "type": "kv",
+          "title": "Where it is going, and who carries it",
+          "items": [
+            {
+              "label": "To",
+              "value": "Market Lane, store 4"
+            },
+            {
+              "label": "Expected",
+              "value": "Yesterday, 17:00"
+            },
+            {
+              "label": "Driver",
+              "value": "Sola"
+            },
+            {
+              "label": "Packages",
+              "value": "66"
+            },
+            {
+              "label": "Weight",
+              "value": "618 kg net"
+            }
+          ]
+        },
+        {
+          "type": "attention",
+          "title": "Where it is",
+          "items": [
+            {
+              "tone": "bad",
+              "icon": "clock",
+              "title": "A day late",
+              "body": "Last seen at the ring road junction at 09:42 today. The customer signs on the shared page when it arrives.",
+              "action": "Update position"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "What it carries: stock leaves the main store when it is dispatched",
+      "columns": [
+        {
+          "label": "Item"
+        },
+        {
+          "label": "Quantity",
+          "numeric": true
+        },
+        {
+          "label": "Packages",
+          "numeric": true
+        },
+        {
+          "label": "Weight",
+          "numeric": true
+        }
+      ],
+      "rows": [
+        [
+          "Powdered milk 400g",
+          "20 cartons",
+          "20",
+          "210 kg"
+        ],
+        [
+          "Instant noodles 70g",
+          "40 cartons",
+          "40",
+          "108 kg"
+        ],
+        [
+          "Granulated sugar 50kg",
+          "6 bags",
+          "6",
+          "300 kg"
+        ]
+      ]
+    }
+  ]
+}

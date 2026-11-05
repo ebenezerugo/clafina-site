@@ -1,0 +1,96 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the driver's phone at the delivery, ticking off what was unloaded before the customer signs.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": {
+    "initials": "BH",
+    "name": "Bright Harbour Traders",
+    "place": "Main store"
+  },
+  "tabs": [
+    {
+      "label": "Home",
+      "icon": "home"
+    },
+    {
+      "label": "Inbox",
+      "icon": "bell"
+    },
+    {
+      "label": "New",
+      "icon": "plus"
+    },
+    {
+      "label": "Sales",
+      "icon": "sales",
+      "active": true
+    },
+    {
+      "label": "More",
+      "icon": "more"
+    }
+  ],
+  "title": "WB-0097",
+  "subtitle": "To Market Lane Mart · for SO-0144",
+  "blocks": [
+    {
+      "type": "steps",
+      "items": [
+        "Dispatched",
+        "On the way",
+        "Delivered"
+      ],
+      "current": 1
+    },
+    {
+      "type": "table",
+      "title": "Hand over: tick as you unload",
+      "columns": [
+        {
+          "label": "Item"
+        },
+        {
+          "label": "Status"
+        }
+      ],
+      "rows": [
+        [
+          "Powdered milk · 20 cartons",
+          {
+            "pill": "good",
+            "text": "Unloaded"
+          }
+        ],
+        [
+          "Instant noodles · 40 cartons",
+          {
+            "pill": "good",
+            "text": "Unloaded"
+          }
+        ],
+        [
+          "Sugar · 6 bags",
+          {
+            "pill": "neutral",
+            "text": "To unload"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "attention",
+      "title": "Then the customer signs on this phone",
+      "items": [
+        {
+          "tone": "info",
+          "icon": "check",
+          "title": "Mark delivered",
+          "body": "Their name, the time and any note are kept on the waybill.",
+          "action": "Mark delivered"
+        }
+      ]
+    }
+  ]
+}

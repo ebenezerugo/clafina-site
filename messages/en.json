@@ -150,5 +150,13 @@
   },
   "picker": {
     "title": "Choose your language"
+  },
+  "surfaces": {
+    "web": "Web app",
+    "till": "Till",
+    "phone": "Phone app",
+    "shop": "Online shop",
+    "assistant": "Assistant",
+    "meet": "Meet"
   }
 }

@@ -28,7 +28,7 @@ export const ROUTES = [
   r('product-payments', '/product/payments/', 'product'),
   r('product-tax', '/product/tax/', 'product'),
   r('product-business-health', '/product/business-health/', 'product'),
-  r('product-sales', '/product/sales/', 'product'),
+  r('product-sales', '/product/sales/', 'product', true),
   r('product-crm', '/product/crm/', 'product'),
   r('product-pos', '/product/pos/', 'product'),
   r('product-online-shop', '/product/online-shop/', 'product'),

@@ -18,7 +18,7 @@ describe('footer model', () => {
     expect(ROUTES.filter((r) => r.id !== 'home' && r.id !== 'start' && !('previewOnly' in r) && !linked.has(r.id)).map((r) => r.id)).toEqual([]);
   });
   it('drops pages that do not exist yet, and empty columns', () => {
-    expect(footerModel('preview').columns).toEqual([{ id: 'product', items: ['platform', 'pricing', 'pricing-compare'] }, { id: 'company', items: ['contact-sales', 'demo'] }]);
+    expect(footerModel('preview').columns).toEqual([{ id: 'product', items: ['platform', 'product-sales', 'pricing', 'pricing-compare'] }, { id: 'company', items: ['contact-sales', 'demo'] }]);
   });
   it('shows socials, badges and company lines only once they are set', () => {
     const m = footerModel('preview');

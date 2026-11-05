@@ -24,10 +24,12 @@ test('the one-record steps are all visible with reduced motion', async ({ browse
   await ctx.close();
 });
 
-test('modules without a page yet are not links', async ({ page }) => {
+test('module links open pages that exist, and the rest are plain text', async ({ page, request }) => {
   await page.goto('/en/');
-  await expect(page.locator('#modules a[href*="/product/"]')).toHaveCount(0);
   await expect(page.locator('#modules li')).toHaveCount(21);
+  for (const href of await page.locator('#modules a').evaluateAll((as) => as.map((a) => a.getAttribute('href')!))) {
+    expect((await request.get(href)).status(), href).toBe(200);
+  }
 });
 
 test('switched claims show in preview', async ({ page }) => {
