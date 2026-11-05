@@ -1,0 +1,251 @@
+{
+  "kind": "help-module",
+  "module": "inventory",
+  "sources": [
+    "commerce-api/documentation/STOCK.md",
+    "commerce-api/documentation/STOCK_FLOW.md",
+    "commerce-api/documentation/STOCK_PLANNING.md",
+    "commerce-web/src/app/features/inventory/presentation",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "What you have in stock, in each place, and every way it changes: transfers between places, counts, corrections and moves between inventory types. A quantity is never typed over; each change is a movement with the document that caused it.",
+  "start": [
+    "Open Stock levels and choose a place, to see what it holds and at what price.",
+    "Set reorder levels for the items you must not run out of.",
+    "Count your stock once, so the books start from what is really on the shelf.",
+    "Check Inventory types under Setup, so you know which kinds of stock can be sold."
+  ],
+  "articles": [
+    {
+      "slug": "see-your-stock",
+      "title": "See how much stock you have",
+      "summary": "Stock levels shows what each place holds, what is running low and every movement behind the figures.",
+      "page": "/inventory",
+      "steps": [
+        {
+          "lead": "Open Stock levels",
+          "rest": "and choose the place."
+        },
+        {
+          "lead": "Search for an item",
+          "rest": "by name or SKU. Each row shows what is on hand, the reorder level and the price there."
+        },
+        {
+          "lead": "Choose History",
+          "rest": "on an item's row to see every change to its stock here, and the document that caused it."
+        }
+      ],
+      "tips": [
+        "Stock held for production is set aside for a work order and is not for sale. It shows as a line of its own.",
+        "Stock on its way between places is counted but not available at either end."
+      ],
+      "related": [
+        "set-reorder-levels",
+        "count-your-stock"
+      ]
+    },
+    {
+      "slug": "set-reorder-levels",
+      "title": "Get told when to buy more, and order it",
+      "summary": "Set the levels for each item at each place, then let Clafina draft the requisitions for whatever has fallen below them.",
+      "page": "/inventory/levels",
+      "steps": [
+        {
+          "lead": "Open Reorder levels.",
+          "rest": "Stock records are listed against their levels, worst first."
+        },
+        {
+          "lead": "Tick the items and press Set levels….",
+          "rest": "Enter the minimum, safety level, reorder point and reorder quantity, each at least as high as the one before."
+        },
+        {
+          "lead": "Press Save levels.",
+          "rest": "Each row now shows where it stands: out of stock, below the minimum, below the safety level, at the reorder point, or fine."
+        },
+        {
+          "lead": "Press Order what needs it.",
+          "rest": "You see what would be ordered for each place and about what it costs, before anything is made."
+        },
+        {
+          "lead": "Press Raise.",
+          "rest": "A draft purchase requisition is made for each place. Nothing goes to a supplier: a buyer reviews it and sends it on."
+        }
+      ],
+      "tips": [
+        "Stock already on its way to a place is counted before an order is suggested.",
+        "A level is set per item per place."
+      ],
+      "related": [
+        "see-your-stock"
+      ]
+    },
+    {
+      "slug": "transfer-stock",
+      "title": "Move stock from one place to another",
+      "summary": "Draw up a transfer, send it, and receive it at the other end. While it travels it is counted, but cannot be sold.",
+      "page": "/inventory/transfers",
+      "steps": [
+        {
+          "lead": "Press New transfer",
+          "rest": "on Transfers."
+        },
+        {
+          "lead": "Choose where it goes from and to,",
+          "rest": "the day it is expected, and the carrier and vehicle if you know them."
+        },
+        {
+          "lead": "Add what is being sent",
+          "rest": "and how many of each."
+        },
+        {
+          "lead": "Press Save and send.",
+          "rest": "Where your settings ask for approval, the button reads Save and send for approval, and it waits. Once approved, press Send it."
+        },
+        {
+          "lead": "At the other end, press Receive.",
+          "rest": "Say who counted it and how much of each item arrived."
+        },
+        {
+          "lead": "Say what happens to anything missing:",
+          "rest": "leave it on the road for now, or write it off as lost in transit."
+        }
+      ],
+      "tips": [
+        "On the road, by item lists everything travelling between places, and which transfers are late.",
+        "A transfer that has not left can be called off."
+      ],
+      "related": [
+        "see-your-stock"
+      ]
+    },
+    {
+      "slug": "count-your-stock",
+      "title": "Count your stock and correct the books",
+      "summary": "Count what is on the shelf; when you approve the count, the differences are posted with the reason you gave.",
+      "page": "/inventory/counts",
+      "steps": [
+        {
+          "lead": "Press Start a count",
+          "rest": "on Stock counts."
+        },
+        {
+          "lead": "Choose where,",
+          "rest": "what to count, and why, such as a month-end count. The reason goes on every correction the count posts."
+        },
+        {
+          "lead": "Press Start counting",
+          "rest": "when you are at the shelf. It fixes what the books say for each item at that moment."
+        },
+        {
+          "lead": "Enter what you count",
+          "rest": "on each line, or press Count on a phone to go item by item."
+        },
+        {
+          "lead": "Save your counts.",
+          "rest": "Approval uses what is saved."
+        },
+        {
+          "lead": "Press Approve.",
+          "rest": "A correction is posted for each line that differs, to make stock match what you counted. It cannot be undone."
+        }
+      ],
+      "tips": [
+        "With blind counts on in Settings, what is expected of a line shows only once you have saved your count of it.",
+        "A line nobody counted is not taken as zero."
+      ],
+      "related": [
+        "correct-a-quantity",
+        "count-by-stock-class"
+      ]
+    },
+    {
+      "slug": "correct-a-quantity",
+      "title": "Correct a quantity by hand",
+      "summary": "Say what the quantity is, or how much to add or take away, with a reason. Where your settings ask, it waits for approval first.",
+      "page": "/inventory/adjustment-requests",
+      "steps": [
+        {
+          "lead": "On Stock levels, choose Adjust quantity",
+          "rest": "on the item's row."
+        },
+        {
+          "lead": "Say it as you like:",
+          "rest": "the quantity is, or add or take away."
+        },
+        {
+          "lead": "Choose a reason.",
+          "rest": "The drawer shows what the system holds and what it will hold after."
+        },
+        {
+          "lead": "Press Save the correction,",
+          "rest": "or Ask for the correction where it must be asked for first."
+        },
+        {
+          "lead": "Follow it on Adjustment requests.",
+          "rest": "The quantities change only when its approvers agree."
+        }
+      ],
+      "tips": [
+        "Whether a correction needs a request, and above what value, is set in Settings › Stock and prices.",
+        "Where quantities change only through documents, use a goods receipt, a transfer or a count instead."
+      ],
+      "related": [
+        "count-your-stock"
+      ]
+    },
+    {
+      "slug": "move-stock-between-types",
+      "title": "Move stock to another inventory type",
+      "summary": "Move goods at one place from one type to another, such as from awaiting release to sellable, for a reason you choose. Their value does not change.",
+      "page": "/inventory/type-transfers",
+      "steps": [
+        {
+          "lead": "Press New type transfer",
+          "rest": "on Type transfers."
+        },
+        {
+          "lead": "Choose the place,",
+          "rest": "the type it is sent from and the type it is received into."
+        },
+        {
+          "lead": "Add the items",
+          "rest": "and how many of each, with the reason."
+        },
+        {
+          "lead": "Press Save as a draft,",
+          "rest": "then Move the stock. Where your settings ask for approval, the button reads Send for approval, and it waits."
+        }
+      ],
+      "tips": [
+        "Settings › Type transfers say which types stock may leave and arrive in, and the reasons you can choose.",
+        "A type transfer that has moved stock can be reversed."
+      ]
+    },
+    {
+      "slug": "count-by-stock-class",
+      "title": "Count the valuable items more often",
+      "summary": "Stock classes rank items by the value that leaves stock, and say which are due for a count.",
+      "page": "/inventory/classes",
+      "steps": [
+        {
+          "lead": "Open Stock classes",
+          "rest": "and press Run now. Items are put in class A, B or C by the value that left stock."
+        },
+        {
+          "lead": "Choose Only those due for counting",
+          "rest": "to see what needs counting now."
+        },
+        {
+          "lead": "Press Open a count sheet",
+          "rest": "and choose the place. A draft stock count opens with what is due, most valuable first."
+        }
+      ],
+      "tips": [
+        "Pin an item to a class to keep it there through later runs."
+      ],
+      "related": [
+        "count-your-stock"
+      ]
+    }
+  ]
+}
