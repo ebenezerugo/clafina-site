@@ -1,0 +1,28 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the training manager's phone, showing a video lesson where only the part actually watched was counted.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "KS", "name": "Kalabari Supply Company", "place": "Trans-Amadi" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Courses", "icon": "users", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Abiye Briggs",
+  "subtitle": "Running a shop: the basics · 4 of 11 lessons",
+  "blocks": [
+    { "type": "attention", "title": "Lesson 5 · Using the till", "items": [
+      { "tone": "warn", "icon": "clock", "title": "4 of 11 minutes counted", "body": "The player said more, but only as much as the time allowed is counted. Done at 90% of the real length." }
+    ] },
+    { "type": "progress", "label": "Lesson 5 watched", "value": 36, "note": "Needs 10 of 11 minutes" },
+    { "type": "table", "title": "Lessons", "columns": [{ "label": "Lesson" }, { "label": "State" }], "rows": [
+      ["4 · Greeting a customer", { "pill": "good", "text": "Done" }],
+      ["5 · Using the till", { "pill": "warn", "text": "In progress" }],
+      ["6 · Refunds and exchanges", { "pill": "neutral", "text": "Not started" }]
+    ] }
+  ]
+}

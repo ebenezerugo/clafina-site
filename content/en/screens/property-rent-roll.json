@@ -1,0 +1,48 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a property manager's rent roll for October, with late rent grouped by how late it is and one landlord's statement for the month.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "IG", "name": "Ivory Gate Property Managers", "place": "Lagos and Abuja" },
+  "nav": [
+    { "label": "Property", "items": [{ "label": "Properties and units" }, { "label": "Leases" }, { "label": "Rent roll", "active": true }, { "label": "Inspections" }, { "label": "Tenant requests", "badge": "10" }, { "label": "Owners' levies" }] }
+  ],
+  "search": "Find a tenant or unit",
+  "title": "Rent roll · October 2026",
+  "subtitle": "What is due from every tenant this month, what has been paid and what is late.",
+  "actions": [{ "label": "Landlords' statements" }, { "label": "Record a payment", "primary": true, "icon": "money" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "receipt", "label": "Due in October", "value": { "money": 184300000 }, "note": "38 leases" },
+      { "icon": "check", "label": "Collected", "value": { "money": 156700000 }, "note": "23 paid in full · ₦5,400,000 due this week from 9" },
+      { "icon": "alert", "label": "Late", "value": { "money": 22200000 }, "change": { "tone": "warn", "text": "6 tenants" } },
+      { "icon": "users", "label": "Landlords' share", "value": { "money": 139840000 }, "note": "After our fee and the repairs charged to them" }
+    ] },
+    { "type": "table", "title": "Showing 7 of 38. Yearly rent shows in the month it falls due.", "columns": [{ "label": "Tenant" }, { "label": "Unit" }, { "label": "Due", "numeric": true }, { "label": "Paid", "numeric": true }, { "label": "Owing", "numeric": true }, { "label": "State" }], "rows": [
+      [{ "avatar": "KN", "text": "Dr Kelechi Nwankwo · quarterly" }, "Ivory Court 4A", { "money": 2375000 }, { "money": 0 }, { "money": 2375000 }, { "pill": "bad", "text": "Late 18 days" }],
+      [{ "avatar": "IJ", "text": "Mr Ibim Jack · monthly" }, "Palmgrove W-3", { "money": 500000 }, { "money": 0 }, { "money": 500000 }, { "pill": "warn", "text": "Late 12 days" }],
+      [{ "avatar": "FO", "text": "Mr Femi Oduya · monthly" }, "Ivory Court 3A", { "money": 600000 }, { "money": 0 }, { "money": 600000 }, { "pill": "info", "text": "Due 22 Oct" }],
+      [{ "avatar": "GP", "text": "Greenleaf Pharmacy · monthly" }, "Ivory Court 1C", { "money": 1000000 }, { "money": 1000000 }, { "money": 0 }, { "pill": "good", "text": "Paid, next 1 Nov" }],
+      [{ "avatar": "TB", "text": "Mrs Toyin Bello · yearly" }, "Ivory Court 4B", { "money": 9500000 }, { "money": 9500000 }, { "money": 0 }, { "pill": "good", "text": "Paid to 30 Sep 2027" }],
+      [{ "avatar": "OE", "text": "Mr Obinna Eze · yearly" }, "Ivory Court 2B", { "money": 4800000 }, { "money": 4800000 }, { "money": 0 }, { "pill": "good", "text": "Paid to 14 Oct 2027" }],
+      [{ "avatar": "HG", "text": "Mrs Hadiza Garba · yearly" }, "Palmgrove W-7", { "money": 6000000 }, { "money": 6000000 }, { "money": 0 }, { "pill": "good", "text": "Paid to 30 Sep 2027" }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Who owes, by how late", "columns": [{ "label": "Days late" }, { "label": "Tenants", "numeric": true }, { "label": "Owing", "numeric": true }], "rows": [
+        ["Up to 14 days", "3", { "money": 1700000 }],
+        ["15 to 30 days", "2", { "money": 8500000 }],
+        ["31 to 60 days", "1", { "money": 12000000 }],
+        ["Over 60 days", "0", { "money": 0 }],
+        [{ "strong": "All late rent" }, "6", { "money": 22200000 }]
+      ] },
+      { "type": "kv", "title": "Landlord's statement · Mrs Bisi Adeyemi, owner of 4B, 2B and 1C", "items": [
+        { "label": "Rent collected in October", "value": { "money": 15300000 } },
+        { "label": "Less our management fee, 10%", "value": { "money": -1530000 } },
+        { "label": "Less repairs charged to her (2B window latch)", "value": { "money": -12000 } },
+        { "label": "Payout", "value": { "strong": "₦13,758,000" } },
+        { "label": "When issued", "value": "Billed to her supplier account" }
+      ] }
+    ] }
+  ]
+}

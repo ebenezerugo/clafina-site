@@ -1,0 +1,29 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the farm calendar by field for one week, with each day's rain and a foliar spray held by the spray-before-rain rule.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "GF", "name": "Garba Family Farms", "place": "Zaria Farm, Kaduna" },
+  "nav": [
+    { "label": "Farm", "items": [{ "label": "Home" }, { "label": "Fields" }, { "label": "Seasons" }, { "label": "Calendar", "active": true }, { "label": "Tasks and work" }, { "label": "Scouting", "badge": "3" }, { "label": "Batches" }, { "label": "Harvest and lots" }, { "label": "Growers" }] },
+    { "label": "Show", "items": [{ "label": "By field", "active": true }, { "label": "By team" }] }
+  ],
+  "title": "Farm calendar · 19 to 23 October",
+  "subtitle": "Planned and finished work on every field, by day, with the rain expected each day.",
+  "actions": [{ "label": "Today" }, { "label": "Add a task", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "attention", "title": "Held by a rule", "items": [
+      { "tone": "warn", "icon": "alert", "title": "Foliar spray on Kwarbai West falls on Wednesday, when 14 mm of rain is expected from 14:00", "body": "Your rule: no spraying within 12 hours before rain. The nearest dry day is Tuesday: no rain on Monday, and the rain on Wednesday starts more than 12 hours after Tuesday's work ends.", "action": "Move to Tuesday" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Field" }, { "label": "Mon 19 · 0 mm" }, { "label": "Tue 20 · 0 mm" }, { "label": "Wed 21 · 14 mm" }, { "label": "Thu 22 · 3 mm" }, { "label": "Fri 23 · 0 mm" }], "rows": [
+      ["Dam Field · maize, 18.4 ha", { "pill": "warn", "text": "Harvest held to 30 Oct" }, "Nothing planned", "Nothing planned", "Nothing planned", "Nothing planned"],
+      ["Road Field · maize, 22.0 ha", "Nothing planned", "Treat armyworm · Hauwa A.", "Nothing planned", "Scout again · Hauwa A.", "Nothing planned"],
+      ["Tudun Wada · soybean, 15.6 ha", "Moisture check · Kabiru S.", "Sacks and tarpaulins from the store", "Nothing planned", "Nothing planned", "Nothing planned"],
+      ["Kwarbai East · maize, 20.2 ha", "Nothing planned", "Nothing planned", "Nothing planned", "Harvest prep: sacks, trailers · Ibrahim M.", "Nothing planned"],
+      ["Kwarbai West · maize, 12.8 ha", "Scout the patch · Hauwa A.", "Nothing planned", { "pill": "bad", "text": "Foliar spray: rain 14 mm" }, "Nothing planned", "Nothing planned"],
+      ["Hilltop · maize, 9.5 ha, harvested", "Clear stalks · Team A, piece work", "Clear stalks · Team A, piece work", "Nothing planned", "Nothing planned", "Plough for dry season · Ibrahim M."],
+      ["Riverside · tomato, 14.0 ha, planned", "Nothing planned", "Nursery beds · Team B", "Nursery beds · Team B", "Nothing planned", "Land preparation · Team B and tractor"]
+    ] }
+  ]
+}

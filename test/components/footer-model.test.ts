@@ -21,7 +21,7 @@ describe('footer model', () => {
     const cols = footerModel('preview').columns;
     expect(cols.map((c) => c.id)).toEqual(['product', 'industries', 'company']);
     expect(cols[0]!.items).toHaveLength(24); // platform, 21 products, pricing, compare
-    expect(cols[1]!.items).toEqual(['industries', 'industry-retail']);
+    expect(cols[1]!.items).toHaveLength(18); // the index and 17 stories
     expect(cols[2]!.items).toEqual(['contact-sales', 'demo']);
   });
   it('shows socials, badges and company lines only once they are set', () => {

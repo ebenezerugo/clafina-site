@@ -1,0 +1,43 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a hotel's front desk at 11:00, with today's arrivals and departures, which rooms are ready, and an early guest whose room is still being cleaned.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "MC", "name": "Marina Court Hotel", "place": "Calabar" },
+  "nav": [
+    { "label": "Accommodation", "items": [{ "label": "Front desk", "active": true }, { "label": "Room rack" }, { "label": "Housekeeping", "badge": "6" }, { "label": "Folios" }] },
+    { "label": "Set-up", "items": [{ "label": "Rates" }, { "label": "Channels" }, { "label": "Night audit" }] }
+  ],
+  "title": "Front desk · Monday 19 October",
+  "subtitle": "Who is arriving, in the house and leaving today. A guest checks in only to an inspected room.",
+  "actions": [{ "label": "Walk-in" }, { "label": "New stay", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Arriving today", "value": "6 rooms", "note": "1 deposit not paid yet" },
+      { "icon": "home", "label": "In the house", "value": "19", "note": "2 guests have checked out" },
+      { "icon": "clock", "label": "Leaving today", "value": "7", "note": "5 still to check out · 1 late" },
+      { "icon": "check", "label": "Free tonight", "value": "2 rooms", "note": "Of 22 on sale · 2 out of order" }
+    ] },
+    { "type": "attention", "title": "Needs you", "items": [
+      { "tone": "warn", "icon": "clock", "title": "Mr Emeka Okafor is early and room 108 is still being cleaned", "body": "Blessing Etim is on it and finishes about 12:20. Room 109 is inspected and free tonight.", "action": "Put him in 109" }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Arriving today · check-in from 14:00", "columns": [{ "label": "Guest" }, { "label": "Room and stay" }, { "label": "Room" }], "rows": [
+        ["Mrs Ekaette Bassey", "Deluxe 204 · 3 nights · Direct", { "pill": "good", "text": "Inspected" }],
+        ["Mr Emeka Okafor", "Standard 108 · 2 nights · Phone", { "pill": "warn", "text": "Cleaning · early, 11:00" }],
+        ["Mr Tunde Adebisi", "Standard 112 · 1 night · Email", { "pill": "bad", "text": "Dirty · deposit not paid" }],
+        ["Akamkpa Builders, 3 rooms", "Deluxe 205 to 207 · 2 nights · Company account", { "pill": "info", "text": "Clean, to inspect" }]
+      ] },
+      { "type": "table", "title": "Leaving today · check-out by 12:00", "columns": [{ "label": "Guest" }, { "label": "Room" }, { "label": "Folio" }], "rows": [
+        ["Mr Ade Bello", "Standard 108", { "pill": "good", "text": "Checked out 09:40" }],
+        ["Mrs Grace Udo", "Standard 112", { "pill": "good", "text": "Checked out 10:15" }],
+        ["Mr Kunle Balogun", "Standard 101", { "pill": "good", "text": "Settled" }],
+        ["Mrs Rita Okonkwo", "Deluxe 206", { "pill": "warn", "text": "₦34,800 owing" }],
+        ["Mr Dele Fashola", "Deluxe 209", { "pill": "good", "text": "Settled" }],
+        ["Mrs Joke Ladipo", "Standard 103", { "pill": "warn", "text": "Minibar to add" }],
+        ["Ms Zainab Sule", "Suite 301", { "pill": "info", "text": "Late check-out, 16:00" }]
+      ] }
+    ] }
+  ]
+}

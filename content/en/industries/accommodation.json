@@ -1,0 +1,260 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "ACCOMMODATION.md",
+    "BOOKINGS.md",
+    "INDUSTRY_PACKS.md",
+    "docs/industry-facts.md#industry-accommodation"
+  ],
+  "meta": {
+    "title": "Hotels and guest houses: the front desk and the folio · Clafina",
+    "description": "A front desk, a room rack, housekeeping on the phone and a folio that takes charges from every till. The Accommodation pack for Clafina."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Accommodation",
+    "title": "Every guest, every room and every folio, in one place.",
+    "lede": "The front desk knows which rooms are ready, the restaurant charges to the room, and the night audit closes the day while you sleep.",
+    "screen": "accommodation-front-desk"
+  },
+  "business": {
+    "name": "Marina Court Hotel",
+    "place": "Calabar",
+    "label": true,
+    "about": "A 24-room hotel with a restaurant and a bar, taking guests on holiday and on business."
+  },
+  "dayTitle": "A day at Marina Court Hotel",
+  "moments": [
+    {
+      "time": "03:00",
+      "title": "Closing yesterday",
+      "problem": "Before the new day starts, every guest in the house needs last night on their folio.",
+      "handles": "The night audit runs by itself after the hotel's audit time. It posts one room night to each guest in the house, marks arrivals who never came as no-shows with the fee rule, counts the folios still owing and closes the day.",
+      "surface": "web"
+    },
+    {
+      "time": "08:00",
+      "title": "Which room first?",
+      "problem": "Blessing has five rooms to clean, and a guest is coming early to one of them.",
+      "handles": "Her phone lists each room's tasks for the day. Room 108 is at the top, marked as an early-arrival priority because Mr Okafor arrives at 11:00.",
+      "surface": "phone",
+      "screen": "accommodation-housekeeping-phone"
+    },
+    {
+      "time": "10:50",
+      "title": "Is the room ready yet?",
+      "problem": "The front desk keeps phoning upstairs to ask.",
+      "handles": "Rooms go from dirty to clean to inspected. Each change Blessing or the inspector makes reaches the desk at once, with no refresh.",
+      "surface": "phone"
+    },
+    {
+      "time": "11:00",
+      "title": "A guest arrives early",
+      "problem": "Mr Okafor is at the desk three hours before check-in, and room 108 is still being cleaned.",
+      "handles": "Check-in only puts a guest into an inspected room, or a clean one if you allow it. The desk sees that 109 is inspected and free tonight, and moves him there.",
+      "surface": "web"
+    },
+    {
+      "time": "13:00",
+      "title": "Lunch on the room",
+      "problem": "Mrs Okon has lunch in the restaurant and asks for it to go on her room.",
+      "handles": "The restaurant till posts the bill by room number to her open folio, once only. It is there before she is back upstairs.",
+      "surface": "till"
+    },
+    {
+      "time": "14:00",
+      "title": "The company pays the rooms, not the bar",
+      "problem": "Ikom Cocoa Growers is paying for three rooms this week, but not the drinks.",
+      "handles": "The folio names the company and what it covers, room nights or everything. A charge can be moved to the company bill, and the company's share becomes one customer invoice. The guest pays her own lunch, bar and laundry.",
+      "surface": "web",
+      "screen": "accommodation-folio"
+    },
+    {
+      "time": "16:00",
+      "title": "A busy weekend is coming",
+      "problem": "A trade fair in town at the end of November will fill the hotel.",
+      "handles": "The manager adds a special date with a higher price and a two-night minimum stay. Try a price shows each step from the base rate to the night's price.",
+      "surface": "web",
+      "screen": "accommodation-rates"
+    },
+    {
+      "time": "17:30",
+      "title": "A guest asks to move rooms",
+      "problem": "Mrs Bassey would like a quieter room for her last two nights.",
+      "handles": "The stay is dragged on the room rack. A move onto a room already held for those nights is refused, so no room is ever sold twice.",
+      "surface": "web"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Guest",
+      "meaning": "The person staying. The pack uses Guest in place of customer."
+    },
+    {
+      "word": "Stay",
+      "meaning": "A guest's nights in a room, from arrival to departure."
+    },
+    {
+      "word": "Front desk",
+      "meaning": "Today's arrivals, guests in the house and departures, with check-in, check-out and moves."
+    },
+    {
+      "word": "Room rack",
+      "meaning": "Every room by night, with who holds it."
+    },
+    {
+      "word": "Folio",
+      "meaning": "A guest's running bill. Lines are never changed, only corrected by a new line."
+    },
+    {
+      "word": "Charge to room",
+      "meaning": "A bill from any till in the hotel, posted to the guest's folio."
+    },
+    {
+      "word": "Rate plan",
+      "meaning": "A price beside the base rate, such as bed and breakfast or non-refundable."
+    },
+    {
+      "word": "Season and special date",
+      "meaning": "A season repeats each year. A special date sets a price, a minimum stay or closes the night."
+    },
+    {
+      "word": "Night audit",
+      "meaning": "The close of the hotel's day: room nights posted and no-shows marked."
+    },
+    {
+      "word": "Out of order",
+      "meaning": "A room off sale, with a reason, that the desk cannot book."
+    }
+  ],
+  "switchesTitle": "What the Accommodation pack switches on",
+  "switchesOn": [
+    {
+      "text": "A front desk with arrivals, guests in the house and departures, check-in, check-out and moves"
+    },
+    {
+      "text": "A room rack of every room by night, which refuses a move onto a room already held"
+    },
+    {
+      "text": "Housekeeping with dirty, clean, inspected and out of order, live on the desk and the phone"
+    },
+    {
+      "text": "Folios with service charge, VAT and a second consumption tax, by the place's settings"
+    },
+    {
+      "text": "Charge to room from any till in the hotel, once only"
+    },
+    {
+      "text": "Split bills, and a company's share as one customer invoice"
+    },
+    {
+      "text": "Rate plans, seasons that repeat each year, weekend prices and special dates"
+    },
+    {
+      "text": "One count of rooms left for every place you sell, with Stop to close a night"
+    },
+    {
+      "text": "A night audit that runs by itself, or by hand"
+    },
+    {
+      "text": "Deposits, cancellation and no-show fees, and a waiting list from the booking engine"
+    },
+    {
+      "text": "Live connections to outside booking sites",
+      "prelaunch": "industry-accommodation"
+    },
+    {
+      "text": "Key cards and door locks",
+      "prelaunch": "industry-accommodation"
+    },
+    {
+      "text": "Group bookings with a rooming list",
+      "prelaunch": "industry-accommodation"
+    },
+    {
+      "text": "An occupancy dashboard",
+      "prelaunch": "industry-accommodation"
+    },
+    {
+      "text": "A public booking page for rooms",
+      "prelaunch": "industry-accommodation"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-bookings",
+      "text": "Rooms, room types and stays are the booking engine's, on one availability grid with no double booking."
+    },
+    {
+      "route": "product-pos",
+      "text": "The restaurant and bar tills charge to the room."
+    },
+    {
+      "route": "product-sales",
+      "text": "A company's share of a stay becomes one customer invoice."
+    },
+    {
+      "route": "product-crm",
+      "text": "Guests and companies are customers, with their history."
+    },
+    {
+      "route": "product-payments",
+      "text": "Cash, card, transfer, wallet and deposits taken on the folio, and refunds."
+    },
+    {
+      "route": "product-tax",
+      "text": "Document settings for each place, on every folio and invoice."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a hotel uses",
+  "modules": [
+    "product-bookings",
+    "product-pos",
+    "product-sales",
+    "product-crm",
+    "product-payments",
+    "product-finance",
+    "product-mobile"
+  ],
+  "faqTitle": "Questions hotels ask",
+  "faq": [
+    {
+      "q": "Is it for guest houses and short-lets too?",
+      "a": "Yes. Hotels, guest houses and short-lets are each a kind of place the pack sets up."
+    },
+    {
+      "q": "Can a room be sold twice?",
+      "a": "No. Rooms and stays sit on the booking engine's one availability grid, and a move onto a room already held is refused."
+    },
+    {
+      "q": "How does the restaurant bill a guest?",
+      "a": "The till posts the bill by room number to the guest's open folio, once only."
+    },
+    {
+      "q": "Can a company pay for the room but not the bar?",
+      "a": "Yes. The folio names what the company covers, a charge can be moved to it, and its share becomes one invoice."
+    },
+    {
+      "q": "What does the night audit do?",
+      "a": "It posts a room night to each guest in the house, marks no-shows with the fee rule, counts folios still owing and closes the day."
+    },
+    {
+      "q": "Can we connect the booking sites we sell on?",
+      "a": "Yes. Each connection uses your own account on that site, and every site sees the same count of rooms left.",
+      "prelaunch": "industry-accommodation"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-restaurant",
+    "industry-events",
+    "industry-property"
+  ],
+  "cta": {
+    "title": "Open your front desk today.",
+    "body": "Start free, switch on the Accommodation pack at your hotel, and your rooms read as clean until housekeeping says otherwise."
+  }
+}

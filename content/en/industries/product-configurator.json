@@ -1,0 +1,222 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "commerce-web/src/app/features/configurator/configurator.routes.ts",
+    "commerce-web/src/app/features/configurator/domain/configurator.model.ts",
+    "commerce-web/src/app/features/configurator/domain/configurator.logic.ts",
+    "commerce-web/src/app/features/configurator/data/configurator-api.service.ts",
+    "commerce-web/src/app/features/configurator/presentation/",
+    "commerce-web/docs/features.md",
+    "ROADMAP.md",
+    "INDUSTRY_PACKS.md",
+    "docs/industry-facts.md#industry-configurator"
+  ],
+  "meta": {
+    "title": "Product configurator: made to order, priced as you choose · Clafina",
+    "description": "Options and rules for made-to-order products, worked into a price, margin, lead time and parts list, then put on a quotation. The configurator pack for Clafina."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Product configurator",
+    "title": "Every choice priced, every part counted.",
+    "lede": "Options and rules for products made to order, worked out into a price, a margin, a lead time and a parts list while you choose.",
+    "screen": "product-configurator-quote"
+  },
+  "business": {
+    "name": "Oyelaran Office Furniture",
+    "place": "Ikeja, Lagos",
+    "label": true,
+    "about": "An office-furniture workshop that makes desks, tables and cabinets to each customer's size and finish."
+  },
+  "dayTitle": "A day at Oyelaran Office Furniture",
+  "moments": [
+    {
+      "time": "08:00",
+      "title": "One desk, many ways to make it",
+      "problem": "The executive desk comes in several sizes, woods and finishes, and each one costs and uses something different.",
+      "handles": "Tayo makes the desk configurable, with a base price, a base cost, a lead time and the bill of materials it starts from. Each option is asked as a choice, a number or yes or no, shown as buttons, a list or swatches. Each value can change the price, add lead days and add parts, in a set quantity or one worked out from other choices.",
+      "surface": "web",
+      "screen": "product-configurator-options"
+    },
+    {
+      "time": "09:00",
+      "title": "Some choices don't go together",
+      "problem": "Mahogany can't take a gloss finish, and a desk with the most drawers needs to be deep enough to hold them.",
+      "handles": "Tayo writes rules of four kinds: not allowed, adds a part, needs, and takes longer. Each one reads as a plain sentence, and a rule can be switched off and on again.",
+      "surface": "web"
+    },
+    {
+      "time": "09:30",
+      "title": "Checking before anyone quotes",
+      "problem": "Tayo wants to see the desk the way his sales staff will before they use it.",
+      "handles": "Try it lets him choose as a customer would, and nothing is saved. Then he publishes the product. If it is ever retired, it stays on the configurations that used it.",
+      "surface": "web"
+    },
+    {
+      "time": "11:00",
+      "title": "Four desks in mahogany",
+      "problem": "Ojo and Partners want four desks in mahogany with a gloss finish.",
+      "handles": "Kemi chooses on Configure and quote, and the screen works the answer out as she goes: the price line by line, for one and for all four before tax, the cost, the margin, the lead time and the ready-by date. Gloss is set aside, and the screen says why.",
+      "surface": "web"
+    },
+    {
+      "time": "11:10",
+      "title": "Not enough tops in stock",
+      "problem": "The workshop doesn't have mahogany tops for all four desks.",
+      "handles": "The bill of materials lists each part with what is needed, on hand and short, and whether it came from the base product, an option or a rule. Order the short parts opens a new purchase order with those parts and quantities filled in.",
+      "surface": "web"
+    },
+    {
+      "time": "11:20",
+      "title": "Too big to just order",
+      "problem": "An order this size should go out as a quotation, not straight to the workshop.",
+      "handles": "Above the product's needs-a-quote amount, the screen says so. Save and put on a quotation asks for the customer, and the quotation line keeps the configuration's number. Price books, discounts and approval limits apply when it is quoted. Kemi adds notes for the workshop.",
+      "surface": "web"
+    },
+    {
+      "time": "14:00",
+      "title": "A customer calls back to change the width",
+      "problem": "Mrs Nwankwo was pricing a desk yesterday and now wants it wider.",
+      "handles": "Saved configurations keep the exact choices, the product version and what they came to. Hers is still a draft, so Kemi changes it. A quoted one opens its quotation instead. The list has tabs with counts and updates live.",
+      "surface": "web",
+      "screen": "product-configurator-configurations"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Configurable product",
+      "meaning": "A product you already sell, with choices the customer makes."
+    },
+    {
+      "word": "Option",
+      "meaning": "One thing the customer chooses, such as width or finish."
+    },
+    {
+      "word": "Value",
+      "meaning": "One answer to an option, such as Mahogany for the material."
+    },
+    {
+      "word": "Asked as",
+      "meaning": "Whether an option is a choice, a number or yes or no."
+    },
+    {
+      "word": "Price change",
+      "meaning": "What a value adds to or takes off the base price: an amount or a share of the base."
+    },
+    {
+      "word": "Adds lead days",
+      "meaning": "How much longer a value makes the work take."
+    },
+    {
+      "word": "Rules",
+      "meaning": "Not allowed, adds a part, needs, or takes longer, each written as a plain sentence."
+    },
+    {
+      "word": "Try it",
+      "meaning": "Choosing as a customer would, without saving anything."
+    },
+    {
+      "word": "Needs a quote",
+      "meaning": "The amount above which a configuration goes on a quotation."
+    },
+    {
+      "word": "Notes for the workshop",
+      "meaning": "What the makers should know, kept with the configuration."
+    }
+  ],
+  "switchesTitle": "What the Product configurator pack switches on",
+  "switchesOn": [
+    {
+      "text": "Configurable products made from products you already sell, with a base price, cost, lead time and, if you like, a starting bill of materials"
+    },
+    {
+      "text": "Options asked as a choice, a number or yes or no, shown as buttons, a list or swatches"
+    },
+    {
+      "text": "Values that change the price by an amount or a share of the base, add lead days and add parts"
+    },
+    {
+      "text": "Part quantities as a number or a calculation of other choices"
+    },
+    {
+      "text": "Rules that rule a choice out, add a part, need another choice or take longer, each in a plain sentence"
+    },
+    {
+      "text": "Try it, which saves nothing, then publish and, later, retire"
+    },
+    {
+      "text": "Configure and quote, with the price, cost, margin, lead time and parts against stock"
+    },
+    {
+      "text": "Order the short parts on a purchase order that is already filled in"
+    },
+    {
+      "text": "Saved configurations, put on a quotation for a customer, with notes for the workshop"
+    },
+    {
+      "text": "Permissions to see configurable products, make configurations and quote them"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-sales",
+      "text": "A saved configuration goes on a quotation, where price books, discounts and approval limits apply."
+    },
+    {
+      "route": "product-stock",
+      "text": "Each part shows what you need, have on hand and are short of."
+    },
+    {
+      "route": "product-purchasing",
+      "text": "Order the short parts opens a purchase order with the parts and quantities filled in."
+    },
+    {
+      "route": "product-manufacturing",
+      "text": "A configurable product can start from an existing bill of materials, and each configuration keeps its own."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a made-to-order workshop uses",
+  "modules": [
+    "product-sales",
+    "product-stock",
+    "product-purchasing",
+    "product-manufacturing",
+    "product-crm"
+  ],
+  "faqTitle": "Questions made-to-order workshops ask",
+  "faq": [
+    {
+      "q": "Can I stop choices that don't go together?",
+      "a": "Yes. A rule can rule a choice out, add a part, need another choice or add lead time. Each reads as a plain sentence, and you can switch it off and on."
+    },
+    {
+      "q": "Can I check the set-up before we quote with it?",
+      "a": "Yes. Try it lets you choose as a customer would, and nothing is saved."
+    },
+    {
+      "q": "What happens to the parts list?",
+      "a": "It is kept with the configuration: each part, how many, and whether it came from the base product, an option or a rule. Short parts can go straight onto a purchase order."
+    },
+    {
+      "q": "What if the product changes after a quote?",
+      "a": "A saved configuration keeps its exact choices and the product version it was made with. A retired product stays on the configurations that used it."
+    },
+    {
+      "q": "When does an order need a quote?",
+      "a": "You set an amount on the product. Above it, the screen says so, and the configuration goes on a quotation for a customer."
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-manufacturing",
+    "industry-retail",
+    "industry-construction"
+  ],
+  "cta": {
+    "title": "Quote made-to-order work with the sums already done.",
+    "body": "Start with one product and its options. Add rules and parts as you learn what customers ask for."
+  }
+}

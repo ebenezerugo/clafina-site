@@ -1,0 +1,38 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: handing out a concrete mixer and a plate compactor, with each tag scanned, the condition noted and photographed, and the deposit held before the customer signs.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "LP", "name": "Lagoon Plant Hire", "place": "Ikeja" },
+  "nav": [
+    { "label": "Rentals", "items": [{ "label": "Items" }, { "label": "Agreements", "active": true }, { "label": "Returns due" }] }
+  ],
+  "title": "Hand-out · RENT-2026-0192 · Adeniyi Homes",
+  "subtitle": "Concrete mixer and plate compactor · Mon 19 Oct 09:10 to Fri 23 Oct 09:10 · the customer brings them back",
+  "actions": [{ "label": "Print" }, { "label": "Hand out", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "steps", "items": ["Units reserved", "Tags scanned", "Condition and photos", "Deposit held", "Customer signs", "Handed out"], "current": 4 },
+    { "type": "table", "title": "Units going out", "columns": [{ "label": "Unit" }, { "label": "Tag" }, { "label": "Condition at hand-out" }, { "label": "Photos", "numeric": true }], "rows": [
+      ["Concrete mixer 350 L", { "pill": "good", "text": "CM-0043 · scanned 09:04" }, "Clean, drum undamaged, motor hours 512", "3"],
+      ["Plate compactor", { "pill": "good", "text": "PC-0012 · scanned 09:05" }, "In working order, plate worn evenly", "2"]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "The hire", "items": [
+        { "label": "Concrete mixer, 4 days × ₦18,000", "value": { "money": 72000 } },
+        { "label": "Plate compactor, 4 days × ₦22,000", "value": { "money": 88000 } },
+        { "label": "Rent", "value": { "strong": "₦160,000" } },
+        { "label": "Invoiced", "value": "When the hire is settled" }
+      ] },
+      { "type": "kv", "title": "The deposit", "items": [
+        { "label": "Deposit, ₦200,000 a unit", "value": { "money": 400000 } },
+        { "label": "State", "value": { "pill": "good", "text": "Received 09:07 · held" } },
+        { "label": "Before hand-out", "value": "Required, by your settings" },
+        { "label": "Kept as", "value": "The customer's money, never income" }
+      ] }
+    ] },
+    { "type": "attention", "title": "Last step", "items": [
+      { "tone": "info", "icon": "users", "title": "Mr Tayo Adeniyi signs the condition notes", "body": "His signature goes on the notes and photos, so the return can be compared with them.", "action": "Ask for the signature" }
+    ] }
+  ]
+}

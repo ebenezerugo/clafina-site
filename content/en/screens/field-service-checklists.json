@@ -1,0 +1,48 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a service firm's checklists, with the inverter service steps, which ones are required and the battery reading that raises a follow-up job.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BW", "name": "Brightwire Power and Cooling", "place": "Lagos" },
+  "nav": [
+    { "label": "Field service", "items": [{ "label": "Dispatch" }, { "label": "Jobs" }] },
+    { "label": "Set up", "items": [{ "label": "Checklists", "active": true }, { "label": "Service areas" }] }
+  ],
+  "title": "Checklists · Inverter service",
+  "subtitle": "Solar · 9 steps · version 3, saved by Ayo Balogun on 2 Oct · used by the job type Inverter and battery",
+  "actions": [{ "label": "Add a step", "icon": "plus" }, { "label": "Save as version 4", "primary": true }],
+  "blocks": [
+    { "type": "cards", "columns": 4, "items": [
+      { "title": "Inverter service", "body": "Solar · 9 steps · version 3", "pill": { "tone": "info", "text": "Open" } },
+      { "title": "Split unit service", "body": "Air conditioning · 12 steps · version 5" },
+      { "title": "Generator service", "body": "Power · 14 steps · version 2" },
+      { "title": "Electrical safety inspection", "body": "Electrical · 18 steps · version 4" }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Steps", "columns": [{ "label": "Step" }, { "label": "Answer" }, { "label": "Rule" }], "rows": [
+        ["Area safe, isolator off", "Tick", { "pill": "info", "text": "Required" }],
+        ["Photo of the fault code", "Photo", { "pill": "info", "text": "Required" }],
+        ["Battery bank voltage", "Number", { "pill": "warn", "text": "Required · under 46 V raises a follow-up job" }],
+        ["Terminals clean", "Tick", "Optional"],
+        ["String readings", "3 numbers", { "pill": "info", "text": "Required" }],
+        ["Replace the fuse if blown", "Tick and part", "Optional · takes the part from the van"],
+        ["Watch for 10 minutes", "Tick", "Optional"],
+        ["Photo of the inverter running", "Photo", { "pill": "info", "text": "Required" }],
+        ["Customer shown the result", "Tick", "Optional"]
+      ] },
+      { "type": "kv", "title": "This checklist", "items": [
+        { "label": "Expected duration", "value": "2 hours" },
+        { "label": "Customer signs at the end", "value": "Yes" },
+        { "label": "Every required step before Finish", "value": "Yes" },
+        { "label": "A follow-up job", "value": "Raised once, when the job is finished" },
+        { "label": "Open jobs", "value": "Keep the version they started with" }
+      ] }
+    ] },
+    { "type": "attention", "title": "Rules a step can have", "items": [
+      { "tone": "info", "icon": "check", "title": "Required", "body": "The job cannot be finished until the step is answered." },
+      { "tone": "warn", "icon": "alert", "title": "A limit", "body": "An answer outside it raises the step's follow-up job when the job is finished." },
+      { "tone": "info", "icon": "box", "title": "A part", "body": "Ticking it asks which part was used and takes it from the van's stock." }
+    ] }
+  ]
+}

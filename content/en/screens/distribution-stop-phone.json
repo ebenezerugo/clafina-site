@@ -1,0 +1,32 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a driver's phone at a bar that holds more empties than its limit. The delivery is held until enough crates come back.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "AD", "name": "Aremu Drinks Distribution", "place": "Van LND-418 · Segun" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Stops", "icon": "sales", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Stop 13 · Okechukwu Bar",
+  "subtitle": "Agege · route R1 · account EK-0412",
+  "blocks": [
+    { "type": "attention", "title": "Delivery held", "items": [
+      { "tone": "bad", "icon": "alert", "title": "Over the empties limit", "body": "He holds 420 crates against a limit of 400. This order adds 30. Take back 50 empties and the delivery can go.", "action": "Record empties returned" }
+    ] },
+    { "type": "table", "title": "This stop's order", "columns": [{ "label": "Item" }, { "label": "Total", "numeric": true }], "rows": [
+      ["Lager 60 cl · 20 crates", { "money": 260000 }],
+      ["Malt drink 33 cl · 10 crates", { "money": 102500 }],
+      [{ "strong": "30 crates" }, { "money": 362500 }]
+    ] },
+    { "type": "kv", "title": "Left on the van", "items": [
+      { "label": "Lager 60 cl", "value": "74 crates" },
+      { "label": "Malt drink 33 cl", "value": "51 crates" },
+      { "label": "Empties back so far today", "value": "Not counted yet at this stop" }
+    ] }
+  ]
+}

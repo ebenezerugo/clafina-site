@@ -1,0 +1,41 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a full evening yoga class a minute after someone cancelled. The freed place has been offered by email to the first person waiting.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "TS", "name": "Tamarind Movement Studio", "place": "Wuse II" },
+  "nav": [
+    { "label": "Classes", "items": [{ "label": "Class schedule", "active": true }, { "label": "Check-in" }, { "label": "Class packs" }, { "label": "Teachers' pay" }] }
+  ],
+  "title": "Vinyasa yoga · Mon 19 Oct, 18:00 to 19:00",
+  "subtitle": "Studio 2 · Hauwa Danjuma · 20 places",
+  "actions": [{ "label": "Message everyone" }, { "label": "Cancel the class" }, { "label": "Add someone", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Booked", "value": "19 of 20" },
+      { "icon": "clock", "label": "Offered", "value": "1", "note": "Until 10:16" },
+      { "icon": "table", "label": "Waiting", "value": "2", "note": "After the offer" },
+      { "icon": "down", "label": "Cancelled", "value": "3", "note": "All before the free cancel time" }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Waiting list, in order", "columns": [{ "label": "Place" }, { "label": "Who" }, { "label": "Joined" }, { "label": "State" }], "rows": [
+        ["1", { "avatar": "AN", "text": "Amaka Nwosu" }, "09:10", { "pill": "info", "text": "Offered by email · 15 minutes" }],
+        ["2", { "avatar": "SA", "text": "Seun Alade" }, "11:40 yesterday", { "pill": "neutral", "text": "Next if the offer lapses" }],
+        ["3", { "avatar": "IO", "text": "Ifeoma Obiora" }, "14:02 yesterday", { "pill": "neutral", "text": "Waiting" }]
+      ] },
+      { "type": "kv", "title": "Rules for this class", "items": [
+        { "label": "Pays with", "value": "A plan, class pack credits or a ₦4,000 drop-in" },
+        { "label": "Credits a booking takes", "value": "1" },
+        { "label": "Cancel free until", "value": "2 hours before" },
+        { "label": "Late cancel or no-show", "value": "The credit is kept" },
+        { "label": "Waiting list offer lasts", "value": "15 minutes" }
+      ] }
+    ] },
+    { "type": "table", "title": "Latest changes", "columns": [{ "label": "Time" }, { "label": "What happened" }], "rows": [
+      ["10:01", "The freed place was offered to Amaka Nwosu by email"],
+      ["10:00", "Kunle Ojo cancelled. 8 hours before, so his credit came back"],
+      ["08:02", "Bola Ige booked with her plan, the last place at the time"]
+    ] }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "RESTAURANT.md",
+    "INDUSTRY_PACKS.md",
+    "ROADMAP.md",
+    "STOREFRONT_STUDIO.md",
+    "docs/industry-facts.md#industry-restaurant"
+  ],
+  "meta": {
+    "title": "Restaurants: the floor, the kitchen and the till · Clafina",
+    "description": "Tables and tabs on the till, tickets on the kitchen screen, dish costs from the recipe and tips shared fairly. The Restaurant pack for Clafina."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Restaurant",
+    "title": "The floor, the kitchen and the books, on one till.",
+    "lede": "Every table in the words of its state, every dish to the right station, and what each plate really earns.",
+    "screen": "restaurant-floor"
+  },
+  "business": {
+    "name": "Red Tile Kitchen",
+    "place": "Bodija, Ibadan",
+    "label": true,
+    "about": "A restaurant with an inside room, a terrace and a bar, serving lunch on weekdays and dinner every night."
+  },
+  "dayTitle": "A Monday at Red Tile Kitchen",
+  "moments": [
+    {
+      "time": "10:00",
+      "title": "What does each dish earn today?",
+      "problem": "Chicken has gone up again. Femi, the head chef, wants to know what the jollof earns at today's costs.",
+      "handles": "Dish costs works out a portion from the recipe at today's stock cost, sets it against the price without tax and shows the margin. Two dishes set up to leave stock twice are flagged, and one click fixes them.",
+      "surface": "web",
+      "screen": "restaurant-dish-costs"
+    },
+    {
+      "time": "11:30",
+      "title": "The fish did not come",
+      "problem": "The croaker delivery has not arrived, and lunch opens in half an hour.",
+      "handles": "Bola marks the grilled croaker sold out once, with a reason. Every till and menu shows it straight away. With the setting on, a dish whose ingredients run out is sold out by itself.",
+      "surface": "web"
+    },
+    {
+      "time": "12:30",
+      "title": "A booked party of four arrives",
+      "problem": "The Okafors are at the door, and Amaka needs to know which table is theirs and which are free.",
+      "handles": "The floor shows every table in the colour and words of its state and how long it has been there, with table 5 held for their booking. Amaka seats them and opens the tab.",
+      "surface": "till"
+    },
+    {
+      "time": "12:45",
+      "title": "The order has to reach the right cooks",
+      "problem": "Suya goes to the grill, the rice to the kitchen and the drinks to the bar.",
+      "handles": "The till asks the choices that must be answered, such as how the suya is cooked, before it sends. Each dish goes to its station by your rules. On the kitchen screen, tickets turn amber and then red as they wait, and the cooks bump them when they are done.",
+      "surface": "till",
+      "screen": "pos-kitchen"
+    },
+    {
+      "time": "13:10",
+      "title": "Nearly out of moi moi",
+      "problem": "A table orders moi moi, and the beans are running low.",
+      "handles": "With warn the waiter set, the till lists what is short and Amaka can send it anyway. You choose per place whether to allow and flag, warn, block the send or mark the dish sold out.",
+      "surface": "till"
+    },
+    {
+      "time": "14:00",
+      "title": "A takeaway during the lunch offer",
+      "problem": "A customer at the counter wants jollof to take away, at the weekday lunch price.",
+      "handles": "The tab is marked takeaway. Price rules by order type, day and hour change the price book's price, and the till shows the name of the rule that applied.",
+      "surface": "till"
+    },
+    {
+      "time": "15:00",
+      "title": "A late main is given free",
+      "problem": "Table 9 waited forty minutes for the ofada rice, and Bola comps it.",
+      "handles": "The comp is recorded with what the dish cost and what it would have sold for, kept apart from voids and from stock lost by hand.",
+      "surface": "till",
+      "screen": "restaurant-waste"
+    },
+    {
+      "time": "16:30",
+      "title": "Last week's tips, shared fairly",
+      "problem": "It is Monday, and the waiters, runners, bar and kitchen all want their share of last week's tips.",
+      "handles": "A tip run pools the week's tips by the hours on the timeclock and each role's points, to the kobo. Approving it books it. Cash shares are paid out, and the rest go into the next payroll.",
+      "surface": "web",
+      "screen": "restaurant-tips"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Floor",
+      "meaning": "The tables of one room, drawn where they stand. A place can have several floors."
+    },
+    {
+      "word": "Covers",
+      "meaning": "The guests at a table, and what spend per cover is counted on."
+    },
+    {
+      "word": "Tab",
+      "meaning": "A table's open order, from seating to paying."
+    },
+    {
+      "word": "Courses",
+      "meaning": "Starters, mains and desserts, sent and paced on their own."
+    },
+    {
+      "word": "Station",
+      "meaning": "Where a dish is made: the kitchen, the grill, the bar or the pass. Each has its own screen."
+    },
+    {
+      "word": "Bump and recall",
+      "meaning": "A cook bumps a finished ticket off the kitchen screen, and can bring it back."
+    },
+    {
+      "word": "86",
+      "meaning": "Sold out, on every till and menu at once."
+    },
+    {
+      "word": "Comp and void",
+      "meaning": "A comp is a dish given free. A void is a dish taken off the bill. Both are costed."
+    },
+    {
+      "word": "Tip pool",
+      "meaning": "Tips shared out by hours, role points or equally."
+    },
+    {
+      "word": "Dishes",
+      "meaning": "What the pack calls products. A dish is a catalogue item priced by the price book."
+    }
+  ],
+  "switchesTitle": "What the Restaurant pack switches on",
+  "switchesOn": [
+    {
+      "text": "Floors and tables drawn on a grid, and live table states from the till"
+    },
+    {
+      "text": "Menus with the days, hours and places they are served, in sections and courses"
+    },
+    {
+      "text": "Dishes with allergens, dietary tags, calories and spice level, and choices with prices that add up"
+    },
+    {
+      "text": "Sold out on every till and menu, with a reason and an optional end"
+    },
+    {
+      "text": "Stations, routing rules and a kitchen screen with bump, recall and course pacing"
+    },
+    {
+      "text": "Recipes with sub-recipes and preparation loss, and dish cost and margin"
+    },
+    {
+      "text": "Waste, voids and comps, each costed"
+    },
+    {
+      "text": "Dine in, takeaway and delivery, with price rules by order type, day and hour"
+    },
+    {
+      "text": "Set menus with choices and upgrade surcharges"
+    },
+    {
+      "text": "Tips kept apart from sales and shared by person or pool, in cash or through payroll"
+    },
+    {
+      "text": "Role templates for Waiter, Host and Chef"
+    },
+    {
+      "text": "Photos on the menu, and menus in more than one language",
+      "prelaunch": "industry-restaurant"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-pos",
+      "text": "Tabs are paid on the same till and with the same payments as any other sale."
+    },
+    {
+      "route": "product-bookings",
+      "text": "Tables are bookable, so a booking holds a table on the floor."
+    },
+    {
+      "route": "product-stock",
+      "text": "Ingredients leave stock when the kitchen starts a dish, and waste comes out of the same count."
+    },
+    {
+      "route": "product-hr",
+      "text": "Tip runs read the hours from the timeclock and pay shares through payroll."
+    },
+    {
+      "route": "product-finance",
+      "text": "Tips owed to staff and tips kept by the house are booked in the ledger."
+    },
+    {
+      "route": "product-business-health",
+      "text": "Covers, spend per cover, table turns, kitchen time, voids, comps and waste in your reports."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a restaurant uses",
+  "modules": [
+    "product-pos",
+    "product-bookings",
+    "product-stock",
+    "product-online-shop",
+    "product-hr",
+    "product-finance",
+    "product-business-health"
+  ],
+  "faqTitle": "Questions restaurants ask",
+  "faq": [
+    {
+      "q": "Does the pack work for a café or a bar as well?",
+      "a": "Yes. Restaurants, cafés, bars and counter service are ways of running the same pack, set in its settings. You can switch it on at one place and leave it off at another."
+    },
+    {
+      "q": "How does a dish reach the grill and not the bar?",
+      "a": "You set rules by dish, category or course, with one for everything else. A preview shows where each dish goes, and why."
+    },
+    {
+      "q": "What happens when an ingredient runs short?",
+      "a": "You choose: allow the send and flag it, warn the waiter, block the send, or mark the dish sold out."
+    },
+    {
+      "q": "Can a dish move to another tab after it is sent?",
+      "a": "Yes. Its kitchen ticket goes with it."
+    },
+    {
+      "q": "Can guests order ahead on our online shop?",
+      "a": "Yes, for a pickup window with a limit on how many orders each window takes. They arrive as sales orders."
+    },
+    {
+      "q": "Can the menu show photos and other languages?",
+      "a": "Yes. Each dish can carry a photo, and a menu can be shown in more than one language.",
+      "prelaunch": "industry-restaurant"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-accommodation",
+    "industry-events",
+    "industry-retail"
+  ],
+  "cta": {
+    "title": "Draw your floor today.",
+    "body": "Start free, switch on the Restaurant pack at your place, and set up a kitchen and a bar in one step."
+  }
+}

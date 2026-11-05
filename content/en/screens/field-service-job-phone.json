@@ -1,0 +1,31 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a technician's phone on site, showing the next required step of the job's checklist and the fuse to take from the van.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BW", "name": "Brightwire Power and Cooling", "place": "Van 2 · Ayo Balogun" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Jobs", "icon": "clock", "active": true },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "JOB-2026-0412 · On site",
+  "subtitle": "Battery check and inverter fault · Mrs Ngozi Ibe, 14 Palm Avenue, Lekki Phase 1",
+  "blocks": [
+    { "type": "progress", "label": "Checklist · 5 of 9 done", "value": 56 },
+    { "type": "attention", "title": "Next", "items": [
+      { "tone": "info", "icon": "box", "title": "Replace the 63 A fuse if blown", "body": "Take it from your van stock: 4 left in Van 2.", "action": "Use a part" }
+    ] },
+    { "type": "kv", "title": "Readings so far", "items": [
+      { "label": "Battery bank", "value": { "pill": "warn", "text": "45.2 V · follow-up on finish" } },
+      { "label": "String readings", "value": "412 V · 409 V · 411 V" },
+      { "label": "Fault code", "value": "Photo added" }
+    ] },
+    { "type": "attention", "title": "Still to do", "items": [
+      { "tone": "warn", "icon": "check", "title": "Photo of the inverter running", "body": "Required before you can finish." },
+      { "tone": "info", "icon": "users", "title": "Customer signs on this phone", "body": "Then record the payment reference or make the invoice." }
+    ] }
+  ]
+}

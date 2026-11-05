@@ -1,0 +1,41 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: an equipment hire yard's items, counted in units, with what is out, what is free this week and a quote for a generator.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "LP", "name": "Lagoon Plant Hire", "place": "Ikeja" },
+  "nav": [
+    { "label": "Rentals", "items": [{ "label": "Items", "active": true }, { "label": "Agreements" }, { "label": "Returns due", "badge": "6" }] }
+  ],
+  "title": "Rental items",
+  "subtitle": "Monday 19 October, 08:00 · what you hire out, how many of each, and how many are free",
+  "actions": [{ "label": "Check availability" }, { "label": "New agreement", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "box", "label": "Units out now", "value": "18", "note": "On 11 agreements" },
+      { "icon": "clock", "label": "Due back today", "value": "4 agreements" },
+      { "icon": "alert", "label": "Overdue", "value": "2", "change": { "tone": "warn", "text": "Late fees ₦72,000 so far" } },
+      { "icon": "check", "label": "Off the calendar", "value": "1", "note": "Concrete mixer CM-0041, being mended" }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Items", "columns": [{ "label": "Item" }, { "label": "Rate a day", "numeric": true }, { "label": "Units", "numeric": true }, { "label": "Out now", "numeric": true }, { "label": "Free Tue 20 to Thu 22", "numeric": true }], "rows": [
+        ["Generator 7.5 kVA", { "money": 25000 }, "3", "1", "2"],
+        ["Generator 20 kVA", { "money": 60000 }, "2", "2", "0"],
+        ["Concrete mixer 350 L", { "money": 18000 }, "5", "3", "2"],
+        ["Scaffolding set, 20 m²", { "money": 35000 }, "5", "3", "2"],
+        ["Rotary hammer drill", { "money": 8000 }, "6", "3", "5"],
+        ["Plate compactor", { "money": 22000 }, "3", "2", "2"],
+        ["Marquee tent 10 × 20 m", { "money": 120000 }, "1", "1", "0"],
+        ["Water pump 3 inch", { "money": 12000 }, "4", "3", "2"]
+      ] },
+      { "type": "kv", "title": "Is it free? Generator 7.5 kVA", "items": [
+        { "label": "Dates", "value": "Tue 20 to Fri 23 Oct, 09:00" },
+        { "label": "Free for those dates", "value": { "pill": "good", "text": "2 of 3 units" } },
+        { "label": "3 days × ₦25,000 × 1 unit", "value": { "money": 75000 } },
+        { "label": "Deposit", "value": { "money": 100000 } },
+        { "label": "A part day", "value": "Counts as a whole day" }
+      ] }
+    ] }
+  ]
+}

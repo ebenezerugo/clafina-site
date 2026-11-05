@@ -1,0 +1,41 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: scouting reports on a maize farm, with a new fall armyworm report and its suggested treatment checked against the weather, the waiting period and the store.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "GF", "name": "Garba Family Farms", "place": "Zaria Farm, Kaduna" },
+  "nav": [
+    { "label": "Farm", "items": [{ "label": "Home" }, { "label": "Fields" }, { "label": "Seasons" }, { "label": "Calendar" }, { "label": "Tasks and work" }, { "label": "Scouting", "active": true, "badge": "3" }, { "label": "Batches" }, { "label": "Harvest and lots" }, { "label": "Growers" }] }
+  ],
+  "title": "Scouting",
+  "subtitle": "Pests, disease and damage reported from the field, on the map. Choose a treatment and it becomes a task.",
+  "actions": [{ "label": "Ask a scout to look" }, { "label": "Add a report", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "alert", "label": "Open", "value": "3", "change": { "tone": "bad", "text": "1 to treat now" } },
+      { "icon": "check", "label": "Treated", "value": "5" },
+      { "icon": "leaf", "label": "No action needed", "value": "10" },
+      { "icon": "table", "label": "Reported this season", "value": "18", "note": "Armyworm 7 · stem borer 5 · rust 3 · weak patch 3" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Report" }, { "label": "Field and problem" }, { "label": "How bad" }, { "label": "Reported" }, { "label": "State" }], "rows": [
+      ["R-0142", "Road Field · fall armyworm", { "pill": "bad", "text": "High" }, "Hauwa A. · today 08:20 · 3 photos", { "pill": "bad", "text": "Treat now" }],
+      ["R-0141", "Kwarbai West · weak patch from imagery", { "pill": "warn", "text": "Watch" }, "Satellite reading · today 06:00", { "pill": "warn", "text": "Needs a scout" }],
+      ["R-0140", "Kwarbai East · stem borer", { "pill": "neutral", "text": "Low" }, "Aminu B. · 17 Oct · 1 photo", { "pill": "neutral", "text": "Watch" }],
+      ["R-0138", "Tudun Wada · soybean rust, suspected", { "pill": "neutral", "text": "Low" }, "Aminu B. · 12 Oct · 2 photos", { "pill": "good", "text": "Treated 12 Oct" }],
+      ["R-0133", "Dam Field · stem borer", { "pill": "neutral", "text": "Low" }, "Hauwa A. · 14 Oct · 2 photos", { "pill": "good", "text": "Treated 16 Oct" }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "R-0142 · fall armyworm · Road Field", "items": [
+        { "label": "Plants damaged", "value": "18%" },
+        { "label": "Area affected", "value": "6.0 ha" },
+        { "label": "Stage found", "value": "Larvae, 2nd to 3rd instar" },
+        { "label": "Where", "value": "Edge of field · 11.0842° N, 7.7301° E" },
+        { "label": "Weather", "value": "31°, dry today · 14 mm on Wednesday" }
+      ] },
+      { "type": "attention", "title": "Suggested treatment", "items": [
+        { "tone": "info", "icon": "leaf", "title": "Emamectin benzoate, 0.2 kg/ha on the 6 ha, before Wednesday's rain", "body": "It waits 7 days before harvest, and Road Field's harvest is later than that. The store holds 1.8 kg of the 1.2 kg needed, at a cost of ₦38,400.", "action": "Assign treatment" }
+      ] }
+    ] }
+  ]
+}

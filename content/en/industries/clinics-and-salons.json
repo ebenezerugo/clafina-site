@@ -1,0 +1,247 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "CLIENT_RECORDS.md",
+    "INDUSTRY_PACKS.md",
+    "commerce-web/docs/features.md",
+    "docs/industry-facts.md#industry-client-records"
+  ],
+  "meta": {
+    "title": "Clinics and salons: client records · Clafina",
+    "description": "Client records that open only when they should, consent kept as a record, sealed signed notes and an access log nobody can edit. The Client records pack for Clafina."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Clinics and salons",
+    "title": "Client records that open only when they should, and say who looked.",
+    "lede": "For clinics, physiotherapists, therapists, vets, opticians and salons that keep formulas. Consent, signed notes and an access log that can't be edited, next to your bookings.",
+    "screen": "client-records-record"
+  },
+  "business": {
+    "name": "Ayomide Physiotherapy Clinic",
+    "place": "Bodija, Ibadan",
+    "label": true,
+    "about": "A physiotherapy clinic with two physiotherapists, a front desk and an owner who is also its privacy officer. Adults and children come in for treatment after injuries and operations."
+  },
+  "dayTitle": "A day at Ayomide Physiotherapy Clinic",
+  "moments": [
+    {
+      "time": "08:00",
+      "title": "The front desk checks the day's list",
+      "problem": "Bukola at the desk needs to know who is coming in. She shouldn't see anyone's clinical notes.",
+      "handles": "The front desk and managers see a client's name, phone, bookings and consent, and nothing more. The list searches names, client numbers and phones, and never looks inside clinical text.",
+      "surface": "web",
+      "screen": "client-records-clients"
+    },
+    {
+      "time": "08:30",
+      "title": "A first visit with no consent on file",
+      "problem": "Nkechi is here for her first session, and nobody has her consent yet.",
+      "handles": "Consent is a record of its own: what it is for, the version of the wording she saw, who signed and when, and how long it is valid. Without valid consent, whatever needs it stays blocked. Bukola records it at the desk.",
+      "surface": "web",
+      "screen": "client-records-consent"
+    },
+    {
+      "time": "10:00",
+      "title": "The physio opens her client's record",
+      "problem": "Every look at a record should be accountable, without slowing Damilola down.",
+      "handles": "As the treating practitioner, Damilola opens the record without being asked why. Every read of a clinical field writes a line to the access log at the same moment. If she steps away, the record locks itself after the idle time you set.",
+      "surface": "web"
+    },
+    {
+      "time": "10:40",
+      "title": "She signs her session note",
+      "problem": "A note that can be changed later is a note nobody can trust.",
+      "handles": "A signed note never changes. If something needs correcting, she writes a new note that names the first, and both stay on the record. Measurements, prescriptions, documents and allergies sit on the same record.",
+      "surface": "web"
+    },
+    {
+      "time": "11:30",
+      "title": "A colleague covers a session",
+      "problem": "Tayo is seeing one of Damilola's clients. He isn't on her care team.",
+      "handles": "Clinical staff outside the care team can open a record, but they must give a reason first. The reason is logged next to the opening, where the owner can see it.",
+      "surface": "web"
+    },
+    {
+      "time": "13:00",
+      "title": "A child's appointment",
+      "problem": "Tobi is nine. He can't give consent himself.",
+      "handles": "A client under the age you set needs a guardian on the record, and the consent must be the guardian's. Bukola records his mother as his guardian before the session.",
+      "surface": "web"
+    },
+    {
+      "time": "17:00",
+      "title": "A client asks for a copy of her record",
+      "problem": "Folasade emails asking for everything the clinic holds on her. The request has a deadline, and it is easy to lose in an inbox.",
+      "handles": "Requests for a copy, a correction or a deletion each get a due date counted from the day they arrive, and overdue ones are marked. Ayomide, the privacy officer, sees it on the list of requests. When the copy is exported, the export is logged with its reason, like every export and print.",
+      "surface": "web"
+    },
+    {
+      "time": "19:30",
+      "title": "An emergency after hours",
+      "problem": "A client of Tayo's has had a fall, and Tayo is off tonight. Damilola needs the record now, but not a free pass.",
+      "handles": "Break-glass opens the record in an emergency. It needs a written reason and is announced at once. Break-glass, unusually fast opening and exports each raise an item for the privacy officer to look at.",
+      "surface": "web",
+      "screen": "client-records-access-log"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Client",
+      "meaning": "The person you look after. The list shows a name and the next visit; the record opens only when needed."
+    },
+    {
+      "word": "Treating practitioner",
+      "meaning": "The person on a client's care team, who opens the record without a question."
+    },
+    {
+      "word": "Consent",
+      "meaning": "A record of what a client agreed to, the version of the wording, who signed and until when."
+    },
+    {
+      "word": "Signed note",
+      "meaning": "A note that is sealed once signed. A correction is a new note naming the first."
+    },
+    {
+      "word": "Access log",
+      "meaning": "Every opening, change, print and export, with who, when and why. Nobody can edit it."
+    },
+    {
+      "word": "Break-glass",
+      "meaning": "Opening a record in an emergency, with a written reason, announced at once."
+    },
+    {
+      "word": "Record lock",
+      "meaning": "An open record locks itself after a set time without use."
+    },
+    {
+      "word": "Guardian",
+      "meaning": "The adult who consents for a client under the age you set."
+    },
+    {
+      "word": "Data request",
+      "meaning": "A client asking for a copy, a correction or a deletion, with a due date."
+    },
+    {
+      "word": "Privacy officer",
+      "meaning": "The person who looks at flags and applies the rules for how long records are kept."
+    }
+  ],
+  "switchesTitle": "What the Client records pack switches on",
+  "switchesOn": [
+    {
+      "text": "A client list with nothing clinical on it, searched by name, number and phone only"
+    },
+    {
+      "text": "Clinical fields encrypted again with your organisation's own key"
+    },
+    {
+      "text": "Records opened on purpose: as the treating practitioner, with a reason, or by break-glass"
+    },
+    {
+      "text": "A record that locks itself after the idle time you set"
+    },
+    {
+      "text": "An access log written with every read, that cannot be edited and is kept ten years"
+    },
+    {
+      "text": "Flags for break-glass, unusually fast opening, exports and searches over the limits you set"
+    },
+    {
+      "text": "Consent kept as versioned records that block what needs them, such as photos and sharing with an insurer"
+    },
+    {
+      "text": "Notes, measurements, prescriptions, documents and allergies, with signed notes sealed"
+    },
+    {
+      "text": "Guardians for clients under the age you set, with the guardian's consent"
+    },
+    {
+      "text": "Data requests with a due date, and retention rules for adults and children, applied by the privacy officer"
+    },
+    {
+      "text": "No clinical text in notifications, links, logs, errors or the assistant"
+    },
+    {
+      "text": "Only the owner has clinical access until you give it to someone"
+    },
+    {
+      "text": "Record templates for each profession: physiotherapy, therapy, vets with pets and owners, eyewear prescriptions and hair colour formulas",
+      "prelaunch": "industry-client-records"
+    },
+    {
+      "text": "A page where clients sign their own consent",
+      "prelaunch": "industry-client-records"
+    },
+    {
+      "text": "Insurer claims",
+      "prelaunch": "industry-client-records"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-bookings",
+      "text": "Clients are booked on the usual booking screens. The front desk sees the booking, never the notes."
+    },
+    {
+      "route": "product-communication",
+      "text": "Notifications and links about a client never carry clinical text."
+    },
+    {
+      "route": "product-assistant",
+      "text": "The assistant never sees clinical text, so a question to it can't leak a note."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a clinic uses",
+  "modules": [
+    "product-bookings",
+    "product-communication",
+    "product-assistant",
+    "product-mobile"
+  ],
+  "faqTitle": "Questions clinics and salons ask",
+  "faq": [
+    {
+      "q": "Can the front desk see clinical notes?",
+      "a": "No. The front desk and managers see a client's name, phone, bookings and consent only. Only the owner has clinical access until you give it to someone."
+    },
+    {
+      "q": "Can a signed note be changed?",
+      "a": "No. A signed note is sealed. A correction is a new note that names the first, and both stay on the record."
+    },
+    {
+      "q": "How do I know who has looked at a record?",
+      "a": "Every read of a clinical field writes a line to the access log, with who, when and why. Nobody can edit the log, and it is kept ten years."
+    },
+    {
+      "q": "What happens in an emergency?",
+      "a": "Anyone clinical can use break-glass with a written reason. It is announced at once and raises an item for the privacy officer."
+    },
+    {
+      "q": "Is the data encrypted?",
+      "a": "Yes. Clinical fields are encrypted again with your organisation's own key."
+    },
+    {
+      "q": "Does this make my clinic meet the law in my country?",
+      "a": "Clafina gives you the tools: consent records, an access log, data requests with due dates and retention rules. Whether your practice meets the law is for you and your adviser to decide."
+    },
+    {
+      "q": "Can a salon keep hair colour formulas?",
+      "a": "Yes. Record templates are made for each profession, from physiotherapy to hair colour formulas.",
+      "prelaunch": "industry-client-records"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-memberships",
+    "industry-classes",
+    "industry-courses"
+  ],
+  "cta": {
+    "title": "Keep your client records where they belong.",
+    "body": "Start free, switch on the Client records pack and set who may open what. Your bookings are already there."
+  }
+}
