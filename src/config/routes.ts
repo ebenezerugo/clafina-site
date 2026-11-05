@@ -15,7 +15,7 @@ const internal = <const I extends string>(id: I, path: string) => ({ id, path, g
 /** Every page in the site map (spec section 3). A page appears only when it is built and its switch is on. */
 export const ROUTES = [
   r('home', '/', 'core', true),
-  r('platform', '/platform/', 'core'),
+  r('platform', '/platform/', 'core', true),
   r('pricing', '/pricing/', 'core', true),
   r('pricing-compare', '/pricing/compare/', 'core', true),
   r('demo', '/demo/', 'core'),
