@@ -18,7 +18,7 @@ for (const locale of enabled) {
 }
 
 // One sitemap per indexed language, available pages only, plus the index and robots.txt.
-const paths = ROUTES.filter((r) => pageAvailable(r.id)).map((r) => r.path);
+const paths = ROUTES.filter((r) => !('previewOnly' in r) && pageAvailable(r.id)).map((r) => r.path);
 for (const locale of indexed) writeFileSync(join(OUT, `sitemap-${locale}.xml`), sitemapXml(locale, paths, indexed));
 writeFileSync(
   join(OUT, 'sitemap.xml'),
