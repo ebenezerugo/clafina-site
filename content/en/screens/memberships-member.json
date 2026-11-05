@@ -1,0 +1,48 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: freezing a gym member's plan for two weeks of travel. The paid days come back as a credit on her next invoice.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "HF", "name": "Harmattan Fitness Club", "place": "Lekki" },
+  "nav": [
+    { "label": "Memberships", "items": [{ "label": "Members", "active": true }, { "label": "Plans" }, { "label": "Billing runs" }, { "label": "Contracts and retainers" }, { "label": "Front desk" }] }
+  ],
+  "title": "Yetunde Afolabi · MEM-00482",
+  "subtitle": "Monthly Unlimited · member since 3 Feb 2025 · paid to 31 Oct",
+  "actions": [{ "label": "Change plan" }, { "label": "Cancel" }, { "label": "Save the freeze", "primary": true, "icon": "clock" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "State", "value": { "pill": "good", "text": "Active" } },
+      { "icon": "clock", "label": "Freeze days left this year", "value": "24 of 30", "note": "9 after this freeze" },
+      { "icon": "check", "label": "Visits this month", "value": "14" }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "New freeze", "items": [
+        { "label": "From", "value": "Mon 9 Nov 2026" },
+        { "label": "To", "value": "Mon 23 Nov 2026 · 15 days" },
+        { "label": "Reason", "value": "Travel · asked at the desk" },
+        { "label": "Notice", "value": "2 days needed · given 9 days" },
+        { "label": "Shortest freeze", "value": "7 days" },
+        { "label": "Access while frozen", "value": { "pill": "warn", "text": "Blocked" } }
+      ] },
+      { "type": "table", "title": "Next invoice, 1 Dec", "columns": [{ "label": "Line" }, { "label": "Amount", "numeric": true }], "rows": [
+        ["Monthly Unlimited · December", { "money": 25000 }],
+        ["Credit for 15 frozen days of November", { "money": -12500 }],
+        [{ "strong": "To pay" }, { "money": 12500 }]
+      ] }
+    ] },
+    { "type": "table", "title": "Billing history", "columns": [{ "label": "Date" }, { "label": "For" }, { "label": "Amount", "numeric": true }, { "label": "State" }], "rows": [
+      ["1 Nov", "Monthly Unlimited · November", { "money": 25000 }, { "pill": "info", "text": "In tomorrow's billing run" }],
+      ["1 Oct", "Monthly Unlimited · October", { "money": 25000 }, { "pill": "good", "text": "Paid at the desk" }],
+      ["1 Sep", "Monthly Unlimited · September", { "money": 25000 }, { "pill": "good", "text": "Paid by transfer" }],
+      ["1 Jul", "Monthly Unlimited · July, 6 days' freeze credit", { "money": 20000 }, { "pill": "good", "text": "Paid by transfer" }]
+    ] },
+    { "type": "kv", "title": "Access", "items": [
+      { "label": "Areas", "value": "Gym floor and every class" },
+      { "label": "Hours", "value": "05:00 to 22:00" },
+      { "label": "Entry", "value": "QR card and fob F-0482" },
+      { "label": "Last in", "value": "Today 06:02, front desk" }
+    ] }
+  ]
+}

@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
 /** Every industry story that is built. Each one gets the same checks. */
-const STORIES = ['retail'];
+const STORIES = ['retail', 'restaurant', 'accommodation', 'events', 'memberships', 'classes', 'courses', 'clinics-and-salons', 'property', 'construction', 'field-service', 'rentals', 'distribution', 'farm', 'manufacturing', 'fundraising', 'product-configurator'];
 
 for (const slug of STORIES) {
   test.describe(`industry story: ${slug}`, () => {

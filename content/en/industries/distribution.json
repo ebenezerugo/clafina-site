@@ -1,0 +1,264 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "DISTRIBUTION.md",
+    "STOREFRONT_STUDIO.md",
+    "SALES.md",
+    "POINT_OF_SALE.md",
+    "INDUSTRY_PACKS.md",
+    "ROADMAP.md",
+    "docs/industry-facts.md#industry-distribution"
+  ],
+  "meta": {
+    "title": "Distribution: vans, routes and empties · Clafina",
+    "description": "Van loads on fixed routes, empties and deposits for every customer, and each van settled against what it sold. The Distribution pack for Clafina."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Distribution",
+    "title": "Every van, every crate, every naira back at the depot.",
+    "lede": "Van loads on fixed routes, the empties each customer holds, and a van settled against what it sold before the driver goes home.",
+    "screen": "distribution-routes"
+  },
+  "business": {
+    "name": "Aremu Drinks Distribution",
+    "place": "Ikeja, Lagos",
+    "label": true,
+    "about": "A drinks distributor with six vans on fixed routes out of its Ikeja warehouse, a trade counter, a trade portal, and pallet space let to other businesses."
+  },
+  "dayTitle": "A day at Aremu Drinks Distribution",
+  "moments": [
+    {
+      "time": "06:10",
+      "title": "Loading the vans",
+      "problem": "Each van has to leave with the right stock for today's round, and someone has to know what that stock is worth.",
+      "handles": "Aisha starts a van load for each van. It puts one van on one route for the day, lists the stops in order from the customers on that route for a Monday, and keeps a load sheet of what went on and its value. Each van is its own stock location, so the stock travels with it.",
+      "surface": "web"
+    },
+    {
+      "time": "11:40",
+      "title": "Selling at the stop",
+      "problem": "Segun is at Mama Tola Stores. She wants more lager than he has left on the van.",
+      "handles": "His phone lets him sell only what is still on the van, and take no more payment than he sold at that stop. If a stop fails, the goods stay on the van. Sales, payments and empties come in as the phone syncs.",
+      "surface": "phone"
+    },
+    {
+      "time": "12:15",
+      "title": "A bar holding too many crates",
+      "problem": "Okechukwu Bar already holds more empties than its limit allows, and wants another delivery.",
+      "handles": "The delivery is held, because it would leave the bar over its limit. Segun sees how many empties have to come back for it to go. If enough are handed back at the stop, he delivers.",
+      "surface": "phone",
+      "screen": "distribution-stop-phone"
+    },
+    {
+      "time": "13:00",
+      "title": "Who has our crates?",
+      "problem": "Funmi wants to know which customers are sitting on crates, and for how long.",
+      "handles": "Every crate out and back is written once in an empties ledger that is never edited. Each customer shows the crates they hold, the deposit that goes with them and their oldest crate, first in first out. Lists show who is over their limit, who has kept crates too long and who is balanced.",
+      "surface": "web",
+      "screen": "distribution-empties"
+    },
+    {
+      "time": "14:00",
+      "title": "A shop orders on account",
+      "problem": "Mr Okeke wants to order for his shop tonight, at his own prices and on his credit terms.",
+      "handles": "The trade portal shows his contract and tier prices and only the products on his contract. It checks his credit at checkout and asks for his purchase order number. A large order goes to his company's own approver. He can paste a quick order, keep saved lists and reorder.",
+      "surface": "shop"
+    },
+    {
+      "time": "15:00",
+      "title": "Credit at the depot counter",
+      "problem": "A trade customer buys at the counter on credit and asks for a bigger discount.",
+      "handles": "The till sells on account. A discount above the cashier's limit needs a supervisor's approval before the sale goes through.",
+      "surface": "till"
+    },
+    {
+      "time": "16:15",
+      "title": "Chika's van is back",
+      "problem": "The cash, the stock and the empties have to agree with what was sold before Chika goes home.",
+      "handles": "Settling sets what was sold against what was counted: payments by method, stock line by line, and empties. A small cash shortfall within the tolerance clears. Every other difference goes to the driver's account, where a manager clears it, charges the driver or writes it off.",
+      "surface": "web",
+      "screen": "distribution-settle"
+    },
+    {
+      "time": "17:30",
+      "title": "What will storage come to this month?",
+      "problem": "Funmi lets pallet space to other businesses. Each one is billed at month end, and she wants to see October so far.",
+      "handles": "Storage billing works out each client's month from the rate card, or their own: pallet places by the month's average or peak times the days, the cold room the same, receiving by the pallet, sending by the case, services, and insurance unless they have their own cover, topped up to the minimum. Each client gets one invoice, and making the invoices fixes the month.",
+      "surface": "web",
+      "screen": "distribution-storage"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Van load",
+      "meaning": "One van on one route for one day, from loading to settled."
+    },
+    {
+      "word": "Load sheet",
+      "meaning": "What went on the van and what it was worth."
+    },
+    {
+      "word": "Stops",
+      "meaning": "The customers on a route for that weekday, in the order the van visits them."
+    },
+    {
+      "word": "Settle a van",
+      "meaning": "Setting what the van sold against the cash, stock and empties that came back."
+    },
+    {
+      "word": "Empties",
+      "meaning": "Returnable crates, bottles and kegs, each with a deposit price."
+    },
+    {
+      "word": "Empties limit",
+      "meaning": "How many empties a customer may hold before the next delivery is held."
+    },
+    {
+      "word": "Oldest crate",
+      "meaning": "How long the customer's longest-held crate has been out, counted first in first out."
+    },
+    {
+      "word": "Driver's differences",
+      "meaning": "What settling could not clear, kept on the driver's account for a manager."
+    },
+    {
+      "word": "Rate card",
+      "meaning": "The storage, receiving and sending prices for the goods you keep for others."
+    },
+    {
+      "word": "Pallet place",
+      "meaning": "One pallet's space in the warehouse, billed by the day."
+    }
+  ],
+  "switchesTitle": "What the Distribution pack switches on",
+  "switchesOn": [
+    {
+      "text": "Routes from a warehouse, with each customer on a weekday and in order"
+    },
+    {
+      "text": "Vans with their driver, registration and stock, each one an asset and a stock location"
+    },
+    {
+      "text": "Van loads with load sheets, stops in order and settling when the van is back"
+    },
+    {
+      "text": "Returnable crates, bottles and kegs with a deposit price"
+    },
+    {
+      "text": "An empties ledger for each customer, the oldest crate first, and an empties limit that holds a delivery"
+    },
+    {
+      "text": "Storage billing for the businesses whose goods you keep, from a rate card, invoiced once a month per client"
+    },
+    {
+      "text": "A Distribution menu, with starting settings you can change: holding a delivery over the limit, when empties count as old, the cash tolerance and when storage invoices fall due"
+    },
+    {
+      "text": "Van loads and customers' empties that update live on screen"
+    },
+    {
+      "text": "Route planning on a map",
+      "prelaunch": "industry-distribution"
+    },
+    {
+      "text": "Proof of delivery",
+      "prelaunch": "industry-distribution"
+    },
+    {
+      "text": "A view of their own stock for the businesses you store for",
+      "prelaunch": "industry-distribution"
+    },
+    {
+      "text": "Excise",
+      "prelaunch": "industry-distribution"
+    },
+    {
+      "text": "Selling in cartons, packs or single items at the till",
+      "prelaunch": "industry-distribution"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-stock",
+      "text": "Each van is a stock location, so a sale at a stop moves stock from the van that made it."
+    },
+    {
+      "route": "product-assets",
+      "text": "Each van is an asset, with its days in the workshop."
+    },
+    {
+      "route": "product-online-shop",
+      "text": "The trade portal sells to the same customers, with account prices, contract catalogues, credit and purchase orders."
+    },
+    {
+      "route": "product-sales",
+      "text": "Wholesale prices come from the price book, with quantity breaks, and storage goes on Clafina's own customer invoice."
+    },
+    {
+      "route": "product-pos",
+      "text": "The till at the trade counter sells on account, with supervisor limits."
+    },
+    {
+      "route": "product-crm",
+      "text": "Customers carry their area, terms, empties limit and routes."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a distributor uses",
+  "modules": [
+    "product-stock",
+    "product-sales",
+    "product-online-shop",
+    "product-pos",
+    "product-crm",
+    "product-assets",
+    "product-finance",
+    "product-mobile"
+  ],
+  "faqTitle": "Questions distributors ask",
+  "faq": [
+    {
+      "q": "Can a driver sell what isn't on the van?",
+      "a": "No. Sales at a stop never go above what is left on the van, and payments never go above what was sold there. A failed stop keeps the goods on the van."
+    },
+    {
+      "q": "How do I stop a customer keeping too many crates?",
+      "a": "Give them an empties limit. A delivery that would leave them over it is held, unless enough empties come back at the stop. You can switch the hold off in the settings."
+    },
+    {
+      "q": "What happens when the cash doesn't match?",
+      "a": "A shortfall within your tolerance clears. Anything else goes to the driver's account, where a manager clears it, charges the driver or writes it off."
+    },
+    {
+      "q": "Can I bill the businesses whose goods I keep?",
+      "a": "Yes. Storage billing works out each client's month from your rate card or their own, and makes one invoice per client. Nothing is invoiced until you say so."
+    },
+    {
+      "q": "Do my trade customers get their own prices online?",
+      "a": "Yes. The trade portal shows each company its contract and tier prices, checks credit at checkout and asks for a purchase order number."
+    },
+    {
+      "q": "Can routes be planned on a map?",
+      "a": "Yes. You can plan each route and the order of its stops on a map.",
+      "prelaunch": "industry-distribution"
+    },
+    {
+      "q": "Can I sell a carton and a single bottle at the counter?",
+      "a": "Yes. The till sells in more than one unit, so a carton, a pack and a single item each have their own price.",
+      "prelaunch": "industry-distribution"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-retail",
+    "industry-manufacturing",
+    "industry-farm"
+  ],
+  "cta": {
+    "title": "Put your vans on the road.",
+    "body": "Start with your routes, vans and customers. Add empties limits and storage billing when you need them."
+  }
+}

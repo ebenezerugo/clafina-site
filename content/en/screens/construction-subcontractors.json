@@ -1,0 +1,46 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a contractor's subcontractors on one site, with retention held back and a plumber's payment certificate blocked by an expired tax clearance.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "PRJ-2026-0033 · Lagoonside Court, Ikoyi" },
+  "nav": [
+    { "label": "Construction", "items": [{ "label": "Progress billing" }, { "label": "Site diary" }, { "label": "Snag list" }, { "label": "Subcontractors", "active": true, "badge": "3" }] }
+  ],
+  "title": "Subcontractors",
+  "subtitle": "Who is working under you, what they are owed and held back, and whether their papers are in order to be paid.",
+  "actions": [{ "label": "New subcontract", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Subcontractors on site", "value": "9", "note": "₦412,000,000 in subcontracts" },
+      { "icon": "receipt", "label": "On certificates to date", "value": { "money": 186400000 }, "note": "₦9,320,000 retention held back" },
+      { "icon": "clock", "label": "Waiting for approval", "value": { "money": 31200000 }, "note": "4 payment certificates" },
+      { "icon": "alert", "label": "Papers to chase", "value": "3", "change": { "tone": "warn", "text": "1 expired, 2 ending soon" } }
+    ] },
+    { "type": "table", "title": "Showing 6 of 9. An expired paper blocks payment until it is renewed or an exception is approved.", "columns": [{ "label": "Subcontractor" }, { "label": "Papers" }, { "label": "Subcontract", "numeric": true }, { "label": "On certificates", "numeric": true }, { "label": "Retention", "numeric": true }], "rows": [
+      [{ "strong": "Firmstep Tiling · tiling · SC-0004" }, { "pill": "good", "text": "In order" }, { "money": 38000000 }, { "money": 14200000 }, { "money": 710000 }],
+      [{ "strong": "Oakline Joinery · carpentry and doors · SC-0006" }, { "pill": "warn", "text": "Insurance ends 4 Nov" }, { "money": 52000000 }, { "money": 9100000 }, { "money": 455000 }],
+      [{ "strong": "Brightcurrent Electrical · electrical · SC-0002" }, { "pill": "good", "text": "In order" }, { "money": 68000000 }, { "money": 31400000 }, { "money": 1570000 }],
+      [{ "strong": "Deepwell Plumbing · plumbing · SC-0003" }, { "pill": "bad", "text": "Tax clearance expired" }, { "money": 44000000 }, { "money": 18800000 }, { "money": 940000 }],
+      [{ "strong": "Clearview Glazing · aluminium and glazing · SC-0007" }, { "pill": "warn", "text": "Safety card ends 30 Oct" }, { "money": 36000000 }, "Nothing yet", "Nothing yet"],
+      [{ "strong": "Truecoat Painters · painting · SC-0008" }, { "pill": "good", "text": "In order" }, { "money": 22000000 }, "Nothing yet", "Nothing yet"]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Payment certificate 5 · Deepwell Plumbing", "items": [
+        { "label": "Work done to date", "value": { "money": 22400000 } },
+        { "label": "Less retention, 5%", "value": { "money": -1120000 } },
+        { "label": "Less paid before, after retention", "value": { "money": -17860000 } },
+        { "label": "Less back-charges (water damage, 2B)", "value": { "money": -380000 } },
+        { "label": "Net before tax", "value": { "money": 3040000 } },
+        { "label": "VAT, 7.5%", "value": { "money": 228000 } },
+        { "label": "Less withholding tax, 5%", "value": { "money": -152000 } },
+        { "label": "To pay once approved", "value": { "strong": "₦3,116,000" } }
+      ] },
+      { "type": "attention", "title": "Blocked", "items": [
+        { "tone": "bad", "icon": "alert", "title": "The tax clearance expired on 30 Sep", "body": "Ask Deepwell Plumbing for the new one. Or, with the exception permission, let this one certificate through with a reason. The reason is logged.", "action": "Ask for the paper" },
+        { "tone": "info", "icon": "receipt", "title": "Once approved", "body": "A draft supplier bill for ₦3,116,000 is made in Payables, with retention and back-charges already taken off." }
+      ] }
+    ] }
+  ]
+}

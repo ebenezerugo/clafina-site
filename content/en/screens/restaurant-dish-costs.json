@@ -1,0 +1,51 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: dish costs at a restaurant, with what a portion costs from the recipe at today's stock cost, the price without tax and the margin, and two dishes flagged for leaving stock twice.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RT", "name": "Red Tile Kitchen", "place": "Bodija, Ibadan" },
+  "nav": [
+    { "label": "Restaurant", "items": [{ "label": "Floor" }, { "label": "Menus" }, { "label": "Options" }, { "label": "Sold out" }, { "label": "Kitchen" }, { "label": "Recipes" }, { "label": "Dish costs", "active": true, "badge": "2" }, { "label": "Waste" }, { "label": "Prices" }, { "label": "Tips" }] }
+  ],
+  "title": "Recipes and dish costs",
+  "subtitle": "What a dish is made of, what a portion costs and what it earns. The price is the price book's, with the 7.5% VAT taken out.",
+  "actions": [{ "label": "New recipe", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "attention", "title": "To look at", "items": [
+      { "tone": "warn", "icon": "box", "title": "2 dishes have a recipe and are also counted in stock", "body": "Each sale would take Puff puff and Chin chin out of stock twice. A dish with a recipe should be made to order.", "action": "Fix stock type" }
+    ] },
+    { "type": "table", "title": "Dishes", "columns": [{ "label": "Dish" }, { "label": "Cost a portion", "numeric": true }, { "label": "Price", "numeric": true }, { "label": "Earns, no tax", "numeric": true }, { "label": "Margin", "numeric": true }, { "label": "Stock check" }], "rows": [
+      ["Jollof rice and grilled chicken", { "money": 2410 }, { "money": 6500 }, { "money": 3637 }, "60%", "46 portions"],
+      ["Egusi soup and pounded yam", { "money": 2960 }, { "money": 7800 }, { "money": 4296 }, "59%", { "pill": "warn", "text": "Short: egusi" }],
+      ["Suya platter", { "money": 3180 }, { "money": 8500 }, { "money": 4727 }, "60%", { "pill": "warn", "text": "Low: beef, 9 portions" }],
+      ["Ofada rice and ayamase", { "money": 3350 }, { "money": 7200 }, { "money": 3348 }, "50%", "22 portions"],
+      ["Pepper soup, goat", { "money": 2240 }, { "money": 5500 }, { "money": 2876 }, "56%", "31 portions"],
+      ["Grilled croaker fish", { "money": 5120 }, { "money": 9800 }, { "money": 3996 }, "44%", "14 portions"],
+      ["Puff puff (6)", { "money": 410 }, { "money": 2000 }, { "money": 1450 }, "78%", { "pill": "bad", "text": "Leaves stock twice" }],
+      ["Chin chin, bag", { "money": 300 }, { "money": 1500 }, { "money": 1095 }, "78%", { "pill": "bad", "text": "Leaves stock twice" }]
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Recipe: Jollof rice and grilled chicken · 1 portion", "columns": [{ "label": "Ingredient" }, { "label": "Amount" }, { "label": "Loss" }, { "label": "Cost", "numeric": true }], "rows": [
+        ["Parboiled long-grain rice", "180 g", "0%", { "money": 462 }],
+        ["Chicken thighs, bone in", "320 g", "12%", { "money": 1046 }],
+        ["Tomato paste", "40 g", "0%", { "money": 120 }],
+        ["Fresh tomatoes", "120 g", "8%", { "money": 96 }],
+        ["Red bell pepper (tatashe)", "60 g", "10%", { "money": 84 }],
+        ["Onion", "50 g", "12%", { "money": 55 }],
+        ["Vegetable oil", "35 ml", "0%", { "money": 127 }],
+        ["Plantain, ripe", "120 g", "25%", { "money": 144 }],
+        ["Seasoning, thyme and curry", "15 g", "0%", { "money": 276 }],
+        [{ "strong": "A portion" }, "", "", { "money": 2410 }]
+      ] },
+      { "type": "kv", "title": "How it is worked out", "items": [
+        { "label": "Price in the price book", "value": { "money": 6500 } },
+        { "label": "Price without VAT", "value": { "money": 6047 } },
+        { "label": "Cost a portion", "value": { "money": 2410 } },
+        { "label": "Earns", "value": { "money": 3637 } },
+        { "label": "Margin", "value": "60% of ₦6,047" },
+        { "label": "Ingredients leave stock", "value": "When the kitchen starts the dish" }
+      ] }
+    ] }
+  ]
+}

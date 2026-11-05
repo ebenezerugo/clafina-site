@@ -1,0 +1,32 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the gala dinner's seating plan with one table left, held for the first buyer while the second is refused.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "ZE", "name": "Zamani Events", "place": "Abuja" },
+  "nav": [
+    { "label": "This event", "items": [{ "label": "Overview" }, { "label": "Sessions" }, { "label": "Tickets" }, { "label": "Seating", "active": true }, { "label": "Sales" }, { "label": "Sponsors" }] }
+  ],
+  "title": "Gala dinner seating · 24 tables of 10",
+  "subtitle": "Thu 12 Nov, 19:00 · Marquee · a table is held while its buyer pays, and sold only to the holder",
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "Sold", "value": "23 tables" },
+      { "icon": "clock", "label": "Held", "value": "1 table", "note": "Table 17" },
+      { "icon": "table", "label": "Free", "value": "0" }
+    ] },
+    { "type": "attention", "title": "The last table", "items": [
+      { "tone": "info", "icon": "clock", "title": "Table 17 is held for Mrs Amina Garba", "body": "She is paying at the box office. The hold ends in 6 minutes if she does not.", "action": "See the hold" },
+      { "tone": "warn", "icon": "alert", "title": "A second buyer was refused table 17", "body": "It is held for another buyer. Two sales can never take the last table.", "action": "Offer a day 2 pass" }
+    ] },
+    { "type": "table", "title": "Tables near the stage", "columns": [{ "label": "Table" }, { "label": "Seats" }, { "label": "State" }, { "label": "Buyer" }], "rows": [
+      ["Table 1", "10", { "pill": "good", "text": "Sold" }, "Kufena Paints"],
+      ["Table 2", "10", { "pill": "good", "text": "Sold" }, "Ogbe Tiles"],
+      ["Table 15", "10", { "pill": "good", "text": "Sold" }, "Mr Yusuf Bello"],
+      ["Table 16", "10", { "pill": "good", "text": "Sold" }, "Wuse Interiors"],
+      ["Table 17", "10", { "pill": "warn", "text": "Held · 6 min left" }, "Mrs Amina Garba"],
+      ["Table 18", "10", { "pill": "good", "text": "Sold" }, "Gurara Builders Ltd"]
+    ] }
+  ]
+}

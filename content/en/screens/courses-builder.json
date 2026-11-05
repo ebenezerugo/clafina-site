@@ -1,0 +1,52 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a new warehouse course in the builder, with five of nine lessons ready. It can't be published until every lesson is ready.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "KS", "name": "Kalabari Supply Company", "place": "Trans-Amadi" },
+  "nav": [
+    { "label": "Courses", "items": [{ "label": "Courses", "active": true }, { "label": "Learners" }, { "label": "Certificates" }, { "label": "My learning" }] }
+  ],
+  "title": "Warehouse basics: receiving and counting stock",
+  "subtitle": "CRS-2026-0007 · draft, 5 of 9 lessons ready · for staff and customers",
+  "actions": [{ "label": "Preview as a learner" }, { "label": "Publish", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "attention", "title": "Before you can publish", "items": [
+      { "tone": "warn", "icon": "alert", "title": "4 lessons are not ready", "body": "Every lesson must be ready first: a video with its file and length, a reading with text, a quiz with enough questions in its bank." }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Outline", "columns": [{ "label": "Lesson" }, { "label": "Kind" }, { "label": "State" }], "rows": [
+        ["1.1 Your first day in the warehouse", "Video · 6 min", { "pill": "good", "text": "Ready" }],
+        ["1.2 Staying safe on the floor", "Reading", { "pill": "good", "text": "Ready" }],
+        ["1.3 Quick check", "Quiz · 5 questions", { "pill": "good", "text": "Ready" }],
+        ["2.1 Checking a delivery against the order", "Video · 9 min", { "pill": "good", "text": "Ready" }],
+        ["2.2 Using the scanner", "Video · 11 min", { "pill": "good", "text": "Ready" }],
+        ["2.3 When a delivery is short", "Reading", { "pill": "warn", "text": "No text yet" }],
+        ["2.4 Quiz: receiving", "Quiz · 8 questions", { "pill": "warn", "text": "3 of 8 questions in the bank" }],
+        ["3.1 Counting stock", "Video", { "pill": "warn", "text": "No video file" }],
+        ["3.2 Final quiz", "Quiz · 15 questions", { "pill": "warn", "text": "9 of 15 questions in the bank" }]
+      ] },
+      { "type": "kv", "title": "Lesson 2.2 · Using the scanner", "items": [
+        { "label": "File", "value": "scanner-training.mp4 · 11:04" },
+        { "label": "Captions", "value": "English" },
+        { "label": "Counts as done when", "value": "They watch 90% of the video" },
+        { "label": "Resources", "value": "Scanner cheat sheet.pdf" }
+      ] }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Who can take it", "items": [
+        { "label": "Open to", "value": "Staff and customers" },
+        { "label": "Price", "value": "Free for staff · ₦5,000 for customers" },
+        { "label": "Customers start", "value": "When the invoice is paid" },
+        { "label": "Needs approval", "value": "No" }
+      ] },
+      { "type": "kv", "title": "Passing", "items": [
+        { "label": "Pass mark", "value": "70% on the final quiz" },
+        { "label": "Retakes", "value": "3, a day apart" },
+        { "label": "Certificate", "value": "Kalabari Supply Company training" },
+        { "label": "Certificate runs out", "value": "After 24 months" }
+      ] }
+    ] }
+  ]
+}

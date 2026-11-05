@@ -1,0 +1,37 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the gate's check-in screen at a trade fair, with each scan let in or refused with its reason.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "ZE", "name": "Zamani Events", "place": "Abuja" },
+  "nav": [
+    { "label": "Events", "items": [{ "label": "Events" }, { "label": "Tickets sold" }, { "label": "Check-in", "active": true }, { "label": "Venues" }] },
+    { "label": "Check in to", "items": [{ "label": "The gate", "active": true }, { "label": "Opening talk" }, { "label": "Workshop: small spaces" }, { "label": "Gala dinner" }] }
+  ],
+  "search": "Scan the QR code, or type the ticket number",
+  "title": "Gate · Abuja Home and Living Fair",
+  "subtitle": "Thu 12 Nov · gate open since 08:00 · desk 2 · Hadiza",
+  "actions": [{ "label": "Door sales" }, { "label": "Check in", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "Let in so far", "value": "318" },
+      { "icon": "alert", "label": "Refused", "value": "3" },
+      { "icon": "clock", "label": "Scans in the last 10 min", "value": "64" }
+    ] },
+    { "type": "table", "title": "Latest scans", "columns": [{ "label": "Time" }, { "label": "Ticket" }, { "label": "Type" }, { "label": "Result" }], "rows": [
+      ["08:41", "HLF-4127-0915", "Day pass", { "pill": "good", "text": "Let in" }],
+      ["08:41", "HLF-4127-0388", "Two-day pass", { "pill": "good", "text": "Let in" }],
+      ["08:40", "HLF-4127-0912", "Day pass", { "pill": "bad", "text": "Already used: let in 08:14, desk 1" }],
+      ["08:40", "HLF-4127-1604", "Exhibitor", { "pill": "good", "text": "Let in" }],
+      ["08:39", "SPF-2207-0081", "Not this fair's", { "pill": "bad", "text": "For another event" }],
+      ["08:39", "HLF-4127-0302", "Two-day pass", { "pill": "warn", "text": "Not paid yet: invoice INV-2026-0297" }],
+      ["08:38", "HLF-4127-0119", "Student day pass", { "pill": "good", "text": "Let in" }]
+    ] },
+    { "type": "kv", "title": "How a scan is checked", "items": [
+      { "label": "In this order", "value": "A real code, this event, paid, not used" },
+      { "label": "Every scan", "value": "Recorded, let in or refused" },
+      { "label": "Two desks, one ticket", "value": "Only the first scan lets it in" }
+    ] }
+  ]
+}

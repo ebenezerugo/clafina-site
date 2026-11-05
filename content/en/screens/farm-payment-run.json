@@ -1,0 +1,43 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a draft payment run for maize outgrowers, with each grower's produce less the inputs advanced, oldest first.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "GF", "name": "Garba Family Farms", "place": "Zaria Maize Scheme 2026" },
+  "nav": [
+    { "label": "Growers", "items": [{ "label": "Outgrowers" }, { "label": "Contracts" }, { "label": "Advances" }, { "label": "Receipts" }, { "label": "Payment runs", "active": true }] }
+  ],
+  "title": "Payment run PR-2026-0007 · 30 October",
+  "subtitle": "Draft · produce received since 16 Oct at the contract price of ₦520,000 a tonne, less the inputs advanced",
+  "actions": [{ "label": "Export the list" }, { "label": "Approve the run", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "leaf", "label": "Produce received", "value": { "money": 7077200 }, "note": "13.6 t from 7 growers" },
+      { "icon": "down", "label": "Advances recovered", "value": { "money": 2260000 }, "note": "Oldest first" },
+      { "icon": "money", "label": "Net to pay", "value": { "money": 4817200 }, "note": "6 growers ready" },
+      { "icon": "alert", "label": "Still owed to you", "value": { "money": 26000 }, "note": "Danjuma Auta, carried to his next delivery" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Grower" }, { "label": "Delivered", "numeric": true }, { "label": "Produce value", "numeric": true }, { "label": "Less advances", "numeric": true }, { "label": "Net to pay", "numeric": true }, { "label": "State" }], "rows": [
+      [{ "avatar": "MD", "text": "Musa Danladi" }, "2.84 t", { "money": 1476800 }, { "money": -368000 }, { "money": 1108800 }, { "pill": "good", "text": "Ready" }],
+      [{ "avatar": "ZY", "text": "Hajiya Zainab Yusuf" }, "2.10 t", { "money": 1092000 }, { "money": -210000 }, { "money": 882000 }, { "pill": "good", "text": "Ready" }],
+      [{ "avatar": "ED", "text": "Emmanuel Dung" }, "3.62 t", { "money": 1882400 }, { "money": -496000 }, { "money": 1386400 }, { "pill": "good", "text": "Ready" }],
+      [{ "avatar": "SG", "text": "Sunday Gyang" }, "3.10 t", { "money": 1612000 }, { "money": -262000 }, { "money": 1350000 }, { "pill": "good", "text": "Ready" }],
+      [{ "avatar": "FO", "text": "Mrs Folake Ogunbanjo" }, "0.60 t", { "money": 312000 }, { "money": -280000 }, { "money": 32000 }, { "pill": "good", "text": "Ready" }],
+      [{ "avatar": "DA", "text": "Danjuma Auta" }, "0.95 t", { "money": 494000 }, { "money": -494000 }, { "money": 0 }, { "pill": "warn", "text": "Owes ₦26,000" }],
+      [{ "avatar": "LS", "text": "Ladi Samuel" }, "0.40 t", { "money": 208000 }, { "money": -150000 }, { "money": 58000 }, { "pill": "good", "text": "Ready" }],
+      [{ "strong": "Total, 7 growers" }, "13.61 t", { "money": 7077200 }, { "money": -2260000 }, { "money": 4817200 }, "6 ready, 1 owes"]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "attention", "title": "When you approve the run", "items": [
+        { "tone": "info", "icon": "receipt", "title": "One draft supplier bill per ready grower", "body": "Each bill is for the net, in Payables, and the advances it covers are settled." },
+        { "tone": "info", "icon": "users", "title": "Each grower's statement", "body": "Growers see their deliveries, advances and what was paid on a private link." }
+      ] },
+      { "type": "kv", "title": "Your netting rule", "items": [
+        { "label": "Order", "value": "Produce is set against advances, oldest first" },
+        { "label": "When a grower owes more", "value": "Nothing is paid, and the rest is carried to their next delivery" },
+        { "label": "Interest on advances", "value": "None" }
+      ] }
+    ] }
+  ]
+}

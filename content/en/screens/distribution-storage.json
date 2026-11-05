@@ -1,0 +1,50 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: storage billing for the businesses whose goods a warehouse keeps, with each client's month worked out from the rate card.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "AD", "name": "Aremu Drinks Distribution", "place": "Ikeja warehouse" },
+  "nav": [
+    { "label": "Distribution", "items": [{ "label": "Routes and van loads" }, { "label": "Settle a van", "badge": "1" }, { "label": "Empties and deposits" }, { "label": "Storage billing", "active": true }] }
+  ],
+  "title": "Storage billing, October",
+  "subtitle": "What each client owes for keeping, receiving and sending their goods in your warehouse this month.",
+  "actions": [{ "label": "Save as draft" }, { "label": "Make the invoices", "primary": true, "icon": "receipt" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "box", "label": "Pallet places used", "value": "1,290", "note": "Average over October so far" },
+      { "icon": "money", "label": "Expected for October", "value": { "money": 14100000 }, "note": "9 clients, invoiced 31 Oct" },
+      { "icon": "chart", "label": "Warehouse full", "value": "71%", "change": { "tone": "info", "text": "Was 67% in September", "dir": "up" } },
+      { "icon": "clock", "label": "Days to month end", "value": "12", "note": "Billing day: Sat 31 Oct" }
+    ] },
+    { "type": "table", "title": "Showing 6 of 9 clients · prices before VAT", "columns": [{ "label": "Client" }, { "label": "Pallets", "numeric": true }, { "label": "Days", "numeric": true }, { "label": "Storage", "numeric": true }, { "label": "In and out", "numeric": true }, { "label": "Total", "numeric": true }], "rows": [
+      ["Harbourline Beverages Ltd · average", "420", "31", { "money": 3255000 }, { "money": 1410000 }, { "money": 4665000 }],
+      ["Adunni Foods · average", "310", "31", { "money": 2402500 }, { "money": 880000 }, { "money": 3282500 }],
+      ["Mama Nkechi Provisions · average", "120", "31", { "money": 930000 }, { "money": 340000 }, { "money": 1270000 }],
+      ["Okafor and Sons (spares) · average", "86", "31", { "money": 666500 }, { "money": 120000 }, { "money": 786500 }],
+      ["Lekki Pharmacy Group · average", "64", "31", { "money": 496000 }, { "money": 210000 }, { "money": 706000 }],
+      ["Bisola Foods · cold room, average", "40", "31", { "money": 793600 }, { "money": 96000 }, { "money": 889600 }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Harbourline Beverages Ltd: how the month is worked out", "items": [
+        { "label": "Storage: 420 pallets × 31 days × ₦250", "value": { "money": 3255000 } },
+        { "label": "Receiving: 38 pallets × ₦6,500", "value": { "money": 247000 } },
+        { "label": "Sending: 1,204 cases × ₦950", "value": { "money": 1143800 } },
+        { "label": "Labelling and pick-and-pack", "value": { "money": 19200 } },
+        { "label": "Insurance", "value": "Their own cover, nothing charged" },
+        { "label": "For the month", "value": { "money": 4665000 } }
+      ] },
+      { "type": "kv", "title": "The rate card: the same for all clients unless one has its own", "items": [
+        { "label": "Storage", "value": "₦250 a pallet place a day" },
+        { "label": "Cold room", "value": "₦640 a pallet place a day" },
+        { "label": "Receiving", "value": "₦6,500 a pallet" },
+        { "label": "Sending", "value": "₦950 a case" },
+        { "label": "Minimum a month", "value": { "money": 200000 } }
+      ] }
+    ] },
+    { "type": "attention", "title": "Before you invoice", "items": [
+      { "tone": "info", "icon": "receipt", "title": "Nothing is invoiced until you press Make the invoices", "body": "Each client gets one invoice for the month, and making the invoices fixes the month." }
+    ] }
+  ]
+}

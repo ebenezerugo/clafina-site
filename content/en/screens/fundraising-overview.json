@@ -1,0 +1,35 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a foundation's fundraising overview, with money given this year, campaigns against their goals and four things that need doing.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "IC", "name": "Ireti Care Foundation", "place": "Lagos" },
+  "nav": [
+    { "label": "Fundraising", "items": [{ "label": "Overview", "active": true }, { "label": "Donors" }, { "label": "Gifts" }, { "label": "Campaigns" }, { "label": "Grants" }, { "label": "Tax receipts", "badge": "14" }] }
+  ],
+  "title": "Fundraising",
+  "subtitle": "Money given, who gave it, and what needs doing: thank-yous, receipts, pledges and grant reports.",
+  "actions": [{ "label": "New campaign" }, { "label": "Record a gift", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "money", "label": "Given this year", "value": { "money": 86400000 }, "note": "1,284 gifts since 1 Jan" },
+      { "icon": "users", "label": "Donors", "value": "1,240", "note": "96 new this year" },
+      { "icon": "clock", "label": "Monthly givers", "value": "212", "note": "₦3,100,000 a month" },
+      { "icon": "chart", "label": "Average gift", "value": { "money": 67300 } }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Campaigns against their goals", "columns": [{ "label": "Campaign" }, { "label": "Raised", "numeric": true }, { "label": "Goal", "numeric": true }, { "label": "State" }], "rows": [
+        ["Borehole for Sunrise Primary School · 312 gifts", { "money": 8400000 }, { "money": 12000000 }, { "pill": "info", "text": "Ends 30 Nov" }],
+        ["Medical outreach, Makoko · 189 gifts", { "money": 5600000 }, { "money": 6000000 }, { "pill": "warn", "text": "Ends 25 Oct" }],
+        ["Year-end giving drive · pledges so far", { "money": 2100000 }, { "money": 20000000 }, { "pill": "neutral", "text": "Starts 1 Nov" }]
+      ] },
+      { "type": "attention", "title": "Needs doing", "items": [
+        { "tone": "warn", "icon": "receipt", "title": "14 gifts waiting for a receipt", "body": "₦2,310,000 given since Friday, each put down for its own receipt.", "action": "Issue" },
+        { "tone": "info", "icon": "users", "title": "6 thank-yous not done", "body": "Gifts over ₦100,000 get a call or a personal note within 3 days.", "action": "Open" },
+        { "tone": "bad", "icon": "clock", "title": "Pledge overdue: Harbourline Logistics", "body": "₦1,500,000 promised for 15 Oct. One reminder sent, of at most three, a week apart.", "action": "Remind" },
+        { "tone": "info", "icon": "bell", "title": "Grant report due in 9 days", "body": "Coastal Health Fund, report 2 of 3, due Wed 28 Oct.", "action": "Start" }
+      ] }
+    ] }
+  ]
+}

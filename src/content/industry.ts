@@ -45,6 +45,12 @@ export const IndustryStory = z
     cta: z.strictObject({ title: z.string(), body: z.string() }),
   })
   .superRefine((s, ctx) => {
+    // Each screen is a lot of markup; more than four in the day breaks the phone performance budget on slower machines.
+    const screens = s.moments.filter((m) => m.screen);
+    if (screens.length > 4) ctx.addIssue({ code: 'custom', path: ['moments'], message: `at most 4 moments carry a screen, found ${screens.length}` });
+    s.moments.forEach((m, i) => {
+      if (m.screen === s.hero.screen) ctx.addIssue({ code: 'custom', path: ['moments', i, 'screen'], message: 'repeats the hero screen' });
+    });
     s.moments.forEach((m, i) => {
       const before = s.moments[i - 1];
       if (before && m.time <= before.time) ctx.addIssue({ code: 'custom', path: ['moments', i, 'time'], message: `moment times must rise: ${before.time} then ${m.time}` });

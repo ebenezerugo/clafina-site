@@ -1,0 +1,45 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: settling an equipment hire after a late return with a dented mixer drum, with the damage confirmed, the deposit paying the charges and the rest refunded.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "LP", "name": "Lagoon Plant Hire", "place": "Ikeja" },
+  "nav": [
+    { "label": "Rentals", "items": [{ "label": "Items" }, { "label": "Agreements", "active": true }, { "label": "Returns due" }] },
+    { "label": "This agreement", "items": [{ "label": "Items and condition", "active": true }, { "label": "Charges", "badge": "4" }, { "label": "Deposit" }, { "label": "Documents", "badge": "3" }, { "label": "History" }] }
+  ],
+  "title": "RENT-2026-0176 · Ojota Builders Ltd",
+  "subtitle": "Returned · ready to settle · out Tue 13 Oct 10:00, due Mon 19 Oct 10:00, back Mon 19 Oct 11:25",
+  "actions": [{ "label": "Print" }, { "label": "Settle", "primary": true, "icon": "receipt" }],
+  "blocks": [
+    { "type": "table", "title": "Items and condition", "columns": [{ "label": "Unit" }, { "label": "At hand-out · signed by Kola Bamidele" }, { "label": "At return" }, { "label": "Difference" }], "rows": [
+      ["Concrete mixer 350 L · CM-0042", "Clean, drum undamaged, motor hours 842", "A dent in the drum, about 8 cm, motor hours 868", { "pill": "warn", "text": "Damage line · off the calendar until mended" }],
+      ["Plate compactor · PC-0011", "In working order", "In working order", { "pill": "good", "text": "None" }]
+    ] },
+    { "type": "table", "title": "Charges", "columns": [{ "label": "Charge" }, { "label": "Kind" }, { "label": "Decided" }, { "label": "Amount", "numeric": true }], "rows": [
+      ["Concrete mixer, 6 days × ₦18,000", "Rent", "Agreed at hand-out", { "money": 108000 }],
+      ["Plate compactor, 6 days × ₦22,000", "Rent", "Agreed at hand-out", { "money": 132000 }],
+      ["Late return, 1 day at each item's late rate", "Late fee", "85 minutes late, past the 60 minutes' grace", { "money": 40000 }],
+      ["Mixer drum dent", "Damage", { "pill": "info", "text": "Confirmed by Tunde · customer's comment on file" }, { "money": 35000 }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "One customer invoice", "items": [
+        { "label": "Rent", "value": { "money": 240000 } },
+        { "label": "Late fee", "value": { "money": 40000 } },
+        { "label": "Damage", "value": { "money": 35000 } },
+        { "label": "VAT 7.5%", "value": { "money": 23625 } },
+        { "label": "To pay", "value": { "strong": "₦338,625" } }
+      ] },
+      { "type": "kv", "title": "The deposit", "items": [
+        { "label": "Held at hand-out", "value": { "money": 400000 } },
+        { "label": "Pays the invoice first", "value": { "money": -338625 } },
+        { "label": "Refunded to the customer", "value": { "strong": "₦61,375" } },
+        { "label": "Recorded to", "value": "The way the deposit was paid" }
+      ] }
+    ] },
+    { "type": "attention", "title": "On the file", "items": [
+      { "tone": "info", "icon": "help", "title": "Mr Bamidele says the dent was small before", "body": "His comment is kept with the agreement. Tunde compared the photos from hand-out and return and confirmed the charge.", "action": "See the photos" }
+    ] }
+  ]
+}

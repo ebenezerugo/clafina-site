@@ -1,0 +1,49 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the production dashboard at a food plant, with OEE and its three parts, throughput, scrap, what is stuck and where the time was lost.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RF", "name": "Riverbend Foods", "place": "Ikeja plant" },
+  "goTo": "Go to page…",
+  "search": "Search orders, products, machines…",
+  "nav": [
+    { "items": [{ "label": "Dashboard", "active": true }, { "label": "Inbox", "badge": "6" }] },
+    { "label": "Make", "items": [{ "label": "Production orders" }, { "label": "Work orders" }, { "label": "Materials" }, { "label": "Schedule" }, { "label": "Shop floor" }, { "label": "Machines" }, { "label": "Quality" }] }
+  ],
+  "title": "Production dashboard",
+  "subtitle": "How production is running: how well the lines are used, what is late and what is short. Last 30 days, against the 30 days before.",
+  "actions": [{ "label": "New production order", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "clock", "label": "Availability", "value": "91%", "change": { "tone": "good", "text": "2 pts better", "dir": "up" }, "note": "Run time ÷ (run time + unplanned stops)" },
+      { "icon": "chart", "label": "Performance", "value": "92%", "change": { "tone": "good", "text": "1 pt better", "dir": "up" }, "note": "Standard minutes of units made ÷ run time" },
+      { "icon": "check", "label": "Good-unit rate", "value": "98%", "change": { "tone": "good", "text": "0.4 pts better", "dir": "up" }, "note": "Good units ÷ (good + scrap)" },
+      { "icon": "up", "label": "OEE", "value": "82%", "change": { "tone": "good", "text": "3 pts better", "dir": "up" }, "note": "91% × 92% × 98%" }
+    ] },
+    { "type": "stats", "items": [
+      { "icon": "box", "label": "Throughput", "value": "18,420 good units", "change": { "tone": "good", "text": "8% more", "dir": "up" } },
+      { "icon": "down", "label": "Scrap rate", "value": "2.0%", "change": { "tone": "good", "text": "0.4 points lower", "dir": "down" }, "note": "380 scrapped ÷ 18,800 made" },
+      { "icon": "alert", "label": "Orders past their date", "value": "3", "change": { "tone": "bad", "text": "Late" }, "note": "Of 12 orders in hand" },
+      { "icon": "table", "label": "Machines out of use", "value": "2", "note": "1 broken down, 1 in maintenance" }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "attention", "title": "Where production is stuck right now", "items": [
+        { "tone": "bad", "icon": "alert", "title": "Filler FL-01 broke down at 07:40", "body": "Groundnut oil 1L on filling line 1 is stopped. WO-2026-0148 waits on it, and PRO-2026-0061 may finish a day after 23 Oct.", "action": "Open the machine" },
+        { "tone": "warn", "icon": "box", "title": "3 production orders are short of materials", "body": "Tomato paste needs 3,000 tin cans; none are held and none are on order.", "action": "See what is short" },
+        { "tone": "warn", "icon": "clock", "title": "PRO-2026-0058 Pepper mix 200g is 3 days late", "body": "It was due 16 Oct. It is now expected to finish on 20 Oct.", "action": "Open the order" }
+      ] },
+      { "type": "table", "title": "Where the time was lost: 25.5 h stopped, 18.5 h unplanned", "columns": [{ "label": "Reason" }, { "label": "Hours", "numeric": true }, { "label": "Kind" }], "rows": [
+        ["Breakdowns", "11 h", { "pill": "bad", "text": "Unplanned" }],
+        ["Changeovers between products", "7 h", { "pill": "neutral", "text": "Planned" }],
+        ["Waiting for material", "5 h", { "pill": "bad", "text": "Unplanned" }],
+        ["No operator", "2.5 h", { "pill": "bad", "text": "Unplanned" }]
+      ] }
+    ] },
+    { "type": "kv", "title": "On the floor", "items": [
+      { "label": "Orders in hand", "value": "12, not yet completed" },
+      { "label": "Work orders under way", "value": "7" },
+      { "label": "Released, no operator has started", "value": "4" }
+    ] }
+  ]
+}

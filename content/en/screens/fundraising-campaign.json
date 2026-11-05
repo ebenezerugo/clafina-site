@@ -1,0 +1,42 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a foundation's campaign for a school borehole, with gifts tied to the receipts they came by, restricted budget lines and a spend refused for going over its line.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "IC", "name": "Ireti Care Foundation", "place": "Lagos" },
+  "nav": [
+    { "label": "Fundraising", "items": [{ "label": "Overview" }, { "label": "Donors" }, { "label": "Gifts" }, { "label": "Campaigns", "active": true }, { "label": "Grants" }, { "label": "Tax receipts", "badge": "14" }] },
+    { "label": "This campaign", "items": [{ "label": "Overview", "active": true }, { "label": "Gifts", "badge": "312" }, { "label": "Budget" }, { "label": "Updates", "badge": "4" }] }
+  ],
+  "title": "CMP-2026-0007 · Borehole for Sunrise Primary School",
+  "subtitle": "Clean water for 640 pupils · goal ₦12,000,000 · ends 30 Nov · restricted to its budget lines",
+  "actions": [{ "label": "Post an update" }, { "label": "Record a gift", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "money", "label": "Raised", "value": { "money": 8400000 }, "note": "70% of the goal" },
+      { "icon": "users", "label": "Gifts and donors", "value": "312 · 241" },
+      { "icon": "chart", "label": "Average gift", "value": { "money": 26900 } },
+      { "icon": "clock", "label": "Days left", "value": "42", "note": "Projected ₦11,600,000 by 30 Nov" }
+    ] },
+    { "type": "table", "title": "Latest gifts · each tied once to the finance receipt it came by", "columns": [{ "label": "When" }, { "label": "Donor" }, { "label": "Method" }, { "label": "Finance receipt" }, { "label": "Amount", "numeric": true }, { "label": "Tax receipt" }], "rows": [
+      ["Today 09:00", "Mr Kayode Ajayi", "Bank transfer", "RCT-2026-3318", { "money": 500000 }, { "pill": "warn", "text": "To issue" }],
+      ["Today 08:40", "Anonymous", "Cash at the office", "RCT-2026-3316", { "money": 10000 }, { "pill": "neutral", "text": "None asked for" }],
+      ["Sun 18 Oct", "Mrs Funmi Adesina", "Bank transfer", "RCT-2026-3302", { "money": 150000 }, { "pill": "warn", "text": "To issue" }],
+      ["Fri 16 Oct", "Hauwa Bello", "Bank transfer", "RCT-2026-3291", { "money": 50000 }, { "pill": "good", "text": "Sent" }],
+      ["Fri 2 Oct", "Crestline Foods Ltd", "Bank transfer", "RCT-2026-3204", { "money": 2000000 }, { "pill": "good", "text": "Sent" }]
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Where the money goes", "columns": [{ "label": "Budget line" }, { "label": "Spent", "numeric": true }, { "label": "Budget", "numeric": true }, { "label": "Left", "numeric": true }], "rows": [
+        ["Drilling and casing", { "money": 4500000 }, { "money": 6800000 }, { "money": 2300000 }],
+        ["Pump and tank", { "money": 0 }, { "money": 3200000 }, { "money": 3200000 }],
+        ["Training and upkeep", { "money": 0 }, { "money": 1200000 }, { "money": 1200000 }],
+        ["Running the campaign", { "money": 350000 }, { "money": 800000 }, { "money": 450000 }],
+        [{ "strong": "All lines" }, { "money": 4850000 }, { "money": 12000000 }, { "money": 7150000 }]
+      ] },
+      { "type": "attention", "title": "Restricted money", "items": [
+        { "tone": "bad", "icon": "alert", "title": "₦3,100,000 for drilling was refused", "body": "The Drilling and casing line has ₦2,300,000 left. Restricted money is spent only on its own lines, within each line and within what has come in.", "action": "Change the amount" }
+      ] }
+    ] }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: an equipment hire yard's returns due, with two items overdue and their late fees so far, and what should come back today.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "LP", "name": "Lagoon Plant Hire", "place": "Ikeja" },
+  "nav": [
+    { "label": "Rentals", "items": [{ "label": "Items" }, { "label": "Agreements" }, { "label": "Returns due", "active": true, "badge": "6" }] }
+  ],
+  "title": "Returns due",
+  "subtitle": "Monday 19 October, 10:00 · what should come back, in the order it is due. A late fee starts after 60 minutes' grace.",
+  "actions": [{ "label": "Check one in", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "table", "title": "Overdue · fees so far, charged on return", "columns": [{ "label": "Item and unit" }, { "label": "Agreement and customer" }, { "label": "Was due" }, { "label": "Late" }, { "label": "Fee so far", "numeric": true }], "rows": [
+      ["Generator 7.5 kVA · GEN-0007", "RENT-2026-0181 · Isolo Cold Rooms", "Sat 17 Oct 10:00", { "pill": "bad", "text": "2 days" }, { "money": 50000 }],
+      ["Plate compactor · PC-0003", "RENT-2026-0179 · Sule Builders", "Sun 18 Oct 16:00", { "pill": "bad", "text": "1 day" }, { "money": 22000 }],
+      [{ "strong": "Late fees so far" }, "", "", "", { "money": 72000 }]
+    ] },
+    { "type": "table", "title": "Due today", "columns": [{ "label": "Item and unit" }, { "label": "Agreement and customer" }, { "label": "Due" }, { "label": "Brought back by" }, { "label": "State" }], "rows": [
+      ["Concrete mixer 350 L and plate compactor · CM-0042, PC-0011", "RENT-2026-0176 · Ojota Builders Ltd", "10:00", "The customer", { "pill": "warn", "text": "Due now" }],
+      ["Rotary hammer drill × 2 · RHD-0011, RHD-0014", "RENT-2026-0185 · Allen Avenue Clinic", "12:00", "The customer", { "pill": "good", "text": "On time" }],
+      ["Scaffolding set, 20 m² × 2 · SC-0002, SC-0005", "RENT-2026-0170 · Ajah Plaza works", "17:00", "Our collector", { "pill": "info", "text": "Extension asked" }],
+      ["Water pump 3 inch · WP-0006", "RENT-2026-0188 · Okafor and Sons", "17:00", "The customer", { "pill": "good", "text": "On time" }]
+    ] },
+    { "type": "table", "title": "Later this week", "columns": [{ "label": "Item and unit" }, { "label": "Agreement and customer" }, { "label": "Due" }, { "label": "Brought back by" }], "rows": [
+      ["Marquee tent 10 × 20 m · MQ-0001", "RENT-2026-0160 · Ogba wedding party", "Tue 20 Oct 18:00", "Our collector"],
+      ["Generator 20 kVA · GEN-0021", "RENT-2026-0172 · Ikeja Bakery", "Wed 21 Oct 10:00", "The customer"],
+      ["Concrete mixer 350 L × 2 · CM-0044, CM-0045", "RENT-2026-0187 · Lekki Homes", "Thu 22 Oct 15:00", "Our collector"]
+    ] }
+  ]
+}

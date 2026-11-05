@@ -1,0 +1,42 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a property manager's leases, with a two-bed lease ending in 56 days and its renewal offer waiting for the tenant's answer.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "IG", "name": "Ivory Gate Property Managers", "place": "Lagos and Abuja" },
+  "nav": [
+    { "label": "Property", "items": [{ "label": "Properties and units" }, { "label": "Leases", "active": true }, { "label": "Rent roll" }, { "label": "Inspections" }, { "label": "Tenant requests", "badge": "10" }, { "label": "Owners' levies" }] }
+  ],
+  "search": "Find a tenant, unit or lease",
+  "title": "Leases",
+  "subtitle": "Every tenancy with its terms and its next rent. Renewals are offered before a lease ends.",
+  "actions": [{ "label": "New lease", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "Active", "value": "36" },
+      { "icon": "clock", "label": "Under notice", "value": "2" },
+      { "icon": "alert", "label": "Ending in 90 days", "value": "5", "note": "2 renewals offered" },
+      { "icon": "receipt", "label": "Drafts", "value": "2", "note": "Waiting to be signed" }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Showing 6 of 40: active, under notice and drafts", "columns": [{ "label": "Tenant and lease" }, { "label": "Unit and term" }, { "label": "Rent", "numeric": true }, { "label": "State" }], "rows": [
+        [{ "avatar": "TB", "text": "Mrs Toyin Bello · LSE-2026-0042" }, "Ivory Court 4B, 3-bed · 1 Oct 2026 to 30 Sep 2027", "₦9,500,000 a year", { "pill": "good", "text": "Active, paid to 30 Sep 2027" }],
+        [{ "avatar": "DA", "text": "Mr Dapo Akande · LSE-2025-0033" }, "Ivory Court 3C, 2-bed · 15 Dec 2025 to 14 Dec 2026", "₦7,200,000 a year", { "pill": "warn", "text": "Ends in 56 days, renewal offered" }],
+        [{ "avatar": "GP", "text": "Greenleaf Pharmacy · LSE-2025-0018" }, "Ivory Court 1C, shop · 1 Feb 2025 to 31 Jan 2028", "₦1,000,000 a month", { "pill": "good", "text": "Active, next 1 Nov" }],
+        [{ "avatar": "KN", "text": "Dr Kelechi Nwankwo · LSE-2026-0029" }, "Ivory Court 4A, 3-bed · 1 Apr 2026 to 31 Mar 2027", "₦2,375,000 a quarter", { "pill": "bad", "text": "Active, owes 1 quarter" }],
+        [{ "avatar": "CE", "text": "Miss Chioma Eze · LSE-2025-0021" }, "Ivory Court 2A, 2-bed · notice to 19 Oct 2026", "₦6,900,000 a year", { "pill": "info", "text": "Under notice, moves out today" }],
+        [{ "avatar": "TA", "text": "Mr Tari Amadi · LSE-2026-0051" }, "Cedar Villas V-2, 4-bed · starts 1 Nov 2026", "₦18,000,000 a year", { "pill": "neutral", "text": "Draft, deposit received" }]
+      ] },
+      { "type": "kv", "title": "Mr Dapo Akande · 3C, Ivory Court", "items": [
+        { "label": "Term", "value": "15 Dec 2025 to 14 Dec 2026" },
+        { "label": "Rent", "value": "₦7,200,000 a year, paid in full" },
+        { "label": "Caution deposit", "value": "₦720,000, carried to the new lease" },
+        { "label": "Agency fee", "value": "₦720,000, invoiced once. No second fee on renewal" },
+        { "label": "Notice to leave", "value": "3 months" },
+        { "label": "Offer", "value": "₦7,776,000 a year, answer by 20 Oct" }
+      ] }
+    ] },
+    { "type": "steps", "items": ["Reminder to the tenant · 15 Sep", "Offer with a rent rise · 5 Oct", "Tenant answers · by 20 Oct", "New lease follows on · from 15 Dec"], "current": 2 }
+  ]
+}

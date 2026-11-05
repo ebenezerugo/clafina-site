@@ -1,0 +1,243 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "MEMBERSHIPS.md",
+    "INDUSTRY_PACKS.md",
+    "CLASSES.md",
+    "docs/industry-facts.md#industry-memberships"
+  ],
+  "meta": {
+    "title": "Memberships: plans, freezes and billing runs · Clafina",
+    "description": "Plans, member cards, freezes and a billing run you check before anyone is invoiced. One rule at the front desk decides who comes in. The Memberships pack for Clafina."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Memberships",
+    "title": "Members, plans and the billing run, without the spreadsheet.",
+    "lede": "For gyms, clubs, coworking spaces and anyone who bills by the period. The front desk, the invoices and the reminders all read the same membership.",
+    "screen": "memberships-billing-run"
+  },
+  "business": {
+    "name": "Harmattan Fitness Club",
+    "place": "Lekki, Lagos",
+    "label": true,
+    "about": "A gym with a busy gym floor, a class studio, students on a cheaper plan and a few companies who pay for their staff."
+  },
+  "dayTitle": "A day at Harmattan Fitness Club",
+  "moments": [
+    {
+      "time": "06:00",
+      "title": "The first card at the front desk",
+      "problem": "Yetunde holds up her member card. Is she allowed in at this hour, and does today count as a visit?",
+      "handles": "Clafina asks one rule what she may enter now: whether her plan has started, is frozen or is owed on, how many visits are left, and the areas and hours her plan lets in. If she scans again a few minutes later, the visit is not counted twice.",
+      "surface": "web",
+      "screen": "memberships-desk"
+    },
+    {
+      "time": "07:15",
+      "title": "Someone still owes for last month",
+      "problem": "Amina's October invoice is unpaid. Temitope at the desk shouldn't have to argue about it.",
+      "handles": "An overdue invoice marks the member as owing, and access pauses after the number of unpaid days you set. The moment the invoice is paid, the door opens again, because the rule reads what is owed, not a flag someone forgot to clear. Staff with the check-in permission can let someone in once with a reason, and the reason is logged.",
+      "surface": "web"
+    },
+    {
+      "time": "09:30",
+      "title": "A member travels and asks to freeze",
+      "problem": "Yetunde is away for two weeks in November. She wants a fair credit, and nobody wants to work it out on paper.",
+      "handles": "Freezes come from a yearly allowance on her plan, with a shortest freeze and a notice period. The days she has paid for come back as a credit on her next invoice. While she is frozen her card is refused at the desk, and the freeze starts and ends by itself.",
+      "surface": "web",
+      "screen": "memberships-member"
+    },
+    {
+      "time": "11:00",
+      "title": "A new member joins mid-month",
+      "problem": "Seun signs up halfway through the month. What should the first bill be?",
+      "handles": "The first bill follows your setting: charged by the day for the part-month, a full first period, or nothing until the next billing day. A trial bills nothing until it ends. His member card is a QR code, made on the spot and emailed to him; a fob works too, and a new card stops the old one.",
+      "surface": "web"
+    },
+    {
+      "time": "13:00",
+      "title": "A company wants its staff on one plan",
+      "problem": "Coral Bay Logistics will pay for ten of its people. One payer, but named members.",
+      "handles": "A corporate plan sends the company one invoice for its seats, and each seat is a named member with their own card. If the company owes or ends the plan, its seats stop at the door. Unused seats are flagged on the billing run.",
+      "surface": "web",
+      "screen": "memberships-plans"
+    },
+    {
+      "time": "15:00",
+      "title": "Checking tomorrow's billing run",
+      "problem": "Ronke, the manager, wants to catch mistakes before anyone is invoiced.",
+      "handles": "The check is a dry run. It lists who needs a look and why: payment overdue, skipped, ending, a price change, seats to check, no payment method or a plan change. Nothing is invoiced until she presses Run. Each member is then invoiced in their own step, and one that fails is marked and can be retried without billing anyone twice.",
+      "surface": "web"
+    },
+    {
+      "time": "17:00",
+      "title": "A new price for new members",
+      "problem": "Monthly Unlimited is going up, but the people already on it were promised their price.",
+      "handles": "A plan's new price applies to new members. Ronke can move existing members to it from a day she chooses, and the billing run flags each one as a price change so nobody is surprised.",
+      "surface": "web"
+    },
+    {
+      "time": "18:30",
+      "title": "How many hours are left?",
+      "problem": "Coral Bay Logistics also paid in advance for a block of coaching hours for its managers. Their HR lead asks how much is left.",
+      "handles": "Contracts, retainers and prepayments count visits from the jobs actually done, hours from the time the coaches logged and money from what was drawn down. Nobody types the numbers in. Each one says whether it is on track, running low, used up or renewing.",
+      "surface": "web"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Plan",
+      "meaning": "What a member buys: recurring, a pack of visits, a day pass or a corporate plan."
+    },
+    {
+      "word": "Member card",
+      "meaning": "A QR code made for each member, emailed to them. A fob works too."
+    },
+    {
+      "word": "Freeze",
+      "meaning": "A pause on a membership, from a yearly allowance, with a credit for days already paid."
+    },
+    {
+      "word": "Paid to",
+      "meaning": "The last day the member has paid for."
+    },
+    {
+      "word": "Billing run",
+      "meaning": "Everything due on a billing day, checked first and then invoiced, one invoice for each member."
+    },
+    {
+      "word": "Corporate seats",
+      "meaning": "Named members on a company's plan, billed to the company on one invoice."
+    },
+    {
+      "word": "Day pass",
+      "meaning": "Entry for one day, sold at the desk."
+    },
+    {
+      "word": "Let in once",
+      "meaning": "A one-off entry by staff with the right permission, with the reason logged."
+    },
+    {
+      "word": "Retainer",
+      "meaning": "A regular amount for a block of hours, counted from the time logged."
+    }
+  ],
+  "switchesTitle": "What the Memberships pack switches on",
+  "switchesOn": [
+    {
+      "text": "Plans of four kinds: recurring, pack, day pass and corporate, each with its price, rhythm, visit limit, freeze days, trial, areas and hours"
+    },
+    {
+      "text": "The places gym, club and coworking, with the billing settings as defaults you can change"
+    },
+    {
+      "text": "Joining charged by the day, a full first period or nothing, and trials that bill nothing until they end"
+    },
+    {
+      "text": "Member cards as QR codes and fobs, with one check for the desk, a door and the till"
+    },
+    {
+      "text": "Freezes, plan changes and cancelling, with credits and charges as lines on the next invoice"
+    },
+    {
+      "text": "Reminders on the days you choose, and access paused until the invoice is paid"
+    },
+    {
+      "text": "Billing runs checked before they run, with failures retried and nobody billed twice"
+    },
+    {
+      "text": "Contracts, retainers and prepayments, counted from the work done"
+    },
+    {
+      "text": "Three role templates: Front desk, Membership billing and Memberships manager"
+    },
+    {
+      "text": "A card kept on file and charged on the billing day",
+      "prelaunch": "industry-memberships"
+    },
+    {
+      "text": "The member's own app and a web page to join",
+      "prelaunch": "industry-memberships"
+    },
+    {
+      "text": "Member cards as a wallet pass on the phone",
+      "prelaunch": "industry-memberships"
+    },
+    {
+      "text": "Door scanning that keeps working when the internet is down",
+      "prelaunch": "industry-memberships"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-sales",
+      "text": "Memberships bill on the same invoice path as everything else: made, approved, posted and emailed the same way, with the invoice's own reminders."
+    },
+    {
+      "route": "product-crm",
+      "text": "Every member and every company paying for seats is a customer in your CRM."
+    },
+    {
+      "route": "product-projects",
+      "text": "Contracts, retainers and prepayments are a view over projects, so the hours and jobs are the ones your team already logs."
+    },
+    {
+      "route": "product-pos",
+      "text": "The till checks a member the same way the front desk does, with the same rule."
+    },
+    {
+      "route": "industry-classes",
+      "text": "With the Classes pack, members book classes on their plan and check in at the same desk."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a membership business uses",
+  "modules": [
+    "product-sales",
+    "product-crm",
+    "product-projects",
+    "product-pos",
+    "product-mobile"
+  ],
+  "faqTitle": "Questions membership businesses ask",
+  "faq": [
+    {
+      "q": "What happens when a member doesn't pay?",
+      "a": "The invoice sends its reminders on the days you choose. After the number of unpaid days you set, access pauses. The moment the invoice is paid, the member can come in again."
+    },
+    {
+      "q": "Can I check the billing run before it goes out?",
+      "a": "Yes. The check lists everyone who needs a look and why, and nothing is invoiced until you press Run. If one invoice fails, you retry it without billing anyone twice."
+    },
+    {
+      "q": "How do freezes work?",
+      "a": "Each plan has a yearly allowance, a shortest freeze and a notice period. Days already paid for come back as a credit on the next invoice, and the card is refused at the desk while the member is frozen."
+    },
+    {
+      "q": "Do existing members pay the new price straight away?",
+      "a": "No. A new price applies to new members. You move existing members when you choose, and the billing run shows each one as a price change."
+    },
+    {
+      "q": "Can a company pay for its staff?",
+      "a": "Yes. A corporate plan sends the company one invoice for its seats, and each seat is a named member with their own card."
+    },
+    {
+      "q": "Can members pay by card automatically?",
+      "a": "Yes. A member's card can be kept on file and charged on the billing day, so the billing run collects as well as invoices.",
+      "prelaunch": "industry-memberships"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-classes",
+    "industry-courses",
+    "industry-client-records"
+  ],
+  "cta": {
+    "title": "Bring your members across.",
+    "body": "Start free, switch on the Memberships pack and set up your plans. Your first billing run is checked before it goes out."
+  }
+}

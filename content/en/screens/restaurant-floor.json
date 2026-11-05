@@ -1,0 +1,50 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the floor on a restaurant till at lunch, with each table's state and time, a booked party due now and the open tab at table 6.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RT", "name": "Red Tile Kitchen", "place": "Till 2 · Amaka" },
+  "nav": [
+    { "label": "Till", "items": [{ "label": "Floor", "active": true }, { "label": "Orders" }, { "label": "Kitchen" }, { "label": "Bookings" }, { "label": "Customers" }, { "label": "Reports" }] },
+    { "label": "Floors", "items": [{ "label": "Inside room", "active": true }, { "label": "Terrace" }, { "label": "Bar" }] }
+  ],
+  "title": "Inside room · 14 tables",
+  "subtitle": "Each table in the colour and words of its state, and how long it has been there.",
+  "actions": [{ "label": "Walk-in" }, { "label": "Takeaway" }, { "label": "Seat the booking", "primary": true, "icon": "table" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "table", "label": "Tables in use", "value": "7 of 14" },
+      { "icon": "users", "label": "Covers seated", "value": "25" },
+      { "icon": "clock", "label": "Booked within the hour", "value": "1", "note": "Table 5 · 12:30" },
+      { "icon": "alert", "label": "To clean", "value": "1", "note": "Table 7" }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Tables", "columns": [{ "label": "Table" }, { "label": "Guests or seats" }, { "label": "State" }, { "label": "Time" }], "rows": [
+        ["T1", "2 seats", { "pill": "neutral", "text": "Free" }, "Free since 11:50"],
+        ["T2", "2 guests", { "pill": "info", "text": "Seated" }, "8 min"],
+        ["T3", "4 guests", { "pill": "warn", "text": "Ordered" }, "35 min"],
+        ["T4", "4 guests", { "pill": "info", "text": "Bill asked" }, "61 min"],
+        ["T5", "4 seats", { "pill": "good", "text": "Booked 12:30 · Okafor, 4" }, "Due now"],
+        ["T6", "3 guests", { "pill": "warn", "text": "Waiting for food" }, "52 min"],
+        ["T7", "2 seats", { "pill": "bad", "text": "To clean" }, "4 min"],
+        ["T8", "2 guests", { "pill": "info", "text": "Seated" }, "3 min"],
+        ["T9", "6 guests", { "pill": "warn", "text": "Waiting for food" }, "24 min"],
+        ["T10", "2 seats", { "pill": "neutral", "text": "Free" }, "Free since 12:05"],
+        ["T11", "4 guests", { "pill": "good", "text": "Eating" }, "15 min"],
+        ["T12", "2 seats", { "pill": "neutral", "text": "Free" }, "Free since 12:10"],
+        ["T13", "8 seats", { "pill": "neutral", "text": "Free" }, "Booked 20:00, party of 8"],
+        ["T14", "4 seats", { "pill": "neutral", "text": "Free" }, "Free since 12:20"]
+      ] },
+      { "type": "kv", "title": "Table 6 · Order #1047", "items": [
+        { "label": "Guests", "value": "3 · Tayo" },
+        { "label": "Waiter", "value": { "avatar": "AO", "text": "Amaka" } },
+        { "label": "Seated", "value": "52 min" },
+        { "label": "Starters", "value": { "pill": "good", "text": "Served" } },
+        { "label": "Mains", "value": { "pill": "warn", "text": "Cooking · 12 min" } },
+        { "label": "Desserts", "value": { "pill": "neutral", "text": "Held until called" } },
+        { "label": "Tab so far", "value": { "money": 23400 } }
+      ] }
+    ] }
+  ]
+}

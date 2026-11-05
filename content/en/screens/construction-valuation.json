@@ -1,0 +1,44 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a contractor's monthly valuation of a block of flats, stage by stage, with retention held and tax shown before anything is invoiced.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "PRJ-2026-0033 · Lagoonside Court, Ikoyi" },
+  "nav": [
+    { "label": "Construction", "items": [{ "label": "Progress billing", "active": true }, { "label": "Site diary" }, { "label": "Snag list" }, { "label": "Subcontractors" }] },
+    { "label": "Valuations", "items": [{ "label": "Valuation 4 · October", "badge": "Open" }, { "label": "Valuation 3 · September" }, { "label": "Valuation 2 · August" }, { "label": "Valuation 1 · July" }] }
+  ],
+  "title": "Valuation 4 · October",
+  "subtitle": "Contract ₦850,000,000 for Tamarind Developments Ltd. Waiting for Amaka Nnaji, quantity surveyor, to value.",
+  "actions": [{ "label": "Add a variation", "icon": "plus" }, { "label": "Save draft" }, { "label": "Send for approval", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "steps", "items": ["Site engineer measures · done 16 Oct", "Surveyor values", "Project manager approves", "Contracts director certifies and invoices"], "current": 1 },
+    { "type": "table", "title": "Stages · measured by Segun Oladipo, site engineer, on 16 Oct", "columns": [{ "label": "Stage" }, { "label": "Contract", "numeric": true }, { "label": "Last certificate", "numeric": true }, { "label": "To date", "numeric": true }, { "label": "This valuation", "numeric": true }], "rows": [
+      ["Preliminaries and mobilisation", { "money": 45000000 }, "70%", "80%", { "money": 4500000 }],
+      ["Substructure and foundations", { "money": 120000000 }, "100%", "100%", { "money": 0 }],
+      ["Superstructure, floors 1 to 6", { "money": 310000000 }, "62%", "78%", { "money": 49600000 }],
+      ["Roofing and waterproofing", { "money": 85000000 }, "0%", "20%", { "money": 17000000 }],
+      ["Mechanical and electrical", { "money": 140000000 }, "10%", "20%", { "money": 14000000 }],
+      ["Finishes and fittings", { "money": 110000000 }, "0%", "0%", { "money": 0 }],
+      ["External works", { "money": 40000000 }, "0%", "0%", { "money": 0 }],
+      [{ "strong": "All stages" }, { "money": 850000000 }, "42%", "52%", { "money": 85100000 }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Variations", "columns": [{ "label": "Variation" }, { "label": "Stage" }, { "label": "Amount", "numeric": true }, { "label": "State" }], "rows": [
+        ["VO-0004 · Extra column at grid D, floor 3", "Superstructure", { "money": 2400000 }, { "pill": "good", "text": "Instructed, nothing built yet" }],
+        ["VO-0006 · Roof access hatch", "Roofing", { "money": 900000 }, { "pill": "warn", "text": "Priced, waiting for the client" }]
+      ] },
+      { "type": "kv", "title": "This valuation", "items": [
+        { "label": "Work done to date", "value": { "money": 442800000 } },
+        { "label": "Less retention, 5%", "value": { "money": -22140000 } },
+        { "label": "Less earlier certificates, after retention", "value": { "money": -339815000 } },
+        { "label": "This valuation, before tax", "value": { "money": 80845000 } },
+        { "label": "VAT, 7.5%", "value": { "money": 6063375 } },
+        { "label": "Less withholding tax, 5%", "value": { "money": -4042250 } },
+        { "label": "Client pays", "value": { "strong": "₦82,866,125" } }
+      ] }
+    ] },
+    { "type": "progress", "label": "Where the job stands: 52% built", "value": 52, "note": "The programme says 48% by now. Nothing is invoiced until the last step." }
+  ]
+}

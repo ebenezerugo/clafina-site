@@ -1,0 +1,240 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "FUNDRAISING.md",
+    "INDUSTRY_PACKS.md",
+    "features.md",
+    "docs/industry-facts.md#industry-fundraising"
+  ],
+  "meta": {
+    "title": "Fundraising: donors, gifts, grants and tax receipts · Clafina",
+    "description": "Donors and gifts, numbered tax receipts, restricted money kept to its budget lines, pledges and grants with their reports. The Fundraising pack."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Fundraising",
+    "title": "Every gift thanked, receipted and spent as promised.",
+    "lede": "Know who gave, what needs a receipt or a thank-you, and that restricted money only goes where the donor meant it to.",
+    "screen": "fundraising-overview"
+  },
+  "business": {
+    "name": "Ireti Care Foundation",
+    "place": "Lagos",
+    "label": true,
+    "about": "A foundation that raises money from people, companies and funders for clean water, health outreach and girls' schooling in Lagos communities."
+  },
+  "dayTitle": "A day at Ireti Care Foundation",
+  "moments": [
+    {
+      "time": "08:30",
+      "title": "What needs doing today",
+      "problem": "Thank-yous, receipts and grant reports slip when nobody can see them all in one place.",
+      "handles": "The overview shows what needs doing: gifts waiting for a receipt, thank-yous not done, pledges overdue and grant reports due, each with its next step.",
+      "surface": "web"
+    },
+    {
+      "time": "09:00",
+      "title": "A transfer for the borehole",
+      "problem": "Mr Ajayi has sent money for the school borehole, and it must not be counted twice.",
+      "handles": "Chiamaka records it as a gift to the campaign, with its fund and method, tied to the finance receipt it came by. A receipt already used by one gift cannot be picked for another.",
+      "surface": "web"
+    },
+    {
+      "time": "09:05",
+      "title": "The donor's receipt",
+      "problem": "Receipts go out late, or not at all, and donors notice.",
+      "handles": "Each gift is put down for its own receipt, the yearly receipt or none, by the donor's choice and your rules. Receipts are numbered, in your own wording, and recorded as sent or bounced. A mistake is voided and replaced, never deleted.",
+      "surface": "web",
+      "screen": "fundraising-receipts"
+    },
+    {
+      "time": "10:30",
+      "title": "A big gift needs a personal note",
+      "problem": "A gift of two million naira deserves more than a printed receipt.",
+      "handles": "Gifts over the amount you set are listed for a thank-you within the days you set. Once the call is made or the note is sent, it is marked done.",
+      "surface": "web"
+    },
+    {
+      "time": "12:00",
+      "title": "How much to ask for",
+      "problem": "Adaora is meeting a company donor about the year-end drive and is not sure what to ask.",
+      "handles": "The donor's card gives a suggested ask in one sentence: the most they have given in a year, rounded up, at the next campaign for what they give to. Donors are grouped as major, monthly, new, lapsed or regular.",
+      "surface": "web",
+      "screen": "fundraising-donors"
+    },
+    {
+      "time": "14:00",
+      "title": "Spending the borehole money",
+      "problem": "The driller's bill is higher than planned, and borehole money can only go on the borehole.",
+      "handles": "Restricted money is spent only on its own budget lines. A spend off the fund's lines, over a line's remainder or over what has come in is refused, with the reason.",
+      "surface": "web",
+      "screen": "fundraising-campaign"
+    },
+    {
+      "time": "15:30",
+      "title": "A grant report is due",
+      "problem": "A funder's second report is due next week, and the money has to match the promises.",
+      "handles": "Each grant moves through idea, applied, needs info, awarded, reporting and closed, or declined, with its next step and date. It keeps the tranches expected and received, the conditions, and the reports promised and sent in.",
+      "surface": "web",
+      "screen": "fundraising-grants"
+    },
+    {
+      "time": "17:00",
+      "title": "A pledge is overdue",
+      "problem": "A company promised a gift for the middle of the month, and it has not come.",
+      "handles": "A pledge is paid by the gifts that name it, in part or in full. Reminders go out at most the number of times you set, a set gap apart. Each campaign shows where it will end up by its end date, drawn as a projection.",
+      "surface": "web"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Donor",
+      "meaning": "Anyone who gives or promises to. With the pack on, Donor takes the place of Customer."
+    },
+    {
+      "word": "Gift",
+      "meaning": "Money given, with its fund, method and campaign, tied to the finance receipt it came by."
+    },
+    {
+      "word": "Pledge",
+      "meaning": "A promise to give, paid by later gifts in part or in full."
+    },
+    {
+      "word": "Restricted fund",
+      "meaning": "Money that may be spent only on the budget lines it was given for."
+    },
+    {
+      "word": "Tax receipt",
+      "meaning": "A numbered receipt for a gift, or one for the year, in your own wording."
+    },
+    {
+      "word": "Year-end batch",
+      "meaning": "The yearly receipts issued together, for monthly and small donors."
+    },
+    {
+      "word": "Suggested ask",
+      "meaning": "What to ask a donor for next, worked out from what they have given."
+    },
+    {
+      "word": "Lapsed",
+      "meaning": "A donor who used to give and has stopped."
+    },
+    {
+      "word": "Tranche",
+      "meaning": "One payment of a grant, expected on a date."
+    },
+    {
+      "word": "Grant report",
+      "meaning": "What you promised to tell a funder, and when."
+    }
+  ],
+  "switchesTitle": "What the Fundraising pack switches on",
+  "switchesOn": [
+    {
+      "text": "A Fundraising menu: overview, donors, gifts, campaigns, grants and tax receipts"
+    },
+    {
+      "text": "Donors on your customer records, with how they like to be asked, what they give to and how they want receipts"
+    },
+    {
+      "text": "Donor groups and a suggested ask for each donor"
+    },
+    {
+      "text": "Gifts with their fund, method and channel, anonymous and monthly gifts, refunds with a reason, and thank-yous"
+    },
+    {
+      "text": "Each gift tied once to the finance receipt it came by"
+    },
+    {
+      "text": "Pledges paid in part or in full, with a limited number of reminders"
+    },
+    {
+      "text": "Campaigns with a goal, dates, budget lines, raised, promised and spent, and a projection"
+    },
+    {
+      "text": "Grants from idea to closed, with tranches, reports and conditions"
+    },
+    {
+      "text": "Restricted money spent only on its lines, within what has come in"
+    },
+    {
+      "text": "Numbered tax receipts for each gift or one a year, voided and replaced, never deleted"
+    },
+    {
+      "text": "A receipt issued and sent as soon as a gift is received",
+      "prelaunch": "industry-fundraising"
+    },
+    {
+      "text": "Receipts sent by email",
+      "prelaunch": "industry-fundraising"
+    },
+    {
+      "text": "Gifts posted to the ledger with their fund, and bills checked against a campaign's budget lines",
+      "prelaunch": "industry-fundraising"
+    },
+    {
+      "text": "A giving page for each campaign",
+      "prelaunch": "industry-fundraising"
+    },
+    {
+      "text": "Soft credits and volunteers",
+      "prelaunch": "industry-fundraising"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-crm",
+      "text": "A donor is a customer with a donor role, so one person or company has one record."
+    },
+    {
+      "route": "product-payments",
+      "text": "Gifts are tied to the finance receipts they came by, picked from the receipts you already record."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a foundation uses",
+  "modules": [
+    "product-crm",
+    "product-payments"
+  ],
+  "faqTitle": "Questions foundations ask",
+  "faq": [
+    {
+      "q": "Can a gift be counted twice?",
+      "a": "No. Each gift is tied to the finance receipt it came by, and a receipt already used by a gift cannot be picked again."
+    },
+    {
+      "q": "Can donors choose one receipt a year?",
+      "a": "Yes. Each gift is put down for its own receipt, the yearly receipt or none, by the donor's choice and your rules."
+    },
+    {
+      "q": "What if a receipt is wrong?",
+      "a": "It is voided and replaced with a new number. A receipt is never deleted."
+    },
+    {
+      "q": "How do you stop restricted money being spent on the wrong thing?",
+      "a": "A spend off the fund's lines, over a line's remainder or over what has come in is refused."
+    },
+    {
+      "q": "Can we keep track of what we promised funders?",
+      "a": "Yes. Each grant keeps its stage, next step, tranches, conditions and the reports promised and sent in."
+    },
+    {
+      "q": "Can the receipt go out the moment a gift arrives?",
+      "a": "Issuing and sending a receipt as soon as a gift is received is on the way, with receipts by email.",
+      "prelaunch": "industry-fundraising"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-memberships",
+    "industry-events",
+    "industry-client-records"
+  ],
+  "cta": {
+    "title": "Record your next gift in Clafina.",
+    "body": "Start free, switch on the Fundraising pack and add your donors. Add campaigns, grants and receipts as you go."
+  }
+}

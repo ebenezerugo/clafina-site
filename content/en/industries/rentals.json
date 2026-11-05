@@ -1,0 +1,229 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "RENTALS.md",
+    "INDUSTRY_PACKS.md",
+    "ROADMAP.md",
+    "docs/industry-facts.md#industry-rentals"
+  ],
+  "meta": {
+    "title": "Rentals and hire: agreements, returns and deposits · Clafina",
+    "description": "Availability by unit, hand-out by tag scan with signed condition notes, late fees and damage, and a deposit settled on one invoice. The Rentals pack."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Rentals",
+    "title": "Every unit out, every unit back, and the deposit settled.",
+    "lede": "Know what is free by the unit, hand out with proof of condition, and close each hire on one invoice.",
+    "screen": "rentals-items"
+  },
+  "business": {
+    "name": "Lagoon Plant Hire",
+    "place": "Ikeja",
+    "label": true,
+    "about": "An equipment hire yard renting out generators, concrete mixers, scaffolding, compactors, drills, pumps and a marquee."
+  },
+  "dayTitle": "A Monday at Lagoon Plant Hire",
+  "moments": [
+    {
+      "time": "08:00",
+      "title": "Is a generator free for three days?",
+      "problem": "A caller wants a 7.5 kVA generator from tomorrow, and wants to know what it will cost.",
+      "handles": "Availability is counted by unit, not by item, so Funmi sees that two of the three are free for those dates. The quote is the days times the rate times the units, and a part day counts as a whole one.",
+      "surface": "web"
+    },
+    {
+      "time": "08:30",
+      "title": "Not promised to two customers",
+      "problem": "The generator must not be given to someone else who calls at ten.",
+      "handles": "The agreement reserves a specific unit for the dates, with the deposit due and who brings it back, the customer or our collector. A unit can never be held twice at the same time, and one that is out and not back stays held past its due time.",
+      "surface": "web"
+    },
+    {
+      "time": "09:10",
+      "title": "A mixer and a compactor go out",
+      "problem": "If there is a dispute later, Lagoon Plant Hire needs proof of what condition they left in.",
+      "handles": "Hand-out needs every unit's tag scanned, notes and photos of its condition signed by the customer, and the deposit first when your settings ask for it.",
+      "surface": "web",
+      "screen": "rentals-hand-out"
+    },
+    {
+      "time": "10:00",
+      "title": "Two items are overdue",
+      "problem": "A generator and a compactor should have come back over the weekend.",
+      "handles": "Returns due lists what should come back, in the order it is due. A late fee starts after the grace minutes, at the item's late rate. Until the item is back, the fee so far is shown, and it is charged on return.",
+      "surface": "web",
+      "screen": "rentals-returns"
+    },
+    {
+      "time": "11:25",
+      "title": "The mixer comes back dented",
+      "problem": "Last week's mixer is back from Ojota Builders with a dent in the drum.",
+      "handles": "The return records the condition against the hand-out. The damaged unit gets a proposed damage line and leaves the calendar until it is mended.",
+      "surface": "web"
+    },
+    {
+      "time": "11:40",
+      "title": "The customer disagrees",
+      "problem": "Mr Bamidele says the dent was there before.",
+      "handles": "Tunde compares the photos and confirms the damage charge, or waives it. Either way, the customer's comment is kept on the file.",
+      "surface": "web"
+    },
+    {
+      "time": "12:00",
+      "title": "Closing the hire",
+      "problem": "The agreement must be settled and the deposit balanced.",
+      "handles": "Settling needs every damage line decided. Rent, the late fee and the confirmed damage go on one customer invoice. The deposit pays the charges first, and the rest is recorded as refunded the way it was paid. The deposit is kept as the customer's money, never income.",
+      "surface": "web",
+      "screen": "rentals-agreement"
+    },
+    {
+      "time": "17:00",
+      "title": "The site wants the scaffolding longer",
+      "problem": "Ajah Plaza works needs the scaffolding for another two weeks.",
+      "handles": "The agreement is extended, and the units stay held for the new dates.",
+      "surface": "web"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Item",
+      "meaning": "What you hire out. The pack uses Item in place of product."
+    },
+    {
+      "word": "Unit and tag",
+      "meaning": "One of an item, with its own QR tag, usually linked to an asset in the register."
+    },
+    {
+      "word": "Agreement",
+      "meaning": "The hire: which units, for which dates, the deposit and who brings them back."
+    },
+    {
+      "word": "Hand-out",
+      "meaning": "Units leaving the yard, with tags scanned and condition signed."
+    },
+    {
+      "word": "Returns due",
+      "meaning": "What should come back, in the order it is due."
+    },
+    {
+      "word": "Deposit",
+      "meaning": "The customer's money, held until the hire is settled."
+    },
+    {
+      "word": "Grace period and late fee",
+      "meaning": "The minutes before a late fee starts, and the item's own late rate after them."
+    },
+    {
+      "word": "Damage",
+      "meaning": "A difference in condition at return, proposed as a charge and confirmed or waived by staff."
+    },
+    {
+      "word": "Extend and settle",
+      "meaning": "Add time to an agreement, or close it on one invoice."
+    }
+  ],
+  "switchesTitle": "What the Rentals pack switches on",
+  "switchesOn": [
+    {
+      "text": "Items with a rate by the day or hour, their own late rate, a deposit, currency and tax"
+    },
+    {
+      "text": "Units with QR tags, available, being mended or retired"
+    },
+    {
+      "text": "Availability by unit, and quotes"
+    },
+    {
+      "text": "Agreements that never hold one unit twice"
+    },
+    {
+      "text": "Hand-out by tag scan, with signed and photographed condition and the deposit held"
+    },
+    {
+      "text": "Returns compared with the hand-out, with proposed damage confirmed or waived by staff"
+    },
+    {
+      "text": "Late fees after a grace period, shown as the fee so far until the item is back"
+    },
+    {
+      "text": "Settling on one customer invoice, with the deposit paying the charges first"
+    },
+    {
+      "text": "Extend or cancel an agreement"
+    },
+    {
+      "text": "A Rentals menu with Items, Agreements and Returns due"
+    },
+    {
+      "text": "Week and month prices for longer hires",
+      "prelaunch": "industry-rentals"
+    },
+    {
+      "text": "Insurance on a hire",
+      "prelaunch": "industry-rentals"
+    },
+    {
+      "text": "A booking page for your customers",
+      "prelaunch": "industry-rentals"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-assets",
+      "text": "Each unit is usually an asset in the register, and a damaged one is mended through Assets."
+    },
+    {
+      "route": "product-crm",
+      "text": "Customers come from the same customer list as every other sale."
+    },
+    {
+      "route": "product-sales",
+      "text": "Rent, late fees and confirmed damage are settled on the standard customer invoice."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a hire business uses",
+  "modules": [
+    "product-assets",
+    "product-sales",
+    "product-crm",
+    "product-payments"
+  ],
+  "faqTitle": "Questions hire businesses ask",
+  "faq": [
+    {
+      "q": "Is it for car, tool and party hire too?",
+      "a": "Yes. Equipment, party, car and tool hire all run on items, units and agreements."
+    },
+    {
+      "q": "Can the same generator be promised twice?",
+      "a": "No. An agreement holds specific units, and a unit can never be held twice at the same time."
+    },
+    {
+      "q": "How do we prove what condition an item left in?",
+      "a": "Every unit's tag is scanned at hand-out, and the customer signs the condition notes and photos. The return is compared with them."
+    },
+    {
+      "q": "What happens to the deposit?",
+      "a": "It is held as the customer's money. When the hire is settled it pays the charges first, and the rest is recorded as refunded the way it was paid."
+    },
+    {
+      "q": "Can we charge less a day for a long hire?",
+      "a": "Yes. You can set week and month discounts for longer hires.",
+      "prelaunch": "industry-rentals"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-events",
+    "industry-construction",
+    "industry-field-service"
+  ],
+  "cta": {
+    "title": "Put your yard on Clafina.",
+    "body": "Start free, switch on the Rentals pack, and tag your first units today."
+  }
+}

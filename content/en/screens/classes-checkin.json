@@ -1,0 +1,39 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: check-in for a full evening yoga class. Three are in, one is stopped with the reason shown, and doors close ten minutes after the start.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "TS", "name": "Tamarind Movement Studio", "place": "Wuse II · Front desk" },
+  "nav": [
+    { "label": "Classes", "items": [{ "label": "Class schedule" }, { "label": "Check-in", "active": true }, { "label": "Class packs" }, { "label": "Teachers' pay" }] }
+  ],
+  "search": "Scan a code, or type a name",
+  "title": "Check-in · Vinyasa yoga, 18:00",
+  "subtitle": "Studio 2 · Hauwa Danjuma · doors open 17:30 and close 18:10",
+  "actions": [{ "label": "Walk-in", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Booked", "value": "20 of 20" },
+      { "icon": "check", "label": "In", "value": "3" },
+      { "icon": "clock", "label": "Still to come", "value": "16" },
+      { "icon": "alert", "label": "Stopped", "value": "1" }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "cards", "columns": 1, "items": [
+        { "title": "Zainab Garba is in", "body": "Monthly plan · visit 15 this month, counted once · paid to 31 Oct.", "pill": { "tone": "good", "text": "17:52" } }
+      ] },
+      { "type": "attention", "title": "Stopped at the desk", "items": [
+        { "tone": "bad", "icon": "alert", "title": "Musa Lawal: his plan's invoice is overdue", "body": "Access on his plan is paused until the invoice is paid. Staff with the check-in permission can let him in once, with a reason that is logged.", "action": "Let him in once" }
+      ] }
+    ] },
+    { "type": "table", "title": "The class list", "columns": [{ "label": "Who" }, { "label": "Pays with" }, { "label": "State" }], "rows": [
+      [{ "avatar": "ZG", "text": "Zainab Garba" }, "Monthly plan", { "pill": "good", "text": "In 17:52" }],
+      [{ "avatar": "OE", "text": "Obinna Eke" }, "Annual plan", { "pill": "good", "text": "In 17:55" }],
+      [{ "avatar": "TF", "text": "Tolu Fasanya" }, "10-class pack · 6 left", { "pill": "good", "text": "In 17:58" }],
+      [{ "avatar": "ML", "text": "Musa Lawal" }, "Monthly plan · invoice overdue", { "pill": "bad", "text": "Stopped" }],
+      [{ "avatar": "BI", "text": "Bola Ige" }, "Monthly plan", { "pill": "neutral", "text": "Booked · check in" }],
+      [{ "avatar": "AN", "text": "Amaka Nwosu" }, "Monthly plan · took the offered place", { "pill": "neutral", "text": "Booked · check in" }]
+    ] }
+  ]
+}
