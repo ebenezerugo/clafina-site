@@ -34,8 +34,8 @@
         ["Marketplace fees", { "pill": "bad", "text": "No account: postings are refused" }, "Add a narrower one"],
         ["Tips kept by the house", { "pill": "bad", "text": "No account: postings are refused" }, "Add a narrower one"],
         ["Cash", "1110 Cash on hand", "Current account ••6789 → 1120"],
-        ["Receivables", "1200 Trade receivables", "—"],
-        ["Output VAT", "2200 Output VAT payable", "—"]
+        ["Receivables", "1200 Trade receivables", "Same account"],
+        ["Output VAT", "2200 Output VAT payable", "Same account"]
       ] }
     ] },
     { "type": "attention", "title": "Needs an account", "items": [

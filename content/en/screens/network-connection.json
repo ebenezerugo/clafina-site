@@ -16,11 +16,11 @@
   "actions": [{ "label": "Pause" }, { "label": "Review the netting offer", "primary": true }],
   "blocks": [
     { "type": "table", "title": "What travels between you: each kind flows only when both sides agree", "columns": [{ "label": "Kind of document" }, { "label": "You send" }, { "label": "They send" }], "rows": [
-      ["Purchase orders", { "pill": "good", "text": "Agreed" }, "—"],
-      ["Order confirmations", "—", { "pill": "good", "text": "Agreed" }],
-      ["Delivery notes", "—", { "pill": "good", "text": "Agreed" }],
-      ["Invoices", "—", { "pill": "good", "text": "Agreed" }],
-      ["Remittance advice", { "pill": "good", "text": "Agreed" }, "—"],
+      ["Purchase orders", { "pill": "good", "text": "Agreed" }, "Not sent"],
+      ["Order confirmations", "Not sent", { "pill": "good", "text": "Agreed" }],
+      ["Delivery notes", "Not sent", { "pill": "good", "text": "Agreed" }],
+      ["Invoices", "Not sent", { "pill": "good", "text": "Agreed" }],
+      ["Remittance advice", { "pill": "good", "text": "Agreed" }, "Not sent"],
       ["Statements", { "pill": "good", "text": "Agreed" }, { "pill": "good", "text": "Agreed" }]
     ] },
     { "type": "row", "widths": "1fr 1fr", "blocks": [

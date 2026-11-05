@@ -41,7 +41,7 @@
       [{ "avatar": "NA", "text": "Nneka" }, "Buyer", { "money": 1500000 }, "Harbour Road store"],
       [{ "avatar": "EM", "text": "Emeka" }, { "pill": "info", "text": "Approver" }, "No limit", "All 3 sites"],
       [{ "avatar": "AD", "text": "Adaora" }, "Buyer", { "money": 400000 }, "Head office"],
-      [{ "avatar": "KU", "text": "Kunle" }, "Receiver", "—", "East depot"]
+      [{ "avatar": "KU", "text": "Kunle" }, "Receiver", "Does not order", "East depot"]
     ] }
   ]
 }

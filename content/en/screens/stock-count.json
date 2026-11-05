@@ -28,7 +28,7 @@
         ["Granulated sugar 50kg", "SUG-50-BAG", "22", { "pill": "good", "text": "Agrees" }],
         ["Semolina 1kg", "SEM-1KG-CTN", "18", { "pill": "neutral", "text": "Not saved" }],
         ["Vegetable oil 5L", "OIL-5L-CTN", "15", { "pill": "info", "text": "+1 · +₦21,600" }],
-        ["Bath soap 150g", "SOAP-150-CTN", "—", { "pill": "neutral", "text": "Not counted" }]
+        ["Bath soap 150g", "SOAP-150-CTN", "Not yet", { "pill": "neutral", "text": "Not counted" }]
       ] },
       { "type": "kv", "title": "What approving will do", "items": [
         { "label": "Adjustments", "value": "6, one for each line that differs" },

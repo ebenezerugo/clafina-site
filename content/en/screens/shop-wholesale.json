@@ -19,7 +19,7 @@
       ["Vegetable oil 5 L", "Carton of 4", "860", { "money": 31200 }, "6", { "money": 187200 }],
       ["Vegetable oil 25 L", "Jerrycan", "120", { "money": 41500 }, "4", { "money": 166000 }],
       ["Red palm oil 5 L", "Carton of 4", { "pill": "warn", "text": "Low · 38" }, { "money": 36800 }, "5", { "money": 184000 }],
-      ["Groundnut oil 1 L", "Carton of 12", { "pill": "bad", "text": "Out of stock" }, { "money": 39600 }, "0", "—"]
+      ["Groundnut oil 1 L", "Carton of 12", { "pill": "bad", "text": "Out of stock" }, { "money": 39600 }, "0", "Not added"]
     ] },
     { "type": "row", "widths": "1fr 1fr", "blocks": [
       { "type": "attention", "title": "Quick order: 2 lines ready, 2 need a look", "items": [

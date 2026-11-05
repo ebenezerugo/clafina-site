@@ -22,12 +22,12 @@
       { "icon": "table", "label": "On the waiting list", "value": "2", "note": "For 20:00 and 20:30" }
     ] },
     { "type": "table", "title": "Drag a reservation to move it. Held ones lapse at the time shown.", "columns": [{ "label": "Table or room" }, { "label": "Lunch" }, { "label": "Afternoon" }, { "label": "Evening" }, { "label": "Late" }], "rows": [
-      ["T1 · 2 seats", "Ife A. · 2", "—", "—", "Kola M. · 2"],
-      ["T2 · 2 seats", "Here now · 2", "—", { "pill": "warn", "text": "Dayo B. · 2 · held" }, "—"],
-      ["T4 · 4 seats", "Here now · 4", "—", "Nneka L. · 4", "—"],
-      ["T5 · 4 seats", "—", "Sade E. · 3", { "pill": "warn", "text": "Zainab D. · 4 · held" }, "—"],
-      ["Private dining · 12 seats", { "pill": "bad", "text": "Wedding lunch · 12 · late" }, "—", { "pill": "warn", "text": "Temi W. · 10 · held" }, "—"],
-      ["Terrace · shared, 30 seats", "Walk-ins · 14 of 30", "—", "—", "—"]
+      ["T1 · 2 seats", "Ife A. · 2", "Free", "Free", "Kola M. · 2"],
+      ["T2 · 2 seats", "Here now · 2", "Free", { "pill": "warn", "text": "Dayo B. · 2 · held" }, "Free"],
+      ["T4 · 4 seats", "Here now · 4", "Free", "Nneka L. · 4", "Free"],
+      ["T5 · 4 seats", "Free", "Sade E. · 3", { "pill": "warn", "text": "Zainab D. · 4 · held" }, "Free"],
+      ["Private dining · 12 seats", { "pill": "bad", "text": "Wedding lunch · 12 · late" }, "Free", { "pill": "warn", "text": "Temi W. · 10 · held" }, "Free"],
+      ["Terrace · shared, 30 seats", "Walk-ins · 14 of 30", "Free", "Free", "Free"]
     ] },
     { "type": "attention", "title": "Waiting for an answer", "items": [
       { "tone": "warn", "icon": "clock", "title": "Dayo B. · T2 · 18:00 · 2 guests", "body": "Held until 14:00, then the table is free again.", "action": "Confirm" },
