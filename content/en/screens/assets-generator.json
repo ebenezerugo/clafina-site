@@ -1,0 +1,43 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: one asset's page, a generator, with who holds it, where it is, what it is worth and when its next service is due.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search assets, serials, work orders…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Operations", "items": [{ "label": "Assets" }, { "label": "Asset register", "active": true }, { "label": "Maintenance", "badge": "3" }, { "label": "Schedules" }, { "label": "Depreciation run" }] }
+  ],
+  "title": "100 kVA diesel generator",
+  "subtitle": "AST-2026-0201 · Plant and machinery · held by Ada · Generator house, main warehouse",
+  "actions": [{ "label": "Record a reading" }, { "label": "Ask for maintenance", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Place and custody", "items": [
+        { "label": "Status", "value": { "pill": "good", "text": "In service · condition good" } },
+        { "label": "Place", "value": "Main warehouse › Generator house" },
+        { "label": "Held by", "value": { "avatar": "AD", "text": "Ada, custodian" } },
+        { "label": "Serial number", "value": "GN-100-7731" },
+        { "label": "Last verified", "value": "2 Oct 2026, by scan" }
+      ] },
+      { "type": "kv", "title": "Value", "items": [
+        { "label": "Cost", "value": { "money": 14200000 } },
+        { "label": "Depreciation", "value": "Straight line, 10 years" },
+        { "label": "Charged so far", "value": { "money": 2600000 } },
+        { "label": "Worth today", "value": { "money": 11600000 } },
+        { "label": "Residual value", "value": { "money": 1420000 } }
+      ] }
+    ] },
+    { "type": "attention", "title": "Next service", "items": [
+      { "tone": "warn", "icon": "clock", "title": "Due in 36 running hours", "body": "Read at 5,214 h on 17 Oct; the next service is at 5,250 h, about 25 Oct at 6 hours a day. Oil, filters and belts every 250 running hours, raised 3 days ahead.", "action": "Raise the work now" }
+    ] },
+    { "type": "table", "title": "Cover", "columns": [{ "label": "Kind" }, { "label": "With" }, { "label": "Until" }, { "label": "Status" }], "rows": [
+      ["Warranty", "The maker", "14 Mar 2026", { "pill": "bad", "text": "Expired" }],
+      ["Service contract", "Volt Line Services", "31 Dec 2026", { "pill": "good", "text": "In date" }],
+      ["Insurance", "Group property policy", "28 Feb 2027", { "pill": "good", "text": "In date" }]
+    ] }
+  ]
+}

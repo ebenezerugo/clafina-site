@@ -1,0 +1,210 @@
+{
+  "kind": "product",
+  "sources": [
+    "ROADMAP.md",
+    "meet.md",
+    "messaging.md",
+    "STATUS.md",
+    "MOBILE.md",
+    "docs/product-facts.md#product-communication"
+  ],
+  "meta": {
+    "title": "Inbox, chat and Meet · Clafina",
+    "description": "One inbox for customers and approvals, team chat, our own video rooms, and documents and emails sent in your business's look."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Inbox, chat and Meet",
+    "title": "Every conversation next to what it is about.",
+    "lede": "Customer messages, approvals, mentions and alerts land in one inbox, tied to the invoice, order or customer they concern. Team chat and video rooms are built in.",
+    "screen": "communication-inbox"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Answer customers from one inbox",
+      "body": "Email, text messages, chat accounts and the chat on your website come into one place, with routing rules and reply targets."
+    },
+    {
+      "title": "Talk and meet in one place",
+      "body": "Team channels, direct messages and calls from any chat, with video rooms on our own media server."
+    },
+    {
+      "title": "Documents that look like yours",
+      "body": "Your brand kit, email layouts and document designs are used for everything the business sends."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "communication-message",
+      "title": "A message knows what it is about",
+      "body": "A customer's message is tied to the record it concerns, so the invoice and the conversation sit together.",
+      "points": [
+        "Private notes and mentions for your team",
+        "Assign it, and see the reply target",
+        "Reply with a template, or send it later"
+      ]
+    },
+    {
+      "screen": "communication-meet",
+      "title": "Meetings with a record",
+      "body": "Start a room now, call from a chat or let the assistant take notes of a meeting in the room with you.",
+      "points": [
+        "A waiting room and rules for who may join",
+        "Recordings and transcripts, kept in Drive",
+        "Take notes turns a meeting into minutes and drafts to confirm"
+      ]
+    },
+    {
+      "screen": "communication-inbox-phone",
+      "title": "The inbox on your phone",
+      "body": "Approvals, messages and mentions come with one button each, so you can answer away from your desk.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in communication",
+  "features": [
+    {
+      "title": "Inbox and channels",
+      "items": [
+        {
+          "text": "Conversations tied to records, with notes, mentions, assignment and the customer's own link."
+        },
+        {
+          "text": "Email, text messages, chat accounts and a chat widget for your website, with retries and backup accounts."
+        },
+        {
+          "text": "Routing rules and service levels with escalation."
+        },
+        {
+          "text": "An approvals inbox for everything that waits on you."
+        },
+        {
+          "text": "Chat platforms as ways into the inbox, Capture and the assistant."
+        },
+        {
+          "text": "Your own chat-platform accounts connected and answering customers.",
+          "prelaunch": "product-communication"
+        }
+      ]
+    },
+    {
+      "title": "Team chat",
+      "items": [
+        {
+          "text": "Channels for each department, team, project or document, direct messages and search."
+        },
+        {
+          "text": "Calls started from any chat, and voice-only rooms."
+        },
+        {
+          "text": "A dot that shows who is online.",
+          "prelaunch": "product-communication"
+        },
+        {
+          "text": "Notifications sent to a person in chat.",
+          "prelaunch": "product-communication"
+        }
+      ]
+    },
+    {
+      "title": "Meet",
+      "items": [
+        {
+          "text": "Video rooms on our own media server, with a waiting room and rules for who may join."
+        },
+        {
+          "text": "Start now, recording and transcripts."
+        },
+        {
+          "text": "Take notes: minutes from a meeting in the room with you."
+        }
+      ]
+    },
+    {
+      "title": "Sending",
+      "items": [
+        {
+          "text": "Templates with variables and languages, and rules that write to customers and suppliers when something happens."
+        },
+        {
+          "text": "Send later, announcements and campaigns, with consent kept for each person."
+        },
+        {
+          "text": "Sending limits: messages over a limit are held, never lost."
+        },
+        {
+          "text": "History, cost, retention and search for everything sent."
+        },
+        {
+          "text": "A webhook step in your notification rules.",
+          "prelaunch": "product-communication"
+        }
+      ]
+    },
+    {
+      "title": "Studio",
+      "items": [
+        {
+          "text": "A brand kit, email layouts, a document designer, till rolls and labels."
+        },
+        {
+          "text": "Versions and publishing for every design."
+        }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    {
+      "route": "product-sales",
+      "text": "Every document is sent and shared from your own templates."
+    },
+    {
+      "route": "product-crm",
+      "text": "Conversations show on the customer's page."
+    },
+    {
+      "route": "product-assistant",
+      "text": "The assistant writes minutes from your meetings."
+    },
+    {
+      "route": "product-capture",
+      "text": "A bill sent to a chat account is read and filed for you to confirm."
+    }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": [
+    "web",
+    "phone",
+    "meet"
+  ],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-distribution",
+    "industry-client-records",
+    "industry-property",
+    "industry-field-service"
+  ],
+  "faqTitle": "Questions about communication",
+  "faq": [
+    {
+      "q": "Do customers need an account to join a meeting?",
+      "a": "No. Guests open the link, say their name and wait until a host lets them in. Members of your organisation come straight in."
+    },
+    {
+      "q": "What happens if we reach our sending limit?",
+      "a": "Messages over the limit are held, never lost. Limits are set by your plan."
+    },
+    {
+      "q": "Can the team see a customer's message and the invoice it is about together?",
+      "a": "Yes. Conversations are tied to records, so the message sits with the invoice, order or customer it concerns."
+    }
+  ],
+  "cta": {
+    "title": "See the inbox with your own conversations.",
+    "body": "Start free, or book a demo and we will walk through a customer message from the first reply to the corrected invoice."
+  }
+}

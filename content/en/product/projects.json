@@ -1,0 +1,203 @@
+{
+  "kind": "product",
+  "sources": [
+    "PROJECTS.md",
+    "MOBILE.md",
+    "docs/product-facts.md#product-projects"
+  ],
+  "meta": {
+    "title": "Projects and timesheets · Clafina",
+    "description": "Run service projects with tasks, time and money. Get timesheets approved, then invoice the time and milestones your customer accepted."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Projects and timesheets",
+    "title": "Every hour on the job, and every hour billed.",
+    "lede": "Projects with a customer, a team and a budget in hours and money. Time is approved once, costed at each person's rate and turned into invoices without typing it again.",
+    "screen": "projects-overview"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "See what is slipping",
+      "body": "The overview shows which projects are past their end date, which are over their hours and what is waiting on you."
+    },
+    {
+      "title": "Timesheets in, and approved",
+      "body": "People send their week. You approve it, or turn it back with a note, and approved weeks are locked."
+    },
+    {
+      "title": "Bill what was done",
+      "body": "Invoice approved time, accepted milestones or a fixed-price schedule. Retainers and prepayments are kept too."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "projects-detail",
+      "title": "One page for each project",
+      "body": "Progress, hours, budget and margin sit next to the team and the milestones, and the page updates as people work.",
+      "points": [
+        "A milestone can need the customer's acceptance before it is billed",
+        "Gates decide when a project may move to its next stage",
+        "Profitability, budget burn and a forecast as you go"
+      ]
+    },
+    {
+      "screen": "projects-approvals",
+      "title": "Approve the week, not every line",
+      "body": "Normal weeks can be approved together. A week that looks unusual is flagged, so you only open the ones that need it.",
+      "points": [
+        "Approving costs the hours at each person's rate",
+        "Billable hours become ready to invoice",
+        "Turned back weeks go to the person's Inbox to fix"
+      ]
+    },
+    {
+      "screen": "projects-timesheet-phone",
+      "title": "Log time where the work is",
+      "body": "Start a timer on a task, or add time by hand, from the phone.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in Projects",
+  "features": [
+    {
+      "title": "Projects",
+      "items": [
+        {
+          "text": "A customer, a manager, a team, dates and a budget in hours and money on every project."
+        },
+        {
+          "text": "A billing type, a lifecycle with gates, and templates to start the next project from."
+        },
+        {
+          "text": "A Drive workspace for each project, and a Project dimension in the ledger."
+        },
+        {
+          "text": "One project table shared with manufacturing, so a production project opens there."
+        }
+      ]
+    },
+    {
+      "title": "Tasks and milestones",
+      "items": [
+        {
+          "text": "Tasks on a board or a list, with sub-tasks that roll up, dependencies, checklists and files."
+        },
+        {
+          "text": "Milestones the customer accepts before they are billed."
+        },
+        {
+          "text": "A notification when someone assigns you a task or mentions you.",
+          "prelaunch": "product-projects"
+        }
+      ]
+    },
+    {
+      "title": "Time",
+      "items": [
+        {
+          "text": "Time logged by hand, with a timer or by import, and costed at the person's rate."
+        },
+        {
+          "text": "Weekly timesheets that go through approval and are locked once approved."
+        },
+        {
+          "text": "Timers that follow each person's own time zone.",
+          "prelaunch": "product-projects"
+        },
+        {
+          "text": "Cost rates for each person that go beyond their base salary.",
+          "prelaunch": "product-projects"
+        }
+      ]
+    },
+    {
+      "title": "Billing and money",
+      "items": [
+        {
+          "text": "Invoices from approved time, accepted milestones and fixed-price schedules."
+        },
+        {
+          "text": "Retainers and prepayments."
+        },
+        {
+          "text": "Stock issued to a project at cost, shown on its Materials tab."
+        },
+        {
+          "text": "Retainer periods that close and start again on schedule by themselves.",
+          "prelaunch": "product-projects"
+        }
+      ]
+    },
+    {
+      "title": "Overview",
+      "items": [
+        {
+          "text": "Late projects, projects over their hours, timesheets waiting and time to bill, with a projection."
+        },
+        {
+          "text": "Live screens: a change by anyone appears without a refresh."
+        }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    {
+      "route": "product-sales",
+      "text": "Approved time and accepted milestones become sales invoices."
+    },
+    {
+      "route": "product-stock",
+      "text": "Materials issued to a project leave stock at cost."
+    },
+    {
+      "route": "product-finance",
+      "text": "Costs and income carry the project in the ledger."
+    },
+    {
+      "route": "product-hr",
+      "text": "Rates come from each person's pay, and time from the timeclock."
+    },
+    {
+      "route": "product-manufacturing",
+      "text": "Production projects share the same project table."
+    },
+    {
+      "route": "industry-construction",
+      "text": "Builders run jobs and stages as projects."
+    }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": [
+    "web",
+    "phone"
+  ],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-construction",
+    "industry-field-service",
+    "industry-manufacturing"
+  ],
+  "faqTitle": "Questions about Projects",
+  "faq": [
+    {
+      "q": "Can I bill a project by milestone?",
+      "a": "Yes. A milestone can need the customer's acceptance first. Once it is accepted, you draw the invoice, check it and send it."
+    },
+    {
+      "q": "Can someone change a timesheet after it is approved?",
+      "a": "No. An approved week is locked. If something is wrong before then, you turn the week back with a note and the person fixes it."
+    },
+    {
+      "q": "Can people log time from their phone?",
+      "a": "Yes. They can run a timer on a task or add time by hand, and send the week from there."
+    }
+  ],
+  "cta": {
+    "title": "See Projects with your own work.",
+    "body": "Start free, or book a demo and we will walk through a project from the first task to the invoice."
+  }
+}

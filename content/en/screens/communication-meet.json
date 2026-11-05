@@ -1,0 +1,40 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: Meet, with today's meetings and calls, minutes the assistant drafted, and recent recordings with transcripts.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search meetings, recordings, people…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "12" }] },
+    { "label": "Workspace", "items": [{ "label": "Inbox" }, { "label": "Messages" }, { "label": "Meet", "active": true }, { "label": "Templates" }, { "label": "Announcements" }, { "label": "Campaigns" }] }
+  ],
+  "title": "Meet",
+  "subtitle": "Meetings and calls in our own rooms, with colleagues, customers and suppliers.",
+  "actions": [{ "label": "Schedule a meeting" }, { "label": "Start now", "primary": true, "icon": "phone" }],
+  "blocks": [
+    { "type": "cards", "columns": 3, "items": [
+      { "title": "Start now", "body": "Your room opens on the waiting screen. Choose camera on, or just your voice, then let people in or share the code." },
+      { "title": "Take notes", "body": "For a meeting in the room with you. The assistant listens and gives you minutes, decisions, next steps and drafts to confirm." },
+      { "title": "Join", "body": "Type the code from the invitation, or scan the QR code on the host's screen.", "value": "k7m-4pq-2x" }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Today, Sunday 25 October", "columns": [{ "label": "Time" }, { "label": "Meeting" }, { "label": "Where" }, { "label": "Status" }], "rows": [
+        ["09:00", "Production stand-up", "Online · 5 people", { "pill": "good", "text": "Happening now" }],
+        ["10:05", "Call with Kola", "Voice only · from a chat", { "pill": "neutral", "text": "Ended, 12 min" }],
+        ["11:30", "Supplier call: Harbour Plastics", "Online · 2 guests", { "pill": "info", "text": "Opens 11:20" }],
+        ["14:00", "Site visit: Lantern Valley Foods", "In person · assistant takes notes", { "pill": "info", "text": "Notes" }]
+      ] },
+      { "type": "attention", "title": "Needs you", "items": [
+        { "tone": "warn", "icon": "check", "title": "Visit to Tide Street Stores", "body": "The assistant drafted the minutes: a quotation, a message and two tasks wait for your answer.", "action": "Check the 4 drafts" },
+        { "tone": "info", "icon": "receipt", "title": "Supplier call: Harbour Plastics", "body": "No record yet. The chat and the two files from the room are kept.", "action": "Write the record" }
+      ] }
+    ] },
+    { "type": "table", "title": "Recent recordings", "columns": [{ "label": "Meeting" }, { "label": "When" }, { "label": "What is kept" }, { "label": "Kept until" }], "rows": [
+      ["Weekly accounts", "Fri 23 Oct · 42 min", "Recording and transcript", "21 Jan"],
+      ["Sales review", "Thu 16 Oct · 55 min", "Transcript", "14 Jan"]
+    ] }
+  ]
+}

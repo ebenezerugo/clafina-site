@@ -1,0 +1,41 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the HR overview, with who works here, who came in today, contracts ending and leave waiting for a decision.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search people, payslips, leave…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "People", "items": [{ "label": "Overview", "active": true }, { "label": "Staff" }, { "label": "Rota" }, { "label": "Attendance" }, { "label": "Leave", "badge": "2" }, { "label": "Payroll runs" }, { "label": "Performance" }] }
+  ],
+  "title": "People",
+  "subtitle": "Who works here, who is in today, and what needs an answer from you.",
+  "actions": [{ "label": "Run payroll", "primary": true, "icon": "money" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Headcount", "value": "86", "note": "2 joined, 1 left in 30 days" },
+      { "icon": "clock", "label": "Attendance", "value": "93.4%", "change": { "tone": "good", "text": "1.2 points better", "dir": "up" } },
+      { "icon": "leaf", "label": "Leave taken", "value": "112 days", "note": "Approved, last 30 days" }
+    ] },
+    { "type": "row", "widths": "2fr 1fr", "blocks": [
+      { "type": "attention", "title": "Needs your attention", "items": [
+        { "tone": "warn", "icon": "leaf", "title": "2 leave requests are waiting for you", "body": "Ada, 26 to 30 Oct, and Kunle, half a day on 2 Nov. The warehouse would be one short on 3 days.", "action": "Decide in Inbox" },
+        { "tone": "warn", "icon": "clock", "title": "3 contracts end within 30 days", "body": "Nneka on 31 Oct, Efe on 12 Nov and one more. Renew them or let them end.", "action": "Review contracts" },
+        { "tone": "bad", "icon": "alert", "title": "4 compliance documents are expiring", "body": "A fire-safety certificate, two food handler medicals and a driver's licence. Expired ones cannot work some shifts.", "action": "See compliance" },
+        { "tone": "info", "icon": "money", "title": "October payroll is due on 28 October", "body": "82 people, about ₦24.6m gross. Calculate by Friday so you can approve on Monday.", "action": "Open the run" }
+      ] },
+      { "type": "table", "title": "Who works where", "columns": [{ "label": "Department" }, { "label": "People", "numeric": true }], "rows": [
+        ["Production", "24"],
+        ["Warehouse and logistics", "18"],
+        ["Kitchen", "14"],
+        ["Sales and retail", "12"],
+        ["Finance and admin", "8"],
+        ["Projects and maintenance", "7"],
+        ["Management and people", "3"]
+      ] }
+    ] }
+  ]
+}

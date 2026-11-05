@@ -1,0 +1,40 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the projects overview, with what is late, what is over its hours, timesheets waiting and time ready to bill.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search projects, tasks, people…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Operations", "items": [{ "label": "Projects", "active": true }, { "label": "My tasks" }, { "label": "My timesheet" }, { "label": "Timesheet approvals", "badge": "3" }] }
+  ],
+  "title": "Projects",
+  "subtitle": "Work for customers and for the business: who is on it, what it has used and what it earns.",
+  "actions": [{ "label": "My timesheet", "icon": "clock" }, { "label": "New project", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "table", "label": "Projects under way", "value": "9", "note": "7 active and 2 being planned" },
+      { "icon": "clock", "label": "Past their end date", "value": "2", "change": { "tone": "bad", "text": "Needs a new date" } },
+      { "icon": "alert", "label": "Over their hours", "value": "1", "change": { "tone": "warn", "text": "32 h over" } },
+      { "icon": "receipt", "label": "Time to bill", "value": { "money": 3840000 }, "note": "142 approved hours not invoiced yet" }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "attention", "title": "Needs your attention", "items": [
+        { "tone": "bad", "icon": "clock", "title": "Warehouse racking is 7 days past its end date", "body": "It is 88% done and over its hours. The customer was promised 12 Oct. Choose a new date or put it on hold.", "action": "Change the date" },
+        { "tone": "warn", "icon": "users", "title": "3 timesheets are waiting for you", "body": "Nneka, Remi and Ada sent last week. Until you approve, their hours cannot be billed.", "action": "Review timesheets" },
+        { "tone": "info", "icon": "receipt", "title": "96 approved hours can be invoiced", "body": "Lantern Valley Foods: ₦1,920,000 of time and materials. Draw the invoice, check it, then send it.", "action": "Draw up invoice" },
+        { "tone": "warn", "icon": "check", "title": "A milestone is waiting for the customer", "body": "Kite Market Co. has not accepted “Racks in bay 2”. ₦2,450,000 is billed once they do.", "action": "Open the project" }
+      ] },
+      { "type": "table", "title": "Hours used against the plan", "columns": [{ "label": "Project" }, { "label": "Hours", "numeric": true }, { "label": "Status" }], "rows": [
+        ["Warehouse racking", "412 of 380 h", { "pill": "bad", "text": "Over by 32 h" }],
+        ["Cold room installation", "212 of 240 h", { "pill": "warn", "text": "88% used" }],
+        ["Delivery route redesign", "96 of 160 h", { "pill": "good", "text": "60% used" }],
+        ["Stock audit", "58 of 120 h", { "pill": "good", "text": "48% used" }],
+        ["Shop launch", "130 of 300 h", { "pill": "good", "text": "43% used" }]
+      ] }
+    ] }
+  ]
+}

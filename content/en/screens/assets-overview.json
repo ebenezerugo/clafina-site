@@ -1,0 +1,50 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the assets overview, with what the business owns, what it is worth, the state each asset is in and what needs looking after.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search assets, serials, work orders…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Operations", "items": [{ "label": "Assets", "active": true }, { "label": "Asset register" }, { "label": "Maintenance", "badge": "3" }, { "label": "Schedules" }, { "label": "Depreciation run" }] }
+  ],
+  "title": "Assets overview",
+  "subtitle": "Everything the business owns and keeps, what it is worth, and what needs looking after.",
+  "actions": [{ "label": "Register asset", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "box", "label": "Assets in the register", "value": "214", "note": "6 are being repaired now" },
+      { "icon": "money", "label": "Net book value", "value": { "money": 186400000 }, "note": "₦3,100,000 depreciation this month" },
+      { "icon": "chart", "label": "Spent on maintenance", "value": { "money": 1420000 }, "change": { "tone": "warn", "text": "₦380,000 more than September", "dir": "up" } },
+      { "icon": "clock", "label": "Papers and cover ending", "value": "9", "note": "Within 30 days" }
+    ] },
+    { "type": "row", "widths": "2fr 1fr", "blocks": [
+      { "type": "attention", "title": "Needs your attention", "items": [
+        { "tone": "bad", "icon": "alert", "title": "2 assets are missing", "body": "Delivery bike BK-03 and a handheld scanner, last seen at the river depot.", "action": "Open them" },
+        { "tone": "warn", "icon": "clock", "title": "Truck TRK-07: insurance ends 24 Oct", "body": "Its road papers end 28 Oct. Quotes to renew are in Drive.", "action": "Renew cover" },
+        { "tone": "warn", "icon": "check", "title": "Count of the main warehouse: 5 items not found", "body": "Decide for each: found, moved, lost or written off.", "action": "Review the count" },
+        { "tone": "info", "icon": "chart", "title": "A reading looks wrong", "body": "Generator GEN-01 used 38% more diesel than its running hours explain.", "action": "Look at it" }
+      ] },
+      { "type": "table", "title": "What state they are in", "columns": [{ "label": "State" }, { "label": "Assets", "numeric": true }], "rows": [
+        [{ "pill": "good", "text": "In service" }, "148"],
+        [{ "pill": "info", "text": "Assigned" }, "31"],
+        [{ "pill": "neutral", "text": "Available" }, "14"],
+        [{ "pill": "warn", "text": "Under maintenance" }, "6"],
+        [{ "pill": "bad", "text": "Damaged" }, "3"],
+        [{ "pill": "bad", "text": "Missing" }, "2"],
+        [{ "pill": "neutral", "text": "Retired or awaiting disposal" }, "10"]
+      ] }
+    ] },
+    { "type": "table", "title": "Value by category", "columns": [{ "label": "Category" }, { "label": "Net book value", "numeric": true }], "rows": [
+      ["Vehicles", { "money": 88200000 }],
+      ["Plant and machinery", { "money": 52600000 }],
+      ["Buildings and fit-out", { "money": 28400000 }],
+      ["Cold storage", { "money": 9800000 }],
+      ["Computers and tills", { "money": 5100000 }],
+      ["Furniture", { "money": 2300000 }]
+    ] }
+  ]
+}

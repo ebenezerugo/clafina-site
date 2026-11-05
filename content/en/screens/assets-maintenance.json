@@ -1,0 +1,39 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: maintenance jobs on assets, from asked for to closed, with each job's next step and the schedules due this week.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search assets, serials, work orders…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Operations", "items": [{ "label": "Assets" }, { "label": "Asset register" }, { "label": "Maintenance", "badge": "3", "active": true }, { "label": "Schedules" }, { "label": "Depreciation run" }] }
+  ],
+  "title": "Maintenance jobs",
+  "subtitle": "Work on assets: asked for, approved, scheduled, done, checked and closed.",
+  "actions": [{ "label": "Ask for maintenance", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "table", "label": "Open", "value": "14" },
+      { "icon": "clock", "label": "Overdue", "value": "3", "change": { "tone": "bad", "text": "Needs a date" } },
+      { "icon": "users", "label": "Mine", "value": "4" },
+      { "icon": "alert", "label": "Emergency", "value": "1" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Job" }, { "label": "Work" }, { "label": "Asset" }, { "label": "Stage" }, { "label": "Next step" }], "rows": [
+      ["WO-2026-0131", "Hydraulic leak at the mast", "Forklift FL-02", { "pill": "info", "text": "Asked for" }, "Approve"],
+      ["WO-2026-0125", "Brake pads and discs", "Truck TRK-07", { "pill": "bad", "text": "2 days late" }, "Start"],
+      ["WO-2026-0129", "250-hour service, raised by a schedule", "Generator GEN-01", { "pill": "neutral", "text": "Booked for 22 Oct" }, "Start"],
+      ["WO-2026-0120", "Engine oil leak, outside workshop", "Truck TRK-07", { "pill": "warn", "text": "In progress · ₦210,000 so far" }, "Add cost"],
+      ["WO-2026-0123", "500-hour service · 2.5 h, 3 parts", "Forklift FL-02", { "pill": "warn", "text": "In progress" }, "Complete"],
+      ["WO-2026-0116", "Replace door seal · ₦92,000", "Walk-in cold room", { "pill": "good", "text": "Done, to check" }, "Check it"]
+    ] },
+    { "type": "table", "title": "Schedules due in 7 days: jobs are raised ahead of the day", "columns": [{ "label": "Schedule" }, { "label": "Due" }], "rows": [
+      ["Generator 250 h service", "At 5,250 h · about 25 Oct"],
+      ["Truck 10,000 km service", "In 3 days · at 9,860 km now"],
+      ["Fire extinguishers, all sites", "23 Oct · every 6 months"],
+      ["Cold room compressor", "24 Oct · every 3 months"]
+    ] }
+  ]
+}

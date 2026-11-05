@@ -1,0 +1,202 @@
+{
+  "kind": "product",
+  "sources": [
+    "ROADMAP.md",
+    "MOBILE.md",
+    "docs/product-facts.md#product-assets"
+  ],
+  "meta": {
+    "title": "Assets and maintenance · Clafina",
+    "description": "A register of what the business owns: who holds it, where it is, when it needs service and what it is worth in the books."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Assets and maintenance",
+    "title": "Know what you own, and keep it working.",
+    "lede": "Vehicles, machines, computers and fittings in one register. Each one has a place, a holder, a service plan and a value that depreciates in the books every month.",
+    "screen": "assets-overview"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Where it is, and who has it",
+      "body": "Every asset has a place and a holder. Moves go through approval, and a scan of its tag opens its page."
+    },
+    {
+      "title": "Serviced before it breaks",
+      "body": "Schedules by date or by meter raise the work order ahead of the day, with parts from stock and labour."
+    },
+    {
+      "title": "Right in the books",
+      "body": "Depreciation is posted each month as one entry. Revaluation, disposal and write-offs post their gain or loss."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "assets-generator",
+      "title": "One page for each asset",
+      "body": "An asset's page shows its place, its holder, its cover and its value today, with its next service beside them.",
+      "points": [
+        "Components and bundles kept together",
+        "Warranties, service contracts and insurance with their end dates",
+        "Cost of ownership as you go"
+      ]
+    },
+    {
+      "screen": "assets-maintenance",
+      "title": "Every job has its next step",
+      "body": "Work orders move from asked for to closed, and each one shows the one thing to do next.",
+      "points": [
+        "Parts are taken from stock, and labour is costed",
+        "Preventive schedules raise jobs ahead of the day",
+        "Maintenance can be an expense or added to the asset's value"
+      ]
+    },
+    {
+      "screen": "assets-maintenance-phone",
+      "title": "Checks in the field",
+      "body": "Technicians record work, readings, photos and damage on the phone, even without a connection.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in Assets",
+  "features": [
+    {
+      "title": "Register",
+      "items": [
+        {
+          "text": "Classes, places, custody and assignment, with components and bundles."
+        },
+        {
+          "text": "Asset tags with QR codes, and imports and exports."
+        },
+        {
+          "text": "Transfers between places through approval."
+        },
+        {
+          "text": "Assets made from goods received or from stock, with a threshold for what is capitalised."
+        },
+        {
+          "text": "A return checklist for people leaving, started from the HR exit."
+        }
+      ]
+    },
+    {
+      "title": "Maintenance",
+      "items": [
+        {
+          "text": "Work orders with parts from stock and labour."
+        },
+        {
+          "text": "Preventive schedules by date and by meter, and inspections."
+        },
+        {
+          "text": "Warranties and service contracts."
+        },
+        {
+          "text": "Maintenance booked as an expense or capitalised, and assets under construction."
+        }
+      ]
+    },
+    {
+      "title": "In the books",
+      "items": [
+        {
+          "text": "A monthly depreciation run by four methods, posted as one entry."
+        },
+        {
+          "text": "Revaluation and impairment."
+        },
+        {
+          "text": "Disposal with its gain or loss, lost and stolen assets, and insurance claims."
+        }
+      ]
+    },
+    {
+      "title": "Counts and the field",
+      "items": [
+        {
+          "text": "Verification counts by scanning tags."
+        },
+        {
+          "text": "Field checks on the phone that work offline, with photos, meter readings and damage reports."
+        },
+        {
+          "text": "Fleet records: fuel and the cost of each kilometre."
+        }
+      ]
+    },
+    {
+      "title": "Planning ahead",
+      "items": [
+        {
+          "text": "Cost of ownership and replacement planning."
+        },
+        {
+          "text": "A failure risk for each asset and a scan for odd readings, using your own AI provider."
+        }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    {
+      "route": "product-purchasing",
+      "text": "An asset can be registered from the goods you receive."
+    },
+    {
+      "route": "product-stock",
+      "text": "Parts for a work order come out of stock."
+    },
+    {
+      "route": "product-finance",
+      "text": "Depreciation, revaluation and disposal post to the ledger."
+    },
+    {
+      "route": "product-hr",
+      "text": "A person's exit starts the return of what they hold."
+    },
+    {
+      "route": "product-manufacturing",
+      "text": "Machine maintenance is planned around production."
+    },
+    {
+      "route": "product-sales",
+      "text": "An asset can go out on a waybill."
+    }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": [
+    "web",
+    "phone"
+  ],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-distribution",
+    "industry-manufacturing",
+    "industry-construction",
+    "industry-rentals",
+    "industry-farm",
+    "industry-field-service"
+  ],
+  "faqTitle": "Questions about Assets",
+  "faq": [
+    {
+      "q": "Can maintenance be planned by running hours instead of dates?",
+      "a": "Yes. A schedule can follow a date or a meter, such as running hours or kilometres. The work order is raised ahead of the day it is due."
+    },
+    {
+      "q": "Does depreciation post to the books by itself?",
+      "a": "Yes. The monthly run works out depreciation by the method set for each asset and posts it as one entry."
+    },
+    {
+      "q": "Can technicians record work without a connection?",
+      "a": "Yes. Field checks on the phone work offline, with photos, meter readings and damage reports, and sync when the phone is back online."
+    }
+  ],
+  "cta": {
+    "title": "See Assets with your own register.",
+    "body": "Start free, or book a demo and we will walk through an asset from the day it arrives to the day it is sold."
+  }
+}
