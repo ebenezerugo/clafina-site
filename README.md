@@ -38,9 +38,15 @@ assets/
 └── img/favicon.svg   the mark
 ```
 
+## Brand
+
+The identity kit lives in `brand/` — logo SVGs, PNG exports, palette tokens, the
+Manrope webfont, a one-page brand board and a six-page PDF. Start with
+`brand/README.md`, or open `brand/clafina-brand-guidelines.pdf`.
+
 ## Design
 
-The colours are the **ERP's own** design tokens, taken from
+The site currently uses the **ERP's own** design tokens, taken from
 `commerce-web/src/theme/01-base/variables.css` and the "Commerce Black" system in
 `design-handoff/design-system-v2`:
 
@@ -89,8 +95,9 @@ Change a token in `:root` and the whole site follows.
    assumed; confirm the real mailboxes.
 5. **Legal** — `legal.html` is a draft for a lawyer to review. It is `noindex` and says
    so on the page.
-6. **Social preview image** — the Open Graph tags name a title and description but no
-   image; add one (1200×630) when the brand has artwork.
+6. **Social preview image** — the artwork is ready at
+   `brand/clafina-social-preview.png` (1200×630); add it to the Open Graph and
+   Twitter tags.
 
 ## Adding a page
 

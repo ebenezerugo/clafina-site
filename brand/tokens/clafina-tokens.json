@@ -1,0 +1,61 @@
+{
+  "name": "Clafina",
+  "version": "1.0",
+  "year": 2026,
+  "idea": "One clear view.",
+  "colors": {
+    "core": {
+      "evergreen": {"hex": "#0B5C46", "rgb": [11, 92, 70], "role": "Primary. Logo tile, actions, links, active states."},
+      "citron": {"hex": "#DDF36B", "rgb": [221, 243, 107], "role": "Accent. The one record, AI moments, one highlight per view."},
+      "bone": {"hex": "#F7F3EA", "rgb": [247, 243, 234], "role": "Page ground and warm neutral."},
+      "ink": {"hex": "#0D1B16", "rgb": [13, 27, 22], "role": "Text and dark surfaces."},
+      "paper": {"hex": "#FFFDF8", "rgb": [255, 253, 248], "role": "Cards and raised surfaces."}
+    },
+    "supporting": {
+      "evergreen-deep": {"hex": "#074434", "rgb": [7, 68, 52], "role": "Hover and pressed states on Evergreen."},
+      "stone": {"hex": "#5B6B62", "rgb": [91, 107, 98], "role": "Secondary text. 5.09:1 on Bone."},
+      "sage": {"hex": "#DCE7DF", "rgb": [220, 231, 223], "role": "Quiet fills, table rows, tints."},
+      "line": {"hex": "#E3DFD3", "rgb": [227, 223, 211], "role": "Hairlines and dividers."},
+      "clay": {"hex": "#C96A4A", "rgb": [201, 106, 74], "role": "Supporting accent for illustration and charts. Never small text on Bone."}
+    },
+    "status": {
+      "good": {"ink": "#146C43", "fill": "#E3F2E8"},
+      "warn": {"ink": "#9A3412", "fill": "#FDF0E6"},
+      "bad": {"ink": "#B42318", "fill": "#FDECEA"},
+      "info": {"ink": "#1D4ED8", "fill": "#E8EEFD"}
+    }
+  },
+  "contrast": {
+    "ink_on_bone": "17.4:1",
+    "evergreen_on_bone": "7.2:1",
+    "bone_on_evergreen": "7.2:1",
+    "citron_on_evergreen": "6.5:1",
+    "ink_on_citron": "14.4:1",
+    "stone_on_bone": "5.1:1"
+  },
+  "typography": {
+    "family": "Manrope",
+    "source": "https://fonts.google.com/specimen/Manrope",
+    "license": "SIL Open Font License 1.1",
+    "weights": [450, 600, 750, 800],
+    "notes": "Display 800 with -4% tracking; headings 750 with -3%; body 450 with -0.5%; labels 700 uppercase with +12% tracking; tabular numerals for money and quantities."
+  },
+  "logo": {
+    "files": {
+      "primary": "logo/clafina-logo-horizontal.svg",
+      "reverse": "logo/clafina-logo-horizontal-reverse.svg",
+      "mono": "logo/clafina-logo-horizontal-mono.svg",
+      "stacked": "logo/clafina-logo-stacked.svg",
+      "mark": "logo/clafina-mark.svg",
+      "wordmark": "logo/clafina-wordmark.svg",
+      "app_icon": "logo/clafina-app-icon.svg",
+      "favicon": "logo/clafina-favicon.svg"
+    },
+    "clearspace": "Use the height of the C's stroke on every side. Never place type or a rule inside it.",
+    "minimum": {
+      "horizontal_svg": "120 px wide",
+      "mark": "24 px",
+      "favicon": "16 px"
+    }
+  }
+}

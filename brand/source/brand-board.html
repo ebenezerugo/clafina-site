@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Clafina — brand board</title>
+<style>
+  @font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-latin.woff2") format("woff2");
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: block;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #e9e4d8; }
+  body { font-family: "Manrope", ui-sans-serif, sans-serif; color: #0d1b16; }
+  .board {
+    width: 1600px; height: 1200px; margin: 0 auto; background: #f7f3ea;
+    padding: 52px 64px 56px; display: flex; flex-direction: column; gap: 34px;
+    position: relative; overflow: hidden;
+  }
+  .topbar { display: flex; justify-content: space-between; align-items: center; }
+  .kicker { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #5b6b62; }
+  .kicker b { color: #0d1b16; font-weight: 800; }
+  .version { font-size: 12px; font-weight: 600; letter-spacing: .04em; color: #5b6b62; }
+
+  .hero { display: grid; grid-template-columns: 1.34fr 1fr; gap: 26px; height: 610px; }
+  .hero-main {
+    background: #fffdf8; border: 1px solid #e3dfd3; border-radius: 28px;
+    padding: 46px 52px 42px; display: flex; flex-direction: column; justify-content: space-between;
+    position: relative; overflow: hidden;
+  }
+  .hero-main .logo { width: 440px; }
+  .hero-main h1 {
+    margin: 0; font-size: 104px; line-height: .94; letter-spacing: -.055em; font-weight: 800;
+    color: #0d1b16; max-width: 700px;
+  }
+  .hero-main h1 .dot { display: inline-block; width: 22px; height: 22px; background: #0b5c46; transform: rotate(45deg); margin-left: 14px; vertical-align: 12px; }
+  .hero-main p {
+    margin: 0; max-width: 520px; font-size: 18px; line-height: 1.5; font-weight: 500;
+    color: #5b6b62; letter-spacing: -.01em;
+  }
+  .hero-main .rule { width: 100%; height: 1px; background: #e3dfd3; margin: 18px 0; }
+
+  .hero-side {
+    background: #0b5c46; border-radius: 28px; padding: 40px 42px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    color: #f7f3ea; position: relative; overflow: hidden;
+  }
+  .hero-side .logo { width: 360px; }
+  .hero-side .big-mark { width: 210px; opacity: .98; }
+  .hero-side .caption { font-size: 13px; line-height: 1.5; color: #c7d8cd; max-width: 280px; }
+  .hero-side .caption b { color: #ddf36b; font-weight: 700; }
+  .hero-side .diamond {
+    position: absolute; width: 180px; height: 180px; background: #ddf36b;
+    transform: rotate(45deg); right: -90px; bottom: 90px; opacity: .16;
+  }
+
+  .lower { display: grid; grid-template-columns: 1.22fr 1fr 1fr; gap: 26px; flex: 1; }
+  .panel { background: #fffdf8; border: 1px solid #e3dfd3; border-radius: 24px; padding: 28px 28px 26px; }
+  .panel h2 {
+    margin: 0 0 20px; font-size: 12px; font-weight: 800; letter-spacing: .16em;
+    text-transform: uppercase; color: #5b6b62;
+  }
+  .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .swatch { display: flex; flex-direction: column; gap: 10px; }
+  .chip { height: 128px; border-radius: 14px; position: relative; border: 1px solid rgba(13,27,22,.07); }
+  .chip .hex { position: absolute; left: 12px; bottom: 10px; font-size: 11px; font-weight: 700; letter-spacing: .02em; }
+  .swatch .name { font-size: 13px; font-weight: 800; letter-spacing: -.01em; }
+  .swatch .role { font-size: 10px; line-height: 1.35; color: #5b6b62; font-weight: 500; }
+  .ratio { display: flex; height: 7px; border-radius: 99px; overflow: hidden; margin-top: 18px; }
+  .ratio span:nth-child(1){ background:#0b5c46; width:30%; }
+  .ratio span:nth-child(2){ background:#ddf36b; width:10%; }
+  .ratio span:nth-child(3){ background:#f7f3ea; width:60%; border:1px solid #e3dfd3; }
+  .ratio-key { display: flex; gap: 18px; margin-top: 10px; font-size: 10px; color: #5b6b62; font-weight: 600; }
+
+  .type-aa { display: flex; align-items: flex-end; gap: 14px; margin-top: -8px; }
+  .type-aa .aa { font-size: 110px; line-height: .78; font-weight: 800; letter-spacing: -.06em; color: #0d1b16; }
+  .type-aa .spec { font-size: 10px; line-height: 1.6; color: #5b6b62; padding-bottom: 8px; }
+  .type-sample { margin-top: 16px; }
+  .type-sample .row { display: flex; align-items: baseline; justify-content: space-between; border-top: 1px solid #e3dfd3; padding: 8px 0; }
+  .type-sample .row:last-child { border-bottom: 1px solid #e3dfd3; }
+  .type-sample .label { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #5b6b62; }
+  .type-sample .value { font-weight: 750; letter-spacing: -.02em; }
+  .type-sample .v1 { font-size: 22px; }
+  .type-sample .v2 { font-size: 16px; }
+  .type-sample .v3 { font-size: 13px; color: #5b6b62; font-weight: 550; }
+  .type-note { margin: 14px 0 0; font-size: 11px; line-height: 1.5; color: #5b6b62; }
+
+  .marks { display: flex; align-items: flex-end; gap: 18px; padding: 8px 0 18px; }
+  .marks img { display: block; }
+  .mark-rule { border-top: 1px solid #e3dfd3; padding-top: 12px; font-size: 11px; line-height: 1.5; color: #5b6b62; }
+  .mark-rule b { color: #0d1b16; font-weight: 750; }
+  .clearspace { margin-top: 14px; display: flex; align-items: center; gap: 12px; }
+  .clearspace svg { flex: none; }
+  .clearspace span { font-size: 10px; line-height: 1.4; color: #5b6b62; }
+
+  .footer { display: flex; justify-content: space-between; align-items: center; color: #5b6b62; font-size: 11px; font-weight: 600; }
+  .footer .tagline { color: #0b5c46; font-weight: 800; letter-spacing: -.01em; }
+  .footer .tagline em { font-style: normal; color: #0d1b16; }
+</style>
+</head>
+<body>
+<div class="board">
+  <div class="topbar">
+    <div class="kicker"><b>Clafina</b> &nbsp;/&nbsp; Brand identity</div>
+    <div class="version">Version 1.0 &nbsp;·&nbsp; 2026</div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-main">
+      <img class="logo" src="../logo/clafina-logo-horizontal.svg" alt="Clafina">
+      <div>
+        <h1>One clear<br>view<span class="dot"></span></h1>
+        <div class="rule"></div>
+        <p>Every sale, every item, every person and every number — on the same page, at the same time.</p>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <img class="logo" src="../logo/clafina-logo-horizontal-reverse.svg" alt="Clafina, reverse">
+      <div class="big-mark">
+        <svg viewBox="0 0 128 128" width="210" height="210" role="img" aria-label="Clafina symbol">
+          <path d="M 91.85 44.5 A 34 34 0 1 0 91.85 83.5" fill="none" stroke="#F7F3EA" stroke-width="14.8"/>
+          <path d="M 64 55 L 73 64 L 64 73 L 55 64 Z" fill="#DDF36B"/>
+        </svg>
+      </div>
+      <div class="caption">The open <b>C</b> is the business, held in one line. The citron diamond is the one record at its centre.</div>
+      <div class="diamond"></div>
+    </div>
+  </div>
+
+  <div class="lower">
+    <div class="panel">
+      <h2>Colour</h2>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="chip" style="background:#0B5C46"><span class="hex" style="color:#F7F3EA">#0B5C46</span></div>
+          <div class="name">Evergreen</div><div class="role">Primary. Actions and identity.</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#DDF36B"><span class="hex" style="color:#0D1B16">#DDF36B</span></div>
+          <div class="name">Citron</div><div class="role">Accent. One highlight per view.</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#F7F3EA"><span class="hex" style="color:#0D1B16">#F7F3EA</span></div>
+          <div class="name">Bone</div><div class="role">The page ground. Warm, not grey.</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#0D1B16"><span class="hex" style="color:#F7F3EA">#0D1B16</span></div>
+          <div class="name">Ink</div><div class="role">Text and dark surfaces.</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#C96A4A"><span class="hex" style="color:#FFFDF8">#C96A4A</span></div>
+          <div class="name">Clay</div><div class="role">Supporting. Illustration only.</div>
+        </div>
+      </div>
+      <div class="ratio"><span></span><span></span><span></span></div>
+      <div class="ratio-key"><span>60% Bone / Paper</span><span>30% Evergreen / Ink</span><span>10% Citron / Clay</span></div>
+    </div>
+
+    <div class="panel">
+      <h2>Typography</h2>
+      <div class="type-aa">
+        <div class="aa">Aa</div>
+        <div class="spec">Manrope<br>Variable 200–800<br>Open Font License</div>
+      </div>
+      <div class="type-sample">
+        <div class="row"><span class="label">Display</span><span class="value v1">One clear view.</span></div>
+        <div class="row"><span class="label">Heading</span><span class="value v2">Know what is next.</span></div>
+        <div class="row"><span class="label">Body</span><span class="value v3">₦1,248,500.00 &nbsp; 24 items</span></div>
+      </div>
+      <p class="type-note">800 for the wordmark and display; 750 for headings; 450 for body. Money and quantities always use tabular numerals.</p>
+    </div>
+
+    <div class="panel">
+      <h2>The mark</h2>
+      <div class="marks">
+        <img src="../logo/clafina-mark.svg" width="96" height="96" alt="">
+        <img src="../logo/clafina-mark.svg" width="54" height="54" alt="">
+        <img src="../logo/clafina-mark.svg" width="32" height="32" alt="">
+        <img src="../logo/clafina-mark.svg" width="20" height="20" alt="">
+      </div>
+      <div class="mark-rule"><b>70° opening.</b> The C never closes: there is always another sale, hire, channel or idea to take in.</div>
+      <div class="clearspace">
+        <svg width="84" height="48" viewBox="0 0 84 48"><rect x="14" y="4" width="56" height="40" fill="none" stroke="#C9C3B4" stroke-dasharray="2 3"/><rect x="28" y="12" width="28" height="24" fill="#0B5C46" rx="6"/><path d="M44.5 20.5a5 5 0 1 0 0 7" fill="none" stroke="#F7F3EA" stroke-width="2.6"/><path d="M44 23l1.5 1.5-1.5 1.5-1.5-1.5z" fill="#DDF36B"/></svg>
+        <span>Clearspace is one C-stroke on all sides. Never add a shadow, outline or second colour.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>clafina.com &nbsp;·&nbsp; Brand guidelines &nbsp;·&nbsp; v1.0</span>
+    <span class="tagline">One clear view. <em>One record.</em></span>
+  </div>
+</div>
+</body>
+</html>

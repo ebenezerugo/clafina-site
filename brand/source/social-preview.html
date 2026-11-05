@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Clafina — social preview</title>
+<style>
+  @font-face { font-family: "Manrope"; src: url("../fonts/Manrope-latin.woff2") format("woff2"); font-weight: 200 800; font-display: block; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0b5c46; }
+  body { font-family: "Manrope", sans-serif; }
+  .og { width: 1200px; height: 630px; background: #0b5c46; color: #f7f3ea; position: relative; overflow: hidden; padding: 48px 56px; display: flex; flex-direction: column; justify-content: space-between; }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 2; }
+  .top img { width: 316px; }
+  .top .url { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #a9c1b2; }
+  .copy { position: relative; z-index: 2; }
+  .copy h1 { margin: 0; font-size: 102px; line-height: .88; letter-spacing: -.06em; font-weight: 800; color: #f7f3ea; }
+  .copy h1 .diamond { display: inline-block; width: 22px; height: 22px; background: #ddf36b; transform: rotate(45deg); margin-left: 16px; vertical-align: 14px; }
+  .copy p { margin: 18px 0 0; font-size: 16px; line-height: 1.45; color: #c7d8cd; font-weight: 500; max-width: 570px; }
+  .huge-c { position: absolute; right: -150px; top: 100px; width: 600px; opacity: .12; }
+  .huge-d { position: absolute; right: 105px; bottom: 118px; width: 86px; height: 86px; background: #ddf36b; transform: rotate(45deg); opacity: .18; }
+  .footer { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: flex-end; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #a9c1b2; }
+</style>
+</head>
+<body>
+  <div class="og">
+    <div class="top">
+      <img src="../logo/clafina-logo-horizontal-reverse.svg" alt="Clafina">
+      <div class="url">clafina.com</div>
+    </div>
+    <svg class="huge-c" viewBox="0 0 128 128" aria-hidden="true"><path d="M 91.85 44.5 A 34 34 0 1 0 91.85 83.5" fill="none" stroke="#F7F3EA" stroke-width="14.8"/></svg>
+    <div class="huge-d"></div>
+    <div class="copy">
+      <h1>One clear<br>view<span class="diamond"></span></h1>
+      <p>Books, stock, people, projects, shop, till and AI — one record, one place.</p>
+    </div>
+    <div class="footer"><span>The business platform</span><span>One clear view. One record.</span></div>
+  </div>
+</body>
+</html>

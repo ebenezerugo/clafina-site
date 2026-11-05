@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" role="img" aria-label="Clafina colour palette">
+<rect width="1200" height="460" fill="#F7F3EA"/><g><rect x="40" y="40" width="320" height="380" rx="16" fill="#0B5C46"/>
+<text x="60" y="378" font-family="Manrope, sans-serif" font-size="16" font-weight="700" fill="#F7F3EA">Evergreen</text>
+<text x="60" y="402" font-family="Manrope, sans-serif" font-size="13" fill="#F7F3EA" opacity=".78">#0B5C46</text></g><g><rect x="380" y="40" width="220" height="180" rx="16" fill="#DDF36B"/>
+<text x="400" y="178" font-family="Manrope, sans-serif" font-size="16" font-weight="700" fill="#0D1B16">Citron</text>
+<text x="400" y="202" font-family="Manrope, sans-serif" font-size="13" fill="#0D1B16" opacity=".78">#DDF36B</text></g><g><rect x="620" y="40" width="220" height="180" rx="16" fill="#C96A4A"/>
+<text x="640" y="178" font-family="Manrope, sans-serif" font-size="16" font-weight="700" fill="#0D1B16">Clay</text>
+<text x="640" y="202" font-family="Manrope, sans-serif" font-size="13" fill="#0D1B16" opacity=".78">#C96A4A</text></g><g><rect x="860" y="40" width="300" height="180" rx="16" fill="#F7F3EA"/>
+<text x="880" y="178" font-family="Manrope, sans-serif" font-size="16" font-weight="700" fill="#0D1B16">Bone</text>
+<text x="880" y="202" font-family="Manrope, sans-serif" font-size="13" fill="#0D1B16" opacity=".78">#F7F3EA</text></g><g><rect x="380" y="240" width="220" height="180" rx="16" fill="#DCE7DF"/>
+<text x="400" y="378" font-family="Manrope, sans-serif" font-size="16" font-weight="700" fill="#0D1B16">Sage</text>
+<text x="400" y="402" font-family="Manrope, sans-serif" font-size="13" fill="#0D1B16" opacity=".78">#DCE7DF</text></g><g><rect x="620" y="240" width="220" height="180" rx="16" fill="#0D1B16"/>
+<text x="640" y="378" font-family="Manrope, sans-serif" font-size="16" font-weight="700" fill="#F7F3EA">Ink</text>
+<text x="640" y="402" font-family="Manrope, sans-serif" font-size="13" fill="#F7F3EA" opacity=".78">#0D1B16</text></g><g><rect x="860" y="240" width="300" height="180" rx="16" fill="#FFFDF8"/>
+<text x="880" y="378" font-family="Manrope, sans-serif" font-size="16" font-weight="700" fill="#0D1B16">Paper</text>
+<text x="880" y="402" font-family="Manrope, sans-serif" font-size="13" fill="#0D1B16" opacity=".78">#FFFDF8</text></g>
+</svg>

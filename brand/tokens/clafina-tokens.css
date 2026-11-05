@@ -1,0 +1,158 @@
+/* ==========================================================================
+   Clafina brand tokens
+   Version 1.0 · 2026
+   The core palette is Evergreen, Citron, Bone and Ink. Everything else is
+   mixed from those four or reserved for status.
+   ========================================================================== */
+
+:root {
+  /* Core palette -------------------------------------------------------- */
+  --clafina-evergreen: #0b5c46;
+  --clafina-evergreen-deep: #074434;
+  --clafina-citron: #ddf36b;
+  --clafina-bone: #f7f3ea;
+  --clafina-paper: #fffdf8;
+  --clafina-ink: #0d1b16;
+
+  /* Supporting palette -------------------------------------------------- */
+  --clafina-stone: #5b6b62;
+  --clafina-sage: #dce7df;
+  --clafina-line: #e3dfd3;
+  --clafina-clay: #c96a4a;
+  --clafina-white: #ffffff;
+
+  /* Semantic aliases, for product and marketing ------------------------- */
+  --clafina-bg: var(--clafina-bone);
+  --clafina-surface: var(--clafina-paper);
+  --clafina-text: var(--clafina-ink);
+  --clafina-text-muted: var(--clafina-stone);
+  --clafina-border: var(--clafina-line);
+  --clafina-action: var(--clafina-evergreen);
+  --clafina-action-hover: var(--clafina-evergreen-deep);
+  --clafina-on-action: var(--clafina-bone);
+  --clafina-accent: var(--clafina-citron);
+  --clafina-on-accent: var(--clafina-ink);
+  --clafina-focus: var(--clafina-evergreen);
+
+  /* Status: colour is never the only signal ----------------------------- */
+  --clafina-good-ink: #146c43;
+  --clafina-good-fill: #e3f2e8;
+  --clafina-warn-ink: #9a3412;
+  --clafina-warn-fill: #fdf0e6;
+  --clafina-bad-ink: #b42318;
+  --clafina-bad-fill: #fdecea;
+  --clafina-info-ink: #1d4ed8;
+  --clafina-info-fill: #e8eefd;
+
+  /* Type ---------------------------------------------------------------- */
+  --clafina-font: "Manrope", ui-sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --clafina-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+
+  /* Shape and spacing --------------------------------------------------- */
+  --clafina-radius-sm: 8px;
+  --clafina-radius: 12px;
+  --clafina-radius-lg: 20px;
+  --clafina-radius-xl: 28px;
+
+  /* Motion -------------------------------------------------------------- */
+  --clafina-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --clafina-fast: 140ms;
+  --clafina-base: 240ms;
+}
+
+/* Webfont: Manrope, Latin subset, variable 200-800. SIL OFL 1.1. */
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base ---------------------------------------------------------------- */
+.clafina-type {
+  font-family: var(--clafina-font);
+  color: var(--clafina-text);
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.clafina-display {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.clafina-heading {
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.clafina-body {
+  font-weight: 450;
+  letter-spacing: -0.005em;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.clafina-label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.clafina-numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+.clafina-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0 1.25rem;
+  border: 1px solid var(--clafina-action);
+  border-radius: 999px;
+  background: var(--clafina-action);
+  color: var(--clafina-on-action);
+  font: 700 0.9375rem/1 var(--clafina-font);
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: background var(--clafina-fast) var(--clafina-ease),
+    border-color var(--clafina-fast) var(--clafina-ease),
+    transform var(--clafina-fast) var(--clafina-ease);
+}
+
+.clafina-action:hover {
+  background: var(--clafina-action-hover);
+  border-color: var(--clafina-action-hover);
+}
+
+.clafina-action:active {
+  transform: translateY(1px);
+}
+
+.clafina-action:focus-visible {
+  outline: 2px solid var(--clafina-focus);
+  outline-offset: 3px;
+}
+
+.clafina-action--accent {
+  background: var(--clafina-accent);
+  border-color: var(--clafina-accent);
+  color: var(--clafina-on-accent);
+}
+
+.clafina-action--accent:hover {
+  background: #d3ec55;
+  border-color: #d3ec55;
+}
