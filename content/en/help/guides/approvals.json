@@ -1,0 +1,95 @@
+{
+  "kind": "help-module",
+  "module": "approvals",
+  "sources": [
+    "commerce-api/documentation/APPROVALS.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Every request for a yes in one place: the ones you asked for, the ones asked of you, and what you decided. Open a request to see whom it asked, what each said, and where its document stands now.",
+  "start": [
+    "Open My requests to see what you are waiting on, and who has it.",
+    "Open Asked of me to see what waits for your decision. You decide it in your Inbox.",
+    "Ask whoever manages approvals to set up the policies, in People and access › Approvals, if nothing ever waits."
+  ],
+  "articles": [
+    {
+      "slug": "see-where-a-request-stands",
+      "title": "Find out where a request stands",
+      "summary": "See who a request is waiting on and for how long, and read every decision, reminder and hand-over.",
+      "page": "/approvals",
+      "steps": [
+        {
+          "lead": "Open My requests.",
+          "rest": "Each row says who it is waiting on and for how long."
+        },
+        {
+          "lead": "Press its number",
+          "rest": "to see a short card, then View more for the whole history."
+        },
+        {
+          "lead": "Read the timeline.",
+          "rest": "It lists every decision with its note, every reminder and every hand-over."
+        }
+      ],
+      "tips": [
+        "Overdue means a step is past the deadline its policy gave it. Escalated means it was handed up to someone else when the deadline passed.",
+        "The numbers beside the statuses follow the tab and your filters. Waiting holds the overdue and escalated ones too."
+      ],
+      "related": [
+        "approve-or-decline",
+        "withdraw-a-request"
+      ]
+    },
+    {
+      "slug": "approve-or-decline",
+      "title": "Approve or decline a request",
+      "summary": "Requests asked of you are decided in your Inbox. Approve moves the document on; Decline needs a reason the person who asked will read.",
+      "page": "/approvals",
+      "steps": [
+        {
+          "lead": "Open Asked of me,",
+          "rest": "or press Decide in your Inbox on a request waiting on you."
+        },
+        {
+          "lead": "Read why it needs you",
+          "rest": "and who else must approve."
+        },
+        {
+          "lead": "Press Approve or Decline.",
+          "rest": "Add a note if you decline: the person who asked reads it."
+        }
+      ],
+      "after": "The last approval a request needs, or any decline, settles it, and its document moves on at once. What you decided is listed under I decided, with your note.",
+      "tips": [
+        "A second step only reaches its approvers once the step before it is approved.",
+        "On some money documents, the person who submitted it cannot approve it, unless your organisation allows it."
+      ],
+      "related": [
+        "see-where-a-request-stands"
+      ]
+    },
+    {
+      "slug": "withdraw-a-request",
+      "title": "Take back a request you made",
+      "summary": "Withdraw a request that is still waiting. Its document goes back to where it was before it was submitted.",
+      "page": "/approvals",
+      "steps": [
+        {
+          "lead": "Open the menu on its row, or the request itself.",
+          "rest": "Only a waiting request can be withdrawn."
+        },
+        {
+          "lead": "Press Withdraw and confirm.",
+          "rest": "The document goes back to where it was before it was submitted."
+        }
+      ],
+      "tips": [
+        "To find an old approval, choose Asked of me, I decided or All requests, then press a status, or set a kind of document, a person or dates. All requests needs permission."
+      ],
+      "related": [
+        "see-where-a-request-stands"
+      ]
+    }
+  ]
+}

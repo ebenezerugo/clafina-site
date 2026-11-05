@@ -1,0 +1,279 @@
+{
+  "kind": "help-module",
+  "module": "studio",
+  "sources": [
+    "commerce-api/documentation/STUDIO.md",
+    "commerce-api/documentation/STOREFRONT_STUDIO.md",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "How your business looks to the people you deal with: your logo, colours and fonts, and how invoices, emails, labels and online shops use them. A change here is a draft until it is published, so nothing customers see moves by accident.",
+  "start": [
+    "Set your brand in Studio › Brand: the logo, the colours and the details at the foot of every document.",
+    "Publish it, so emails and documents use it.",
+    "Open Documents and check how your invoice looks with the new brand.",
+    "Look at Message templates, and change the words of the emails you send most."
+  ],
+  "articles": [
+    {
+      "slug": "set-your-brand",
+      "title": "Put your logo and colours on everything you send",
+      "summary": "Set the logo, colours, fonts and the details at the foot once. Every email and document follows them.",
+      "page": "/studio/brand",
+      "steps": [
+        {
+          "lead": "Upload your logos",
+          "rest": "under Logos: the logo, one for dark backgrounds, and a square mark."
+        },
+        {
+          "lead": "Choose your colours.",
+          "rest": "Can people read it? checks each pair as you type, to the AA standard. A pair that fails is flagged, not refused."
+        },
+        {
+          "lead": "Choose the fonts",
+          "rest": "for headings and the body, or upload a TTF or OTF."
+        },
+        {
+          "lead": "Fill in the details at the foot:",
+          "rest": "registered name and number, tax number, phone, email, address and the small print, and the name mail is sent as."
+        },
+        {
+          "lead": "Press Publish.",
+          "rest": "Save draft keeps it without using it. Where an approval policy asks, the button is Send for approval."
+        }
+      ],
+      "tips": [
+        "Live preview shows an email and a letterhead in the brand as you change it.",
+        "A place can have its own look: choose it at the top. What it leaves empty follows the organisation, and Use the organisation's look here gives it up."
+      ],
+      "related": [
+        "publish-a-change",
+        "design-your-invoice"
+      ]
+    },
+    {
+      "slug": "publish-a-change",
+      "title": "Publish a change so documents use it",
+      "summary": "A change in Studio is live only after it is published. Publishing shows what waits, what changes, and who will see it.",
+      "page": "/studio/publishing",
+      "steps": [
+        {
+          "lead": "Open Publishing.",
+          "rest": "The Waiting tab lists drafts and what was sent for approval."
+        },
+        {
+          "lead": "Press Review",
+          "rest": "on a draft. It says what changes and who sees it."
+        },
+        {
+          "lead": "Press Send me a test",
+          "rest": "to get it by email, as it will be sent."
+        },
+        {
+          "lead": "Press Publish,",
+          "rest": "or Send for approval where a policy asks. Everything sent from then on uses it."
+        }
+      ],
+      "tips": [
+        "Give up drops a draft. Nothing sent changes, and it is kept in the history.",
+        "Every editor has a Versions panel: Go back to this makes an earlier version the draft, to publish again.",
+        "A document keeps the design it was made with. Issue it again, or make a new one, to use the published design."
+      ],
+      "related": [
+        "set-your-brand"
+      ]
+    },
+    {
+      "slug": "design-your-invoice",
+      "title": "Change how your invoice looks",
+      "summary": "Choose the kind of document, then its colour, what shows on it and your payment details, with the PDF beside you.",
+      "page": "/studio/documents",
+      "steps": [
+        {
+          "lead": "Choose the kind of document",
+          "rest": "from the tabs, such as invoices, and the place if a location has its own design."
+        },
+        {
+          "lead": "Pick a layout,",
+          "rest": "or New layout for your own, from scratch or a copy."
+        },
+        {
+          "lead": "Set its colour and what shows.",
+          "rest": "It follows the brand kit unless you give it its own colour."
+        },
+        {
+          "lead": "Write the payment details",
+          "rest": "customers read at the foot of the invoice."
+        },
+        {
+          "lead": "Press Publish",
+          "rest": "when the preview looks right, or Save draft to finish later."
+        }
+      ],
+      "tips": [
+        "More options holds the page size, margins, stamps such as PAID on paid invoices, the sections and their columns, and the words in each language.",
+        "Print the document's number as a barcode, to scan at a till or a door, is under More options too.",
+        "Terms and conditions are set in Document settings, and the small print in Brand."
+      ],
+      "related": [
+        "publish-a-change"
+      ]
+    },
+    {
+      "slug": "choose-email-layouts",
+      "title": "Choose the frame your emails are sent in",
+      "summary": "An email layout is the header, buttons and footer around every email. Choose which layout each kind of email uses.",
+      "page": "/studio/emails",
+      "steps": [
+        {
+          "lead": "Look at Which layout each email uses",
+          "rest": "on Emails, and choose one for each kind."
+        },
+        {
+          "lead": "Press Save these choices.",
+          "rest": "Each kind of email is then sent in the layout you chose."
+        },
+        {
+          "lead": "To make your own, press New layout,",
+          "rest": "or Copy on one that ships. Set the email's width and colours, the header, the buttons and the footer."
+        },
+        {
+          "lead": "Check the preview",
+          "rest": "light or dark, wide or on a phone, then press Make the layout."
+        }
+      ],
+      "tips": [
+        "A layout that ships cannot be changed. Copy it to change it.",
+        "Campaigns are offered only layouts made for marketing."
+      ],
+      "related": [
+        "change-a-message-template"
+      ]
+    },
+    {
+      "slug": "change-a-message-template",
+      "title": "Change the words of an email you send",
+      "summary": "Message templates hold the ready-made messages you send again and again. Make your own in place of the ones that ship.",
+      "page": "/studio/emails/templates",
+      "steps": [
+        {
+          "lead": "Find the template",
+          "rest": "by category or channel, or press New template."
+        },
+        {
+          "lead": "Set its name, category, channel and language,",
+          "rest": "and for an email, its layout and subject line."
+        },
+        {
+          "lead": "Write the message.",
+          "rest": "Open Variables and click one to put it where the cursor is, such as the customer's name."
+        },
+        {
+          "lead": "Tick In use",
+          "rest": "and press Save. A template that ships is saved as your own, in place of it."
+        }
+      ],
+      "tips": [
+        "An email can be written as text or in blocks, with buttons, columns and a table of lines.",
+        "Reusable blocks put the same words or image into many templates at once."
+      ],
+      "related": [
+        "make-a-reusable-block",
+        "choose-email-layouts"
+      ]
+    },
+    {
+      "slug": "make-a-reusable-block",
+      "title": "Reuse the same words in many documents",
+      "summary": "A reusable block is text or an image you write once and put into emails and documents. Change it, and every place follows.",
+      "page": "/studio/blocks",
+      "steps": [
+        {
+          "lead": "Press New block",
+          "rest": "on Reusable blocks."
+        },
+        {
+          "lead": "Give it a name,",
+          "rest": "and choose whether it is for the organisation or one location."
+        },
+        {
+          "lead": "Choose text or an image,",
+          "rest": "then write the text or upload the image."
+        },
+        {
+          "lead": "Press Make the block.",
+          "rest": "Templates list it to put in, and each block says where it is put in."
+        }
+      ],
+      "related": [
+        "change-a-message-template"
+      ]
+    },
+    {
+      "slug": "design-labels",
+      "title": "Design and print product and shelf labels",
+      "summary": "Make a label of the size your printer takes, choose what it shows and its barcode, then print it for your products.",
+      "page": "/studio/labels",
+      "steps": [
+        {
+          "lead": "Press New label",
+          "rest": "and choose a product label, a shelf label or a shipping label."
+        },
+        {
+          "lead": "Choose the label stock,",
+          "rest": "or your own size, on a roll or on sheets of labels."
+        },
+        {
+          "lead": "Add the lines it shows, top to bottom,",
+          "rest": "with their size and weight, and choose the barcode."
+        },
+        {
+          "lead": "Press Make the design.",
+          "rest": "The preview shows it as it prints."
+        },
+        {
+          "lead": "Print them from your products list:",
+          "rest": "tick the products, press Print labels…, choose the design and how many copies. The PDF downloads."
+        }
+      ],
+      "tips": [
+        "On sheets, labels already used on the first sheet can be skipped.",
+        "Invoices and receipts can also be printed on a till roll."
+      ]
+    },
+    {
+      "slug": "publish-your-online-shop",
+      "title": "Put changes to your online shop live",
+      "summary": "Change the shop in the designer, submit it for publishing, then release it. The live shop only changes when you release.",
+      "page": "/studio/storefronts",
+      "steps": [
+        {
+          "lead": "Press Open designer",
+          "rest": "on the storefront and make your changes. They are saved as drafts."
+        },
+        {
+          "lead": "Press Validate",
+          "rest": "to see anything that would stop a release."
+        },
+        {
+          "lead": "Press Submit for publishing.",
+          "rest": "Where an approval policy asks, it waits for an approver."
+        },
+        {
+          "lead": "Open Publishing",
+          "rest": "on the storefront and read What changed."
+        },
+        {
+          "lead": "Press Release now.",
+          "rest": "Everything ready goes to the live shop at once. Releasing needs the publisher role."
+        }
+      ],
+      "tips": [
+        "Roll back to this puts an earlier release live again, with the reason kept.",
+        "Errors stop a release. Fix them in the designer first."
+      ],
+      "related": [
+        "set-your-brand"
+      ]
+    }
+  ]
+}

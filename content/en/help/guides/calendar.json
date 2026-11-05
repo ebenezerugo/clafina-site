@@ -1,0 +1,120 @@
+{
+  "kind": "help-module",
+  "module": "calendar",
+  "sources": [
+    "commerce-api/documentation/CALENDAR.md",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Your meetings, bookings and appointments in one calendar, and booking links that let a customer or supplier choose a free time without an account.",
+  "start": [
+    "Set your hours in My hours, so booking links only offer times when you work.",
+    "Add an appointment type for what people can book, such as a 30-minute consultation.",
+    "Make a booking link for it and send it to a customer."
+  ],
+  "articles": [
+    {
+      "slug": "set-up-a-meeting",
+      "title": "Set up a meeting and invite people",
+      "summary": "Choose the day and time, add colleagues and guests, and everyone is sent the invitation with a room to join.",
+      "page": "/calendar",
+      "steps": [
+        {
+          "lead": "Press New meeting",
+          "rest": "on your calendar."
+        },
+        {
+          "lead": "Say what it is, the day, and when it starts and ends.",
+          "rest": "Tick Online, in our own meeting room for a meeting on screen, or say where it is."
+        },
+        {
+          "lead": "Choose if it repeats,",
+          "rest": "such as every week, and how many times."
+        },
+        {
+          "lead": "Add colleagues and guests.",
+          "rest": "Guests are customers, suppliers or anyone, by email, separated by commas."
+        },
+        {
+          "lead": "Press Arrange and invite.",
+          "rest": "Each person is sent the invitation, with the link to join when it is online."
+        }
+      ],
+      "after": "Open the meeting to Move it or Cancel it, and everyone is told. Invited colleagues answer with Accept, Maybe or Decline.",
+      "tips": [
+        "Switch between day, week, month, year and agenda, and between Mine and Everyone's.",
+        "For a repeating meeting, cancel this meeting alone, or this and the ones after it."
+      ],
+      "related": [
+        "send-a-booking-link"
+      ]
+    },
+    {
+      "slug": "set-your-hours",
+      "title": "Set the hours people can book you",
+      "summary": "Booking links only offer times inside your hours and clear of your calendar. Block days nobody can book.",
+      "page": "/calendar/availability",
+      "steps": [
+        {
+          "lead": "Open My hours",
+          "rest": "and choose your time zone."
+        },
+        {
+          "lead": "Set your hours for each day of the week.",
+          "rest": "A day with no hours is not available."
+        },
+        {
+          "lead": "Press Save my hours.",
+          "rest": "Booking links follow them at once."
+        },
+        {
+          "lead": "Block days you are away",
+          "rest": "under Time nobody can book: choose From and To, then press Block these days."
+        }
+      ],
+      "tips": [
+        "What a link offers on a day shows the free times for an appointment type, and what took the other times away.",
+        "Approved leave is busy time too.",
+        "Block these days for everyone closes the calendar for the whole organisation, for a stocktake or a holiday. It needs an owner or an administrator."
+      ],
+      "related": [
+        "send-a-booking-link"
+      ]
+    },
+    {
+      "slug": "send-a-booking-link",
+      "title": "Let a customer book a time with you",
+      "summary": "Say what can be booked, make a link for it, and send it. They choose a free time and it is on your calendar.",
+      "page": "/calendar/links",
+      "before": [
+        "Add what can be booked first: on Appointment types, press New appointment type, give it a name, how long it takes, its buffers and who can be booked, then Save."
+      ],
+      "steps": [
+        {
+          "lead": "Press New link",
+          "rest": "on Booking links."
+        },
+        {
+          "lead": "Give it a title",
+          "rest": "and choose who it is for: customers, suppliers or anyone."
+        },
+        {
+          "lead": "Tick what they can book,",
+          "rest": "and set the day it stops working on if it should end."
+        },
+        {
+          "lead": "Press Save,",
+          "rest": "then Copy link and send it."
+        }
+      ],
+      "after": "The person opening the link chooses a free time and gives their details. The booking is on the calendar of whoever it went to, and both are sent the invitation. They can change or cancel it from their email.",
+      "tips": [
+        "A booking goes to whoever is free and has had the fewest bookings lately.",
+        "Turn off stops a link for now. Retire stops it for good, and Bring back opens it again at the same address."
+      ],
+      "related": [
+        "set-your-hours",
+        "set-up-a-meeting"
+      ]
+    }
+  ]
+}

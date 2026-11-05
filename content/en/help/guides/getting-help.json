@@ -1,0 +1,79 @@
+{
+  "kind": "help-module",
+  "module": "getting-help",
+  "sources": [
+    "commerce-api/documentation/BILLING_HELP_PERSONAL.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Ask Clafina for help, see what has been answered, and choose what is sent with your question. Support can look inside your account only when an owner agrees, for the time the owner chooses.",
+  "start": [
+    "Start typing your question on Ask for help. The guide suggests answers as you type, and one may already answer it.",
+    "Send your question if it does not. The answer comes back here, and by email."
+  ],
+  "articles": [
+    {
+      "slug": "ask-for-help",
+      "title": "Ask Clafina for help",
+      "summary": "Say what happened, choose what is sent with it, and the answer comes back in Help and by email.",
+      "page": "/help",
+      "steps": [
+        {
+          "lead": "Say what it is about",
+          "rest": "and what happened. The guide suggests answers as you type."
+        },
+        {
+          "lead": "Tick It stops us working",
+          "rest": "only when something is blocked. Those are looked at first."
+        },
+        {
+          "lead": "Untick what you would rather not send.",
+          "rest": "Your email always goes: Clafina answers to it."
+        },
+        {
+          "lead": "Press Send.",
+          "rest": "The answer comes here, and by email."
+        }
+      ],
+      "after": "Your case is listed under your cases, newest first. Waiting for you means Clafina has replied and waits for your answer: open the case, write back and press Send.",
+      "tips": [
+        "Waiting to be sent means Clafina could not be reached. What you wrote is kept and sent as soon as it can be.",
+        "Once a case is resolved, you are asked how the help was."
+      ],
+      "related": [
+        "let-support-look-at-your-account"
+      ]
+    },
+    {
+      "slug": "let-support-look-at-your-account",
+      "title": "Let Clafina support look inside your account",
+      "summary": "Support asks with a reason. An owner chooses how long, and every page they looked at is listed after.",
+      "page": "/help/access",
+      "before": [
+        "Only an owner can answer a request for access."
+      ],
+      "steps": [
+        {
+          "lead": "Open Support access",
+          "rest": "and press Answer… on the request. It says who asks and why."
+        },
+        {
+          "lead": "Choose how long",
+          "rest": "they may look."
+        },
+        {
+          "lead": "Press Allow access,",
+          "rest": "or Decline the request."
+        },
+        {
+          "lead": "Press End access now",
+          "rest": "to stop it before its time is up."
+        }
+      ],
+      "after": "What was looked at lists every page support opened, and every change they made, counted apart.",
+      "related": [
+        "ask-for-help"
+      ]
+    }
+  ]
+}

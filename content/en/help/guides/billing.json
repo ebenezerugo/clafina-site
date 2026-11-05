@@ -1,0 +1,103 @@
+{
+  "kind": "help-module",
+  "module": "billing",
+  "sources": [
+    "commerce-api/documentation/BILLING_HELP_PERSONAL.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Your plan with Clafina: what this month costs so far and is likely to cost by its end, what you owe, what you have used against what is included, and your invoices.",
+  "start": [
+    "Read the cards at the top: this month so far, the projection and what you owe.",
+    "Read the meters, to see how much of what your plan includes you have used.",
+    "Open your latest invoice and check who it is billed to."
+  ],
+  "articles": [
+    {
+      "slug": "understand-this-month",
+      "title": "Understand what this month will cost",
+      "summary": "See what the month would cost if it ended today, where it is heading, and what you have used of your plan.",
+      "page": "/billing",
+      "steps": [
+        {
+          "lead": "Read the cards at the top.",
+          "rest": "This month so far, the projection and what you owe."
+        },
+        {
+          "lead": "Read the meters.",
+          "rest": "Each says in words how much is used of what is included."
+        },
+        {
+          "lead": "Read If the month ended today",
+          "rest": "for what the month would cost now, item by item. It is an estimate, not an invoice."
+        }
+      ],
+      "tips": [
+        "Projected is the month at its end if usage keeps its pace so far. Things like people who can sign in stay where they are.",
+        "Over means more used than the plan includes. Only the part over is charged."
+      ],
+      "related": [
+        "change-your-plan",
+        "pay-by-transfer"
+      ]
+    },
+    {
+      "slug": "change-your-plan",
+      "title": "Change your plan or the features you pay for",
+      "summary": "An owner changes the plan or switches features on and off. You see what the change means before it is made.",
+      "page": "/billing",
+      "before": [
+        "Only an owner of the organisation can change the plan or the features."
+      ],
+      "steps": [
+        {
+          "lead": "Press Change plan",
+          "rest": "at the top of Billing."
+        },
+        {
+          "lead": "Choose the plan",
+          "rest": "and say why, if you want to. The drawer says what the change means for you."
+        },
+        {
+          "lead": "Press Change plan",
+          "rest": "to confirm, or Keep my plan."
+        },
+        {
+          "lead": "For a feature, tick or untick it under Features,",
+          "rest": "with its price a month beside it, then press Save features."
+        }
+      ],
+      "related": [
+        "understand-this-month"
+      ]
+    },
+    {
+      "slug": "pay-by-transfer",
+      "title": "Tell Clafina you paid by bank transfer",
+      "summary": "Note the amount, the day and the reference on the invoice, so Clafina can match your transfer to it.",
+      "page": "/billing",
+      "steps": [
+        {
+          "lead": "Open the invoice",
+          "rest": "from the list."
+        },
+        {
+          "lead": "Press I have paid by transfer",
+          "rest": "and give the amount, the day and the bank reference."
+        },
+        {
+          "lead": "Press Send the note.",
+          "rest": "Clafina is told in a Help case and matches your transfer to the invoice."
+        }
+      ],
+      "after": "The invoice lists your note under Paying this invoice. Nothing is marked paid until Clafina sees the money.",
+      "tips": [
+        "Something on an invoice look wrong? Press Ask about this invoice and say which line and why. Clafina answers in Help and credits what was wrong.",
+        "Each line of an invoice says why it was charged, and Download PDF keeps a copy."
+      ],
+      "related": [
+        "understand-this-month"
+      ]
+    }
+  ]
+}
