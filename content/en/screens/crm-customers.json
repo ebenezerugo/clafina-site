@@ -1,0 +1,44 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the customers home in the web app, with what customers owe, the best customers this quarter and what needs a look.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Customers", "items": [{ "label": "Customers", "active": true }, { "label": "Deals" }, { "label": "Support tickets", "badge": "5" }, { "label": "Loyalty" }, { "label": "Campaigns" }] }
+  ],
+  "title": "Customers",
+  "subtitle": "Everyone you sell to: what they owe, when they last bought, and who needs a call.",
+  "actions": [{ "label": "Import" }, { "label": "New customer", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Customers", "value": "1,284", "change": { "tone": "good", "text": "38 new this month", "dir": "up" }, "note": "1,102 people and 182 organisations" },
+      { "icon": "receipt", "label": "Owe you", "value": { "money": 6730400 }, "note": "On 25 invoices from 41 customers" },
+      { "icon": "alert", "label": "Overdue", "value": { "money": 1840000 }, "change": { "tone": "bad", "text": "9 customers" } },
+      { "icon": "clock", "label": "Not bought in 90 days", "value": "76", "note": "They spent ₦14.2m with you last year" }
+    ] },
+    { "type": "row", "widths": "2fr 1fr", "blocks": [
+      { "type": "table", "title": "Your best customers this quarter", "columns": [{ "label": "Customer" }, { "label": "Bought", "numeric": true }, { "label": "Owes", "numeric": true }, { "label": "Last" }, { "label": "Against last quarter" }], "rows": [
+        [{ "avatar": "TS", "text": "Tide Street Stores" }, { "money": 3810000 }, { "money": 0 }, "14 Oct", { "pill": "good", "text": "22% more" }],
+        [{ "avatar": "CP", "text": "Corner Shop Provisions" }, { "money": 2940000 }, { "money": 1236000 }, "14 Oct", { "pill": "good", "text": "9% more" }],
+        [{ "avatar": "KM", "text": "Kite Market Co." }, { "money": 1870000 }, { "money": 611000 }, "Today", { "pill": "warn", "text": "6% less" }],
+        [{ "avatar": "LV", "text": "Lantern Valley Foods" }, { "money": 1620000 }, { "money": 0 }, "12 Oct", { "pill": "good", "text": "31% more" }],
+        [{ "avatar": "ML", "text": "Market Lane Mart" }, { "money": 1244000 }, { "money": 153100 }, "Today", { "pill": "neutral", "text": "Same as before" }]
+      ] },
+      { "type": "attention", "title": "Needs your attention", "items": [
+        { "tone": "warn", "icon": "alert", "title": "Corner Shop Provisions has used 62% of its credit", "body": "₦520,000 of it is overdue. One more invoice takes them past ₦2,000,000.", "action": "Open customer" },
+        { "tone": "info", "icon": "users", "title": "3 customers may be the same", "body": "Aunty Bimpe and Aunty Bimpe Provisions share a phone number.", "action": "Review and merge" },
+        { "tone": "warn", "icon": "receipt", "title": "4 organisations have no checked tax number", "body": "Check them before you invoice them as a company.", "action": "Check them" }
+      ] }
+    ] },
+    { "type": "cards", "columns": 3, "items": [
+      { "title": "Loyalty", "body": "186,400 points held. 14 members reached Gold this month.", "value": "412 members" },
+      { "title": "Deals in progress", "body": "3 are in negotiation. The oldest has not moved for 18 days.", "value": { "money": 9800000 } },
+      { "title": "Support", "body": "5 open tickets. One has waited 6 hours for a first reply.", "value": "1 h 40 m", "pill": { "tone": "warn", "text": "First reply" } }
+    ] }
+  ]
+}

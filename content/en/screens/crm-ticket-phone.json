@@ -1,0 +1,32 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a support ticket on the phone, with the customer's message, a note for the team and the invoice it is about.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Customers", "icon": "users", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Delivery charge on INV-0415 looks wrong",
+  "subtitle": "Billing · Corner Shop Provisions · today 08:12",
+  "blocks": [
+    { "type": "kv", "items": [
+      { "label": "Status", "value": { "pill": "warn", "text": "Waiting 3 h for a reply" } },
+      { "label": "Priority", "value": "High" },
+      { "label": "Owner", "value": { "avatar": "FB", "text": "Funke" } },
+      { "label": "Linked", "value": "INV-0415" }
+    ] },
+    { "type": "cards", "columns": 1, "items": [
+      { "title": "Nneka · today 08:12", "body": "We were charged ₦25,000 for delivery on INV-0415, but your driver said delivery is free on orders over ₦500,000." },
+      { "title": "Funke · note for the team · 08:34", "body": "The free delivery applies from 1 Oct, but the order was split into two invoices. Checking with Chidi.", "pill": { "tone": "neutral", "text": "Only the team sees this" } }
+    ] },
+    { "type": "attention", "title": "Answer them", "items": [
+      { "tone": "info", "icon": "check", "title": "Reply", "body": "The reply goes to the customer and the first-reply time stops.", "action": "Write a reply" }
+    ] }
+  ]
+}

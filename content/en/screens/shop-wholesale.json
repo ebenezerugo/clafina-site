@@ -1,0 +1,38 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a trade storefront for business buyers, with account prices, a quick order pasted from a list, credit on account and a purchase order number.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BT", "name": "Bright Harbour Trade", "place": "Trade portal" },
+  "search": "Search name, code or barcode",
+  "nav": [
+    { "label": "Corner Shop Provisions · account 40218", "items": [{ "label": "Products", "active": true }, { "label": "Orders" }, { "label": "My lists" }, { "label": "Invoices" }, { "label": "Statements" }] },
+    { "label": "Categories", "items": [{ "label": "Cooking oils and fats", "badge": "312" }, { "label": "Rice and grains", "badge": "540" }, { "label": "Beverages", "badge": "780" }, { "label": "Tinned foods", "badge": "365" }] }
+  ],
+  "title": "Cooking oils and fats",
+  "subtitle": "312 products · your account prices · delivery to Harbour Road store, next slot Tue 20 Oct",
+  "actions": [{ "label": "Request quote" }, { "label": "Place order on account", "primary": true, "icon": "cart" }],
+  "blocks": [
+    { "type": "table", "columns": [{ "label": "Product" }, { "label": "Pack" }, { "label": "Stock" }, { "label": "Your price", "numeric": true }, { "label": "Quantity", "numeric": true }, { "label": "Line total", "numeric": true }], "rows": [
+      ["Vegetable oil 1 L", "Carton of 12", "1,240", { "money": 24600 }, "10", { "money": 246000 }],
+      ["Vegetable oil 5 L", "Carton of 4", "860", { "money": 31200 }, "6", { "money": 187200 }],
+      ["Vegetable oil 25 L", "Jerrycan", "120", { "money": 41500 }, "4", { "money": 166000 }],
+      ["Red palm oil 5 L", "Carton of 4", { "pill": "warn", "text": "Low · 38" }, { "money": 36800 }, "5", { "money": 184000 }],
+      ["Groundnut oil 1 L", "Carton of 12", { "pill": "bad", "text": "Out of stock" }, { "money": 39600 }, "0", "—"]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "attention", "title": "Quick order: 2 lines ready, 2 need a look", "items": [
+        { "tone": "warn", "icon": "box", "title": "Groundnut oil 1 L is out of stock", "body": "Groundnut oil 3 L, 8 cartons, is offered instead.", "action": "Use substitute" },
+        { "tone": "bad", "icon": "search", "title": "Code GN-0IL-3L not found", "body": "Did you mean GN-OIL-3L?", "action": "Fix line" }
+      ] },
+      { "type": "kv", "title": "Your order", "items": [
+        { "label": "Terms", "value": "Net 30 on account" },
+        { "label": "Credit available", "value": { "money": 3420000 } },
+        { "label": "This order", "value": { "money": 887200 } },
+        { "label": "Purchase order number", "value": "PO-2026-0418" },
+        { "label": "Approval", "value": "Orders over ₦1,000,000 go to your approver" }
+      ] }
+    ] }
+  ]
+}

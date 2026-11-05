@@ -1,0 +1,30 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: paying for a restaurant order in two parts, part by bank transfer and the rest in cash, with the change to give.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RT", "name": "Red Tile Kitchen", "place": "Till 2 · Amaka" },
+  "nav": [
+    { "label": "Pay with", "items": [{ "label": "Cash", "active": true }, { "label": "Bank transfer", "badge": "Paid" }, { "label": "Card" }, { "label": "Points" }, { "label": "Gift card" }, { "label": "Store credit" }, { "label": "Wallet" }, { "label": "On account" }] }
+  ],
+  "title": "Payment · Order #1047",
+  "subtitle": "Table 6 · Tayo · 1,240 points, wallet ₦3,000",
+  "actions": [{ "label": "Back to order" }, { "label": "Complete sale", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "receipt", "label": "Order total", "value": { "money": 23400 } },
+      { "icon": "money", "label": "Still to pay", "value": { "money": 13400 } },
+      { "icon": "up", "label": "Change to give", "value": { "money": 1600 }, "change": { "tone": "good", "text": "From ₦15,000 cash" } }
+    ] },
+    { "type": "table", "title": "Payments", "columns": [{ "label": "Method" }, { "label": "Status" }, { "label": "Amount", "numeric": true }], "rows": [
+      ["Bank transfer", { "pill": "good", "text": "Confirmed · ref TRF-88213" }, { "money": 10000 }],
+      ["Cash", { "pill": "info", "text": "Being entered" }, { "money": 15000 }]
+    ] },
+    { "type": "kv", "title": "Receipt", "items": [
+      { "label": "Print", "value": "Receipt printer, Till 2" },
+      { "label": "Email", "value": "Ask for an address" },
+      { "label": "Posted as", "value": "One invoice and one receipt in the ERP" }
+    ] }
+  ]
+}

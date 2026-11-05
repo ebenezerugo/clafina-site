@@ -1,0 +1,34 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: support tickets, with what customers raised, who owns each one and how quickly it was first answered.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Customers", "items": [{ "label": "Customers" }, { "label": "Deals" }, { "label": "Support tickets", "badge": "5", "active": true }, { "label": "Loyalty" }, { "label": "Campaigns" }] }
+  ],
+  "title": "Support tickets",
+  "subtitle": "What customers raised, and how quickly each was answered and resolved.",
+  "actions": [{ "label": "Export" }, { "label": "New ticket", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "bell", "label": "Open now", "value": "14", "change": { "tone": "warn", "text": "3 unanswered" } },
+      { "icon": "clock", "label": "First reply, typically", "value": "1 h 40 m", "change": { "tone": "good", "text": "25 min quicker", "dir": "down" } },
+      { "icon": "check", "label": "Resolved, typically", "value": "1 d 3 h", "note": "31 resolved, 38 opened, last 30 days" }
+    ] },
+    { "type": "table", "title": "Oldest unanswered first", "columns": [{ "label": "Ticket" }, { "label": "Priority" }, { "label": "Status" }, { "label": "Owner" }, { "label": "First reply" }], "rows": [
+      ["Cannot pay with the payment link · Kite Market Co.", { "pill": "bad", "text": "Critical" }, "Open", "Nobody yet", { "pill": "bad", "text": "Waiting 6 h" }],
+      ["Delivery charge on INV-0415 looks wrong · Corner Shop Provisions", { "pill": "warn", "text": "High" }, "Open", { "avatar": "FB", "text": "Funke" }, { "pill": "warn", "text": "Waiting 3 h" }],
+      ["Two cartons of powdered milk arrived dented · Market Lane Mart", { "pill": "neutral", "text": "Medium" }, "In progress", { "avatar": "TO", "text": "Tobi" }, "42 min"],
+      ["Wrong flavour of malt drink delivered · Tide Street Stores", { "pill": "warn", "text": "High" }, "Waiting for the customer", { "avatar": "TO", "text": "Tobi" }, "1 h 10 m"],
+      ["Need a September statement · Lantern Valley Foods", { "pill": "neutral", "text": "Low" }, { "pill": "good", "text": "Resolved" }, { "avatar": "FB", "text": "Funke" }, "35 min"]
+    ] },
+    { "type": "attention", "title": "Service levels", "items": [
+      { "tone": "bad", "icon": "alert", "title": "One critical ticket is past its first-reply time", "body": "It has gone to the support lead. Give it an owner to stop the escalation.", "action": "Take it" }
+    ] }
+  ]
+}

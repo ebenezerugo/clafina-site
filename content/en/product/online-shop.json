@@ -1,0 +1,145 @@
+{
+  "kind": "product",
+  "sources": [
+    "Online-Shop-Product-Document.md",
+    "STOREFRONT_STUDIO.md",
+    "ROADMAP.md",
+    "TAX_ENGINE.md",
+    "docs/product-facts.md#product-online-shop"
+  ],
+  "meta": {
+    "title": "Online shop and Storefront Studio · Clafina",
+    "description": "Open online shops from the ERP, design them in Storefront Studio, and sell the stock you already have at the prices you already set."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Online shop and Storefront Studio",
+    "title": "Your shop online, selling the stock you already have.",
+    "lede": "Open a shop from the ERP in one step and design it in Storefront Studio. It sells from the same stock and price books as your tills, and its orders come back as sales orders.",
+    "screen": "shop-storefronts"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Sell online without a second catalogue",
+      "body": "The shop reads your products, stock and prices from the ERP. What you sell is a rule, so new products appear by themselves."
+    },
+    {
+      "title": "Give business buyers their own terms",
+      "body": "Business buyers see their account prices and contract catalogues, order on credit with a purchase order number and ask for quotes."
+    },
+    {
+      "title": "Change the look without a developer",
+      "body": "Design pages, themes and menus in Storefront Studio. Preview a change, send it for approval and publish it, or roll it back."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "shop-designer",
+      "title": "Design it the way you want",
+      "body": "The visual designer edits each page of your storefront. Collections read products from the ERP, so nothing is copied into the page.",
+      "points": [
+        "Theme, pages, menus and collections kept as versions",
+        "Preview, approval, publish and roll back",
+        "A contrast check on your theme colours"
+      ]
+    },
+    {
+      "screen": "shop-wholesale",
+      "title": "A trade shop for business buyers",
+      "body": "Business buyers sign in to see their own prices, stock and credit. Large orders go to their approver.",
+      "points": [
+        "Account prices and contract catalogues",
+        "Credit terms and purchase order numbers",
+        "Quotes, returns and coupons"
+      ]
+    },
+    {
+      "screen": "shop-phone",
+      "title": "Ordering from a phone",
+      "body": "A restaurant's own shop, in its own colours, taking pickup orders from the menu the till sells from.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in the online shop",
+  "features": [
+    {
+      "title": "Shops",
+      "items": [
+        { "text": "Create online store: the sales channel, its keys, a subdomain and the first product feed in one step." },
+        { "text": "Many shops for one organisation, by location, kind of stock or brand." },
+        { "text": "What a shop sells is a rule. Stock is shared with the till, so the last unit is never sold twice." },
+        { "text": "Orders come back as ordinary sales orders, tagged with the shop they came from." },
+        { "text": "Custom domains: buy one, connect your own, renew it, with certificates handled for you." },
+        { "text": "Archive a storefront and restore it later." },
+        { "text": "Shops on their own dedicated hosting.", "prelaunch": "product-online-shop" },
+        { "text": "Sell through social and chat catalogues, or through your own app over the API.", "prelaunch": "product-online-shop" }
+      ]
+    },
+    {
+      "title": "Shoppers",
+      "items": [
+        { "text": "Shopper accounts, and company shoppers who buy for a business." },
+        { "text": "Delivery zones and rates, collection from a store, and order tracking." },
+        { "text": "Reviews, wishlists, back-in-stock alerts and prices shown in other currencies." },
+        { "text": "Subscriptions, bookings, warranties and ordering for a set time." },
+        { "text": "Online payment from the shop checkout.", "prelaunch": "product-online-shop" },
+        { "text": "Tax on shop orders worked out by the same tax engine as the rest of Clafina.", "prelaunch": "product-online-shop" }
+      ]
+    },
+    {
+      "title": "Business buyers",
+      "items": [
+        { "text": "Account prices, contract catalogues and credit terms." },
+        { "text": "Purchase order numbers, quotes, returns and coupons." }
+      ]
+    },
+    {
+      "title": "Storefront Studio",
+      "items": [
+        { "text": "Theme, pages, menus and collections kept as versions, with preview, approval, publish and roll back." },
+        { "text": "A visual designer for every page." },
+        { "text": "A contrast check that keeps text readable on your theme colours." },
+        { "text": "Publish a change at a time you choose.", "prelaunch": "product-online-shop" },
+        { "text": "Storefront analytics: visits, how many visitors buy, and how quickly pages load.", "prelaunch": "product-online-shop" }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-stock", "text": "Each shop sells from the places and kinds of stock you choose." },
+    { "route": "product-sales", "text": "Shop orders arrive as sales orders, ready to fulfil and invoice." },
+    { "route": "product-pos", "text": "The shop and the till share stock and price books." },
+    { "route": "product-crm", "text": "Shopper accounts, loyalty points and support tickets belong to the same customer." },
+    { "route": "product-payments", "text": "The checkout uses the same payments as the rest of Clafina." },
+    { "route": "product-bookings", "text": "Bookings made in the shop use the same booking engine as the rest of Clafina." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["shop", "web"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-restaurant",
+    "industry-distribution"
+  ],
+  "faqTitle": "Questions about the online shop",
+  "faq": [
+    {
+      "q": "Do I have to keep a second product list for the shop?",
+      "a": "No. The shop reads products, stock and prices from the ERP when a shopper visits. Publishing a storefront never changes stock, prices or orders."
+    },
+    {
+      "q": "Can I use my own domain?",
+      "a": "Yes. Connect a domain you already own or buy one, and renew it from Clafina. Certificates are handled for you."
+    },
+    {
+      "q": "Can business buyers see their own prices?",
+      "a": "Yes. When a business buyer signs in, they see their account prices and contract catalogue, buy on credit terms and add their purchase order number."
+    }
+  ],
+  "cta": {
+    "title": "Open a shop from the stock you already have.",
+    "body": "Start free, or book a demo and we will create a storefront and publish a change together."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "kind": "product",
+  "sources": [
+    "ROADMAP.md",
+    "STATUS.md",
+    "SALES.md",
+    "PRICING.md",
+    "MOBILE.md",
+    "POINT_OF_SALE.md",
+    "Trading-Network-Product-Document.md",
+    "docs/product-facts.md#product-crm"
+  ],
+  "meta": {
+    "title": "Customers and CRM · Clafina",
+    "description": "One page per customer with what they bought, owe and said. Deals, support tickets, loyalty points and campaigns, all from the same record."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Customers and CRM",
+    "title": "Everything about a customer, on one page.",
+    "lede": "What they bought, what they owe and what they said, next to your deals, tickets, points and campaigns. It all comes from the documents you already make.",
+    "screen": "crm-customers"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Follow up on deals",
+      "body": "Keep deals on pipeline boards with the calls and visits that move them. You see which ones have stopped moving."
+    },
+    {
+      "title": "Answer support on time",
+      "body": "Every ticket has a number, an owner and a due time. First replies and resolutions are timed, and late ones are escalated."
+    },
+    {
+      "title": "Bring customers back",
+      "body": "Customers earn points and spend them on what they owe. Campaigns reach the people who said yes to hearing from you."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "crm-organisation",
+      "title": "Sell to a company, not just a person",
+      "body": "A company customer is billed under its legal name and tax numbers. Its people order for it, each within a limit you set.",
+      "points": [
+        "Buyers, approvers and receivers, each with their own limit",
+        "Sites you deliver to, picked as Ship to on an invoice",
+        "Terms, credit limit and price group applied when you sell"
+      ]
+    },
+    {
+      "screen": "crm-tickets",
+      "title": "Know which customer is waiting",
+      "body": "Support tickets show what customers raised, who owns each one and how long it has waited for a reply.",
+      "points": [
+        "First-reply and resolution times on every ticket",
+        "Service levels that escalate a ticket when it runs late",
+        "Each ticket linked to the invoice or order it is about"
+      ]
+    },
+    {
+      "screen": "crm-ticket-phone",
+      "title": "Answer from your phone",
+      "body": "Read the customer's message, leave a note only the team sees and reply, wherever you are.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in Customers",
+  "features": [
+    {
+      "title": "Customers",
+      "items": [
+        { "text": "A page for every customer with what they owe and every document and payment between you." },
+        { "text": "Company customers with their legal identity, sites, buyers and buyer limits." },
+        { "text": "Lists, merging duplicates, and import and export by CSV." },
+        { "text": "Customer prices from price books, agreements, tiers and rebates." },
+        { "text": "Lists that keep themselves up to date as customers change.", "prelaunch": "product-crm" }
+      ]
+    },
+    {
+      "title": "Deals and support",
+      "items": [
+        { "text": "Deals on pipeline boards, with the activities that move them." },
+        { "text": "Support tickets that are numbered, owned, due and linked to documents." },
+        { "text": "First-response and resolution times, and service levels that escalate." },
+        { "text": "Reminders sent for the follow-ups you plan.", "prelaunch": "product-crm" }
+      ]
+    },
+    {
+      "title": "Loyalty and gift cards",
+      "items": [
+        { "text": "A loyalty scheme with tiers and a points ledger. Points earned and spent are both in the books." },
+        { "text": "Gift cards issued by your staff." },
+        { "text": "Points that expire after a time you choose.", "prelaunch": "product-crm" }
+      ]
+    },
+    {
+      "title": "Campaigns",
+      "items": [
+        { "text": "Campaigns by email, SMS, WhatsApp and in the app, with opens, clicks and conversions." },
+        { "text": "Saved audiences, consent records, a preference centre and one-click unsubscribe." },
+        { "text": "Announcements that people acknowledge." },
+        { "text": "What each campaign cost, from the books, and what it costs to win a customer on each channel." }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-sales", "text": "Every quotation, invoice and receipt shows on the customer's page." },
+    { "route": "product-finance", "text": "Points earned and spent post to the ledger by themselves." },
+    { "route": "product-communication", "text": "Customer messages and replies sit in the same inbox as the rest of your work." },
+    { "route": "product-pos", "text": "The till finds the customer and adds or spends their points." },
+    { "route": "product-online-shop", "text": "Shoppers see their points in their account." },
+    { "route": "product-business-health", "text": "Reports show what it costs to win a customer and what they are worth over time." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["web", "phone", "till", "shop"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-distribution",
+    "industry-restaurant",
+    "industry-client-records"
+  ],
+  "faqTitle": "Questions about Customers",
+  "faq": [
+    {
+      "q": "Can a company customer have several people ordering for it?",
+      "a": "Yes. Add its buyers, approvers and receivers, each with the largest order they may place. Orders above a limit wait for an approver."
+    },
+    {
+      "q": "Do loyalty points show in the books?",
+      "a": "Yes. Points earned and points spent both post to the ledger, so you always know what the points you have given out are worth."
+    },
+    {
+      "q": "Can people stop getting campaigns?",
+      "a": "Yes. Every marketing message carries a one-click unsubscribe, and people choose what they get in a preference centre. Their consent is kept on record."
+    }
+  ],
+  "cta": {
+    "title": "See your customers in one place.",
+    "body": "Start free, or book a demo and we will walk through a customer from first deal to repeat order."
+  }
+}
