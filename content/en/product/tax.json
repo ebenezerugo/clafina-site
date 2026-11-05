@@ -1,0 +1,145 @@
+{
+  "kind": "product",
+  "sources": [
+    "TAX_ENGINE.md",
+    "SALES.md",
+    "ROADMAP.md",
+    "MOBILE.md",
+    "docs/product-facts.md#product-tax"
+  ],
+  "meta": {
+    "title": "Tax engine · Clafina",
+    "description": "The right taxes on every line from rules your business owns, with the reasons kept. VAT, withholding, credit notes and a VAT return from the ledger."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Tax engine",
+    "title": "The right tax on every line, and the reason why.",
+    "lede": "Taxes are decided on each line from rules your business owns. Anyone can open a line and see how its tax was worked out.",
+    "screen": "tax-vat-return"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "VAT charged without thinking about it",
+      "body": "Pick the customer and the items. The tax on each line comes from your rules, by place, buyer and item."
+    },
+    {
+      "title": "Withholding at payment",
+      "body": "When you pay a supplier or record a receipt, withholding is suggested or enforced, as you set it."
+    },
+    {
+      "title": "A trail you can explain",
+      "body": "Each line keeps the steps that decided its taxes. Changes to the rules need an approval."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "tax-invoice-new",
+      "title": "Tax worked out as you type",
+      "body": "Each line on an invoice gets its taxes from your rules, and the totals change as you go.",
+      "points": [
+        "Several taxes on one line, compounding where they should",
+        "Prices with tax included or added on top",
+        "Override a line only with permission, after a warning"
+      ]
+    },
+    {
+      "screen": "tax-vat-return",
+      "title": "A VAT return from the ledger",
+      "body": "The VAT return report adds up what you collected and what you can claim back, with the day it is due.",
+      "points": [
+        "Checked against the VAT accounts every time",
+        "Download it for your records or your accountant",
+        "Your VAT position on the phone"
+      ]
+    },
+    {
+      "screen": "tax-document-settings",
+      "title": "Each document set up your way",
+      "body": "Document settings decide how quotations, invoices and receipts behave, including withholding on receipts.",
+      "points": [
+        "Search every setting by name",
+        "See what you changed from the default"
+      ]
+    }
+  ],
+  "featuresTitle": "Everything in the tax engine",
+  "features": [
+    {
+      "title": "Working out the tax",
+      "items": [
+        { "text": "Five questions decide the taxes on each line, and the trace is stored on the line." },
+        { "text": "Several taxes on a line, compounding, prices with tax included, and three ways to round." },
+        { "text": "Tax groups with dated versions, item tax categories, and rules by place, buyer and item." },
+        { "text": "Country presets for Nigeria, Ghana, Kenya, South Africa, the UK, India and the EU states, and a US sandbox with base rates. Each preset records its sources and is not tax advice." },
+        { "text": "The till and the online shop read the same decision as the back office.", "prelaunch": "product-tax" }
+      ]
+    },
+    {
+      "title": "Control",
+      "items": [
+        { "text": "Line overrides only with permission, with warnings to acknowledge." },
+        { "text": "“Remember this” turns an override into a proposed rule." },
+        { "text": "Tax changes that the rules would block are saved only with an approval." },
+        { "text": "A warning when you are registered for VAT and no rule applies." },
+        { "text": "“Test a sale” to see the taxes a sale would get before you make it." }
+      ]
+    },
+    {
+      "title": "Buying, paying and credit",
+      "items": [
+        { "text": "Purchases split into the tax you recover and the part that is a cost, with reverse charge." },
+        { "text": "Withholding suggested or enforced at payment and at receipt." },
+        { "text": "Credit notes carry the taxes of the original document." },
+        { "text": "Bad-debt VAT relief, by country." },
+        { "text": "Withholding certificates.", "prelaunch": "product-tax" }
+      ]
+    },
+    {
+      "title": "Returns",
+      "items": [
+        { "text": "A VAT return report and your VAT position, with the filing day." },
+        { "text": "The tax return laid out box by box.", "prelaunch": "product-tax" },
+        { "text": "Schedules of exempt and zero-rated sales.", "prelaunch": "product-tax" },
+        { "text": "A filing calendar.", "prelaunch": "product-tax" }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-sales", "text": "Quotations, invoices and credit notes get their taxes line by line." },
+    { "route": "product-purchasing", "text": "Supplier bills split the tax you recover from the cost." },
+    { "route": "product-finance", "text": "Tax posts to the ledger by tax code." },
+    { "route": "product-payments", "text": "Withholding is held back when you pay or are paid." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["web", "phone"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-distribution",
+    "industry-manufacturing",
+    "industry-construction"
+  ],
+  "faqTitle": "Questions about the tax engine",
+  "faq": [
+    {
+      "q": "Can I see why a tax was charged?",
+      "a": "Yes. Each line keeps the trace of how its taxes were decided, so you can open it and read the reasons."
+    },
+    {
+      "q": "Does Clafina file my VAT return?",
+      "a": "No. It prepares the VAT return report from the ledger and shows the day it is due. You file it yourself with those figures."
+    },
+    {
+      "q": "Can someone change the tax on a line?",
+      "a": "Only people with permission, and they see warnings to acknowledge first. “Remember this” can turn the change into a proposed rule."
+    }
+  ],
+  "cta": {
+    "title": "See the tax engine with your own sales.",
+    "body": "Start free, or book a demo and we will test a sale with your rules."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: recording a customer's bank transfer and applying it to their oldest invoices first, with what happens when it is posted.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Sell", "items": [{ "label": "Sales" }, { "label": "Invoices", "badge": "7" }, { "label": "Receipts", "active": true }] },
+    { "label": "Money", "items": [{ "label": "Payment links" }, { "label": "Wallets" }, { "label": "Payables" }] }
+  ],
+  "title": "Record a payment",
+  "subtitle": "Money a customer paid you. It settles their invoices. Not saved yet.",
+  "actions": [{ "label": "Save as draft" }, { "label": "Save and post", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Who paid, and how", "items": [
+        { "label": "Customer", "value": { "avatar": "KM", "text": "Kite Market Co." } },
+        { "label": "Owes", "value": "₦1,236,000 on 3 invoices" },
+        { "label": "Amount", "value": { "money": 520000 } },
+        { "label": "Method", "value": "Bank transfer" },
+        { "label": "Paid into", "value": "Current account ••6789" },
+        { "label": "Received at", "value": "Main store" },
+        { "label": "Kept by the bank", "value": { "money": 0 } }
+      ] },
+      { "type": "kv", "title": "Totals", "items": [
+        { "label": "Money received", "value": { "money": 520000 } },
+        { "label": "Pays invoices, oldest first", "value": { "money": 520000 } },
+        { "label": "Withheld tax", "value": { "money": 0 } },
+        { "label": "Written off", "value": { "money": 0 } },
+        { "label": "Held as credit", "value": { "money": 0 } },
+        { "label": "Settled", "value": { "strong": "₦520,000" } }
+      ] }
+    ] },
+    { "type": "table", "title": "What does it pay? Anything left over stays on their account as credit.", "columns": [{ "label": "Invoice" }, { "label": "Due" }, { "label": "Still owed", "numeric": true }, { "label": "Pays", "numeric": true }], "rows": [
+      ["INV-2026-0361", { "pill": "bad", "text": "10 Sep · 39 days late" }, { "money": 330000 }, { "money": 330000 }],
+      ["INV-2026-0388", { "pill": "bad", "text": "7 Oct · 12 days late" }, { "money": 190000 }, { "money": 190000 }],
+      ["INV-2026-0415", { "pill": "neutral", "text": "30 Oct" }, { "money": 716000 }, { "money": 0 }]
+    ] },
+    { "type": "attention", "title": "What happens next", "items": [
+      { "tone": "info", "icon": "receipt", "title": "Numbered RCT-2026-0292 and kept as a draft until you post it", "body": "Nothing counts as paid until you post it." },
+      { "tone": "good", "icon": "check", "title": "Posting marks INV-2026-0361 and INV-2026-0388 paid", "body": "Current account ••6789 goes up by ₦520,000 in your books. Kite Market Co. will then owe ₦716,000, not yet due." }
+    ] }
+  ]
+}

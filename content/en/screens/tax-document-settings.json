@@ -1,0 +1,36 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the document settings page, where each kind of document is set up, including withholding tax on customer receipts.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search every setting",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Settings", "items": [{ "label": "Business details" }, { "label": "Tax" }, { "label": "Document settings", "active": true }, { "label": "People and roles" }] }
+  ],
+  "title": "Document settings",
+  "subtitle": "How each kind of document behaves: what customers see, who approves, and when things happen.",
+  "actions": [{ "label": "Start guided setup", "primary": true }],
+  "blocks": [
+    { "type": "kv", "title": "Try searching for", "items": [
+      { "label": "Selling", "value": "reminder · deposit · who can approve" },
+      { "label": "Tax", "value": "withholding tax · QR code · discount limit" }
+    ] },
+    { "type": "cards", "columns": 3, "items": [
+      { "title": "Quotations", "body": "How customers receive, answer and are reminded about quotes.", "value": "15 settings", "pill": { "tone": "info", "text": "2 changed" } },
+      { "title": "Proforma invoices", "body": "Deposits, how customers pay, and when one becomes an order.", "value": "28 settings", "pill": { "tone": "info", "text": "3 changed" } },
+      { "title": "Customer invoices", "body": "Where invoices come from, what customers see, reminders.", "value": "16 settings", "pill": { "tone": "info", "text": "4 changed" } },
+      { "title": "Customer receipts", "body": "Unmatched payments, withholding tax, small write-offs.", "value": "4 settings", "pill": { "tone": "info", "text": "1 changed" } },
+      { "title": "Purchase orders", "body": "How orders go out to the supplier, and for how long.", "value": "8 settings", "pill": { "tone": "info", "text": "1 changed" } },
+      { "title": "Goods receipt notes", "body": "Receive against an order, over-receipt, expiry and batch.", "value": "8 settings", "pill": { "tone": "info", "text": "2 changed" } }
+    ] },
+    { "type": "progress", "label": "Set up your documents: 3 of 6 areas reviewed", "value": 50, "note": "About 6 minutes left. Next: stock and production." },
+    { "type": "attention", "title": "Changed from the default", "items": [
+      { "tone": "info", "icon": "receipt", "title": "Customer receipts: suggest withholding (default off)", "body": "When a customer holds back tax, the receipt suggests the withholding and counts it as paid on the invoice.", "action": "See all changes" },
+      { "tone": "info", "icon": "clock", "title": "Customer invoices: overdue reminders every 5 days (default 7)", "body": "Reminders go 3 days before the due date, on the day, then every 5 days." }
+    ] }
+  ]
+}

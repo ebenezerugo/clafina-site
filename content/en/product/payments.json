@@ -1,0 +1,148 @@
+{
+  "kind": "product",
+  "sources": [
+    "STATUS.md",
+    "SALES.md",
+    "ROADMAP.md",
+    "POINT_OF_SALE.md",
+    "wallet-cards.md",
+    "wallet-foreign.md",
+    "wallet-crypto.md",
+    "wallet-verification.md",
+    "docs/product-facts.md#product-payments"
+  ],
+  "meta": {
+    "title": "Payments and wallets · Clafina",
+    "description": "Payment links, invoices paid online, supplier payment runs and business wallets, with every payment landing in the books."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Payments and wallets",
+    "title": "Get paid, pay out, and keep the books right.",
+    "lede": "Customers pay from a link or the invoice you sent. You pay suppliers and staff in runs. Every payment lands in the books by itself.",
+    "screen": "payments-receipts"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Paid from the invoice link",
+      "body": "Customers pay an invoice or proforma from its shared page. When the payment is confirmed, the receipt is posted."
+    },
+    {
+      "title": "Suppliers and staff paid in runs",
+      "body": "Tick what you are paying and one payment goes to each supplier. Big payments wait for a second person."
+    },
+    {
+      "title": "Money held in business wallets",
+      "body": "Wallets are accounts in your books. Pay bills from them and collect from customers into them."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "payments-record-receipt",
+      "title": "Every payment settles an invoice",
+      "body": "Record money a customer paid and it is applied to their oldest invoices first.",
+      "points": [
+        "Anything left over is held as their credit",
+        "Withheld tax counts as paid on the invoice",
+        "Nothing counts as paid until it is posted"
+      ]
+    },
+    {
+      "screen": "payments-pay-suppliers",
+      "title": "Pay suppliers in one run",
+      "body": "Choose the bills, and the run works out discounts, tax held back and what leaves the account.",
+      "points": [
+        "Bank details are checked and changed only by approval",
+        "Payments above your limit need a second person",
+        "A payment is never sent twice"
+      ]
+    },
+    {
+      "screen": "invoices-list",
+      "title": "Know who still owes you",
+      "body": "Invoices paid online are marked paid when the receipt posts, so the list shows only what is still owed.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in Payments",
+  "features": [
+    {
+      "title": "Getting paid",
+      "items": [
+        { "text": "Payment links and a checkout page in your own brand. People who pay become customers." },
+        { "text": "Invoices and proformas paid online from the shared page. The confirmation posts the receipt." },
+        { "text": "A virtual account number for each customer. Deposits become receipts by themselves." },
+        { "text": "Refunds, disputes and settlements, with fees posted to bank charges." },
+        { "text": "A payment section on every invoice.", "prelaunch": "product-payments" }
+      ]
+    },
+    {
+      "title": "Paying out",
+      "items": [
+        { "text": "Beneficiaries checked, sealed and changed only by approval." },
+        { "text": "Payouts are never sent twice." },
+        { "text": "Refunds above a limit approved by a second person." },
+        { "text": "Bank transfers sent through partner banks.", "prelaunch": "product-payments" },
+        { "text": "Bank feeds that bring your statements in by themselves.", "prelaunch": "product-payments" }
+      ]
+    },
+    {
+      "title": "Wallets",
+      "items": [
+        { "text": "Business wallets kept in the books. Pay from them, and pay bills from them." },
+        { "text": "Collection wallets for your customers." },
+        { "text": "Business verification before any money service is switched on." },
+        { "text": "Wallet money held in a pool account at a partner bank.", "prelaunch": "product-payments" },
+        { "text": "Foreign accounts and payments abroad at a locked rate.", "prelaunch": "product-payments" },
+        { "text": "A USDT and USDC stablecoin wallet, with withdrawals and conversions.", "prelaunch": "product-payments" },
+        { "text": "Virtual cards with spending limits, and card expenses to sort into categories.", "prelaunch": "product-payments" }
+      ]
+    },
+    {
+      "title": "Providers and reports",
+      "items": [
+        { "text": "Routing between payment providers, with fallbacks and the reason kept on every attempt." },
+        { "text": "Payment alerts and reports." },
+        { "text": "Live merchant accounts with each payment provider.", "prelaunch": "product-payments" }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-sales", "text": "Online payments become receipts against the right invoices." },
+    { "route": "product-finance", "text": "Payments, fees and wallets post to the ledger." },
+    { "route": "product-purchasing", "text": "Supplier bills are paid in runs from what you owe." },
+    { "route": "product-hr", "text": "Payroll remittances are paid from the same place." },
+    { "route": "product-bookings", "text": "Deposits for bookings are taken online." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["web", "till"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-distribution",
+    "industry-accommodation",
+    "industry-events"
+  ],
+  "faqTitle": "Questions about Payments",
+  "faq": [
+    {
+      "q": "Can customers pay an invoice online?",
+      "a": "Yes. They pay from the invoice's shared page. When the payment is confirmed, the receipt is posted against the invoice."
+    },
+    {
+      "q": "Could a supplier be paid twice by mistake?",
+      "a": "No. A payout is never sent twice, and a supplier's bank details can only be changed with an approval."
+    },
+    {
+      "q": "Do payments show in the books?",
+      "a": "Yes. Wallets are accounts in the ledger, deposits to a customer's virtual account become receipts, and fees post to bank charges."
+    }
+  ],
+  "cta": {
+    "title": "See Payments with your own invoices.",
+    "body": "Start free, or book a demo and we will walk through a payment from the invoice link to the books."
+  }
+}

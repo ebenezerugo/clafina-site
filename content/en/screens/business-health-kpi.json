@@ -1,0 +1,51 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the “How this is worked out” drawer for net margin, showing the figures it is made of, what it assumes and the owner's target.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Business insights", "items": [{ "label": "Executive summary", "active": true }, { "label": "Profitability" }, { "label": "Cash flow" }, { "label": "Working capital" }, { "label": "Customers and growth" }, { "label": "Forecasts and insights" }] },
+    { "label": "Reports", "items": [{ "label": "Reports" }, { "label": "Schedules" }] }
+  ],
+  "title": "Net margin",
+  "subtitle": "How this is worked out: the figures it is made of, and where to find them.",
+  "actions": [{ "label": "Back to the default" }, { "label": "Save the target", "primary": true }],
+  "blocks": [
+    { "type": "attention", "title": "After running costs you keep about ₦15.60 of every ₦100 you sell", "items": [
+      { "tone": "warn", "icon": "clock", "title": "Provisional", "body": "Two entries are not posted yet. Confidence: medium." }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "How it is worked out: 1 October to 19 October 2026, VAT left out", "columns": [{ "label": "" }, { "label": "Figure" }, { "label": "Amount", "numeric": true }, { "label": "Source" }], "rows": [
+        ["", "Revenue", { "money": 14820000 }, "See report"],
+        ["−", "Cost of the goods sold", { "money": 10380000 }, "See report"],
+        ["−", "Running costs", { "money": 2125200 }, "See report"],
+        ["=", "Profit", { "money": 2314800 }, ""],
+        ["÷", { "strong": "Profit ÷ revenue" }, { "strong": "15.6%" }, ""]
+      ] },
+      { "type": "kv", "title": "What it assumes", "items": [
+        { "label": "October rent", "value": "Not in yet: JE-2026-1282, ₦850,000, waiting for approval" },
+        { "label": "Vehicle depreciation", "value": "Not posted: JE-2026-1275, ₦175,000, approved" },
+        { "label": "Income tax", "value": "Booked at the year end, so it is not taken off here" },
+        { "label": "Projected by 31 Oct", "value": { "pill": "info", "text": "8.7%, once both post" } }
+      ] }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Your target: only people who manage finance alerts see this", "items": [
+        { "label": "At least or at most", "value": "At least (a floor)" },
+        { "label": "Target", "value": "12%" },
+        { "label": "Warn from", "value": "10%" },
+        { "label": "Today", "value": { "pill": "good", "text": "3.6 points above target" } }
+      ] },
+      { "type": "kv", "title": "Where each figure comes from", "items": [
+        { "label": "Revenue", "value": "Posted invoices in the period, after discounts and without VAT. Basis: accrual." },
+        { "label": "Cost of the goods sold", "value": "What the goods cost when they left stock, by moving average." },
+        { "label": "Running costs", "value": "Every expense account under operating expenses, posted in the period." }
+      ] }
+    ] }
+  ]
+}

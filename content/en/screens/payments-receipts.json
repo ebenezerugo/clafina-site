@@ -1,0 +1,38 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the receipts list, with money received by transfer, payment link, wallet and cash, applied to invoices or held as credit.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Sell", "items": [{ "label": "Sales" }, { "label": "Invoices", "badge": "7" }, { "label": "Receipts", "active": true }] },
+    { "label": "Money", "items": [{ "label": "Payment links" }, { "label": "Wallets" }, { "label": "Payables" }] }
+  ],
+  "title": "Receipts",
+  "subtitle": "Money received from customers: applied to their invoices, or held as credit.",
+  "actions": [{ "label": "Export" }, { "label": "Record a payment", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "money", "label": "Received this month", "value": { "money": 9372500 }, "change": { "tone": "good", "text": "12% up", "dir": "up" }, "note": "63 receipts since 1 October." },
+      { "icon": "clock", "label": "Last 30 days", "value": { "money": 10184000 }, "note": "71 receipts." },
+      { "icon": "alert", "label": "Not posted", "value": "2", "change": { "tone": "warn", "text": "₦340,000 not counted yet" } },
+      { "icon": "receipt", "label": "Voided, last 30 days", "value": "1", "note": "A bounced cheque, taken off the invoices it paid." }
+    ] },
+    { "type": "attention", "title": "Waiting for you", "items": [
+      { "tone": "warn", "icon": "receipt", "title": "₦340,000 recorded but not counted yet", "body": "Two receipts are saved but not posted, so their invoices still show as owed.", "action": "Post them" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Receipt" }, { "label": "Customer" }, { "label": "Received" }, { "label": "Method" }, { "label": "Paid into" }, { "label": "Pays" }, { "label": "Status" }, { "label": "Amount", "numeric": true }], "rows": [
+      ["RCT-2026-0291", { "avatar": "TS", "text": "Tide Street Stores" }, "19 Oct", "Bank transfer", "Current account ••6789", "INV-2026-0412", { "pill": "warn", "text": "Not posted" }, { "money": 186900 }],
+      ["RCT-2026-0290", { "avatar": "ML", "text": "Market Lane Mart" }, "19 Oct", "Cash", "Main store till", "INV-2026-0417", { "pill": "warn", "text": "Not posted" }, { "money": 153100 }],
+      ["RCT-2026-0289", { "avatar": "CS", "text": "Corner Shop Provisions" }, "17 Oct", "Payment link", "Online payments", "Held as credit", { "pill": "good", "text": "Posted" }, { "money": 250000 }],
+      ["RCT-2026-0288", { "avatar": "KM", "text": "Kite Market Co." }, "14 Oct", "Bank transfer", "Current account ••6789", "INV-2026-0371", { "pill": "good", "text": "Posted" }, { "money": 400000 }],
+      ["RCT-2026-0287", { "avatar": "LV", "text": "Lantern Valley Foods" }, "14 Oct", "Virtual account", "Their account ••4021", "INV-2026-0407", { "pill": "good", "text": "Posted" }, { "money": 1106000 }],
+      ["RCT-2026-0286", { "avatar": "OR", "text": "Orchard Row Pharmacy" }, "12 Oct", "Wallet", "Business wallet", "INV-2026-0410", { "pill": "good", "text": "Posted" }, { "money": 958300 }],
+      ["RCT-2026-0285", { "avatar": "SG", "text": "Sandgate Hardware" }, "10 Oct", "Cheque", "Current account ••6789", "INV-2026-0399", { "pill": "bad", "text": "Void" }, { "money": 322000 }]
+    ] }
+  ]
+}

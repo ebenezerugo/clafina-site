@@ -1,0 +1,142 @@
+{
+  "kind": "product",
+  "sources": [
+    "BUSINESS_HEALTH.md",
+    "ROADMAP.md",
+    "STATUS.md",
+    "MOBILE.md",
+    "docs/product-facts.md#product-business-health"
+  ],
+  "meta": {
+    "title": "Business health and reports · Clafina",
+    "description": "Margin, runway and cash cycle in plain sentences, each worked out back to the books. Dashboards, reports on a schedule, alerts and a cash forecast."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Business health, reports and dashboards",
+    "title": "Know how the business is doing, and why.",
+    "lede": "Margin, runway and the cash cycle in plain sentences. Open any number and see how it was worked out from the books.",
+    "screen": "business-health-executive"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Margin, runway and cash cycle at a glance",
+      "body": "Each card says in words whether things are fine or need a look, and why, in one sentence."
+    },
+    {
+      "title": "The reports you need, on a schedule",
+      "body": "Filter, group and export any report you may read. Send it to people on a schedule, with a test send first."
+    },
+    {
+      "title": "One number, explained back to the books",
+      "body": "“How this is worked out” shows the figures behind a number, what it assumes and where each figure comes from."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "business-health-kpi",
+      "title": "See how a number is worked out",
+      "body": "Every card opens to the figures it is made of, from the ledger, with what is not posted yet.",
+      "points": [
+        "A short number is never shown as final",
+        "Projections are shown as projections",
+        "Set your own floors and warning lines"
+      ]
+    },
+    {
+      "screen": "business-health-cash",
+      "title": "Cash, 90 days ahead",
+      "body": "A cash forecast in three scenarios, with the lowest point ahead and the first day cash could run short.",
+      "points": [
+        "Checkpoints against the minimum you set",
+        "Agrees with the books, and says when"
+      ]
+    },
+    {
+      "screen": "business-health-reports",
+      "title": "Every report in one place",
+      "body": "Registers, exceptions and summaries, filtered and grouped your way. Only the reports you may read are listed.",
+      "points": [
+        "Saved views and pins on your dashboard",
+        "Schedules with a test send",
+        "Exports to PDF, spreadsheet or CSV"
+      ]
+    }
+  ],
+  "featuresTitle": "Everything in Business health",
+  "features": [
+    {
+      "title": "How the business is doing",
+      "items": [
+        { "text": "Cards for gross margin, net margin, the cost to win a customer, lifetime value, burn and runway, and the cash conversion cycle." },
+        { "text": "Each card has a status in words, one sentence, and a “How this is worked out” drawer." },
+        { "text": "You set the floors: margin floors and a runway alert." },
+        { "text": "Figures kept up from ledger events. A short number is never shown as final." },
+        { "text": "Recurring revenue read from your memberships.", "prelaunch": "product-business-health" }
+      ]
+    },
+    {
+      "title": "Dashboards",
+      "items": [
+        { "text": "A home dashboard that respects each person's permissions, places and currencies, arranged per person or per role." },
+        { "text": "KPI dashboards you can customise." },
+        { "text": "KPI history, and a mark that says the figures agree with the books." },
+        { "text": "Dashboards for the whole group, consolidated." },
+        { "text": "KPIs made for your industry, from its pack.", "prelaunch": "product-business-health" }
+      ]
+    },
+    {
+      "title": "Reports and alerts",
+      "items": [
+        { "text": "A reports hub with filters, grouping, exports, saved views, pins and schedules with test sends." },
+        { "text": "Alerts on KPIs and conditions, in the app and by email." },
+        { "text": "Checks that include your tax filings and delivery costs.", "prelaunch": "product-business-health" }
+      ]
+    },
+    {
+      "title": "Forecasts and insights",
+      "items": [
+        { "text": "A cash forecast with three scenarios and checkpoints." },
+        { "text": "Insights, quality checks and forecasts drawn from your own records." },
+        { "text": "Ask the assistant to read a KPI, explain a change or run a what-if." }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-finance", "text": "Every figure is worked out from the ledger." },
+    { "route": "product-sales", "text": "Invoices and customers feed the cost to win a customer and lifetime value." },
+    { "route": "product-assistant", "text": "Ask for a report, or why a number moved." },
+    { "route": "product-mobile", "text": "Your key numbers on the phone's home screen." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["web", "phone", "assistant"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-distribution",
+    "industry-manufacturing",
+    "industry-field-service"
+  ],
+  "faqTitle": "Questions about Business health",
+  "faq": [
+    {
+      "q": "How do I know a number is right?",
+      "a": "Open “How this is worked out” on any card. It shows the figures it is made of from the ledger, what it assumes and where each figure comes from."
+    },
+    {
+      "q": "What if some entries are not posted yet?",
+      "a": "The number is marked as provisional, never shown as final. The drawer lists what is missing and what the number will be once it posts."
+    },
+    {
+      "q": "Can reports come to me on a schedule?",
+      "a": "Yes. Schedule any report you may read to go to the people you choose, and send a test first."
+    }
+  ],
+  "cta": {
+    "title": "See how your own business is doing.",
+    "body": "Start free, or book a demo and we will walk through your numbers back to the books."
+  }
+}

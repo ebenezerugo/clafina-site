@@ -1,0 +1,151 @@
+{
+  "kind": "product",
+  "sources": [
+    "ROADMAP.md",
+    "STATUS.md",
+    "SALES.md",
+    "STOCK.md",
+    "MOBILE.md",
+    "docs/product-facts.md#product-finance"
+  ],
+  "meta": {
+    "title": "Finance and accounting · Clafina",
+    "description": "Books that every sale, purchase, payroll and stock movement posts into by itself, with period close, reports, budgets, approvals and bank reconciliation."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Finance and accounting",
+    "title": "Books that keep up with the business.",
+    "lede": "Every sale, purchase, payroll and stock movement posts its own entry. You see what you owe and are owed, and spending is checked before money leaves.",
+    "screen": "finance-overview"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Books that close on time",
+      "body": "Documents post their own journal entries. A close checklist walks you through each period, and nothing is retyped."
+    },
+    {
+      "title": "See what you owe and are owed",
+      "body": "Cash in the bank, unpaid invoices and supplier bills in one place, with ageing and a forecast of how long cash lasts."
+    },
+    {
+      "title": "Control spending before money leaves",
+      "body": "Budgets warn or block at the request, the order and the invoice. Payments need a second person before they go."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "finance-journals",
+      "title": "Everything in the books, in one list",
+      "body": "Entries that documents posted sit next to entries written by hand, newest first.",
+      "points": [
+        "Nobody approves their own entry",
+        "Recurring entries post on their own schedule",
+        "Every change is kept in the audit trail"
+      ]
+    },
+    {
+      "screen": "finance-books",
+      "title": "Posting by role, not by account name",
+      "body": "Documents post by kind, such as receivables or revenue. You choose the account for each kind once.",
+      "points": [
+        "A narrower account for a bank, a tax code or a place",
+        "Refused postings wait in a backlog and are tried again",
+        "Opening balances brought in when you start"
+      ]
+    },
+    {
+      "screen": "finance-reports",
+      "title": "Statements you can trust",
+      "body": "Profit and loss, balance sheet, cash flow, trial balance and ageing, straight from the ledger.",
+      "points": [
+        "Compare with the period before",
+        "Download as PDF, spreadsheet or CSV",
+        "Told plainly when entries are not posted yet"
+      ]
+    }
+  ],
+  "featuresTitle": "Everything in Finance",
+  "features": [
+    {
+      "title": "The books",
+      "items": [
+        { "text": "A chart of accounts from your country's template, and a fiscal year that starts in any month." },
+        { "text": "Posting accounts by role, so every document knows where its entry goes." },
+        { "text": "Documents post their own journal entries. Refused postings wait in a backlog and retry." },
+        { "text": "Recurring journals, invoices, bills and standing payments." },
+        { "text": "Payroll posted to the ledger by department.", "prelaunch": "product-finance" }
+      ]
+    },
+    {
+      "title": "Close and reports",
+      "items": [
+        { "text": "Period close with a checklist, revaluation, year end and reopening." },
+        { "text": "Trial balance, profit and loss, balance sheet, cash flow and ageing, exported as PDF, XLSX or CSV." },
+        { "text": "Obligations and a cash-flow forecast with three scenarios." },
+        { "text": "Intercompany links and group consolidation with eliminations." },
+        { "text": "Consolidated cash flow and a comparative column for the group.", "prelaunch": "product-finance" },
+        { "text": "Staged acquisitions and dividends eliminated by themselves.", "prelaunch": "product-finance" }
+      ]
+    },
+    {
+      "title": "Spending control",
+      "items": [
+        { "text": "Budgets that warn or block at the requisition, the order and the invoice." },
+        { "text": "Payment requests with a maker and a checker, and payment batches." },
+        { "text": "Expenses, reimbursements, cash advances, mileage and per diem." },
+        { "text": "A hash-chained audit trail. The person who asks cannot approve their own finance documents." }
+      ]
+    },
+    {
+      "title": "Bank and cash",
+      "items": [
+        { "text": "Bank statement import from CSV, OFX, MT940 or CAMT.053." },
+        { "text": "Reconciliation sessions that lock when they are approved." },
+        { "text": "Transfers between your own accounts, cash in transit and exchange differences." },
+        { "text": "Payments sent through real bank rails, with live checks on each provider.", "prelaunch": "product-finance" },
+        { "text": "A speed pass so large ledgers stay quick.", "prelaunch": "product-finance" }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-sales", "text": "Invoices, receipts and credit notes post to the ledger by themselves." },
+    { "route": "product-purchasing", "text": "Supplier bills and payments post as they are approved." },
+    { "route": "product-stock", "text": "Stock movements post at their value, by your costing method." },
+    { "route": "product-hr", "text": "Each payroll run posts salaries and what is owed on them." },
+    { "route": "product-tax", "text": "Tax posts to the ledger by tax code." },
+    { "route": "product-payments", "text": "Wallets are accounts in the books." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["web", "phone"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-distribution",
+    "industry-retail",
+    "industry-manufacturing",
+    "industry-construction",
+    "industry-property"
+  ],
+  "faqTitle": "Questions about Finance",
+  "faq": [
+    {
+      "q": "Do I have to write a journal entry for every sale?",
+      "a": "No. Invoices, receipts, bills, payroll and stock movements post their own entries. If the books refuse one, it waits in a backlog and is tried again."
+    },
+    {
+      "q": "Can I bring in my bank statements?",
+      "a": "Yes. Import them as CSV, OFX, MT940 or CAMT.053, then match them in a reconciliation session that locks when it is approved."
+    },
+    {
+      "q": "Can someone approve their own payment?",
+      "a": "No. The person who asks for a finance document cannot approve it, and every change is kept in the audit trail."
+    }
+  ],
+  "cta": {
+    "title": "See Finance with your own books.",
+    "body": "Start free, or book a demo and we will walk through a month from first sale to close."
+  }
+}

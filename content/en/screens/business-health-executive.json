@@ -1,0 +1,33 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the executive summary, with how the business is doing in plain sentences and what changed that is worth a look.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Business insights", "items": [{ "label": "Executive summary", "active": true }, { "label": "Profitability" }, { "label": "Cash flow" }, { "label": "Working capital" }, { "label": "Customers and growth" }, { "label": "Forecasts and insights" }] },
+    { "label": "Reports", "items": [{ "label": "Reports" }, { "label": "Schedules" }] }
+  ],
+  "title": "Executive summary",
+  "subtitle": "How the business is doing: what each number is, what moved it, and whether to trust it yet. Agrees with the books · 2 min ago",
+  "actions": [{ "label": "This month" }, { "label": "Customise", "primary": true }],
+  "blocks": [
+    { "type": "cards", "columns": 3, "items": [
+      { "title": "Gross margin", "value": "30.0% of revenue", "pill": { "tone": "good", "text": "+1.0 pt vs September" }, "body": "Of every ₦100 you sell, ₦30 is left after paying for the goods." },
+      { "title": "Net margin", "value": "15.6% of revenue", "pill": { "tone": "warn", "text": "Provisional" }, "body": "After running costs you keep about ₦15.60 of every ₦100 you sell. 2 entries are not posted yet: expect about 9% when they are." },
+      { "title": "Cost to win a customer", "value": { "money": 18400 }, "pill": { "tone": "warn", "text": "Needs a look: +12% vs last year" }, "body": "Winning a new customer cost about ₦18,400 this year. Online shop customers cost the least." },
+      { "title": "Customer lifetime value", "value": { "money": 642000 }, "pill": { "tone": "info", "text": "Forecast" }, "body": "A customer typically spends ₦642,000 with you: 35 times what it costs to win them. Estimated from 14 months of history." },
+      { "title": "Cash runway", "value": "2.7 months", "pill": { "tone": "good", "text": "Above your 2-month target" }, "body": "If no money came in, your cash would cover your costs until about 10 January." },
+      { "title": "Cash cycle", "value": "38 days", "pill": { "tone": "warn", "text": "Needs a look: +4 days vs September" }, "body": "Stock sits 24 days, customers pay in 31, suppliers wait 17. Slower customers added the 4 days." }
+    ] },
+    { "type": "attention", "title": "Worth your attention: what changed, why, and what it means", "items": [
+      { "tone": "warn", "icon": "alert", "title": "General expenses are up 86% on the same days last month", "body": "Most of it is one bill: ₦210,000 for generator repairs on 14 October.", "action": "See the expense report" },
+      { "tone": "good", "icon": "up", "title": "Online shop customers cost a quarter as much to win as paid advertising", "body": "₦6,200 each against ₦24,900. Moving ₦200,000 of spend would win about 25 more customers a month.", "action": "See customers by channel" },
+      { "tone": "info", "icon": "users", "title": "Kite Market Co. has not ordered for 21 days; they usually order every 7", "body": "They are your 3rd biggest customer: ₦4.1m this year.", "action": "Open Kite Market Co." }
+    ] }
+  ]
+}

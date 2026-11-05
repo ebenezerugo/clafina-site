@@ -1,0 +1,45 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the books and posting settings, showing where each kind of document posts and the postings refused because a kind has no account yet.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Finance", "items": [{ "label": "Overview" }, { "label": "Chart of accounts" }, { "label": "Journal entries" }, { "label": "Books and posting", "active": true }, { "label": "Bank" }, { "label": "Reports" }] }
+  ],
+  "title": "Books and posting",
+  "subtitle": "Where every document's entry goes, and what has not reached the ledger.",
+  "actions": [{ "label": "Bring in opening balances", "primary": true }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "table", "label": "Posting accounts", "value": "62 kinds", "change": { "tone": "warn", "text": "3 need an account" } },
+      { "icon": "alert", "label": "Not in the ledger", "value": "2", "change": { "tone": "bad", "text": "Refused by the books" } },
+      { "icon": "check", "label": "Before the books", "value": "Nothing missing" },
+      { "icon": "bank", "label": "Opening balances", "value": "1 brought in" }
+    ] },
+    { "type": "row", "widths": "1fr 2fr", "blocks": [
+      { "type": "kv", "title": "The books", "items": [
+        { "label": "Status", "value": { "pill": "good", "text": "Open · Oct 2026" } },
+        { "label": "Base currency", "value": "Naira (NGN)" },
+        { "label": "Year starts in", "value": "January · 12 periods and an adjustment" },
+        { "label": "Stock costed by", "value": "Moving average" },
+        { "label": "Chart", "value": "IFRS for SMEs layout · 94 accounts" }
+      ] },
+      { "type": "table", "title": "Documents post by kind, such as receivables or revenue, never to an account by name", "columns": [{ "label": "Kind of posting" }, { "label": "Account" }, { "label": "Narrower, when it differs" }], "rows": [
+        ["Marketplace commissions", { "pill": "bad", "text": "No account: postings are refused" }, "Add a narrower one"],
+        ["Marketplace fees", { "pill": "bad", "text": "No account: postings are refused" }, "Add a narrower one"],
+        ["Tips kept by the house", { "pill": "bad", "text": "No account: postings are refused" }, "Add a narrower one"],
+        ["Cash", "1110 Cash on hand", "Current account ••6789 → 1120"],
+        ["Receivables", "1200 Trade receivables", "—"],
+        ["Output VAT", "2200 Output VAT payable", "—"]
+      ] }
+    ] },
+    { "type": "attention", "title": "Needs an account", "items": [
+      { "tone": "bad", "icon": "alert", "title": "3 kinds of posting have no account", "body": "Postings of these kinds wait in the backlog. Choose an account and they are tried again by themselves.", "action": "Choose accounts" }
+    ] }
+  ]
+}
