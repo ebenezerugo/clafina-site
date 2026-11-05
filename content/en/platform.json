@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "title": "The Clafina platform: one record for the whole business",
+    "description": "How Clafina works: one record behind the web app, the till, the online shop and the phone app, with packs for your trade."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Platform",
+    "title": "One record behind every screen.",
+    "lede": "Clafina keeps sales, stock, money and people in one place. The web app, the till, your online shop and the phone app all read and write it, so nothing needs copying from one system to another."
+  },
+  "oneRecord": {
+    "eyebrow": "How it fits together",
+    "title": "Every document lands in the same books",
+    "intro": "An invoice, a till sale, a payslip or a stock count is written once. It posts to the ledger by its role, moves stock through one ledger of movements, and shows on every dashboard straight away.",
+    "diagramLabel": "One record: the web app, the till, the online shop, the phone app and the assistant all read and write one shared record of sales, stock, money and people.",
+    "centre": "One record",
+    "spokes": [
+      "Web app",
+      "Till",
+      "Online shop",
+      "Phone app",
+      "Assistant",
+      "Books",
+      "Stock",
+      "People"
+    ],
+    "points": [
+      {
+        "id": "ledger",
+        "title": "One set of books",
+        "body": "Sales, stock, buying, payroll, assets and production all post to one general ledger."
+      },
+      {
+        "id": "stock",
+        "title": "One stock ledger",
+        "body": "Every movement is kept in order, and the till and the shop sell from the same stock and prices, so the last unit is never sold twice."
+      },
+      {
+        "id": "party",
+        "title": "One record per customer or supplier",
+        "body": "A business you buy from and sell to is one record, not two."
+      },
+      {
+        "id": "live",
+        "title": "Always current",
+        "body": "Screens update as things happen. Dashboards say whether they agree with the books."
+      }
+    ]
+  },
+  "surfaces": {
+    "eyebrow": "The screens your people use",
+    "title": "The right screen for every job",
+    "items": [
+      {
+        "id": "web",
+        "title": "The web app",
+        "body": "For the office: books, sales, stock, buying, people and projects. Every page explains itself and shows what needs doing next."
+      },
+      {
+        "id": "till",
+        "title": "The till",
+        "body": "For the counter and the floor: on desktop, on Android and in the browser. It keeps selling offline within the allowance you set."
+      },
+      {
+        "id": "phone",
+        "title": "The phone app",
+        "body": "For owners and staff on the move: numbers, approvals, sales and stock counts. Approvals and money wait for a connection; other work queues until it is back."
+      },
+      {
+        "id": "shop",
+        "title": "Your online shop",
+        "body": "Designed in Storefront Studio in your own brand. It sells from the same stock and price books as the till."
+      }
+    ]
+  },
+  "packs": {
+    "eyebrow": "Industry packs",
+    "title": "One core, your trade on top",
+    "intro": "A pack switches on the screens a trade needs, uses its words and sets sensible defaults, without a separate system. You can run a restaurant, a hotel and a farm side by side.",
+    "examples": [
+      {
+        "pack": "Hotels and stays",
+        "words": "Guests and Stays"
+      },
+      {
+        "pack": "Charities",
+        "words": "Donors"
+      },
+      {
+        "pack": "Field service",
+        "words": "Jobs"
+      },
+      {
+        "pack": "Rentals",
+        "words": "Items"
+      },
+      {
+        "pack": "Property",
+        "words": "Tenants"
+      }
+    ],
+    "note": "Turn a pack on for every place or only some. Your own settings and words are kept when a pack is updated."
+  },
+  "everywhere": {
+    "eyebrow": "Works where you work",
+    "title": "Many currencies, offline, in your customer's language",
+    "items": [
+      {
+        "id": "currencies",
+        "title": "Every currency",
+        "body": "Every amount carries its currency. The books keep the rate, the amount in your base currency, and the gain or loss."
+      },
+      {
+        "id": "languages",
+        "title": "Your customer's language",
+        "body": "Document templates pick the recipient's language first, then your organisation's."
+      },
+      {
+        "id": "offline",
+        "title": "Offline where it matters",
+        "body": "The till, the shop-floor screen and asset checks keep working without a connection and catch up later."
+      }
+    ]
+  },
+  "security": {
+    "eyebrow": "Security",
+    "title": "Specific about how your data is kept safe",
+    "items": [
+      {
+        "text": "Two-step sign-in with codes that expire, and single sign-on with SAML or OIDC."
+      },
+      {
+        "text": "A list of your signed-in devices, each of which you can sign out from anywhere."
+      },
+      {
+        "text": "Secrets for your connections are sealed with AES-256-GCM and never shown again."
+      },
+      {
+        "text": "API keys are stored hashed and shown once."
+      },
+      {
+        "text": "Finance keeps a hash-chained audit trail and stops anyone approving their own payment."
+      },
+      {
+        "text": "Money-moving requests carry an idempotency key, so a retry never pays twice."
+      },
+      {
+        "text": "Our support team reaches your account only with your consent, read-only by default and recorded."
+      },
+      {
+        "text": "Client records are encrypted under a key for each organisation, and every read is logged."
+      },
+      {
+        "text": "Certified to ISO 27001 and SOC 2 Type II.",
+        "claim": "claims.complianceLabels"
+      },
+      {
+        "text": "99.9% uptime, measured every minute.",
+        "claim": "claims.uptime"
+      }
+    ]
+  },
+  "connect": {
+    "eyebrow": "Connect",
+    "title": "Works with the rest of your tools",
+    "items": [
+      {
+        "id": "api",
+        "title": "API keys and OAuth",
+        "body": "Give another system its own key, or let it connect through OAuth."
+      },
+      {
+        "id": "webhooks",
+        "title": "Signed webhooks",
+        "body": "Clafina tells your systems when something happens, signed with HMAC-SHA256 so they know it was us."
+      },
+      {
+        "id": "ai",
+        "title": "Your own AI tools",
+        "body": "Connect outside AI assistants to your records through Clafina's MCP server."
+      }
+    ]
+  },
+  "cta": {
+    "title": "See it with your own trade's screens.",
+    "body": "Start free, or book a demo and we will walk you through the screens your team would use.",
+    "primary": "Start free",
+    "secondary": "Book a demo"
+  }
+}
