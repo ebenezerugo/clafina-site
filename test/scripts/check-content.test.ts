@@ -49,3 +49,9 @@ describe('screen content', () => {
     ]);
   });
 });
+
+describe('screen specs in content', () => {
+  it('reports spec problems with the file and path', () => {
+    expect(checkContent('test/fixtures/content-specs', 'preview')).toEqual(['en/screens/bad-spec.json blocks.0.rows.0 has 1 cells for 2 columns']);
+  });
+});

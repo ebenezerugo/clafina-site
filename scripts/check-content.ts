@@ -2,6 +2,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CONTENT_SCHEMAS } from '../src/content/registry';
+import { checkScreenSpec } from '../src/content/screen-spec';
 import { LOCALE_CODES, isLocale } from '../src/config/locales';
 import { SWITCHES, localeIndexed } from '../src/config/switches';
 import { buildMode, type BuildMode } from '../src/lib/build-mode';
@@ -99,6 +100,7 @@ export function checkContent(root: string, mode: BuildMode = buildMode()): strin
       const data = JSON.parse(readFileSync(join(dir, file), 'utf8')) as Json;
       textProblems(where, data, '', false, problems, true);
       if (!data || typeof data !== 'object' || Array.isArray(data) || data.illustrative !== true) problems.push(`${where} is not marked illustrative`);
+      else if (data.spec === 1) problems.push(...checkScreenSpec(data).map((p) => `${where} ${p}`));
     }
   }
   if (mode === 'production') {

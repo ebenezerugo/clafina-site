@@ -1,0 +1,1 @@
+{ "spec": 1, "illustrative": true, "label": "Illustrative example: x.", "currency": "NGN", "frame": "app", "org": { "initials": "BH", "name": "B", "place": "x" }, "title": "T", "blocks": [ { "type": "table", "columns": [ { "label": "A" }, { "label": "B" } ], "rows": [ [ "only" ] ] } ] }

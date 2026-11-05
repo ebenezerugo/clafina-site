@@ -12,8 +12,15 @@ import { PhoneHome } from '@/screens/PhoneHome';
 import { TillSell } from '@/screens/TillSell';
 import { ShopPhone } from '@/screens/ShopPhone';
 import { LedgerEntry } from '@/screens/LedgerEntry';
+import { SpecScreen } from '@/screens/SpecScreen';
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 export const metadata: Metadata = { title: 'Screen kit · Clafina', robots: { index: false, follow: false } };
+
+function isSpec(id: string): boolean {
+  try { return JSON.parse(readFileSync(join(process.cwd(), 'content', 'en', 'screens', `${id}.json`), 'utf8')).spec === 1; } catch { return false; }
+}
 
 const org = { initials: 'BH', name: 'Bright Harbour Traders (example)', place: 'Main store' };
 
@@ -98,6 +105,15 @@ export default async function ScreenGallery({ params }: { params: Promise<{ loca
           <PhoneHome locale={raw} />
           <ShopPhone locale={raw} />
         </div>
+      </section>
+
+      <section aria-labelledby="screens-spec" className="grid gap-6">
+        <h2 id="screens-spec" className="text-xl font-bold">Screens drawn from data</h2>
+        {readdirSync(join(process.cwd(), 'content', 'en', 'screens'))
+          .filter((f) => f.endsWith('.json') && f.includes('"spec"') === false)
+          .map((f) => f.replace(/\.json$/, ''))
+          .filter((id) => isSpec(id))
+          .map((id) => <div key={id} className={id.endsWith('-phone') ? 'max-w-[320px]' : ''}><p className="mb-2 text-sm text-muted">{id}</p><SpecScreen locale={raw} id={id} /></div>)}
       </section>
     </main>
   );

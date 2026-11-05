@@ -1,0 +1,31 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the invoices list in the web app, with what is owed, what is overdue and each invoice's status.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Sell", "items": [{ "label": "Sales" }, { "label": "Quotations" }, { "label": "Sales orders" }, { "label": "Invoices", "badge": "7", "active": true }, { "label": "Receipts" }] }
+  ],
+  "title": "Invoices",
+  "subtitle": "What customers owe you, oldest first.",
+  "actions": [{ "label": "Send reminders" }, { "label": "New invoice", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "receipt", "label": "Owed to you", "value": { "money": 6730400 }, "note": "25 invoices" },
+      { "icon": "alert", "label": "Overdue", "value": { "money": 1840000 }, "change": { "tone": "bad", "text": "7 invoices" } },
+      { "icon": "clock", "label": "Customers pay in", "value": "31 days", "note": "On average, last 90 days" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Number" }, { "label": "Customer" }, { "label": "Due" }, { "label": "Status" }, { "label": "Amount", "numeric": true }], "rows": [
+      ["INV-0412", { "avatar": "TS", "text": "Tide Street Stores" }, "2 Nov", { "pill": "good", "text": "Paid" }, { "money": 420000 }],
+      ["INV-0411", { "avatar": "KM", "text": "Kite Market Co." }, "4 Oct", { "pill": "bad", "text": "31 days overdue" }, { "money": 1120000 }],
+      ["INV-0410", { "avatar": "LV", "text": "Lantern Valley Foods" }, "12 Nov", { "pill": "info", "text": "Sent" }, { "money": 86500 }],
+      ["INV-0409", { "avatar": "OR", "text": "Orchard Row Pharmacy" }, "9 Nov", { "pill": "warn", "text": "Part paid" }, { "money": 315000 }],
+      ["INV-0408", { "avatar": "SG", "text": "Sandgate Hardware" }, "28 Oct", { "pill": "bad", "text": "8 days overdue" }, { "money": 720000 }]
+    ] }
+  ]
+}
