@@ -1,0 +1,59 @@
+{
+  "illustrative": true,
+  "label": "Illustrative example: the phone app home page. Today's sales, cash in the bank and the items that need the owner.",
+  "currency": "NGN",
+  "org": {
+    "initials": "BH",
+    "name": "Bright Harbour Traders",
+    "place": "Main store"
+  },
+  "tabs": [
+    {
+      "label": "Home",
+      "icon": "home",
+      "active": true
+    },
+    {
+      "label": "Sales",
+      "icon": "sales"
+    },
+    {
+      "label": "New",
+      "icon": "plus"
+    },
+    {
+      "label": "Money",
+      "icon": "money"
+    },
+    {
+      "label": "More",
+      "icon": "more"
+    }
+  ],
+  "greeting": "Good morning",
+  "intro": "How the business is doing today, and what needs you first.",
+  "salesToday": {
+    "label": "Sales today",
+    "amount": 2486500,
+    "change": "+12.4%",
+    "note": "So far today, VAT included."
+  },
+  "attentionTitle": "Needs your attention",
+  "attention": [
+    {
+      "tone": "bad",
+      "icon": "alert",
+      "title": "3 invoices are 30+ days overdue",
+      "amount": 1120000,
+      "body": "from 3 customers. A reminder brings money in sooner.",
+      "action": "Send reminders"
+    },
+    {
+      "tone": "warn",
+      "icon": "check",
+      "title": "4 requests need your approval",
+      "body": "The oldest is a purchase order from two days ago.",
+      "action": "Review requests"
+    }
+  ]
+}

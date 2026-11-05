@@ -1,0 +1,89 @@
+{
+  "illustrative": true,
+  "label": "Illustrative example: a journal entry in the books waiting for approval. Two balanced lines, and what the entry will do to the month's numbers once posted.",
+  "currency": "NGN",
+  "org": {
+    "initials": "BH",
+    "name": "Bright Harbour Traders",
+    "place": "Main store"
+  },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    {
+      "items": [
+        {
+          "label": "Dashboard"
+        },
+        {
+          "label": "Inbox",
+          "badge": "3"
+        }
+      ]
+    },
+    {
+      "label": "Money",
+      "items": [
+        {
+          "label": "Accounts"
+        },
+        {
+          "label": "Journal entries",
+          "active": true
+        },
+        {
+          "label": "Bank"
+        },
+        {
+          "label": "Reports"
+        }
+      ]
+    }
+  ],
+  "title": "JE-1282",
+  "subtitle": "19 October · written by hand · accrue October rent",
+  "status": "In approval",
+  "steps": [
+    "Draft",
+    "In approval",
+    "Approved",
+    "Posted"
+  ],
+  "current": 1,
+  "linesTitle": "Lines",
+  "balanced": "Balanced",
+  "columns": {
+    "account": "Account",
+    "description": "Description",
+    "debit": "Debit",
+    "credit": "Credit"
+  },
+  "lines": [
+    {
+      "account": "6200 Rent",
+      "description": "October rent, warehouse",
+      "debit": 850000
+    },
+    {
+      "account": "2500 Accruals",
+      "description": "Rent not yet paid",
+      "credit": 850000
+    }
+  ],
+  "effectTitle": "What this does to your numbers",
+  "effect": [
+    {
+      "label": "Rent (an expense)",
+      "amount": 850000,
+      "note": "Profit for October falls"
+    },
+    {
+      "label": "Accruals (money you owe)",
+      "amount": 850000,
+      "note": "Owed, not yet paid"
+    }
+  ],
+  "approve": "Approve",
+  "sendBack": "Send back",
+  "rule": "Entries above ₦500,000 need the finance manager. Someone else wrote it, so you are the second pair of eyes."
+}
