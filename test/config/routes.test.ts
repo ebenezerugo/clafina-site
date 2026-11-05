@@ -13,7 +13,9 @@ describe('routes', () => {
     expect(new Set(ROUTES.map((r) => r.id)).size).toBe(ROUTES.length);
   });
   it('lists the pages built so far', () => {
-    expect(ROUTES.filter((r) => r.built && !('previewOnly' in r)).map((r) => r.id)).toEqual(['home', 'platform', 'pricing', 'pricing-compare', 'demo', 'contact-sales', 'product-sales']);
+    const built = ROUTES.filter((r) => r.built && !('previewOnly' in r)).map((r) => r.id);
+    expect(built.filter((id) => !id.startsWith('product-'))).toEqual(['home', 'platform', 'pricing', 'pricing-compare', 'demo', 'contact-sales']);
+    expect(built.filter((id) => id.startsWith('product-'))).toHaveLength(21);
   });
   it('writes paths with leading and trailing slashes', () => {
     expect(ROUTES.every((r) => r.path.startsWith('/') && r.path.endsWith('/'))).toBe(true);
