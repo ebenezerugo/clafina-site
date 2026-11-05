@@ -1,7 +1,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CONTENT_SCHEMAS } from '../src/content/schema';
+import { CONTENT_SCHEMAS } from '../src/content/registry';
 import { LOCALE_CODES, isLocale } from '../src/config/locales';
 import { SWITCHES, localeIndexed } from '../src/config/switches';
 import { buildMode, type BuildMode } from '../src/lib/build-mode';

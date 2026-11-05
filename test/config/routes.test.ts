@@ -12,8 +12,8 @@ describe('routes', () => {
     expect(new Set(ROUTES.map((r) => r.path)).size).toBe(ROUTES.length);
     expect(new Set(ROUTES.map((r) => r.id)).size).toBe(ROUTES.length);
   });
-  it('only has the home page built in phase 1', () => {
-    expect(ROUTES.filter((r) => r.built && !('previewOnly' in r)).map((r) => r.id)).toEqual(['home']);
+  it('lists the pages built so far', () => {
+    expect(ROUTES.filter((r) => r.built && !('previewOnly' in r)).map((r) => r.id)).toEqual(['home', 'pricing', 'pricing-compare']);
   });
   it('writes paths with leading and trailing slashes', () => {
     expect(ROUTES.every((r) => r.path.startsWith('/') && r.path.endsWith('/'))).toBe(true);

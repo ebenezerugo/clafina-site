@@ -38,6 +38,3 @@ export const HomeContent = z.object({
   cta: z.object({ title: z.string().min(1), body: z.string().min(1) }),
 });
 export type HomeContent = z.infer<typeof HomeContent>;
-
-/** Content files with a fixed shape, by id. Later phases add theirs here. */
-export const CONTENT_SCHEMAS: Record<string, z.ZodType> = { home: HomeContent };
