@@ -16,8 +16,8 @@ const internal = <const I extends string>(id: I, path: string) => ({ id, path, g
 export const ROUTES = [
   r('home', '/', 'core', true),
   r('platform', '/platform/', 'core'),
-  r('pricing', '/pricing/', 'core'),
-  r('pricing-compare', '/pricing/compare/', 'core'),
+  r('pricing', '/pricing/', 'core', true),
+  r('pricing-compare', '/pricing/compare/', 'core', true),
   r('demo', '/demo/', 'core'),
   r('contact-sales', '/contact-sales/', 'core'),
   r('start', '/start/', 'core'),

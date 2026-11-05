@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "Compare plans · Clafina",
+    "description": "Every Clafina plan side by side: users, places, tills and what each one includes."
+  },
+  "title": "Compare every plan",
+  "lede": "The same record on every plan. Here is what each one adds.",
+  "limitsGroup": "Limits",
+  "featuresGroup": "What is included",
+  "included": "Included",
+  "notIncluded": "Not included",
+  "feature": "Feature"
+}

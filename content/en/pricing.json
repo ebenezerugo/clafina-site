@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "Pricing · Clafina",
+    "description": "Plans for every size of business: start free, grow into Growth or Business, or talk to us about Enterprise."
+  },
+  "hero": {
+    "eyebrow": "Pricing",
+    "title": "Start free. Pay as the business grows.",
+    "lede": "Every plan runs on the same record, with the same web app, till and phone app. Bigger plans add people, places and controls."
+  },
+  "pricesFor": "Prices for",
+  "perMonth": "per month",
+  "free": "Free",
+  "talkToUs": "Talk to us",
+  "mostChosen": "Most chosen",
+  "editionNote": {
+    "global": "Prices in US dollars.",
+    "ng": "Prices in naira for businesses in Nigeria.",
+    "latam": "Prices in US dollars for Latin America."
+  },
+  "plans": {
+    "free": {
+      "name": "Free",
+      "tagline": "For trying Clafina and for very small shops.",
+      "cta": "Start free"
+    },
+    "growth": {
+      "name": "Growth",
+      "tagline": "For a business with a team and more than one place.",
+      "cta": "Start on Growth"
+    },
+    "business": {
+      "name": "Business",
+      "tagline": "For growing companies that need approvals and integrations.",
+      "cta": "Start on Business"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "tagline": "For groups with many branches and their own rules.",
+      "cta": "Talk to sales"
+    }
+  },
+  "limits": {
+    "users": "Users",
+    "locations": "Places",
+    "tills": "Tills",
+    "unlimited": "No limit"
+  },
+  "features": {
+    "books": "Books and accounts",
+    "sales": "Quotations, invoices and receipts",
+    "stock": "Products and stock",
+    "till": "The till",
+    "shop": "Online shop",
+    "payroll": "Payroll",
+    "packs": "Industry packs",
+    "approvals": "Approvals and controls",
+    "api": "API and webhooks",
+    "audit": "Audit trail",
+    "sso": "Single sign-on",
+    "priority-support": "Priority support",
+    "onboarding": "Guided set-up"
+  },
+  "compareLink": "Compare every plan",
+  "samples": "Plans and prices are proposals and may change before launch.",
+  "faqTitle": "Questions about pricing",
+  "faq": [
+    {
+      "q": "Can I change plan later?",
+      "a": "Yes. The owner can move to another plan from Billing at any time, and usage is measured each day."
+    },
+    {
+      "q": "Which currency will I pay in?",
+      "a": "Your country edition sets it: naira in Nigeria, US dollars elsewhere for now."
+    },
+    {
+      "q": "What happens when I need more?",
+      "a": "Move up a plan, or talk to us about Enterprise if you have many branches or your own rules."
+    }
+  ],
+  "fallback": {
+    "title": "Plans are being finalised",
+    "body": "Talk to us and we will find the right plan for your business.",
+    "cta": "Contact sales"
+  }
+}
