@@ -1,0 +1,146 @@
+{
+  "kind": "help-module",
+  "module": "accommodation",
+  "sources": [
+    "commerce-api/documentation/ACCOMMODATION.md",
+    "commerce-api/documentation/BOOKINGS.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/accommodation/presentation"
+  ],
+  "intro": "The accommodation pack, for hotels, guest houses and short-lets: the front desk, the room rack, housekeeping, each guest's bill and the night audit. Switch it on for the places that let rooms in Settings › Industry packs; the rooms and stays themselves live in Bookings.",
+  "start": [
+    "Switch the accommodation pack on in Settings › Industry packs, for the places that let rooms.",
+    "Add your room types and rooms in Bookings › Rooms, tables and staff, and the stay guests book in Offers and rates.",
+    "Add your rate plans, seasons and special dates on Rates.",
+    "Open the Front desk each morning: who is arriving, who is in the house and who is leaving."
+  ],
+  "articles": [
+    {
+      "slug": "check-in-a-guest",
+      "title": "Check a guest in",
+      "summary": "The front desk lists today's arrivals with whether their room is ready. Check them in and their folio opens.",
+      "page": "/accommodation/front-desk",
+      "steps": [
+        { "lead": "Open the Front desk", "rest": "and find the guest under Arriving." },
+        { "lead": "Check the room is ready.", "rest": "A guest goes only into an inspected room, or a clean one if your settings allow it. Where it says Check before check-in, sort that out first." },
+        { "lead": "Press Check in.", "rest": "The guest moves to In the house." },
+        { "lead": "Press Open folio", "rest": "to see their bill." }
+      ],
+      "tips": [
+        "For someone who walks in without a booking, press Walk-in. The new booking starts on today.",
+        "Press New booking to take a booking for another day."
+      ],
+      "related": ["check-out-and-settle", "get-rooms-ready"]
+    },
+    {
+      "slug": "check-out-and-settle",
+      "title": "Charge, take payment and check a guest out",
+      "summary": "A folio holds everything a guest owes: room nights, charges from the tills and anything you add. Take payment and settle it when they leave.",
+      "page": "/accommodation/folios",
+      "steps": [
+        { "lead": "Open the guest's folio", "rest": "from Folios or the Front desk." },
+        { "lead": "Press Charge", "rest": "to add something by hand: what it is, the quantity and unit price, and who it is billed to. Press Post the charge." },
+        { "lead": "Press Take a payment,", "rest": "enter the amount, how it came in and a reference, and press Take it." },
+        { "lead": "Press Check out", "rest": "on the Front desk when they leave. The room is marked dirty and a departure clean is asked for." },
+        { "lead": "Press Settle", "rest": "on the folio once nothing is owing." }
+      ],
+      "tips": [
+        "A till at any outlet can charge to the room by its number, and the charge lands on the open folio of the guest staying there.",
+        "Service charge and VAT are worked out on each charge and shown on the folio, never hidden in the rate."
+      ],
+      "related": ["split-a-bill-with-a-company", "correct-a-folio-line"]
+    },
+    {
+      "slug": "split-a-bill-with-a-company",
+      "title": "Bill a company for a guest's stay",
+      "summary": "Say a company pays the room nights or everything, and the guest pays the rest. The company's share becomes one invoice when you settle.",
+      "page": "/accommodation/folios",
+      "steps": [
+        { "lead": "Open the folio", "rest": "and press Split with a company." },
+        { "lead": "Choose the company", "rest": "and what it pays: the room nights, everything, or nothing." },
+        { "lead": "Press Split.", "rest": "Lines the company pays are billed to it; the guest owes the rest." },
+        { "lead": "Press Settle", "rest": "when the stay ends. The company's share is made into one customer invoice." }
+      ],
+      "related": ["check-out-and-settle"]
+    },
+    {
+      "slug": "correct-a-folio-line",
+      "title": "Correct a charge on a folio",
+      "summary": "A posted line never changes. A correction adds a line that turns it round, so the bill shows what happened.",
+      "page": "/accommodation/folios",
+      "steps": [
+        { "lead": "Open the folio", "rest": "and find the line under Lines." },
+        { "lead": "Press Correct.", "rest": "Leave the quantity blank to turn round all of it, or enter part of it." },
+        { "lead": "Give the reason", "rest": "and press Add the correcting line. The first line shows as corrected." }
+      ],
+      "tips": [
+        "A correction can never take off more than the line it corrects.",
+        "A folio with no lines can be voided instead, with a reason."
+      ],
+      "related": ["check-out-and-settle"]
+    },
+    {
+      "slug": "move-a-guest-to-another-room",
+      "title": "Move a stay to another room",
+      "summary": "The room rack shows each room by night with a bar for each stay. Move a stay to a free room in a few clicks.",
+      "page": "/accommodation/room-rack",
+      "steps": [
+        { "lead": "Open the Room rack", "rest": "and find the week. Use Today or the arrows to move about." },
+        { "lead": "Select the stay's bar,", "rest": "or drag it onto another room's row." },
+        { "lead": "Choose the room", "rest": "under Move to, and press Move. The server checks the room is free first." }
+      ],
+      "tips": [
+        "A move is refused when another stay holds that room on those nights. Nothing changes.",
+        "Stays with no room yet are listed under the rack, ready to be given one."
+      ]
+    },
+    {
+      "slug": "get-rooms-ready",
+      "title": "Get rooms cleaned and ready",
+      "summary": "Housekeeping shows which rooms are dirty, clean, inspected or out of order, with the cleans asked for and who does them.",
+      "page": "/accommodation/housekeeping",
+      "steps": [
+        { "lead": "Open Housekeeping", "rest": "for the day. Rooms needed first for an early arrival say so." },
+        { "lead": "Press Ask for a clean", "rest": "to add one: the room, what it is, such as a stayover or deep clean, and who it goes to. Press Ask." },
+        { "lead": "Press Start, then Finish", "rest": "on a task as the housekeeper works." },
+        { "lead": "Press Mark clean, then Inspect,", "rest": "as the room moves on. An inspected room is ready to sell." }
+      ],
+      "tips": [
+        "Take out of order needs a reason, and the room comes back dirty when you press Return to service.",
+        "Every change to a room is kept, with who made it."
+      ],
+      "related": ["check-in-a-guest"]
+    },
+    {
+      "slug": "set-room-rates",
+      "title": "Set room rates, seasons and special dates",
+      "summary": "A rate plan moves a room type's base rate, then seasons, weekends and special dates move it again. Try a price to see each step.",
+      "page": "/accommodation/rates",
+      "steps": [
+        { "lead": "Press New plan", "rest": "on Rates. Choose the room type and the rule: a share of the base rate, an amount on it, or a set price." },
+        { "lead": "Add a weekend uplift and a minimum stay", "rest": "if you need them, and press Make the plan." },
+        { "lead": "Press Add a season", "rest": "with its first and last day as month and day, and how it moves the rate. Press Add the season." },
+        { "lead": "Press Add a special date", "rest": "for one night that is priced apart, needs a longer stay or is closed." },
+        { "lead": "Use Try a price:", "rest": "choose the room type, plan, arrival and departure, and press Price it." }
+      ],
+      "tips": [
+        "Seasons repeat every year and may run over the new year, but they may not overlap.",
+        "A special date with a price replaces everything before it for that night."
+      ]
+    },
+    {
+      "slug": "close-the-day",
+      "title": "Close the day with the night audit",
+      "summary": "The night audit posts a room night to each guest in the house, marks no-shows and counts the folios still owing.",
+      "page": "/accommodation/night-audit",
+      "steps": [
+        { "lead": "Let it run by itself.", "rest": "Each night, after the place's audit time, yesterday is closed for you." },
+        { "lead": "To close a past day by hand,", "rest": "go to Close a day by hand and choose the day to close." },
+        { "lead": "Press Close the day.", "rest": "The list shows the nights posted, the no-shows and the folios still owing." }
+      ],
+      "tips": [
+        "A day is closed once. A room night is never posted twice to the same folio."
+      ]
+    }
+  ]
+}

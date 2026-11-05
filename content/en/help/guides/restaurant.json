@@ -1,0 +1,195 @@
+{
+  "kind": "help-module",
+  "module": "restaurant",
+  "sources": [
+    "commerce-api/documentation/RESTAURANT.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/restaurant/presentation"
+  ],
+  "intro": "The restaurant pack: tables on a floor, menus with options, the kitchen's stations, recipes with what each dish costs, and tips kept apart from sales. Switch it on for the places that serve food in Settings › Industry packs; cafés, bars and counter service use it too.",
+  "start": [
+    "Switch the restaurant pack on in Settings › Industry packs, for every place or only the places that serve food.",
+    "Check Restaurant rules: service charge, tips, split bills, voids and comps, and what short stock does.",
+    "Make your first menu and put dishes from the catalogue on it. Prices come from the price book.",
+    "Draw the floor with its tables, so the tills and the Floor screen show them.",
+    "Set up the kitchen, so each dish goes to the station that makes it."
+  ],
+  "articles": [
+    {
+      "slug": "make-a-menu",
+      "title": "Make a menu and put dishes on it",
+      "summary": "Say when a menu is served and where, add sections, then put dishes from the catalogue on it. Each dish is priced from the price book.",
+      "page": "/restaurant/menus",
+      "steps": [
+        { "lead": "Press New menu", "rest": "on Menus." },
+        { "lead": "Give it a name, code and kind,", "rest": "then under When it is served set the days and hours. Leave the hours empty and it is always served." },
+        { "lead": "Under Served at, tick the places", "rest": "that serve it, and press Make the menu." },
+        { "lead": "Open the menu and press Add a section,", "rest": "such as Starters or Mains, and say the course its dishes are served as." },
+        { "lead": "Press Add a dish", "rest": "on the section and find it in the catalogue. Add what guests should know: what it contains and what it is suitable for." },
+        { "lead": "Choose the options it asks,", "rest": "such as how it is cooked, then press Put it on the menu." }
+      ],
+      "tips": [
+        "A menu never keeps a price of its own. The dish's price comes from the price book at the place, so one dish can sit on several menus.",
+        "A dish is taken off the menu, never deleted. Press Put back to bring it back."
+      ],
+      "related": ["add-options", "sell-a-set-menu", "change-prices-by-time"]
+    },
+    {
+      "slug": "add-options",
+      "title": "Let guests choose how a dish comes",
+      "summary": "An option group asks the guest a question with the dish, such as how it is cooked or which extras, with what each choice adds to the price.",
+      "page": "/restaurant/option-groups",
+      "steps": [
+        { "lead": "Press New option group", "rest": "on Options." },
+        { "lead": "Name it and set the fewest and most to pick.", "rest": "One or more to pick makes it required; nothing makes it optional. Press Save." },
+        { "lead": "Press Add an option", "rest": "for each choice, with what it adds to the price, then Save." },
+        { "lead": "Open the dish on its menu", "rest": "and tick the group under Asks the guest." }
+      ],
+      "tips": [
+        "An option never takes money off the price.",
+        "A group used on dishes cannot be retired. Take it off the dishes first."
+      ],
+      "related": ["make-a-menu"]
+    },
+    {
+      "slug": "sell-a-set-menu",
+      "title": "Sell a set menu at one price",
+      "summary": "Turn a dish into a set menu: a fixed price over choices, such as a starter, a main and a drink, with an upgrade where one dish costs more.",
+      "page": "/restaurant/menus",
+      "before": ["The dishes guests choose from must already be plain dishes on a menu."],
+      "steps": [
+        { "lead": "Open the menu", "rest": "and find the dish that is the set." },
+        { "lead": "Open its Actions and choose Set menu…", "rest": "A drawer opens." },
+        { "lead": "Press Add a choice", "rest": "for each part of the set, give it a name and set the fewest and most to pick." },
+        { "lead": "Tick the dishes for each choice,", "rest": "and add an upgrade to any dish that costs a little more." },
+        { "lead": "Press Save the set menu.", "rest": "The dish carries a badge on the menu." }
+      ],
+      "tips": [
+        "A set cannot be a choice in another set.",
+        "Each dish of a set goes to its own station and shows on the bill as a line of its own."
+      ],
+      "related": ["make-a-menu"]
+    },
+    {
+      "slug": "draw-the-floor",
+      "title": "Draw the floor and its tables",
+      "summary": "Add your floors, such as inside or the terrace, then add tables and drag them where they stand.",
+      "page": "/restaurant/floor-plan",
+      "steps": [
+        { "lead": "Press Add a floor", "rest": "on Draw the floor, give it a name and size, and press Add." },
+        { "lead": "Press Add a table.", "rest": "Give it a name, a shape and its seats, with the fewest it is laid for, and press Add." },
+        { "lead": "Drag each table into place,", "rest": "or select it and move it with the arrow keys. Hold Shift for a bigger step." },
+        { "lead": "Press Save the layout.", "rest": "Every table moved is saved together, and the tills see the new floor." }
+      ],
+      "tips": [
+        "A table with a party at it cannot be retired.",
+        "Tables never sit on top of each other: a move that would do that is refused and nothing moves."
+      ],
+      "related": ["set-up-the-kitchen"]
+    },
+    {
+      "slug": "set-up-the-kitchen",
+      "title": "Send each dish to the right station",
+      "summary": "Stations are the places in the kitchen or bar that make dishes, each with its own screen. Rules say which station makes what.",
+      "page": "/restaurant/kitchen",
+      "steps": [
+        { "lead": "Press Set up a kitchen and a bar", "rest": "on a place with no stations yet. You get a kitchen and a bar, with drinks going to the bar." },
+        { "lead": "Press New station", "rest": "for any other, such as the grill or the pass, and press Make the station." },
+        { "lead": "Press Add a rule", "rest": "to send a dish, a catalogue category or a course to a station." },
+        { "lead": "Say where anything no other rule names goes,", "rest": "then press Save the rules. They are saved as a whole set." },
+        { "lead": "Check Where dishes go", "rest": "to see which station each dish of the place goes to." }
+      ],
+      "tips": [
+        "A station set on the dish itself beats every rule. Then a rule for the dish beats one for its category, which beats one for its course.",
+        "A station used by a dish or a rule cannot be retired."
+      ],
+      "related": ["make-a-menu"]
+    },
+    {
+      "slug": "write-a-recipe",
+      "title": "Write a recipe and see what a dish earns",
+      "summary": "Say what one batch of a dish uses. Its ingredients leave stock when the kitchen starts it, and you see the cost of a portion and its margin.",
+      "page": "/restaurant/recipes",
+      "steps": [
+        { "lead": "Press New recipe", "rest": "on Recipes and dish costs, and find the dish." },
+        { "lead": "Fill in One batch makes", "rest": "with the number of portions the recipe gives." },
+        { "lead": "Press Add an ingredient", "rest": "for each one, with the amount, the unit the kitchen weighs in and how much is lost in preparation." },
+        { "lead": "Press Make the recipe.", "rest": "The list shows the cost of a portion, the price, what it earns without tax and the margin." }
+      ],
+      "tips": [
+        "A dish with a recipe must not be counted in stock itself, or it would leave stock twice. Where the stock check warns about this, press Fix stock type.",
+        "An ingredient can have a recipe of its own, such as a sauce or a dough.",
+        "An ingredient never received has no cost, so the dish shows no margin until it has one."
+      ],
+      "related": ["record-waste", "mark-a-dish-sold-out"]
+    },
+    {
+      "slug": "mark-a-dish-sold-out",
+      "title": "Mark a dish sold out",
+      "summary": "Say a dish has run out, and every till and menu at the place stops selling it until you bring it back.",
+      "page": "/restaurant/sold-out",
+      "steps": [
+        { "lead": "Find the dish", "rest": "on Sold out: type two letters of its name." },
+        { "lead": "Say why,", "rest": "and press Sold out. Every till at the place hears it at once." },
+        { "lead": "Press Bring back", "rest": "when it is available again." }
+      ],
+      "tips": [
+        "Restaurant rules can mark a dish sold out by itself when its ingredients cannot make another portion. It comes back when stock arrives."
+      ],
+      "related": ["write-a-recipe"]
+    },
+    {
+      "slug": "change-prices-by-time",
+      "title": "Change prices for happy hour or takeaway",
+      "summary": "A price rule changes the price book's price by time, day, date or kind of order, without keeping a second price list.",
+      "page": "/restaurant/prices",
+      "steps": [
+        { "lead": "Press New rule", "rest": "on Prices." },
+        { "lead": "Say what it is for:", "rest": "every dish, a catalogue category or one dish, and the kinds of order, such as dine in or takeaway." },
+        { "lead": "Say when it applies:", "rest": "the days, the hours and any dates." },
+        { "lead": "Set the change", "rest": "and its value, where it applies and its priority, then press Make the rule." },
+        { "lead": "Use Try it", "rest": "to choose a kind of order and a time, and press Show prices to see what guests would pay." }
+      ],
+      "tips": [
+        "Rules never add up: when two apply, the higher priority wins.",
+        "A dish keeps the price it was given when it was added to the tab."
+      ],
+      "related": ["make-a-menu"]
+    },
+    {
+      "slug": "record-waste",
+      "title": "Record stock that was lost",
+      "summary": "Take spoiled, dropped or expired stock out at once, costed. Dishes voided or comped at the till show here too.",
+      "page": "/restaurant/waste",
+      "steps": [
+        { "lead": "Press Record stock lost", "rest": "on Waste." },
+        { "lead": "Choose the item or dish", "rest": "and how much, in its unit. A dish takes out its ingredients." },
+        { "lead": "Say why,", "rest": "with a note if it helps, and press Take it out of stock." }
+      ],
+      "tips": [
+        "A loss bigger than the stock held is refused, as it is most likely a mistake.",
+        "Voids, comps and stock lost are totalled apart for the period."
+      ],
+      "related": ["write-a-recipe"]
+    },
+    {
+      "slug": "share-tips",
+      "title": "Share out tips and pay them",
+      "summary": "Tips are never sales. Share a period's tips by a policy, approve the shares and pay them in cash or through payroll.",
+      "page": "/restaurant/tips",
+      "before": ["A tip policy for the place, and the people who take part on its roster."],
+      "steps": [
+        { "lead": "Press New policy", "rest": "and say how tips are shared: each waiter keeps their own, or a pool shared by hours, by points for each role, or equally." },
+        { "lead": "Say what the house keeps and the card fee,", "rest": "how people are paid, and the roles, then press Make the policy." },
+        { "lead": "Press Add a person", "rest": "for each member of staff on the roster." },
+        { "lead": "Press Share a period's tips,", "rest": "choose the policy and the first and last day, and press Make the draft." },
+        { "lead": "Check each person's share.", "rest": "In a pool by hours, correct the hours and press Share again with these hours." },
+        { "lead": "Press Approve,", "rest": "then Pay the cash shares. Shares paid through payroll wait for the next payroll run." }
+      ],
+      "tips": [
+        "The shares always add up to what is shared out, to the cent.",
+        "A run nothing was paid from can be voided, and its tips go back to be shared again."
+      ]
+    }
+  ]
+}

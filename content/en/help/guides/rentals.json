@@ -1,0 +1,75 @@
+{
+  "kind": "help-module",
+  "module": "rentals",
+  "sources": [
+    "commerce-api/documentation/RENTALS.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/rentals/presentation"
+  ],
+  "intro": "The rentals pack, for equipment, party, car and tool hire: what you hire out, each agreement from hand-out to return, and what is due back. Switch it on in Settings › Industry packs for the places that hire things out.",
+  "start": [
+    "Switch the rentals pack on in Settings › Industry packs, for the places that hire things out.",
+    "Add each item you hire out on Items, with its rate and deposit, then add its units with their tag codes.",
+    "Reserve your first rental on Agreements, and hand it out when the customer collects it.",
+    "Check Returns due each day for what is late and what is due back."
+  ],
+  "articles": [
+    {
+      "slug": "add-an-item-to-hire",
+      "title": "Add something to hire out",
+      "summary": "An item is what you hire out, with its rate and deposit. Its units are the real pieces, each with a tag you scan at hand-out and return.",
+      "page": "/rentals/items",
+      "steps": [
+        { "lead": "Press New item", "rest": "on Items." },
+        { "lead": "Give it a name and rate,", "rest": "charged per day or per hour, and the deposit for each unit. Add its own late rate if it has one." },
+        { "lead": "Press Make the item,", "rest": "then open it." },
+        { "lead": "Enter the new unit's tag code", "rest": "and press Add the unit, once for each piece you own." },
+        { "lead": "Use Is it free?", "rest": "to check how many units are free for a period: enter from, back by and how many, and press Ask." }
+      ],
+      "tips": [
+        "A unit that needs mending can be taken off for mending, so nobody hires it. Press Put back when it is fixed.",
+        "Without its own late rate, an item's late fee follows your rentals settings."
+      ],
+      "related": ["hire-something-out"]
+    },
+    {
+      "slug": "hire-something-out",
+      "title": "Reserve and hand out a rental",
+      "summary": "Reserve the units for the customer's dates, then hand them out with each tag scanned, the customer's signature and the deposit.",
+      "page": "/rentals/agreements",
+      "steps": [
+        { "lead": "Press Reserve a rental", "rest": "on Agreements." },
+        { "lead": "Choose the customer, the item and how many,", "rest": "with From and Due back, and who brings it back: the customer or your collector. Press Reserve." },
+        { "lead": "Press Hand out", "rest": "on the rental when the customer collects it." },
+        { "lead": "Scan each unit's tag", "rest": "and note its condition." },
+        { "lead": "Let the customer sign", "rest": "for the condition." },
+        { "lead": "Enter the deposit held", "rest": "with a reference, and press Hand out." }
+      ],
+      "tips": [
+        "A unit is never held by two rentals at once.",
+        "Press Extend to give a new due time, with the reason."
+      ],
+      "related": ["take-a-rental-back", "add-an-item-to-hire"]
+    },
+    {
+      "slug": "take-a-rental-back",
+      "title": "Take a rental back and settle it",
+      "summary": "Scan each unit back, note any damage, then settle: rent, late fees and damage become one invoice, and the deposit pays them first.",
+      "page": "/rentals/returns-due",
+      "steps": [
+        { "lead": "Find the rental on Returns due", "rest": "and press Check in. The rental opens." },
+        { "lead": "Press Take it back.", "rest": "A drawer lists each unit on the rental." },
+        { "lead": "Tick each unit as its tag is scanned,", "rest": "and note its condition now." },
+        { "lead": "Tick Damaged if it is,", "rest": "and say what the damage comes to. The unit leaves the calendar until it is mended." },
+        { "lead": "Press Record the return.", "rest": "A late fee is charged for the time past due." },
+        { "lead": "Confirm or waive each damage charge", "rest": "under Charges." },
+        { "lead": "Press Settle,", "rest": "say where the rest of the deposit went, and press Settle the rental." }
+      ],
+      "tips": [
+        "Until the item is back, Returns due shows the late fee so far as an estimate.",
+        "A rental cannot be settled while a damage charge is still undecided."
+      ],
+      "related": ["hire-something-out"]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "kind": "help-module",
+  "module": "assistant",
+  "sources": [
+    "commerce-api/documentation/COMMERCE_AI.md",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "Ask questions about your own business, record a meeting and get its minutes, and have the quotations, tasks and messages that follow drafted for you. The Assistant works with your permissions and never sends, posts or pays by itself: you confirm each draft.",
+  "start": [
+    "Press New conversation and ask a question, such as who owes you the most.",
+    "Record your next meeting with Record a meeting, and read the minutes when they arrive.",
+    "Check the drafts it made and press Confirm or Decline on each.",
+    "Save a report you ask for often with Save as my report, or Pin to home."
+  ],
+  "articles": [
+    {
+      "slug": "ask-a-question",
+      "title": "Ask a question about your business",
+      "summary": "Ask in your own words and get an answer from your own records, with a table and a chart you can keep as a report.",
+      "page": "/assistant",
+      "steps": [
+        {
+          "lead": "Press New conversation,",
+          "rest": "or Ask the Assistant at the top of any page to open the same chat in a drawer."
+        },
+        {
+          "lead": "Type your question,",
+          "rest": "such as which invoices are overdue or what sold best last month."
+        },
+        {
+          "lead": "Read the answer.",
+          "rest": "It comes from the reports you may read, with a table whose rows open their records and a chart."
+        },
+        {
+          "lead": "Press Save as my report",
+          "rest": "to keep it as a report of your own, or Pin to home to show it on your dashboard too."
+        }
+      ],
+      "tips": [
+        "It only answers from what you may read, at the places you may see.",
+        "You can pin six reports to your dashboard."
+      ],
+      "related": [
+        "record-a-meeting",
+        "share-a-conversation"
+      ]
+    },
+    {
+      "slug": "record-a-meeting",
+      "title": "Record a meeting and check what it drafted",
+      "summary": "Record the meeting, get the minutes, then check the quotation, tasks and messages it drafted. Nothing happens until you confirm.",
+      "page": "/assistant",
+      "steps": [
+        {
+          "lead": "Press Record a meeting.",
+          "rest": "Allow the microphone if your browser asks, and tell people you are recording."
+        },
+        {
+          "lead": "Talk as normal.",
+          "rest": "Press Pause when you step out of the room, and Resume when you are back."
+        },
+        {
+          "lead": "Name the meeting if you like, and press Stop and send.",
+          "rest": "The minutes arrive in about 2 minutes."
+        },
+        {
+          "lead": "Open Drafts to check.",
+          "rest": "Each draft says where in the recording it came from. Press its moment to hear it."
+        },
+        {
+          "lead": "Answer any question a draft asks,",
+          "rest": "such as which of two customers was meant. To change a draft, press Change this, say what to change and press Send change."
+        },
+        {
+          "lead": "Press Confirm or Decline",
+          "rest": "on each draft. A quotation or order stays a draft until you take it further; a message goes only once you confirm it."
+        }
+      ],
+      "tips": [
+        "You can also attach a recording you already have, a picture or a file, or one from Drive.",
+        "Press Copy as minutes in the meeting notes to paste them into an email or a document.",
+        "Your organisation may keep recordings for a set number of days. The minutes, the transcript and the drafts stay after the recording is removed."
+      ],
+      "related": [
+        "ask-a-question",
+        "share-a-conversation"
+      ]
+    },
+    {
+      "slug": "share-a-conversation",
+      "title": "Share a conversation with a colleague",
+      "summary": "Let a colleague read a conversation and its minutes. They can read it but never write to it or confirm its drafts.",
+      "page": "/assistant",
+      "steps": [
+        {
+          "lead": "Open the conversation",
+          "rest": "and press Share conversation."
+        },
+        {
+          "lead": "Search for the colleague by name.",
+          "rest": "Only colleagues who may use the Assistant are offered."
+        },
+        {
+          "lead": "Press Share with",
+          "rest": "beside their name. They show under Shared with, and the conversation appears in their list as read only."
+        }
+      ],
+      "tips": [
+        "Sharing is refused if the conversation shows something the colleague may not read."
+      ],
+      "related": [
+        "record-a-meeting"
+      ]
+    }
+  ]
+}

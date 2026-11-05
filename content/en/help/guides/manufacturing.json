@@ -1,0 +1,694 @@
+{
+  "kind": "help-module",
+  "module": "manufacturing",
+  "sources": [
+    "commerce-api/documentation/MANUFACTURING.md",
+    "commerce-web/src/app/features/manufacturing/presentation"
+  ],
+  "intro": "Everything between deciding what to make and the finished goods reaching stock: what a product is made of and how, the plants, machines and people that make it, production orders and the shop floor, quality checks, and what each job cost. Larger jobs run as projects, with tasks, risks and a budget.",
+  "start": [
+    "Set up your plants and work centres in Manufacturing › Resources, with each work centre's working hours.",
+    "Add your machines and the people on the floor, with the skills each person holds.",
+    "Make a bill of materials and a routing for each product you make, and release them.",
+    "Make your first production order, plan it and release it to the floor.",
+    "Let operators do the work from My work. Stock moves and the cost builds up as they report."
+  ],
+  "articles": [
+    {
+      "slug": "set-up-a-plant",
+      "title": "Set up a plant and its production lines",
+      "summary": "Register the location where you make things, give it a manager, and add the lines its work centres stand on.",
+      "page": "/manufacturing/plants",
+      "before": [
+        "A plant is one of your organisation's locations. Add the location first if it is not there yet."
+      ],
+      "steps": [
+        {
+          "lead": "Open Plants",
+          "rest": "and find the location. One that is not set up yet still shows, and can still be used."
+        },
+        {
+          "lead": "Press Set up",
+          "rest": "and give it a short code, a kind (plant, warehouse or workshop) and a manager if you want one."
+        },
+        {
+          "lead": "Open the plant",
+          "rest": "to see its lines, work centres and machines as a tree, with its tools."
+        },
+        {
+          "lead": "Choose Add a production line",
+          "rest": "from Actions for each line in the plant."
+        }
+      ],
+      "tips": [
+        "Plants, lines, work centres, machines and tools are retired, never deleted. A plant or line can only be retired once nothing active stands in it."
+      ],
+      "related": [
+        "set-up-a-work-centre",
+        "add-a-machine"
+      ]
+    },
+    {
+      "slug": "set-up-a-work-centre",
+      "title": "Set up a work centre and its working hours",
+      "summary": "Say where work is done, how much it can take on at once, what an hour costs, and when it is open.",
+      "page": "/manufacturing/work-centres",
+      "steps": [
+        {
+          "lead": "Press New work centre",
+          "rest": "on Work centres."
+        },
+        {
+          "lead": "Give it a code and a name,",
+          "rest": "its plant and line, how many jobs it can work on at once, its efficiency and its cost rates per hour for labour, machine and overhead."
+        },
+        {
+          "lead": "Open the work centre",
+          "rest": "and go to Calendar."
+        },
+        {
+          "lead": "Press Add hours",
+          "rest": "for each day's working window, with any break, then Save hours."
+        },
+        {
+          "lead": "Choose the shifts it runs on,",
+          "rest": "if your shifts are kept in Human resources, and press Save shifts."
+        },
+        {
+          "lead": "Add closed days and extra hours",
+          "rest": "under Closed days and extra hours. The next two weeks are worked out below, so you can check them."
+        }
+      ],
+      "after": "Planning and the scheduler read this calendar to work out when work can be done.",
+      "tips": [
+        "Public holidays close a work centre unless you say it works on holidays. Extra hours still count.",
+        "A work centre with no hours set is taken as Monday to Friday, eight hours a day, and the plan says so."
+      ],
+      "related": [
+        "add-a-machine",
+        "schedule-the-work"
+      ]
+    },
+    {
+      "slug": "add-a-machine",
+      "title": "Add a machine and record when it stops",
+      "summary": "Register a machine in its work centre and keep its state up to date, so the schedule and the dashboard know whether it can work.",
+      "page": "/manufacturing/machines",
+      "steps": [
+        {
+          "lead": "Press New machine",
+          "rest": "on Machines."
+        },
+        {
+          "lead": "Choose its work centre",
+          "rest": "and add its make, model, serial number, capacity per hour and operating cost."
+        },
+        {
+          "lead": "Open the machine",
+          "rest": "to see its state, availability and utilisation over recent days."
+        },
+        {
+          "lead": "Press Change state",
+          "rest": "when it changes: running, idle, setup, maintenance, breakdown and so on. Say why, and since when if it was earlier."
+        },
+        {
+          "lead": "Choose Take out of use",
+          "rest": "from Actions when it will not work for a while. Bring back into use makes it available again."
+        }
+      ],
+      "tips": [
+        "Downtime needs a reason unless your settings say otherwise.",
+        "When a machine breaks down, the operations running on it are paused and the schedule is worked out again for the orders that were waiting for it."
+      ],
+      "related": [
+        "report-a-problem-on-the-floor",
+        "schedule-the-work"
+      ]
+    },
+    {
+      "slug": "add-people-and-skills",
+      "title": "Add people to the shop floor and record their skills",
+      "summary": "Give a member of staff a shop-floor profile and the skills they hold, so work goes to people who can do it.",
+      "page": "/manufacturing/people",
+      "before": [
+        "The person must be a member of staff in Human resources. Their shifts, holidays and leave are read from there."
+      ],
+      "steps": [
+        {
+          "lead": "Press Add a person",
+          "rest": "on People and choose the member of staff."
+        },
+        {
+          "lead": "Give their role",
+          "rest": "(operator, engineer, supervisor, inspector or technician), their home work centre, their cost rate and the most hours they work a day and a week."
+        },
+        {
+          "lead": "Open the person",
+          "rest": "and press Add a skill for each skill they hold, with a level from 1 to 10."
+        },
+        {
+          "lead": "Press Save skills.",
+          "rest": "Their certificates and the next two weeks of shifts and leave show on the same page."
+        }
+      ],
+      "tips": [
+        "Keep tools on Tools in the same way: press New tool, and Record a calibration done after each calibration. A tool shows as due soon or overdue before the date."
+      ],
+      "related": [
+        "make-a-routing",
+        "schedule-the-work"
+      ]
+    },
+    {
+      "slug": "make-a-bill-of-materials",
+      "title": "Make a bill of materials",
+      "summary": "List what goes into a product and how much of each, check it, and release it from a day.",
+      "page": "/manufacturing/boms",
+      "steps": [
+        {
+          "lead": "Press New bill of materials",
+          "rest": "and choose the product it makes. Choose Made and stocked, or Phantom for a part that is read through into the bill above it and never made on its own."
+        },
+        {
+          "lead": "Press Add an item",
+          "rest": "for each component, with its quantity, any scrap it starts with, and the operation where it is drawn."
+        },
+        {
+          "lead": "Add co-products and by-products",
+          "rest": "if making it gives you something else too, with each co-product's share of the cost."
+        },
+        {
+          "lead": "Press Save lines,",
+          "rest": "then Check. Anything that would stop the release is listed."
+        },
+        {
+          "lead": "Press Release…",
+          "rest": "and choose the day it takes effect, then Release this version."
+        }
+      ],
+      "after": "The version in force ends the day before the next one begins. To change a released bill, choose a new version from Actions: it starts as a copy of the last.",
+      "tips": [
+        "Press Work it out under What it needs to see what a quantity needs at every level, at today's stock cost.",
+        "A retired bill leaves its product to be bought instead of made."
+      ],
+      "related": [
+        "make-a-routing",
+        "release-a-product"
+      ]
+    },
+    {
+      "slug": "make-a-routing",
+      "title": "Make a routing: the steps a product passes through",
+      "summary": "Set out each operation, where it is done, how long it takes, and the skills and tools it needs.",
+      "page": "/manufacturing/routings",
+      "steps": [
+        {
+          "lead": "Press New routing",
+          "rest": "on Routings and choose the product it makes, and its bill if it goes with one."
+        },
+        {
+          "lead": "Press Add an operation",
+          "rest": "for each step. Operations are numbered 10, 20 and so on."
+        },
+        {
+          "lead": "Give each one its work centre",
+          "rest": "and its minutes: setup (once), run (per unit), queue, move and inspect. Add the crew size and work instructions."
+        },
+        {
+          "lead": "Press Add a skill and Add a tool",
+          "rest": "for what the operation needs. You can also name the machine it is done on."
+        },
+        {
+          "lead": "Press Save operations,",
+          "rest": "then Check, then Release… and Release this version."
+        }
+      ],
+      "tips": [
+        "Under Time needed, Work it out shows how long a quantity takes from start to finish.",
+        "An operation can be sent out to a supplier instead, with a charge per unit and the days it is away."
+      ],
+      "related": [
+        "make-a-bill-of-materials",
+        "release-a-product"
+      ]
+    },
+    {
+      "slug": "release-a-product",
+      "title": "Take a product from concept to released",
+      "summary": "Move a new product through its stages and release its bill and routing together as a revision.",
+      "page": "/manufacturing/products",
+      "steps": [
+        {
+          "lead": "Press Start a product",
+          "rest": "on Product lifecycle, or Start it at concept on a product's page."
+        },
+        {
+          "lead": "Move it on one stage at a time:",
+          "rest": "concept, engineering, bill, routing, approval, released. When a move is refused, the reason shows beside it."
+        },
+        {
+          "lead": "Press New revision",
+          "rest": "and choose the draft bill version and, if you have one, the draft routing version."
+        },
+        {
+          "lead": "Press Check,",
+          "rest": "then Submit for release. With an approval policy it waits for an approver; with none, it is released at once."
+        }
+      ],
+      "after": "The new revision takes the place of the one before. An order stays tied to the versions it was planned with.",
+      "tips": [
+        "Drawings and specifications are linked from the Drive. Each link stays on the version it was made at and tells you when a newer one is out.",
+        "Once a product is released, your settings may ask for an approved engineering change before a new revision."
+      ],
+      "related": [
+        "ask-for-an-engineering-change",
+        "make-a-bill-of-materials"
+      ]
+    },
+    {
+      "slug": "ask-for-an-engineering-change",
+      "title": "Ask for a change to a product's design",
+      "summary": "Write down what should change and why, get it decided, and carry it out through a new revision.",
+      "page": "/manufacturing/changes",
+      "steps": [
+        {
+          "lead": "Press New change request",
+          "rest": "on Engineering changes and choose the product it concerns."
+        },
+        {
+          "lead": "Say what changes,",
+          "rest": "why, what it affects, its priority and the day it is wanted from."
+        },
+        {
+          "lead": "Press Submit for a decision.",
+          "rest": "It is approved or rejected, through your approval policy if you have one."
+        },
+        {
+          "lead": "Carry it out.",
+          "rest": "A change to drawings only is marked done with Mark as done; any other is carried out by the revision that names it."
+        }
+      ],
+      "tips": [
+        "Whoever asked for it, or an administrator, can call it off with Call it off."
+      ],
+      "related": [
+        "release-a-product"
+      ]
+    },
+    {
+      "slug": "make-a-production-order",
+      "title": "Make a production order, plan it and release it",
+      "summary": "Say what to make, how many and by when. Planning works out the work orders, materials and dates; releasing hands it to the floor.",
+      "page": "/manufacturing/production-orders",
+      "before": [
+        "The product needs a bill of materials in force, and a routing for everything made."
+      ],
+      "steps": [
+        {
+          "lead": "Press New production order",
+          "rest": "on Production orders."
+        },
+        {
+          "lead": "Say what it is made for:",
+          "rest": "a project's deliverable, a line of a sales order, or nothing in particular. From a deliverable or an order, the product, quantity and date fill in."
+        },
+        {
+          "lead": "Check the quantity, the day it is needed and the plant,",
+          "rest": "then press Add the production order. It starts as a draft."
+        },
+        {
+          "lead": "Press Plan it.",
+          "rest": "It makes a work order for the product and for each sub-assembly stock cannot cover, holds the free stock it needs, and works out the dates."
+        },
+        {
+          "lead": "Read About the plan.",
+          "rest": "It tells you if the order will finish late or if materials are short."
+        },
+        {
+          "lead": "Press Release to the floor",
+          "rest": "when it is ready. Its work orders show on the shop floor."
+        }
+      ],
+      "tips": [
+        "Changing the quantity, date or plant of a planned order plans it again. Choose Plan it again from Actions to take a newer bill or routing.",
+        "Choose Ask for what is short from Actions to raise a draft purchase requisition for the missing materials."
+      ],
+      "related": [
+        "check-a-delivery-date",
+        "schedule-the-work",
+        "do-the-work-on-the-floor"
+      ]
+    },
+    {
+      "slug": "check-a-delivery-date",
+      "title": "Check whether you can deliver by a date",
+      "summary": "Ask whether a quantity can be made by a day, without keeping anything, and see what decides it.",
+      "page": "/manufacturing/planning",
+      "steps": [
+        {
+          "lead": "Open Planning",
+          "rest": "and go to Can we deliver?"
+        },
+        {
+          "lead": "Choose the product,",
+          "rest": "the quantity and the day, and the plant if you want one."
+        },
+        {
+          "lead": "Press Check the date.",
+          "rest": "You get yes or no, the day it would finish, and the latest day work must begin."
+        },
+        {
+          "lead": "Read the factors:",
+          "rest": "materials, suppliers, capacity, maintenance, workforce and routings. Each says what holds the date back."
+        }
+      ],
+      "tips": [
+        "Shortages lists what live work orders still lack. Press Raise requisitions for all to ask for it in draft, or Raise a requisition on one line.",
+        "To make lists items at or below their reorder point. Make starts a production order for them.",
+        "Capacity shows the work waiting at each work centre, week by week, against what it can do."
+      ],
+      "related": [
+        "make-a-production-order"
+      ]
+    },
+    {
+      "slug": "schedule-the-work",
+      "title": "Schedule the work and move it on the board",
+      "summary": "Place every operation on a machine and a time, and move work by dragging it. A move that breaks a rule is refused, with the reason.",
+      "page": "/manufacturing/schedule",
+      "steps": [
+        {
+          "lead": "Press Run the scheduler",
+          "rest": "on Schedule. Each operation is placed on a machine and given people, the most urgent first. Try the scheduler shows the result without keeping it."
+        },
+        {
+          "lead": "Look at the Board",
+          "rest": "by machine, work centre, person, line or order, as a timeline, calendar or kanban."
+        },
+        {
+          "lead": "Drag a bar to a new time",
+          "rest": "to move it. If it cannot go there, you are told why, and can choose Move it and plan the rest around it."
+        },
+        {
+          "lead": "Open Needs attention",
+          "rest": "for what is not scheduled yet. Schedule the order places it."
+        },
+        {
+          "lead": "Open Bottlenecks",
+          "rest": "to see which work centres have more work than they can do."
+        }
+      ],
+      "tips": [
+        "A moved operation stays where you put it the next time the scheduler runs.",
+        "Scenarios answers what-ifs, such as a machine being out or deliveries being late, on a copy of the plan. Press New scenario.",
+        "Open maintenance on a machine and its breakdowns take its time out of the schedule."
+      ],
+      "related": [
+        "make-a-production-order",
+        "add-a-machine"
+      ]
+    },
+    {
+      "slug": "do-the-work-on-the-floor",
+      "title": "Start, report and complete an operation",
+      "summary": "Operators open their work, start it, report good and spoilt units, and complete it. Materials and finished goods move in stock as they go.",
+      "page": "/manufacturing/shop-floor/work",
+      "steps": [
+        {
+          "lead": "Open My work",
+          "rest": "to see the jobs given to you, running ones first. Or scan a work order's label."
+        },
+        {
+          "lead": "Open the operation.",
+          "rest": "You see the quantities, materials, instructions, safety notes, drawings and the machine."
+        },
+        {
+          "lead": "Issue the materials",
+          "rest": "drawn at this step, if they are not issued yet. Give back what you do not use; Write off what is damaged."
+        },
+        {
+          "lead": "Press Start.",
+          "rest": "The machine shows as running and your time starts."
+        },
+        {
+          "lead": "Report good and spoilt units",
+          "rest": "as you go, with a reason for the spoilt ones. On the last operation, good units are received into stock."
+        },
+        {
+          "lead": "Press Complete",
+          "rest": "when you are done. If you made fewer than asked, say why."
+        }
+      ],
+      "after": "When every operation is done, the work order is completed and the production order follows when all its work orders are done.",
+      "tips": [
+        "Press Pause when you stop for a while, and Resume to go on.",
+        "Join this operation adds you to work already running, so your time is counted.",
+        "The screen keeps working without a connection and sends what you did when you are back online."
+      ],
+      "related": [
+        "report-a-problem-on-the-floor",
+        "inspect-what-you-make"
+      ]
+    },
+    {
+      "slug": "report-a-problem-on-the-floor",
+      "title": "Report a stop or a defect from the floor",
+      "summary": "Say what has stopped the work and why, so the machine and the downtime figures are right, and close it when it is over.",
+      "page": "/manufacturing/shop-floor/work",
+      "steps": [
+        {
+          "lead": "Press Report a problem",
+          "rest": "on the operation."
+        },
+        {
+          "lead": "Choose what is wrong",
+          "rest": "and tell us more if you want. The operation pauses and the machine goes to the state the reason gives."
+        },
+        {
+          "lead": "Press The problem is over",
+          "rest": "when it is fixed. The machine is available again and the minutes count as downtime."
+        },
+        {
+          "lead": "Press Resume",
+          "rest": "to carry on with the operation."
+        }
+      ],
+      "tips": [
+        "Press Report a defect for a fault in what you are making. It can raise a non-conformance report.",
+        "Your organisation keeps its own list of reasons for stops, pauses and scrap on Shop floor, under Reasons."
+      ],
+      "related": [
+        "do-the-work-on-the-floor",
+        "deal-with-a-non-conformance"
+      ]
+    },
+    {
+      "slug": "inspect-what-you-make",
+      "title": "Set up an inspection and record the result",
+      "summary": "Say what is checked and how much of a lot, and record each reading. The inspection passes or fails on its own rules.",
+      "page": "/manufacturing/quality",
+      "steps": [
+        {
+          "lead": "Open Plans and press New plan.",
+          "rest": "Choose the item and the kind: incoming, in process or final."
+        },
+        {
+          "lead": "Set how much is sampled",
+          "rest": "(all units, a fixed number, or part of the lot) and how many defective units are allowed."
+        },
+        {
+          "lead": "Press Add a check",
+          "rest": "for each thing measured or passed. Mark a check critical if one failure should fail the lot."
+        },
+        {
+          "lead": "Open the inspection",
+          "rest": "when it is raised: completing an operation raises it, or press Inspect for goods received."
+        },
+        {
+          "lead": "Press Record the result",
+          "rest": "with a reading for every check on every unit sampled. It passes or fails, with the reasons in words."
+        }
+      ],
+      "after": "While an in-process inspection waits or has failed, the next operation cannot start. While a final one waits, the finished goods are not received.",
+      "tips": [
+        "Let it go on (waive) lets a lot go on without passing. The reason is kept.",
+        "Traceability shows what went into a product, or where a lot went. Choose which way, then press Trace it."
+      ],
+      "related": [
+        "deal-with-a-non-conformance",
+        "release-held-output"
+      ]
+    },
+    {
+      "slug": "deal-with-a-non-conformance",
+      "title": "Deal with a failed inspection",
+      "summary": "Decide what happens to what failed, put it right, and close the report once its actions are checked.",
+      "page": "/manufacturing/quality",
+      "steps": [
+        {
+          "lead": "Open the report",
+          "rest": "under Reports. A failed inspection opens one; Raise a report opens one by hand."
+        },
+        {
+          "lead": "Press Decide what to do:",
+          "rest": "accept it as it is, rework or repair it, scrap a quantity, or return it to the supplier."
+        },
+        {
+          "lead": "Press It has been put right: inspect again",
+          "rest": "after rework. A pass releases what was held; a fail opens the report for a new decision."
+        },
+        {
+          "lead": "Press Add an action",
+          "rest": "for each thing to stop it happening again, with an owner and a due date."
+        },
+        {
+          "lead": "Verify each action",
+          "rest": "once it is marked done. Someone other than the person who did it verifies it."
+        },
+        {
+          "lead": "Press Close the report.",
+          "rest": "Your settings may ask for a root cause first."
+        }
+      ],
+      "tips": [
+        "Return to the supplier makes a draft return in Procurement, and the lot stays held."
+      ],
+      "related": [
+        "inspect-what-you-make"
+      ]
+    },
+    {
+      "slug": "release-held-output",
+      "title": "Release finished goods that wait for quality",
+      "summary": "When your settings hold output back, release it to sale or reject and scrap it, some or all at a time.",
+      "page": "/manufacturing/output-holds",
+      "before": [
+        "This only applies when your shop-floor settings say output waits for quality's release."
+      ],
+      "steps": [
+        {
+          "lead": "Open Output awaiting release.",
+          "rest": "Each line is what a work order made and how much still waits."
+        },
+        {
+          "lead": "Choose Release to sale",
+          "rest": "and say how many. The units move into stock you can sell, at the cost they carry."
+        },
+        {
+          "lead": "Or choose Reject,",
+          "rest": "say how many and why it is rejected, and press Reject and scrap. The units are scrapped at what they cost."
+        }
+      ],
+      "related": [
+        "inspect-what-you-make"
+      ]
+    },
+    {
+      "slug": "run-a-manufacturing-project",
+      "title": "Run a manufacturing project",
+      "summary": "Plan a large job with phases, deliverables and tasks, get it approved, and follow it through to closed.",
+      "page": "/manufacturing/projects",
+      "steps": [
+        {
+          "lead": "Press New project",
+          "rest": "and give its type, customer, manager, plant, dates, priority and budget."
+        },
+        {
+          "lead": "Open Plan",
+          "rest": "and press Add the standard phases, or Add a phase. Add milestones and deliverables."
+        },
+        {
+          "lead": "Open Tasks and press Add a task.",
+          "rest": "Give its dates, effort, who does it and where. Add a sub-task to break it down; the parent adds them up."
+        },
+        {
+          "lead": "Add dependencies",
+          "rest": "on a task, so it waits for what comes before it."
+        },
+        {
+          "lead": "Press Send for approval.",
+          "rest": "With no approval policy it is approved at once. What is still missing shows under the header."
+        },
+        {
+          "lead": "Make production orders",
+          "rest": "from its deliverables, then move it on as the work goes: scheduled, in production, quality review, completed and closed."
+        }
+      ],
+      "after": "After approval, the budget, dates and production change only through an approved project change.",
+      "tips": [
+        "Critical path, from Actions, shows which tasks hold up the end date. What does that do? shows the effect of a delay.",
+        "Each project is also a value in your ledger's Project dimension, so its costs can be read in Finance."
+      ],
+      "related": [
+        "keep-track-of-project-risks",
+        "see-what-a-job-cost"
+      ]
+    },
+    {
+      "slug": "keep-track-of-project-risks",
+      "title": "Record a project risk or ask for a project change",
+      "summary": "Keep what could go wrong where everyone sees it, and change a project's scope, cost or dates once it is approved.",
+      "page": "/manufacturing/risks",
+      "steps": [
+        {
+          "lead": "Open the project's Risks tab",
+          "rest": "and press Record one. Give its kind, probability and impact from 1 to 5; the score is the two multiplied."
+        },
+        {
+          "lead": "Move it on",
+          "rest": "from the Risk register: Start mitigating, Accept it, It happened, or Close."
+        },
+        {
+          "lead": "Open the project's Changes tab",
+          "rest": "and press Ask for a change. Say what it moves: the date, the budget or a deliverable's quantity."
+        },
+        {
+          "lead": "Press Send for a decision.",
+          "rest": "Once it is approved, press Apply to the project. The project's version goes up and the old one is kept."
+        }
+      ],
+      "tips": [
+        "The project's risk level is its worst live risk, issue or dependency.",
+        "Project changes lists every change across your projects and where each stands."
+      ],
+      "related": [
+        "run-a-manufacturing-project"
+      ]
+    },
+    {
+      "slug": "see-what-a-job-cost",
+      "title": "See what a job cost, and what it earned",
+      "summary": "Read a work order's cost from what really happened, set it against what it should have cost, and see profit by project, product or customer.",
+      "page": "/manufacturing/costing",
+      "steps": [
+        {
+          "lead": "Open a work order's Cost tab.",
+          "rest": "Materials, labour, machine time, overhead and work sent out are set against what they should have cost."
+        },
+        {
+          "lead": "Press Apply labour and machine time now",
+          "rest": "if you want the cost brought up to date before it happens by itself."
+        },
+        {
+          "lead": "Press Record a cost",
+          "rest": "under Costs recorded on Cost and profit, for energy, maintenance, rework and other costs against a work order, order or project."
+        },
+        {
+          "lead": "Open Variances",
+          "rest": "for the work orders finished in a period, and Projects for each project's budget, committed, actual and forecast cost."
+        },
+        {
+          "lead": "Open Profit",
+          "rest": "and choose how to group it: by project, product, customer, order, department or plant."
+        }
+      ],
+      "tips": [
+        "Work in progress is kept in the books as the work goes, and cleared when the goods are received.",
+        "On a project, Set the budget by kind sets a budget for each kind of cost."
+      ],
+      "related": [
+        "run-a-manufacturing-project"
+      ]
+    }
+  ]
+}

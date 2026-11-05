@@ -1,0 +1,130 @@
+{
+  "kind": "help-module",
+  "module": "field-service",
+  "sources": [
+    "commerce-api/documentation/FIELD_SERVICE.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/field-service/presentation"
+  ],
+  "intro": "The field service pack, for installers, repairers, cleaners and anyone whose work happens at the customer's door: give jobs to technicians, follow them through the day, and finish each one on site with its checklist, parts, signature and payment. Switch the pack on in Organisation › Settings › Industry packs, for every place or only the ones that do this work.",
+  "start": [
+    "Turn the field service pack on in Organisation › Settings › Industry packs, at the places that send out technicians.",
+    "Make a checklist for each kind of job in Field service › Checklists, so technicians know what to do on site.",
+    "Set your service areas, so each place knows where its technicians go.",
+    "Make your first job on Dispatch and give it to a technician."
+  ],
+  "articles": [
+    {
+      "slug": "make-and-assign-a-job",
+      "title": "Make a job and give it to a technician",
+      "summary": "Say what is to be done, where and when, then give it to a technician from the waiting queue on Dispatch.",
+      "page": "/field-service/dispatch",
+      "steps": [
+        {
+          "lead": "Press New job",
+          "rest": "on Dispatch."
+        },
+        {
+          "lead": "Fill in What and where:",
+          "rest": "the project, what is to be done and the site address."
+        },
+        {
+          "lead": "Set When:",
+          "rest": "when the arrival window opens and when it closes."
+        },
+        {
+          "lead": "Choose the checklist and the priority,",
+          "rest": "then press Make the job. It waits in the queue to be given to someone."
+        },
+        {
+          "lead": "Choose who it goes to",
+          "rest": "under Give to, and a van if parts will come from one, then press Assign. You can also drag the job onto a technician's row."
+        }
+      ],
+      "tips": [
+        "A technician cannot have two live jobs at the same time. If the times overlap, you are told which job is in the way.",
+        "A job shows as late when its window has been open for a while and nobody is on site yet. How long that is comes from your settings.",
+        "Vans seen in the last half hour shows where your vans are now."
+      ],
+      "related": [
+        "do-a-job-on-site",
+        "set-up-a-checklist"
+      ]
+    },
+    {
+      "slug": "do-a-job-on-site",
+      "title": "Work through a job on site and finish it",
+      "summary": "Move the job along as the technician travels, answer each checklist step on site, take the signature and the payment, then finish it.",
+      "page": "/field-service/jobs",
+      "steps": [
+        {
+          "lead": "Open the job",
+          "rest": "from Jobs or from the technician's row on Dispatch."
+        },
+        {
+          "lead": "Press On the way",
+          "rest": "when the technician sets off, and On site when they arrive."
+        },
+        {
+          "lead": "Answer each step of the checklist.",
+          "rest": "Press Tick it, enter a reading or a note and press Save, attach a photo with Use this photo, or take a part from the van's stock."
+        },
+        {
+          "lead": "Take the customer's signature",
+          "rest": "if the checklist asks for one, and press Save the signature."
+        },
+        {
+          "lead": "Under Finish the job, enter the payment taken,",
+          "rest": "with its reference, or add lines to invoice the work on site."
+        },
+        {
+          "lead": "Press Finish the job.",
+          "rest": "If something is still missing, the page lists it first: a required step, the signature, or a payment or invoice."
+        }
+      ],
+      "tips": [
+        "Steps can only be answered once the technician is on site.",
+        "A reading outside its allowed range raises a follow-up job when the job is finished.",
+        "A part is still recorded as used even when the van has none in stock; the van is put right at the end of the day.",
+        "Time on site goes onto the technician's timesheet when the job is finished, where your settings say so."
+      ],
+      "related": [
+        "make-and-assign-a-job"
+      ]
+    },
+    {
+      "slug": "set-up-a-checklist",
+      "title": "Set up a checklist for a kind of job",
+      "summary": "List the steps a technician follows on site, and say whether the customer signs at the end. Each change is a new version.",
+      "page": "/field-service/checklists",
+      "steps": [
+        {
+          "lead": "Press New checklist",
+          "rest": "on Checklists, and give it a name and, if you like, the job type it is for."
+        },
+        {
+          "lead": "Press Add a step",
+          "rest": "for each thing to do, and choose its answer: a tick, a number, a photo, a note or a part from the van."
+        },
+        {
+          "lead": "For a number,",
+          "rest": "set the lowest and highest allowed, and the follow-up job to raise when a reading falls outside them."
+        },
+        {
+          "lead": "Tick The customer signs at the end",
+          "rest": "if you need a signature, then press Make the checklist. It can now be chosen on a new job."
+        },
+        {
+          "lead": "To change it later, press New version,",
+          "rest": "make your changes, say what changed and save it."
+        }
+      ],
+      "tips": [
+        "A job keeps the checklist version it started on, whatever the checklist becomes later."
+      ],
+      "related": [
+        "do-a-job-on-site"
+      ]
+    }
+  ]
+}

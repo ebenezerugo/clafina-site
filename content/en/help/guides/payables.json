@@ -1,0 +1,271 @@
+{
+  "kind": "help-module",
+  "module": "payables",
+  "sources": [
+    "commerce-api/documentation/PROCUREMENT.md",
+    "commerce-api/documentation/FINANCE_MANAGEMENT.md",
+    "commerce-web/src/app/features/payables/presentation",
+    "commerce-web/src/app/features/schedules/presentation",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "What you owe suppliers and how it gets paid: their bills, checked against what you ordered and received, what falls due and when, and the payments that settle them. Nothing is posted to your books until a bill is approved and posted.",
+  "start": [
+    "Check each supplier's payment terms, so their bills fall due on the right day.",
+    "Enter your first bill, or press Bill it on a receipt, then submit and post it.",
+    "Open What is due each week and pay what falls due with Pay suppliers.",
+    "Look at Held bills now and then, so nothing stays stuck."
+  ],
+  "articles": [
+    {
+      "slug": "enter-a-supplier-bill",
+      "title": "Enter a bill from a supplier",
+      "summary": "Record the supplier's invoice, let it be matched against what you ordered and received, and post it so it is owed.",
+      "page": "/payables/bills",
+      "steps": [
+        {
+          "lead": "Press New bill",
+          "rest": "on Supplier bills, or Bill it on the goods receipt it is for. Fill from a document reads a photo or file of the bill for you."
+        },
+        {
+          "lead": "Choose the supplier",
+          "rest": "and enter their invoice number, as printed on their invoice."
+        },
+        {
+          "lead": "Check the dates.",
+          "rest": "The due date comes from the supplier's terms."
+        },
+        {
+          "lead": "Add what is billed:",
+          "rest": "the items or services, quantity, price each and tax."
+        },
+        {
+          "lead": "Press Save and submit.",
+          "rest": "Nothing is posted until it is submitted and approved. With an approval policy, press Approve, or wait for the approver."
+        },
+        {
+          "lead": "Press Post.",
+          "rest": "The bill is matched against what was received. If it matches, it is posted and owed; if not, it is held and shows on Held bills."
+        }
+      ],
+      "after": "The bill shows the three-way match line by line: what was ordered, received and billed, and any price difference.",
+      "tips": [
+        "Someone other than the person who entered or submitted the bill posts it, unless an approval policy covers posting.",
+        "The same supplier invoice number cannot be entered twice for one supplier.",
+        "Freight, duty or clearing on goods you received can be added to what those goods cost, instead of booked as an expense."
+      ],
+      "related": [
+        "sort-out-a-held-bill",
+        "pay-suppliers"
+      ]
+    },
+    {
+      "slug": "sort-out-a-held-bill",
+      "title": "Sort out a bill that will not post",
+      "summary": "Held bills lists bills the match holds back, for price or quantity, and bills that look doubled. Let each go on with a reason, or fix it.",
+      "page": "/payables/exceptions",
+      "steps": [
+        {
+          "lead": "Open Held bills.",
+          "rest": "The tabs sort them by kind of hold, with counts."
+        },
+        {
+          "lead": "Read why it is held:",
+          "rest": "priced above what the goods were received at, billing for more than came, or another bill with the same number, or the same date and total."
+        },
+        {
+          "lead": "Open the bill",
+          "rest": "to see the match line by line, if you need to check."
+        },
+        {
+          "lead": "Choose Accept the price, Accept the quantity or Not a duplicate",
+          "rest": "from the row's Actions menu, and give a reason of at least five characters."
+        },
+        {
+          "lead": "Post the bill.",
+          "rest": "It goes on now that the hold is released."
+        }
+      ],
+      "tips": [
+        "Show released lists bills already let go and not yet posted, with who released them, when and why.",
+        "A bill whose freight lands on a receipt that is not yet approved waits until the receipt is approved."
+      ],
+      "related": [
+        "enter-a-supplier-bill"
+      ]
+    },
+    {
+      "slug": "pay-suppliers",
+      "title": "Pay what you owe suppliers",
+      "summary": "Tick the bills to pay, in full or in part, and make one payment for each supplier, sent for approval.",
+      "page": "/payables/due",
+      "steps": [
+        {
+          "lead": "Open What is due.",
+          "rest": "Every bill still owed is listed with when it falls due, and which are overdue."
+        },
+        {
+          "lead": "Press Pay on a bill,",
+          "rest": "or Pay suppliers on the Overview or on Supplier bills to start from every bill owed, with those due within a week ticked."
+        },
+        {
+          "lead": "Choose where it is paid from,",
+          "rest": "the day and how it is paid."
+        },
+        {
+          "lead": "Tick the bills to settle.",
+          "rest": "Change Pay now for a part payment, and enter any discount or tax held back."
+        },
+        {
+          "lead": "Add the reference",
+          "rest": "for the bank transfer."
+        },
+        {
+          "lead": "Press Pay supplier, or Pay suppliers for several.",
+          "rest": "One payment is made for each supplier and sent the way its approval policy says. Save as drafts sends nothing."
+        }
+      ],
+      "after": "Once a payment is approved and posted, each bill it settles shows as part paid or paid.",
+      "tips": [
+        "Only posted bills with something left to pay can be paid.",
+        "To pay a bill through a payment request, open the bill and use Ask to pay in its Payment section."
+      ],
+      "related": [
+        "post-a-supplier-payment",
+        "enter-a-supplier-bill"
+      ]
+    },
+    {
+      "slug": "post-a-supplier-payment",
+      "title": "Record and post a payment to one supplier",
+      "summary": "Say which bills a payment settles, have it approved, and post it so the bills and your books agree.",
+      "page": "/payables/payments",
+      "steps": [
+        {
+          "lead": "Press Pay one supplier",
+          "rest": "on Supplier payments, or Pay on the bill."
+        },
+        {
+          "lead": "Choose the supplier,",
+          "rest": "the day, how it was paid and the account it left from."
+        },
+        {
+          "lead": "Choose the bills it settles",
+          "rest": "and how much of each, with any discount or tax withheld."
+        },
+        {
+          "lead": "Press Save and pay.",
+          "rest": "With an approval policy, it waits for an approver."
+        },
+        {
+          "lead": "Press Post",
+          "rest": "once it is approved. Each bill's amount owed goes down."
+        }
+      ],
+      "tips": [
+        "The person who submitted a payment does not post it. Approved — not posted lists payments waiting for someone else to post them.",
+        "A payment other than cash must name the account it leaves from.",
+        "Voiding a posted payment makes each bill it paid owed again."
+      ],
+      "related": [
+        "pay-suppliers"
+      ]
+    },
+    {
+      "slug": "set-up-a-recurring-bill",
+      "title": "Set up a bill that repeats, such as rent",
+      "summary": "A schedule raises the supplier's bill on each of its dates, once it is approved.",
+      "page": "/payables/recurring-bills",
+      "steps": [
+        {
+          "lead": "Press New recurring bill",
+          "rest": "on Recurring bills."
+        },
+        {
+          "lead": "Choose the supplier",
+          "rest": "and add the lines. Words like {month} in a line are filled in for each date."
+        },
+        {
+          "lead": "Set how often it repeats,",
+          "rest": "from when, and when it ends."
+        },
+        {
+          "lead": "Choose what happens to each bill:",
+          "rest": "leave it as a draft to check, submit it for approval, or approve and post it."
+        },
+        {
+          "lead": "Press Show the next dates",
+          "rest": "to check them, then Save as draft."
+        },
+        {
+          "lead": "Press Submit for approval.",
+          "rest": "Someone other than you approves it. From then it raises a bill on each date."
+        }
+      ],
+      "tips": [
+        "Changing the amount, the dates or the supplier sends it back for approval. It raises nothing until it is approved again.",
+        "You can pause it, skip the next date, or end it."
+      ]
+    },
+    {
+      "slug": "check-a-supplier-statement",
+      "title": "Check a supplier's statement against your books",
+      "summary": "Upload their statement and see, line by line, what agrees, what differs and what only one side has.",
+      "page": "/payables/statement-checks",
+      "steps": [
+        {
+          "lead": "Press Check a statement",
+          "rest": "on Supplier statements, and choose the supplier."
+        },
+        {
+          "lead": "Add their statement",
+          "rest": "as a spreadsheet saved as CSV, one line for each invoice, payment or credit note."
+        },
+        {
+          "lead": "Say which column is which:",
+          "rest": "the date, their reference and the amounts, and how dates and decimals are written."
+        },
+        {
+          "lead": "Set the As at date",
+          "rest": "and press Check statement."
+        },
+        {
+          "lead": "Read the lines by outcome:",
+          "rest": "agrees, amount differs, only on their statement, or only in our books. Still unexplained should come to nothing."
+        }
+      ],
+      "tips": [
+        "Lines are matched by reference first, then by the same amount within a week."
+      ]
+    },
+    {
+      "slug": "see-goods-not-yet-billed",
+      "title": "See goods received that are not yet billed",
+      "summary": "Received not billed lists goods suppliers delivered and have not billed, by age, and checks the total against your ledger.",
+      "page": "/payables/received-not-billed",
+      "steps": [
+        {
+          "lead": "Open Received not billed",
+          "rest": "and choose the As at date."
+        },
+        {
+          "lead": "Read the ages:",
+          "rest": "what came in within 30 days, 31 to 60, 61 to 90, and over 90."
+        },
+        {
+          "lead": "Look at Against the ledger.",
+          "rest": "The difference between your ledger and the documents is shown by kind of entry."
+        },
+        {
+          "lead": "Press Download as spreadsheet",
+          "rest": "for the month-end accrual."
+        }
+      ],
+      "tips": [
+        "Old lines often mean a bill that was never entered. Ask the supplier, then enter it against the receipt."
+      ],
+      "related": [
+        "enter-a-supplier-bill"
+      ]
+    }
+  ]
+}

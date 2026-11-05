@@ -1,0 +1,112 @@
+{
+  "kind": "help-module",
+  "module": "inbox",
+  "sources": [
+    "commerce-api/documentation/NOTIFICATIONS.md",
+    "commerce-api/documentation/APPROVALS.md",
+    "commerce-web/src/app/@core/constants/page-help.ts",
+    "commerce-api/src/modules/support/guide/guide-articles.ts"
+  ],
+  "intro": "Everything waiting on you, in one list: requests to approve, mentions, your tasks, alerts and conversations with customers and suppliers. Each item has one button to deal with it, and the number beside Inbox is all of them.",
+  "start": [
+    "Open the Approvals tab and decide anything waiting for your yes.",
+    "Read your Mentions and reply where you were named.",
+    "Finish what is on the Tasks tab, or snooze what can wait.",
+    "Press Mark all read once you have seen the alerts."
+  ],
+  "articles": [
+    {
+      "slug": "approve-a-request",
+      "title": "Approve or decline a request",
+      "summary": "See why a request needs you, then approve it or decline it with a note the person who asked will read.",
+      "page": "/inbox",
+      "before": [
+        "Deciding needs permission to manage approvals. Without it you can see what is waiting, but not decide."
+      ],
+      "steps": [
+        {
+          "lead": "Open the Approvals tab.",
+          "rest": "Each request shows who asked and when."
+        },
+        {
+          "lead": "Press the request",
+          "rest": "to see what was asked and Why this needs you."
+        },
+        {
+          "lead": "Write in Your note",
+          "rest": "if you want to. It is optional when you approve and needed when you decline, so they know what to change."
+        },
+        {
+          "lead": "Press Approve or Decline.",
+          "rest": "The person who asked is told, and the request leaves your Inbox."
+        }
+      ],
+      "tips": [
+        "On a keyboard, A approves, D declines and J and K move to the next item.",
+        "If you asked for something yourself, someone else must approve it.",
+        "Approval policies, beside the tabs, shows the rules that send requests to you."
+      ],
+      "related": [
+        "snooze-an-item",
+        "clear-mentions-and-tasks"
+      ]
+    },
+    {
+      "slug": "clear-mentions-and-tasks",
+      "title": "Answer a mention or finish a task",
+      "summary": "Open where you were named and reply there, or do the task from its link and mark it done.",
+      "page": "/inbox",
+      "steps": [
+        {
+          "lead": "Open the Mentions tab.",
+          "rest": "Each one says who mentioned you and where."
+        },
+        {
+          "lead": "Press it",
+          "rest": "to open the conversation or document, and reply there. The mention is marked as read."
+        },
+        {
+          "lead": "Open the Tasks tab.",
+          "rest": "Work assigned to you, by a person or a rule, is listed here."
+        },
+        {
+          "lead": "Do the work from the link in the task,",
+          "rest": "then press Mark done. It leaves your Inbox."
+        }
+      ],
+      "tips": [
+        "Unread only, beside the search, hides what you have already read.",
+        "Messages from customers and suppliers waiting on you are on the Messages tab, with Reply."
+      ],
+      "related": [
+        "approve-a-request",
+        "snooze-an-item"
+      ]
+    },
+    {
+      "slug": "snooze-an-item",
+      "title": "Put something off until later",
+      "summary": "Snooze an item and it leaves your Inbox, then comes back at the time you choose.",
+      "page": "/inbox",
+      "steps": [
+        {
+          "lead": "Press Snooze",
+          "rest": "on the item's row or in its preview."
+        },
+        {
+          "lead": "Choose when it comes back:",
+          "rest": "later today, tomorrow at 9:00, next Monday at 9:00, or Pick a time… for a time of your own."
+        },
+        {
+          "lead": "Find it under Snoozed",
+          "rest": "while it waits. Press Bring back now if you need it sooner."
+        }
+      ],
+      "after": "When you have cleared everything, the Inbox shows what you dealt with today under Cleared today.",
+      "related": [
+        "approve-a-request",
+        "clear-mentions-and-tasks"
+      ]
+    }
+  ]
+}

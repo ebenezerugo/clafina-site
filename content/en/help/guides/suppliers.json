@@ -1,0 +1,120 @@
+{
+  "kind": "help-module",
+  "module": "suppliers",
+  "sources": [
+    "commerce-api/documentation/SUPPLIERS_AND_TAGS.md",
+    "commerce-api/documentation/SUPPLIER_MANAGEMENT.md",
+    "commerce-web/src/app/features/suppliers/presentation"
+  ],
+  "intro": "The businesses you buy from, kept as a record of their own: who they are, how you reach them, how you pay them, their papers, and everything you have bought and paid. Each supplier's page shows where things stand with them today.",
+  "start": [
+    "Add your main suppliers with New supplier, or bring them all in at once from a spreadsheet with Import and export.",
+    "Set how soon you pay each one and the currency they bill in, so bills fall due on the right day.",
+    "Add each supplier's bank account and have it verified and approved, so it can be paid."
+  ],
+  "articles": [
+    {
+      "slug": "add-a-supplier",
+      "title": "Add a supplier",
+      "summary": "Record who they are, how to reach them and how you trade, so they can be put on requisitions, orders and bills.",
+      "page": "/suppliers",
+      "steps": [
+        {
+          "lead": "Press New supplier",
+          "rest": "on Suppliers."
+        },
+        {
+          "lead": "Say who they are:",
+          "rest": "the name you know them by, their registered name and registration number, and a type and category."
+        },
+        {
+          "lead": "Say how you reach them:",
+          "rest": "a contact person, phone and email."
+        },
+        {
+          "lead": "Say how you trade:",
+          "rest": "how many days you pay within, the currency they bill in, and their tax ID, which you need to claim VAT and withhold tax."
+        },
+        {
+          "lead": "Press Add supplier.",
+          "rest": "Where your settings ask for approval, the button reads Submit for review, and the supplier waits for someone to approve it."
+        }
+      ],
+      "after": "A code is given from your numbering if you leave it blank. A bill's due date is counted from the days you pay within.",
+      "tips": [
+        "If it looks like a supplier you already have, Clafina says so. Press View existing to check, or This is a different supplier to go on.",
+        "Keep their certificates and licences on the supplier's Compliance tab with Record a certificate. Their expiry dates are watched for you."
+      ],
+      "related": [
+        "add-a-supplier-bank-account",
+        "see-a-supplier-statement"
+      ]
+    },
+    {
+      "slug": "add-a-supplier-bank-account",
+      "title": "Add or change a supplier's bank account",
+      "summary": "An account is paid only when it is active: submitted by one person, verified with the supplier by a second, approved by a third.",
+      "page": "/suppliers",
+      "steps": [
+        {
+          "lead": "Open the supplier",
+          "rest": "and go to the Banking tab."
+        },
+        {
+          "lead": "Press Add bank account.",
+          "rest": "Enter the account name as the bank holds it, the account number and the currency."
+        },
+        {
+          "lead": "Press Send for verification.",
+          "rest": "It is submitted. Nothing is paid to it yet."
+        },
+        {
+          "lead": "A second person presses Verify with the supplier",
+          "rest": "and says how they confirmed it, such as a call to a number you already had. Then they press Mark as verified."
+        },
+        {
+          "lead": "A third person presses Approve.",
+          "rest": "The account is then made active and can be paid."
+        }
+      ],
+      "tips": [
+        "To change an account, use Change this account. The old one stays paid until the new one is active, and is then retired.",
+        "Only the last four digits show. Show the whole number is kept on record each time someone uses it."
+      ],
+      "related": [
+        "add-a-supplier"
+      ]
+    },
+    {
+      "slug": "see-a-supplier-statement",
+      "title": "See what you owe a supplier, or stop buying from them",
+      "summary": "Read their statement of bills and payments with a running balance, and retire a supplier you no longer use without losing their history.",
+      "page": "/suppliers",
+      "steps": [
+        {
+          "lead": "Open the supplier",
+          "rest": "from Suppliers. The list shows what you owe each one."
+        },
+        {
+          "lead": "Under Statement, choose the dates",
+          "rest": "and press Show. Their posted bills and payments are listed oldest first, with what is owed at the end."
+        },
+        {
+          "lead": "Under Documents, open a list",
+          "rest": "such as Orders or Bills to see only theirs."
+        },
+        {
+          "lead": "To stop buying from them, press Retire",
+          "rest": "in the More menu."
+        }
+      ],
+      "tips": [
+        "Retired suppliers keep their history but are offered on nothing new. Bills and payments already owed still go through; reinstate them to buy from them again.",
+        "A supplier no document names can be deleted; one with documents is retired instead."
+      ],
+      "related": [
+        "add-a-supplier"
+      ]
+    }
+  ]
+}

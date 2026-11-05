@@ -1,0 +1,122 @@
+{
+  "kind": "help-module",
+  "module": "construction",
+  "sources": [
+    "commerce-api/documentation/CONSTRUCTION.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/construction/presentation"
+  ],
+  "intro": "The construction pack, built on Projects: bill a contract by stage each month with retention and variations, keep the site diary, track snags to closed, and check subcontractors' papers before you pay them. Switch the pack on in Organisation › Settings › Industry packs, at your construction sites.",
+  "start": [
+    "Turn the construction pack on in Organisation › Settings › Industry packs, at your sites.",
+    "Check the retention, defects period and tax rates in the construction settings; each new contract starts with them.",
+    "Make your first contract on Progress billing, with its stages.",
+    "Add your subcontractors and their papers, so payment certificates are not held up."
+  ],
+  "articles": [
+    {
+      "slug": "value-and-certify-a-stage",
+      "title": "Value the work done and invoice the client",
+      "summary": "Set up the contract by stages, then each month measure, value, approve and certify a valuation. Certifying makes the invoice.",
+      "page": "/construction/billing",
+      "steps": [
+        {
+          "lead": "Press New contract",
+          "rest": "on Progress billing. Enter the client, the contract sum, the retention, the tax rates, the defects period and the dates, then press Make the contract."
+        },
+        {
+          "lead": "Choose Add a stage",
+          "rest": "from the contract's actions for each part of the work, with its sum."
+        },
+        {
+          "lead": "Press Start a valuation",
+          "rest": "with the day it is valued to, and press Start the valuation."
+        },
+        {
+          "lead": "Enter the percent done to date",
+          "rest": "for each stage. The worth to date and this valuation's value are worked out."
+        },
+        {
+          "lead": "Move it along:",
+          "rest": "the engineer presses Measured: send to the surveyor, the surveyor presses Valued: send for approval, and the project manager presses Approve."
+        },
+        {
+          "lead": "Press Certify for the client",
+          "rest": "once the client has certified it, say who certified it, and press Certify and invoice. The client's invoice is made for the net, with VAT."
+        }
+      ],
+      "tips": [
+        "Only one valuation can be open at a time on a contract.",
+        "A percent can never go below what the client has already certified, nor above 100.",
+        "Nothing is invoiced until a valuation is certified.",
+        "Any step can send a valuation back to the engineer, with the reason.",
+        "To change the work, choose Add a variation from the contract's actions. Once it is agreed or instructed, as your settings say, it is valued with its stage.",
+        "Retention is released in two parts: choose Practical completion when the work is done, and Close the defects period when that ends. Each part is invoiced to the client."
+      ]
+    },
+    {
+      "slug": "keep-the-site-diary-and-snags",
+      "title": "Keep the site diary and the snag list",
+      "summary": "Write up each day on site for the project manager to sign off, and record defects by floor and unit until they are checked and closed.",
+      "page": "/construction/diary",
+      "steps": [
+        {
+          "lead": "Open Site diary,",
+          "rest": "choose the contract and the day, and fill in the weather, the people on site, hours lost and why, and the work done."
+        },
+        {
+          "lead": "Press Write the day,",
+          "rest": "then Send for sign-off when it is complete. You can change it until then."
+        },
+        {
+          "lead": "The project manager presses Sign off,",
+          "rest": "which locks the day, or Return it with what to put right."
+        },
+        {
+          "lead": "On Snag list, press Add a snag.",
+          "rest": "Enter the floor, unit, trade, who puts it right, the due date and what is wrong, with a photo before. Press Add the snag."
+        },
+        {
+          "lead": "Choose Mark as fixed",
+          "rest": "when it is put right, say what was done and add a photo after."
+        },
+        {
+          "lead": "Choose Checked, close it",
+          "rest": "once you have looked, or Reopen if it is not right."
+        }
+      ],
+      "tips": [
+        "There is one diary entry a day for each contract, and never one for a day to come.",
+        "Plan by floor and unit shows where the open snags are."
+      ]
+    },
+    {
+      "slug": "pay-a-subcontractor",
+      "title": "Check a subcontractor's papers and pay them",
+      "summary": "Keep each subcontractor's papers up to date, then make a payment certificate for the work done. Approving it makes a draft supplier bill.",
+      "page": "/construction/subcontractors",
+      "steps": [
+        {
+          "lead": "Press Add a subcontractor,",
+          "rest": "choose the supplier and enter the name on the contract, the trade, the subcontract sum, the retention and the tax rates. Press Add the subcontractor."
+        },
+        {
+          "lead": "Choose Add a paper",
+          "rest": "from their actions for each paper they hold, with its reference and expiry date."
+        },
+        {
+          "lead": "Choose New payment certificate,",
+          "rest": "enter the day it is valued to, the work to date and any back-charges, and press Make the certificate."
+        },
+        {
+          "lead": "Press Approve.",
+          "rest": "Their certified to date and retention move, and a draft supplier bill is made in Payables where your settings say so."
+        }
+      ],
+      "tips": [
+        "A missing or expired paper blocks the certificate. If you must, press Let it through once and say why: it is logged.",
+        "Papers ending soon are shown under Papers expiring or missing."
+      ]
+    }
+  ]
+}

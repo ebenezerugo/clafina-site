@@ -1,0 +1,669 @@
+{
+  "kind": "help-module",
+  "module": "assets",
+  "sources": [
+    "commerce-api/documentation/ASSETS.md",
+    "commerce-web/src/app/features/assets/presentation"
+  ],
+  "intro": "One register of everything the business owns and keeps: who has each asset, where it is, what state it is in, how it is looked after and what it is worth in the books, from the day it is put into service to the day it leaves.",
+  "start": [
+    "Set up your asset categories and classes, with the useful life and depreciation each one follows.",
+    "Add the places where assets are kept, from site to room.",
+    "Register your assets, one at a time or by importing a file, and print their tags.",
+    "Assign each asset to the person or place that has it.",
+    "Set maintenance schedules for what needs regular upkeep, and make a depreciation run at the end of each month."
+  ],
+  "articles": [
+    {
+      "slug": "set-up-categories-and-classes",
+      "title": "Set up asset categories and classes",
+      "summary": "Group your assets and give each group the life, depreciation method and residual value a new asset starts from.",
+      "page": "/assets/categories",
+      "steps": [
+        {
+          "lead": "Open Asset categories",
+          "rest": "and add a category, such as IT equipment, with a code. A category can sit within another: computers within IT equipment."
+        },
+        {
+          "lead": "Give its useful life,",
+          "rest": "depreciation method and residual value. A category with no figure of its own takes its parent's."
+        },
+        {
+          "lead": "Choose its ledger accounts",
+          "rest": "for cost, accumulated depreciation and depreciation expense, or leave them to the organisation's posting accounts."
+        },
+        {
+          "lead": "Open Asset classes",
+          "rest": "for the rules of one kind of asset, such as laptops: its life, method, the cost it is capitalised from and how often it is counted."
+        }
+      ],
+      "tips": [
+        "A class's figures win over its category's.",
+        "Tick Every asset needs a serial number on a category that should always carry one.",
+        "Asset statuses lets you add statuses of your own. Each behaves as one of the built-in ones, so the rules still hold."
+      ],
+      "related": [
+        "register-an-asset",
+        "set-up-places"
+      ]
+    },
+    {
+      "slug": "set-up-places",
+      "title": "Add the places where assets are kept",
+      "summary": "Build a tree of buildings, floors, rooms and yards beneath each of your locations.",
+      "page": "/assets/places",
+      "steps": [
+        {
+          "lead": "Press New place",
+          "rest": "on Places and choose its location."
+        },
+        {
+          "lead": "Give it a name and say what it is:",
+          "rest": "building, floor, room, warehouse, yard or site."
+        },
+        {
+          "lead": "Choose Add a place within",
+          "rest": "to put a room inside a floor, or a shelf inside a room."
+        }
+      ],
+      "tips": [
+        "Moving a place takes everything beneath it with it.",
+        "A place is retired once nothing stands there, never deleted."
+      ],
+      "related": [
+        "register-an-asset"
+      ]
+    },
+    {
+      "slug": "register-an-asset",
+      "title": "Register an asset and print its tag",
+      "summary": "Add an asset to the register with its category, identifiers and cost, then print a tag anyone can scan to open it.",
+      "page": "/assets/register",
+      "before": [
+        "Bought goods held as stock are put into service from Put into service instead, so their cost goes into the books."
+      ],
+      "steps": [
+        {
+          "lead": "Press Register asset",
+          "rest": "on the Asset register or the Overview."
+        },
+        {
+          "lead": "Give its name and category.",
+          "rest": "Its life, method and residual value fill in from the class or the category."
+        },
+        {
+          "lead": "Add how you know it:",
+          "rest": "serial number, barcode, RFID or NFC tag, manufacturer and model. None of these can be used by two assets."
+        },
+        {
+          "lead": "Add where it is, how it is owned and what it cost,",
+          "rest": "then press Register asset. It gets the next asset number."
+        },
+        {
+          "lead": "Choose Show tag",
+          "rest": "from the asset's Actions, then Print the tag."
+        }
+      ],
+      "tips": [
+        "The tag's QR code opens the asset's page. It carries nothing about money or people.",
+        "Only an untouched draft can be deleted. Any other asset is retired, and keeps its history."
+      ],
+      "related": [
+        "import-assets",
+        "assign-an-asset"
+      ]
+    },
+    {
+      "slug": "import-assets",
+      "title": "Import assets from a spreadsheet",
+      "summary": "Bring in a CSV or Excel file of assets. Every row is checked before anything is saved.",
+      "page": "/assets/register",
+      "steps": [
+        {
+          "lead": "Press Import",
+          "rest": "on the Asset register."
+        },
+        {
+          "lead": "Press Download the template",
+          "rest": "and fill it in, one asset to a row."
+        },
+        {
+          "lead": "Choose your file",
+          "rest": "and press Check the file. Rows with a problem are listed with what is wrong."
+        },
+        {
+          "lead": "Register the good rows,",
+          "rest": "or fix the file and try again. Throw this file away starts over."
+        }
+      ],
+      "after": "The assets are registered in the background. The page shows how far it has got.",
+      "tips": [
+        "The register exports to CSV or Excel with the same columns, so a file can go out and come back."
+      ],
+      "related": [
+        "register-an-asset"
+      ]
+    },
+    {
+      "slug": "assign-an-asset",
+      "title": "Assign an asset to someone and take it back",
+      "summary": "Hand an asset to a member of staff, a department, a project, a customer or another place, and take it back when they are done.",
+      "page": "/assets/register",
+      "steps": [
+        {
+          "lead": "Open the asset",
+          "rest": "and choose Assign from Actions."
+        },
+        {
+          "lead": "Choose who has it:",
+          "rest": "a member of staff, department, team, branch, location, project, customer or an outside party. Add when it is expected back."
+        },
+        {
+          "lead": "Press Assign.",
+          "rest": "It shows who holds it on the register."
+        },
+        {
+          "lead": "Choose Take back",
+          "rest": "when it comes back. Every assignment is kept on the asset's history."
+        }
+      ],
+      "tips": [
+        "An asset has one holder at a time. If two people try to take the same one, only the first succeeds.",
+        "To assign many at once, select them on the register. Each one that cannot be assigned is listed with the reason.",
+        "A bundle, such as a workstation, is assigned in one step with Assign the whole bundle."
+      ],
+      "related": [
+        "move-an-asset",
+        "collect-assets-from-a-leaver"
+      ]
+    },
+    {
+      "slug": "move-an-asset",
+      "title": "Move an asset to another place",
+      "summary": "Ask to move an asset, have it approved, send it, and receive it at the other end.",
+      "page": "/assets/transfers",
+      "steps": [
+        {
+          "lead": "Press Ask to move an asset",
+          "rest": "on Asset transfers, or choose Ask to move it from the asset's Actions."
+        },
+        {
+          "lead": "Say where it goes",
+          "rest": "and why, then press Ask to move it. With an approval policy it waits for an approver."
+        },
+        {
+          "lead": "Choose Send it",
+          "rest": "once it is approved. It is on its way."
+        },
+        {
+          "lead": "Choose Receive it",
+          "rest": "at the other end. Only someone at the destination can receive it. The asset's place changes then."
+        }
+      ],
+      "tips": [
+        "If your settings move assets in one step, the asset moves as soon as the move is approved.",
+        "Move, on the asset's Actions, moves it straight away where your settings allow it.",
+        "A move can be cancelled before it leaves."
+      ],
+      "related": [
+        "assign-an-asset",
+        "count-your-assets"
+      ]
+    },
+    {
+      "slug": "run-a-maintenance-job",
+      "title": "Ask for maintenance and see the job through",
+      "summary": "Raise a repair or upkeep job, give it to a technician or provider, record the hours and parts, and close it.",
+      "page": "/assets/work-orders",
+      "steps": [
+        {
+          "lead": "Press Ask for maintenance",
+          "rest": "on Maintenance jobs, or on the asset's Actions."
+        },
+        {
+          "lead": "Say what is needed,",
+          "rest": "its priority and when it is needed by, then press Ask for the work. An emergency is approved as it is raised."
+        },
+        {
+          "lead": "Press Assign it",
+          "rest": "and choose your own technician or an outside provider. Schedule it gives it a day."
+        },
+        {
+          "lead": "Press Start the work.",
+          "rest": "The asset shows as under maintenance."
+        },
+        {
+          "lead": "Press Add hours and Add a part",
+          "rest": "as the work goes. A part from stock is issued from stock at what it cost."
+        },
+        {
+          "lead": "Press Complete it,",
+          "rest": "with what was done and the asset's condition now. Its status goes back."
+        },
+        {
+          "lead": "Press Verify it, then Close it,",
+          "rest": "where your organisation asks for the work to be checked."
+        }
+      ],
+      "tips": [
+        "Account for the work decides whether finished work is an expense or added to the asset as an overhaul, with the months of life it adds.",
+        "Replace a component swaps a part that is an asset of its own, keeping both histories.",
+        "Give back returns an unused part to stock at what it cost."
+      ],
+      "related": [
+        "set-a-maintenance-schedule",
+        "report-damage"
+      ]
+    },
+    {
+      "slug": "set-a-maintenance-schedule",
+      "title": "Set upkeep that repeats by date or by use",
+      "summary": "Raise a maintenance job every so many days, or every so many hours or kilometres on a meter.",
+      "page": "/assets/maintenance/schedules",
+      "steps": [
+        {
+          "lead": "Open the asset",
+          "rest": "and press New schedule on its maintenance tab."
+        },
+        {
+          "lead": "Choose By date or By meter.",
+          "rest": "By date repeats every so many days; by meter, every so many running hours or kilometres."
+        },
+        {
+          "lead": "Say what is done,",
+          "rest": "how many days ahead to raise the work, its priority and when it was last done, then press Save."
+        },
+        {
+          "lead": "Record meter readings",
+          "rest": "with Record a meter reading. A reading that brings a schedule due raises its job."
+        }
+      ],
+      "after": "Jobs due by date are raised each morning. Completing the job moves the schedule on to the next time.",
+      "tips": [
+        "Raise the work now raises the job ahead of its date.",
+        "For a schedule by meter, the day it falls due is worked out from the last 30 days of readings.",
+        "Pause, Resume and End are on each schedule."
+      ],
+      "related": [
+        "run-a-maintenance-job"
+      ]
+    },
+    {
+      "slug": "report-damage",
+      "title": "Report damage to an asset",
+      "summary": "Say what is wrong with an asset. Serious damage can open a repair job by itself.",
+      "page": "/assets/damage",
+      "steps": [
+        {
+          "lead": "Choose Report damage",
+          "rest": "from the asset's Actions. Anyone who can see the asset can report it."
+        },
+        {
+          "lead": "Say what is wrong",
+          "rest": "and how serious it is, then press Report the damage."
+        },
+        {
+          "lead": "Deal with it on Damage.",
+          "rest": "Open a work order to repair it, Mark resolved, or Dismiss it."
+        }
+      ],
+      "tips": [
+        "High and critical damage can mark the asset and open a repair job, depending on your settings. Finishing that job resolves the report."
+      ],
+      "related": [
+        "run-a-maintenance-job"
+      ]
+    },
+    {
+      "slug": "keep-warranties-and-contracts",
+      "title": "Keep warranties and service contracts",
+      "summary": "Record what is under warranty or covered by a contract, and see what is about to end.",
+      "page": "/assets/warranties",
+      "steps": [
+        {
+          "lead": "Choose Add a warranty",
+          "rest": "from the asset's Actions. Give the provider, what it covers and the dates, then press Add the warranty."
+        },
+        {
+          "lead": "Open Warranties",
+          "rest": "to see where each one stands. Filter by those ending within 30 or 90 days."
+        },
+        {
+          "lead": "For a service contract,",
+          "rest": "press New contract on Service contracts, then open it and add the assets it covers."
+        }
+      ],
+      "tips": [
+        "Reminders for warranties and contracts ending come from your notification rules, thirty days before by default."
+      ],
+      "related": [
+        "insure-an-asset"
+      ]
+    },
+    {
+      "slug": "put-stock-into-service",
+      "title": "Put bought goods into service as assets",
+      "summary": "Turn goods you received or hold in stock into assets, one per unit, at what they cost, with the entry posted for you.",
+      "page": "/assets/acquisition",
+      "before": [
+        "The item must be held as the Asset inventory type."
+      ],
+      "steps": [
+        {
+          "lead": "Open Put into service.",
+          "rest": "Goods received that are still to put into service are listed."
+        },
+        {
+          "lead": "Choose Put into service",
+          "rest": "on the receipt line, or Put stock into service for goods already on the shelf."
+        },
+        {
+          "lead": "Say how many units,",
+          "rest": "and give each a serial number where one is needed."
+        },
+        {
+          "lead": "Press Put into service.",
+          "rest": "Each unit becomes an asset with its share of the cost, and the cost moves into fixed assets in the books."
+        }
+      ],
+      "tips": [
+        "An asset that costs less than your capitalisation threshold is expensed: it is kept and tracked, but never depreciated.",
+        "An asset's page can trace it back to its goods receipt, order, supplier and invoice."
+      ],
+      "related": [
+        "run-depreciation",
+        "build-an-asset"
+      ]
+    },
+    {
+      "slug": "run-depreciation",
+      "title": "Run depreciation for the month",
+      "summary": "Work out what each asset lost in value this month, have it reviewed, and post one entry to the ledger.",
+      "page": "/assets/depreciation",
+      "steps": [
+        {
+          "lead": "Press Make a run",
+          "rest": "on Depreciation, choose the month and press Make the run."
+        },
+        {
+          "lead": "Wait while it is worked out.",
+          "rest": "It becomes a draft with one line per asset: its value before, the amount and its value after."
+        },
+        {
+          "lead": "Press Review it.",
+          "rest": "Someone other than the person who made the run reviews it, where your settings ask."
+        },
+        {
+          "lead": "Press Post to the ledger.",
+          "rest": "One balanced entry is posted, dated the month's last day, and each asset's value goes down."
+        }
+      ],
+      "tips": [
+        "Months are run in order: a month only after the one before is posted.",
+        "If assets changed after the run was made, it is refused. Press Cancel the run and make it again.",
+        "Your settings can make the run each month by itself."
+      ],
+      "related": [
+        "revalue-an-asset",
+        "put-stock-into-service"
+      ]
+    },
+    {
+      "slug": "revalue-an-asset",
+      "title": "Revalue or impair an asset",
+      "summary": "Record that an asset is worth more or less than the books say, and post the difference once it is approved.",
+      "page": "/assets/valuations",
+      "steps": [
+        {
+          "lead": "Press Revalue or impair an asset",
+          "rest": "on Valuations, or the same on the asset's value tab."
+        },
+        {
+          "lead": "Choose the kind:",
+          "rest": "revaluation, impairment or adjustment. Give its new worth and why."
+        },
+        {
+          "lead": "Press Ask for the valuation.",
+          "rest": "With an approval policy it waits for an approver; with none, it is approved at once and posted."
+        }
+      ],
+      "after": "Depreciation from the next month is worked out from the new value.",
+      "related": [
+        "run-depreciation",
+        "dispose-of-an-asset"
+      ]
+    },
+    {
+      "slug": "insure-an-asset",
+      "title": "Insure assets and make a claim",
+      "summary": "Record a policy, put assets on it, and follow a claim from draft to settled.",
+      "page": "/assets/insurance",
+      "steps": [
+        {
+          "lead": "Press Record a policy",
+          "rest": "on Insurance. Give the insurer, policy number, cover, premium, dates and excess, then press Record the policy."
+        },
+        {
+          "lead": "Open the policy",
+          "rest": "and press Put an asset on this policy for each asset it covers."
+        },
+        {
+          "lead": "Press Begin a claim",
+          "rest": "when something happens, say what and how much, and press Begin the claim."
+        },
+        {
+          "lead": "Press Move it on",
+          "rest": "as it goes: submitted, in review, approved, settled and closed. Add the insurer's claim number by review, and the payment at settlement."
+        }
+      ],
+      "tips": [
+        "The money from a settled claim is recorded as a receipt in Finance.",
+        "A reminder goes out thirty days before a policy expires."
+      ],
+      "related": [
+        "keep-warranties-and-contracts",
+        "report-a-lost-asset"
+      ]
+    },
+    {
+      "slug": "count-your-assets",
+      "title": "Count your assets",
+      "summary": "Check that assets are where the register says, by hand or by scanning, and deal with what does not match.",
+      "page": "/assets/verification",
+      "steps": [
+        {
+          "lead": "Press Plan a count",
+          "rest": "on Verification. Choose what to count: a location, a place, a category or a class. Press Plan the count."
+        },
+        {
+          "lead": "Press Start counting.",
+          "rest": "The assets the register expects there are listed."
+        },
+        {
+          "lead": "Record what was found",
+          "rest": "for each asset, or scan their tags. Found where it should be is verified; found elsewhere is moved."
+        },
+        {
+          "lead": "Press Mark the rest missing",
+          "rest": "when you have looked everywhere."
+        },
+        {
+          "lead": "Press Deal with it",
+          "rest": "on each difference: put the register right, report it missing, report damage, or accept it."
+        },
+        {
+          "lead": "Press Close the count.",
+          "rest": "It closes only when nothing is pending and every difference is dealt with."
+        }
+      ],
+      "tips": [
+        "Findings sent from the phone wait on Floor findings. Accept it puts the register right; Set it aside leaves it as it is."
+      ],
+      "related": [
+        "report-a-lost-asset",
+        "move-an-asset"
+      ]
+    },
+    {
+      "slug": "collect-assets-from-a-leaver",
+      "title": "Get assets back from someone who is leaving",
+      "summary": "List everything a leaver holds, take each item back or report it missing, and close the checklist.",
+      "page": "/assets/returns",
+      "steps": [
+        {
+          "lead": "Open Leavers' returns.",
+          "rest": "A checklist opens by itself when a member of staff who holds assets is marked as leaving in Human resources."
+        },
+        {
+          "lead": "Press Open a checklist",
+          "rest": "to open one by hand, choose the person and press Open the checklist."
+        },
+        {
+          "lead": "Press Take it back",
+          "rest": "on each asset as it comes back."
+        },
+        {
+          "lead": "Choose Not returned: report it",
+          "rest": "for one that does not come back, or Do not ask for it back, with a reason."
+        },
+        {
+          "lead": "Press Close the checklist",
+          "rest": "once nothing is still to come back."
+        }
+      ],
+      "related": [
+        "assign-an-asset",
+        "report-a-lost-asset"
+      ]
+    },
+    {
+      "slug": "report-a-lost-asset",
+      "title": "Report an asset lost or stolen",
+      "summary": "Mark an asset missing, record the investigation, and end it as found or written off.",
+      "page": "/assets/losses",
+      "steps": [
+        {
+          "lead": "Press Report an asset lost or stolen",
+          "rest": "on Lost and stolen. Say when it happened, where it was last seen and any police report number, then press Report it."
+        },
+        {
+          "lead": "Press Record the investigation",
+          "rest": "as you learn more."
+        },
+        {
+          "lead": "Press Resolve it",
+          "rest": "and choose how it ended: found, or written off. Then press Resolve the report."
+        }
+      ],
+      "after": "Found, the asset's status goes back. Written off, once approved, its book value is posted as a loss.",
+      "tips": [
+        "A written-off loss can note an insurance claim.",
+        "Withdraw it (made in error) takes back a report that should not have been made."
+      ],
+      "related": [
+        "insure-an-asset",
+        "dispose-of-an-asset"
+      ]
+    },
+    {
+      "slug": "dispose-of-an-asset",
+      "title": "Sell, scrap or dispose of an asset",
+      "summary": "Ask to dispose of an asset, have it approved, carry it out, and the gain or loss is posted.",
+      "page": "/assets/disposals",
+      "steps": [
+        {
+          "lead": "Press Dispose of an asset",
+          "rest": "on Disposals, or Dispose of it on the asset's value tab."
+        },
+        {
+          "lead": "Choose how and why:",
+          "rest": "sale, scrap, donation, return and so on. Say what you expect it to fetch, then press Ask to dispose of it. It shows as awaiting disposal."
+        },
+        {
+          "lead": "Press Record the inspection",
+          "rest": "if your settings ask for one before approval."
+        },
+        {
+          "lead": "Press Carry it out",
+          "rest": "once it is approved, with what it fetched, then Carry out the disposal."
+        }
+      ],
+      "after": "The asset leaves the books and the gain or loss is posted. It shows as disposed.",
+      "tips": [
+        "A disposal can be cancelled before it is carried out. The asset gets its status back.",
+        "A retired asset, or one awaiting disposal, comes back into use only by an approved reinstatement: Bring back into service on its value tab. A disposed asset does not come back."
+      ],
+      "related": [
+        "revalue-an-asset",
+        "report-a-lost-asset"
+      ]
+    },
+    {
+      "slug": "build-an-asset",
+      "title": "Build an asset and collect its cost",
+      "summary": "Gather the stock, bills and work that go into an asset while it is built, then commission it into service.",
+      "page": "/assets/construction",
+      "steps": [
+        {
+          "lead": "Press Begin an asset",
+          "rest": "on Under construction. Say what is being built, its category and where, then press Begin an asset under construction."
+        },
+        {
+          "lead": "Press Issue stock to it",
+          "rest": "for materials it uses, at what they cost in stock."
+        },
+        {
+          "lead": "Press Collect a supplier bill",
+          "rest": "for a posted bill that belongs to it. Its amount moves from purchases into the asset."
+        },
+        {
+          "lead": "Press Add a component",
+          "rest": "for each part that should have its own life, and allocate costs to it."
+        },
+        {
+          "lead": "Press Commission it",
+          "rest": "when it is ready, with the day it goes into service, then Commission the asset."
+        }
+      ],
+      "after": "The cost moves into the asset's category, each component is registered beneath it, and depreciation begins.",
+      "tips": [
+        "An asset under construction is never depreciated before it is commissioned.",
+        "Maintenance jobs raised on it are collected into its cost, and so is what a production order makes for it."
+      ],
+      "related": [
+        "put-stock-into-service"
+      ]
+    },
+    {
+      "slug": "add-a-vehicle",
+      "title": "Add a vehicle and record its fuel",
+      "summary": "Make an asset a vehicle, keep its papers, record fuel, and connect a tracker for its trips.",
+      "page": "/assets/fleet",
+      "steps": [
+        {
+          "lead": "Press Add a vehicle",
+          "rest": "on Fleet, or Make it a vehicle on the asset's page."
+        },
+        {
+          "lead": "Give its registration,",
+          "rest": "fuel type, tank, load, seats, usual driver and when its roadworthiness and licence expire. Press Add the vehicle."
+        },
+        {
+          "lead": "Press Record fuel",
+          "rest": "on each fill: litres, cost, odometer, and whether you filled the tank."
+        },
+        {
+          "lead": "Press Connect a tracker",
+          "rest": "with its id at the provider and the meter it feeds. Its trips and position then show on the vehicle."
+        }
+      ],
+      "tips": [
+        "Kilometres a litre are worked out between full tanks.",
+        "Fleet shows papers that have expired or expire soon."
+      ],
+      "related": [
+        "set-a-maintenance-schedule"
+      ]
+    }
+  ]
+}

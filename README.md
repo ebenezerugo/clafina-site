@@ -62,6 +62,25 @@ Preview builds turn every switch on so the whole design can be reviewed. A produ
 
 The CMS will take over both files later.
 
+## Help centre
+
+`/help/` follows the app's own menu. `content/en/help/catalogue.json` (every module and page, with the app's page
+help and the guide's questions) is **generated**: refresh it when the app's menu changes, from local clones of the
+app repositories:
+
+```bash
+COMMERCE_WEB=../commerce-web COMMERCE_API=../commerce-api npm run sync:help
+```
+
+The how-tos are written by hand, one file per module in `content/en/help/guides/<module>.json`, from the module's
+doc and the app's screens. The content check makes sure each how-to points at a page of its own module.
+
+## Pre-launch pages
+
+A route made with `pre(...)` in `src/config/routes.ts` (Business email today) is a whole page built before go-live.
+It shows, with its menu and footer entries and every mention of it, only while `prelaunch.features` and its own
+`prelaunch.<route id>` switch are on.
+
 ## Languages
 
 Each language has a status in `src/config/locales.ts`. Drafts are published but marked `noindex` and
