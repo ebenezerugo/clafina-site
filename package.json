@@ -16,7 +16,8 @@
     "check:production": "tsx --tsconfig tsconfig.json scripts/check-production.ts",
     "check:css": "tsx scripts/check-logical-css.ts",
     "check:content": "tsx scripts/check-content.ts",
-    "prebuild": "tsx scripts/generate-well-known.ts"
+    "prebuild": "tsx scripts/generate-well-known.ts",
+    "postbuild": "tsx scripts/postbuild.ts"
   },
   "dependencies": {
     "next": "16.4.5",
@@ -40,5 +41,8 @@
     "typescript": "5.9.3",
     "vitest": "5.1.0",
     "wrangler": "4.157.0"
+  },
+  "overrides": {
+    "playwright-core": "1.63.0"
   }
 }
