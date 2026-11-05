@@ -56,5 +56,3 @@ test('home looks the same above the fold', async ({ page }) => {
     await expect(page).toHaveScreenshot(`home-${l}.png`, { maxDiffPixelRatio: 0.03 });
   }
 });
-  }
-});
