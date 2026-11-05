@@ -1,0 +1,40 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: closing a till shift at a homeware shop. The drawer is counted by note, the difference from expected is shown, and the Z report is ready to print.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "AH", "name": "Adaeze Home and Electronics", "place": "Ogui Road · Till 2 · Chiamaka" },
+  "nav": [
+    { "label": "Till", "items": [{ "label": "Sell" }, { "label": "Orders" }, { "label": "Customers" }, { "label": "Returns" }, { "label": "Cash", "active": true }, { "label": "Reports" }] }
+  ],
+  "title": "Close shift · opened 08:30",
+  "subtitle": "Count the drawer by note. The till compares it with what it expects.",
+  "actions": [{ "label": "Print X report" }, { "label": "Close and print Z report", "primary": true, "icon": "receipt" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "sales", "label": "Sales this shift", "value": { "money": 1284500 }, "note": "62 sales" },
+      { "icon": "money", "label": "Cash expected", "value": { "money": 412300 }, "note": "Float ₦20,000 included" },
+      { "icon": "check", "label": "Cash counted", "value": { "money": 411800 } },
+      { "icon": "alert", "label": "Difference", "value": { "money": -500 }, "change": { "tone": "warn", "text": "Short" } }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "The count", "columns": [{ "label": "Note" }, { "label": "Count", "numeric": true }, { "label": "Value", "numeric": true }], "rows": [
+        ["₦1,000", "312", { "money": 312000 }],
+        ["₦500", "164", { "money": 82000 }],
+        ["₦200", "71", { "money": 14200 }],
+        ["₦100", "28", { "money": 2800 }],
+        ["Coins", "8", { "money": 800 }],
+        [{ "strong": "Counted" }, "", { "money": 411800 }]
+      ] },
+      { "type": "kv", "title": "Shift summary", "items": [
+        { "label": "Card", "value": { "money": 538700 } },
+        { "label": "Bank transfer", "value": { "money": 214000 } },
+        { "label": "Points and store credit", "value": { "money": 49500 } },
+        { "label": "Cash in and out", "value": "1 safe drop · ₦300,000" },
+        { "label": "Returns", "value": "1 · ₦18,500 back to card" },
+        { "label": "Supervisor approvals", "value": "2 discounts" }
+      ] }
+    ] }
+  ]
+}

@@ -46,8 +46,8 @@ export const ROUTES = [
   r('product-capture', '/product/capture/', 'product', true),
   r('product-integrations', '/product/integrations/', 'product', true),
 
-  r('industries', '/industries/', 'industry'),
-  r('industry-retail', '/industries/retail/', 'industry'),
+  r('industries', '/industries/', 'industry', true),
+  r('industry-retail', '/industries/retail/', 'industry', true),
   r('industry-restaurant', '/industries/restaurant/', 'industry'),
   r('industry-accommodation', '/industries/accommodation/', 'industry'),
   r('industry-events', '/industries/events/', 'industry'),

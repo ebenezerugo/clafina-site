@@ -158,5 +158,12 @@
     "shop": "Online shop",
     "assistant": "Assistant",
     "meet": "Meet"
+  },
+  "industry": {
+    "moment": "The moment",
+    "handles": "With Clafina",
+    "core": "Built into Clafina",
+    "pack": "Industry pack",
+    "open": "Read the story"
   }
 }
