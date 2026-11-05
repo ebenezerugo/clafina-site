@@ -1,7 +1,7 @@
 import { LOCALES, localeInfo, type Locale } from '../config/locales';
 import { SITE, fact } from '../config/site';
 import { localeEnabled, localeIndexed } from '../config/switches';
-import { localePath } from './paths';
+import { HELP_LOCALES, isHelpPath, localePath } from './paths';
 
 export const SITE_ORIGIN = 'https://clafina.com';
 
@@ -10,7 +10,7 @@ const url = (locale: Locale, path: string) => `${SITE_ORIGIN}${localePath(locale
 /** Canonical address for this language, and every enabled language version plus an English default. */
 export function alternates(locale: Locale, path: string): { canonical: string; languages: Record<string, string> } {
   const languages: Record<string, string> = {};
-  for (const l of LOCALES) if (localeEnabled(l.code)) languages[l.hreflang] = url(l.code, path);
+  for (const l of LOCALES) if (localeEnabled(l.code) && (!isHelpPath(path) || HELP_LOCALES.includes(l.code))) languages[l.hreflang] = url(l.code, path);
   languages['x-default'] = url('en', path);
   return { canonical: url(locale, path), languages };
 }
@@ -41,7 +41,8 @@ const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 /** One language's sitemap: each page with links to its versions in the indexed languages. */
 export function sitemapXml(locale: Locale, paths: string[], indexed: Locale[]): string {
   const entries = paths.map((path) => {
-    const links = [...indexed.map((l) => `<xhtml:link rel="alternate" hreflang="${localeInfo(l).hreflang}" href="${esc(url(l, path))}"/>`),
+    const langs = isHelpPath(path) ? indexed.filter((l) => HELP_LOCALES.includes(l)) : indexed;
+    const links = [...langs.map((l) => `<xhtml:link rel="alternate" hreflang="${localeInfo(l).hreflang}" href="${esc(url(l, path))}"/>`),
       `<xhtml:link rel="alternate" hreflang="x-default" href="${esc(url('en', path))}"/>`];
     return `  <url>\n    <loc>${esc(url(locale, path))}</loc>\n    ${links.join('\n    ')}\n  </url>`;
   });

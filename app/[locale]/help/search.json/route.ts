@@ -2,12 +2,12 @@ import { LOCALES, isLocale, type Locale } from '@/config/locales';
 import { localeEnabled } from '@/config/switches';
 import type { HelpIndexEntry } from '@/components/help/HelpSearch';
 import { helpArticlePath, helpArticles, helpCatalogue, helpGuide, helpModulePath } from '@/lib/help';
-import { localePath } from '@/lib/paths';
+import { HELP_LOCALES, localePath } from '@/lib/paths';
 
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
-  return LOCALES.filter((l) => localeEnabled(l.code)).map((l) => ({ locale: l.code }));
+  return LOCALES.filter((l) => localeEnabled(l.code) && HELP_LOCALES.includes(l.code)).map((l) => ({ locale: l.code }));
 }
 
 /** The help centre's search index, one file per language, read by the search box when someone types. */

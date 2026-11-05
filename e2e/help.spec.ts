@@ -50,3 +50,11 @@ test.describe('help centre', () => {
     expect(body).not.toMatch(/\bCommerce\b/);
   });
 });
+
+test('other languages read the English guide until it is translated', async ({ page, request }) => {
+  expect((await request.get('/fr/help/')).status()).toBe(404);
+  await page.goto('/fr/');
+  const links = await page.locator('a[href*="/help/"]').evaluateAll((as) => as.map((a) => a.getAttribute('href')));
+  expect(links.length).toBeGreaterThan(0);
+  expect(links.every((h) => h!.startsWith('/en/help/'))).toBe(true);
+});

@@ -5,14 +5,14 @@ import { localeEnabled } from '@/config/switches';
 import { loadContent } from '@/content/load';
 import { HelpHome } from '@/content/help';
 import { helpArticles, helpCatalogue, helpGuide, helpModulePath } from '@/lib/help';
-import { localePath } from '@/lib/paths';
+import { HELP_LOCALES, localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
 import { HelpSearch } from '@/components/help/HelpSearch';
 
 type Props = { params: Promise<{ locale: string }> };
 
 export function generateStaticParams() {
-  return LOCALES.filter((l) => localeEnabled(l.code)).map((l) => ({ locale: l.code }));
+  return LOCALES.filter((l) => localeEnabled(l.code) && HELP_LOCALES.includes(l.code)).map((l) => ({ locale: l.code }));
 }
 
 const localeOf = async (params: Props['params']): Promise<Locale> => {

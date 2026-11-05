@@ -6,7 +6,7 @@ import { localeEnabled } from '@/config/switches';
 import { loadContent } from '@/content/load';
 import { HelpHome } from '@/content/help';
 import { helpArticlePath, helpArticles, helpGuide, helpModulePath, helpModules, openPage } from '@/lib/help';
-import { localePath } from '@/lib/paths';
+import { HELP_LOCALES, localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
 
 type Props = { params: Promise<{ locale: string; module: string; article: string }> };
@@ -14,7 +14,7 @@ type Props = { params: Promise<{ locale: string; module: string; article: string
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return LOCALES.filter((l) => localeEnabled(l.code)).flatMap((l) =>
+  return LOCALES.filter((l) => localeEnabled(l.code) && HELP_LOCALES.includes(l.code)).flatMap((l) =>
     helpModules('en').flatMap((m) => helpArticles(helpGuide('en', m.slug)).map((a) => ({ locale: l.code, module: m.slug, article: a.slug }))),
   );
 }

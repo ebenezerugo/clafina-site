@@ -95,6 +95,8 @@ export function checkHelp(root: string): string[] {
       textProblems(where, data, '', false, problems);
       const named = raw.match(NAMED_SERVICES);
       if (named) problems.push(`${where} names "${named[0]}"`);
+      const { sources: _sources, ...shown } = data as Record<string, Json>;
+      if (/\bCommerce\b/.test(JSON.stringify(shown))) problems.push(`${where} says "Commerce": the product is Clafina`);
       const g = HelpModuleGuide.safeParse(data);
       if (!g.success) { problems.push(...g.error.issues.map((i) => `${where} ${i.path.join('.')}: ${i.message}`)); continue; }
       const slug = f.replace(/\.json$/, '');

@@ -2,7 +2,8 @@
 
 import { useEffect, useId, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { switcherPath } from '@/lib/paths';
+import { localePath, switcherPath } from '@/lib/paths';
+import type { Locale } from '@/config/locales';
 
 export interface LanguageOption { code: string; endonym: string; hreflang: string; dir: 'ltr' | 'rtl' }
 
@@ -46,7 +47,7 @@ export function LanguageSwitcher({ current, options, label }: { current: string;
         {options.map((o) => (
           <li key={o.code}>
             <a
-              href={`/${o.code}${rest}`}
+              href={localePath(o.code as Locale, rest)}
               hrefLang={o.hreflang}
               lang={o.code}
               dir={o.dir}
