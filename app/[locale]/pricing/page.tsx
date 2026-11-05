@@ -60,7 +60,7 @@ export default async function Pricing({ params }: Props) {
         <section aria-labelledby="pricing-fallback" className="mx-auto max-w-7xl px-4 pb-16 sm:px-6">
           <h2 id="pricing-fallback" className="text-2xl font-bold">{c.fallback.title}</h2>
           <p className="mt-2 text-muted">{c.fallback.body}</p>
-          {contactSales && <a href={contactSales} className="mt-6 inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-on-primary">{c.fallback.cta}</a>}
+          {contactSales && <a href={contactSales} className="mt-6 inline-flex min-h-12 items-center rounded-control bg-primary px-6 font-semibold text-on-primary">{c.fallback.cta}</a>}
         </section>
       )}
 
