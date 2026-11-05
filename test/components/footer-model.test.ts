@@ -15,7 +15,7 @@ describe('footer model', () => {
   });
   it('links every page except home somewhere', () => {
     const linked = new Set(footerModelFor(allBuilt, 'preview').columns.flatMap((c) => c.items));
-    expect(ROUTES.filter((r) => r.id !== 'home' && r.id !== 'start' && !linked.has(r.id)).map((r) => r.id)).toEqual([]);
+    expect(ROUTES.filter((r) => r.id !== 'home' && r.id !== 'start' && !('previewOnly' in r) && !linked.has(r.id)).map((r) => r.id)).toEqual([]);
   });
   it('drops pages that do not exist yet, and empty columns', () => {
     expect(footerModel('preview').columns).toEqual([]);

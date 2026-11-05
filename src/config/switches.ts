@@ -78,6 +78,7 @@ export function isOn(key: SwitchKey, mode: BuildMode = buildMode()): boolean {
 export function pageAvailable(id: string, mode: BuildMode = buildMode()): boolean {
   const route = routeById(id);
   if (!route) throw new Error(`Unknown page: ${id}`);
+  if (route.previewOnly && mode === 'production') return false;
   return route.built && isOn(`pages.${id}` as SwitchKey, mode);
 }
 
