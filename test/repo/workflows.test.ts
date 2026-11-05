@@ -22,6 +22,13 @@ describe('deploy workflow', () => {
   });
 });
 
+describe('CI artifact', () => {
+  const ci = readFileSync('.github/workflows/ci.yml', 'utf8');
+  it('carries what the Pages Functions need to build', () => {
+    for (const path of ['out/', 'functions/', 'src/', 'package.json', 'node_modules/zod/']) expect(ci).toContain(path);
+  });
+});
+
 describe('production build script', () => {
   const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
   it('runs through npm run build so the pre- and post-build steps run', () => {
