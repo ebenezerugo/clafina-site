@@ -9,5 +9,207 @@
     "lede": "Books, stock, sales, people and your online shop on one record, with a till, a phone app and an assistant reading the same numbers.",
     "primaryCta": "Start free",
     "secondaryCta": "Book a demo"
+  },
+  "illustrative": "Illustrative example",
+  "oneRecord": {
+    "eyebrow": "One record",
+    "title": "One sale. Everywhere it matters, at once.",
+    "intro": "A sale at the till is not four jobs in four systems. It is one record that everything reads.",
+    "steps": [
+      {
+        "id": "till",
+        "title": "The till sells",
+        "body": "A cashier charges table 6 by cash, transfer or card. The till keeps selling if the connection drops.",
+        "visual": [
+          {
+            "label": "Table 6 charged",
+            "value": "23400"
+          },
+          {
+            "label": "Paid by",
+            "value": "Cash"
+          }
+        ]
+      },
+      {
+        "id": "stock",
+        "title": "Stock moves",
+        "body": "The dishes and the stock behind them come off that branch, so the next order sees what is really left.",
+        "visual": [
+          {
+            "label": "Jollof rice and chicken",
+            "value": "−2"
+          },
+          {
+            "label": "Left at this branch",
+            "value": "22"
+          }
+        ]
+      },
+      {
+        "id": "books",
+        "title": "The books post",
+        "body": "The sale, the VAT and the service charge post to the ledger by themselves. Nobody types them in again.",
+        "visual": [
+          {
+            "label": "4000 Sales",
+            "value": "20800"
+          },
+          {
+            "label": "2310 VAT",
+            "value": "1560"
+          },
+          {
+            "label": "2320 Service charge",
+            "value": "1040"
+          }
+        ]
+      },
+      {
+        "id": "phone",
+        "title": "The owner sees it",
+        "body": "Today's sales on the phone app change as it happens, next to what needs attention.",
+        "visual": [
+          {
+            "label": "Sales today",
+            "value": "2486500"
+          },
+          {
+            "label": "Table 6, just now",
+            "value": "23400"
+          }
+        ]
+      }
+    ],
+    "currency": "NGN"
+  },
+  "surfaces": {
+    "eyebrow": "Everywhere you work",
+    "title": "One business, on every screen it uses",
+    "intro": "Staff use the screen that suits the job. Every one of them reads and writes the same numbers.",
+    "items": [
+      {
+        "id": "web",
+        "title": "The web app",
+        "body": "Books, sales, stock, people and projects. Every page says what it is for and what to do next."
+      },
+      {
+        "id": "till",
+        "title": "The till",
+        "body": "Sells on desktop, on Android and in the browser, and keeps going offline within the limits you set."
+      },
+      {
+        "id": "shop",
+        "title": "Your online shop",
+        "body": "Built in Storefront Studio in your own brand, selling from the same stock and the same prices."
+      },
+      {
+        "id": "phone",
+        "title": "The phone app",
+        "body": "Your numbers, approvals, sales and stock counts in your pocket."
+      },
+      {
+        "id": "assistant",
+        "title": "The assistant",
+        "body": "Drafts replies, sums up long conversations, sorts what comes in and takes meeting notes."
+      },
+      {
+        "id": "meet",
+        "title": "Meet",
+        "body": "Video calls and audio rooms of your own, started from any chat."
+      }
+    ]
+  },
+  "modules": {
+    "eyebrow": "What it covers",
+    "title": "Everything a business runs on",
+    "intro": "Use what you need today. The rest is already there when you grow into it.",
+    "items": {
+      "product-finance": "Accounts, journals, bank and the books closed on time.",
+      "product-payments": "Collect, pay out and see every movement of money.",
+      "product-tax": "VAT and withholding worked out on every document.",
+      "product-business-health": "Dashboards and reports that agree with the books.",
+      "product-sales": "Quotations, orders, waybills, invoices and receipts.",
+      "product-crm": "Customers, loyalty, support and the messages you send them.",
+      "product-pos": "A till for shops and restaurants that sells offline.",
+      "product-online-shop": "Your own shop in your own brand.",
+      "product-trading-network": "Send orders and invoices straight to other businesses.",
+      "product-stock": "Products, units, variants and stock in every place.",
+      "product-purchasing": "Requests, purchase orders, receiving and paying suppliers.",
+      "product-manufacturing": "Bills of materials, work orders, quality and true cost.",
+      "product-bookings": "Rooms, tables, people and equipment that cannot double-book.",
+      "product-projects": "Projects, tasks and timesheets you can bill.",
+      "product-assets": "What you own, where it is and when it needs service.",
+      "product-hr": "Staff, leave, clock-in and payroll.",
+      "product-communication": "Inbox, team chat, templates and Meet.",
+      "product-mobile": "The phone app for owners and staff.",
+      "product-assistant": "Help with the writing and the reading.",
+      "product-capture": "Scan a receipt or say it out loud; Clafina fills the form.",
+      "product-integrations": "An API, webhooks and connections to your other tools."
+    }
+  },
+  "industries": {
+    "eyebrow": "Made for your trade",
+    "title": "Your trade's words, your trade's work",
+    "intro": "One core with packs on top. A hotel sees Guests and Stays, a charity sees Donors, a workshop sees Jobs."
+  },
+  "works": {
+    "eyebrow": "Works where you work",
+    "title": "Built for the way business really runs",
+    "items": [
+      {
+        "id": "offline",
+        "title": "Keeps selling offline",
+        "body": "The till carries on when the connection drops and catches up when it comes back."
+      },
+      {
+        "id": "currencies",
+        "title": "Every currency",
+        "body": "Every amount carries its currency. The books keep the rate and the gain or loss."
+      },
+      {
+        "id": "languages",
+        "title": "Your customer's language",
+        "body": "Invoices and emails go out in your customer's language when you have a template for it."
+      },
+      {
+        "id": "live",
+        "title": "Always current",
+        "body": "Screens change the moment something happens. Nobody presses refresh."
+      }
+    ]
+  },
+  "trust": {
+    "eyebrow": "Trust",
+    "title": "Built to be trusted with your money",
+    "items": [
+      {
+        "text": "Two-step sign-in, and single sign-on with SAML or OIDC."
+      },
+      {
+        "text": "See every device that is signed in, and sign any of them out."
+      },
+      {
+        "text": "Passwords and keys for your connections are sealed and never shown again."
+      },
+      {
+        "text": "A finance audit trail that cannot be quietly changed, and no approving your own payments."
+      },
+      {
+        "text": "Our support team reaches your account only when you allow it, read-only and recorded."
+      },
+      {
+        "text": "Certified to ISO 27001 and SOC 2 Type II.",
+        "claim": "claims.complianceLabels"
+      },
+      {
+        "text": "99.9% uptime, measured every minute.",
+        "claim": "claims.uptime"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Start with what you need today.",
+    "body": "Start free, or book a demo and we will show you the screens for your trade."
   }
 }
