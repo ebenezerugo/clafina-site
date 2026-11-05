@@ -281,13 +281,13 @@ it will be built before the application goes live, so the pages present it as fe
 
 | Industry | Kind | Trade words | Built before go-live (`prelaunch`) |
 |---|---|---|---|
-| Retail | Core: till and online shop | till, shift, float, X/Z report, walk-in customer | iOS till; till units other than one; serial and batch at the till |
+| Retail | Core: till and online shop | till, shift, float, X/Z report, walk-in customer | iOS till; selling in several units at the till; serial and batch at the till |
 | Restaurant | Pack | floor, covers, tabs, courses, stations, 86 | menu photos and languages |
 | Accommodation | Pack on Bookings | Guest, Stay, front desk, room rack, folio, night audit | live channel connections; key cards; group bookings; occupancy dashboard; public room booking page |
 | Events & ticketing | Pack | tickets, sessions, seating plan, gate | offline scanning; storefront ticket page; waitlists, resale, transfer |
 | Memberships | Pack | members, plans, freezes, billing runs | card on file; member app and join page; wallet passes; offline door scanning |
 | Classes | Pack on Bookings + Memberships | class schedule, check-in, class packs, credits, drop-in | member's own booking screen; WhatsApp/SMS offers; pay into payroll |
-| Courses | Pack | learners, lessons, quizzes, certificates | public certificate verification; reminders; cohorts and scheduled classes; selling on the shop |
+| Courses | Pack | learners, lessons, quizzes, certificates | public certificate verification; reminders; cohorts and scheduled classes; selling on the shop; fees by term, fee statements, parent or guardian records |
 | Client records | Pack | client, consent, signed notes, break-glass | per-profession templates; client consent page; insurer claims. Never "compliant" |
 | Property | Pack | Tenant, lease, rent roll, caution deposit, owners' levies | meter readings and service charges; tenant and landlord portals; listings |
 | Construction | Pack on Projects | contract, stages, variations, valuation, retention, site diary, snags | Gantt; subcontractor portal; drawings and RFIs; final account |
@@ -296,7 +296,7 @@ it will be built before the application goes live, so the pages present it as fe
 | Distribution | Pack | routes, van loads, settle a van, empties | map route planning; proof of delivery; 3PL client view; excise |
 | Farm | Pack (agriculture) | fields, seasons, scouting, applications, batches, lots, outgrowers | lot on invoices and waybills; season tagging in the journal; some map and weather providers |
 | Manufacturing | Core module | bill of materials, routing, work centre, work order, OEE, NCR | AQL sampling and control charts; multi-currency costing; IoT |
-| Fundraising | Pack | Donor, gifts, campaigns, grants, tax receipts, pledges | gifts in the ledger; emailing receipts; giving page; soft credits, volunteers |
+| Fundraising | Pack | Donor, gifts, campaigns, grants, tax receipts, pledges | gifts in the ledger; emailing receipts; a receipt issued and sent as soon as a gift is received; giving page; soft credits, volunteers |
 | Product configurator | Pack | (doc not in this repo: read CONFIGURATOR.md before writing) | |
 
 Corrections the new pages must make against today's `industries.html`:
@@ -304,8 +304,8 @@ Corrections the new pages must make against today's `industries.html`:
 - Retail and manufacturing are core modules, not packs.
 - Property service charges, field service route planning and the other Appendix A items become
   `prelaunch` features, not plain claims.
-- Claims that are neither built nor in Appendix A are dropped:
-  - course terms, fee statements and parent records;
-  - fundraising receipts issued the moment money arrives (they are issued by action or in a yearly
-    batch; emailing them is in Appendix A);
-  - a till that sells in several units.
+- Three more items the old page claimed will also be built before go-live (owner, 5 Nov) and are
+  `prelaunch` features too:
+  - courses: fees by term, fee statements and parent or guardian records;
+  - fundraising: a receipt issued and sent as soon as a gift is received;
+  - retail: the till selling in more than one unit (cartons, packs, single items).
