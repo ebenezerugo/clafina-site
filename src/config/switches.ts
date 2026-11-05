@@ -1,6 +1,6 @@
 import { LOCALES, localeInfo, type Locale } from './locales';
 import { ROUTES, routeById, type RouteId } from './routes';
-import { buildMode, type BuildMode } from '@/lib/build-mode';
+import { buildMode, type BuildMode } from '../lib/build-mode';
 
 export interface Switch {
   on: boolean;
