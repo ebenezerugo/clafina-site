@@ -1,0 +1,46 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: everyone's leave, with one request opened to show the balance, the notice given and who else is away that week.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search people, payslips, leave…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "People", "items": [{ "label": "Overview" }, { "label": "Staff" }, { "label": "Rota" }, { "label": "Attendance" }, { "label": "Leave", "badge": "2", "active": true }, { "label": "Payroll runs" }, { "label": "Performance" }] }
+  ],
+  "title": "Leave",
+  "subtitle": "Everyone's leave, counted in working days without holidays. Decisions are made in the Inbox.",
+  "actions": [{ "label": "Ask for leave on someone's behalf", "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "clock", "label": "Waiting for a decision", "value": "2" },
+      { "icon": "check", "label": "Approved", "value": "31" },
+      { "icon": "alert", "label": "Refused", "value": "3" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Person" }, { "label": "Kind" }, { "label": "When" }, { "label": "Days", "numeric": true }, { "label": "Status" }], "rows": [
+      [{ "avatar": "AD", "text": "Ada" }, "Annual leave", "26 to 30 Oct", "5", { "pill": "warn", "text": "Waiting for a decision" }],
+      [{ "avatar": "KU", "text": "Kunle" }, "Annual leave", "2 Nov, half a day", "0.5", { "pill": "warn", "text": "Waiting for a decision" }],
+      [{ "avatar": "NN", "text": "Nneka" }, "Sick leave", "14 to 15 Oct", "2", { "pill": "good", "text": "Approved" }],
+      [{ "avatar": "YE", "text": "Yemi" }, "Study leave", "5 to 9 Oct", "5", { "pill": "good", "text": "Approved" }],
+      [{ "avatar": "EF", "text": "Efe" }, "Annual leave", "12 to 23 Oct", "10", { "pill": "bad", "text": "Refused" }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Ada: 26 to 30 Oct", "items": [
+        { "label": "Balance now", "value": "14 days of 20" },
+        { "label": "After this", "value": "9 days, if approved" },
+        { "label": "Notice given", "value": "8 days; 7 needed" },
+        { "label": "Counted", "value": "5 working days, no public holiday" }
+      ] },
+      { "type": "table", "title": "Warehouse team that week: 5 needed", "columns": [{ "label": "Day" }, { "label": "At work", "numeric": true }, { "label": "Rota" }], "rows": [
+        ["Mon 26", "5", { "pill": "good", "text": "Covered" }],
+        ["Tue 27", "5", { "pill": "good", "text": "Covered" }],
+        ["Wed 28", "4", { "pill": "warn", "text": "One short" }],
+        ["Thu 29", "4", { "pill": "warn", "text": "One short" }],
+        ["Fri 30", "4", { "pill": "warn", "text": "One short" }]
+      ] }
+    ] }
+  ]
+}

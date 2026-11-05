@@ -1,0 +1,31 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: my timesheet on the phone, with a timer running on a task and today's time booked.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Time", "icon": "clock", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "My timesheet",
+  "subtitle": "Week of Monday 19 October",
+  "blocks": [
+    { "type": "attention", "title": "Timer running since 08:12", "items": [
+      { "tone": "info", "icon": "clock", "title": "1:24:09", "body": "Cold room installation, Install compressors.", "action": "Stop" }
+    ] },
+    { "type": "kv", "items": [
+      { "label": "Today", "value": "6:36 booked + 1:24 on the timer" },
+      { "label": "Monday", "value": "8:00" }
+    ] },
+    { "type": "table", "title": "Today", "columns": [{ "label": "Entry" }, { "label": "Hours", "numeric": true }, { "label": "Kind" }], "rows": [
+      ["Stand-up prep · Delivery route redesign", "0:30", { "pill": "neutral", "text": "Internal" }],
+      ["Site visit and sign-off · Warehouse racking", "3:00", { "pill": "good", "text": "Billable" }],
+      ["Pipework, line 2 · Cold room installation", "3:06", { "pill": "good", "text": "Billable" }]
+    ] }
+  ]
+}

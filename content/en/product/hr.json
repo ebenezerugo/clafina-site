@@ -1,0 +1,196 @@
+{
+  "kind": "product",
+  "sources": [
+    "HR.md",
+    "MOBILE.md",
+    "docs/product-facts.md#product-hr"
+  ],
+  "meta": {
+    "title": "HR and payroll · Clafina",
+    "description": "Staff, rotas, attendance, leave, payroll and reviews in one place. Each payroll run posts to the books, and what is owed is ready to pay over."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "HR and payroll",
+    "title": "Your people, their time and their pay, in one place.",
+    "lede": "Records, rotas, attendance, leave and reviews sit with payroll. A run is calculated, approved and paid, and the cost goes to the books by itself.",
+    "screen": "hr-overview"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Pay everyone correctly",
+      "body": "Payroll runs from pay groups, grades and your own tax tables. PAYE and pension are paid over from the run."
+    },
+    {
+      "title": "Rotas and attendance",
+      "body": "Rotation plans make the rota. People clock in and out against their shift in the app."
+    },
+    {
+      "title": "Leave and reviews",
+      "body": "Requests follow your approval policy, balances carry over, and performance cycles keep goals and reviews together."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "hr-payroll-run",
+      "title": "Check the run, then approve it",
+      "body": "A run shows everyone's pay, how each amount adds up and anything that needs a look before you approve.",
+      "points": [
+        "Calculated, approved, paid, and voided if it must be",
+        "Employer contributions are posted with the run",
+        "Everyone reads their own payslips in My payslips"
+      ]
+    },
+    {
+      "screen": "hr-leave",
+      "title": "Decide leave with the rota in view",
+      "body": "Each request shows the balance, the notice given and who else is away, so you can see a gap before it happens.",
+      "points": [
+        "Counted in working days, without holidays",
+        "Entitlements carry over by your rules",
+        "People ask for leave from My leave"
+      ]
+    },
+    {
+      "screen": "hr-leave-phone",
+      "title": "Answer from your phone",
+      "body": "Managers approve or refuse leave from the phone, with the clash shown on each request.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in HR",
+  "features": [
+    {
+      "title": "People and records",
+      "items": [
+        {
+          "text": "Staff, departments, teams, jobs, contracts, right to work, documents and exit."
+        },
+        {
+          "text": "Compliance records, such as medicals and licences, with their expiry dates."
+        },
+        {
+          "text": "Every member is staff and reads their own record."
+        },
+        {
+          "text": "People update their own details from their record.",
+          "prelaunch": "product-hr"
+        }
+      ]
+    },
+    {
+      "title": "Time and attendance",
+      "items": [
+        {
+          "text": "Shifts, rotation plans that make the rota, and holidays."
+        },
+        {
+          "text": "Clock in and clock out against the shift, in your organisation's time zone, by each person in the app."
+        },
+        {
+          "text": "Leave entitlements with carry-over, requests by approval policy, and My leave."
+        }
+      ]
+    },
+    {
+      "title": "Payroll",
+      "items": [
+        {
+          "text": "Pay groups, grades, components and salary structures."
+        },
+        {
+          "text": "Tax tables by country and state that you enter, tax profiles with reliefs, and tables for non-residents."
+        },
+        {
+          "text": "Payroll runs that are calculated, approved, paid or voided, with printed payslips and My payslips."
+        },
+        {
+          "text": "Voiding a paid run, with how the money comes back."
+        },
+        {
+          "text": "Net pay recorded as paid out, once it leaves your account.",
+          "prelaunch": "product-hr"
+        }
+      ]
+    },
+    {
+      "title": "In the books",
+      "items": [
+        {
+          "text": "Employer contributions posted with each run."
+        },
+        {
+          "text": "PAYE and pension paid over from the run as payment requests."
+        },
+        {
+          "text": "Payroll cost split by department.",
+          "prelaunch": "product-hr"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "items": [
+        {
+          "text": "Performance cycles, a goals board, and reviews that are self-assessed and rated."
+        },
+        {
+          "text": "A people dashboard, and an HR overview of contracts ending and leave."
+        }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    {
+      "route": "product-finance",
+      "text": "Payroll posts to the ledger, and what is owed becomes payment requests."
+    },
+    {
+      "route": "product-projects",
+      "text": "Cost rates and the timeclock feed project time."
+    },
+    {
+      "route": "product-manufacturing",
+      "text": "Production rosters and skills come from HR."
+    },
+    {
+      "route": "product-assets",
+      "text": "A leaver's exit starts the return of what they hold."
+    }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": [
+    "web",
+    "phone"
+  ],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-restaurant",
+    "industry-accommodation",
+    "industry-manufacturing",
+    "industry-distribution"
+  ],
+  "faqTitle": "Questions about HR",
+  "faq": [
+    {
+      "q": "Does Clafina come with tax tables for my country?",
+      "a": "No. You enter your own tax tables, by country and state, with reliefs and tables for non-residents. Payroll then works from them."
+    },
+    {
+      "q": "Can staff see their own payslips and leave?",
+      "a": "Yes. Every member is staff and reads their own record, with My payslips and My leave."
+    },
+    {
+      "q": "Can I undo a payroll run that was already paid?",
+      "a": "Yes. You can void a paid run, and Clafina shows how the money comes back."
+    }
+  ],
+  "cta": {
+    "title": "See HR with your own team.",
+    "body": "Start free, or book a demo and we will walk through a month from the rota to the payslips."
+  }
+}

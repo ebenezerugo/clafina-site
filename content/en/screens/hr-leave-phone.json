@@ -1,0 +1,28 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a manager's phone with two leave requests to decide, each showing the balance and any clash with the rota.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "People", "icon": "users", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Leave",
+  "subtitle": "Requests waiting for you, and your own.",
+  "blocks": [
+    { "type": "kv", "items": [
+      { "label": "Waiting", "value": "2" },
+      { "label": "Mine", "value": "1" },
+      { "label": "Approved", "value": "31" }
+    ] },
+    { "type": "attention", "title": "Waiting for you", "items": [
+      { "tone": "warn", "icon": "leaf", "title": "Ada · annual leave · 5 days", "body": "Mon 26 to Fri 30 Oct. Balance 14 days, 9 after this. The warehouse would have 4 of 6 on Wed to Fri; your rota needs 5.", "action": "Approve" },
+      { "tone": "info", "icon": "leaf", "title": "Kunle · annual leave · half a day", "body": "Mon 2 Nov. Reason: an appointment. No clashes.", "action": "Approve" }
+    ] }
+  ]
+}

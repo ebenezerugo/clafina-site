@@ -1,0 +1,44 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the inbox, with approvals, mentions, tasks, alerts and customer messages in one list, and a payment approval opened beside it.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search the inbox…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "12" }] },
+    { "label": "Workspace", "items": [{ "label": "Inbox", "active": true }, { "label": "Messages" }, { "label": "Meet" }, { "label": "Templates" }, { "label": "Announcements" }, { "label": "Campaigns" }] }
+  ],
+  "title": "Inbox",
+  "subtitle": "Everything that is waiting on you, in one place: approvals, mentions, tasks, alerts and messages.",
+  "actions": [{ "label": "Mark all read" }, { "label": "New conversation", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "Approvals", "value": "4" },
+      { "icon": "bell", "label": "Mentions", "value": "2" },
+      { "icon": "clock", "label": "Tasks", "value": "2" },
+      { "icon": "phone", "label": "Messages", "value": "2", "change": { "tone": "warn", "text": "1 reply due in 12 min" } }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Today", "columns": [{ "label": "Kind" }, { "label": "What" }, { "label": "From" }, { "label": "Next" }], "rows": [
+        [{ "pill": "info", "text": "Approval" }, "Pay ₦1,450,000 to Ring Road Haulage", { "avatar": "KO", "text": "Kola · Accounts" }, "Approve"],
+        [{ "pill": "warn", "text": "Message" }, "Tide Street Stores asks about INV-0415", { "avatar": "NG", "text": "Ngozi · Customer" }, "Reply"],
+        [{ "pill": "neutral", "text": "Mention" }, "“Can you confirm the closing balance?”", { "avatar": "KO", "text": "Kola · Accounts" }, "Reply"],
+        [{ "pill": "bad", "text": "Alert" }, "Powdered milk 400g runs out in 3 days", { "avatar": "A", "text": "Automatic alert" }, "Order 142"],
+        [{ "pill": "info", "text": "Approval" }, "Write off 14 cartons of noodles: ₦137,200", { "avatar": "TA", "text": "Tayo · Warehouse" }, "Approve"]
+      ] },
+      { "type": "kv", "title": "Pay ₦1,450,000 to Ring Road Haulage", "items": [
+        { "label": "Document", "value": "PAY-2026-0093" },
+        { "label": "Pay from", "value": "Current account ••6789" },
+        { "label": "What for", "value": "Freight for September deliveries" },
+        { "label": "Step 1", "value": { "pill": "good", "text": "Prepared by Kola, 09:12" } },
+        { "label": "Step 2", "value": { "pill": "warn", "text": "You approve, due tomorrow" } }
+      ] }
+    ] },
+    { "type": "attention", "title": "Why this needs you", "items": [
+      { "tone": "info", "icon": "users", "title": "Two-person payments", "body": "Payments above ₦1,000,000 need two people. Kola prepared this one, so a second person must approve. A note is needed if you decline, so Kola knows what to change.", "action": "Approve" }
+    ] }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a customer's message about an invoice, tied to that invoice, with a private note for the team and a reply ready to send.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search the inbox…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "12" }] },
+    { "label": "Workspace", "items": [{ "label": "Inbox", "active": true }, { "label": "Messages" }, { "label": "Meet" }, { "label": "Templates" }, { "label": "Announcements" }, { "label": "Campaigns" }] }
+  ],
+  "title": "Tide Street Stores asks about INV-0415",
+  "subtitle": "Message from a customer · assigned to you · waiting for us",
+  "actions": [{ "label": "Use a template" }, { "label": "Send later", "icon": "clock" }, { "label": "Send reply", "primary": true }],
+  "blocks": [
+    { "type": "row", "widths": "2fr 1fr", "blocks": [
+      { "type": "cards", "columns": 1, "items": [
+        { "title": "Ngozi · 09:41 · by chat", "body": "Good morning. Please check invoice 0415. The delivery charge looks ₦20,000 higher than we agreed." },
+        { "title": "You · 09:58", "body": "Good morning Ngozi. Let me check with the warehouse and come back to you." },
+        { "title": "Ngozi · 10:12 · by chat", "body": "Thank you. We pay on Friday, so I need it corrected before then." }
+      ] },
+      { "type": "kv", "title": "About", "items": [
+        { "label": "Customer", "value": { "avatar": "TS", "text": "Tide Street Stores" } },
+        { "label": "Related", "value": "INV-0415" },
+        { "label": "Invoice", "value": { "money": 486000 } },
+        { "label": "Assigned to", "value": "You" },
+        { "label": "Reply target", "value": { "pill": "warn", "text": "Due in 12 min" } }
+      ] }
+    ] },
+    { "type": "attention", "title": "Private note: only your team sees it", "items": [
+      { "tone": "info", "icon": "receipt", "title": "Checked with the warehouse", "body": "The extra ₦20,000 was a delivery charge we already waived. I am sending a corrected invoice now.", "action": "Add note" }
+    ] }
+  ]
+}

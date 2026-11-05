@@ -1,0 +1,24 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the inbox on the phone, with one button on each thing that is waiting.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell", "active": true },
+    { "label": "New", "icon": "plus" },
+    { "label": "Sales", "icon": "sales" },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Inbox",
+  "subtitle": "What is waiting on you. One button on each.",
+  "blocks": [
+    { "type": "attention", "title": "Today", "items": [
+      { "tone": "info", "icon": "check", "title": "Pay ₦1,450,000 to Ring Road Haulage", "body": "Kola, Accounts. Payments above ₦1,000,000 need two people; you are the second.", "action": "Approve" },
+      { "tone": "warn", "icon": "clock", "title": "Tide Street Stores asks about INV-0415", "body": "Ngozi asked you to check the delivery charge. Your reply target is 12 minutes away.", "action": "Reply" },
+      { "tone": "info", "icon": "bell", "title": "Kola mentioned you in “September statement”", "body": "“The bank statement is in Drive. Can you confirm the closing balance?”", "action": "Reply" }
+    ] }
+  ]
+}

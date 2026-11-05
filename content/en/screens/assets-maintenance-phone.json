@@ -1,0 +1,26 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a technician's maintenance jobs on the phone, with one button for each job's next step.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Jobs", "icon": "box", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Maintenance",
+  "subtitle": "Jobs given to you. One button for the next step.",
+  "blocks": [
+    { "type": "attention", "title": "In progress", "items": [
+      { "tone": "info", "icon": "check", "title": "WO-2026-0123 · 500-hour service", "body": "Forklift FL-02, main warehouse. Started Fri 16 Oct, 14:10: 2.5 h booked and 3 parts used from stock. Add hours, a part, a photo or a note.", "action": "Mark it done" }
+    ] },
+    { "type": "table", "title": "Next", "columns": [{ "label": "Job" }, { "label": "Status" }], "rows": [
+      ["Brake pads and discs · Truck TRK-07", { "pill": "bad", "text": "2 days late" }],
+      ["250-hour service · Generator GEN-01", { "pill": "neutral", "text": "Thu 22 Oct" }]
+    ] }
+  ]
+}

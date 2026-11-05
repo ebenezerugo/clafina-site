@@ -1,0 +1,48 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: timesheet approvals, with the weeks people have sent and one long week opened to check its entries.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search projects, tasks, people…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Operations", "items": [{ "label": "Projects" }, { "label": "My tasks" }, { "label": "My timesheet" }, { "label": "Timesheet approvals", "badge": "3", "active": true }] }
+  ],
+  "title": "Timesheet approvals",
+  "subtitle": "The weeks people have sent, and what is in them.",
+  "actions": [{ "label": "Approve 2 normal weeks", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "clock", "label": "Waiting for approval", "value": "3", "note": "Week of 12 October" },
+      { "icon": "check", "label": "Approved", "value": "14" },
+      { "icon": "alert", "label": "Turned back", "value": "1" }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Week of 12 October", "columns": [{ "label": "Person" }, { "label": "Hours", "numeric": true }, { "label": "Billable", "numeric": true }, { "label": "Status" }], "rows": [
+        [{ "avatar": "NN", "text": "Nneka" }, "40:00", "34:30", { "pill": "info", "text": "Waiting" }],
+        [{ "avatar": "RE", "text": "Remi" }, "52:30", "30:00", { "pill": "warn", "text": "Waiting, long week" }],
+        [{ "avatar": "AD", "text": "Ada" }, "38:00", "8:00", { "pill": "info", "text": "Waiting" }],
+        [{ "avatar": "TA", "text": "Tayo" }, "41:30", "36:00", { "pill": "good", "text": "Approved" }],
+        [{ "avatar": "KO", "text": "Kola" }, "40:00", "12:00", { "pill": "good", "text": "Approved" }]
+      ] },
+      { "type": "kv", "title": "Remi · week of 12 October", "items": [
+        { "label": "Sent", "value": "Sunday 18 Oct, 21:14" },
+        { "label": "Hours in all", "value": "52:30, 12:30 over a usual week" },
+        { "label": "Billable", "value": "30:00" },
+        { "label": "Cost at their rate", "value": { "money": 212500 } }
+      ] }
+    ] },
+    { "type": "table", "title": "Remi's entries, newest day first", "columns": [{ "label": "Day" }, { "label": "What was done" }, { "label": "Project and task" }, { "label": "Hours", "numeric": true }, { "label": "Kind" }], "rows": [
+      ["Fri 16", "Compressors 2 and 3 fixed to the plinth", "Cold room installation · Install compressors", "5:00", { "pill": "good", "text": "Billable" }],
+      ["Fri 16", "Generator service", "Maintenance round", "3:30", { "pill": "neutral", "text": "Internal" }],
+      ["Thu 15", "Compressor 1 and wiring", "Cold room installation · Install compressors", "8:00", { "pill": "good", "text": "Billable" }],
+      ["Thu 15", "Gas leak test, night shift", "Cold room installation · Commissioning", "5:00", { "pill": "good", "text": "Billable" }]
+    ] },
+    { "type": "attention", "title": "Why this week is flagged", "items": [
+      { "tone": "warn", "icon": "alert", "title": "Over 52 hours", "body": "A normal week has no day over your limit of 16 h, a task on every entry and nothing entered for days to come. Approving costs the hours at each person's rate and makes billable ones ready to invoice.", "action": "Approve this week" }
+    ] }
+  ]
+}

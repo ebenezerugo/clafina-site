@@ -1,0 +1,49 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a monthly payroll run that has been calculated, with each person's pay and one entry that needs a look before it is approved.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search people, payslips, leave…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "People", "items": [{ "label": "Overview" }, { "label": "Staff" }, { "label": "Rota" }, { "label": "Attendance" }, { "label": "Leave", "badge": "2" }, { "label": "Payroll runs", "active": true }, { "label": "Performance" }] }
+  ],
+  "title": "October 2026 · Monthly staff",
+  "subtitle": "RUN-2026-10 · 1 to 31 October · pay date Wednesday 28 October · Naira",
+  "actions": [{ "label": "Calculate again" }, { "label": "Approve this run", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "steps", "items": ["Draft", "Calculated", "Approved", "Paid"], "current": 1 },
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "People paid", "value": "82", "note": "4 left out: leaving or unpaid leave" },
+      { "icon": "money", "label": "Gross pay", "value": { "money": 24612000 }, "change": { "tone": "neutral", "text": "₦0.9m more than September", "dir": "up" } },
+      { "icon": "receipt", "label": "Tax and deductions", "value": { "money": 5181500 }, "note": "PAYE, pension, loans" },
+      { "icon": "bank", "label": "Net pay", "value": { "money": 19430500 }, "note": "What reaches people's accounts" }
+    ] },
+    { "type": "table", "title": "Showing 5 of 82", "columns": [{ "label": "Person" }, { "label": "Base", "numeric": true }, { "label": "Gross", "numeric": true }, { "label": "Tax", "numeric": true }, { "label": "Deductions", "numeric": true }, { "label": "Net", "numeric": true }], "rows": [
+      [{ "avatar": "NN", "text": "Nneka" }, { "money": 420000 }, { "money": 521000 }, { "money": 41200 }, { "money": 36300 }, { "money": 443500 }],
+      [{ "avatar": "RE", "text": "Remi" }, { "money": 310000 }, { "money": 412500 }, { "money": 28900 }, { "money": 28100 }, { "money": 355500 }],
+      [{ "avatar": "AD", "text": "Ada" }, { "money": 360000 }, { "money": 448000 }, { "money": 34600 }, { "money": 31200 }, { "money": 382200 }],
+      [{ "avatar": "YE", "text": "Yemi" }, { "money": 290000 }, { "money": 353000 }, { "money": 24100 }, { "money": 25400 }, { "money": 303500 }],
+      [{ "avatar": "KU", "text": "Kunle" }, { "money": 210000 }, { "money": 262000 }, { "money": 15900 }, { "money": 18700 }, { "money": 227400 }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Remi: how it adds up", "items": [
+        { "label": "Base salary", "value": { "money": 310000 } },
+        { "label": "Housing and transport", "value": { "money": 40000 } },
+        { "label": "Overtime, 25 h", "value": { "money": 62500 } },
+        { "label": "Gross", "value": { "money": 412500 } },
+        { "label": "PAYE tax", "value": { "money": -28900 } },
+        { "label": "Pension", "value": { "money": -24800 } },
+        { "label": "Housing fund", "value": { "money": -3300 } },
+        { "label": "Net", "value": { "money": 355500 } }
+      ] },
+      { "type": "attention", "title": "1 entry needs a look", "items": [
+        { "tone": "warn", "icon": "alert", "title": "Below the pay group's minimum", "body": "Kunle's loan repayment takes his net pay below the minimum you set for this pay group.", "action": "Open Kunle's pay" },
+        { "tone": "info", "icon": "check", "title": "When you pay", "body": "Each payslip is made, the cost is posted to the books, and PAYE and pension are ready to pay over.", "action": "See what posts" }
+      ] }
+    ] }
+  ]
+}

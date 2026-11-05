@@ -1,0 +1,42 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a fixed-price project with its progress, hours, margin, team and milestones billed once the customer accepts them.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search projects, tasks, people…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Operations", "items": [{ "label": "Projects", "active": true }, { "label": "My tasks" }, { "label": "My timesheet" }, { "label": "Timesheet approvals", "badge": "3" }] }
+  ],
+  "title": "Cold room installation",
+  "subtitle": "PRJ-2026-0031 · for Lantern Valley Foods · run by Tayo · 1 Sep to 20 Nov · fixed price",
+  "actions": [{ "label": "Log time", "icon": "clock" }, { "label": "Complete the project", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "steps", "items": ["Draft", "Planning", "Active", "Completed", "Closed"], "current": 2 },
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "Progress", "value": "62%", "note": "11 of 18 tasks are done" },
+      { "icon": "clock", "label": "Hours logged", "value": "212 h", "note": "Of 240 h planned · 198 h approved" },
+      { "icon": "alert", "label": "Budget used", "value": "88% of hours", "change": { "tone": "warn", "text": "Runs out 4 Dec at this pace" } },
+      { "icon": "money", "label": "Margin so far", "value": { "money": 4120000 }, "note": "Expected ₦3,860,000 at the end" }
+    ] },
+    { "type": "row", "widths": "2fr 1fr", "blocks": [
+      { "type": "table", "title": "Milestones: billed once the customer accepts", "columns": [{ "label": "Milestone" }, { "label": "Due" }, { "label": "Status" }, { "label": "Amount", "numeric": true }], "rows": [
+        ["Cold room shell and insulation", "30 Sep", { "pill": "good", "text": "Accepted and invoiced" }, { "money": 4350000 }],
+        ["Compressors and pipework", "23 Oct", { "pill": "warn", "text": "4 of 7 tasks done" }, { "money": 6050000 }],
+        ["Commissioning and handover", "20 Nov", { "pill": "neutral", "text": "1 of 5 tasks done" }, { "money": 4100000 }]
+      ] },
+      { "type": "kv", "title": "Team: roles decide what they can change", "items": [
+        { "label": "Manager", "value": { "avatar": "TA", "text": "Tayo" } },
+        { "label": "Member", "value": { "avatar": "RE", "text": "Remi" } },
+        { "label": "Member", "value": { "avatar": "AD", "text": "Ada" } },
+        { "label": "Viewer", "value": { "avatar": "KO", "text": "Kola" } }
+      ] }
+    ] },
+    { "type": "attention", "title": "What happens next", "items": [
+      { "tone": "info", "icon": "receipt", "title": "Billing the next milestone", "body": "When Tayo marks “Compressors and pipework” done, Lantern Valley Foods is asked to accept it. Then you draw the invoice for ₦6,050,000, check it and send it.", "action": "See what is in the way" }
+    ] }
+  ]
+}
