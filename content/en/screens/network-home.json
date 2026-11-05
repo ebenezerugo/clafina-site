@@ -1,0 +1,37 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the trading network home, with connected partners, documents waiting for an answer and what travelled this week.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Network", "items": [{ "label": "Network", "active": true }, { "label": "Received documents", "badge": "3" }, { "label": "Sent documents" }, { "label": "Item maps" }] }
+  ],
+  "title": "Network",
+  "subtitle": "Businesses you trade with on Clafina: who is connected, what is waiting for you, and what travels between you.",
+  "actions": [{ "label": "Your profile" }, { "label": "Connect", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Connections", "value": "14", "note": "11 flowing, 2 waiting, 1 paused" },
+      { "icon": "bell", "label": "Waiting for you", "value": "5", "change": { "tone": "warn", "text": "2 need item mapping" } },
+      { "icon": "check", "label": "Sent this week", "value": "22", "note": "21 delivered, 1 being retried" },
+      { "icon": "money", "label": "Netting offered", "value": { "money": 1186000 }, "note": "Silver Reed Foods offers to clear what you owe each other" }
+    ] },
+    { "type": "attention", "title": "Needs your attention", "items": [
+      { "tone": "warn", "icon": "box", "title": "Silver Reed Foods' order confirmation has 2 items we do not know", "body": "Their codes SRF-4411 and SRF-4412 are not matched to your products yet. Matching them once fixes every later document.", "action": "Map items" },
+      { "tone": "bad", "icon": "receipt", "title": "Lamp Post Household's October statement is ₦12,000 off", "body": "They show ₦1,242,400 owed; you show ₦1,230,400. One credit note may be missing.", "action": "Compare" },
+      { "tone": "info", "icon": "users", "title": "Riverbend Cold Chain asked to connect", "body": "A verified business. Both sides agree before any document travels.", "action": "Review" }
+    ] },
+    { "type": "table", "title": "Your partners", "columns": [{ "label": "Partner" }, { "label": "They are" }, { "label": "What travels" }, { "label": "Status" }], "rows": [
+      [{ "avatar": "SR", "text": "Silver Reed Foods Ltd" }, "Your supplier", "Orders out, invoices in", { "pill": "good", "text": "Connected" }],
+      [{ "avatar": "MG", "text": "Millstone Grains Ltd" }, "Your supplier", "Orders out, invoices in", { "pill": "good", "text": "Connected" }],
+      [{ "avatar": "LP", "text": "Lamp Post Household Goods" }, "Your supplier", "Nothing is travelling", { "pill": "neutral", "text": "Paused by them" }],
+      [{ "avatar": "CP", "text": "Corner Shop Provisions Ltd" }, "Your customer", "Orders in, invoices out", { "pill": "good", "text": "Connected" }],
+      [{ "avatar": "RC", "text": "Riverbend Cold Chain Ltd" }, "Asked to connect", "Not agreed yet", { "pill": "warn", "text": "Waiting for you" }]
+    ] }
+  ]
+}

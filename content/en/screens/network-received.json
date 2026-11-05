@@ -1,0 +1,35 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: documents partners sent over the network and what became of each, with a supplier's order confirmation waiting for two items to be mapped.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Network", "items": [{ "label": "Network" }, { "label": "Received documents", "badge": "3", "active": true }, { "label": "Sent documents" }, { "label": "Item maps" }] }
+  ],
+  "title": "Received documents",
+  "subtitle": "What your partners sent you over Clafina, and what became of each one. Every arrival is a draft until you accept it.",
+  "actions": [{ "label": "Set it aside" }, { "label": "Save the mapping", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "table", "columns": [{ "label": "Document" }, { "label": "From" }, { "label": "Arrived" }, { "label": "What happened" }], "rows": [
+      ["Order confirmation SO-77120", "Silver Reed Foods Ltd", "Today 11:02", { "pill": "warn", "text": "Needs mapping, 2 lines" }],
+      ["Invoice MG/2231", "Millstone Grains Ltd", "Sun 18 Oct", { "pill": "good", "text": "Became bill BILL-0211" }],
+      ["Delivery note DN-33841", "Silver Reed Foods Ltd", "Fri 16 Oct", { "pill": "good", "text": "Counted into receipt GRN-0190" }],
+      ["Order change CH-0091", "Corner Shop Provisions Ltd", "Fri 16 Oct", { "pill": "info", "text": "Change to review" }],
+      ["Statement ST-OCT", "Lamp Post Household Goods", "Thu 15 Oct", { "pill": "bad", "text": "Does not agree, ₦12,000" }]
+    ] },
+    { "type": "table", "title": "Their order confirmation answers your PO-2026-0145: say once which of your items they are", "columns": [{ "label": "Their line" }, { "label": "Quantity", "numeric": true }, { "label": "Matched" }], "rows": [
+      ["Powdered milk 400g · their SRF-4400", "200 ctn", { "pill": "good", "text": "By barcode" }],
+      ["Powdered milk 160g · their SRF-4401", "100 ctn", { "pill": "good", "text": "By their code" }],
+      ["Cocoa drink 400g tin · their SRF-4411", "60 ctn", { "pill": "warn", "text": "Choose your product" }],
+      ["Free sachet, 5g · their SRF-4412", "60 pcs", { "pill": "warn", "text": "Choose your product and unit" }]
+    ] },
+    { "type": "attention", "title": "Nothing is applied yet", "items": [
+      { "tone": "info", "icon": "check", "title": "Remembered for next time", "body": "Every later document from Silver Reed Foods uses the answer. Nothing is applied to PO-2026-0145 until both lines are mapped." }
+    ] }
+  ]
+}

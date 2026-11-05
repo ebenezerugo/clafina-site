@@ -1,0 +1,131 @@
+{
+  "kind": "product",
+  "sources": [
+    "Trading-Network-Product-Document.md",
+    "ROADMAP.md",
+    "docs/product-facts.md#product-trading-network"
+  ],
+  "meta": {
+    "title": "Trading network · Clafina",
+    "description": "Two businesses on Clafina trade without typing anything twice. Your purchase order becomes their sales order, and their invoice becomes your draft bill."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Trading network",
+    "title": "Your purchase order becomes their sales order.",
+    "lede": "Connect with the businesses you buy from and sell to. Orders, confirmations, delivery notes, invoices and statements travel between your books, and nobody types them in again.",
+    "screen": "network-home"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Stop keying in partners' documents",
+      "body": "A supplier's invoice arrives as a draft bill, matched to your order and what you received. You check it and accept it."
+    },
+    {
+      "title": "See each order's progress",
+      "body": "Confirmations, change requests and delivery notes come back on the order you sent, so you know where it stands."
+    },
+    {
+      "title": "Agree statements line by line",
+      "body": "Compare your statement with your partner's, see the line that differs, and offer to clear what you owe each other."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "network-received",
+      "title": "Every arrival is a draft",
+      "body": "What partners send you lands in Received documents. Nothing goes into your books until you accept it.",
+      "points": [
+        "Auto-accept is off unless you turn it on",
+        "Their items matched to yours by barcode, then by their code, then by you",
+        "Each answer is remembered for the next document"
+      ]
+    },
+    {
+      "screen": "network-connection",
+      "title": "Agree what travels",
+      "body": "One connection covers both directions. Each kind of document flows only when both sides have agreed to it.",
+      "points": [
+        "Pause a connection at any time",
+        "Statements that both sides can agree",
+        "Netting offers to clear what you owe each other"
+      ]
+    }
+  ],
+  "featuresTitle": "Everything in the trading network",
+  "features": [
+    {
+      "title": "Connecting",
+      "items": [
+        { "text": "Verified network profiles. Both sides agree before any document travels." },
+        { "text": "Both directions, buying and selling, on one connection." },
+        { "text": "Company customers and suppliers on one shared party record, with sites, buyers and limits." },
+        { "text": "Shared links for every kind of document, with no password. Acting on one needs a one-time code." },
+        { "text": "A partner can join from a link, and the documents you shared are offered into their new books." }
+      ]
+    },
+    {
+      "title": "Documents",
+      "items": [
+        { "text": "Your purchase order arrives as their incoming order, with confirmations and change requests back." },
+        { "text": "Their delivery note becomes your expected receipt." },
+        { "text": "Their invoice becomes your draft bill, matched to the order and the receipt." },
+        { "text": "Credit notes, returns, remittance advice and statements both sides can agree." },
+        { "text": "Catalogues, requests for quotation and shared quality documents." },
+        { "text": "Every arrival is a draft. Auto-accept is off by default." }
+      ]
+    },
+    {
+      "title": "Working it out",
+      "items": [
+        { "text": "Item maps by barcode, then supplier code, then by hand, remembered for next time." },
+        { "text": "A thread on every document, and disputes with an owner and an outcome." },
+        { "text": "Netting what you and a partner owe each other, and network reports." },
+        { "text": "Companies in one group trade over the network into intercompany accounts." }
+      ]
+    },
+    {
+      "title": "Formats",
+      "items": [
+        { "text": "Peppol and EDI, carried as translations of the same documents." },
+        { "text": "Exchange documents over AS2, SFTP and value-added networks.", "prelaunch": "product-trading-network" }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-sales", "text": "A customer's purchase order arrives as your sales order, and your invoice goes back to them." },
+    { "route": "product-purchasing", "text": "Purchase orders go out, and supplier invoices come back as draft bills matched to receipts." },
+    { "route": "product-finance", "text": "Accepted bills, remittances and intercompany trades post to the ledger." },
+    { "route": "product-crm", "text": "Company customers and suppliers share one party record." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["web"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-distribution",
+    "industry-manufacturing",
+    "industry-retail"
+  ],
+  "faqTitle": "Questions about the trading network",
+  "faq": [
+    {
+      "q": "Does my partner need to use Clafina?",
+      "a": "Not to start. You can share any document as a link they open without a password. If they join from the link, the documents you shared are offered into their new books."
+    },
+    {
+      "q": "Can a partner's document change my books without me seeing it?",
+      "a": "No. Every document that arrives is a draft until you accept it. Auto-accept is off unless you turn it on."
+    },
+    {
+      "q": "Does money move over the network?",
+      "a": "No. Remittance advice tells your partner what you paid, and netting agrees what you owe each other. The payment itself is made the way you pay today."
+    }
+  ],
+  "cta": {
+    "title": "Trade with your partners without typing it twice.",
+    "body": "Start free, or book a demo and we will send a purchase order from one business to another."
+  }
+}

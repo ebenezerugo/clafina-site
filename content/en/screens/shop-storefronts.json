@@ -1,0 +1,33 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: Storefront Studio with three storefronts, each with its own domain, its last publication, changes waiting and what needs a look.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "3 storefronts" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Studio", "items": [{ "label": "Storefronts", "active": true }, { "label": "Shared themes" }, { "label": "Components" }, { "label": "Assets" }] },
+    { "label": "Sell", "items": [{ "label": "Sales" }, { "label": "Sales channels" }] }
+  ],
+  "title": "Storefronts",
+  "subtitle": "Each storefront has its own domain, theme, pages and assortment.",
+  "actions": [{ "label": "Clone from template" }, { "label": "New storefront", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "table", "columns": [{ "label": "Storefront" }, { "label": "Status" }, { "label": "Last published" }, { "label": "Changes waiting" }, { "label": "Sales, 30 days", "numeric": true }], "rows": [
+      [{ "avatar": "BH", "text": "Bright Harbour shop · shop.brightharbour.example" }, { "pill": "good", "text": "Live" }, "Fri 16 Oct · v14", "5, 1 awaiting approval", { "money": 4820000 }],
+      [{ "avatar": "BT", "text": "Bright Harbour Trade · trade.brightharbour.example" }, { "pill": "good", "text": "Live" }, "Wed 14 Oct · v8", "3 changes", { "money": 86400000 }],
+      [{ "avatar": "BE", "text": "Harbour Electrics · electrics.brightharbour.example" }, { "pill": "neutral", "text": "Draft" }, "Never published", "31 changes in v1", "—"]
+    ] },
+    { "type": "attention", "title": "Needs attention", "items": [
+      { "tone": "bad", "icon": "alert", "title": "1 error blocks v9 of Bright Harbour Trade", "body": "An image has no description. Fix it before the release can be approved.", "action": "Open publishing" },
+      { "tone": "warn", "icon": "box", "title": "2 items sold out at the main store", "body": "They show as sold out on the shop and on the till at once.", "action": "See items" },
+      { "tone": "info", "icon": "check", "title": "Domain not verified for Harbour Electrics", "body": "Connect your own domain or buy one. The certificate follows when it is verified.", "action": "Set up domain" }
+    ] },
+    { "type": "kv", "items": [
+      { "label": "Good to know", "value": "Publishing a storefront never changes stock, prices or orders. Those stay in the ERP and are read when a shopper visits." }
+    ] }
+  ]
+}

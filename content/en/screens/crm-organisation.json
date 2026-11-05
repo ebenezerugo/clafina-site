@@ -1,0 +1,47 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a company customer's page, with its legal identity, its terms and credit, and the people who may order for it within their limits.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Customers", "items": [{ "label": "Customers", "active": true }, { "label": "Deals" }, { "label": "Support tickets", "badge": "5" }, { "label": "Loyalty" }, { "label": "Campaigns" }] }
+  ],
+  "title": "Corner Shop Provisions Ltd",
+  "subtitle": "A company customer: billed under its legal name and tax numbers. Its people order for it, within the limits you set.",
+  "actions": [{ "label": "Record payment" }, { "label": "New invoice", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "receipt", "label": "Owes now", "value": { "money": 1236000 }, "note": "On 3 invoices" },
+      { "icon": "alert", "label": "Overdue", "value": { "money": 520000 }, "change": { "tone": "bad", "text": "Oldest 39 days late" } },
+      { "icon": "money", "label": "Credit limit", "value": "62% used", "note": "₦1,236,000 of ₦2,000,000" },
+      { "icon": "clock", "label": "Pays in", "value": "23 days", "change": { "tone": "warn", "text": "4 days slower", "dir": "up" }, "note": "Their terms are Net 14" }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Who it is, as it appears on every invoice", "items": [
+        { "label": "Legal name", "value": "Corner Shop Provisions Limited" },
+        { "label": "Type", "value": "Limited company" },
+        { "label": "Registration number", "value": "RC 0000417" },
+        { "label": "Tax number", "value": { "pill": "good", "text": "Checked" } },
+        { "label": "Withholding tax", "value": "5% on services" }
+      ] },
+      { "type": "kv", "title": "Terms and credit", "items": [
+        { "label": "Payment terms", "value": "Net 14" },
+        { "label": "Credit limit", "value": { "money": 2000000 } },
+        { "label": "Largest discount", "value": "12%" },
+        { "label": "Prices", "value": "Wholesale group" },
+        { "label": "Credit hold", "value": "Off" }
+      ] }
+    ] },
+    { "type": "table", "title": "People who order for it: orders above a limit wait for an approver", "columns": [{ "label": "Person" }, { "label": "Role" }, { "label": "Largest order", "numeric": true }, { "label": "Sites" }], "rows": [
+      [{ "avatar": "NA", "text": "Nneka" }, "Buyer", { "money": 1500000 }, "Harbour Road store"],
+      [{ "avatar": "EM", "text": "Emeka" }, { "pill": "info", "text": "Approver" }, "No limit", "All 3 sites"],
+      [{ "avatar": "AD", "text": "Adaora" }, "Buyer", { "money": 400000 }, "Head office"],
+      [{ "avatar": "KU", "text": "Kunle" }, "Receiver", "—", "East depot"]
+    ] }
+  ]
+}

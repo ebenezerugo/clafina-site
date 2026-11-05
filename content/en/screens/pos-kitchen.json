@@ -1,0 +1,28 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the kitchen display during service, with tickets coloured by how long they have waited and the dishes each one needs.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RT", "name": "Red Tile Kitchen", "place": "Kitchen display" },
+  "nav": [
+    { "label": "Stations", "items": [{ "label": "All", "badge": "8", "active": true }, { "label": "Grill", "badge": "3" }, { "label": "Rice and swallow", "badge": "4" }, { "label": "Drinks", "badge": "2" }] }
+  ],
+  "title": "Kitchen",
+  "subtitle": "Average ticket 11 min · 2 late · Live",
+  "actions": [{ "label": "Recall last" }, { "label": "Bump", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "cards", "columns": 3, "items": [
+      { "title": "Delivery · #1043", "body": "2 × Small chops (10). 1 × Moi moi.", "pill": { "tone": "bad", "text": "26 min" } },
+      { "title": "Table 9 · #1046 · Mains", "body": "2 × Pounded yam and egusi, extra meat. 1 × Jollof rice and chicken. 3 × Suya platter, one without pepper.", "pill": { "tone": "bad", "text": "23 min" } },
+      { "title": "Table 6 · #1047 · Mains", "body": "2 × Jollof rice and chicken, extra plantain. 1 × Suya platter, less pepper.", "pill": { "tone": "warn", "text": "12 min" } },
+      { "title": "Take away · #1045", "body": "1 × Fried rice and turkey. 2 × Chapman, large.", "pill": { "tone": "good", "text": "9 min" } },
+      { "title": "Table 11 · #1048 · Starters", "body": "4 × Small chops (10), share plates. 2 × Puff-puff.", "pill": { "tone": "good", "text": "4 min" } },
+      { "title": "Table 3 · #1044 · Desserts", "body": "4 × Ice cream, vanilla.", "pill": { "tone": "good", "text": "1 min" } }
+    ] },
+    { "type": "kv", "items": [
+      { "label": "Last bumped", "value": "Table 2 · #1039, 1 min ago" },
+      { "label": "Colour by age", "value": "Under 10 min · 10 to 20 min · over 20 min" }
+    ] }
+  ]
+}

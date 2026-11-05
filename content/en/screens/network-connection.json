@@ -1,0 +1,41 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: one connection on the trading network, with the kinds of document each side has agreed to, items mapped, and what each side owes the other.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Network", "items": [{ "label": "Network", "active": true }, { "label": "Received documents", "badge": "3" }, { "label": "Sent documents" }, { "label": "Item maps" }] }
+  ],
+  "title": "Silver Reed Foods Ltd",
+  "subtitle": "Connected · Verified · you are the buyer, they are the seller · connected since 3 Mar 2026",
+  "actions": [{ "label": "Pause" }, { "label": "Review the netting offer", "primary": true }],
+  "blocks": [
+    { "type": "table", "title": "What travels between you: each kind flows only when both sides agree", "columns": [{ "label": "Kind of document" }, { "label": "You send" }, { "label": "They send" }], "rows": [
+      ["Purchase orders", { "pill": "good", "text": "Agreed" }, "—"],
+      ["Order confirmations", "—", { "pill": "good", "text": "Agreed" }],
+      ["Delivery notes", "—", { "pill": "good", "text": "Agreed" }],
+      ["Invoices", "—", { "pill": "good", "text": "Agreed" }],
+      ["Remittance advice", { "pill": "good", "text": "Agreed" }, "—"],
+      ["Statements", { "pill": "good", "text": "Agreed" }, { "pill": "good", "text": "Agreed" }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "progress", "label": "Their items, in your words: 41 of 44 mapped", "value": 93, "note": "Their next order confirmation cannot be applied until you say what the other 3 are." },
+      { "type": "kv", "title": "Settling up with them", "items": [
+        { "label": "You owe them", "value": { "money": 4520300 } },
+        { "label": "They owe you", "value": { "money": 1186000 } },
+        { "label": "October statement", "value": { "pill": "good", "text": "Agreed" } }
+      ] }
+    ] },
+    { "type": "kv", "title": "Recent activity", "items": [
+      { "label": "Today 11:02", "value": "They confirmed PO-2026-0145" },
+      { "label": "Mon 12 Oct", "value": "You sent PO-2026-0145" },
+      { "label": "Wed 7 Oct", "value": "They sent invoice SR/1187" },
+      { "label": "Mon 5 Oct", "value": "Remittance for BILL-0199 sent" }
+    ] }
+  ]
+}

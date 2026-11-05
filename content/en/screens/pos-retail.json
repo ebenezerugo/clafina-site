@@ -1,0 +1,39 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a shop till selling while the internet is down. Three sales are waiting to sync, one sale is held, and the current sale has four items.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Till 1 · Kunle" },
+  "search": "Scan a barcode or type a name. Enter adds the first match.",
+  "nav": [
+    { "label": "Till", "items": [{ "label": "Sell", "active": true }, { "label": "Orders" }, { "label": "Customers" }, { "label": "Returns" }, { "label": "Cash" }, { "label": "Reports" }] },
+    { "label": "Held", "items": [{ "label": "Customer at the counter", "badge": "4" }] }
+  ],
+  "title": "Sale 1 · 4 items",
+  "subtitle": "Offline · 3 sales waiting to sync. They go to the ERP as soon as the line is back.",
+  "actions": [{ "label": "Hold" }, { "label": "Charge ₦23,843.50", "primary": true, "icon": "money" }],
+  "blocks": [
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Favourites", "columns": [{ "label": "Item" }, { "label": "In stock", "numeric": true }, { "label": "Price", "numeric": true }], "rows": [
+        ["Evaporated milk 400 g", "142", { "money": 2450 }],
+        ["Spaghetti 500 g", "88", { "money": 1150 }],
+        ["Instant noodles, carton of 40", "12", { "money": 9800 }],
+        ["Vegetable oil 1 L", { "pill": "warn", "text": "4 · low" }, { "money": 3200 }],
+        ["Malt drink 33 cl", { "pill": "bad", "text": "Out of stock" }, { "money": 600 }],
+        ["Laundry soap bar", "230", { "money": 450 }]
+      ] },
+      { "type": "table", "title": "This sale", "columns": [{ "label": "Line" }, { "label": "Total", "numeric": true }], "rows": [
+        ["Evaporated milk 400 g · 2 × ₦2,450", { "money": 4900 }],
+        ["Spaghetti 500 g · 4 × ₦1,150", { "money": 4600 }],
+        ["Instant noodles, carton of 40 · 1", { "money": 9800 }],
+        ["Vegetable oil 1 L · 10% off", { "money": 2880 }],
+        [{ "strong": "VAT (7.5%)" }, { "money": 1663.5 }],
+        [{ "strong": "Total" }, { "money": 23843.5 }]
+      ] }
+    ] },
+    { "type": "attention", "title": "Selling offline", "items": [
+      { "tone": "warn", "icon": "clock", "title": "Offline for 12 minutes", "body": "Each item sells up to the offline allowance the ERP set for this till. Vegetable oil has 4 left to sell here.", "action": "See waiting sales" }
+    ] }
+  ]
+}

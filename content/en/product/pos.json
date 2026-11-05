@@ -1,0 +1,149 @@
+{
+  "kind": "product",
+  "sources": [
+    "POINT_OF_SALE.md",
+    "Point-of-Sale-Product-Document.md",
+    "RESTAURANT.md",
+    "docs/product-facts.md#product-pos"
+  ],
+  "meta": {
+    "title": "Point of sale · Clafina",
+    "description": "A till that keeps selling when the internet goes down. Every sale lands in the ERP as an invoice and a receipt, with stock and cash counted."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Point of sale",
+    "title": "A till that keeps selling when the internet goes down.",
+    "lede": "Sell at the counter or at the table, online or off. Every sale lands in the ERP once, with the stock it took and the money it brought in.",
+    "screen": "pos-retail"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Serve the queue, online or off",
+      "body": "The till writes every sale down first, then syncs. When the line drops, it keeps selling within the allowances you set."
+    },
+    {
+      "title": "Close the shift with cash counted",
+      "body": "Each shift starts with a float and ends with a count. Any difference is shown, and so are sales that could not sync."
+    },
+    {
+      "title": "See sales by till, cashier and hour",
+      "body": "Reports show what each till and each cashier sold, how people paid, voids, cash differences and time spent offline."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "till-sell",
+      "title": "Run a busy service",
+      "body": "In restaurant mode the till shows the menu with what is left, the order for each table, and sends dishes to the kitchen.",
+      "points": [
+        "A floor plan of your tables, and table service",
+        "Service charge and VAT on the order",
+        "Recipes take their ingredients out of stock"
+      ]
+    },
+    {
+      "screen": "pos-payment",
+      "title": "Take payment however it comes",
+      "body": "Split one bill across several ways to pay. The till works out what is still owed and the change to give.",
+      "points": [
+        "Cash, card, transfer, points, gift card, store credit, wallet or on account",
+        "Returns are refunded the way the sale was paid",
+        "Receipts print on a receipt printer, which can open the cash drawer"
+      ]
+    },
+    {
+      "screen": "pos-kitchen",
+      "title": "Keep the kitchen in step",
+      "body": "The kitchen display shows each ticket for its station, coloured by how long it has waited.",
+      "points": [
+        "Bump a ticket when it is ready, and recall it if you need to",
+        "Each station sees only its own dishes"
+      ]
+    }
+  ],
+  "featuresTitle": "Everything in Point of sale",
+  "features": [
+    {
+      "title": "Tills",
+      "items": [
+        { "text": "A native till for desktop on macOS, Windows and Linux, and for Android tablets and phones." },
+        { "text": "A browser till that works offline." },
+        { "text": "Every sale is written down on the till first, then synced. Offline, each product sells within an allowance the ERP sets." },
+        { "text": "Clafina's own till devices, ready to use.", "prelaunch": "product-pos" }
+      ]
+    },
+    {
+      "title": "Selling and paying",
+      "items": [
+        { "text": "Split payment by cash, card, transfer, points, gift card, store credit, wallet or on account." },
+        { "text": "Returns as credit notes and refunds, back the way the sale was paid." },
+        { "text": "Customers found at the till, with loyalty points earned and spent." },
+        { "text": "Gift cards sold and topped up at the till." },
+        { "text": "Payment by QR code and by payment link.", "prelaunch": "product-pos" }
+      ]
+    },
+    {
+      "title": "Control and reports",
+      "items": [
+        { "text": "Enrolment codes for each till, PINs for cashiers, and supervisor limits for discounts, refunds and voids." },
+        { "text": "Shifts with cash counted and sync exceptions. Sales post once, as invoices and receipts." },
+        { "text": "Reports by till, cashier and hour, with payment mix, cash differences, time offline and voids." }
+      ]
+    },
+    {
+      "title": "Printers and devices",
+      "items": [
+        { "text": "Receipt printing and the cash drawer over ESC/POS." },
+        { "text": "Printing from the browser till over USB or Bluetooth." },
+        { "text": "Card terminals and printers from more makers, and weighing scales.", "prelaunch": "product-pos" },
+        { "text": "Fiscal modules that report sales to the tax authority. Today they run against simulated tax authorities.", "prelaunch": "product-pos" }
+      ]
+    },
+    {
+      "title": "Restaurants",
+      "items": [
+        { "text": "A floor plan, table service and a kitchen display." },
+        { "text": "Recipes that take their ingredients out of stock as dishes sell." }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-sales", "text": "Sales arrive as invoices and receipts, and returns as credit notes." },
+    { "route": "product-stock", "text": "Stock for offline selling is set aside for each till." },
+    { "route": "product-finance", "text": "Takings and cash differences post to the ledger by themselves." },
+    { "route": "product-crm", "text": "Customers earn and spend loyalty points at the till." },
+    { "route": "product-online-shop", "text": "The till and your online shop sell from the same stock." },
+    { "route": "product-business-health", "text": "Till reports sit with the rest of your figures." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["till", "web"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-restaurant",
+    "industry-distribution"
+  ],
+  "faqTitle": "Questions about Point of sale",
+  "faq": [
+    {
+      "q": "What happens when the internet goes down?",
+      "a": "The till keeps selling. Each sale is written down on the till and synced when the line is back. Offline, each product sells only up to the allowance the ERP set."
+    },
+    {
+      "q": "What can the till run on?",
+      "a": "The native till runs on desktop computers with macOS, Windows or Linux, and on Android tablets and phones. There is also a browser till that works offline."
+    },
+    {
+      "q": "Can one bill be paid in more than one way?",
+      "a": "Yes. Split it across cash, card, transfer, points, a gift card, store credit, a wallet or the customer's account. The till shows what is left and the change to give."
+    }
+  ],
+  "cta": {
+    "title": "See the till with your own products.",
+    "body": "Start free, or book a demo and we will ring up a sale, take it offline and close the shift."
+  }
+}
