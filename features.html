@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Features — Clafina</title>
+    <meta
+      name="description"
+      content="Everything Clafina does: money and books, selling and stock, people and work, growth and insight — plus the web app, phone app, till, online shop, wallets and AI that read the same records."
+    />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <!-- Reveals are opt-in: without JavaScript, every section stays visible. -->
+    <script>
+      document.documentElement.classList.add("js");
+      addEventListener("load", function () {
+        setTimeout(function () {
+          document.querySelectorAll(".reveal:not(.is-in)").forEach(function (el) {
+            el.classList.add("is-in");
+          });
+        }, 2500);
+      });
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 20h8M12 16v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 18h2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-till" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 8V5h10v3M7 13h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1.6-5h14.8L21 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 9v10h16V9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 19v-5h6v5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18M16 14h2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 16l.7 2.3L21 19l-2.3.7L18 22l-.7-2.3L15 19l2.3-.7z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V8a4 4 0 018 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="i-lock-small" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    </svg>
+
+    <header class="site-header" id="header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html" aria-label="Clafina — home">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="currentColor" />
+            <path d="M21.4 11.2a7.4 7.4 0 1 0 0 9.6" fill="none" stroke="#fafafa" stroke-width="3.2" stroke-linecap="round" />
+          </svg>
+          <span>clafina</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Main">
+          <a href="features.html" aria-current="page">Features</a>
+          <a href="industries.html">Industries</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn--ghost btn--sm" href="https://app.clafina.com/">Sign in</a>
+          <a class="btn btn--primary btn--sm" href="pricing.html">Get started</a>
+          <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+            <svg aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="wrap">
+          <div class="page-hero__inner">
+            <span class="eyebrow">Features</span>
+            <h1>Everything the business needs, in one system.</h1>
+            <p class="lede">
+              Clafina is not a collection of tools sold together. It is one set of records
+              with the screens a business actually uses — so the money, the stock and the
+              people never disagree.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="jump-wrap">
+        <div class="wrap">
+          <nav class="jump" aria-label="Feature sections">
+            <a href="#money">Money and books</a>
+            <a href="#sell">Sell and stock</a>
+            <a href="#people">People and work</a>
+            <a href="#grow">Grow and understand</a>
+            <a href="#surfaces">Every surface</a>
+            <a href="#trust">Safety and control</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Money -->
+      <section class="section" id="money">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">01 — Money and books</span>
+            <h2>Books that hold, from the first invoice.</h2>
+            <p>
+              Every document posts to a real double-entry ledger. That is true of a
+              cash sale at the till as much as a credit note from the office.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card card--hover reveal"><h3>Invoicing</h3><p>Send an invoice, take a part-payment and chase the rest — with credit notes and write-offs that keep the books straight.</p></article>
+            <article class="card card--hover reveal"><h3>General ledger</h3><p>Double-entry postings, journals, trial balance and a closed period, as a report rather than a spreadsheet.</p></article>
+            <article class="card card--hover reveal"><h3>Tax and VAT</h3><p>Rates by country, tax numbers on the document, and the name that country uses for the tax.</p></article>
+            <article class="card card--hover reveal"><h3>Payables and expenses</h3><p>Record a bill, claim an expense from a receipt photo, approve it, then pay it in a run.</p></article>
+            <article class="card card--hover reveal"><h3>Budgets and cost centres</h3><p>Give a project, campaign or department its own budget and watch it spent against the actual.</p></article>
+            <article class="card card--hover reveal"><h3>Multi-currency</h3><p>Hold balances in more than one currency, with the rates and revaluation kept alongside.</p></article>
+            <article class="card card--hover reveal"><h3>Wallets</h3><p>Fund, move and convert money between wallets. Every movement is a balanced posting, and the books close to the kobo.</p></article>
+            <article class="card card--hover reveal"><h3>Intercompany</h3><p>Several companies under one group, with intercompany balances and a consolidation view.</p></article>
+            <article class="card card--hover reveal"><h3>Banks and reconciliation</h3><p>Bank accounts, statements and a reconciliation that shows exactly what does not match.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sell -->
+      <section class="section rule-top" id="sell">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">02 — Sell and stock</span>
+            <h2>One stock list, everywhere it is sold.</h2>
+            <p>
+              The shop, the counter and the marketplaces draw on the same catalogue and
+              the same stock. A sale in one place is a fact in the others.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card card--hover reveal"><h3>Catalogue</h3><p>Products, variants, units, barcodes and pictures — with the quantity steps each unit sells in.</p></article>
+            <article class="card card--hover reveal"><h3>Price lists</h3><p>Different prices for different customers, with discounts that follow rules instead of memory.</p></article>
+            <article class="card card--hover reveal"><h3>Stock</h3><p>Levels per location, movements, adjustments and transfers, each with a history you can read.</p></article>
+            <article class="card card--hover reveal"><h3>Quotation to invoice</h3><p>Quote, order, deliver and invoice. Every document stands on its own, and conversion only pre-fills.</p></article>
+            <article class="card card--hover reveal"><h3>Purchasing</h3><p>Purchase orders, goods received notes and supplier bills that match what arrived.</p></article>
+            <article class="card card--hover reveal"><h3>Point of sale</h3><p>Tills that sell through a dropped connection, shifts that add up, and exceptions a manager resolves in the office.</p></article>
+            <article class="card card--hover reveal"><h3>Online shop</h3><p>Your own address, theme, pages, currencies and languages — priced and stocked by the business.</p></article>
+            <article class="card card--hover reveal"><h3>Marketplaces</h3><p>Sell through channels without a second stock list or a nightly export that drifts.</p></article>
+            <article class="card card--hover reveal"><h3>Delivery</h3><p>Zones and rates, carrier prices and collection points, offered at checkout and priced by the business.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- People -->
+      <section class="section rule-top" id="people">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">03 — People and work</span>
+            <h2>The people who sell also get paid here.</h2>
+            <p>
+              Customers, staff, suppliers and partners share one directory. So an approval
+              knows who asked, and a document knows who signed.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card card--hover reveal"><h3>Customers</h3><p>One page per customer: documents, balance, activity, and what they owe today.</p></article>
+            <article class="card card--hover reveal"><h3>Suppliers</h3><p>A portal for suppliers to send bills and see what is owed, without a shared spreadsheet.</p></article>
+            <article class="card card--hover reveal"><h3>Staff</h3><p>Records, contracts, leave, attendance and what each person is paid — with the history kept.</p></article>
+            <article class="card card--hover reveal"><h3>Projects</h3><p>Work broken into tasks, with time, cost and billing tracked against it.</p></article>
+            <article class="card card--hover reveal"><h3>Approvals</h3><p>Requests routed to the person who can decide, with the reason and the decision kept.</p></article>
+            <article class="card card--hover reveal"><h3>Documents</h3><p>Files, folders, versions and signatures — stored where the record can find them.</p></article>
+            <article class="card card--hover reveal"><h3>Calendar</h3><p>One calendar for people, rooms and resources, so a booking cannot be made twice.</p></article>
+            <article class="card card--hover reveal"><h3>Messaging</h3><p>Conversations with customers and between colleagues, kept on the record they concern.</p></article>
+            <article class="card card--hover reveal"><h3>Support</h3><p>A help desk with service levels, saved replies, a knowledge base and a satisfaction score.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grow -->
+      <section class="section rule-top" id="grow">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">04 — Grow and understand</span>
+            <h2>Answers from the records you already keep.</h2>
+            <p>
+              Because everything is one system, a report is a read — not a project to
+              assemble data for.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card card--hover reveal"><h3>Dashboards</h3><p>Each person's home shows what their job needs, rather than one generic chart for everyone.</p></article>
+            <article class="card card--hover reveal"><h3>Reports</h3><p>Reports across every module — scheduled, exported, or asked for in words.</p></article>
+            <article class="card card--hover reveal"><h3>Outreach</h3><p>Email, SMS and WhatsApp campaigns to customers you already have, with the consent they gave.</p></article>
+            <article class="card card--hover reveal"><h3>Loyalty</h3><p>Points, memberships and gift cards that work at the till and in the shop alike.</p></article>
+            <article class="card card--hover reveal"><h3>Business intelligence</h3><p>Analytics over live records, with snapshots where a frozen figure is the honest answer.</p></article>
+            <article class="card card--hover reveal"><h3>AI assistant</h3><p>Ask in words and get an answer from your own documents and records — and a draft only when you confirm it.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Surfaces -->
+      <section class="section rule-top" id="surfaces">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">05 — Every surface</span>
+            <h2>Six ways in. One source of truth.</h2>
+            <p>
+              Each surface is a client of the same system. Nothing is synced between them,
+              because there is nothing to sync.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-monitor"></use></svg></div>
+              <h3>Web app</h3>
+              <p>The whole business in a browser — a quotation in the morning, a trial balance in the afternoon. Role-based, keyboard-friendly, and built to be read on a laptop.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-phone"></use></svg></div>
+              <h3>Phone app</h3>
+              <p>The same business in your pocket: approvals in one tap, sales documents, customers, money and a payment run, for when you are not at a desk.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-till"></use></svg></div>
+              <h3>Till</h3>
+              <p>Point of sale that keeps selling without a network and settles the day's cash exactly. A sale that arrives late still posts; the office is told what disagreed.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-store"></use></svg></div>
+              <h3>Online shop</h3>
+              <p>A storefront at the organisation's own address, with its catalogue, prices and stock — and checkout in a single request that cannot double-charge.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-wallet"></use></svg></div>
+              <h3>Wallets</h3>
+              <p>Multi-currency wallets holding real money, funded through banks and providers, with transfers, conversion and payouts — all on double-entry books.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-sparkle"></use></svg></div>
+              <h3>AI</h3>
+              <p>Reads bills and receipts, learns the coding your people confirm, drafts documents with your own tools and answers from your documents — never acting without a person's confirmation.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust -->
+      <section class="section rule-top" id="trust">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">06 — Safety and control</span>
+            <h2>What protects the records.</h2>
+            <p>
+              The controls are part of the system, not a policy document bolted on
+              afterwards.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-shield"></use></svg></div>
+              <h3>Isolated by organisation</h3>
+              <p>Every record carries its organisation and every query is scoped to it. Access is enforced in one place per module, so a new screen cannot forget.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-lock"></use></svg></div>
+              <h3>Roles and permissions</h3>
+              <p>People are given exactly the access their job needs, including approving what moves money. Sensitive acts can require a second person.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-clock"></use></svg></div>
+              <h3>An audit trail</h3>
+              <p>Who changed what, when, and from where — kept with the record. Nothing important is silently edited.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-monitor"></use></svg></div>
+              <h3>Nothing is deleted</h3>
+              <p>Records are retired or soft-deleted, never dropped. A mistake is corrected by a new document that says so.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="cta reveal">
+            <h2>See it with your own records.</h2>
+            <p>Start free, or bring a spreadsheet and we will show you what the first month looks like.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--lg" href="pricing.html">
+                Start free
+                <svg aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </a>
+              <a class="btn btn--ghost btn--lg" href="contact.html">Book a demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html" aria-label="Clafina — home">
+              <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+                <rect width="32" height="32" rx="9" fill="currentColor" />
+                <path d="M21.4 11.2a7.4 7.4 0 1 0 0 9.6" fill="none" stroke="#fafafa" stroke-width="3.2" stroke-linecap="round" />
+              </svg>
+              <span>clafina</span>
+            </a>
+            <p>
+              One business platform: books, stock, people, projects and shop — with a
+              till, a phone app and an assistant on the same records.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="industries.html">Industries</a></li>
+              <li><a href="contact.html">Book a demo</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.html#support">Support</a></li>
+              <li><a href="legal.html">Privacy and terms</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Get started</h4>
+            <ul>
+              <li><a href="pricing.html">Start free</a></li>
+              <li><a href="https://app.clafina.com/">Sign in</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year">2026</span> Clafina. All rights reserved.</span>
+          <div class="footer-bottom__links">
+            <a href="legal.html">Privacy</a>
+            <a href="legal.html">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>

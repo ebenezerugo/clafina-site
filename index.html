@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clafina — run the whole business from one place</title>
+    <meta
+      name="description"
+      content="Clafina brings your books, stock, people, projects and online shop into one system — with a till that keeps selling offline, a phone app for everyone else, and an AI assistant that works from the same records."
+    />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Clafina — run the whole business from one place" />
+    <meta
+      property="og:description"
+      content="One business platform: books, stock, people, projects, online shop, till, phone app and AI — all on the same records."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Reveals are opt-in: without JavaScript, every section stays visible. -->
+    <script>
+      document.documentElement.classList.add("js");
+      addEventListener("load", function () {
+        setTimeout(function () {
+          document.querySelectorAll(".reveal:not(.is-in)").forEach(function (el) {
+            el.classList.add("is-in");
+          });
+        }, 2500);
+      });
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- Icon sprite: one definition, used by every icon on the site. -->
+    <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 20h8M12 16v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 18h2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-till" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 8V5h10v3M7 13h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1.6-5h14.8L21 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 9v10h16V9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 19v-5h6v5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18M16 14h2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 16l.7 2.3L21 19l-2.3.7L18 22l-.7-2.3L15 19l2.3-.7z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h12v18H6a2 2 0 01-2-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 7h8M8 11h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5v8l-9 5-9-5V8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 13v8" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 20a6 6 0 0112 0M16 5a3 3 0 010 6M21 20a5 5 0 00-4-4.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V8a4 4 0 018 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3a15 15 0 010 18 15 15 0 010-18z" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V11M10 20V4M16 20v-6M22 20H2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5 3h14v18l-3-2-2 2-2-2-2 2-3-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8h6M9 12h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v5M12 16h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 8h9M17 8h3M4 16h4M12 16h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="15" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="16" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 7h12l1 13H5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 7a3 3 0 016 0" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 13l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="i-lock-small" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    </svg>
+
+    <header class="site-header" id="header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html" aria-label="Clafina — home">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="currentColor" />
+            <path d="M21.4 11.2a7.4 7.4 0 1 0 0 9.6" fill="none" stroke="#fafafa" stroke-width="3.2" stroke-linecap="round" />
+          </svg>
+          <span>clafina</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Main">
+          <a href="features.html">Features</a>
+          <a href="industries.html">Industries</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn--ghost btn--sm" href="https://app.clafina.com/">Sign in</a>
+          <a class="btn btn--primary btn--sm" href="pricing.html">Get started</a>
+          <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+            <svg aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero__inner">
+            <span class="eyebrow">The business platform</span>
+            <h1>Run the whole business from one place.</h1>
+            <p class="lede">
+              Clafina brings your books, stock, people, projects and online shop into one
+              system — with a till that keeps selling offline, a phone app for everyone
+              else, and an AI assistant that works from the same records.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--lg" href="pricing.html">
+                Start free
+                <svg aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </a>
+              <a class="btn btn--ghost btn--lg" href="contact.html">Book a demo</a>
+            </div>
+            <p class="hero__note">
+              <span><svg aria-hidden="true"><use href="#i-check"></use></svg>Free for one person</span>
+              <span><svg aria-hidden="true"><use href="#i-check"></use></svg>No card required</span>
+              <span><svg aria-hidden="true"><use href="#i-check"></use></svg>Your data, exportable any time</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Product illustration, drawn in CSS from the product's own components -->
+        <div class="stage">
+          <div class="app" role="img" aria-label="Illustration of the Clafina dashboard: revenue, unpaid invoices, stock alerts, a cash-in chart and a list of items needing attention.">
+            <div class="app__bar">
+              <div class="app__dots"><span></span><span></span><span></span></div>
+              <span class="app__url">
+                <svg aria-hidden="true"><use href="#i-lock-small"></use></svg>
+                app.clafina.com
+              </span>
+            </div>
+
+            <div class="app__body">
+              <aside class="app__side">
+                <div class="app__side-brand">
+                  <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <rect width="32" height="32" rx="9" fill="currentColor" />
+                    <path d="M21.4 11.2a7.4 7.4 0 1 0 0 9.6" fill="none" stroke="#fafafa" stroke-width="3.2" stroke-linecap="round" />
+                  </svg>
+                  clafina
+                </div>
+
+                <div class="side-group">
+                  <span class="side-group__label">Overview</span>
+                  <span class="side-item is-active">
+                    <svg aria-hidden="true"><use href="#i-grid"></use></svg>Home
+                  </span>
+                  <span class="side-item">
+                    <svg aria-hidden="true"><use href="#i-mail"></use></svg>Inbox
+                    <span class="side-item__count">4</span>
+                  </span>
+                </div>
+
+                <div class="side-group">
+                  <span class="side-group__label">Sell</span>
+                  <span class="side-item"><svg aria-hidden="true"><use href="#i-bag"></use></svg>Quotations</span>
+                  <span class="side-item"><svg aria-hidden="true"><use href="#i-receipt"></use></svg>Invoices</span>
+                  <span class="side-item"><svg aria-hidden="true"><use href="#i-users"></use></svg>Customers</span>
+                </div>
+
+                <div class="side-group">
+                  <span class="side-group__label">Operate</span>
+                  <span class="side-item"><svg aria-hidden="true"><use href="#i-box"></use></svg>Stock</span>
+                  <span class="side-item"><svg aria-hidden="true"><use href="#i-book"></use></svg>Ledger</span>
+                  <span class="side-item"><svg aria-hidden="true"><use href="#i-folder"></use></svg>Documents</span>
+                </div>
+              </aside>
+
+              <div class="app__main">
+                <div class="app__head">
+                  <div>
+                    <div class="app__title">Good morning, Ada</div>
+                    <div class="app__sub">2 invoices need your approval · Tue, 3 Nov</div>
+                  </div>
+                  <div class="app__head-actions">
+                    <span class="chip">This month</span>
+                    <span class="chip chip--dark">New invoice</span>
+                  </div>
+                </div>
+
+                <div class="kpis">
+                  <div class="kpi">
+                    <span class="kpi__label">Revenue</span>
+                    <span class="kpi__value">₦4,820,500</span>
+                    <span class="kpi__delta kpi__delta--up">+12.4% on October</span>
+                  </div>
+                  <div class="kpi">
+                    <span class="kpi__label">Awaiting payment</span>
+                    <span class="kpi__value">₦1,240,000</span>
+                    <span class="kpi__delta muted">18 invoices</span>
+                  </div>
+                  <div class="kpi">
+                    <span class="kpi__label">Stock alerts</span>
+                    <span class="kpi__value">6</span>
+                    <span class="kpi__delta muted">3 below reorder point</span>
+                  </div>
+                </div>
+
+                <div class="app__grid">
+                  <div class="panel">
+                    <div class="panel__head">
+                      <span class="panel__title">Cash in</span>
+                      <span class="panel__meta">Last 12 months</span>
+                    </div>
+                    <div class="bars">
+                      <div class="bar" style="--h: 38%"></div>
+                      <div class="bar" style="--h: 52%"></div>
+                      <div class="bar" style="--h: 44%"></div>
+                      <div class="bar" style="--h: 66%"></div>
+                      <div class="bar" style="--h: 58%"></div>
+                      <div class="bar" style="--h: 72%"></div>
+                      <div class="bar" style="--h: 50%"></div>
+                      <div class="bar" style="--h: 64%"></div>
+                      <div class="bar" style="--h: 78%"></div>
+                      <div class="bar" style="--h: 60%"></div>
+                      <div class="bar is-peak" style="--h: 92%"></div>
+                      <div class="bar" style="--h: 70%"></div>
+                    </div>
+                    <div class="bar-legend"><span>JAN</span><span>JUN</span><span>DEC</span></div>
+                  </div>
+
+                  <div class="panel">
+                    <div class="panel__head">
+                      <span class="panel__title">Needs attention</span>
+                      <span class="panel__meta">4</span>
+                    </div>
+                    <div class="rows">
+                      <div class="row">
+                        <span class="row__name">INV-1042 · Acme Ltd</span>
+                        <span class="row__amount">₦240,000</span>
+                        <span class="row__meta">Due 12 days ago</span>
+                        <span class="pill pill--warn">Overdue</span>
+                      </div>
+                      <div class="row">
+                        <span class="row__name">PO-0118 · Kano Supplies</span>
+                        <span class="row__amount">₦96,500</span>
+                        <span class="row__meta">Waiting since Monday</span>
+                        <span class="pill pill--neutral">To approve</span>
+                      </div>
+                      <div class="row">
+                        <span class="row__name">INV-1043 · Balogun Stores</span>
+                        <span class="row__amount">₦182,000</span>
+                        <span class="row__meta">Saved 2 hours ago</span>
+                        <span class="pill pill--good">Draft</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Surfaces -->
+      <section class="section section--tight">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">One system, six ways in</span>
+            <h2>Every surface reads the same records.</h2>
+            <p>
+              No syncing between products, no second copy of the truth. The shop, the
+              till and the phone all work from the same catalogue, stock and books.
+            </p>
+          </div>
+
+          <div class="surfaces reveal">
+            <div class="surface">
+              <svg aria-hidden="true"><use href="#i-monitor"></use></svg>
+              <span class="surface__name">Web app</span>
+              <span class="surface__desc">The whole business, in the browser.</span>
+            </div>
+            <div class="surface">
+              <svg aria-hidden="true"><use href="#i-phone"></use></svg>
+              <span class="surface__name">Phone app</span>
+              <span class="surface__desc">Approvals and sales in your pocket.</span>
+            </div>
+            <div class="surface">
+              <svg aria-hidden="true"><use href="#i-till"></use></svg>
+              <span class="surface__name">Till</span>
+              <span class="surface__desc">Sells through a dropped connection.</span>
+            </div>
+            <div class="surface">
+              <svg aria-hidden="true"><use href="#i-store"></use></svg>
+              <span class="surface__name">Online shop</span>
+              <span class="surface__desc">Your own storefront and address.</span>
+            </div>
+            <div class="surface">
+              <svg aria-hidden="true"><use href="#i-wallet"></use></svg>
+              <span class="surface__name">Wallets</span>
+              <span class="surface__desc">Multi-currency money that balances.</span>
+            </div>
+            <div class="surface">
+              <svg aria-hidden="true"><use href="#i-sparkle"></use></svg>
+              <span class="surface__name">AI</span>
+              <span class="surface__desc">Reads documents, drafts, answers.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature pillars -->
+      <section class="section" id="features">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">Everything already joined up</span>
+            <h2>Four parts of the business, one set of records.</h2>
+            <p>
+              Most tools are good at one of these and hand the rest to a spreadsheet.
+              Clafina was built as one system, so a sale moves the stock, the ledger and
+              the customer's balance at once.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-book"></use></svg></div>
+              <h3>Money and books</h3>
+              <p>
+                Every document posts to a real ledger, with tax by country and a balance
+                you can trust at any moment.
+              </p>
+              <ul class="feature-list">
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Invoices, bills, payments and credit notes</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>General ledger, trial balance and journals</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>VAT and tax rules per country</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Budgets, cost centres and projects</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Expenses, payables and approvals</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Multi-currency and intercompany</li>
+              </ul>
+            </article>
+
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-box"></use></svg></div>
+              <h3>Sell and stock</h3>
+              <p>
+                From quotation to delivery, the stock and the money move together — in
+                the shop, at the counter or through the marketplace.
+              </p>
+              <ul class="feature-list">
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Catalogue, variants and price lists</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Stock levels, movements and planning</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Quotations, orders, invoices, waybills</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Purchasing, suppliers and goods received</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Point of sale and cash shifts</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Online shop and marketplace channels</li>
+              </ul>
+            </article>
+
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-users"></use></svg></div>
+              <h3>People and work</h3>
+              <p>
+                The same people who sell also get paid, request leave and sign documents.
+                One directory, one calendar, one audit trail.
+              </p>
+              <ul class="feature-list">
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Customers, suppliers and contacts</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Staff records, leave and attendance</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Projects, tasks and timesheets</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Approvals that someone can act on</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Documents, signatures and files</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Calendar, meetings and messaging</li>
+              </ul>
+            </article>
+
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-chart"></use></svg></div>
+              <h3>Grow and understand</h3>
+              <p>
+                Reports, dashboards and outreach built on live records — not last night's
+                export.
+              </p>
+              <ul class="feature-list">
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Dashboards for each person's job</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Reports you can schedule and export</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Email, SMS and WhatsApp outreach</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Campaigns and their return</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Loyalty, gift cards and reviews</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>An assistant that answers from your data</li>
+              </ul>
+            </article>
+          </div>
+
+          <p style="margin-top: 28px" class="reveal">
+            <a class="link-arrow" href="features.html">
+              See everything Clafina does
+              <svg aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Industries -->
+      <section class="section" id="industries" style="padding-top: 0">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">Built for your trade</span>
+            <h2>The core is the same. The trade is yours.</h2>
+            <p>
+              Clafina ships with packs for the businesses we know best. Each one adds the
+              screens, documents and rules that trade needs — without a second system.
+            </p>
+          </div>
+
+          <div class="industries reveal">
+            <a class="industry" href="industries.html#retail"><span class="industry__name">Retail</span><span class="industry__desc">Stock, tills, shifts</span></a>
+            <a class="industry" href="industries.html#restaurant"><span class="industry__name">Restaurant</span><span class="industry__desc">Tables, kitchen, tips</span></a>
+            <a class="industry" href="industries.html#farm"><span class="industry__name">Farm</span><span class="industry__desc">Inputs, scouts, yields</span></a>
+            <a class="industry" href="industries.html#property"><span class="industry__name">Property</span><span class="industry__desc">Units, tenants, rent</span></a>
+            <a class="industry" href="industries.html#construction"><span class="industry__name">Construction</span><span class="industry__desc">Sites, boqs, progress</span></a>
+            <a class="industry" href="industries.html#manufacturing"><span class="industry__name">Manufacturing</span><span class="industry__desc">BOMs, shopfloor, costing</span></a>
+            <a class="industry" href="industries.html#accommodation"><span class="industry__name">Accommodation</span><span class="industry__desc">Rooms, bookings, rates</span></a>
+            <a class="industry" href="industries.html#services"><span class="industry__name">Field service</span><span class="industry__desc">Jobs, routes, sign-off</span></a>
+            <a class="industry" href="industries.html#education"><span class="industry__name">Courses</span><span class="industry__desc">Classes, enrolment, fees</span></a>
+            <a class="industry" href="industries.html#fundraising"><span class="industry__name">Fundraising</span><span class="industry__desc">Donors, campaigns, grants</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Split 1: the counter -->
+      <section class="section rule-top">
+        <div class="wrap">
+          <div class="split">
+            <div class="split__copy reveal">
+              <span class="eyebrow">Built for the counter</span>
+              <h2>A sale is never lost, and never counted twice.</h2>
+              <p>
+                The till keeps selling when the connection drops. Its journal arrives
+                later, in order, and a sale sent twice changes nothing. When the office
+                disagrees — oversold, price changed — the sale still posts and the
+                disagreement is reported in plain words for a manager.
+              </p>
+              <ul class="feature-list">
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Works with no network, syncs when it returns</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Cash and shifts add up to the last kobo</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Every exception is kept, never dropped</li>
+              </ul>
+              <a class="link-arrow" href="features.html#surfaces">
+                How the till works
+                <svg aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </a>
+            </div>
+
+            <div class="split__visual reveal">
+              <div class="receipt" aria-hidden="true">
+                <div class="receipt__head"><span>Receipt</span><span>#0041</span></div>
+                <div class="receipt__line"><span>Jollof rice × 2</span><span>₦7,000</span></div>
+                <div class="receipt__line"><span>Chicken × 2</span><span>₦5,000</span></div>
+                <div class="receipt__line"><span>Drinks × 3</span><span>₦2,400</span></div>
+                <div class="receipt__line receipt__line--total"><span>Total</span><span>₦14,400</span></div>
+                <div class="receipt__note">
+                  <svg aria-hidden="true"><use href="#i-check"></use></svg>
+                  Saved on the till — no network needed
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Split 2: one record -->
+      <section class="section">
+        <div class="wrap">
+          <div class="split split--reverse">
+            <div class="split__copy reveal">
+              <span class="eyebrow">One record</span>
+              <h2>Change it once. Everyone sees it.</h2>
+              <p>
+                Update a price, a stock level or an address and every surface follows — the
+                web app, the phone, the till and the shop. Changes travel by push, not by
+                waiting for a screen to ask again, so two people never work from two
+                different answers.
+              </p>
+              <ul class="feature-list">
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Every record belongs to an organisation, and only to it</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Permissions decide who may see and change what</li>
+                <li><svg aria-hidden="true"><use href="#i-check"></use></svg>Every change leaves an audit trail</li>
+              </ul>
+              <a class="link-arrow" href="features.html#trust">
+                Why the records hold
+                <svg aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </a>
+            </div>
+
+            <div class="split__visual reveal">
+              <div class="stack" aria-hidden="true">
+                <div class="stack__row stack__row--hero">
+                  <svg aria-hidden="true"><use href="#i-box"></use></svg>
+                  <strong>Stock level</strong>
+                  <span class="stack__tag">12 left</span>
+                </div>
+                <div class="stack__row">
+                  <svg aria-hidden="true"><use href="#i-store"></use></svg>
+                  Online shop
+                  <span class="stack__tag">12 left</span>
+                </div>
+                <div class="stack__row">
+                  <svg aria-hidden="true"><use href="#i-till"></use></svg>
+                  Till
+                  <span class="stack__tag">12 left</span>
+                </div>
+                <div class="stack__row">
+                  <svg aria-hidden="true"><use href="#i-phone"></use></svg>
+                  Phone app
+                  <span class="stack__tag">12 left</span>
+                </div>
+                <div class="stack__row">
+                  <svg aria-hidden="true"><use href="#i-book"></use></svg>
+                  Ledger
+                  <span class="stack__tag">SALE-0192</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Facts -->
+      <section class="section section--tight">
+        <div class="wrap">
+          <div class="facts reveal">
+            <div class="fact">
+              <span class="fact__value">55</span>
+              <span class="fact__label">modules working as one system</span>
+            </div>
+            <div class="fact">
+              <span class="fact__value">6</span>
+              <span class="fact__label">surfaces on the same records</span>
+            </div>
+            <div class="fact">
+              <span class="fact__value">10</span>
+              <span class="fact__label">industry packs out of the box</span>
+            </div>
+            <div class="fact">
+              <span class="fact__value">0</span>
+              <span class="fact__label">screens that poll — changes are pushed</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust -->
+      <section class="section" id="trust">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">Safe to run the business on</span>
+            <h2>Built for the things you cannot lose.</h2>
+            <p>
+              Money, stock and customer details are the records a business cannot
+              reconstruct. Clafina treats them that way.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-shield"></use></svg></div>
+              <h3>Isolated by organisation</h3>
+              <p>Every record is scoped to one organisation. One business never sees another's data, by design rather than by filter.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-lock"></use></svg></div>
+              <h3>Access you can explain</h3>
+              <p>Roles and permissions decide who may see, change and approve. Sensitive acts can require a second person.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-clock"></use></svg></div>
+              <h3>An audit trail</h3>
+              <p>Who changed what, and when — kept with the record, not reconstructed afterwards.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-globe"></use></svg></div>
+              <h3>Any country, any currency</h3>
+              <p>Regions, countries and currencies are configuration. Tax rules, addresses and languages follow the organisation.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-check"></use></svg></div>
+              <h3>Accessible by default</h3>
+              <p>The screens are built to WCAG AA, with contrast, focus and keyboard use checked as part of the work.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <div class="card__icon"><svg aria-hidden="true"><use href="#i-folder"></use></svg></div>
+              <h3>Your data comes back</h3>
+              <p>Records can be exported, and an organisation can be closed and erased on request. Nothing is held hostage.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="wrap">
+          <div class="cta reveal">
+            <span class="eyebrow eyebrow--plain" style="color: rgba(250, 250, 250, 0.6)">Start today</span>
+            <h2>Your first invoice is five minutes away.</h2>
+            <p>Set up an organisation, add a customer and send a document. No card, no call, no migration project.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--lg" href="pricing.html">
+                Start free
+                <svg aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </a>
+              <a class="btn btn--ghost btn--lg" href="contact.html">Talk to us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html" aria-label="Clafina — home">
+              <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+                <rect width="32" height="32" rx="9" fill="currentColor" />
+                <path d="M21.4 11.2a7.4 7.4 0 1 0 0 9.6" fill="none" stroke="#fafafa" stroke-width="3.2" stroke-linecap="round" />
+              </svg>
+              <span>clafina</span>
+            </a>
+            <p>
+              One business platform: books, stock, people, projects and shop — with a
+              till, a phone app and an assistant on the same records.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="industries.html">Industries</a></li>
+              <li><a href="contact.html">Book a demo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.html#support">Support</a></li>
+              <li><a href="legal.html">Privacy and terms</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Get started</h4>
+            <ul>
+              <li><a href="pricing.html">Start free</a></li>
+              <li><a href="https://app.clafina.com/">Sign in</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© <span id="year">2026</span> Clafina. All rights reserved.</span>
+          <div class="footer-bottom__links">
+            <a href="legal.html">Privacy</a>
+            <a href="legal.html">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>
