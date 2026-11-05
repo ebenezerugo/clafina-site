@@ -18,7 +18,7 @@ describe('switches', () => {
     expect(() => isOn('sections.nothing' as SwitchKey)).toThrow('Unknown switch: sections.nothing');
   });
   it('only shows pages that are built and switched on', () => {
-    expect(pageAvailable('product-finance', 'preview')).toBe(false);
+    expect(pageAvailable('industry-farm', 'preview')).toBe(false);
     expect(pageAvailable('home', 'production')).toBe(true);
     expect(() => pageAvailable('nope', 'preview')).toThrow('Unknown page: nope');
   });

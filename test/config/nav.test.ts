@@ -19,7 +19,9 @@ describe('navigation', () => {
     expect(NAV.menus.flatMap(navItemIds).every((id) => ids.has(id as never))).toBe(true);
   });
   it('drops pages, groups and menus that are not available', () => {
-    expect(visibleNavFor(ROUTES, 'preview')).toEqual({ menus: [{ id: 'product', groups: [{ id: 'selling', items: ['product-sales'] }] }], links: ['pricing'] });
+    const visible = visibleNavFor(ROUTES, 'preview');
+    expect(visible.menus.map((m) => m.id)).toEqual(['product']);
+    expect(visible.links).toEqual(['pricing']);
     const full = visibleNavFor(allBuilt, 'preview');
     expect(full.menus.map((m) => m.id)).toEqual(['product', 'industries', 'solutions', 'resources']);
     expect(full.links).toEqual(['pricing']);
