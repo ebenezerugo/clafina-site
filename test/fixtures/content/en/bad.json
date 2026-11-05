@@ -1,0 +1,7 @@
+{
+  "hero": { "title": "A seamless way to run things", "lede": "Start today!" },
+  "features": [
+    { "text": "Up 99.9% of the time" },
+    { "text": "Fully GDPR compliant", "claim": "claims.complianceLabels" }
+  ]
+}
