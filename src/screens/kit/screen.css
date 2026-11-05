@@ -10,7 +10,8 @@
   --s-bad: #a81919; --s-bad-fill: #fdecea; --s-info: #1d4ed8; --s-info-fill: #e8eefd;
   position: relative; display: flex; flex-direction: column; overflow: hidden;
   background: var(--s-page); color: var(--s-ink);
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, var(--font-script, sans-serif), sans-serif;
+  /* The site's self-hosted face first, so screens look the same on every device (system fonts differ). */
+  font-family: var(--font-inter), var(--font-script, sans-serif), ui-sans-serif, system-ui, sans-serif;
   font-size: 13px; line-height: 20px; font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased;
   text-align: start;
 }
