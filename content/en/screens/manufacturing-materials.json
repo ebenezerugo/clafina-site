@@ -1,0 +1,38 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the materials production needs, what is held for each order, what is short and what is being done about it.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RF", "name": "Riverbend Foods", "place": "Main plant" },
+  "goTo": "Go to page…",
+  "search": "Search orders, products, machines…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "6" }] },
+    { "label": "Make", "items": [{ "label": "Production orders" }, { "label": "Work orders" }, { "label": "Materials", "active": true }, { "label": "Schedule" }, { "label": "Shop floor" }, { "label": "Quality" }] }
+  ],
+  "title": "Materials",
+  "subtitle": "Whether production has what it needs, and what is on its way.",
+  "actions": [{ "label": "New purchase request", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "alert", "label": "Orders short", "value": "3", "change": { "tone": "bad", "text": "5 work orders affected" } },
+      { "icon": "clock", "label": "Requests waiting", "value": "4", "note": "Oldest 3 days" },
+      { "icon": "cart", "label": "On the way", "value": { "money": 6800000 }, "note": "7 purchase orders" },
+      { "icon": "down", "label": "Late deliveries", "value": "2", "change": { "tone": "warn", "text": "2 suppliers" } }
+    ] },
+    { "type": "table", "title": "What is short. Held is set aside for a production order; short is needed less held.", "columns": [{ "label": "Material" }, { "label": "Needed", "numeric": true }, { "label": "Held", "numeric": true }, { "label": "Short", "numeric": true }, { "label": "Needed by" }, { "label": "What is being done" }], "rows": [
+      ["Tin can 400g, lacquered", "3,000", "0", "3,000", "30 Oct", { "pill": "bad", "text": "Nothing ordered" }],
+      ["PET bottle 1L, clear", "2,400", "1,900", "500", "23 Oct", { "pill": "info", "text": "PO-2026-0418, due 21 Oct" }],
+      ["Dried pepper, ground", "1,100 kg", "700 kg", "400 kg", "26 Oct", { "pill": "warn", "text": "PR-2026-0204 to approve" }],
+      ["Cap 38mm, white", "5,000", "4,200", "800", "26 Oct", { "pill": "bad", "text": "2 days late" }],
+      ["Carton, 12 × 1L", "200", "120", "80", "28 Oct", { "pill": "info", "text": "PO-2026-0421, due 24 Oct" }]
+    ] },
+    { "type": "kv", "title": "Suppliers by delivery: on or before the day promised, last 90 days", "items": [
+      { "label": "Clearline Plastics", "value": { "pill": "bad", "text": "62%, late twice" } },
+      { "label": "Tincraft Cans", "value": "78%" },
+      { "label": "Boxwell Packaging", "value": "94%" },
+      { "label": "Spice Road Traders", "value": "97%" }
+    ] }
+  ]
+}

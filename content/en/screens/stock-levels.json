@@ -1,0 +1,42 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: stock levels across three places, with what the stock is worth, what is on its way and what to order before it runs out.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search products, places, counts…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Stock", "items": [{ "label": "Inventory", "active": true }, { "label": "Transfers" }, { "label": "Reorder levels", "badge": "6" }, { "label": "Stock counts" }, { "label": "Products" }, { "label": "Units of measure" }] }
+  ],
+  "title": "Stock levels",
+  "subtitle": "What you hold in your stores and shops, what it is worth and what to order next.",
+  "actions": [{ "label": "Count stock" }, { "label": "Order what needs it", "primary": true, "icon": "cart" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "box", "label": "Stock value", "value": { "money": 48215600 }, "change": { "tone": "good", "text": "+2.4% vs last month", "dir": "up" }, "note": "What it cost you, across 3 places" },
+      { "icon": "check", "label": "Sellable", "value": { "money": 45094800 }, "note": "9,420 units you can sell now" },
+      { "icon": "clock", "label": "In transit", "value": { "money": 2478000 }, "note": "388 units between places" },
+      { "icon": "alert", "label": "Damaged or on hold", "value": { "money": 642800 }, "note": "74 units" }
+    ] },
+    { "type": "table", "title": "Running low: these sell out before new stock could arrive", "columns": [{ "label": "Product" }, { "label": "In stock", "numeric": true }, { "label": "Sells" }, { "label": "Runs out in" }, { "label": "Suggested order", "numeric": true }], "rows": [
+      ["Powdered milk 400g · carton of 24", "38", "12 a day", { "pill": "bad", "text": "3 days" }, "142 cartons"],
+      ["Instant noodles 70g · carton of 40", "61", "22 a day", { "pill": "bad", "text": "3 days" }, "225 cartons"],
+      ["Bath soap 150g · carton of 48", "9", "3 a day", { "pill": "bad", "text": "3 days" }, "42 cartons"],
+      ["Semolina 1kg · carton of 10", "18", "5 a day", { "pill": "warn", "text": "4 days" }, "52 cartons"],
+      ["Vegetable oil 5L · carton of 4", "14", "2 a day", { "pill": "warn", "text": "7 days" }, "14 cartons"]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Where your stock is", "items": [
+        { "label": "Main store", "value": { "money": 31240900 } },
+        { "label": "Harbour depot", "value": { "money": 12418300 } },
+        { "label": "Market Road shop", "value": { "money": 4556400 } }
+      ] },
+      { "type": "attention", "title": "Worth a look", "items": [
+        { "tone": "warn", "icon": "clock", "title": "Harbour depot was last counted 41 days ago", "body": "A stock count checks the shelves against what the ledger says you hold.", "action": "Start a count" }
+      ] }
+    ] }
+  ]
+}

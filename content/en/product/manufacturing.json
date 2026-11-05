@@ -1,0 +1,218 @@
+{
+  "kind": "product",
+  "sources": [
+    "MANUFACTURING.md",
+    "ROADMAP.md",
+    "docs/product-facts.md#product-manufacturing"
+  ],
+  "meta": {
+    "title": "Manufacturing · Clafina",
+    "description": "Plan, schedule, make and cost what you produce, from the bill of materials to finished goods in stock, with quality checks on the way."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Manufacturing",
+    "title": "From the bill of materials to finished goods on the shelf.",
+    "lede": "Plan production orders, schedule machines and people, run the floor and see what each work order really cost. Stock, buying and the books follow by themselves.",
+    "screen": "manufacturing-orders"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Know if you can deliver",
+      "body": "Ask whether you can deliver by a date. The answer shows what it depends on: materials, machines, people and the work already planned."
+    },
+    {
+      "title": "The right work on every machine",
+      "body": "A scheduler plans around capacity, maintenance and breakdowns. Move work by machine, by person or by order when the day changes."
+    },
+    {
+      "title": "What it really cost",
+      "body": "Each work order is costed from what happened on the floor, next to what it should have cost, with the difference posted as variance."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "manufacturing-work-order",
+      "title": "Follow a work order on the floor",
+      "body": "Operators start, pause and report good and spoilt units from their screen. A breakdown shows on the work order the moment it is logged.",
+      "points": [
+        "Stops are kept with reason codes",
+        "Labels with QR codes open the work order on any phone camera",
+        "The floor keeps working offline and syncs later"
+      ]
+    },
+    {
+      "screen": "manufacturing-materials",
+      "title": "See what is short before it stops you",
+      "body": "Planning holds the materials each order needs. What is short raises a requisition, so buying sees it straight away.",
+      "points": [
+        "Sub-assemblies are planned with the product",
+        "Automations alert you to shortages, delays and breakdowns"
+      ]
+    },
+    {
+      "screen": "manufacturing-quality",
+      "title": "Release only what passes",
+      "body": "Output waits in Awaiting release until quality releases it. What fails gets a non-conformance report and a corrective action.",
+      "points": [
+        "Inspection plans and gates that stop the next step",
+        "Trace a lot back to its materials, or forward to where it went"
+      ]
+    }
+  ],
+  "featuresTitle": "Everything in Manufacturing",
+  "features": [
+    {
+      "title": "What you make and how",
+      "items": [
+        {
+          "text": "Bills of materials with versions, co-products, by-products, phantoms and scrap."
+        },
+        {
+          "text": "Routings and work centres, with revisions released through approval and engineering change."
+        },
+        {
+          "text": "Plants, lines and work-centre calendars. Machines with their history of events, tools with calibration, and skills."
+        },
+        {
+          "text": "Manufacturing projects with phases, milestones, deliverables, risks and changes."
+        }
+      ]
+    },
+    {
+      "title": "Planning and scheduling",
+      "items": [
+        {
+          "text": "Production orders, with a planning engine for sub-assemblies. Materials are held, or shown as short."
+        },
+        {
+          "text": "Can we deliver by a date, with the factors behind the answer."
+        },
+        {
+          "text": "A finite-capacity scheduler that plans around maintenance and breakdowns, with a board by machine, person or order, the critical path and scenarios."
+        },
+        {
+          "text": "Setup times that depend on what ran on the machine before.",
+          "prelaunch": "product-manufacturing"
+        },
+        {
+          "text": "Capacity overload shown after maintenance and leave are taken out.",
+          "prelaunch": "product-manufacturing"
+        },
+        {
+          "text": "A work order made straight from a configured order.",
+          "prelaunch": "product-manufacturing"
+        }
+      ]
+    },
+    {
+      "title": "The shop floor",
+      "items": [
+        {
+          "text": "An operator's screen: start, pause, good and spoilt units, and stops with reason codes."
+        },
+        {
+          "text": "Keeps working offline, and scans labels with QR codes."
+        },
+        {
+          "text": "Automations for shortages, delays and breakdowns."
+        },
+        {
+          "text": "Machine states read from sensors and shown on the floor.",
+          "prelaunch": "product-manufacturing"
+        },
+        {
+          "text": "Energy use read from meters.",
+          "prelaunch": "product-manufacturing"
+        }
+      ]
+    },
+    {
+      "title": "Quality",
+      "items": [
+        {
+          "text": "Inspection plans, quality gates, non-conformance reports and corrective actions."
+        },
+        {
+          "text": "Traceability both ways, from materials to finished goods and back."
+        },
+        {
+          "text": "Output held in Awaiting release until quality releases it."
+        },
+        {
+          "text": "Statistical sampling and control charts.",
+          "prelaunch": "product-manufacturing"
+        }
+      ]
+    },
+    {
+      "title": "Cost and results",
+      "items": [
+        {
+          "text": "Work-order cost from what happened, work in progress in the ledger, variances and earned value."
+        },
+        {
+          "text": "Dashboards with equipment effectiveness and scrap rate."
+        }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    {
+      "route": "product-stock",
+      "text": "Materials are taken from stock and finished goods go back into it."
+    },
+    {
+      "route": "product-purchasing",
+      "text": "Shortages raise requisitions."
+    },
+    {
+      "route": "product-finance",
+      "text": "Work in progress and variances post to the ledger."
+    },
+    {
+      "route": "product-hr",
+      "text": "People and rosters set who can work when."
+    },
+    {
+      "route": "product-assets",
+      "text": "Maintenance on machines shows in the schedule."
+    },
+    {
+      "route": "product-projects",
+      "text": "Manufacturing projects keep phases, milestones and deliverables with your other projects."
+    }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": [
+    "web",
+    "phone"
+  ],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-manufacturing",
+    "industry-configurator"
+  ],
+  "faqTitle": "Questions about Manufacturing",
+  "faq": [
+    {
+      "q": "Can it tell me if we can deliver by a date?",
+      "a": "Yes. Ask for a date and it answers with the factors behind it: materials held or short, capacity and the work already planned."
+    },
+    {
+      "q": "Does the shop floor keep working when the connection drops?",
+      "a": "Yes. The operator's screen keeps working offline and syncs when the connection is back."
+    },
+    {
+      "q": "Can finished goods be sold before quality has checked them?",
+      "a": "No. Output waits in Awaiting release until quality releases it, and cannot be sold until then."
+    }
+  ],
+  "cta": {
+    "title": "See Manufacturing with your own products.",
+    "body": "Start free, or book a demo and we will walk through an order from the bill of materials to finished goods."
+  }
+}

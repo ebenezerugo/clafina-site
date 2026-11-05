@@ -1,0 +1,37 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: reorder levels for each item in each place, worst first, with how long the stock will last and how much to order.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search products, places, counts…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Stock", "items": [{ "label": "Inventory" }, { "label": "Transfers" }, { "label": "Reorder levels", "badge": "6", "active": true }, { "label": "Stock counts" }, { "label": "Products" }, { "label": "Units of measure" }] }
+  ],
+  "title": "Reorder levels",
+  "subtitle": "What each item is held to in each place, where it stands and what to order.",
+  "actions": [{ "label": "Export" }, { "label": "Order what needs it", "primary": true, "icon": "cart" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "alert", "label": "Needs attention", "value": "6", "change": { "tone": "bad", "text": "1 out of stock" } },
+      { "icon": "down", "label": "Below the minimum or safety level", "value": "2" },
+      { "icon": "cart", "label": "At the reorder point", "value": "3" },
+      { "icon": "check", "label": "Fine", "value": "168", "note": "4 items have no levels set" }
+    ] },
+    { "type": "table", "title": "Worst first. A level is set for each item in each place.", "columns": [{ "label": "Item and place" }, { "label": "Held", "numeric": true }, { "label": "Levels" }, { "label": "Standing" }, { "label": "Cover" }, { "label": "Order", "numeric": true }], "rows": [
+      ["Vegetable oil 1L · Market Road shop · class B", "0", "min 10 · safety 20 · reorder 30", { "pill": "bad", "text": "Out of stock" }, "Sold out", "60"],
+      ["Bath soap 150g · Main store · class B", "9", "min 10 · safety 12 · reorder 15", { "pill": "bad", "text": "Below the minimum" }, "3 days", "42"],
+      ["Vegetable oil 5L · Main store · class B", "14", "min 10 · safety 15 · reorder 20", { "pill": "warn", "text": "Below the safety level" }, "7 days", "56"],
+      ["Semolina 1kg · Main store · class B", "18", "min 10 · safety 15 · reorder 20", { "pill": "warn", "text": "At the reorder point" }, "4 days", "52"],
+      ["Granulated sugar 50kg · Main store · class A", "22", "min 10 · safety 18 · reorder 25", { "pill": "warn", "text": "At the reorder point" }, "5 days", "40"],
+      ["Powdered milk 400g · Main store · class A", "38 (+60 on the way)", "min 20 · safety 30 · reorder 40", { "pill": "warn", "text": "At the reorder point" }, "3 days", "142"],
+      ["Chocolate drink 400g · Main store · class A", "44", "min 15 · safety 22 · reorder 30", { "pill": "good", "text": "Fine" }, "9 days", "—"]
+    ] },
+    { "type": "attention", "title": "How it is counted", "items": [
+      { "tone": "info", "icon": "clock", "title": "Stock on its way is counted, not available", "body": "Stock moving between places shows against its levels, but cannot be sold until it arrives.", "action": "See transfers" }
+    ] }
+  ]
+}

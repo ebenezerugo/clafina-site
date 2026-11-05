@@ -1,0 +1,50 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a work order on the floor with one machine broken down, showing each operation, who is on it and the cost so far.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RF", "name": "Riverbend Foods", "place": "Main plant" },
+  "goTo": "Go to page…",
+  "search": "Search orders, products, machines…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "6" }] },
+    { "label": "Make", "items": [{ "label": "Production orders" }, { "label": "Work orders", "active": true }, { "label": "Schedule" }, { "label": "Shop floor" }, { "label": "Bills of materials" }, { "label": "Routings" }, { "label": "Quality" }] }
+  ],
+  "title": "Work order WO-2026-0148",
+  "subtitle": "Groundnut oil 1L × 2,400 · for PRO-2026-0061 · Filling line 1 · needed by 23 Oct",
+  "actions": [{ "label": "Print its label" }, { "label": "Complete the work order", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "attention", "title": "Operation 20 is stopped", "items": [
+      { "tone": "bad", "icon": "alert", "title": "Filler FL-01 broke down at 07:40", "body": "Operations 30 to 50 cannot go on until it runs. At this pace the order finishes on 24 Oct, a day after it is needed.", "action": "Open the maintenance job" }
+    ] },
+    { "type": "row", "widths": "1fr 1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Made", "items": [
+        { "label": "Good bottles", "value": { "strong": "1,560 of 2,400" } },
+        { "label": "Spoilt", "value": "18" },
+        { "label": "Received into stock", "value": "0" }
+      ] },
+      { "type": "kv", "title": "Planned with", "items": [
+        { "label": "Bill of materials", "value": "BOM-0012 v3" },
+        { "label": "Routing", "value": "RT-0007 v2 · 5 operations" },
+        { "label": "Planned", "value": "19 to 24 Oct" }
+      ] },
+      { "type": "kv", "title": "Cost so far", "items": [
+        { "label": "From what happened", "value": { "money": 3180000 } },
+        { "label": "Expected at standard", "value": { "money": 4620000 } }
+      ] }
+    ] },
+    { "type": "table", "title": "Operations: the floor reports here", "columns": [{ "label": "No." }, { "label": "Operation" }, { "label": "Work centre, machine" }, { "label": "Standard", "numeric": true }, { "label": "Booked", "numeric": true }, { "label": "Who" }, { "label": "State" }], "rows": [
+      ["10", "Prepare and filter oil", "Blending tank 1", "40 min", "38 min", "Ronke, Hauwa", { "pill": "good", "text": "Done" }],
+      ["20", "Fill bottles", "Filling line 1 · Filler FL-01", "300 min", "212 min", "Chidi", { "pill": "bad", "text": "Stopped" }],
+      ["30", "Cap and seal", "Filling line 1 · Capper CP-01", "300 min", "172 min", "Musa", { "pill": "info", "text": "In progress" }],
+      ["40", "Label and date-code", "Labelling · Labeller LB-01", "240 min", "0 min", "Not assigned", { "pill": "warn", "text": "Machine in maintenance" }],
+      ["50", "Pack into cartons of 12", "Packing · PK-01", "180 min", "0 min", "Hauwa + 2", { "pill": "neutral", "text": "Pending" }]
+    ] },
+    { "type": "kv", "title": "Quality it must meet", "items": [
+      { "label": "Fill weight", "value": "910 g ± 5 g" },
+      { "label": "Inspection 1", "value": { "pill": "good", "text": "Passed" } },
+      { "label": "Inspection 2", "value": { "pill": "neutral", "text": "Waiting" } }
+    ] }
+  ]
+}

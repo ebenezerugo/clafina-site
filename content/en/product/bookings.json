@@ -1,0 +1,194 @@
+{
+  "kind": "product",
+  "sources": [
+    "BOOKINGS.md",
+    "ROADMAP.md",
+    "MOBILE.md",
+    "docs/product-facts.md#product-bookings"
+  ],
+  "meta": {
+    "title": "Bookings and calendar · Clafina",
+    "description": "One place for anything booked: rooms, tables, staff, equipment, vehicles and spaces. Online booking pages, deposits and no double booking."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Bookings and calendar",
+    "title": "Take bookings for anything, and never book it twice.",
+    "lede": "Rooms, tables, staff, equipment, vehicles and spaces, all booked the same way. Guests book online, deposits confirm themselves and the front desk runs the day from one sheet.",
+    "screen": "bookings-timeline"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Book online, never twice",
+      "body": "Share a booking page and guests choose a free time themselves. The same place can never be booked twice."
+    },
+    {
+      "title": "Deposits that confirm themselves",
+      "body": "Ask for a deposit by payment link. When it is paid, the booking is confirmed without anyone touching it."
+    },
+    {
+      "title": "Run the front desk's day",
+      "body": "The day sheet shows who is coming, who is here and who is late. Check guests in and complete their visit as the day goes."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "bookings-reservation",
+      "title": "Every reservation, from hold to invoice",
+      "body": "A reservation is held, confirmed, checked in and completed, or marked as a no-show. Its deposit, notes and history stay with it.",
+      "points": [
+        "Cancellation and no-show fees follow your settings",
+        "Make the invoice from a completed stay or service",
+        "Guests get an email with a calendar file"
+      ]
+    },
+    {
+      "screen": "bookings-pages",
+      "title": "Booking pages guests can use",
+      "body": "Make a page for the offers you choose and share its link. Guests book without an account, and move or cancel from their own link.",
+      "points": [
+        "When a time is full, guests can join the waiting list",
+        "A freed place is offered to the waiting list for a set time",
+        "Staff are told about every new booking"
+      ]
+    },
+    {
+      "screen": "bookings-day-sheet-phone",
+      "title": "The day sheet in your pocket",
+      "body": "The front desk sees today's arrivals, who is here and who is late on a phone.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in Bookings",
+  "features": [
+    {
+      "title": "What can be booked",
+      "items": [
+        {
+          "text": "Resources of every kind: rooms, tables, staff, equipment, vehicles and spaces."
+        },
+        {
+          "text": "Offers for a service, a table, a stay or a hire, with hours and closures."
+        },
+        {
+          "text": "Prices from your price book, plus rate plans."
+        }
+      ]
+    },
+    {
+      "title": "Availability",
+      "items": [
+        {
+          "text": "No double booking, enforced at the heart of the system rather than by a check on screen."
+        },
+        {
+          "text": "Free slots, stays and nights, with the reason when something is not offered."
+        },
+        {
+          "text": "A waiting list that offers a freed place for a set time."
+        }
+      ]
+    },
+    {
+      "title": "Reservations and money",
+      "items": [
+        {
+          "text": "Reservations that are held, confirmed, checked in, completed or marked as a no-show."
+        },
+        {
+          "text": "Deposits by payment link. The booking confirms itself when it is paid."
+        },
+        {
+          "text": "Cancellation and no-show fees, set the way you choose."
+        },
+        {
+          "text": "An invoice made from a completed stay or service."
+        }
+      ]
+    },
+    {
+      "title": "Guests and the front desk",
+      "items": [
+        {
+          "text": "Public booking pages. Guests move or cancel from their own link."
+        },
+        {
+          "text": "Emails to guests with a calendar file, and notices to staff."
+        },
+        {
+          "text": "A timeline where you drag a reservation to move it, a day sheet, reservations and the waiting list."
+        },
+        {
+          "text": "Messages to guests by SMS and WhatsApp.",
+          "prelaunch": "product-bookings"
+        }
+      ]
+    },
+    {
+      "title": "Calendar",
+      "items": [
+        {
+          "text": "A calendar by day, week, month, year and agenda."
+        },
+        {
+          "text": "Appointment types and booking links you send to customers or suppliers, with reminders."
+        }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    {
+      "route": "product-payments",
+      "text": "Deposits are paid by payment link, and the booking confirms itself."
+    },
+    {
+      "route": "product-sales",
+      "text": "A completed stay or service becomes an invoice."
+    },
+    {
+      "route": "product-crm",
+      "text": "A reservation links to the customer's record."
+    },
+    {
+      "route": "product-online-shop",
+      "text": "Guests can book from your online shop."
+    }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": [
+    "web",
+    "phone",
+    "shop"
+  ],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-restaurant",
+    "industry-accommodation",
+    "industry-classes",
+    "industry-client-records",
+    "industry-rentals",
+    "industry-events"
+  ],
+  "faqTitle": "Questions about Bookings",
+  "faq": [
+    {
+      "q": "Can two people book the same table at once?",
+      "a": "No. Double booking is stopped at the heart of the system, so one place can only ever hold one booking at a time."
+    },
+    {
+      "q": "Do guests need an account to book?",
+      "a": "No. They book on your booking page and get an email with a link to move or cancel."
+    },
+    {
+      "q": "Can I take a deposit when someone books?",
+      "a": "Yes. Ask for a deposit by payment link. The booking is held while they pay and confirms itself when the money arrives."
+    }
+  ],
+  "cta": {
+    "title": "See Bookings with your own rooms and tables.",
+    "body": "Start free, or book a demo and we will walk through a booking from the first click to the invoice."
+  }
+}

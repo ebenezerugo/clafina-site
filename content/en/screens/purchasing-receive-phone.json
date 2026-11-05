@@ -1,0 +1,30 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: receiving a delivery against a purchase order on a phone, counting each line at the door.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Buy", "icon": "cart", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Receive goods",
+  "subtitle": "Against PO-2026-0145 · Coastline Foods · Main store",
+  "blocks": [
+    { "type": "kv", "items": [
+      { "label": "Received by", "value": "Ada, Mon 19 Oct" },
+      { "label": "Goes into", "value": "Awaiting release" }
+    ] },
+    { "type": "table", "title": "Count each line", "columns": [{ "label": "Item" }, { "label": "Counted" }], "rows": [
+      ["Powdered milk 400g · 80 to come", { "pill": "good", "text": "80 ctn, 1,920 each" }],
+      ["Chocolate drink 400g · 60 to come", { "pill": "warn", "text": "62: 60 at most" }]
+    ] },
+    { "type": "attention", "title": "140 cartons", "items": [
+      { "tone": "info", "icon": "box", "title": "Stock goes up when approved", "body": "The receipt is kept against the order, ready to match the supplier's bill.", "action": "Save and receive" }
+    ] }
+  ]
+}

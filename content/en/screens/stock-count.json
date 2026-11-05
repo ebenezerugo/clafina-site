@@ -1,0 +1,44 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a month-end stock count under way in the main store, with the differences found so far and what approving the count will post.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search products, places, counts…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Stock", "items": [{ "label": "Inventory" }, { "label": "Transfers" }, { "label": "Reorder levels", "badge": "6" }, { "label": "Stock counts", "active": true }, { "label": "Products" }, { "label": "Units of measure" }] }
+  ],
+  "title": "Month-end count",
+  "subtitle": "Main store · everything counted · started today 08:10 by Tobi",
+  "actions": [{ "label": "Cancel count" }, { "label": "Save 3 counts" }, { "label": "Approve", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "progress", "label": "212 of 340 items counted", "value": 62, "note": "About 40 minutes left at this pace" },
+    { "type": "stats", "items": [
+      { "icon": "down", "label": "Short", "value": { "money": -186400 }, "change": { "tone": "bad", "text": "5 items" } },
+      { "icon": "up", "label": "Extra", "value": { "money": 21600 }, "change": { "tone": "good", "text": "1 item" } },
+      { "icon": "clock", "label": "Not saved yet", "value": "3 counts" }
+    ] },
+    { "type": "row", "widths": "2fr 1fr", "blocks": [
+      { "type": "table", "title": "Blind count: counters do not see what is expected", "columns": [{ "label": "Item" }, { "label": "Code" }, { "label": "Counted", "numeric": true }, { "label": "Difference" }], "rows": [
+        ["Powdered milk 400g", "MILK-400-CTN", "38", { "pill": "good", "text": "Agrees" }],
+        ["Instant noodles 70g", "NOOD-70-CTN", "61", { "pill": "bad", "text": "−14 · −₦137,200" }],
+        ["Granulated sugar 50kg", "SUG-50-BAG", "22", { "pill": "good", "text": "Agrees" }],
+        ["Semolina 1kg", "SEM-1KG-CTN", "18", { "pill": "neutral", "text": "Not saved" }],
+        ["Vegetable oil 5L", "OIL-5L-CTN", "15", { "pill": "info", "text": "+1 · +₦21,600" }],
+        ["Bath soap 150g", "SOAP-150-CTN", "—", { "pill": "neutral", "text": "Not counted" }]
+      ] },
+      { "type": "kv", "title": "What approving will do", "items": [
+        { "label": "Adjustments", "value": "6, one for each line that differs" },
+        { "label": "Not counted", "value": "128 items, left alone" },
+        { "label": "Net effect on value", "value": { "money": -164800 } },
+        { "label": "Above ₦100,000", "value": { "pill": "warn", "text": "1, goes to an approver" } }
+      ] }
+    ] },
+    { "type": "attention", "title": "Before you approve", "items": [
+      { "tone": "info", "icon": "check", "title": "Save your counts first", "body": "Approval uses what is saved. The ledger only ever adds lines, so an approved count is corrected by another movement, never by editing.", "action": "Save 3 counts" }
+    ] }
+  ]
+}
