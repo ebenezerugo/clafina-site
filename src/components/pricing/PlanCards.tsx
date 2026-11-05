@@ -46,7 +46,7 @@ export function PlanCards({ plans, text, labels, countries, lang }: {
                 <span data-testid={`price-${p.id}`} className="text-4xl font-extrabold tracking-tight tabular">{price(p)}</span>
                 {p.price[country].amount ? <span className="ms-1 text-sm text-muted">{labels.perMonth}</span> : null}
               </p>
-              <a data-testid={`cta-${p.id}`} href={t.href} data-signup={p.id === 'enterprise' ? undefined : ''} className={`inline-flex min-h-12 items-center justify-center rounded-full px-5 font-semibold ${p.highlighted ? 'bg-primary text-on-primary hover:bg-primary-hover' : 'border border-line hover:bg-surface'}`}>{t.cta}</a>
+              <a data-testid={`cta-${p.id}`} href={t.href} data-signup={p.id === 'enterprise' ? undefined : ''} className={`inline-flex min-h-12 items-center justify-center rounded-control px-5 font-semibold ${p.highlighted ? 'bg-primary text-on-primary hover:bg-primary-hover' : 'border border-line hover:bg-surface'}`}>{t.cta}</a>
               <ul className="grid gap-1 text-sm text-muted">{t.limits.map((l) => <li key={l}>{l}</li>)}</ul>
               <ul className="grid gap-2 text-sm">
                 {t.features.map((f) => (

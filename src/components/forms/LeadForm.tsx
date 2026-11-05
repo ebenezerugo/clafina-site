@@ -159,8 +159,8 @@ export function LeadForm({ kind, locale, text, industries, countries, salesEmail
       )}
 
       <div className="flex flex-wrap gap-3">
-        {step > 0 && <button type="button" onClick={() => setStep(step - 1)} className="inline-flex min-h-12 items-center rounded-full border border-line px-6 font-semibold">{text.back}</button>}
-        <button type="submit" disabled={status === 'sending'} className="inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-on-primary disabled:opacity-60">
+        {step > 0 && <button type="button" onClick={() => setStep(step - 1)} className="inline-flex min-h-12 items-center rounded-control border border-line px-6 font-semibold">{text.back}</button>}
+        <button type="submit" disabled={status === 'sending'} className="inline-flex min-h-12 items-center rounded-control bg-primary px-6 font-semibold text-on-primary disabled:opacity-60">
           {step < 3 ? text.next : status === 'sending' ? text.sending : text.send}
         </button>
       </div>

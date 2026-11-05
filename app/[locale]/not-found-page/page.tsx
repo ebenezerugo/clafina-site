@@ -21,7 +21,7 @@ export default async function NotFoundPage({ params }: Props) {
     <main className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
       <h1 className="text-4xl font-extrabold tracking-tight">{t('notFound.title')}</h1>
       <p className="mt-4 text-lg text-muted">{t('notFound.body')}</p>
-      <a href={localePath(locale, '/')} className="mt-8 inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-on-primary">{t('notFound.home')}</a>
+      <a href={localePath(locale, '/')} className="mt-8 inline-flex min-h-12 items-center rounded-control bg-primary px-6 font-semibold text-on-primary">{t('notFound.home')}</a>
     </main>
   );
 }
