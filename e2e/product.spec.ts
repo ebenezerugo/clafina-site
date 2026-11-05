@@ -21,7 +21,10 @@ for (const slug of PRODUCTS) {
     });
     test('links only to pages that exist, and carries FAQ data', async ({ page }) => {
       await page.goto(`/en/product/${slug}/`);
-      await expect(page.locator('#industries a[href*="/industries/"]')).toHaveCount(0);
+      // Built stories are links; unbuilt ones are plain names. Every link must resolve.
+      for (const href of await page.locator('#industries a').evaluateAll((as) => as.map((a) => a.getAttribute('href')!))) {
+        expect((await page.request.get(href)).status(), href).toBe(200);
+      }
       const ld = await page.locator('script[type="application/ld+json"]').allTextContents();
       expect(ld.some((x) => x.includes('"FAQPage"'))).toBe(true);
     });

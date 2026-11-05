@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { CONTENT_SCHEMAS } from '../src/content/registry';
 import { checkScreenSpec } from '../src/content/screen-spec';
 import { ProductContent } from '../src/content/product';
+import { IndustryStory } from '../src/content/industry';
 import { LOCALE_CODES, isLocale } from '../src/config/locales';
 import { SWITCHES, localeIndexed } from '../src/config/switches';
 import { buildMode, type BuildMode } from '../src/lib/build-mode';
@@ -87,21 +88,23 @@ export function checkContent(root: string, mode: BuildMode = buildMode()): strin
       if (schema && !schema.safeParse(data).success) problems.push(`${where} does not match its schema`);
       textProblems(where, data, '', false, problems);
       if (data && typeof data === 'object' && !Array.isArray(data) && data.kind === 'industry-story') {
-        const b = data.illustrativeBusiness;
+        const b = data.business;
         if (!b || typeof b !== 'object' || Array.isArray(b) || b.label !== true) problems.push(`${where} has no labelled illustrative business`);
       }
     }
   }
-  // Product pages: one file per product in content/<locale>/product/.
-  for (const locale of readdirSync(root).filter((d) => isLocale(d))) {
-    const dir = join(root, locale, 'product');
-    if (!existsSync(dir)) continue;
-    for (const file of readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
-      const where = `${locale}/product/${file}`;
-      const data = JSON.parse(readFileSync(join(dir, file), 'utf8')) as Json;
-      const parsed = ProductContent.safeParse(data);
-      if (!parsed.success) problems.push(...parsed.error.issues.map((i) => `${where} ${i.path.join('.')}: ${i.message}`));
-      textProblems(where, data, '', false, problems);
+  // Pages with one file each: products in content/<locale>/product/, stories in content/<locale>/industries/.
+  for (const [folder, schema] of [['product', ProductContent], ['industries', IndustryStory]] as const) {
+    for (const locale of readdirSync(root).filter((d) => isLocale(d))) {
+      const dir = join(root, locale, folder);
+      if (!existsSync(dir)) continue;
+      for (const file of readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
+        const where = `${locale}/${folder}/${file}`;
+        const data = JSON.parse(readFileSync(join(dir, file), 'utf8')) as Json;
+        const parsed = schema.safeParse(data);
+        if (!parsed.success) problems.push(...parsed.error.issues.map((i) => `${where} ${i.path.join('.')}: ${i.message}`));
+        textProblems(where, data, '', false, problems);
+      }
     }
   }
   // Product screens: illustrative figures are fine, but every file must say it is illustrative.

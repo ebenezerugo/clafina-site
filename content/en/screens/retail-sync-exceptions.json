@@ -1,0 +1,25 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the manager's list of till sync exceptions after two tills sold offline, with a one-click fix for each.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "AH", "name": "Adaeze Home and Electronics", "place": "Enugu" },
+  "nav": [
+    { "label": "Point of sale", "items": [{ "label": "Tills" }, { "label": "Shifts and cash" }, { "label": "Sync exceptions", "active": true, "badge": "2" }, { "label": "Reports" }] },
+    { "label": "Stock", "items": [{ "label": "Levels" }, { "label": "Transfers" }] }
+  ],
+  "title": "Sync exceptions",
+  "subtitle": "Sales made offline always stand. Anything that needs a hand is listed here, in plain words.",
+  "blocks": [
+    { "type": "attention", "title": "Needs you", "items": [
+      { "tone": "warn", "icon": "box", "title": "Blender, 1.5 L sold one more than Ogui Road had", "body": "Till 1 and Till 2 both sold the last one while the line was down. Garden Avenue has 6.", "action": "Transfer 1 from Garden Avenue" },
+      { "tone": "info", "icon": "bank", "title": "Till 3 took a bank transfer to an account the books don't know yet", "body": "The sale is kept. Make the account and the receipt posts.", "action": "Make the account" }
+    ] },
+    { "type": "table", "title": "Synced today", "columns": [{ "label": "Till" }, { "label": "Offline" }, { "label": "Sales sent", "numeric": true }, { "label": "Status" }], "rows": [
+      ["Till 1 · Ogui Road", "10:15 to 10:41", "9", { "pill": "warn", "text": "1 to fix" }],
+      ["Till 2 · Ogui Road", "10:15 to 10:39", "7", { "pill": "good", "text": "All posted" }],
+      ["Till 3 · Garden Avenue", "Never offline", "41", { "pill": "warn", "text": "1 to fix" }]
+    ] }
+  ]
+}

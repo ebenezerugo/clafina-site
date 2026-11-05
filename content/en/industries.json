@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Industries · Clafina",
+    "description": "How Clafina runs a day in your trade: shops, restaurants, hotels, gyms, schools, clinics, builders, farms, makers and more, told in your own words."
+  },
+  "hero": {
+    "eyebrow": "Industries",
+    "title": "Your trade, in your words.",
+    "lede": "Every business keeps the same books, stock and customers. What changes is the day. Pick your trade and follow a day at a business like yours, from opening to close."
+  },
+  "groups": [
+    { "title": "Built in", "body": "Shops and makers use the core of Clafina as it is. Nothing to switch on.", "items": ["industry-retail", "industry-manufacturing"] },
+    { "title": "Food, stays and bookings", "body": "Tables, rooms, tickets and hired items, and the busy days they bring.", "items": ["industry-restaurant", "industry-accommodation", "industry-events", "industry-rentals"] },
+    { "title": "Members, classes and learning", "body": "People who come back: members, class regulars, learners and clients.", "items": ["industry-memberships", "industry-classes", "industry-courses", "industry-client-records"] },
+    { "title": "Property, projects and jobs", "body": "Work that runs over weeks: leases, building contracts and jobs out in the field.", "items": ["industry-property", "industry-construction", "industry-field-service"] },
+    { "title": "Goods on the move, and things that grow", "body": "Routes and vans, fields and flocks, and products built to a customer's choice.", "items": ["industry-distribution", "industry-farm", "industry-configurator"] },
+    { "title": "Giving", "body": "Donors, gifts, pledges, campaigns, grants and numbered tax receipts.", "items": ["industry-fundraising"] }
+  ],
+  "coreLabel": "Built into Clafina",
+  "packLabel": "Industry pack",
+  "cta": {
+    "title": "Don't see your trade?",
+    "body": "Every business starts with the same core: books, stock, sales, people and an online shop. Start free and switch on the packs that fit."
+  }
+}

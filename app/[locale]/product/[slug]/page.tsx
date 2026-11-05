@@ -3,7 +3,8 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { LOCALES, isLocale, type Locale } from '@/config/locales';
 import { ROUTES, routeById } from '@/config/routes';
-import { isOn, localeEnabled, pageAvailable, type SwitchKey } from '@/config/switches';
+import { localeEnabled, pageAvailable } from '@/config/switches';
+import { visible } from '@/lib/visible';
 import { loadContent } from '@/content/load';
 import { ProductContent } from '@/content/product';
 import { signupUrl } from '@/lib/links';
@@ -35,12 +36,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, route, c } = await resolve(params);
   const alt = alternates(locale, route.path);
   return { metadataBase: new URL(SITE_ORIGIN), title: c.meta.title, description: c.meta.description, alternates: { canonical: alt.canonical, languages: alt.languages }, robots: robotsFor(locale), openGraph: { title: c.meta.title, description: c.meta.description, url: alt.canonical, siteName: 'Clafina' } };
-}
-
-/** A pre-launch feature shows only while pre-launch features, and its own area, are switched on. */
-function visible(item: { claim?: string; prelaunch?: string }): boolean {
-  if (item.prelaunch && !(isOn('prelaunch.features') && isOn(`prelaunch.${item.prelaunch}` as SwitchKey))) return false;
-  return true;
 }
 
 export default async function ProductPage({ params }: Props) {
