@@ -1,0 +1,48 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: September's VAT return report, worked out from the ledger and checked against the VAT accounts, two days before it is due.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Finance", "items": [{ "label": "Overview" }, { "label": "Journal entries" }, { "label": "Reports", "active": true }] },
+    { "label": "Settings", "items": [{ "label": "Tax" }, { "label": "Document settings" }] }
+  ],
+  "title": "VAT return",
+  "subtitle": "1 Sep – 30 Sep 2026 · due on 21 October: 2 days left",
+  "actions": [{ "label": "Schedule", "icon": "clock" }, { "label": "Download", "primary": true }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "sales", "label": "Output VAT: what you collected", "value": { "money": 412300 } },
+      { "icon": "cart", "label": "Input VAT: what you can claim back", "value": { "money": 396000 } },
+      { "icon": "receipt", "label": "VAT to pay for September", "value": { "money": 16300 }, "change": { "tone": "warn", "text": "Due in 2 days" }, "note": "It belongs to the tax office, not to you." }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Sales: what you charged customers in September", "columns": [{ "label": "Line" }, { "label": "Amount", "numeric": true }], "rows": [
+        ["Standard-rated sales (7.5%)", { "money": 5497333 }],
+        ["Zero-rated or exempt sales", { "money": 12142667 }],
+        ["Adjustments (credit notes)", { "money": 0 }],
+        [{ "strong": "Output VAT" }, { "money": 412300 }]
+      ] },
+      { "type": "table", "title": "Purchases: VAT your suppliers charged you", "columns": [{ "label": "Line" }, { "label": "Amount", "numeric": true }], "rows": [
+        ["Purchases with VAT you can claim", { "money": 5280000 }],
+        ["Withholding tax credits", { "money": 0 }],
+        ["Claimed in earlier months", { "money": 0 }],
+        [{ "strong": "Input VAT" }, { "money": 396000 }]
+      ] }
+    ] },
+    { "type": "attention", "title": "Checked against the books", "items": [
+      { "tone": "good", "icon": "check", "title": "The return agrees with the ledger", "body": "Account 2200 Output VAT ₦412,300 · account 1400 Input VAT ₦396,000. If these ever differ, a document was posted without its VAT. The two are checked against each other every time you run it." }
+    ] },
+    { "type": "steps", "items": ["Download the schedule", "File on the tax portal", "Pay by 21 October"], "current": 0 },
+    { "type": "kv", "title": "What happens next", "items": [
+      { "label": "1. Download the schedule", "value": "PDF for your records, spreadsheet for your accountant" },
+      { "label": "2. File on the tax portal", "value": "Clafina does not file for you. Use these figures." },
+      { "label": "3. Pay by 21 October", "value": "Record the payment; the ₦16,300 clears Output VAT" }
+    ] }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the reports hub, with pinned reports, when each last ran, and the receivables reports this person may read.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Find a report",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Business insights", "items": [{ "label": "Executive summary" }, { "label": "Cash flow" }, { "label": "Forecasts and insights" }] },
+    { "label": "Reports", "items": [{ "label": "Reports", "active": true }, { "label": "Alerts", "badge": "3" }, { "label": "My exports" }, { "label": "Schedules" }] }
+  ],
+  "title": "Reports",
+  "subtitle": "Registers, exceptions and summaries: filtered, grouped, exported, and sent to people on a schedule.",
+  "actions": [{ "label": "New schedule", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "cards", "columns": 4, "items": [
+      { "title": "Overdue invoices", "body": "7 invoices, ₦1,840,000 owed, longest overdue first.", "pill": { "tone": "info", "text": "Live · today 09:12" } },
+      { "title": "Invoice register", "body": "Every customer invoice in the period.", "pill": { "tone": "neutral", "text": "Run yesterday" } },
+      { "title": "Stock valuation", "body": "What the stock is worth, by location.", "pill": { "tone": "neutral", "text": "Run Monday" } },
+      { "title": "Journal register", "body": "Every journal entry, with who posted it.", "pill": { "tone": "neutral", "text": "Run 12 Oct" } }
+    ] },
+    { "type": "table", "title": "Receivables: only the reports you may read are listed", "columns": [{ "label": "Report" }, { "label": "What it shows" }, { "label": "Kind" }], "rows": [
+      [{ "strong": "Invoice register" }, "Every customer invoice in the period: customer, dates, totals, what is owed, status.", "Register"],
+      [{ "strong": "Overdue invoices" }, "Posted customer invoices past due with something still owed, longest overdue first.", { "pill": "info", "text": "Live · exceptions" }],
+      [{ "strong": "Receivables ageing" }, "Who owes you, in 30-day bands, by customer.", { "pill": "info", "text": "Live · summary" }],
+      [{ "strong": "Customer statement" }, "One customer's invoices, payments and balance, ready to send.", "Register"],
+      [{ "strong": "Receipts by method" }, "Money received, split by cash, transfer, card and link.", "Grouped"],
+      [{ "strong": "Collections trend" }, "How much was collected each week against what fell due.", "Trend"],
+      [{ "strong": "Credit notes and write-offs" }, "What was given back or written off, and who approved it.", "Activity"],
+      [{ "strong": "Bad-debt risk" }, "Customers whose payments are getting later.", { "pill": "info", "text": "Live · exceptions" }]
+    ] },
+    { "type": "attention", "title": "Pinned reports", "items": [
+      { "tone": "info", "icon": "chart", "title": "Pinned reports also show on your dashboard", "body": "Star any report to add it. Schedule it to send to people, with a test send first.", "action": "New schedule" }
+    ] }
+  ]
+}

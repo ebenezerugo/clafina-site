@@ -1,0 +1,34 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the cash flow dashboard, with cash today, money in and out this month and a 90-day forecast in three scenarios.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Business insights", "items": [{ "label": "Executive summary" }, { "label": "Profitability" }, { "label": "Cash flow", "active": true }, { "label": "Working capital" }, { "label": "Customers and growth" }, { "label": "Forecasts and insights" }] },
+    { "label": "Reports", "items": [{ "label": "Reports" }, { "label": "Schedules" }] }
+  ],
+  "title": "Cash flow",
+  "subtitle": "Where cash stands, where it is going over the next 90 days, and the day it could run short. Agrees with the books · 2 min ago",
+  "actions": [{ "label": "Customise" }, { "label": "Make a forecast now", "primary": true }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "bank", "label": "Cash in bank", "value": { "money": 8914250 }, "change": { "tone": "bad", "text": "−₦281,000 since Friday", "dir": "down" }, "note": "Across your 3 bank accounts." },
+      { "icon": "down", "label": "Money in this month", "value": { "money": 11206500 }, "change": { "tone": "good", "text": "+9.4% vs September", "dir": "up" }, "note": "Banked from 1 to 19 October." },
+      { "icon": "up", "label": "Money out this month", "value": { "money": 9874300 }, "change": { "tone": "neutral", "text": "+6.1% vs September", "dir": "up" }, "note": "Suppliers, payroll and tax paid so far." },
+      { "icon": "alert", "label": "Lowest point ahead", "value": { "money": 4960000 }, "change": { "tone": "warn", "text": "Projected for 9 Nov" }, "note": "Base case. Your minimum is ₦2m." }
+    ] },
+    { "type": "table", "title": "Cash forecast: made today at 06:00 · looks 90 days ahead · confidence: medium · an estimate, not a promise", "columns": [{ "label": "Scenario" }, { "label": "In 7 days", "numeric": true }, { "label": "In 30 days", "numeric": true }, { "label": "In 60 days", "numeric": true }, { "label": "In 90 days", "numeric": true }, { "label": "Lowest", "numeric": true }, { "label": "First shortfall" }], "rows": [
+      ["Optimistic", "₦8.7m", "₦6.1m", "₦8.0m", "₦10.6m", "₦5.2m", { "pill": "good", "text": "None" }],
+      [{ "strong": "Base" }, "₦8.4m", "₦5.4m", "₦6.4m", "₦7.6m", "₦5.0m", { "pill": "good", "text": "None" }],
+      ["Adverse", "₦8.2m", "₦4.7m", "₦4.5m", "₦1.9m", "₦1.9m", { "pill": "bad", "text": "14 Jan" }]
+    ] },
+    { "type": "attention", "title": "Checkpoints", "items": [
+      { "tone": "warn", "icon": "clock", "title": "The adverse case falls below your ₦2m minimum on 14 Jan", "body": "The base case reaches ₦7.6m by 17 Jan, and its lowest point is ₦4.96m on 9 Nov.", "action": "See the adverse case" }
+    ] }
+  ]
+}

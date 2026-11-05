@@ -1,0 +1,40 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the profit and loss report for October so far against September, with a warning that two entries are not posted yet.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Finance", "items": [{ "label": "Overview" }, { "label": "Chart of accounts" }, { "label": "Journal entries" }, { "label": "Books and posting" }, { "label": "Bank" }, { "label": "Reports", "active": true }] }
+  ],
+  "title": "Finance reports",
+  "subtitle": "The statements, the ledger, ageing and tax. In naira, from the ledger, as PDF, spreadsheet or CSV.",
+  "actions": [{ "label": "Schedule", "icon": "clock" }, { "label": "Download", "primary": true }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "sales", "label": "Revenue", "value": { "money": 14820000 }, "change": { "tone": "good", "text": "+9.3%", "dir": "up" }, "note": "VAT left out" },
+      { "icon": "chart", "label": "Gross profit", "value": { "money": 4440000 }, "change": { "tone": "good", "text": "+13.0%", "dir": "up" }, "note": "30.0% margin" },
+      { "icon": "money", "label": "Operating costs", "value": { "money": 2125200 }, "change": { "tone": "warn", "text": "+18.8%", "dir": "up" }, "note": "Rent not in yet" },
+      { "icon": "up", "label": "Profit for the period", "value": { "money": 2314800 }, "change": { "tone": "good", "text": "+8.1%", "dir": "up" }, "note": "15.6% of sales" }
+    ] },
+    { "type": "attention", "title": "Before you trust these numbers", "items": [
+      { "tone": "warn", "icon": "alert", "title": "Two entries are not posted yet, so these numbers are a little rosy", "body": "Rent accrual ₦850,000 (in approval) and vehicle depreciation ₦175,000 (approved, waiting to post). Projected profit ₦1,289,800 by 31 Oct.", "action": "See the 2 entries" }
+    ] },
+    { "type": "table", "title": "Profit and loss: 1–19 Oct 2026, compared with the period before", "columns": [{ "label": "Line" }, { "label": "1–19 Oct 2026", "numeric": true }, { "label": "1–19 Sep 2026", "numeric": true }, { "label": "Change", "numeric": true }], "rows": [
+      ["Sales revenue", { "money": 15000000 }, { "money": 13760000 }, "+9.0%"],
+      ["Discounts given", { "money": -180000 }, { "money": -200000 }, "−10.0%"],
+      [{ "strong": "Total revenue" }, { "money": 14820000 }, { "money": 13560000 }, "+9.3%"],
+      ["Cost of sales", { "money": -10380000 }, { "money": -9630000 }, "+7.8%"],
+      [{ "strong": "Gross profit" }, { "money": 4440000 }, { "money": 3930000 }, "+13.0%"],
+      ["Salaries and wages", { "money": 1350000 }, { "money": 1290000 }, "+4.7%"],
+      ["Utilities", { "money": 212000 }, { "money": 196000 }, "+8.2%"],
+      ["Rent", { "pill": "warn", "text": "Waiting for approval" }, "—", "—"],
+      ["General expenses", { "money": 563200 }, { "money": 302900 }, "+85.9%"],
+      [{ "strong": "Operating profit" }, { "money": 2314800 }, { "money": 2141100 }, "+8.1%"]
+    ] }
+  ]
+}

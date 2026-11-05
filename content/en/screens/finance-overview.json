@@ -1,0 +1,45 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the finance overview in the web app, with cash in the bank, what is owed each way, how long cash lasts and this month's profit.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Finance", "items": [{ "label": "Overview", "active": true }, { "label": "Chart of accounts" }, { "label": "Journal entries" }, { "label": "Books and posting" }, { "label": "Bank" }, { "label": "Reports" }] }
+  ],
+  "title": "Finance overview",
+  "subtitle": "Where your money is, what you are owed and owe, and how long it lasts.",
+  "actions": [{ "label": "Record payment" }, { "label": "Pay a bill", "primary": true }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "bank", "label": "Cash in bank", "value": { "money": 8914250 }, "change": { "tone": "bad", "text": "−₦281,000 since Friday", "dir": "down" }, "note": "What is in your 3 bank accounts today." },
+      { "icon": "receipt", "label": "Money owed to you", "value": { "money": 6730400 }, "change": { "tone": "bad", "text": "₦1,840,000 overdue" }, "note": "Customers have not paid these invoices yet." },
+      { "icon": "money", "label": "Money you owe", "value": { "money": 4128900 }, "change": { "tone": "warn", "text": "₦1,310,000 due this week" }, "note": "Supplier bills you have not paid yet." },
+      { "icon": "clock", "label": "Cash will last", "value": "2.7 months", "change": { "tone": "good", "text": "Above your 2-month target" }, "note": "How long your cash covers your costs if no money came in." }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Profit this month: sales minus cost of goods minus running costs", "items": [
+        { "label": "Sales, VAT left out", "value": { "money": 14820000 } },
+        { "label": "What the goods cost you", "value": { "money": -10380000 } },
+        { "label": "Gross profit, 30% margin", "value": { "money": 4440000 } },
+        { "label": "Running costs: rent, salaries, fuel", "value": { "money": -2125200 } },
+        { "label": "Profit, 15.6% of sales", "value": { "strong": "₦2,314,800" } }
+      ] },
+      { "type": "table", "title": "Bills to pay this week", "columns": [{ "label": "Supplier" }, { "label": "Bill" }, { "label": "Due" }, { "label": "Amount", "numeric": true }], "rows": [
+        [{ "avatar": "RF", "text": "Riverbend Foods Ltd" }, "SB-2026-1182", { "pill": "warn", "text": "Due in 3 days" }, { "money": 820000 }],
+        [{ "avatar": "NH", "text": "Northway Haulage Co." }, "SB-2026-1190", { "pill": "neutral", "text": "Due in 4 days" }, { "money": 310000 }],
+        [{ "avatar": "CP", "text": "City Power Supply" }, "SB-2026-1195", { "pill": "neutral", "text": "Due in 6 days" }, { "money": 180000 }],
+        [{ "strong": "Total due this week" }, "", "", { "money": 1310000 }]
+      ] }
+    ] },
+    { "type": "table", "title": "Your bank accounts: balances as of the last statement, Friday 4:30 pm", "columns": [{ "label": "Account" }, { "label": "Kind" }, { "label": "Balance", "numeric": true }], "rows": [
+      ["Main current account ••0123", "Current account", { "money": 4812300 }],
+      ["Trade current account ••7745", "Current account", { "money": 2640950 }],
+      ["Reserve savings ••3018", "Savings account", { "money": 1461000 }]
+    ] }
+  ]
+}

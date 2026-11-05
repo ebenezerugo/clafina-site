@@ -1,0 +1,37 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the journal entries list, with entries that documents posted by themselves next to entries written by hand and waiting for a second person.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "3" }] },
+    { "label": "Finance", "items": [{ "label": "Overview" }, { "label": "Chart of accounts" }, { "label": "Journal entries", "active": true, "badge": "2" }, { "label": "Books and posting" }, { "label": "Bank" }, { "label": "Reports" }] }
+  ],
+  "title": "Journal entries",
+  "subtitle": "Everything in the books, newest first: entries written by hand and entries that documents posted.",
+  "actions": [{ "label": "Recurring entries" }, { "label": "New entry", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "attention", "title": "Waiting for you", "items": [
+      { "tone": "warn", "icon": "users", "title": "2 entries are waiting for approval, and 1 approved entry is waiting to be posted", "body": "Tola wrote JE-2026-1282 (₦850,000 rent accrual) this morning. Nobody posts their own entry unseen, so it needs a second person.", "action": "Review the 2" }
+    ] },
+    { "type": "stats", "items": [
+      { "icon": "table", "label": "Drafts", "value": "3" },
+      { "icon": "clock", "label": "In approval", "value": "2", "change": { "tone": "warn", "text": "Needs a second person" } },
+      { "icon": "check", "label": "Approved", "value": "1", "note": "Waiting to be posted" },
+      { "icon": "receipt", "label": "Posted", "value": "1,273", "note": "5 voided" }
+    ] },
+    { "type": "table", "columns": [{ "label": "Number" }, { "label": "Date" }, { "label": "From" }, { "label": "Reference" }, { "label": "Status" }, { "label": "Amount", "numeric": true }], "rows": [
+      ["JE-2026-1284", "19 Oct", "Customer invoice", "INV-2026-0418 · Tide Street Stores", { "pill": "good", "text": "Posted" }, { "money": 412500 }],
+      ["JE-2026-1283", "19 Oct", "Customer receipt", "RCT-2026-0562 · Kite Market Co., part payment", { "pill": "good", "text": "Posted" }, { "money": 400000 }],
+      ["JE-2026-1282", "19 Oct", "Written by hand", "Accrue October rent · Tola", { "pill": "warn", "text": "In approval" }, { "money": 850000 }],
+      ["JE-2026-1281", "18 Oct", "Supplier invoice", "SB-2026-1195 · City Power Supply, September", { "pill": "good", "text": "Posted" }, { "money": 180000 }],
+      ["JE-2026-1280", "17 Oct", "Stock", "GRN-2026-0214 · goods received from Riverbend Foods", { "pill": "good", "text": "Posted" }, { "money": 612400 }],
+      ["JE-2026-1279", "17 Oct", "Written by hand", "Correct freight to account 6300 · Tola", { "pill": "neutral", "text": "Draft" }, { "money": 95000 }],
+      ["JE-2026-1277", "15 Oct", "Payroll", "Payroll run, September · 14 staff", { "pill": "good", "text": "Posted" }, { "money": 3420000 }]
+    ] }
+  ]
+}

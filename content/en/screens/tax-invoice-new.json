@@ -1,0 +1,51 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a new invoice being filled in, with VAT worked out on each line and the totals changing as you type.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Sell", "items": [{ "label": "Sales" }, { "label": "Quotations" }, { "label": "Sales orders" }, { "label": "Invoices", "badge": "7", "active": true }, { "label": "Receipts" }] }
+  ],
+  "title": "New invoice",
+  "subtitle": "Not saved yet · the totals change as you type",
+  "actions": [{ "label": "Save as draft" }, { "label": "Send invoice", "primary": true }],
+  "blocks": [
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Who is it for, and from where?", "items": [
+        { "label": "Customer", "value": { "avatar": "TS", "text": "Tide Street Stores" } },
+        { "label": "Owes", "value": { "money": 1236000 } },
+        { "label": "Sell from", "value": "Main store" },
+        { "label": "Due date, payment terms", "value": "2 Nov 2026 · Net 14" },
+        { "label": "Prices", "value": "Wholesale" }
+      ] },
+      { "type": "kv", "title": "Tax", "items": [
+        { "label": "Currency", "value": "NGN" },
+        { "label": "Tax", "value": { "pill": "info", "text": "VAT 7.5% added on top" } },
+        { "label": "Why", "value": "From your tax rules. Open a line to see how it was decided." },
+        { "label": "No VAT", "value": "Pick “No VAT” for items that are not charged VAT" }
+      ] }
+    ] },
+    { "type": "table", "title": "What are you selling?", "columns": [{ "label": "Item" }, { "label": "Quantity" }, { "label": "Price each", "numeric": true }, { "label": "Tax" }, { "label": "Amount", "numeric": true }], "rows": [
+      ["Powdered milk 400g · 38 left", "10 cartons", { "money": 38500 }, "VAT 7.5%", { "money": 385000 }],
+      ["Instant noodles 70g · 61 left", "25 cartons", { "money": 9800 }, "VAT 7.5%", { "money": 245000 }],
+      ["Granulated sugar 50kg · 22 left", "4 bags", { "money": 77000 }, "VAT 7.5%", { "money": 308000 }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "Totals", "items": [
+        { "label": "Subtotal, before VAT", "value": { "money": 938000 } },
+        { "label": "Below list price, counts as a discount", "value": { "money": -6000 } },
+        { "label": "VAT 7.5% of ₦938,000, passed on", "value": { "money": 70350 } },
+        { "label": "Total to pay, VAT included", "value": { "strong": "₦1,008,350" } }
+      ] },
+      { "type": "attention", "title": "What happens next", "items": [
+        { "tone": "info", "icon": "receipt", "title": "Numbered INV-2026-0419 and marked Sent", "body": "A PDF and a pay link are emailed to the customer. The 3 items are set aside at the main store." },
+        { "tone": "info", "icon": "clock", "title": "We remind you if unpaid on 2 November", "body": "Nothing is sent until you press Send invoice." }
+      ] }
+    ] }
+  ]
+}

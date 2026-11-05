@@ -1,0 +1,46 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a payment run to three suppliers, with an early-payment discount, tax held back and one payment waiting for a second approver.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search customers, invoices, products…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Sell", "items": [{ "label": "Sales" }, { "label": "Invoices", "badge": "7" }, { "label": "Receipts" }] },
+    { "label": "Money", "items": [{ "label": "Payment links" }, { "label": "Wallets" }, { "label": "Payables", "active": true, "badge": "3" }] }
+  ],
+  "title": "Pay suppliers",
+  "subtitle": "3 bills from 3 suppliers · one payment for each supplier · not saved yet",
+  "actions": [{ "label": "Save as drafts" }, { "label": "Pay 3 suppliers", "primary": true }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "money", "label": "You owe suppliers", "value": { "money": 14882300 }, "note": "14 bills from 9 suppliers." },
+      { "icon": "alert", "label": "Overdue", "value": { "money": 1250000 }, "change": { "tone": "bad", "text": "1 bill, 7 days late" } },
+      { "icon": "clock", "label": "Due by Sunday", "value": { "money": 1922000 }, "note": "Four bills; one is due Wednesday." },
+      { "icon": "check", "label": "Needs you", "value": "3 bills", "note": "2 ready to post, 1 to approve." }
+    ] },
+    { "type": "table", "title": "What are you settling?", "columns": [{ "label": "Supplier" }, { "label": "Bill" }, { "label": "Owed", "numeric": true }, { "label": "Discount", "numeric": true }, { "label": "Tax held", "numeric": true }, { "label": "Pay now", "numeric": true }], "rows": [
+      [{ "avatar": "RG", "text": "Riverbend Grains & Sugar Ltd" }, "BILL-2026-0197 · 7 days late", { "money": 1250000 }, { "money": 0 }, { "money": 0 }, { "money": 1250000 }],
+      [{ "avatar": "MF", "text": "Meadowgate Farms Ltd" }, "BILL-2026-0205 · due 21 Oct", { "money": 980000 }, { "money": 19600 }, { "money": 0 }, { "money": 960400 }],
+      [{ "avatar": "HP", "text": "Hilltop Packaging Ltd" }, "BILL-2026-0203 · due 25 Oct", { "money": 642000 }, { "money": 0 }, { "money": 32100 }, { "money": 609900 }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "This run, paid from current account ••6789 by bank transfer", "items": [
+        { "label": "3 bills cleared", "value": { "money": 2872000 } },
+        { "label": "Discount taken", "value": { "money": -19600 } },
+        { "label": "Tax held back", "value": { "money": -32100 } },
+        { "label": "Cash leaving, 3 payments", "value": { "strong": "₦2,820,300" } },
+        { "label": "Balance now", "value": { "money": 5120400 } },
+        { "label": "After this run", "value": { "money": 2300100 } }
+      ] },
+      { "type": "attention", "title": "Before you press Pay", "items": [
+        { "tone": "warn", "icon": "users", "title": "A payment needs a second person", "body": "Riverbend's ₦1,250,000 is above ₦1,000,000, so it goes to Kemi for a second approval. Their bank account was checked on 3 Sep.", "action": "Review" },
+        { "tone": "good", "icon": "check", "title": "2% early-payment discount taken", "body": "Meadowgate is paid 2 days before the bill is due. Hilltop has 5% tax held back, paid to the tax office with your next return." },
+        { "tone": "info", "icon": "bank", "title": "No money moves from here", "body": "Approved payments go to the bank file. Each supplier gets a payment advice by email and on the network." }
+      ] }
+    ] }
+  ]
+}
