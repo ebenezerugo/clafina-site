@@ -8,7 +8,7 @@ test('home renders in English', async ({ page }) => {
 
 test('Start free carries the language into sign-up', async ({ page }) => {
   await page.goto('/fr/');
-  await expect(page.getByRole('main').getByRole('link', { name: 'Start free' })).toHaveAttribute('href', 'https://app.clafina.com/signup?lang=fr');
+  await expect(page.locator('#hero').getByRole('link', { name: 'Start free' })).toHaveAttribute('href', 'https://app.clafina.com/signup?lang=fr');
 });
 
 test('the language switcher keeps the page', async ({ page }) => {

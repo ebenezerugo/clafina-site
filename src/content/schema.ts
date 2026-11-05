@@ -16,8 +16,12 @@ export const IllustrativeBusiness = z.object({
 
 export const PageMeta = z.object({ title: z.string().min(1), description: z.string().min(1).max(170) });
 
+const Item = z.object({ id: z.string(), title: z.string().min(1), body: z.string().min(1) });
+const Section = { eyebrow: z.string().min(1), title: z.string().min(1) };
+
 export const HomeContent = z.object({
   meta: PageMeta,
+  illustrative: z.literal('Illustrative example'),
   hero: z.object({
     eyebrow: z.string().min(1),
     title: z.string().min(1),
@@ -25,6 +29,13 @@ export const HomeContent = z.object({
     primaryCta: z.string().min(1),
     secondaryCta: z.string().min(1),
   }),
+  oneRecord: z.object({ ...Section, intro: z.string(), currency: z.enum(['NGN', 'USD']), steps: z.array(Item.extend({ visual: z.array(z.object({ label: z.string(), value: z.string() })) })).length(4) }),
+  surfaces: z.object({ ...Section, intro: z.string(), items: z.array(Item).min(1) }),
+  modules: z.object({ ...Section, intro: z.string(), items: z.record(z.string(), z.string()) }),
+  industries: z.object({ ...Section, intro: z.string() }),
+  works: z.object({ ...Section, items: z.array(Item).min(1) }),
+  trust: z.object({ ...Section, items: z.array(Claim).min(1) }),
+  cta: z.object({ title: z.string().min(1), body: z.string().min(1) }),
 });
 export type HomeContent = z.infer<typeof HomeContent>;
 

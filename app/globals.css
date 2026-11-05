@@ -39,3 +39,11 @@
   :focus-visible { outline: 2px solid var(--c-primary); outline-offset: 3px; }
   .tabular { font-variant-numeric: tabular-nums; }
 }
+
+/* The one-record walk-through: a highlight moves step to step. Opacity never changes. */
+@keyframes one-record-glow {
+  0%, 30%, 100% { box-shadow: 0 0 0 0 transparent; border-color: var(--c-line); }
+  8%, 22% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--c-primary) 18%, transparent); border-color: var(--c-primary); }
+}
+.one-record-step { animation: one-record-glow 6s var(--ease-out) infinite; }
+@media (prefers-reduced-motion: reduce) { .one-record-step { animation: none; } }
