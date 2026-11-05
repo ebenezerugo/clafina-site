@@ -1,0 +1,46 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a foundation's grants from idea to awarded, with one grant's tranches, spending by line and the report due next.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "IC", "name": "Ireti Care Foundation", "place": "Lagos" },
+  "nav": [
+    { "label": "Fundraising", "items": [{ "label": "Overview" }, { "label": "Donors" }, { "label": "Gifts" }, { "label": "Campaigns" }, { "label": "Grants", "active": true }, { "label": "Tax receipts", "badge": "14" }] }
+  ],
+  "title": "Grants",
+  "subtitle": "Money from funders: what is applied for, what is awarded, and what you promised to report and spend it on. 11 closed since 2022.",
+  "actions": [{ "label": "New application", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "leaf", "label": "Ideas", "value": "4", "note": "₦40,000,000 if all are won" },
+      { "icon": "clock", "label": "Applied or needs info", "value": "3", "note": "₦65,000,000 · answers by 30 Nov" },
+      { "icon": "check", "label": "Awarded", "value": "5", "note": "₦112,000,000 over 2 years" },
+      { "icon": "bell", "label": "Reporting", "value": "2", "change": { "tone": "warn", "text": "Next report in 9 days" } }
+    ] },
+    { "type": "table", "title": "Showing 6 of 25", "columns": [{ "label": "Funder and programme" }, { "label": "Amount", "numeric": true }, { "label": "Stage" }, { "label": "Next step" }], "rows": [
+      ["Coastal Health Fund · Makoko medical outreach", { "money": 24000000 }, { "pill": "warn", "text": "Reporting" }, "Report 2 of 3, due 28 Oct"],
+      ["Unity Education Trust · school boreholes, phase 2", { "money": 30000000 }, { "pill": "info", "text": "Applied" }, "Answer by 30 Nov"],
+      ["Olumide Family Trust · girls' literacy, 3 schools", { "money": 45000000 }, { "pill": "good", "text": "Awarded" }, "Report due 15 Jan"],
+      ["Crestline Foods Ltd · annual community grant", { "money": 12000000 }, { "pill": "good", "text": "Awarded" }, "Paid in full"],
+      ["Clearwater Fund · community wells", { "money": 18000000 }, { "pill": "neutral", "text": "Idea" }, "Draft by 5 Nov"],
+      ["Northgate Women's Fund · market traders' savings groups", { "money": 9000000 }, { "pill": "warn", "text": "Needs info" }, "Reply by 24 Oct"]
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Coastal Health Fund · spent against the grant's lines", "columns": [{ "label": "Line" }, { "label": "Spent", "numeric": true }, { "label": "Budget", "numeric": true }], "rows": [
+        ["Medicines and supplies", { "money": 6100000 }, { "money": 12000000 }],
+        ["Clinic staff", { "money": 3900000 }, { "money": 8000000 }],
+        ["Transport", { "money": 1800000 }, { "money": 3000000 }],
+        ["Reporting", { "money": 200000 }, { "money": 1000000 }],
+        [{ "strong": "All lines" }, { "money": 12000000 }, { "money": 24000000 }]
+      ] },
+      { "type": "kv", "title": "1 Mar 2026 to 28 Feb 2027", "items": [
+        { "label": "Awarded", "value": { "money": 24000000 } },
+        { "label": "Received", "value": "₦14,400,000 in 3 of 5 tranches" },
+        { "label": "Next tranche", "value": "₦4,800,000 on 1 Dec" },
+        { "label": "Report 2 of 3", "value": "Due Wed 28 Oct" },
+        { "label": "Condition", "value": "Spend by 28 Feb 2027, or repay" }
+      ] }
+    ] }
+  ]
+}

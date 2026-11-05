@@ -1,0 +1,39 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: \"Can we deliver by…?\" for a new pepper mix order, planned as a dry run, with the answer and what it rests on.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "RF", "name": "Riverbend Foods", "place": "Ikeja plant" },
+  "goTo": "Go to page…",
+  "search": "Search orders, products, machines…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "6" }] },
+    { "label": "Make", "items": [{ "label": "Production orders", "active": true }, { "label": "Work orders" }, { "label": "Materials" }, { "label": "Schedule" }, { "label": "Shop floor" }, { "label": "Machines" }, { "label": "Quality" }] }
+  ],
+  "title": "Can we deliver by 30 October?",
+  "subtitle": "Pepper mix 200g jar × 3,000 for SO-2026-0158 · planned as a dry run, nothing is saved",
+  "actions": [{ "label": "Try another date" }, { "label": "Make the production order", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "Answer", "value": { "pill": "good", "text": "Yes" } },
+      { "icon": "clock", "label": "Projected finish", "value": "28 Oct" },
+      { "icon": "up", "label": "Days to spare", "value": "2" },
+      { "icon": "table", "label": "Work orders it would make", "value": "2", "note": "The jar and the pepper blend inside it" }
+    ] },
+    { "type": "table", "title": "What the answer rests on", "columns": [{ "label": "Factor" }, { "label": "What the plan found" }, { "label": "Effect" }], "rows": [
+      ["Materials", "Jars, caps and labels in stock. Dried pepper: 600 kg more needed; PO-2026-0423 brings 1,000 kg on 24 Oct.", { "pill": "warn", "text": "Rests on one delivery" }],
+      ["Suppliers", "Spice Road Traders delivered on the day promised 97% of the time in the last 90 days.", { "pill": "good", "text": "Low risk" }],
+      ["Capacity", "Pepper mixer MX-01 free 26 to 27 Oct; heat sealer SL-02 free 27 to 28 Oct.", { "pill": "good", "text": "On time" }],
+      ["Maintenance", "MX-01 is serviced on 23 Oct, before the run. SL-02's service is 2 days overdue.", { "pill": "warn", "text": "Service SL-02 first" }],
+      ["Workforce", "The packing team is on the roster. One person is on leave on 27 Oct, still covered.", { "pill": "good", "text": "On time" }],
+      ["Routing", "RT-0009 v1 · 3 operations: blend, fill and seal, pack.", { "pill": "neutral", "text": "Planned with this" }]
+    ] },
+    { "type": "kv", "title": "Planned with", "items": [
+      { "label": "Bill of materials", "value": "BOM-0015 v2" },
+      { "label": "Routing", "value": "RT-0009 v1" },
+      { "label": "Needed by", "value": "30 Oct" },
+      { "label": "Projected finish", "value": { "strong": "28 Oct" } }
+    ] }
+  ]
+}

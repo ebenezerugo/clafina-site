@@ -1,0 +1,45 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: checking a gym's billing run the day before it runs. Seven members need a look, and nothing is invoiced until Run is pressed.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "HF", "name": "Harmattan Fitness Club", "place": "Lekki" },
+  "nav": [
+    { "label": "Memberships", "items": [{ "label": "Members" }, { "label": "Plans" }, { "label": "Billing runs", "active": true, "badge": "7" }, { "label": "Contracts and retainers" }, { "label": "Front desk" }] }
+  ],
+  "title": "Billing run, 1 November",
+  "subtitle": "Everything due on the next billing day, checked before anyone is invoiced.",
+  "actions": [{ "label": "Send reminders only" }, { "label": "Run the billing", "primary": true, "icon": "receipt" }],
+  "blocks": [
+    { "type": "steps", "items": ["Check", "Invoice", "Retry any that failed"], "current": 0 },
+    { "type": "stats", "items": [
+      { "icon": "receipt", "label": "To bill", "value": { "money": 7935000 }, "note": "268 invoices, one for each member" },
+      { "icon": "check", "label": "Ready", "value": "263", "note": "₦7,625,000" },
+      { "icon": "alert", "label": "Need a look first", "value": "7", "note": "2 of them will not be billed" }
+    ] },
+    { "type": "table", "title": "Need a look first", "columns": [{ "label": "Member" }, { "label": "Why" }, { "label": "Flag" }, { "label": "Amount", "numeric": true }], "rows": [
+      [{ "avatar": "AB", "text": "Amina Bello" }, "October invoice unpaid · access paused since 8 Oct", { "pill": "bad", "text": "Payment overdue" }, { "money": 25000 }],
+      [{ "avatar": "IO", "text": "Ifeanyi Okonkwo" }, "Frozen to 30 Nov", { "pill": "neutral", "text": "Skipped" }, "Not billed"],
+      [{ "avatar": "BA", "text": "Bisi Adeyemi" }, "Ends 31 Oct · will not renew", { "pill": "neutral", "text": "Ends" }, "Not billed"],
+      [{ "avatar": "HS", "text": "Halima Suleiman" }, "Moves to ₦27,500 on 1 Dec", { "pill": "info", "text": "Price change" }, { "money": 25000 }],
+      [{ "avatar": "CL", "text": "Coral Bay Logistics" }, "10 seats · 8 named", { "pill": "warn", "text": "Check seats" }, { "money": 210000 }],
+      [{ "avatar": "TB", "text": "Tunde Babalola" }, "Pays by card · invoiced and flagged", { "pill": "warn", "text": "No payment method" }, { "money": 25000 }],
+      [{ "avatar": "CE", "text": "Chioma Ezeh" }, "Student to Monthly Unlimited from 1 Nov", { "pill": "info", "text": "Plan change" }, { "money": 25000 }],
+      [{ "strong": "Flagged, to bill" }, "5 invoices", "", { "money": 310000 }]
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "kv", "title": "This run", "items": [
+        { "label": "Billing day", "value": "Sun 1 Nov 2026" },
+        { "label": "Invoices numbered from", "value": "MEM-INV-2026-1140" },
+        { "label": "Revenue goes to", "value": "4100 Membership income" },
+        { "label": "Currency", "value": "Naira only" }
+      ] },
+      { "type": "attention", "title": "When you press Run", "items": [
+        { "tone": "info", "icon": "receipt", "title": "Each member is invoiced in their own step", "body": "One invoice for each member for the period, sent the way every Clafina invoice is sent." },
+        { "tone": "info", "icon": "check", "title": "A failure is marked, not lost", "body": "Retry it from this page. A member who was invoiced is never invoiced twice." },
+        { "tone": "warn", "icon": "clock", "title": "Late payment", "body": "Reminders go on day 1, 3 and 7. After 7 days unpaid, access pauses and opens again the moment the invoice is paid." }
+      ] }
+    ] }
+  ]
+}

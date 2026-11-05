@@ -1,0 +1,37 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a broiler batch on the supervisor's phone, with mortality over the limit and the last three daily records.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "GF", "name": "Garba Family Farms", "place": "Ogbomosho Farm" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Farm", "icon": "leaf", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Broilers, House 3",
+  "subtitle": "BRL-2026-014 · day 28 of 42 · 4,845 alive of 5,000",
+  "blocks": [
+    { "type": "attention", "title": "Today", "items": [
+      { "tone": "warn", "icon": "clock", "title": "Today's record is not entered yet", "body": "Each death needs a cause. Feed is drawn from the store at today's cost.", "action": "Record today" }
+    ] },
+    { "type": "stats", "items": [
+      { "icon": "chart", "label": "Feed conversion", "value": "1.52", "note": "Aim 1.55 or less" },
+      { "icon": "alert", "label": "Mortality", "value": "3.1%", "change": { "tone": "bad", "text": "0.6 over your limit" } },
+      { "icon": "box", "label": "Average weight", "value": "1.38 kg", "note": "Aim 1.40 kg" },
+      { "icon": "money", "label": "Cost a kilo, live", "value": { "money": 2953 }, "note": "₦2,610 at day 42" }
+    ] },
+    { "type": "table", "title": "Daily records", "columns": [{ "label": "Day" }, { "label": "Feed", "numeric": true }, { "label": "Deaths" }], "rows": [
+      ["Sun 18 Oct · day 27", "538 kg", "9 · heat stress 5, unknown 4"],
+      ["Sat 17 Oct · day 26", "520 kg", "3 · unknown 3"],
+      ["Fri 16 Oct · day 25", "502 kg", "4 · leg problem 2, unknown 2"]
+    ] },
+    { "type": "kv", "title": "Health and withdrawal", "items": [
+      { "label": "Enrofloxacin, 17 to 19 Oct", "value": { "pill": "warn", "text": "No sale before 27 Oct" } },
+      { "label": "Ready to sell", "value": "From day 38, 29 Oct" }
+    ] }
+  ]
+}

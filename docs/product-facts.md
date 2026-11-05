@@ -994,3 +994,54 @@ AI tools use the API safely.
 
 **Boards:** none specific. Use erp3-notification-rules, erp4a-sending, erp4a-messaging (closest), or
 Settings mockups.
+
+---
+
+## product-email — Business email (pre-launch page)
+
+Sources: `commerce-mail` repo (5 Nov 2026): `README.md`, `docs/specs/2026-11-05-business-email-design.md` (spec),
+`docs/admin-guide.md` (guide), `docs/plans/2026-11-05-business-email-plan.md` (plan), `docs/needs-from-owner.md`.
+Owner, 5 Nov: "We now host their emails."
+
+**Status:** the mail service (phases 0–5) is built and tested in the development stack. Production servers,
+deliverability set-up, the ERP mail module and the Email screens in the web app are later phases (plan "Later
+phases"). So the **whole page is pre-launch**: route `product-email` carries `prelaunch`, and the page and every
+link to it disappear when `prelaunch.product-email` or `prelaunch.features` is off.
+
+**Job:** real mailboxes on the organisation's own domain, managed from Clafina, read in Clafina or in any mail app.
+
+**Built (dev stack):**
+- Mailboxes on the organisation's own domain, managed from Clafina; webmail in Clafina; IMAP, POP3 and
+  authenticated SMTP for Outlook, Thunderbird, Apple Mail and phone mail apps (spec §1; guide §4).
+- Connect a domain: Clafina shows the records to publish, publishes them itself where it manages the domain's DNS,
+  and the domain goes live only when every required record passes (ownership, MX, SPF, DKIM, DMARC) (guide §1).
+- Mailboxes with an address, display name, password, storage quota and daily sending allowance; reset password,
+  suspend, disable with mail kept and restorable, sign out everywhere (guide §2).
+- Aliases such as info@ and sales@ that deliver to one or more mailboxes and can be sent from (guide §2).
+- An address that does not exist bounces with a plain message; name+anything@ reaches name@ (guide §2).
+- Forwarding to up to 10 addresses, inside or outside the organisation, with or without a copy; an organisation
+  policy (allowed, own addresses only, off); spam is never forwarded (guide §3; spec §7a.2).
+- Out-of-office replies with optional start and end, once per sender per day, never to spam or lists (guide §3).
+- Users set forwarding and out-of-office themselves within the policy; every change is in the audit log (guide §3).
+- Mail apps set themselves up from the recommended records; a configuration profile for iPhone, iPad and Mac (guide §4).
+- Spam filtering, with spam put in Junk (plan phase 2).
+- Daily sending allowances per mailbox and organisation; messages over the allowance wait in Outbox and go out
+  when allowed; a mailbox that sends spam is held, with the reason shown, until an admin releases it (guide §5).
+- Calendar invitations answered in the message and added to the Clafina Calendar; recipients from Clafina
+  Contacts (guide §6).
+- Each organisation's mail kept apart from every other's, proven by tests at every layer (plan phase 3).
+- Encrypted off-site backups; restore a whole node or a single mailbox (plan phase 4; spec §10).
+- New mail appears in Clafina screens as it arrives, without refreshing (spec §2).
+
+**Not offered (say so if asked):** catch-all addresses, Exchange ActiveSync, bulk or marketing sending (use
+campaigns), shared mailboxes with folder permissions (guide §7). Phone calendar and contact sync is planned on the
+Clafina side (guide §6) — keep it off the page.
+
+**Surfaces:** web app (webmail and admin); any IMAP or POP3 mail app.
+
+**Connects to:** Communication (inbox), Calendar and Bookings (invitations), CRM contacts, Online shop (domain).
+
+**Avoid:** naming the mail software, hosting or backup providers, or other companies' email products; the price
+(not set, needs #11); sending limits as figures; uptime or deliverability promises.
+
+**Words:** Mailbox, Alias, Domain, Verify, Forwarding, Out-of-office, Sending allowance, Held, Junk, Outbox.

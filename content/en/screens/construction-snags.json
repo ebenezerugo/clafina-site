@@ -1,0 +1,47 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a snag list for a block of flats, with open snags counted unit by unit and by trade, and one flat's list with who must put each one right.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "PRJ-2026-0033 · Lagoonside Court, Ikoyi" },
+  "nav": [
+    { "label": "Construction", "items": [{ "label": "Progress billing" }, { "label": "Site diary" }, { "label": "Snag list", "active": true }, { "label": "Subcontractors", "badge": "3" }] }
+  ],
+  "title": "Snag list",
+  "subtitle": "What is wrong or unfinished in each unit, who must put it right and whether it has been checked.",
+  "actions": [{ "label": "Walk a unit" }, { "label": "Add a snag", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "alert", "label": "Open snags", "value": "53", "note": "46 on floors 1 and 2" },
+      { "icon": "clock", "label": "Fixed, to be checked", "value": "34" },
+      { "icon": "check", "label": "Closed", "value": "212", "note": "Checked and closed" },
+      { "icon": "bell", "label": "Overdue", "value": "9", "change": { "tone": "bad", "text": "Past the agreed date" } }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Open snags by unit. Floors 5 and 6 are not built yet.", "columns": [{ "label": "Floor" }, { "label": "A", "numeric": true }, { "label": "B", "numeric": true }, { "label": "C", "numeric": true }, { "label": "D", "numeric": true }], "rows": [
+        ["Floor 4", "1", "0", "0", "0"],
+        ["Floor 3", "3", "2", "0", "1"],
+        ["Floor 2", "4", "4", "3", "5"],
+        ["Floor 1", "9", "7", "8", "6"]
+      ] },
+      { "type": "table", "title": "Open snags by trade", "columns": [{ "label": "Trade" }, { "label": "Open", "numeric": true }], "rows": [
+        ["Painting", "17"],
+        ["Tiling", "12"],
+        ["Carpentry", "11"],
+        ["Electrical", "7"],
+        ["Plumbing", "4"],
+        ["Aluminium and glazing", "2"],
+        [{ "strong": "All trades" }, "53"]
+      ] }
+    ] },
+    { "type": "table", "title": "Unit 2A · 6 of 14 snags. Each has photos before and after, and a note.", "columns": [{ "label": "Snag" }, { "label": "Where" }, { "label": "Who puts it right" }, { "label": "State" }, { "label": "Due" }], "rows": [
+      [{ "strong": "S-0412 · Cracked floor tile at the bathroom door" }, "Bathroom", "Tiler · Firmstep Tiling", { "pill": "bad", "text": "Overdue" }, "16 Oct"],
+      [{ "strong": "S-0411 · Door does not close fully" }, "Bedroom 2", "Carpenter · Oakline Joinery", { "pill": "warn", "text": "Open" }, "23 Oct"],
+      [{ "strong": "S-0408 · Paint patchy on the left wall" }, "Living room", "Painter · Truecoat Painters", { "pill": "info", "text": "Fixed, to check" }, "19 Oct"],
+      [{ "strong": "S-0405 · Socket cover missing" }, "Kitchen", "Electrician · Brightcurrent Electrical", { "pill": "warn", "text": "Open" }, "23 Oct"],
+      [{ "strong": "S-0402 · Window seal leaks when it rains" }, "Bedroom 1", "Glazier · Clearview Glazing", { "pill": "bad", "text": "Overdue" }, "14 Oct"],
+      [{ "strong": "S-0399 · No tap in the guest toilet basin" }, "Guest toilet", "Plumber · Deepwell Plumbing", { "pill": "good", "text": "Closed" }, "12 Oct"]
+    ] }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a two-day trade fair's event page at the end of day one, with the gate's figures, tickets by type, sessions and what each sponsor agreed and paid.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "ZE", "name": "Zamani Events", "place": "Abuja" },
+  "nav": [
+    { "label": "Events", "items": [{ "label": "Events", "active": true }, { "label": "Tickets sold" }, { "label": "Check-in" }, { "label": "Venues" }] },
+    { "label": "This event", "items": [{ "label": "Overview", "active": true }, { "label": "Sessions", "badge": "5" }, { "label": "Tickets", "badge": "5" }, { "label": "Seating" }, { "label": "Sales" }, { "label": "Sponsors", "badge": "3" }] }
+  ],
+  "title": "Abuja Home and Living Fair · EVT-2026-0014",
+  "subtitle": "Happening now · day 1 of 2 · Thu 12 to Fri 13 Nov 2026 · Garki Exhibition Hall",
+  "actions": [{ "label": "Door sales" }, { "label": "Open check-in", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "Let in at the gate today", "value": "1,512", "note": "Day 1 tickets, two-day passes and exhibitors" },
+      { "icon": "alert", "label": "Refused at the gate", "value": "9", "note": "Each with its reason" },
+      { "icon": "cart", "label": "Sold at the door", "value": "46", "note": "Cash and card" },
+      { "icon": "money", "label": "Sales, before tax", "value": { "money": 27940000 }, "note": "Tickets and tables sold" }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Ticket types", "columns": [{ "label": "Ticket" }, { "label": "Price", "numeric": true }, { "label": "Sold" }, { "label": "Sales", "numeric": true }], "rows": [
+        ["Day pass", { "money": 5000 }, "1,240 of 1,500", { "money": 6200000 }],
+        ["Two-day pass", { "money": 8000 }, "610 of 800", { "money": 4880000 }],
+        ["Exhibitor", { "money": 120000 }, "58 of 60", { "money": 6960000 }],
+        ["Gala table of 10", { "money": 400000 }, "24 of 24", { "money": 9600000 }],
+        ["Student day pass", { "money": 2000 }, "150 of 200", { "money": 300000 }],
+        [{ "strong": "All tickets" }, "", "", { "money": 27940000 }]
+      ] },
+      { "type": "table", "title": "Sessions", "columns": [{ "label": "Session" }, { "label": "When and where" }, { "label": "State" }], "rows": [
+        ["Opening talk", "Thu 09:30 · Main hall · 420 in", { "pill": "good", "text": "Done" }],
+        ["Panel: building with local materials", "Thu 11:00 · Main hall · 380 in", { "pill": "good", "text": "Done" }],
+        ["Workshop: small spaces", "Thu 13:30 · Room B · 80 of 80", { "pill": "warn", "text": "Full" }],
+        ["Gala dinner", "Thu 19:00 · Marquee · 24 tables", { "pill": "info", "text": "Tonight" }],
+        ["Buyers' morning", "Fri 09:00 · Main hall", { "pill": "neutral", "text": "Tomorrow" }]
+      ] }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Sponsors", "columns": [{ "label": "Sponsor" }, { "label": "Level" }, { "label": "Agreed", "numeric": true }, { "label": "Paid", "numeric": true }], "rows": [
+        ["Kufena Paints", "Gold", { "money": 2000000 }, { "money": 2000000 }],
+        ["Ogbe Tiles", "Silver", { "money": 1000000 }, { "money": 500000 }],
+        ["Usuma Furnishings", "Stand", { "money": 600000 }, { "money": 600000 }],
+        [{ "strong": "All sponsors" }, "", { "money": 3600000 }, { "money": 3100000 }]
+      ] },
+      { "type": "kv", "title": "Refused at the gate today", "items": [
+        { "label": "Already used", "value": "5" },
+        { "label": "Not paid yet", "value": "2" },
+        { "label": "For another event", "value": "2" },
+        { "label": "Door sales close", "value": "Day 2, 16:00" }
+      ] }
+    ] }
+  ]
+}

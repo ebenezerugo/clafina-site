@@ -1,0 +1,226 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "COURSES.md",
+    "INDUSTRY_PACKS.md",
+    "commerce-web/docs/features.md",
+    "docs/industry-facts.md#industry-courses"
+  ],
+  "meta": {
+    "title": "Courses: lessons, quizzes and certificates · Clafina",
+    "description": "Courses from video, reading and quiz lessons for your staff and customers, a board that shows where people stop, and numbered certificates. The Courses pack for Clafina."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Courses",
+    "title": "Train your people, and see the lesson where they stop.",
+    "lede": "For businesses training their own staff, selling courses to customers, and schools and training centres. Learners, lessons, quizzes and certificates in the same place as HR and your invoices.",
+    "screen": "courses-learners"
+  },
+  "business": {
+    "name": "Kalabari Supply Company",
+    "place": "Trans-Amadi, Port Harcourt",
+    "label": true,
+    "about": "A distributor with a warehouse, a fleet of vans and two shops. Ibiere, the training manager, trains new staff and sells places on the shop course to the traders who buy from them."
+  },
+  "dayTitle": "A day with Kalabari Supply Company's training manager",
+  "moments": [
+    {
+      "time": "08:30",
+      "title": "A new course is nearly ready",
+      "problem": "Ibiere wants the warehouse course out this week, but a half-finished course puts people off.",
+      "handles": "The builder lists the modules and their video, reading, quiz and live lessons, and shows which ones aren't ready. A course can only be published when every lesson is: a video with its file and length, captions when your setting asks for them, a reading with its text, and a quiz with enough questions.",
+      "surface": "web",
+      "screen": "courses-builder"
+    },
+    {
+      "time": "09:00",
+      "title": "The course is published",
+      "problem": "Now the new warehouse staff need to be on it.",
+      "handles": "Staff invited while the course was a draft are enrolled the moment it is published, and find it under My learning. Staff come from HR with the sign-in they already have, and are never invoiced.",
+      "surface": "web"
+    },
+    {
+      "time": "11:00",
+      "title": "A video skipped to the end",
+      "problem": "Abiye drags the till video to the end. It shouldn't count as watched.",
+      "handles": "The player reports what was watched, but Clafina only accepts as much as the time allows and cuts back the rest. A video is done at the share of its real length that you set. Ibiere can see it on her phone.",
+      "surface": "phone",
+      "screen": "courses-learners-phone"
+    },
+    {
+      "time": "12:30",
+      "title": "Quiz time",
+      "problem": "Last time, the answers went round the staff chat.",
+      "handles": "Each attempt draws its questions from a bank, and the answers are never sent to the learner's browser. Retakes are limited and spaced apart, and a pass is final.",
+      "surface": "web"
+    },
+    {
+      "time": "14:00",
+      "title": "A customer wants a paid place",
+      "problem": "Owanate Traders wants its shop assistant on the shop course, and Kalabari Supply wants to be paid first.",
+      "handles": "A priced place is invoiced on the normal customer invoice. A setting can hold the learner until the payment is confirmed, and another can ask for approval before anyone starts.",
+      "surface": "web"
+    },
+    {
+      "time": "15:30",
+      "title": "Where do people give up?",
+      "problem": "Plenty of people start the shop course, but not enough finish it.",
+      "handles": "The learners board shows each person's state for today: finished, not started, on track, stuck or retake. It points to the lesson with the biggest drop, with a hint drawn from that lesson itself. Here it is a short reading with no picture.",
+      "surface": "web"
+    },
+    {
+      "time": "16:30",
+      "title": "A cashier finishes",
+      "problem": "HR needs proof she was trained, and it should be easy to check later.",
+      "handles": "Finishing gives a numbered certificate with an expiry date and a code to check it by. A staff member's certificate goes onto their HR record as a training record. Staff with the certificates permission can check a code, and a certificate can be withdrawn with a reason and issued again.",
+      "surface": "web"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Learner",
+      "meaning": "Anyone taking a course: a member of staff from HR, or a customer."
+    },
+    {
+      "word": "Lesson",
+      "meaning": "A video, a reading, a quiz or a live session, inside a module."
+    },
+    {
+      "word": "Course outline",
+      "meaning": "The modules and lessons of a course, in order."
+    },
+    {
+      "word": "Pass mark",
+      "meaning": "The score needed on a quiz to pass it."
+    },
+    {
+      "word": "Retake",
+      "meaning": "Another try at a quiz, limited in number and spaced apart."
+    },
+    {
+      "word": "Stuck",
+      "meaning": "A learner who isn't moving on from a lesson, as the learners board works it out for today."
+    },
+    {
+      "word": "My learning",
+      "meaning": "Where a learner finds their courses and carries on."
+    },
+    {
+      "word": "Certificate",
+      "meaning": "Your business's own numbered certificate, with an expiry date and a code to check it by."
+    }
+  ],
+  "switchesTitle": "What the Courses pack switches on",
+  "switchesOn": [
+    {
+      "text": "A Courses menu: courses, learners, certificates and My learning"
+    },
+    {
+      "text": "The place kinds school and training centre"
+    },
+    {
+      "text": "Courses with modules and video, reading, quiz and live lessons, with files, captions, resources and languages"
+    },
+    {
+      "text": "Publishing only when every lesson is ready"
+    },
+    {
+      "text": "Watching counted only as fast as time allows"
+    },
+    {
+      "text": "Quizzes from a question bank, with a pass mark and spaced retakes"
+    },
+    {
+      "text": "Staff learners from HR, and customer learners invoiced and held until paid if you choose"
+    },
+    {
+      "text": "Numbered certificates that run out, can be checked by code, and can be withdrawn and issued again"
+    },
+    {
+      "text": "A learners board with states for today and where people stop"
+    },
+    {
+      "text": "A public page where anyone can check a certificate",
+      "prelaunch": "industry-courses"
+    },
+    {
+      "text": "Reminders to learners",
+      "prelaunch": "industry-courses"
+    },
+    {
+      "text": "Cohorts and scheduled classes",
+      "prelaunch": "industry-courses"
+    },
+    {
+      "text": "Selling courses on the online shop",
+      "prelaunch": "industry-courses"
+    },
+    {
+      "text": "Fees by term and fee statements for schools",
+      "prelaunch": "industry-courses"
+    },
+    {
+      "text": "Parent or guardian records",
+      "prelaunch": "industry-courses"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-hr",
+      "text": "Staff learners come from HR with their own sign-in, and a finished course goes on their HR record as a training record."
+    },
+    {
+      "route": "product-sales",
+      "text": "A customer's place is invoiced on the normal customer invoice, and can wait until it is paid."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a training team uses",
+  "modules": [
+    "product-hr",
+    "product-sales",
+    "product-mobile"
+  ],
+  "faqTitle": "Questions training teams and schools ask",
+  "faq": [
+    {
+      "q": "Can I train staff and sell the same course to customers?",
+      "a": "Yes. A course can be open to staff, customers or both. Staff are never invoiced, and customers are invoiced for a priced place."
+    },
+    {
+      "q": "How do I know a video was really watched?",
+      "a": "Clafina only counts as much of a video as the time allows, so skipping to the end doesn't count. You set the share of the real length that marks it done."
+    },
+    {
+      "q": "Can learners share quiz answers?",
+      "a": "It is much harder. Each attempt draws questions from a bank, the answers never reach the browser, and retakes are limited and spaced apart."
+    },
+    {
+      "q": "Are the certificates recognised outside my business?",
+      "a": "A certificate here is your business's own. It is numbered, runs out when you set, and can be checked by its code."
+    },
+    {
+      "q": "Can a customer buy a course on my online shop?",
+      "a": "Yes. Courses can be sold on your online shop, and a place bought there joins the learner to the course.",
+      "prelaunch": "industry-courses"
+    },
+    {
+      "q": "Can a school keep fees by term and parents' details?",
+      "a": "Yes. The Courses pack keeps fees by term, sends fee statements and holds a parent or guardian record for each learner.",
+      "prelaunch": "industry-courses"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-classes",
+    "industry-memberships",
+    "industry-distribution"
+  ],
+  "cta": {
+    "title": "Build your first course.",
+    "body": "Start free, switch on the Courses pack and put your first lessons together. Your staff are already there from HR."
+  }
+}

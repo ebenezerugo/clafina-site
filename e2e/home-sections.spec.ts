@@ -26,7 +26,7 @@ test('the one-record steps are all visible with reduced motion', async ({ browse
 
 test('module links open pages that exist, and the rest are plain text', async ({ page, request }) => {
   await page.goto('/en/');
-  await expect(page.locator('#modules li')).toHaveCount(21);
+  await expect(page.locator('#modules li')).toHaveCount(22);
   for (const href of await page.locator('#modules a').evaluateAll((as) => as.map((a) => a.getAttribute('href')!))) {
     expect((await request.get(href)).status(), href).toBe(200);
   }

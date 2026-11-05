@@ -1,0 +1,261 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "MANUFACTURING.md",
+    "ROADMAP.md",
+    "docs/industry-facts.md#industry-manufacturing"
+  ],
+  "meta": {
+    "title": "Manufacturing: from the order to the line · Clafina",
+    "description": "Plan against real capacity, report from the floor even offline, hold what quality hasn't passed, and cost every work order from what happened. Built into Clafina."
+  },
+  "illustrative": "Illustrative example",
+  "core": true,
+  "hero": {
+    "eyebrow": "Manufacturing",
+    "title": "From the order to the line to the ledger.",
+    "lede": "Plan against the capacity you really have, report from the floor, hold what quality hasn't passed, and cost each order from what happened.",
+    "screen": "manufacturing-dashboard"
+  },
+  "business": {
+    "name": "Riverbend Foods",
+    "place": "Ikeja, Lagos",
+    "label": true,
+    "about": "A food and drinks maker that fills groundnut oil, packs pepper mix and bottles table water at its plant in Ikeja."
+  },
+  "dayTitle": "A day at Riverbend Foods",
+  "moments": [
+    {
+      "time": "07:40",
+      "title": "The filler on line one breaks down",
+      "problem": "The filler on the groundnut oil line stops with a long run still to fill.",
+      "handles": "Chidi reports the stop from the floor with a reason code, and the machine shows as broken down. The breakdown automation pauses the operations running on it, names the other machines in its work centre, schedules again every order waiting for it and tells the plant manager. Moving work to another filler stays a person's decision.",
+      "surface": "phone"
+    },
+    {
+      "time": "08:00",
+      "title": "Which orders are held up, and why?",
+      "problem": "Tolu, the supervisor, needs to know what is waiting on the filler and what else is out of use.",
+      "handles": "The work order explains the stopped operation: the machine and since when, the reason, who is on it, the operations waiting behind it and the machine's open maintenance job. Machine status lists every machine out of use and every service overdue.",
+      "surface": "web",
+      "screen": "manufacturing-machines"
+    },
+    {
+      "time": "09:30",
+      "title": "Can we make it by the end of the month?",
+      "problem": "Sales asks whether a new pepper mix order can be ready by the date the customer wants.",
+      "handles": "\"Can we deliver by…?\" plans the order as a dry run and answers yes or no, with the projected finish, the days to spare and what it rests on: materials, suppliers, capacity, maintenance, people and the routing.",
+      "surface": "web",
+      "screen": "manufacturing-deliver-by"
+    },
+    {
+      "time": "10:00",
+      "title": "Tomato paste is short of tins",
+      "problem": "An order for tomato paste can't start because the tins aren't there.",
+      "handles": "Planning holds the materials for each order where stock allows. A shortage raises a draft purchase requisition and a risk on the order's project, and procurement is told.",
+      "surface": "web"
+    },
+    {
+      "time": "11:00",
+      "title": "Reporting from the floor",
+      "problem": "Yusuf has been filling pepper mix all morning, and the office wants to know how far he has got.",
+      "handles": "He points any phone camera at the work order's label and it opens. He starts, pauses, reports good and spoilt units and completes. If the network drops, his reports are kept and synced, and never applied twice. Stock moves with the work.",
+      "surface": "phone",
+      "screen": "manufacturing-operator-phone"
+    },
+    {
+      "time": "13:00",
+      "title": "Caps are leaking",
+      "problem": "An inspector finds bottles of groundnut oil leaking at the cap.",
+      "handles": "The failed in-process inspection holds the next operation and opens a non-conformance report. It is decided as accept, rework, scrap or return to supplier, and each corrective action is checked by someone other than the person who did it.",
+      "surface": "web",
+      "screen": "manufacturing-quality"
+    },
+    {
+      "time": "15:00",
+      "title": "The run is done, but not yet for sale",
+      "problem": "A finished batch of table water must not be sold before quality has looked at it.",
+      "handles": "With the setting on, finished output waits in Awaiting release, which can't be sold, until someone with the right permission releases or rejects it.",
+      "surface": "web"
+    },
+    {
+      "time": "17:00",
+      "title": "How did the lines do, and what did it cost?",
+      "problem": "Mrs Bankole, the owner, wants to know how the lines ran and what each order really cost.",
+      "handles": "The production dashboard shows OEE and its three parts, throughput, scrap rate and downtime by reason. Each work order is costed from what actually happened, work in progress sits in the ledger, and variances show when an order completes.",
+      "surface": "web"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Bill of materials",
+      "meaning": "What goes into a product, with versions, co-products, by-products and scrap."
+    },
+    {
+      "word": "Routing",
+      "meaning": "The operations a product goes through, in order, and where."
+    },
+    {
+      "word": "Work centre",
+      "meaning": "A group of machines or people that can do the same work."
+    },
+    {
+      "word": "Production order",
+      "meaning": "What is to be made, for whom and by when."
+    },
+    {
+      "word": "Work order",
+      "meaning": "The floor's job for one product or sub-assembly, made by planning."
+    },
+    {
+      "word": "Operator's screen",
+      "meaning": "Where the floor starts, pauses and reports work, on any phone or screen."
+    },
+    {
+      "word": "Reason code",
+      "meaning": "Why a machine stopped, picked when the stop is reported."
+    },
+    {
+      "word": "OEE",
+      "meaning": "How well a line is used: availability times performance times the good-unit rate."
+    },
+    {
+      "word": "Non-conformance report",
+      "meaning": "A record of what failed a check, how it was decided and what will stop it again."
+    },
+    {
+      "word": "Awaiting release",
+      "meaning": "Finished goods held from sale until quality decides."
+    },
+    {
+      "word": "Work in progress",
+      "meaning": "The value of what is on the floor, kept in the ledger."
+    }
+  ],
+  "switchesTitle": "Built in, nothing to switch on",
+  "switchesOn": [
+    {
+      "text": "Bills of materials with versions, co-products, by-products, phantoms and scrap"
+    },
+    {
+      "text": "Routings and work centres, with revisions released through approval and engineering change"
+    },
+    {
+      "text": "Plants, lines, calendars, capacity, machines, tools with calibration, and people's skills from HR"
+    },
+    {
+      "text": "Production orders from a sales order, a plan, a project deliverable or by hand, each making its own work orders"
+    },
+    {
+      "text": "A scheduler that plans around maintenance, breakdowns, rosters and leave, with scenarios and the critical path"
+    },
+    {
+      "text": "The operator's screen, working offline, with labels that open the work order from any phone camera"
+    },
+    {
+      "text": "Inspections, project gates, non-conformance reports, corrective actions and traceability both ways"
+    },
+    {
+      "text": "The cost of each work order from what happened, work in progress in the ledger, and variances"
+    },
+    {
+      "text": "Automations for shortage, delay and breakdown, each recorded with the steps it took"
+    },
+    {
+      "text": "Dashboards for production, quality, maintenance, materials and projects"
+    },
+    {
+      "text": "Sampling tables and control charts for inspections",
+      "prelaunch": "industry-manufacturing"
+    },
+    {
+      "text": "Costing in more than your base currency",
+      "prelaunch": "industry-manufacturing"
+    },
+    {
+      "text": "Machine states read from the machines themselves and joined to the floor",
+      "prelaunch": "industry-manufacturing"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-stock",
+      "text": "Every draw and receipt is a stock movement, and held stock is its own kind, not for sale."
+    },
+    {
+      "route": "product-purchasing",
+      "text": "Shortages raise requisitions, work sent out goes on a purchase order, and bad material goes back to the supplier."
+    },
+    {
+      "route": "product-finance",
+      "text": "Work in progress and variances are in the ledger, by project."
+    },
+    {
+      "route": "product-hr",
+      "text": "People, rosters, leave and skills come from HR."
+    },
+    {
+      "route": "product-assets",
+      "text": "Machines' maintenance jobs live in asset management."
+    },
+    {
+      "route": "product-projects",
+      "text": "Manufacturing projects, with phases, milestones and deliverables, share one project table with the service trades."
+    },
+    {
+      "route": "product-business-health",
+      "text": "Downtime by reason, defects by type and supplier delivery, beside the rest of the business."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a maker uses",
+  "modules": [
+    "product-manufacturing",
+    "product-stock",
+    "product-purchasing",
+    "product-finance",
+    "product-hr",
+    "product-assets",
+    "product-projects",
+    "product-business-health"
+  ],
+  "faqTitle": "Questions makers ask",
+  "faq": [
+    {
+      "q": "Is manufacturing an add-on?",
+      "a": "No. It is built into Clafina. It works with stock, purchasing, finance, HR and assets, which stay the record of each."
+    },
+    {
+      "q": "What happens when a machine breaks down?",
+      "a": "The operator reports the stop with a reason. Clafina pauses the operations on that machine, names the others in its work centre, schedules again every order waiting for it and tells the plant manager. A person decides where the work moves."
+    },
+    {
+      "q": "Can operators work without a network?",
+      "a": "Yes. The operator's screen keeps working, and what was reported syncs when the line is back, never twice."
+    },
+    {
+      "q": "Can finished goods be held until quality signs them off?",
+      "a": "Yes. With the setting on, output waits in Awaiting release and can't be sold until someone with the right permission releases or rejects it."
+    },
+    {
+      "q": "How is a work order costed?",
+      "a": "From what happened: materials, labour, machine time, overhead and work sent out. Work in progress is in the ledger, and variances show at completion."
+    },
+    {
+      "q": "Can inspections use sampling tables and control charts?",
+      "a": "Yes. Inspection plans can use sampling tables, and results show on control charts.",
+      "prelaunch": "industry-manufacturing"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-configurator",
+    "industry-distribution",
+    "industry-farm"
+  ],
+  "cta": {
+    "title": "Run the floor from the same books.",
+    "body": "Start with one product, its bill of materials and its routing. Add lines, machines and quality plans as you grow."
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "PROPERTY.md",
+    "INDUSTRY_PACKS.md",
+    "features.md",
+    "docs/industry-facts.md#industry-property"
+  ],
+  "meta": {
+    "title": "Property: rent, leases and landlords' statements · Clafina",
+    "description": "A rent roll that shows who is late, renewals before a lease ends, inspections that settle the deposit, and landlords' statements. The Property pack."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Property",
+    "title": "Every unit, every lease, every naira of rent.",
+    "lede": "A rent roll that shows who has paid and who is late, leases that renew on time, and a statement for every landlord.",
+    "screen": "property-rent-roll"
+  },
+  "business": {
+    "name": "Ivory Gate Property Managers",
+    "place": "Lagos and Abuja",
+    "label": true,
+    "about": "A property manager that lets flats and shops for landlords in three blocks, and runs the owners' association at Ivory Court in Lekki."
+  },
+  "dayTitle": "A day at Ivory Gate Property Managers",
+  "moments": [
+    {
+      "time": "05:17",
+      "title": "Before anyone is in",
+      "problem": "Rent invoices have to go out ahead of each due date, and a lease that has ended should not still show the flat as let.",
+      "handles": "A daily run invoices the rent that falls due within the number of days you set. It also ends any lease past its end date with no renewal and marks the unit vacant.",
+      "surface": "web"
+    },
+    {
+      "time": "08:30",
+      "title": "Who has paid this month?",
+      "problem": "Funmi, the accounts officer, needs to know who has paid and who is late before the calls start.",
+      "handles": "The rent roll shows each tenant's due, paid and owing amounts for the month. Late rent is grouped by how many days late, so the oldest debts are plain to see. Funmi records a payment against its due.",
+      "surface": "web"
+    },
+    {
+      "time": "09:15",
+      "title": "A lease ends in eight weeks",
+      "problem": "Mr Akande's two-bed lease at Ivory Court ends in December, and nobody wants the flat to fall empty by accident.",
+      "handles": "The renewal moves in clear steps: a reminder, an offer with a rent rise and a day to answer by, then a new lease that follows on, or a decline. The new lease carries the caution deposit over and charges no second agency fee.",
+      "surface": "web",
+      "screen": "property-leases"
+    },
+    {
+      "time": "10:00",
+      "title": "No water since the morning",
+      "problem": "A tenant calls: the taps in 3C are dry.",
+      "handles": "Staff log a tenant request on the unit or the common area, with a priority. It moves from new to assigned, in progress and done, and records the contractor, the cost and who pays: the tenant, the landlord or the owners' budget.",
+      "surface": "web",
+      "screen": "property-requests"
+    },
+    {
+      "time": "11:30",
+      "title": "A pump quote above the limit",
+      "problem": "The plumber says the water pump needs replacing, and the quote is far above what the manager may spend alone.",
+      "handles": "A repair over the owners' spending limit waits for their decision before work starts. You set the limit for each owner, or a default for everyone.",
+      "surface": "web"
+    },
+    {
+      "time": "14:40",
+      "title": "Moving out, fairly",
+      "problem": "Miss Eze is leaving 2A, and the caution deposit has to be settled in a way both sides can see.",
+      "handles": "Hauwa inspects room by room against the last inspection of the flat, and anything worse is flagged. Each deduction has a reason and a photo. Miss Eze is sent the report and may answer within the days you set. Then the deposit is settled and Clafina works out what goes back to her, never less than nothing.",
+      "surface": "web",
+      "screen": "property-inspection"
+    },
+    {
+      "time": "16:00",
+      "title": "A landlord asks for her statement",
+      "problem": "Mrs Adeyemi owns three units and wants to know what she is owed for October.",
+      "handles": "Her statement takes the rent received for her units in the month, less the management fee and the repairs charged to her, to give the payout. Once it is issued, the payout is billed to her supplier account. A statement can be looked at for any month and issued once.",
+      "surface": "web"
+    },
+    {
+      "time": "17:00",
+      "title": "The estate's running costs",
+      "problem": "The owners at Ivory Court need to know their share of security, power and cleaning for the year.",
+      "handles": "The levy budget is set by lines, and each owner's share is worked out equally, by size or by share. A levy can be raised only once the owners approve the budget, and spending can never pass a line or what the levy has collected.",
+      "surface": "web",
+      "screen": "property-levies"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Rent roll",
+      "meaning": "Every tenant's rent for the month: what is due, paid and owing."
+    },
+    {
+      "word": "Caution deposit",
+      "meaning": "Money a tenant pays at the start, settled after the move-out inspection."
+    },
+    {
+      "word": "Agency fee",
+      "meaning": "The fee charged when a lease is signed, with its own invoice. A renewal does not charge it again."
+    },
+    {
+      "word": "Under notice",
+      "meaning": "A unit whose tenant has given notice to leave. The other states are vacant, let and off the market."
+    },
+    {
+      "word": "Renewal",
+      "meaning": "A reminder, then an offer with any rent rise, then a new lease or a decline."
+    },
+    {
+      "word": "Landlord's statement",
+      "meaning": "Rent collected for an owner's units in a month, less your fee and repairs, giving the payout."
+    },
+    {
+      "word": "Tenant request",
+      "meaning": "A fault or question from a tenant, on a unit or a common area, with a contractor and who pays."
+    },
+    {
+      "word": "Owners' levies",
+      "meaning": "Each owner's share of an estate's approved running costs."
+    },
+    {
+      "word": "Common area",
+      "meaning": "The stairs, lobby, pump room and grounds that every owner shares."
+    }
+  ],
+  "switchesTitle": "What the Property pack switches on",
+  "switchesOn": [
+    {
+      "text": "A Property menu: properties and units, leases, rent roll, inspections, tenant requests and owners' levies"
+    },
+    {
+      "text": "Units with their kind, size, floor, owner and asking rent, each vacant, let, under notice or off the market"
+    },
+    {
+      "text": "Leases with rent by the month, quarter or year, a caution deposit, an agency fee and notice, and only one lease in force on a unit at a time"
+    },
+    {
+      "text": "Rent invoiced ahead of each due date by a daily run, with a short last period charged by its days"
+    },
+    {
+      "text": "Renewals with a rent rise, carried into a new lease that keeps the deposit"
+    },
+    {
+      "text": "Move-in, routine and move-out inspections, room by room, with photos and deductions"
+    },
+    {
+      "text": "Landlords' statements, with the payout billed to the owner"
+    },
+    {
+      "text": "Owners' association budgets, levies and spending by line"
+    },
+    {
+      "text": "The pack on for some places and off for others, in your own words"
+    },
+    {
+      "text": "Meter readings and service charges",
+      "prelaunch": "industry-property"
+    },
+    {
+      "text": "Portals for tenants and landlords",
+      "prelaunch": "industry-property"
+    },
+    {
+      "text": "A vacant unit listed to let",
+      "prelaunch": "industry-property"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-crm",
+      "text": "Tenants and owners are customers, with everything else you know about them on the same page."
+    },
+    {
+      "route": "product-sales",
+      "text": "Rent, levies, agency fees and repairs charged to tenants go on the standard customer invoice."
+    },
+    {
+      "route": "product-purchasing",
+      "text": "An owner can have a supplier account, so a landlord's payout is a supplier bill."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a property manager uses",
+  "modules": [
+    "product-crm",
+    "product-sales",
+    "product-purchasing",
+    "product-finance"
+  ],
+  "faqTitle": "Questions property managers ask",
+  "faq": [
+    {
+      "q": "Does rent invoice itself?",
+      "a": "Yes. A daily run invoices the rent that falls due within the number of days you set, and ends leases that have run out with no renewal."
+    },
+    {
+      "q": "Can I see who is late, and by how much?",
+      "a": "Yes. The rent roll groups late rent by how many days late it is, so you can start with the oldest."
+    },
+    {
+      "q": "How is the deposit settled when a tenant leaves?",
+      "a": "The move-out inspection compares each room with the last inspection. Deductions need a reason and a photo, the tenant can answer, and then the deposit is settled with the amount to return worked out."
+    },
+    {
+      "q": "What if a repair costs more than I may spend alone?",
+      "a": "It waits for the owner's decision before work starts. You set the limit for each owner, or a default."
+    },
+    {
+      "q": "Can I run an owners' association as well as lettings?",
+      "a": "Yes. Set the budget by lines, share it equally, by size or by share, and raise the levy once the owners approve it."
+    },
+    {
+      "q": "Can tenants log in to see their rent and requests?",
+      "a": "A tenant portal and a landlord portal are on the way.",
+      "prelaunch": "industry-property"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-construction",
+    "industry-field-service",
+    "industry-rentals"
+  ],
+  "cta": {
+    "title": "Bring your rent roll into Clafina.",
+    "body": "Start free, switch on the Property pack and add your first block. Add units, leases and owners as you go."
+  }
+}

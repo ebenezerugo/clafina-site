@@ -82,7 +82,15 @@ export function pageAvailable(id: string, mode: BuildMode = buildMode()): boolea
   const route = routeById(id);
   if (!route) throw new Error(`Unknown page: ${id}`);
   if (route.previewOnly && mode === 'production') return false;
+  if (route.prelaunch && !(isOn('prelaunch.features', mode) && isOn(`prelaunch.${id}` as SwitchKey, mode))) return false;
   return route.built && isOn(`pages.${id}` as SwitchKey, mode);
+}
+
+/** Whether a page may be named at all. An unbuilt page is named as plain text; a switched-off pre-launch page is not named. */
+export function mentionable(id: string, mode: BuildMode = buildMode()): boolean {
+  const route = routeById(id);
+  if (!route) throw new Error(`Unknown page: ${id}`);
+  return !route.prelaunch || pageAvailable(id, mode);
 }
 
 export function localeEnabled(code: Locale): boolean {

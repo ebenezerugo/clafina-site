@@ -1,0 +1,42 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a foundation's donors, grouped as major, monthly, new, regular or lapsed, with one company donor's card and a suggested ask for the next campaign.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "IC", "name": "Ireti Care Foundation", "place": "Lagos" },
+  "nav": [
+    { "label": "Fundraising", "items": [{ "label": "Overview" }, { "label": "Donors", "active": true }, { "label": "Gifts" }, { "label": "Campaigns" }, { "label": "Grants" }, { "label": "Tax receipts", "badge": "14" }] },
+    { "label": "Groups", "items": [{ "label": "All", "badge": "1,240" }, { "label": "Major", "badge": "38" }, { "label": "Monthly", "badge": "212" }, { "label": "New this year", "badge": "96" }, { "label": "Lapsed", "badge": "143" }] }
+  ],
+  "search": "Find a donor",
+  "title": "Donors",
+  "subtitle": "Everyone who has given or promised to, with what they have given and how they like to be asked.",
+  "actions": [{ "label": "Import" }, { "label": "New donor", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Showing 8 of 1,240, most given first", "columns": [{ "label": "Donor" }, { "label": "Given", "numeric": true }, { "label": "Gifts", "numeric": true }, { "label": "Last gift" }, { "label": "Group" }], "rows": [
+        [{ "avatar": "CF", "text": "Crestline Foods Ltd · company, Apapa" }, { "money": 9500000 }, "7", "2 Oct", { "pill": "info", "text": "Major" }],
+        [{ "avatar": "RO", "text": "Chief Remi Oyelaran · Ikoyi" }, { "money": 6200000 }, "12", "25 Sep", { "pill": "info", "text": "Major" }],
+        [{ "avatar": "UN", "text": "Mrs Uche Nnadi · Lekki" }, { "money": 1860000 }, "36", "1 Oct", { "pill": "good", "text": "Monthly" }],
+        [{ "avatar": "HL", "text": "Harbourline Logistics · company, Ikeja" }, { "money": 1500000 }, "3", "4 Sep", { "pill": "neutral", "text": "Regular" }],
+        [{ "avatar": "SO", "text": "Dr Sade Ogun · Abuja" }, { "money": 1200000 }, "24", "1 Oct", { "pill": "good", "text": "Monthly" }],
+        [{ "avatar": "HB", "text": "Hauwa Bello · Kano" }, { "money": 840000 }, "6", "16 Oct", { "pill": "neutral", "text": "Regular" }],
+        [{ "avatar": "BI", "text": "Mr Bayo Ilori · Ibadan" }, { "money": 780000 }, "2", "12 Feb 2025", { "pill": "warn", "text": "Lapsed" }],
+        [{ "avatar": "KA", "text": "Mr Kayode Ajayi · Ibadan" }, { "money": 500000 }, "1", "Today", { "pill": "good", "text": "New" }]
+      ] },
+      { "type": "kv", "title": "Crestline Foods Ltd · donor since 2023", "items": [
+        { "label": "Given in all", "value": { "money": 9500000 } },
+        { "label": "This year", "value": "₦2,400,000 in 2 gifts" },
+        { "label": "Promised", "value": "No open pledge" },
+        { "label": "Contact", "value": "Mrs Tola Adebisi, head of community affairs" },
+        { "label": "Likes to be asked", "value": "In person, once a year" },
+        { "label": "Gives to", "value": "Education" },
+        { "label": "Receipts", "value": "One for each gift" }
+      ] }
+    ] },
+    { "type": "attention", "title": "A good time to ask again", "items": [
+      { "tone": "info", "icon": "chart", "title": "Suggested ask: ₦2,500,000 for the Year-end giving drive", "body": "The most Crestline has given in a year is ₦2,400,000. Rounded up, that is ₦2,500,000, asked at the next campaign for education, which starts on 1 November.", "action": "Write a note" }
+    ] }
+  ]
+}

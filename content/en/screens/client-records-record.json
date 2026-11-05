@@ -1,0 +1,48 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a physiotherapist's view of her client's record. The opening is written to the access log, signed notes are sealed, and the record locks after five idle minutes.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "AP", "name": "Ayomide Physiotherapy Clinic", "place": "Bodija" },
+  "nav": [
+    { "label": "Client records", "items": [{ "label": "Clients", "active": true }, { "label": "Access log" }, { "label": "Data requests" }, { "label": "Consent and settings" }] }
+  ],
+  "title": "Mrs Folasade Akinwale · CL-02418",
+  "subtitle": "Physiotherapy since 14 Mar 2025 · treating practitioner Damilola Ogunsanya · allergy: penicillin",
+  "actions": [{ "label": "Lock now" }, { "label": "Add a measurement" }, { "label": "Add a note", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "attention", "title": "This view is logged", "items": [
+      { "tone": "info", "icon": "check", "title": "You opened this record at 10:02 as the treating practitioner", "body": "The opening is in the access log. The record locks again after 5 minutes without use." }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Latest notes · signed notes are sealed, a change is a new note", "columns": [{ "label": "Session" }, { "label": "Note" }, { "label": "State" }], "rows": [
+        ["19 Oct 2026 · session 15", "Pain on the left shoulder down from 3/10 to 2/10. Range of movement 160°. Continue band exercises.", { "pill": "info", "text": "Draft" }],
+        ["9 Oct 2026 · session 14", "Pain down from 6/10 to 3/10. Range of movement improved to 150°. Add band exercises. Review in 2 weeks.", { "pill": "good", "text": "Signed" }],
+        ["25 Sep 2026 · session 13", "Pain after carrying shopping. Mobilisation. Avoid overhead lifting for one week.", { "pill": "good", "text": "Signed" }]
+      ] },
+      { "type": "kv", "title": "Consent", "items": [
+        { "label": "Treatment", "value": { "pill": "good", "text": "Version 2 · valid to Mar 2027" } },
+        { "label": "Share with an insurer", "value": { "pill": "neutral", "text": "Not given" } },
+        { "label": "Photos for the record", "value": { "pill": "neutral", "text": "Declined" } }
+      ] }
+    ] },
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "Left shoulder, range of movement", "columns": [{ "label": "Date" }, { "label": "Degrees", "numeric": true }], "rows": [
+        ["25 Sep", "130"],
+        ["9 Oct", "150"],
+        ["19 Oct", "160"]
+      ] },
+      { "type": "table", "title": "Prescriptions and advice", "columns": [{ "label": "What" }, { "label": "State" }], "rows": [
+        ["Resistance band programme, exercises A to D daily · 9 Oct", { "pill": "good", "text": "Current" }],
+        ["Ibuprofen 400 mg after food, 3 times a day for 5 days · 25 Sep", { "pill": "neutral", "text": "Finished" }]
+      ] }
+    ] },
+    { "type": "kv", "title": "How this record is kept", "items": [
+      { "label": "Clinical fields", "value": "Encrypted again with this organisation's own key" },
+      { "label": "Who may open it", "value": "The treating practitioner; other clinical staff with a reason" },
+      { "label": "Opened", "value": "27 times in 12 months · see who looked" },
+      { "label": "Kept", "value": "7 years after the last visit, by the retention rule" }
+    ] }
+  ]
+}

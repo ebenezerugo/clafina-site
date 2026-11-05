@@ -1,6 +1,13 @@
 {
   "kind": "industry-story",
-  "sources": ["POINT_OF_SALE.md", "Point-of-Sale-Product-Document.md", "Online-Shop-Product-Document.md", "STOREFRONT_STUDIO.md", "ROADMAP.md", "docs/industry-facts.md#industry-retail"],
+  "sources": [
+    "POINT_OF_SALE.md",
+    "Point-of-Sale-Product-Document.md",
+    "Online-Shop-Product-Document.md",
+    "STOREFRONT_STUDIO.md",
+    "ROADMAP.md",
+    "docs/industry-facts.md#industry-retail"
+  ],
   "meta": {
     "title": "Retail: the till and the online shop · Clafina",
     "description": "A till that keeps selling when the internet drops, an online shop on the same stock, and a Z report that closes the day. Built into Clafina."
@@ -41,8 +48,7 @@
       "title": "A regular pays two ways",
       "problem": "Mrs Okafor wants to use her points and pay the rest in cash.",
       "handles": "Chiamaka finds her by phone number, sees her points, store credit and wallet, and splits the payment. Points are earned on the part paid in cash.",
-      "surface": "till",
-      "screen": "pos-payment"
+      "surface": "till"
     },
     {
       "time": "13:00",
@@ -72,8 +78,7 @@
       "title": "A new banner for the weekend",
       "problem": "Adaeze wants the weekend offer on the shop's front page.",
       "handles": "She changes the banner in Storefront Studio as a draft, previews it and sends it for approval. Once it's published, a bad change can be rolled back.",
-      "surface": "web",
-      "screen": "shop-designer"
+      "surface": "web"
     },
     {
       "time": "19:00",
@@ -86,51 +91,149 @@
   ],
   "wordsTitle": "Your words, in Clafina",
   "words": [
-    { "word": "Till", "meaning": "The point of sale: on a desktop, an Android device or in the browser." },
-    { "word": "Shift", "meaning": "A cashier's time on a till, from the opening float to the close." },
-    { "word": "Opening float", "meaning": "The cash in the drawer at the start, counted by note." },
-    { "word": "X and Z reports", "meaning": "The X report is a look during the shift. The Z report closes it." },
-    { "word": "Blind close", "meaning": "The cashier counts without seeing what the till expects." },
-    { "word": "Safe drop", "meaning": "Cash taken out of the drawer into the safe during the shift." },
-    { "word": "Walk-in customer", "meaning": "Who a sale goes to when no customer is named." },
-    { "word": "Offline allowance", "meaning": "How much of each item a till may sell while the line is down." },
-    { "word": "Storefront", "meaning": "One online shop. An organisation can have several." }
+    {
+      "word": "Till",
+      "meaning": "The point of sale: on a desktop, an Android device or in the browser."
+    },
+    {
+      "word": "Shift",
+      "meaning": "A cashier's time on a till, from the opening float to the close."
+    },
+    {
+      "word": "Opening float",
+      "meaning": "The cash in the drawer at the start, counted by note."
+    },
+    {
+      "word": "X and Z reports",
+      "meaning": "The X report is a look during the shift. The Z report closes it."
+    },
+    {
+      "word": "Blind close",
+      "meaning": "The cashier counts without seeing what the till expects."
+    },
+    {
+      "word": "Safe drop",
+      "meaning": "Cash taken out of the drawer into the safe during the shift."
+    },
+    {
+      "word": "Walk-in customer",
+      "meaning": "Who a sale goes to when no customer is named."
+    },
+    {
+      "word": "Offline allowance",
+      "meaning": "How much of each item a till may sell while the line is down."
+    },
+    {
+      "word": "Storefront",
+      "meaning": "One online shop. An organisation can have several."
+    }
   ],
   "switchesTitle": "Built in, nothing to switch on",
   "switchesOn": [
-    { "text": "A till for desktop computers and Android, and one in the browser that opens and sells with no network" },
-    { "text": "Cashier PINs, and a supervisor's approval above the discount, price, refund and void limits you set" },
-    { "text": "Shifts with a float by note, cash in and out, safe drops, X and Z reports and blind close" },
-    { "text": "Split payment across cash, card, bank transfer, points, gift card, store credit, wallet and on account" },
-    { "text": "Gift cards sold and topped up at the till" },
-    { "text": "Receipts on thermal printers, and the cash drawer" },
-    { "text": "One online shop or several, each with its own look, pages and collections" },
-    { "text": "Prices, credit terms and catalogues for business buyers on the shop" },
-    { "text": "The till on iPhone and iPad", "prelaunch": "industry-retail" },
-    { "text": "Selling in cartons, packs or single items at the till", "prelaunch": "industry-retail" },
-    { "text": "Serial and batch numbers taken at the till", "prelaunch": "industry-retail" }
+    {
+      "text": "A till for desktop computers and Android, and one in the browser that opens and sells with no network"
+    },
+    {
+      "text": "Cashier PINs, and a supervisor's approval above the discount, price, refund and void limits you set"
+    },
+    {
+      "text": "Shifts with a float by note, cash in and out, safe drops, X and Z reports and blind close"
+    },
+    {
+      "text": "Split payment across cash, card, bank transfer, points, gift card, store credit, wallet and on account"
+    },
+    {
+      "text": "Gift cards sold and topped up at the till"
+    },
+    {
+      "text": "Receipts on thermal printers, and the cash drawer"
+    },
+    {
+      "text": "One online shop or several, each with its own look, pages and collections"
+    },
+    {
+      "text": "Prices, credit terms and catalogues for business buyers on the shop"
+    },
+    {
+      "text": "The till on iPhone and iPad",
+      "prelaunch": "industry-retail"
+    },
+    {
+      "text": "Selling in cartons, packs or single items at the till",
+      "prelaunch": "industry-retail"
+    },
+    {
+      "text": "Serial and batch numbers taken at the till",
+      "prelaunch": "industry-retail"
+    }
   ],
   "sharesTitle": "What it shares with the rest of Clafina",
   "shares": [
-    { "route": "product-stock", "text": "Every sale moves stock once, at the branch that sold it. The shop sells from the same count." },
-    { "route": "product-sales", "text": "Each till sale is posted as an invoice and a receipt; returns become credit notes." },
-    { "route": "product-finance", "text": "Cash, card and transfer land in their own accounts, and gift cards are kept as money owed." },
-    { "route": "product-crm", "text": "Customers found or made at the till, with points, store credit and credit limits." },
-    { "route": "product-tax", "text": "Tax rules for each country on every receipt." },
-    { "route": "product-business-health", "text": "Sales by till, cashier and hour, payment mix and cash differences." }
+    {
+      "route": "product-stock",
+      "text": "Every sale moves stock once, at the branch that sold it. The shop sells from the same count."
+    },
+    {
+      "route": "product-sales",
+      "text": "Each till sale is posted as an invoice and a receipt; returns become credit notes."
+    },
+    {
+      "route": "product-finance",
+      "text": "Cash, card and transfer land in their own accounts, and gift cards are kept as money owed."
+    },
+    {
+      "route": "product-crm",
+      "text": "Customers found or made at the till, with points, store credit and credit limits."
+    },
+    {
+      "route": "product-tax",
+      "text": "Tax rules for each country on every receipt."
+    },
+    {
+      "route": "product-business-health",
+      "text": "Sales by till, cashier and hour, payment mix and cash differences."
+    }
   ],
   "modulesTitle": "The parts of Clafina a shop uses",
-  "modules": ["product-pos", "product-online-shop", "product-stock", "product-sales", "product-crm", "product-finance", "product-mobile"],
+  "modules": [
+    "product-pos",
+    "product-online-shop",
+    "product-stock",
+    "product-sales",
+    "product-crm",
+    "product-finance",
+    "product-mobile"
+  ],
   "faqTitle": "Questions shops ask",
   "faq": [
-    { "q": "What happens when the internet goes down?", "a": "The till keeps selling. Each sale is written on the till first and sent when the line is back. You decide how much of each item a till may sell offline, and for how long." },
-    { "q": "Can the shop and the till sell the same stock?", "a": "Yes. They sell from the same count at the same prices, and an online order arrives as a sales order tagged with the shop." },
-    { "q": "What if two tills sell the last one while offline?", "a": "Both sales stand. The manager sees it in plain words, with a button to move stock from a branch that has it." },
-    { "q": "Do I need an industry pack for a shop?", "a": "No. The till and the online shop are built into Clafina. Packs such as Restaurant or Events add to the same till." },
-    { "q": "Can I sell in cartons and single items?", "a": "Yes. The till sells in more than one unit, so a carton, a pack and a single item each have their own price.", "prelaunch": "industry-retail" }
+    {
+      "q": "What happens when the internet goes down?",
+      "a": "The till keeps selling. Each sale is written on the till first and sent when the line is back. You decide how much of each item a till may sell offline, and for how long."
+    },
+    {
+      "q": "Can the shop and the till sell the same stock?",
+      "a": "Yes. They sell from the same count at the same prices, and an online order arrives as a sales order tagged with the shop."
+    },
+    {
+      "q": "What if two tills sell the last one while offline?",
+      "a": "Both sales stand. The manager sees it in plain words, with a button to move stock from a branch that has it."
+    },
+    {
+      "q": "Do I need an industry pack for a shop?",
+      "a": "No. The till and the online shop are built into Clafina. Packs such as Restaurant or Events add to the same till."
+    },
+    {
+      "q": "Can I sell in cartons and single items?",
+      "a": "Yes. The till sells in more than one unit, so a carton, a pack and a single item each have their own price.",
+      "prelaunch": "industry-retail"
+    }
   ],
   "relatedTitle": "Trades close to yours",
-  "related": ["industry-distribution", "industry-restaurant", "industry-configurator"],
+  "related": [
+    "industry-distribution",
+    "industry-restaurant",
+    "industry-configurator"
+  ],
   "cta": {
     "title": "Open your till today.",
     "body": "Start free with the till and an online shop. Add branches, tills and storefronts as you grow."

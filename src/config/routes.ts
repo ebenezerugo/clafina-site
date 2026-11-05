@@ -7,9 +7,12 @@ export interface RouteDef {
   built: boolean;
   /** Internal pages built only in preview, never in production, menus, footer or sitemaps. */
   previewOnly?: true;
+  /** A whole page that is built before go-live: shown only while pre-launch features and its own area are on. */
+  prelaunch?: true;
 }
 
 const r = <const I extends string>(id: I, path: string, group: RouteGroup, built = false) => ({ id, path, group, built });
+const pre = <const I extends string>(id: I, path: string, group: RouteGroup) => ({ id, path, group, built: true, prelaunch: true as const });
 const internal = <const I extends string>(id: I, path: string) => ({ id, path, group: 'core' as RouteGroup, built: true, previewOnly: true as const });
 
 /** Every page in the site map (spec section 3). A page appears only when it is built and its switch is on. */
@@ -41,6 +44,7 @@ export const ROUTES = [
   r('product-assets', '/product/assets/', 'product', true),
   r('product-hr', '/product/hr/', 'product', true),
   r('product-communication', '/product/communication/', 'product', true),
+  pre('product-email', '/product/business-email/', 'product'),
   r('product-mobile', '/product/mobile/', 'product', true),
   r('product-assistant', '/product/assistant/', 'product', true),
   r('product-capture', '/product/capture/', 'product', true),
@@ -48,22 +52,22 @@ export const ROUTES = [
 
   r('industries', '/industries/', 'industry', true),
   r('industry-retail', '/industries/retail/', 'industry', true),
-  r('industry-restaurant', '/industries/restaurant/', 'industry'),
-  r('industry-accommodation', '/industries/accommodation/', 'industry'),
-  r('industry-events', '/industries/events/', 'industry'),
-  r('industry-memberships', '/industries/memberships/', 'industry'),
-  r('industry-classes', '/industries/classes/', 'industry'),
-  r('industry-courses', '/industries/courses/', 'industry'),
-  r('industry-client-records', '/industries/clinics-and-salons/', 'industry'),
-  r('industry-property', '/industries/property/', 'industry'),
-  r('industry-construction', '/industries/construction/', 'industry'),
-  r('industry-field-service', '/industries/field-service/', 'industry'),
-  r('industry-rentals', '/industries/rentals/', 'industry'),
-  r('industry-distribution', '/industries/distribution/', 'industry'),
-  r('industry-farm', '/industries/farm/', 'industry'),
-  r('industry-manufacturing', '/industries/manufacturing/', 'industry'),
-  r('industry-fundraising', '/industries/fundraising/', 'industry'),
-  r('industry-configurator', '/industries/product-configurator/', 'industry'),
+  r('industry-restaurant', '/industries/restaurant/', 'industry', true),
+  r('industry-accommodation', '/industries/accommodation/', 'industry', true),
+  r('industry-events', '/industries/events/', 'industry', true),
+  r('industry-memberships', '/industries/memberships/', 'industry', true),
+  r('industry-classes', '/industries/classes/', 'industry', true),
+  r('industry-courses', '/industries/courses/', 'industry', true),
+  r('industry-client-records', '/industries/clinics-and-salons/', 'industry', true),
+  r('industry-property', '/industries/property/', 'industry', true),
+  r('industry-construction', '/industries/construction/', 'industry', true),
+  r('industry-field-service', '/industries/field-service/', 'industry', true),
+  r('industry-rentals', '/industries/rentals/', 'industry', true),
+  r('industry-distribution', '/industries/distribution/', 'industry', true),
+  r('industry-farm', '/industries/farm/', 'industry', true),
+  r('industry-manufacturing', '/industries/manufacturing/', 'industry', true),
+  r('industry-fundraising', '/industries/fundraising/', 'industry', true),
+  r('industry-configurator', '/industries/product-configurator/', 'industry', true),
 
   r('solution-small-business', '/solutions/small-business/', 'solution'),
   r('solution-growing', '/solutions/growing-business/', 'solution'),

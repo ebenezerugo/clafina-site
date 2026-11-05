@@ -1,0 +1,41 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a service firm's dispatch board for one day, with jobs by technician and time, jobs waiting for someone, one late job and one refused overlap.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BW", "name": "Brightwire Power and Cooling", "place": "Lagos · all service areas" },
+  "nav": [
+    { "label": "Field service", "items": [{ "label": "Dispatch", "active": true }, { "label": "Jobs" }] },
+    { "label": "Set up", "items": [{ "label": "Checklists" }, { "label": "Service areas" }] }
+  ],
+  "title": "Dispatch · Monday 19 October 2026",
+  "subtitle": "Today's jobs by technician and time, and the jobs still waiting for someone.",
+  "actions": [{ "label": "New job", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "clock", "label": "Jobs today", "value": "15", "note": "5 assigned, not started yet" },
+      { "icon": "check", "label": "Done or under way", "value": "7", "note": "4 done · 3 en route or on site" },
+      { "icon": "users", "label": "Waiting for someone", "value": "5", "note": "2 today, 3 later this week" },
+      { "icon": "alert", "label": "Late", "value": "1", "change": { "tone": "bad", "text": "Nobody on site 30 minutes in" } }
+    ] },
+    { "type": "attention", "title": "Needs you", "items": [
+      { "tone": "bad", "icon": "clock", "title": "JOB-2026-0415 · Socket fault, Yaba is late", "body": "The window opened at 09:00 and nobody is on site. Chika Uzor was last seen at 09:12 in Sabo, Yaba.", "action": "Open the job" },
+      { "tone": "warn", "icon": "alert", "title": "JOB-2026-0419 can't go to Tunde Ajibola at 14:00", "body": "It would overlap JOB-2026-0409, Cold room fault at Oba Foods, 13:00 to 15:30. Choose another technician or time.", "action": "Choose again" }
+    ] },
+    { "type": "table", "title": "Technicians", "columns": [{ "label": "Technician and van" }, { "label": "07:00 to 10:00" }, { "label": "10:00 to 13:00" }, { "label": "13:00 to 16:00" }, { "label": "Last seen" }], "rows": [
+      [{ "avatar": "KN", "text": "Kene Nwosu · air conditioning · Van 1" }, { "pill": "good", "text": "AC service, Ikoyi · done" }, { "pill": "info", "text": "Split unit install, Surulere · on site" }, "Compressor swap, Surulere", "Surulere, 10:40"],
+      [{ "avatar": "AB", "text": "Ayo Balogun · solar · Van 2" }, { "pill": "good", "text": "Inverter service, Lekki Phase 2 · done" }, { "pill": "info", "text": "JOB-2026-0412 · Mrs Ibe, Lekki Phase 1 · on site" }, "Panel clean, Ajah", "Lekki Phase 1, 11:03"],
+      [{ "avatar": "CU", "text": "Chika Uzor · electrical · Van 3" }, { "pill": "bad", "text": "JOB-2026-0415 · Socket fault, Yaba · late" }, "Meter install, Yaba", "Free", "Sabo, Yaba, 09:12"],
+      [{ "avatar": "TA", "text": "Tunde Ajibola · air conditioning · Van 4" }, { "pill": "good", "text": "Chiller service, Ajah · done" }, { "pill": "info", "text": "Duct clean, Ajah · en route" }, "JOB-2026-0409 · Cold room fault, Oba Foods", "Ajah, 10:15"],
+      [{ "avatar": "MG", "text": "Musa Garba · solar · Van 5" }, { "pill": "good", "text": "Site survey, Ikorodu · done" }, "Install 5 kVA system, Ikorodu", "Install 5 kVA system, Ikorodu", "Ikorodu, 09:50"]
+    ] },
+    { "type": "table", "title": "Waiting for someone · drag onto a technician, or Assign", "columns": [{ "label": "Job" }, { "label": "Customer and site" }, { "label": "Window" }, { "label": "Priority" }], "rows": [
+      ["JOB-2026-0418 · Inverter fault, no power at night", "Chief Olumide Ade · Lekki Phase 1", "Today, by 17:00", { "pill": "bad", "text": "Urgent" }],
+      ["JOB-2026-0419 · Split unit not cooling, 3 rooms", "Harbour View Hall · Victoria Island", "Today, 14:00 to 17:00", { "pill": "warn", "text": "Today" }],
+      ["JOB-2026-0421 · Generator service, 500 hours", "Sunrise Clinic · Surulere", "Tue 20 Oct, morning", { "pill": "neutral", "text": "Booked" }],
+      ["JOB-2026-0422 · Two cameras offline", "Goodwill Cash and Carry · Mushin", "Tue 20 Oct, any time", { "pill": "neutral", "text": "Booked" }],
+      ["JOB-2026-0423 · Survey for a 15 kVA solar system", "Mrs Bimpe Alao · Ajah", "Wed 21 Oct, 10:00", { "pill": "neutral", "text": "Survey" }]
+    ] }
+  ]
+}

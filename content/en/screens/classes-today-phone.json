@@ -1,0 +1,31 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the studio owner's phone after the evening class, with who came, the no-show marked and tomorrow's classes.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "TS", "name": "Tamarind Movement Studio", "place": "Wuse II" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus" },
+    { "label": "Classes", "icon": "users", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Today's classes",
+  "subtitle": "Monday 19 October",
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "Came", "value": "46" },
+      { "icon": "alert", "label": "No-show", "value": "5" }
+    ] },
+    { "type": "attention", "title": "Closed at 19:00", "items": [
+      { "tone": "info", "icon": "check", "title": "Vinyasa yoga · 19 came, 1 no-show", "body": "The no-show kept the credit, as your setting says. No offer was left open." }
+    ] },
+    { "type": "table", "title": "Today", "columns": [{ "label": "Class" }, { "label": "Came" }, { "label": "No-show" }], "rows": [
+      ["06:30 Spin", "17 of 19", "2"],
+      ["12:30 Express HIIT", "10 of 12", "2"],
+      ["18:00 Vinyasa yoga", "19 of 20", "1"]
+    ] }
+  ]
+}

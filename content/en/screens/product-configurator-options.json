@@ -1,0 +1,49 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the options and rules for an executive desk made to order, with what each width costs and adds to the bill of materials.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "OF", "name": "Oyelaran Office Furniture", "place": "Ikeja workshop" },
+  "nav": [
+    { "label": "Configurator", "items": [{ "label": "Configurable products" }, { "label": "Options and rules", "active": true }, { "label": "Configure and quote" }, { "label": "Configurations" }] }
+  ],
+  "title": "Executive desk ED-1600 · options and rules",
+  "subtitle": "What a customer can choose, what each choice costs, what it adds to the bill of materials, and which choices can't go together.",
+  "actions": [{ "label": "Try it" }, { "label": "Save", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Options: 6", "columns": [{ "label": "Option" }, { "label": "Asked as" }, { "label": "Values", "numeric": true }], "rows": [
+        ["Width", "A choice, as buttons · required", "4"],
+        ["Depth", "A choice, as buttons · required", "3"],
+        ["Material", "A choice, as swatches · required", "3"],
+        ["Finish", "A choice, as buttons · required", "2"],
+        ["Drawers", "A number, 0 to 3", "4"],
+        ["Cable port", "Yes or no", "2"]
+      ] },
+      { "type": "kv", "title": "The base product", "items": [
+        { "label": "State", "value": { "pill": "good", "text": "Published" } },
+        { "label": "Base price", "value": { "money": 185000 } },
+        { "label": "Base cost", "value": { "money": 98000 } },
+        { "label": "Lead time before options", "value": "10 working days" },
+        { "label": "Base bill of materials", "value": "BOM-0031 · 12 parts" },
+        { "label": "Needs a quote", "value": "Over ₦500,000" }
+      ] }
+    ] },
+    { "type": "table", "title": "Width: the customer picks one. It sets the size of the top and the edge band.", "columns": [{ "label": "Value" }, { "label": "Changes price by", "numeric": true }, { "label": "Adds to the bill of materials" }], "rows": [
+      ["120 cm", { "money": -12000 }, "Top 120 × depth · edge band 4.2 m"],
+      ["140 cm · default", { "money": 0 }, "Top 140 × depth · edge band 4.6 m"],
+      ["160 cm", { "money": 22000 }, "Top 160 × depth · edge band 5.0 m"],
+      ["180 cm", { "money": 48000 }, "Top 180 × depth · edge band 5.4 m"]
+    ] },
+    { "type": "table", "title": "Rules: 4, applied while you choose", "columns": [{ "label": "Kind" }, { "label": "Rule" }, { "label": "State" }], "rows": [
+      ["Not allowed", "If Material is Mahogany, Finish can't be Gloss.", { "pill": "good", "text": "On" }],
+      ["Adds a part", "If Width is 180 cm, add the centre support.", { "pill": "good", "text": "On" }],
+      ["Needs", "If Drawers is 3, Depth must be 70 cm or more.", { "pill": "good", "text": "On" }],
+      ["Takes longer", "Mahogany adds 3 working days to the lead time.", { "pill": "good", "text": "On" }]
+    ] },
+    { "type": "attention", "title": "Part quantities", "items": [
+      { "tone": "info", "icon": "table", "title": "A quantity can be a number or a calculation of other choices", "body": "For example, the top's area is the width times the depth." }
+    ] }
+  ]
+}

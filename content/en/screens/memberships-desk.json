@@ -1,0 +1,39 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the front desk at a gym at six in the morning. One member is let in, one is stopped because her invoice is overdue.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "HF", "name": "Harmattan Fitness Club", "place": "Lekki · Front desk · Temitope" },
+  "nav": [
+    { "label": "Memberships", "items": [{ "label": "Front desk", "active": true }, { "label": "Members" }, { "label": "Plans" }, { "label": "Billing runs" }] }
+  ],
+  "search": "Scan a card or fob, or type a name or member number",
+  "title": "Front desk",
+  "subtitle": "One rule decides who may come in now: the plan, what is owed, freezes, visits, areas and hours.",
+  "actions": [{ "label": "Sell a day pass" }, { "label": "New member", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "cards", "columns": 1, "items": [
+        { "title": "Yetunde Afolabi is in", "body": "Monthly Unlimited · gym floor · paid to 31 Oct · visit 14 this month. A second scan in the next 10 minutes is not counted again.", "pill": { "tone": "good", "text": "Let in 06:02" } }
+      ] },
+      { "type": "attention", "title": "Stopped", "items": [
+        { "tone": "bad", "icon": "alert", "title": "Amina Bello: October invoice unpaid", "body": "Access paused after 7 days unpaid, on 8 Oct. Paying the invoice opens it again at once.", "action": "Let her in once, with a reason" }
+      ] }
+    ] },
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "In since 05:00", "value": "23" },
+      { "icon": "alert", "label": "Stopped", "value": "2" },
+      { "icon": "users", "label": "Let in once", "value": "1", "note": "Reason logged" },
+      { "icon": "receipt", "label": "Day passes sold", "value": "3" }
+    ] },
+    { "type": "table", "title": "Latest at the desk", "columns": [{ "label": "Time" }, { "label": "Who" }, { "label": "Plan" }, { "label": "Result" }], "rows": [
+      ["06:02", { "avatar": "YA", "text": "Yetunde Afolabi" }, "Monthly Unlimited", { "pill": "good", "text": "In" }],
+      ["05:58", { "avatar": "AB", "text": "Amina Bello" }, "Monthly Unlimited", { "pill": "bad", "text": "Stopped · payment overdue" }],
+      ["05:51", { "avatar": "CO", "text": "Chukwudi Okafor" }, "Annual", { "pill": "good", "text": "In" }],
+      ["05:47", { "avatar": "IO", "text": "Ifeanyi Okonkwo" }, "Monthly Unlimited", { "pill": "warn", "text": "Stopped · frozen to 30 Nov" }],
+      ["05:40", { "avatar": "SA", "text": "Seun Alade" }, "Student · trial", { "pill": "good", "text": "In" }],
+      ["05:32", { "avatar": "MO", "text": "Musa Olowu" }, "Corporate · Coral Bay Logistics", { "pill": "good", "text": "In" }]
+    ] }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a move-out inspection of a two-bed flat, room by room against the move-in inspection, with three deductions from the caution deposit.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "IG", "name": "Ivory Gate Property Managers", "place": "Lagos and Abuja" },
+  "nav": [
+    { "label": "Property", "items": [{ "label": "Properties and units" }, { "label": "Leases" }, { "label": "Rent roll" }, { "label": "Inspections", "active": true }, { "label": "Tenant requests", "badge": "10" }, { "label": "Owners' levies" }] },
+    { "label": "Booked", "items": [{ "label": "Routine · 4B · Wed 21 Oct" }, { "label": "Routine · W-3 · Thu 22 Oct" }, { "label": "Move-in · 3B · Mon 2 Nov" }] }
+  ],
+  "title": "Move-out inspection · Ivory Court 2A",
+  "subtitle": "Miss Chioma Eze · notice ended 19 Oct · inspector Hauwa Musa · started 14:40 today",
+  "actions": [{ "label": "Add a photo", "icon": "plus" }, { "label": "Finish and send to the tenant", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "table", "title": "Room by room, against the move-in inspection of 15 Oct 2025", "columns": [{ "label": "Room" }, { "label": "At move-in" }, { "label": "Now" }, { "label": "What is different" }], "rows": [
+      ["Living room", { "pill": "good", "text": "Good" }, { "pill": "good", "text": "Good" }, "Nothing to note"],
+      ["Kitchen", { "pill": "good", "text": "Good" }, { "pill": "warn", "text": "Fair" }, "One cooker ring does not light. Wear on the worktop"],
+      ["Bedroom 1", { "pill": "good", "text": "Good" }, { "pill": "good", "text": "Good" }, "Nothing to note"],
+      ["Bedroom 2", { "pill": "good", "text": "Good" }, { "pill": "bad", "text": "Worse" }, "Hole in the wall, about 6 cm. Paint marks"],
+      ["Bathroom", { "pill": "good", "text": "Good" }, { "pill": "warn", "text": "Fair" }, "Tiles stained, tap dripping"]
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Deductions, each with a reason and a photo", "columns": [{ "label": "Reason" }, { "label": "Photo" }, { "label": "Amount", "numeric": true }], "rows": [
+        ["Repair the wall and repaint bedroom 2", "Bedroom 2, wall", { "money": 65000 }],
+        ["Replace the cooker ring", "Kitchen, cooker", { "money": 18000 }],
+        ["Descale and re-grout the bathroom", "Bathroom, tap", { "money": 22000 }],
+        [{ "strong": "Taken off the deposit" }, "3 photos", { "money": 105000 }]
+      ] },
+      { "type": "kv", "title": "The caution deposit", "items": [
+        { "label": "Deposit", "value": { "money": 720000 } },
+        { "label": "Deductions", "value": { "money": -105000 } },
+        { "label": "To return to the tenant", "value": { "strong": "₦615,000" } },
+        { "label": "Tenant may answer", "value": "Within 7 days of the report" },
+        { "label": "Then", "value": "The deposit is settled and 2A shows as vacant" }
+      ] }
+    ] }
+  ]
+}

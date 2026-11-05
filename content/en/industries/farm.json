@@ -1,0 +1,264 @@
+{
+  "kind": "industry-story",
+  "sources": [
+    "FARM.md",
+    "docs/industry-facts.md#industry-farm"
+  ],
+  "meta": {
+    "title": "Farm: fields, flocks, harvest and growers · Clafina",
+    "description": "Seasons planned against actual, a calendar that knows the rain, daily records for every batch, and outgrowers paid net of advances. The Farm pack for Clafina."
+  },
+  "illustrative": "Illustrative example",
+  "core": false,
+  "hero": {
+    "eyebrow": "Farm",
+    "title": "From the field to the buyer, every record in one place.",
+    "lede": "Seasons and fields, flocks and daily records, harvest lots you can trace, and outgrowers paid net of what they were advanced.",
+    "screen": "farm-home"
+  },
+  "business": {
+    "name": "Garba Family Farms",
+    "place": "Zaria, Kaduna",
+    "label": true,
+    "about": "A maize and soybean farm near Zaria, with a poultry site at Ogbomosho and a scheme of maize outgrowers."
+  },
+  "dayTitle": "A day at Garba Family Farms",
+  "moments": [
+    {
+      "time": "06:00",
+      "title": "What can't wait today",
+      "problem": "Amina has fields, flocks and growers to think about, and only a few minutes before the teams arrive.",
+      "handles": "The farm home shows the land in season, the cost a hectare against the budget, the expected harvest as a dated projection and today's eggs. Below it are the things that cost money or a crop if they wait, each with its next step. A weak patch seen in satellite imagery becomes a scouting suggestion, never a task.",
+      "surface": "web"
+    },
+    {
+      "time": "08:20",
+      "title": "Armyworm on Road Field",
+      "problem": "Hauwa finds fall armyworm in the maize on Road Field.",
+      "handles": "Her report carries the place, how bad it is and her photos. The check shows the weather on the day, the waiting period against the planned harvest, what the store holds and what the treatment costs. Assigning it puts a task on the calendar.",
+      "surface": "phone",
+      "screen": "farm-scouting"
+    },
+    {
+      "time": "09:00",
+      "title": "A spray planned for a wet day",
+      "problem": "A foliar spray is on the calendar for the day rain is forecast.",
+      "handles": "The calendar marks every spray that meets rain, with the rule and the nearest dry day. The farm's rule is no spraying within twelve hours before rain, and the farm can change it. Moving the task shows the rain before and after.",
+      "surface": "web",
+      "screen": "farm-calendar"
+    },
+    {
+      "time": "10:00",
+      "title": "A field sprayed last week is due for harvest",
+      "problem": "Dam Field was planned for harvest, but it was sprayed only last week.",
+      "handles": "The spray set a waiting period from the product's profile. Harvesting inside it warns, or is refused if the farm has set it to block, so Amina moves the harvest.",
+      "surface": "web"
+    },
+    {
+      "time": "12:00",
+      "title": "A broiler house lost more birds than usual",
+      "problem": "Samuel sees more dead broilers than usual in one of the houses.",
+      "handles": "He keeps one daily record a day. Each death needs a cause, and feed is issued from the store at that day's cost. Mortality over the limit shows on the farm home, and feed conversion, average weight and cost a kilo sit on the batch. A medicine's withdrawal blocks the sale until it ends.",
+      "surface": "phone",
+      "screen": "farm-batch-phone"
+    },
+    {
+      "time": "15:00",
+      "title": "Paying the harvest gang by the bag",
+      "problem": "The pickers on Hilltop are paid for each bag, not by the day.",
+      "handles": "Piece work needs a unit, a rate and how many. When Hauwa signs it off, the labour is charged to the season once and the payroll lines are made once.",
+      "surface": "web"
+    },
+    {
+      "time": "16:00",
+      "title": "Outgrowers bring their maize",
+      "problem": "Growers in the scheme deliver maize, and they have to be paid net of the seed and fertiliser they were advanced.",
+      "handles": "Each receipt values the scale reading under the grower's contract, turns it down above the moisture limit and gives the grower a receipt. The payment run takes the produce less open advances, oldest first. Approving it makes one draft supplier bill for each grower who is ready, and each grower sees a statement on a private link.",
+      "surface": "web",
+      "screen": "farm-payment-run"
+    },
+    {
+      "time": "17:30",
+      "title": "Where did this lot come from?",
+      "problem": "A buyer asks where a lot of maize was grown and what went on it.",
+      "handles": "The lot traces back to its field, season, inputs, weigh slips and storage, and forward to its sales, buyers and the stock left. A recall preview shows who it reaches and holds the stock left. Issuing it emails each buyer.",
+      "surface": "web"
+    }
+  ],
+  "wordsTitle": "Your words, in Clafina",
+  "words": [
+    {
+      "word": "Season",
+      "meaning": "One crop on one field, from its plan and budget to the harvest."
+    },
+    {
+      "word": "Plan against actual",
+      "meaning": "What the season was meant to cost and yield, beside what it did, each figure with its source."
+    },
+    {
+      "word": "Waiting period",
+      "meaning": "How long after a spray the crop may not be harvested."
+    },
+    {
+      "word": "Scouting",
+      "meaning": "Reports of pests, disease and damage from the field, with photos, on the map."
+    },
+    {
+      "word": "Piece work",
+      "meaning": "Work paid by the unit, such as a bag picked."
+    },
+    {
+      "word": "Batch",
+      "meaning": "A flock, a pond or a group of animals, placed together and followed to sale."
+    },
+    {
+      "word": "Daily record",
+      "meaning": "One entry a day for a batch: feed, water, deaths with their cause, weights."
+    },
+    {
+      "word": "Withdrawal",
+      "meaning": "The time after a medicine when a batch or animal may not be sold."
+    },
+    {
+      "word": "Lot",
+      "meaning": "One harvest of one field and grade, kept in stock and traced both ways."
+    },
+    {
+      "word": "Release to sale",
+      "meaning": "When a lot is dry enough to sell."
+    },
+    {
+      "word": "Advance",
+      "meaning": "Inputs given to an outgrower, taken back from their produce."
+    },
+    {
+      "word": "Pooled sale",
+      "meaning": "A cooperative's sale, shared by delivered kilos less inputs owed."
+    }
+  ],
+  "switchesTitle": "What the Farm pack switches on",
+  "switchesOn": [
+    {
+      "text": "Farm pages for what each place farms: crops, poultry, fish, livestock or outgrowers, in any mix"
+    },
+    {
+      "text": "Fields drawn, imported or walked, with soil tests and a map coloured by crop, stage, problem or vigour"
+    },
+    {
+      "text": "Crop plans with cost a hectare, seasons with a budget, and plan against actual"
+    },
+    {
+      "text": "Tasks paid by the day, the hour or the piece, and a calendar with each day's weather and the spray-before-rain rule"
+    },
+    {
+      "text": "Inputs from the farm store, the waiting period, and an applications register you can export"
+    },
+    {
+      "text": "Batches of broilers, layers, fish and livestock with daily records, and vaccination schedules for broilers and layers"
+    },
+    {
+      "text": "Eggs graded and crated into stock, with cracked eggs and eggs in withdrawal kept from sale"
+    },
+    {
+      "text": "Harvest into lots, release to sale, trace both ways, recalls and a public trace page"
+    },
+    {
+      "text": "Outgrowers with contracts, advances, receipts, payment runs and statements, and cooperatives with pooled sales"
+    },
+    {
+      "text": "Farm settings for each area, each shown against the pack standard"
+    },
+    {
+      "text": "A lot named on the sales line and printed on the invoice and waybill",
+      "prelaunch": "industry-farm"
+    },
+    {
+      "text": "The season on each journal line in the ledger",
+      "prelaunch": "industry-farm"
+    },
+    {
+      "text": "More map, weather and satellite providers to choose from",
+      "prelaunch": "industry-farm"
+    }
+  ],
+  "sharesTitle": "What it shares with the rest of Clafina",
+  "shares": [
+    {
+      "route": "product-stock",
+      "text": "Inputs, feed, harvest and eggs move as stock at cost through the farm store."
+    },
+    {
+      "route": "product-finance",
+      "text": "Each season and batch is a value in the ledger, so every cost lands where it happened, once."
+    },
+    {
+      "route": "product-hr",
+      "text": "Piece and day work go to payroll once, when they are signed off."
+    },
+    {
+      "route": "product-purchasing",
+      "text": "Chicks arrive on a goods receipt, and a season short of inputs makes one draft purchase request."
+    },
+    {
+      "route": "product-sales",
+      "text": "Harvest sells on Clafina's own sales documents."
+    },
+    {
+      "route": "product-business-health",
+      "text": "Profit by field, crop, season, hectare or farm, with forecast rows marked as projections."
+    }
+  ],
+  "modulesTitle": "The parts of Clafina a farm uses",
+  "modules": [
+    "product-stock",
+    "product-finance",
+    "product-hr",
+    "product-purchasing",
+    "product-sales",
+    "product-assets",
+    "product-business-health",
+    "product-mobile"
+  ],
+  "faqTitle": "Questions farms ask",
+  "faq": [
+    {
+      "q": "Can it stop us spraying before rain?",
+      "a": "The calendar marks any spray that meets rain and offers the nearest dry day. By default the rule is no spraying within twelve hours before rain, and you can change it."
+    },
+    {
+      "q": "What if someone harvests inside a waiting period?",
+      "a": "The harvest warns, or is refused if you set it to block. The waiting period comes from the product's profile when the spray is recorded."
+    },
+    {
+      "q": "Can a batch be sold while it is on medicine?",
+      "a": "No. A medicine's withdrawal blocks the sale of the batch or animal until it ends."
+    },
+    {
+      "q": "How are outgrowers paid?",
+      "a": "A payment run takes each grower's produce less their open advances, oldest first. Approving it makes one draft supplier bill per grower who is ready, and each grower sees a statement on a private link."
+    },
+    {
+      "q": "Which weather and satellite services does it use?",
+      "a": "The one you connect in settings, with a test of the connection. Your provider's keys never reach the browser."
+    },
+    {
+      "q": "What if the signal drops while we record in the field?",
+      "a": "Work records, harvest loads, applications and receipts each keep one id, so sending again after a lost reply records them once."
+    },
+    {
+      "q": "Can the lot appear on the invoice?",
+      "a": "Yes. A sales line names its lot, and the lot is printed on the invoice and the waybill.",
+      "prelaunch": "industry-farm"
+    }
+  ],
+  "relatedTitle": "Trades close to yours",
+  "related": [
+    "industry-distribution",
+    "industry-manufacturing",
+    "industry-retail"
+  ],
+  "cta": {
+    "title": "Bring the whole farm into one place.",
+    "body": "Start with your fields and this season. Add batches, outgrowers and lots as you need them."
+  }
+}

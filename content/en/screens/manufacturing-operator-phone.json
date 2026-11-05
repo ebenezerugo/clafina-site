@@ -1,0 +1,30 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the operator's screen on a phone, opened from a work order's label, reporting good and spoilt units while the line is offline.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "RF", "name": "Riverbend Foods", "place": "Ikeja plant · Packing" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "Scan", "icon": "search" },
+    { "label": "Work", "icon": "table", "active": true },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "WO-2026-0144 · operation 20",
+  "subtitle": "Pepper mix 200g · fill and seal · heat sealer SL-02 · opened from its label",
+  "actions": [{ "label": "Report a stop" }, { "label": "Report and pause", "primary": true }],
+  "blocks": [
+    { "type": "steps", "items": ["Start", "Report what was made", "Complete"], "current": 1 },
+    { "type": "kv", "title": "This report", "items": [
+      { "label": "Good units", "value": { "strong": "420" } },
+      { "label": "Spoilt", "value": "6 · torn seal" },
+      { "label": "Made before this report", "value": "3,480" },
+      { "label": "Made so far", "value": "3,900 of 5,000" }
+    ] },
+    { "type": "attention", "title": "Working offline", "items": [
+      { "tone": "info", "icon": "phone", "title": "The line's network is down", "body": "What you report is kept on the phone and sent when it is back, and never applied twice." }
+    ] }
+  ]
+}

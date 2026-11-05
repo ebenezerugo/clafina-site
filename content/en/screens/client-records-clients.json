@@ -1,0 +1,34 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a clinic's client list as the front desk sees it, with names, phones, bookings and consent, and nothing clinical.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "AP", "name": "Ayomide Physiotherapy Clinic", "place": "Bodija · Front desk · Bukola" },
+  "nav": [
+    { "label": "Client records", "items": [{ "label": "Clients", "active": true }, { "label": "Access log" }, { "label": "Data requests" }, { "label": "Consent and settings" }] }
+  ],
+  "search": "Find by name, phone or client number",
+  "title": "Clients",
+  "subtitle": "Front desk view: name, phone, bookings and consent. Notes and measurements never show here, and search never looks inside them.",
+  "actions": [{ "label": "Import clients" }, { "label": "New client", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "users", "label": "Clients", "value": "1,286" },
+      { "icon": "clock", "label": "Booked today", "value": "14" },
+      { "icon": "alert", "label": "Consent to renew", "value": "18" },
+      { "icon": "alert", "label": "No consent on file", "value": "3" }
+    ] },
+    { "type": "table", "title": "Coming in", "columns": [{ "label": "Client" }, { "label": "Phone" }, { "label": "Next visit" }, { "label": "Consent" }, { "label": "Practitioner" }], "rows": [
+      [{ "avatar": "FA", "text": "Mrs Folasade Akinwale · CL-02418" }, "0803 555 0177", "Today 10:00", { "pill": "good", "text": "Treatment" }, "Damilola Ogunsanya"],
+      [{ "avatar": "SO", "text": "Mr Segun Oyelade · CL-02411" }, "0805 555 0142", "Today 11:30", { "pill": "good", "text": "Treatment" }, "Tayo Adebisi"],
+      [{ "avatar": "TA", "text": "Master Tobi Adeleke · CL-02388" }, "Guardian Mrs Adeleke · 0807 555 0119", "Today 13:00", { "pill": "good", "text": "Guardian consent" }, "Damilola Ogunsanya"],
+      [{ "avatar": "HB", "text": "Miss Hauwa Bala · CL-02406" }, "0809 555 0164", "Wed 21 Oct 12:00", { "pill": "warn", "text": "Renew by 31 Oct" }, "Damilola Ogunsanya"],
+      [{ "avatar": "CE", "text": "Mr Chuka Eneh · CL-02399" }, "0802 555 0135", "None booked", { "pill": "good", "text": "Treatment" }, "Tayo Adebisi"],
+      [{ "avatar": "NO", "text": "Ms Nkechi Okoro · CL-02430" }, "0806 555 0108", "Today 08:30 · first visit", { "pill": "bad", "text": "No consent on file" }, "Damilola Ogunsanya"]
+    ] },
+    { "type": "attention", "title": "Before the first visit", "items": [
+      { "tone": "warn", "icon": "alert", "title": "Ms Nkechi Okoro has no consent on file", "body": "Anything that needs consent stays blocked until it is recorded.", "action": "Record consent" }
+    ] }
+  ]
+}

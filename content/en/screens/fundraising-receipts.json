@@ -1,0 +1,43 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: a foundation's tax receipts, with gifts waiting for a receipt, numbered receipts recorded as sent or bounced, one voided and replaced, and what the donor receives.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "IC", "name": "Ireti Care Foundation", "place": "Lagos" },
+  "nav": [
+    { "label": "Fundraising", "items": [{ "label": "Overview" }, { "label": "Donors" }, { "label": "Gifts" }, { "label": "Campaigns" }, { "label": "Grants" }, { "label": "Tax receipts", "active": true, "badge": "14" }] }
+  ],
+  "search": "Find a receipt or a donor",
+  "title": "Tax receipts · 2026",
+  "subtitle": "One for each gift, or one a year, as the donor chooses. A receipt is never deleted: a mistake is voided and replaced.",
+  "actions": [{ "label": "Year-end batch" }, { "label": "Issue 14 receipts", "primary": true, "icon": "receipt" }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "clock", "label": "Gifts waiting for a receipt", "value": { "money": 2310000 }, "note": "14 gifts" },
+      { "icon": "receipt", "label": "Numbered this year", "value": "1,194", "note": "2 of them voided and replaced" },
+      { "icon": "alert", "label": "Bounced", "value": "3", "change": { "tone": "warn", "text": "Address to fix" } },
+      { "icon": "users", "label": "Yearly receipts planned", "value": "214", "note": "For monthly and small donors" }
+    ] },
+    { "type": "row", "widths": "3fr 2fr", "blocks": [
+      { "type": "table", "title": "Showing 7 of 1,208", "columns": [{ "label": "Receipt" }, { "label": "Donor" }, { "label": "Gift date" }, { "label": "Amount", "numeric": true }, { "label": "State" }], "rows": [
+        ["Numbered on issue", "Mr Kayode Ajayi", "Today", { "money": 500000 }, { "pill": "warn", "text": "To issue" }],
+        ["Numbered on issue", "Mrs Funmi Adesina", "18 Oct", { "money": 150000 }, { "pill": "warn", "text": "To issue" }],
+        ["RCP-2026-1194", "Hauwa Bello", "16 Oct", { "money": 50000 }, { "pill": "good", "text": "Sent" }],
+        ["RCP-2026-1193", "Crestline Foods Ltd", "2 Oct", { "money": 2000000 }, { "pill": "good", "text": "Sent" }],
+        ["RCP-2026-1192", "Okoro and Daughters", "28 Sep", { "money": 300000 }, { "pill": "bad", "text": "Bounced" }],
+        ["RCP-2026-1191", "Chief Remi Oyelaran", "25 Sep", { "money": 1000000 }, { "pill": "good", "text": "Sent" }],
+        ["RCP-2026-1187", "Harbourline Logistics", "4 Sep", { "money": 500000 }, { "pill": "neutral", "text": "Voided, replaced by RCP-2026-1190" }]
+      ] },
+      { "type": "kv", "title": "What the donor receives · RCP-2026-1193", "items": [
+        { "label": "From", "value": "Ireti Care Foundation" },
+        { "label": "Receipt for a donation", "value": { "strong": "₦2,000,000" } },
+        { "label": "Received", "value": "From Crestline Foods Ltd on 2 October 2026, by bank transfer, for the Borehole for Sunrise Primary School" },
+        { "label": "In return", "value": "No goods or services were given" },
+        { "label": "Signed", "value": "Adaora Nwosu, Director" },
+        { "label": "Number series", "value": "RCP-{year}-{4 digits}" },
+        { "label": "Wording", "value": "Your own, set in Fundraising settings" }
+      ] }
+    ] }
+  ]
+}
