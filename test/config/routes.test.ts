@@ -14,13 +14,8 @@ describe('routes', () => {
   });
   it('lists the pages built so far', () => {
     const built = ROUTES.filter((r) => r.built && !('previewOnly' in r)).map((r) => r.id);
-<<<<<<< HEAD
     expect(built.filter((id) => !id.startsWith('product-'))).toEqual(['home', 'platform', 'pricing', 'pricing-compare', 'demo', 'contact-sales', 'industries', 'industry-retail']);
-    expect(built.filter((id) => id.startsWith('product-'))).toHaveLength(21);
-=======
-    expect(built.filter((id) => !id.startsWith('product-'))).toEqual(['home', 'platform', 'pricing', 'pricing-compare', 'demo', 'contact-sales']);
     expect(built.filter((id) => id.startsWith('product-'))).toHaveLength(22);
->>>>>>> 53913f2 (WIP business email)
   });
   it('writes paths with leading and trailing slashes', () => {
     expect(ROUTES.every((r) => r.path.startsWith('/') && r.path.endsWith('/'))).toBe(true);
