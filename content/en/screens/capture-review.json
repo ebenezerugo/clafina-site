@@ -1,0 +1,43 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: checking a supplier bill read from an emailed PDF, with the supplier matched, how sure each field is and the two things to check before the draft bill is made.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search captures",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Buy", "items": [{ "label": "Purchase orders" }, { "label": "Bills" }, { "label": "Expenses" }, { "label": "Capture", "badge": "3", "active": true }] }
+  ],
+  "title": "RRH-Sept-invoice.pdf",
+  "subtitle": "Email from Kemi, Monday 19 October 09:12 · 1 page · read as a supplier bill",
+  "actions": [{ "label": "Open the original" }, { "label": "Make the draft bill", "primary": true, "icon": "check" }],
+  "blocks": [
+    { "type": "row", "widths": "1fr 1fr", "blocks": [
+      { "type": "table", "title": "The original: lines read from the picture", "columns": [{ "label": "Description" }, { "label": "Qty", "numeric": true }, { "label": "Amount", "numeric": true }], "rows": [
+        ["Haulage, 14 trips", "14", { "money": 1190000 }],
+        ["Fuel surcharge, September", "1", { "money": 160000 }],
+        ["Loading and offloading", "14", { "money": 105000 }],
+        ["Round-off discount", "", { "money": -5000 }],
+        [{ "strong": "Total due" }, "", { "money": 1450000 }]
+      ] },
+      { "type": "kv", "title": "What was read", "items": [
+        { "label": "Supplier", "value": { "strong": "Ring Road Haulage" } },
+        { "label": "Why this supplier", "value": "Same tax number · supplier since 2024" },
+        { "label": "Their invoice number", "value": "RRH-2210 · sure" },
+        { "label": "Dated", "value": "30 Sep 2026 · sure" },
+        { "label": "Due", "value": { "pill": "warn", "text": "14 Oct 2026 · take a look" } },
+        { "label": "VAT", "value": { "pill": "warn", "text": "₦0.00 · take a look" } },
+        { "label": "Total", "value": { "money": 1450000 } }
+      ] }
+    ] },
+    { "type": "attention", "title": "2 to check before you make the draft", "items": [
+      { "tone": "warn", "icon": "clock", "title": "Due date was worked out", "body": "The bill says “14 days”, so the date comes from the invoice date. Check it." },
+      { "tone": "warn", "icon": "alert", "title": "VAT read as exempt", "body": "The bill says “exempt service”. If it is not, the tax on the bill changes by ₦109,125." },
+      { "tone": "good", "icon": "check", "title": "The lines add up", "body": "4 lines come to ₦1,455,000, less ₦5,000 discount, to ₦1,450,000." },
+      { "tone": "good", "icon": "check", "title": "No possible duplicate", "body": "No other bill from Ring Road Haulage has this number or amount. Nothing is posted: this makes a draft bill for you to open, check and submit." }
+    ] }
+  ]
+}

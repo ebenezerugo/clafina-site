@@ -1,0 +1,30 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: recording a meeting from the phone, four minutes in, with what happens after you stop.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell" },
+    { "label": "New", "icon": "plus", "active": true },
+    { "label": "Sales", "icon": "sales" },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Record a meeting",
+  "subtitle": "Talk as normal. When you stop, the assistant writes the minutes and drafts what follows.",
+  "actions": [{ "label": "Pause" }, { "label": "Stop and send", "primary": true }],
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "clock", "label": "Recording", "value": "04:12", "note": "Keep the phone near the table. Pause when you step out." }
+    ] },
+    { "type": "kv", "items": [
+      { "label": "What is this meeting?", "value": "Visit to Corner Shop Provisions" }
+    ] },
+    { "type": "attention", "title": "After you stop", "items": [
+      { "tone": "info", "icon": "receipt", "title": "Minutes in the Assistant", "body": "Decisions, agreements and next steps, with who does what." },
+      { "tone": "good", "icon": "check", "title": "Drafts to check", "body": "The quotation, tasks and messages. Nothing is sent without your yes." }
+    ] }
+  ]
+}

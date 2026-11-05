@@ -1,0 +1,47 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the phone app inbox, with an approval waiting for a second person, a customer question and a mention, each with one button.",
+  "currency": "NGN",
+  "frame": "phone",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "tabs": [
+    { "label": "Home", "icon": "home" },
+    { "label": "Inbox", "icon": "bell", "active": true },
+    { "label": "New", "icon": "plus" },
+    { "label": "Sales", "icon": "sales" },
+    { "label": "More", "icon": "more" }
+  ],
+  "title": "Inbox",
+  "subtitle": "What is waiting on you. One button on each.",
+  "blocks": [
+    { "type": "stats", "items": [
+      { "icon": "check", "label": "Approvals", "value": "4" },
+      { "icon": "users", "label": "Mentions", "value": "2" },
+      { "icon": "clock", "label": "Tasks", "value": "2" }
+    ] },
+    { "type": "attention", "title": "Today", "items": [
+      {
+        "tone": "warn",
+        "icon": "money",
+        "title": "Pay ₦1,450,000 to Ring Road Haulage",
+        "body": "Kemi in accounts prepared this payment. Payments above ₦1,000,000 need two people, and you are the second.",
+        "action": "Approve"
+      },
+      {
+        "tone": "info",
+        "icon": "receipt",
+        "title": "Corner Shop Provisions asks about INV-0415",
+        "body": "Bola asked you to check the delivery charge. Your reply target is 12 minutes away.",
+        "action": "Reply"
+      },
+      {
+        "tone": "info",
+        "icon": "users",
+        "title": "Kemi mentioned you in “September statement”",
+        "body": "“@Tayo the bank statement is in Drive. Can you confirm the closing balance?”",
+        "action": "Reply"
+      }
+    ] }
+  ]
+}

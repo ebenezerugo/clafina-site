@@ -1,0 +1,45 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: outgoing webhooks, with recent deliveries, retries, a paused endpoint and the signing secret masked.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search settings…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Admin", "items": [{ "label": "Organisation" }, { "label": "People and roles" }, { "label": "Integrations" }, { "label": "Outgoing webhooks", "active": true }, { "label": "API keys" }, { "label": "Single sign-on" }] }
+  ],
+  "title": "Outgoing webhooks",
+  "subtitle": "Events sent to your systems, signed, retried and logged.",
+  "actions": [{ "label": "Send a test event" }, { "label": "New endpoint", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "row", "widths": "2fr 1fr", "blocks": [
+      { "type": "table", "title": "Endpoints", "columns": [{ "label": "Endpoint" }, { "label": "Events" }, { "label": "Status" }], "rows": [
+        ["https://ops.brightharbour.example/hooks", "invoice.paid, invoice.sent", { "pill": "good", "text": "Delivering" }],
+        ["https://stock.brightharbour.example/in", "stock.moved", { "pill": "bad", "text": "Paused after failures" }]
+      ] },
+      { "type": "kv", "title": "Signing", "items": [
+        { "label": "Signing secret", "value": "whsec_••••9c41" },
+        { "label": "Signature", "value": "HMAC-SHA256" },
+        { "label": "Retries", "value": "Yes, then paused after failures" }
+      ] }
+    ] },
+    { "type": "table", "title": "Recent deliveries", "columns": [{ "label": "Time" }, { "label": "Event" }, { "label": "Response" }, { "label": "Attempts", "numeric": true }, { "label": "Result" }], "rows": [
+      ["09:42", "invoice.paid · INV-0412", "200", "1", { "pill": "good", "text": "Delivered" }],
+      ["09:30", "invoice.sent · INV-0413", "200", "2", { "pill": "good", "text": "Delivered on retry" }],
+      ["08:55", "stock.moved · WB-0097", "503", "6", { "pill": "bad", "text": "Failed · Replay" }],
+      ["08:51", "stock.moved · WB-0096", "503", "6", { "pill": "bad", "text": "Failed · Replay" }]
+    ] },
+    { "type": "attention", "title": "Waiting for you", "items": [
+      {
+        "tone": "warn",
+        "icon": "alert",
+        "title": "The stock endpoint is paused",
+        "body": "It failed six times in a row. Fix it, then replay the failed deliveries from the log.",
+        "action": "Resume and replay"
+      }
+    ] }
+  ]
+}

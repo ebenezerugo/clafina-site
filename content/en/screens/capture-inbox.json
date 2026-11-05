@@ -1,0 +1,43 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the capture inbox, with bills and receipts sent in by email, camera, Drive and chat, how sure the reading is and what is left to check.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search captures",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Buy", "items": [{ "label": "Purchase orders" }, { "label": "Bills" }, { "label": "Expenses" }, { "label": "Capture", "badge": "3", "active": true }] }
+  ],
+  "title": "Capture",
+  "subtitle": "Documents sent in by upload, photo, Drive, email or chat, read for you to check and turn into drafts.",
+  "actions": [{ "label": "Settings" }, { "label": "New capture", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "attention", "title": "Waiting for you", "items": [
+      {
+        "tone": "warn",
+        "icon": "alert",
+        "title": "3 documents are ready for you to check, and 1 could not be read",
+        "body": "Start with the oldest. Each one opens beside the original.",
+        "action": "Check the first one"
+      }
+    ] },
+    { "type": "stats", "items": [
+      { "icon": "receipt", "label": "Ready to review", "value": "3" },
+      { "icon": "clock", "label": "Reading", "value": "1" },
+      { "icon": "check", "label": "Draft made", "value": "131", "note": "The last 30 days" },
+      { "icon": "alert", "label": "Could not be read", "value": "1" }
+    ] },
+    { "type": "table", "columns": [{ "label": "File" }, { "label": "From and number" }, { "label": "Confidence" }, { "label": "Status" }, { "label": "Total", "numeric": true }], "rows": [
+      ["RRH-Sept-invoice.pdf · email", "Ring Road Haulage · RRH-2210", "High · 1 to check", { "pill": "warn", "text": "Ready to review" }, { "money": 1450000 }],
+      ["IMG_4417.jpg · camera", "Roadside fuel station · 004417", "Medium · 3 to check", { "pill": "warn", "text": "Ready to review" }, { "money": 38500 }],
+      ["Valley-credit-note.pdf · Drive", "Green Valley Mills · CN-0311", "High", { "pill": "bad", "text": "Possible duplicate" }, { "money": 92000 }],
+      ["scan0042.pdf · upload", "—", "—", { "pill": "info", "text": "Reading" }, "—"],
+      ["Northgate-Sept.pdf · email", "Northgate Power · NP-88213", "High · nothing to check", { "pill": "good", "text": "Draft made" }, { "money": 180000 }],
+      ["lunch-receipt.jpg · chat", "Corner Café · 7731", "High · nothing to check", { "pill": "good", "text": "Draft made" }, { "money": 12400 }],
+      ["dark-photo.jpg · camera", "Too dark to read. Try again with the light on.", "—", { "pill": "neutral", "text": "Could not be read" }, "—"]
+    ] }
+  ]
+}

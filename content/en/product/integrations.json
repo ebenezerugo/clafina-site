@@ -1,0 +1,142 @@
+{
+  "kind": "product",
+  "sources": [
+    "ROADMAP.md",
+    "STATUS.md",
+    "messaging.md",
+    "TAX_ENGINE.md",
+    "docs/product-facts.md#product-integrations"
+  ],
+  "meta": {
+    "title": "Integrations and API · Clafina",
+    "description": "Send email from your own domain, push signed events to your systems, and let scripts and AI tools use the API with only the permissions you give."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Integrations and API",
+    "title": "Work with the tools you already use.",
+    "lede": "Connect email, accounting, CRM and storage from one place, without code where possible. When you do want code, the API and webhooks are ready, and every key does only what you allow.",
+    "screen": "integrations-connections"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Email from your own domain",
+      "body": "Send invoices and messages from your own mail server or work account, with delivery followed for you."
+    },
+    {
+      "title": "Events to your systems",
+      "body": "Outgoing webhooks tell your other systems when something happens. They are signed, retried and logged."
+    },
+    {
+      "title": "Safe access for scripts and AI tools",
+      "body": "API keys are scoped to permissions and shown once. Outside AI tools sign in and use the MCP server."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "integrations-connections",
+      "title": "Every connection, and its health",
+      "body": "Each provider sits in a slot, for the whole organisation or one location, with whether it is working.",
+      "points": [
+        "Sign in once; the connection refreshes itself",
+        "When it fails, admins are told",
+        "Payment, text message and chat-platform slots too"
+      ]
+    },
+    {
+      "screen": "integrations-webhooks",
+      "title": "Webhooks you can trust",
+      "body": "See every delivery, what came back and how many tries it took.",
+      "points": [
+        "Signed with HMAC-SHA256",
+        "Replay a failed delivery from the log",
+        "Paused after repeated failures, so nothing piles up"
+      ]
+    },
+    {
+      "screen": "integrations-api-keys",
+      "title": "Keys that do only their job",
+      "body": "Each API key is scoped to the permissions it needs, kept as a hash and shown in full only once.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in Integrations",
+  "features": [
+    {
+      "title": "Connections",
+      "items": [
+        { "text": "An Integrations area with providers in slots, for the organisation or for a location, and the health of each connection." },
+        { "text": "Connect by signing in, with the connection refreshed for you. Failures are shown to admins." },
+        { "text": "Accounting export to three accounting packages." },
+        { "text": "Sync with four CRMs." },
+        { "text": "Document archive to cloud storage." },
+        { "text": "Slots for payments, text messages and chat platforms." },
+        { "text": "A connector for statutory e-invoicing.", "prelaunch": "product-integrations" },
+        { "text": "Connect an outside tax provider.", "prelaunch": "product-integrations" }
+      ]
+    },
+    {
+      "title": "Email sending",
+      "items": [
+        { "text": "Send from your own mail server, or from your work email account by signing in." },
+        { "text": "Seven email providers, with delivery reports coming back by webhook." }
+      ]
+    },
+    {
+      "title": "For developers",
+      "items": [
+        { "text": "Outgoing webhooks: signed, retried, logged, replayable, and paused after failures." },
+        { "text": "API keys scoped to permissions, kept as a hash and shown once." },
+        { "text": "Channel API keys with their own rate limit and webhooks." },
+        { "text": "Zapier, Make and n8n through REST hooks." },
+        { "text": "Ready-made Zapier and Make apps.", "prelaunch": "product-integrations" }
+      ]
+    },
+    {
+      "title": "Sign-in and AI tools",
+      "items": [
+        { "text": "Single sign-on by SAML or OIDC." },
+        { "text": "An MCP server with read, draft and confirm tools, and sign-in for outside AI clients." }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "developers", "text": "The API reference and guides for building on Clafina." },
+    { "route": "developers-webhooks", "text": "Every event you can receive, and how to check the signature." },
+    { "route": "product-communication", "text": "Email and messages go out through the connections you choose." },
+    { "route": "product-finance", "text": "Ledger figures export to your accounting package." },
+    { "route": "product-assistant", "text": "Outside AI tools use the same draft-then-confirm rules as the assistant." },
+    { "route": "trust-security", "text": "How connection secrets and keys are kept." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["web", "assistant"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-distribution",
+    "industry-manufacturing",
+    "industry-field-service"
+  ],
+  "faqTitle": "Questions about Integrations",
+  "faq": [
+    {
+      "q": "Can I send email from my own domain?",
+      "a": "Yes. Connect your own mail server, sign in with your work email account, or choose one of seven email providers."
+    },
+    {
+      "q": "What happens if my system is down when a webhook is sent?",
+      "a": "It is retried and logged. After repeated failures the endpoint is paused, and you can replay what was missed."
+    },
+    {
+      "q": "Can I see an API key again after I make it?",
+      "a": "No. It is shown once, and we keep only a hash of it. If you lose it, make a new one."
+    }
+  ],
+  "cta": {
+    "title": "Connect Clafina to the way you already work.",
+    "body": "Start free, or book a demo and we will connect your email and one of your own systems together."
+  }
+}

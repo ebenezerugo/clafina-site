@@ -1,0 +1,43 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: an assistant conversation answering which customers are more than 30 days late, with the table it found and a drafted reminder waiting to be confirmed.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search conversations",
+  "nav": [
+    { "label": "Conversations", "items": [
+      { "label": "Overdue invoices and reminders", "active": true },
+      { "label": "Minutes: visit to Corner Shop Provisions", "badge": "4" },
+      { "label": "September stock write-offs" },
+      { "label": "Shared by Kemi: VAT September" },
+      { "label": "Price list for Lantern Valley Foods" }
+    ] }
+  ],
+  "title": "Overdue invoices and reminders",
+  "subtitle": "Started 09:38 · only you can see this",
+  "actions": [{ "label": "Share" }, { "label": "New conversation", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "kv", "items": [
+      { "label": "You asked", "value": "Which customers are more than 30 days late, and how much do they owe me?" },
+      { "label": "Assistant", "value": "Three customers are more than 30 days late. Together they owe you ₦1,120,000. Corner Shop Provisions is the oldest at 37 days." }
+    ] },
+    { "type": "table", "title": "Customers more than 30 days late · Save as report · Add to dashboard", "columns": [{ "label": "Customer" }, { "label": "Invoices", "numeric": true }, { "label": "Owed", "numeric": true }, { "label": "Days late", "numeric": true }], "rows": [
+      [{ "avatar": "CS", "text": "Corner Shop Provisions" }, "1", { "money": 420000 }, "37"],
+      [{ "avatar": "LV", "text": "Lantern Valley Foods" }, "1", { "money": 380000 }, "34"],
+      [{ "avatar": "KM", "text": "Kite Market Co." }, "1", { "money": 320000 }, "31"],
+      [{ "strong": "Total" }, "3", { "money": 1120000 }, ""]
+    ] },
+    { "type": "attention", "title": "Drafts to check", "items": [
+      {
+        "tone": "info",
+        "icon": "check",
+        "title": "Payment reminder to Corner Shop Provisions",
+        "body": "Email to accounts@cornershop.example: “Hello Bola, invoice INV-0371 for ₦420,000 was due on 12 September…” Nothing happens until you confirm. Each reminder needs its own yes.",
+        "action": "Confirm"
+      }
+    ] }
+  ]
+}

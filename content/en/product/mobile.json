@@ -1,0 +1,157 @@
+{
+  "kind": "product",
+  "sources": [
+    "MOBILE.md",
+    "RECORDS.md",
+    "docs/product-facts.md#product-mobile"
+  ],
+  "meta": {
+    "title": "The phone app · Clafina",
+    "description": "Approve, sell and chase payment from the road. The phone shows the same answers as the office, and hands you to a computer when you need one."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "The phone app",
+    "title": "The business in your pocket.",
+    "lede": "Approve what is waiting, sell from the road and see who owes you. Prices and statuses come from the same place as the office, so the phone never guesses.",
+    "screen": "mobile-inbox-phone"
+  },
+  "jobsTitle": "What it does for you",
+  "jobs": [
+    {
+      "title": "Approve on the go",
+      "body": "Requests come with the facts and the money beside them. Approve in one tap, or decline with a reason."
+    },
+    {
+      "title": "Sell and chase from the road",
+      "body": "Make a quotation, turn it into an invoice and send a payment link. Every price is worked out for you."
+    },
+    {
+      "title": "Record what happens",
+      "body": "Record a meeting, photograph an expense receipt, and follow the records that matter to you."
+    }
+  ],
+  "tourTitle": "A closer look",
+  "tour": [
+    {
+      "screen": "phone-home",
+      "title": "Start the day knowing where you stand",
+      "body": "Home shows sales today, cash in the bank and how many things need you in each area.",
+      "points": [
+        "Cards for sales today, cash and what needs ordering",
+        "Counts by area, each one a tap away",
+        "The same cards on a tablet board"
+      ]
+    },
+    {
+      "screen": "mobile-inbox-phone",
+      "title": "One inbox, one button on each",
+      "body": "Approvals, mentions, tasks and alerts wait in the Inbox, with the next step on each one.",
+      "points": [
+        "Declining always asks for a reason",
+        "Reply to a mention without leaving the inbox",
+        "Follow a record to hear when it changes"
+      ]
+    },
+    {
+      "screen": "mobile-invoices-phone",
+      "title": "See who owes you, and how late",
+      "body": "Invoices show what is sent, what is overdue and how many days late each one is.",
+      "points": [
+        "Send, copy or share a payment link from any document",
+        "Search everything, with status and amounts",
+        "Customers in new, lapsed and leads tabs"
+      ]
+    },
+    {
+      "screen": "mobile-payment-run-phone",
+      "title": "Payment runs waiting for you",
+      "body": "See the bills in a run, the transfer it will make and the cash left after, then answer.",
+      "points": []
+    }
+  ],
+  "featuresTitle": "Everything in the phone app",
+  "features": [
+    {
+      "title": "Approvals and inbox",
+      "items": [
+        { "text": "Approvals with the facts and the money. Declining needs a reason." },
+        { "text": "Bills in a payment run to approve, with a preview of the transfer." },
+        { "text": "An Inbox for approvals, mentions, tasks, alerts and messages." }
+      ]
+    },
+    {
+      "title": "Selling",
+      "items": [
+        { "text": "Quotations, orders, invoices and proformas, priced by the same rules as the office." },
+        { "text": "Turn a quotation straight into an invoice. Send, copy or share a payment link from a document." },
+        { "text": "Invoices with how many days late each one is." },
+        { "text": "Customers in new, lapsed and leads tabs, and the deal board." }
+      ]
+    },
+    {
+      "title": "Records",
+      "items": [
+        { "text": "Follow a record, comment with @mentions, see its history or take a quick Glance." },
+        { "text": "Quotations, orders, invoices, proformas, receipts, tickets and customers, all on the phone." },
+        { "text": "Search across everything, with status and amounts." },
+        { "text": "Open on a computer when a job needs a bigger screen." }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        { "text": "Home cards for sales today, cash and what needs ordering, with counts by area." },
+        { "text": "A cash summary and your VAT position." },
+        { "text": "Photograph an expense receipt and it is read for you." }
+      ]
+    },
+    {
+      "title": "Meetings and assistant",
+      "items": [
+        { "text": "Record a meeting from the composer and get minutes and drafts back." },
+        { "text": "Calendar, find a time, rooms, Meet and shared links." },
+        { "text": "Ask the assistant about the record in front of you.", "prelaunch": "product-mobile" },
+        { "text": "See your signed-in devices. Comments, follows and invitation answers wait for a signal and send themselves." }
+      ]
+    }
+  ],
+  "connectsTitle": "Connected to the rest of the business",
+  "connects": [
+    { "route": "product-sales", "text": "Quotations, orders and invoices made on the phone are the same documents as in the office." },
+    { "route": "product-finance", "text": "Payment runs, cash and VAT come straight from the books." },
+    { "route": "product-crm", "text": "Customers, leads and the deal board travel with you." },
+    { "route": "product-assistant", "text": "Meetings recorded on the phone come back as minutes and drafts." },
+    { "route": "product-capture", "text": "Expense receipts photographed on the phone become drafts to check." },
+    { "route": "product-communication", "text": "Calendar, rooms and Meet are on the phone too." }
+  ],
+  "surfacesTitle": "Where your team uses it",
+  "surfaces": ["phone", "web", "assistant", "meet"],
+  "industriesTitle": "Used by",
+  "industries": [
+    "industry-retail",
+    "industry-distribution",
+    "industry-field-service",
+    "industry-construction",
+    "industry-property"
+  ],
+  "faqTitle": "Questions about the phone app",
+  "faq": [
+    {
+      "q": "Does the phone work out prices itself?",
+      "a": "No. Every price and status comes from the same rules the office uses, so the phone and the computer always agree."
+    },
+    {
+      "q": "What happens when I lose signal?",
+      "a": "Comments, follows and invitation answers wait and send when you are back. Approvals and anything that moves money need a connection."
+    },
+    {
+      "q": "Can I decline a request from the phone?",
+      "a": "Yes. Declining always asks you for a reason, so nobody is left guessing why."
+    }
+  ],
+  "cta": {
+    "title": "See your business on your phone.",
+    "body": "Start free, or book a demo and we will show you a morning of approvals, sales and payments from the road."
+  }
+}

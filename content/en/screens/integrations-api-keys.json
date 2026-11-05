@@ -1,0 +1,29 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: API keys for scripts and outside AI tools, each scoped to permissions, masked, and shown in full only once when made.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search settings…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Admin", "items": [{ "label": "Organisation" }, { "label": "People and roles" }, { "label": "Integrations" }, { "label": "Outgoing webhooks" }, { "label": "API keys", "active": true }, { "label": "Single sign-on" }] }
+  ],
+  "title": "API keys",
+  "subtitle": "Each key can do only what its permissions allow.",
+  "actions": [{ "label": "New key", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "table", "columns": [{ "label": "Name" }, { "label": "Key" }, { "label": "Permissions" }, { "label": "Made by" }, { "label": "Last used" }], "rows": [
+      ["Nightly stock export", "ck_live_••••3f2a", "Stock: read", { "avatar": "MU", "text": "Musa" }, "Today, 02:00"],
+      ["Shop price sync", "ck_live_••••81d0", "Products: read, write", { "avatar": "KE", "text": "Kemi" }, "Today, 09:15"],
+      ["Reports for the accountant", "ck_live_••••c7e4", "Finance: read", { "avatar": "TA", "text": "Tayo" }, "3 Nov"],
+      ["Old test script", "ck_test_••••0b19", "Sales: read", { "avatar": "MU", "text": "Musa" }, "12 Sep"]
+    ] },
+    { "type": "attention", "title": "About keys", "items": [
+      { "tone": "info", "icon": "check", "title": "Shown once", "body": "A new key is shown in full only when it is made. We keep a hash of it, so copy it somewhere safe." },
+      { "tone": "info", "icon": "users", "title": "For outside AI tools, sign in instead", "body": "The MCP server uses OAuth sign-in, so an AI tool acts with the person's own permissions." }
+    ] }
+  ]
+}

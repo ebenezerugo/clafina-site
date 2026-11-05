@@ -1,0 +1,36 @@
+{
+  "spec": 1,
+  "illustrative": true,
+  "label": "Illustrative example: the Integrations area in Admin, with a provider in each slot, where it applies and whether the connection is healthy.",
+  "currency": "NGN",
+  "frame": "app",
+  "org": { "initials": "BH", "name": "Bright Harbour Traders", "place": "Main store" },
+  "goTo": "Go to page…",
+  "search": "Search settings…",
+  "nav": [
+    { "items": [{ "label": "Dashboard" }, { "label": "Inbox", "badge": "9" }] },
+    { "label": "Admin", "items": [{ "label": "Organisation" }, { "label": "People and roles" }, { "label": "Integrations", "badge": "1", "active": true }, { "label": "Outgoing webhooks" }, { "label": "API keys" }, { "label": "Single sign-on" }] }
+  ],
+  "title": "Integrations",
+  "subtitle": "Connections for the whole organisation, or for one location.",
+  "actions": [{ "label": "Connect a provider", "primary": true, "icon": "plus" }],
+  "blocks": [
+    { "type": "attention", "title": "Needs an admin", "items": [
+      {
+        "tone": "bad",
+        "icon": "alert",
+        "title": "CRM sync stopped at 07:14",
+        "body": "The sign-in for the CRM connection expired and could not be refreshed. Nothing is lost: changes wait until you connect again.",
+        "action": "Connect again"
+      }
+    ] },
+    { "type": "table", "title": "Connections", "columns": [{ "label": "Slot" }, { "label": "Provider" }, { "label": "Applies to" }, { "label": "Health" }], "rows": [
+      ["Email sending", "Your own mail server (SMTP)", "Whole organisation", { "pill": "good", "text": "Healthy" }],
+      ["Accounting export", "Accounting package", "Whole organisation", { "pill": "good", "text": "Last export 06:00" }],
+      ["CRM sync", "CRM", "Whole organisation", { "pill": "bad", "text": "Sign in again" }],
+      ["Document archive", "Cloud storage", "Main store", { "pill": "good", "text": "Healthy" }],
+      ["Automation", "Automation tool · REST hooks", "Whole organisation", { "pill": "good", "text": "3 hooks" }],
+      ["Payments", "Test mode", "Whole organisation", { "pill": "neutral", "text": "Sandbox" }]
+    ] }
+  ]
+}
