@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale, getMessages } from 'next-intl/server';
 import { LOCALES, isLocale, localeInfo } from '@/config/locales';
 import { localeEnabled } from '@/config/switches';
+import { fontClassFor } from '@/theme/fonts';
 
 export const dynamicParams = false;
 
@@ -18,8 +19,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   setRequestLocale(locale);
   const messages = await getMessages();
   return (
-    <html lang={locale} dir={localeInfo(locale).dir}>
-      <body>
+    <html lang={locale} dir={localeInfo(locale).dir} className={fontClassFor(locale)}>
+      <body className="bg-page text-ink antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>

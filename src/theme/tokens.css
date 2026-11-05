@@ -1,0 +1,94 @@
+/*
+ * Clafina design tokens: the only place colours, type, radius, shadow and motion are defined.
+ * This is the neutral placeholder theme. The chosen brand replaces this file and src/brand/Logo.tsx.
+ */
+:root {
+  --c-page: #ffffff;
+  --c-surface: #f5f6f8;
+  --c-raised: #ffffff;
+  --c-ink: #11151c;
+  --c-muted: #4b5563;
+  --c-line: #dfe3e8;
+  --c-primary: #2f4a8a;
+  --c-primary-hover: #243b70;
+  --c-on-primary: #ffffff;
+  --c-accent: #0f766e;
+  --c-good: #146c43;
+  --c-good-fill: #e3f2e8;
+  --c-warn: #9a3412;
+  --c-warn-fill: #fdf0e6;
+  --c-bad: #b42318;
+  --c-bad-fill: #fdecea;
+  --c-info: #1d4ed8;
+  --c-info-fill: #e8eefd;
+
+  --font-display: var(--font-inter), var(--font-script, system-ui), system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: var(--font-inter), var(--font-script, system-ui), system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --sh-sm: 0 1px 2px rgb(17 21 28 / 0.06);
+  --sh-md: 0 4px 16px rgb(17 21 28 / 0.08);
+  --sh-lg: 0 16px 48px rgb(17 21 28 / 0.12);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 420ms;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --c-page: #0d1117;
+    --c-surface: #151b23;
+    --c-raised: #1b222c;
+    --c-ink: #eef1f5;
+    --c-muted: #a3acb9;
+    --c-line: #2a323d;
+    --c-primary: #9db3ec;
+    --c-primary-hover: #b8c9f2;
+    --c-on-primary: #0d1117;
+    --c-accent: #5eead4;
+    --c-good: #6fcf97;
+    --c-good-fill: #13261b;
+    --c-warn: #fdba74;
+    --c-warn-fill: #2a1a0e;
+    --c-bad: #f97066;
+    --c-bad-fill: #2a1211;
+    --c-info: #93b4fd;
+    --c-info-fill: #111c33;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --c-page: #0d1117;
+  --c-surface: #151b23;
+  --c-raised: #1b222c;
+  --c-ink: #eef1f5;
+  --c-muted: #a3acb9;
+  --c-line: #2a323d;
+  --c-primary: #9db3ec;
+  --c-primary-hover: #b8c9f2;
+  --c-on-primary: #0d1117;
+  --c-accent: #5eead4;
+  --c-good: #6fcf97;
+  --c-good-fill: #13261b;
+  --c-warn: #fdba74;
+  --c-warn-fill: #2a1a0e;
+  --c-bad: #f97066;
+  --c-bad-fill: #2a1211;
+  --c-info: #93b4fd;
+  --c-info-fill: #111c33;
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+}

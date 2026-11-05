@@ -1,1 +1,41 @@
 @import "tailwindcss";
+@import "../src/theme/tokens.css";
+
+@theme inline {
+  --color-page: var(--c-page);
+  --color-surface: var(--c-surface);
+  --color-raised: var(--c-raised);
+  --color-ink: var(--c-ink);
+  --color-muted: var(--c-muted);
+  --color-line: var(--c-line);
+  --color-primary: var(--c-primary);
+  --color-primary-hover: var(--c-primary-hover);
+  --color-on-primary: var(--c-on-primary);
+  --color-accent: var(--c-accent);
+  --color-good: var(--c-good);
+  --color-good-fill: var(--c-good-fill);
+  --color-warn: var(--c-warn);
+  --color-warn-fill: var(--c-warn-fill);
+  --color-bad: var(--c-bad);
+  --color-bad-fill: var(--c-bad-fill);
+  --color-info: var(--c-info);
+  --color-info-fill: var(--c-info-fill);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-xl);
+  --shadow-sm: var(--sh-sm);
+  --shadow-md: var(--sh-md);
+  --shadow-lg: var(--sh-lg);
+  --ease-out: var(--ease-out);
+}
+
+@layer base {
+  html { background: var(--c-page); color: var(--c-ink); }
+  body { font-family: var(--font-body); font-size: 17px; line-height: 1.6; background: var(--c-page); }
+  h1, h2, h3, h4 { font-family: var(--font-display); text-wrap: balance; }
+  :focus-visible { outline: 2px solid var(--c-primary); outline-offset: 3px; }
+  .tabular { font-variant-numeric: tabular-nums; }
+}
