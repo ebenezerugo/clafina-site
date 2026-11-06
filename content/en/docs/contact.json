@@ -1,0 +1,69 @@
+{
+  "kind": "doc",
+  "sources": [
+    "docs/product-facts.md#platform-wide-facts-home-and-platform-pages",
+    "src/config/site.ts",
+    "ROADMAP.md"
+  ],
+  "meta": {
+    "title": "Contact Clafina",
+    "description": "Reach the right Clafina team: sales, support, privacy, security or press. Or book a demo and browse the help centre."
+  },
+  "hero": {
+    "eyebrow": "Contact",
+    "title": "Talk to the right person.",
+    "lede": "Choose what you need below. Each team has its own inbox, so your message reaches someone who can help."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "sales",
+      "heading": "Sales",
+      "paragraphs": [
+        "Thinking about Clafina for your business? Talk to sales about plans, many branches, your own approval rules or moving from another system. If you would rather see it first, book a demo and we will show you the screens for your trade."
+      ]
+    },
+    {
+      "id": "support",
+      "heading": "Support",
+      "paragraphs": [
+        "Already using Clafina? The help centre explains every module step by step, and it is often the fastest answer. If you still need us, email support and tell us your organisation's name and what you were trying to do.",
+        "Our support team reaches your account only with the owner's consent. That access is read-only by default and recorded."
+      ]
+    },
+    {
+      "id": "privacy",
+      "heading": "Privacy",
+      "paragraphs": [
+        "For questions about your personal data, or to ask to see, correct or delete it, email the privacy team. If your details are held by a business that uses Clafina, that business decides how they are used, so you may need to ask them too."
+      ]
+    },
+    {
+      "id": "security",
+      "heading": "Security",
+      "paragraphs": [
+        "If you think you have found a security problem in Clafina, email the security team. Please give us enough detail to reproduce it, and give us time to fix it before you share it with anyone else. Don't test against other people's accounts or data."
+      ]
+    },
+    {
+      "id": "press",
+      "heading": "Press",
+      "paragraphs": [
+        "Writing about Clafina? Email the press team with your publication and your deadline. The Press and brand page has a short description you can use."
+      ]
+    },
+    {
+      "id": "inboxes",
+      "heading": "Our inboxes",
+      "paragraphs": [
+        "The addresses for each team are listed below. If an address isn't shown yet, use Book a demo or Contact sales and we will pass your message on."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Other ways in",
+    "body": "Book a demo, talk to sales, or find an answer in the help centre.",
+    "routes": ["demo", "contact-sales", "help"]
+  }
+}

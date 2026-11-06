@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "Guides · Clafina",
+    "description": "Reading paths through the help centre: set up your shop, close your first month, run payroll, open a restaurant. Each one is a few how-tos in order."
+  },
+  "hero": {
+    "eyebrow": "Guides",
+    "title": "Pick a goal. Follow the steps in order.",
+    "lede": "Each guide is a short path through the help centre, from the first thing to do to the last. Open a step to read the how-to, then come back for the next one."
+  },
+  "paths": [
+    {
+      "id": "set-up-your-shop",
+      "title": "Set up your shop",
+      "intro": "From an empty account to your first invoice: your details, what you sell, your team and your brand.",
+      "steps": [
+        { "module": "settings", "article": "set-your-organisation-details" },
+        { "module": "products", "article": "add-an-item" },
+        { "module": "products", "article": "add-a-unit-of-measure" },
+        { "module": "inventory", "article": "set-reorder-levels" },
+        { "module": "people-and-access", "article": "invite-a-colleague" },
+        { "module": "studio", "article": "set-your-brand" },
+        { "module": "sales", "article": "send-an-invoice" }
+      ]
+    },
+    {
+      "id": "first-month-of-books",
+      "title": "Your first month of books",
+      "intro": "Money in, money out, the bank agreed, and the month closed. By the end you can read your profit and loss.",
+      "steps": [
+        { "module": "finance", "article": "add-a-financial-account" },
+        { "module": "sales", "article": "record-a-payment" },
+        { "module": "payables", "article": "enter-a-supplier-bill" },
+        { "module": "finance", "article": "import-a-bank-statement" },
+        { "module": "finance", "article": "reconcile-a-bank-account" },
+        { "module": "finance", "article": "close-a-month" },
+        { "module": "finance", "article": "run-a-finance-report" }
+      ]
+    },
+    {
+      "id": "first-payroll",
+      "title": "Run payroll for the first time",
+      "intro": "Put your people and their pay in place once, then run, pay and pay over each month.",
+      "steps": [
+        { "module": "human-resources", "article": "set-up-departments-and-teams" },
+        { "module": "human-resources", "article": "add-a-person" },
+        { "module": "human-resources", "article": "set-up-payroll" },
+        { "module": "human-resources", "article": "give-someone-a-salary" },
+        { "module": "human-resources", "article": "run-payroll" },
+        { "module": "human-resources", "article": "pay-over-tax-and-pension" }
+      ]
+    },
+    {
+      "id": "open-a-restaurant",
+      "title": "Open a restaurant on Clafina",
+      "intro": "Switch on the restaurant pack, draw your floor, build the menu and set up the kitchen before the first guest sits down.",
+      "steps": [
+        { "module": "settings", "article": "switch-on-an-industry-pack" },
+        { "module": "restaurant", "article": "draw-the-floor" },
+        { "module": "restaurant", "article": "make-a-menu" },
+        { "module": "restaurant", "article": "add-options" },
+        { "module": "restaurant", "article": "set-up-the-kitchen" },
+        { "module": "restaurant", "article": "write-a-recipe" },
+        { "module": "restaurant", "article": "share-tips" }
+      ]
+    },
+    {
+      "id": "run-a-guest-house",
+      "title": "Run a guest house or hotel",
+      "intro": "Set your rates, get rooms ready, and look after a guest from check-in to the night audit.",
+      "steps": [
+        { "module": "settings", "article": "switch-on-an-industry-pack" },
+        { "module": "accommodation", "article": "set-room-rates" },
+        { "module": "accommodation", "article": "get-rooms-ready" },
+        { "module": "accommodation", "article": "check-in-a-guest" },
+        { "module": "accommodation", "article": "check-out-and-settle" },
+        { "module": "accommodation", "article": "close-the-day" }
+      ]
+    },
+    {
+      "id": "get-paid-on-time",
+      "title": "Get paid on time",
+      "intro": "Quote, ask for a deposit when you need one, invoice, and follow up the customers who are late.",
+      "steps": [
+        { "module": "sales", "article": "make-a-quotation" },
+        { "module": "sales", "article": "ask-for-payment-before-you-supply" },
+        { "module": "sales", "article": "send-an-invoice" },
+        { "module": "customers", "article": "see-what-a-customer-owes" },
+        { "module": "customers", "article": "remind-customers-who-owe" },
+        { "module": "finance", "article": "identify-money-that-came-in" }
+      ]
+    },
+    {
+      "id": "buy-and-pay-suppliers",
+      "title": "Buy from suppliers and pay them",
+      "intro": "From asking for something to be bought to paying the bill, with quotes compared and goods checked on the way.",
+      "steps": [
+        { "module": "suppliers", "article": "add-a-supplier" },
+        { "module": "procurement", "article": "ask-to-buy-something" },
+        { "module": "procurement", "article": "get-quotes-from-suppliers" },
+        { "module": "procurement", "article": "make-a-purchase-order" },
+        { "module": "procurement", "article": "receive-goods" },
+        { "module": "payables", "article": "enter-a-supplier-bill" },
+        { "module": "payables", "article": "pay-suppliers" }
+      ]
+    },
+    {
+      "id": "bring-in-your-team",
+      "title": "Bring in your team",
+      "intro": "Invite people, decide what each role may do, and choose what needs someone's yes before it goes ahead.",
+      "steps": [
+        { "module": "people-and-access", "article": "invite-a-colleague" },
+        { "module": "people-and-access", "article": "change-what-a-role-may-do" },
+        { "module": "people-and-access", "article": "set-up-an-approval-policy" },
+        { "module": "approvals", "article": "approve-or-decline" },
+        { "module": "your-account", "article": "change-your-password" },
+        { "module": "your-account", "article": "choose-your-notifications" }
+      ]
+    },
+    {
+      "id": "know-how-the-business-is-doing",
+      "title": "Know how the business is doing",
+      "intro": "Read your day, understand where each number comes from, and get the figures sent to you each week.",
+      "steps": [
+        { "module": "dashboard", "article": "read-your-day" },
+        { "module": "business-insights", "article": "read-a-number" },
+        { "module": "business-insights", "article": "see-when-cash-runs-short" },
+        { "module": "business-insights", "article": "check-the-figures-agree" },
+        { "module": "reports", "article": "schedule-a-report" },
+        { "module": "settings", "article": "set-up-the-weekly-digest" }
+      ]
+    }
+  ],
+  "helpLink": "Browse the whole help centre"
+}

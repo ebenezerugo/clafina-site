@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Become a partner · Clafina",
+    "description": "Apply to partner with Clafina as an accountant, bookkeeper or implementation firm. Tell us about your firm and we will share the programme details."
+  },
+  "eyebrow": "Become a partner",
+  "title": "Partner with Clafina.",
+  "lede": "Tell us about your firm and the clients you serve. We will come back to you with the programme details and the next steps.",
+  "expect": [
+    {
+      "title": "The programme details",
+      "body": "We share how the partner programme works once we know a little about your firm."
+    },
+    {
+      "title": "A conversation about your clients",
+      "body": "We talk through the trades you serve and how Clafina would fit their work."
+    },
+    {
+      "title": "Help getting started",
+      "body": "We show you how to work across your clients' organisations, packs and imports."
+    }
+  ],
+  "form": {
+    "steps": [
+      "Your firm",
+      "Your clients' trades",
+      "Your team",
+      "When and what"
+    ],
+    "stepOf": "Step {n} of {total}",
+    "fields": {
+      "name": "Your name",
+      "email": "Work email",
+      "company": "Firm name",
+      "country": "Country",
+      "industry": "Which trade do most of your clients work in?",
+      "teamSize": "How many people work at your firm?",
+      "slot": "When can we reach you? (optional)",
+      "message": "Tell us about your firm and your clients (optional)"
+    },
+    "slotHint": "For example: weekday afternoons, Nairobi time.",
+    "other": "A mix of trades",
+    "teamSizes": {
+      "1-5": "1 to 5",
+      "6-20": "6 to 20",
+      "21-100": "21 to 100",
+      "101-500": "101 to 500",
+      "500+": "More than 500"
+    },
+    "errors": {
+      "required": "Please fill this in.",
+      "email": "Please enter an email address like name@yourfirm.com.",
+      "choose": "Please choose one.",
+      "generic": "Please check this."
+    },
+    "next": "Continue",
+    "back": "Back",
+    "send": "Send application",
+    "sending": "Sending…",
+    "notConnected": "The form is not connected yet, so your application was not sent.",
+    "notConnectedEmail": "Please email us at {email} instead.",
+    "failed": "Something went wrong and your application was not sent. Please try again in a minute.",
+    "botFailed": "We could not confirm you are not a robot. Please try again.",
+    "sent": "Thanks. We have your application and will be in touch with the programme details.",
+    "privacy": "We use these details only to answer your application."
+  }
+}

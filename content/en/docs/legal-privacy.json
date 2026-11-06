@@ -1,0 +1,228 @@
+{
+  "kind": "doc",
+  "sources": [
+    "src/lib/lead.ts",
+    "functions/api/lead.ts",
+    "src/lib/campaign.ts",
+    "src/components/CampaignLinks.tsx",
+    "src/components/switchers/CountrySwitcher.tsx",
+    "src/config/switches.ts",
+    "src/config/site.ts",
+    "public/_headers",
+    "docs/superpowers/specs/2026-11-05-clafina-website-design.md",
+    "docs/product-facts.md",
+    "/home/user/commerce-api/documentation/CONSOLE.md",
+    "/home/user/commerce-api/documentation/BILLING_HELP_PERSONAL.md",
+    "/home/user/commerce-api/documentation/ACCESS.md",
+    "/home/user/commerce-api/documentation/AUTH.md",
+    "/home/user/commerce-api/documentation/COMMERCE_AI.md",
+    "/home/user/commerce-api/documentation/COMMUNICATION.md",
+    "/home/user/commerce-mail/docs/specs/2026-11-05-business-email-design.md"
+  ],
+  "meta": {
+    "title": "Privacy notice · Clafina",
+    "description": "What personal data Clafina collects on this website and in the app, why we use it, who helps us, how long we keep it and the rights you have."
+  },
+  "hero": {
+    "eyebrow": "Legal",
+    "title": "Privacy notice",
+    "lede": "This notice explains what we collect about you, why, who helps us handle it, how long we keep it and what you can ask us to do. We have tried to write it in plain words."
+  },
+  "updated": "2026-11-06",
+  "status": "draft",
+  "sections": [
+    {
+      "id": "who-we-are",
+      "heading": "Who we are and what this notice covers",
+      "paragraphs": [
+        "Clafina runs this website and the Clafina app, which businesses use for their accounts, sales, stock, people and more. In this notice, \"we\" and \"us\" mean Clafina, and \"you\" means anyone whose personal data we handle: visitors to the site, people who send us an enquiry, and people who sign in to the app.",
+        "This notice covers the website, your Clafina account, and the parts of the app where we decide how personal data is used. It does not cover the records a business keeps about its own customers, staff and suppliers in Clafina. That business decides what it keeps and why, and its own privacy notice applies. Our data processing terms set out how we handle those records for the business.",
+        {
+          "text": "We handle personal data in line with the GDPR and the NDPA.",
+          "claim": "claims.complianceLabels"
+        }
+      ]
+    },
+    {
+      "id": "roles",
+      "heading": "When we decide, and when a business decides",
+      "paragraphs": [
+        "Data protection law gives different jobs to the one who decides why personal data is used (often called the controller) and the one who handles it on their behalf (the processor).",
+        "We are the controller for the website, for enquiries you send us, for your account and sign-in, for billing an organisation for Clafina, for checking businesses that ask to be verified, and for support cases.",
+        "We are the processor for the records an organisation keeps in Clafina about other people, such as its customers, staff, patients, members, guests and suppliers. The organisation is the controller for those records. If you are one of those people and want to see, correct or delete what a business holds about you, ask that business first. If you write to us instead, we will pass your request to the business and help it answer."
+      ]
+    },
+    {
+      "id": "website",
+      "heading": "What we collect on this website",
+      "paragraphs": [
+        "You can read the website without telling us who you are. To deliver each page and protect the site from attack, our website hosting provider handles technical details of your visit, such as your internet address, your browser and the page you asked for.",
+        "When you send an enquiry through a form on the site, such as Contact sales, we collect what you type in and a few details the page adds:"
+      ],
+      "list": [
+        "your name, your work email address and your company's name;",
+        "your country, your industry and the size of your team;",
+        "your message and, for a demo, the time you would like, if you give them;",
+        "the language of the page you used, and the date and time we received the enquiry;",
+        "the campaign tags in the link that brought you to the site, if there were any (for example, which advert or partner sent you)."
+      ]
+    },
+    {
+      "id": "bot-check",
+      "heading": "The check that keeps forms free of bots",
+      "paragraphs": [
+        "Before an enquiry is accepted, our bot-check provider runs a short check in a small frame on the form. It looks at technical signals from your browser and device to tell a person from an automated program. We send it your internet address and the result of the check so it can confirm the answer. It is there to keep the forms safe, not for advertising.",
+        "If the form is not yet connected to our enquiry system, it tells you so, and nothing you typed is kept."
+      ]
+    },
+    {
+      "id": "browser-storage",
+      "heading": "What the website keeps in your browser",
+      "paragraphs": [
+        "The website sets no cookies of its own and runs no advertising or tracking scripts. It keeps two small items in your browser, which never leave your device unless you send a form or follow a sign-up link:"
+      ],
+      "list": [
+        "the country edition you chose, so prices and wording match your country next time you visit. It stays until you clear your browser's storage;",
+        "the campaign tags from the link you arrived by, so they can go with a sign-up or an enquiry. They are cleared when you close the tab.",
+        "Our cookie notice lists these in full and explains how to remove them."
+      ]
+    },
+    {
+      "id": "app",
+      "heading": "What we collect when you use the app",
+      "paragraphs": [
+        "When you or your organisation uses Clafina, we hold:"
+      ],
+      "list": [
+        "your account: your name, email address and phone number, a protected copy of your password (never the password itself), your photo if you add one, and whether you use two-step sign-in;",
+        "your sessions and devices: when and where you signed in, the browser or device you used, so you can see your devices and sign them out;",
+        "the organisations you belong to and the roles you hold in each;",
+        "for owners and administrators, the organisation's plan, its daily usage of Clafina, and the invoices we send it;",
+        "support cases you raise in the app, the messages in them and any rating you give;",
+        "for a business that asks to be verified on the trading network, the documents it sends us and our decision;",
+        "records of what happened, such as sign-ins, changes to settings and audit trails, which keep the service safe and let your organisation see who did what."
+      ]
+    },
+    {
+      "id": "why",
+      "heading": "Why we use it, and on what basis",
+      "paragraphs": [
+        "We use personal data only where the law allows it. In plain words, the reasons are these."
+      ],
+      "list": [
+        "To answer your enquiry and arrange a demo, because you asked us to, and to follow up on it, because we have a fair business reason to.",
+        "To provide your account and the app, keep you signed in and keep the service secure, because this is what the contract with your organisation requires.",
+        "To bill organisations for Clafina, and to keep financial records, because the contract and the law require it.",
+        "To check businesses that ask to be verified, to prevent fraud and misuse, and to enforce our terms, because we have a fair business reason to keep Clafina safe for everyone.",
+        "To understand where sign-ups come from by reading campaign tags, because we have a fair business reason to know which of our efforts work.",
+        "To meet legal duties, such as answering lawful requests from authorities or keeping records for a period the law sets.",
+        "Where we rely on your consent, you can withdraw it at any time. That does not affect what we did before."
+      ]
+    },
+    {
+      "id": "sharing",
+      "heading": "Who helps us, and who else may see your data",
+      "paragraphs": [
+        "We do not sell personal data. We share it only with providers who help us run Clafina, under contracts that require them to keep it safe and use it only for us. We describe them by what they do:"
+      ],
+      "list": [
+        "our hosting provider, which runs the servers and databases for the app;",
+        "our storage and backup providers, which keep files and encrypted backups;",
+        "our website hosting provider, which delivers this site and protects it from attack, and our bot-check provider;",
+        "the system we use to keep and answer enquiries from the website;",
+        "the providers that deliver the emails and messages Clafina sends for you or for us, such as sign-in codes and invoices.",
+        "When your organisation connects a service of its own, such as a payment provider, a messaging channel or its own AI provider, data goes to that service because your organisation chose it. That service's own terms apply.",
+        "When your organisation shares a document with another organisation on Clafina, such as an invoice or an order, that organisation keeps its own copy as part of its own records.",
+        "We may also share data when the law requires it, to protect people from harm, or if Clafina's business is sold or reorganised, in which case this notice keeps applying to your data."
+      ]
+    },
+    {
+      "id": "support-access",
+      "heading": "When our support team looks inside an account",
+      "paragraphs": [
+        "Our support team can see inside an organisation's account only when an owner agrees, for the length of time the owner chooses. That session is read-only unless the owner allows more, and it is recorded."
+      ]
+    },
+    {
+      "id": "transfers",
+      "heading": "Data handled in other countries",
+      "paragraphs": [
+        "Our providers may handle data in countries other than your own. Where the law requires it, we put safeguards in place before data leaves your country, such as contract terms approved for that purpose. You can ask us for a copy of them."
+      ]
+    },
+    {
+      "id": "retention",
+      "heading": "How long we keep it",
+      "paragraphs": [
+        "We keep personal data only for as long as we need it for the reasons above, or for as long as the law requires."
+      ],
+      "list": [
+        "Enquiries from the website: for as long as we are talking with you about Clafina, and then for a limited time in case you come back to us. You can ask us to delete yours at any time.",
+        "Your account: while you use it. If you close your account, it closes after 14 days, and you can cancel at any time before then. Closing ends your sign-in and your sessions. The records you made for an organisation, such as an invoice, belong to that organisation and stay with it.",
+        "If you want your personal details removed as well, write to our privacy contact. We remove your name, password and phone number and replace your address, so the records you made show a replaced name. We cannot do this while an organisation you belong to is under a legal hold, or while you are the only member of an organisation that is still open.",
+        "An organisation's data: while the organisation uses Clafina. When it ends, we set a date to erase it. On that date its files and records are removed, and we keep only a short note that the erasure happened. Copies other organisations hold of what it sent them stay with them, and backups are replaced in their normal cycle.",
+        "Copies we prepare when you ask for your data: seven days, after which they are deleted.",
+        "Some records are kept for as long as each organisation sets in Clafina, such as messages, assistant conversations and recordings. If it sets nothing, they are kept until it removes them.",
+        {
+          "text": "Business email: when an organisation removes a mailbox, mail to it is refused but the mail is kept, so it can be restored, and it is removed for good after 30 days. Encrypted backups of mail are kept for up to 12 months, so a message deleted from a mailbox can remain in a backup until then.",
+          "prelaunch": "product-email"
+        },
+        "Billing and financial records: for as long as tax and accounting law requires."
+      ]
+    },
+    {
+      "id": "security",
+      "heading": "How we protect it",
+      "paragraphs": [
+        "We protect personal data with technical and organisational measures. For example, sign-in can need a second step with a code sent by email, organisations can use single sign-on, you can see your signed-in devices and sign them out from anywhere, connection secrets are sealed and never shown again, and access by our support team needs an owner's consent.",
+        "No system is perfectly safe. If something goes wrong that puts your data at risk, we will tell you and the authorities when the law requires it."
+      ]
+    },
+    {
+      "id": "your-rights",
+      "heading": "Your rights",
+      "paragraphs": [
+        "Depending on where you live, you can ask us to:"
+      ],
+      "list": [
+        "tell you whether we hold data about you and give you a copy;",
+        "correct data that is wrong or incomplete;",
+        "delete your data, where we no longer have a reason to keep it;",
+        "limit how we use it while a question about it is settled;",
+        "object to how we use it, including stopping marketing at any time;",
+        "give you your data in a form a computer can read, or send it to another provider;",
+        "withdraw consent you gave us.",
+        "To use any of these rights, write to our privacy contact. We may ask you to prove who you are. We answer within the time the law sets, and we do not charge unless a request is plainly unfounded or excessive.",
+        "If your data is in a business's records in Clafina, that business is the one to ask. We will help it answer."
+      ]
+    },
+    {
+      "id": "complaints",
+      "heading": "How to complain",
+      "paragraphs": [
+        "If you are unhappy with how we have handled your data, please tell our privacy contact first so we can try to put it right.",
+        "You also have the right to complain to the data protection authority in the country where you live or work, or where you think the problem happened. You do not have to come to us first."
+      ]
+    },
+    {
+      "id": "children",
+      "heading": "Children",
+      "paragraphs": [
+        "This website and Clafina accounts are for businesses and the adults who work in them. We do not knowingly collect data from children on this site. Some businesses, such as clinics and schools, keep records about children in Clafina. They are responsible for those records and for any consent they need from a parent or guardian."
+      ]
+    },
+    {
+      "id": "changes",
+      "heading": "Changes to this notice",
+      "paragraphs": [
+        "We will update this notice when what we do changes. The date at the top shows when it last changed. If a change matters to you, we will tell you before it takes effect, by email or in the app."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Questions about your data",
+    "body": "Write to our privacy contact with any question or request about your personal data.",
+    "email": "privacy",
+    "routes": ["legal-cookies", "legal-dpa", "legal-terms", "trust-privacy"]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "doc",
+  "sources": [
+    "docs/superpowers/specs/2026-11-05-clafina-website-design.md",
+    "docs/product-facts.md#platform-wide-facts-home-and-platform-pages"
+  ],
+  "meta": {
+    "title": "Press and brand · Clafina",
+    "description": "A short description of Clafina for writers and editors, how to reach the press team, and when brand assets will be ready."
+  },
+  "hero": {
+    "eyebrow": "Press and brand",
+    "title": "Writing about Clafina?",
+    "lede": "Here is a short description you can use, and how to reach us for anything else."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "boilerplate",
+      "heading": "About Clafina, in brief",
+      "paragraphs": [
+        "Clafina is a business platform that keeps a company's books, stock, sales, people and online shop on one record. Every sale, delivery, payslip and stock count posts to the same books, so owners and finance teams see the business as it is today.",
+        "Businesses use Clafina through a web app, a till that keeps selling offline, a phone app and online shops designed in Storefront Studio. Industry packs give each trade its own screens and words, from restaurants and hotels to farms and builders. Every amount carries its currency, and invoices go out in the customer's language."
+      ]
+    },
+    {
+      "id": "name",
+      "heading": "The name",
+      "paragraphs": [
+        "Clafina joins clarity and finance. Please write it with a capital C and the rest in lower case."
+      ]
+    },
+    {
+      "id": "brand-assets",
+      "heading": "Brand assets",
+      "paragraphs": [
+        "The Clafina brand is still being finalised. Logos, colours and product images will be published here once it is. Until then, please don't recreate the logo, and ask us if you need an image for a story."
+      ]
+    },
+    {
+      "id": "press-team",
+      "heading": "Talking to the press team",
+      "paragraphs": [
+        "For interviews, comment, fact checks or images, email the press team. Tell us your publication, your deadline and what you are writing about, and we will come back to you as soon as we can."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Press enquiries",
+    "body": "Email the press team with your publication and your deadline.",
+    "email": "press",
+    "routes": ["about", "contact"]
+  }
+}

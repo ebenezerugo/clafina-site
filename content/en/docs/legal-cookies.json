@@ -1,0 +1,88 @@
+{
+  "kind": "doc",
+  "sources": [
+    "src/components/switchers/CountrySwitcher.tsx",
+    "src/components/CampaignLinks.tsx",
+    "src/components/forms/LeadForm.tsx",
+    "src/components/forms/LeadPage.tsx",
+    "src/lib/campaign.ts",
+    "src/config/switches.ts",
+    "public/_headers",
+    "docs/superpowers/specs/2026-11-05-clafina-website-design.md",
+    "/home/user/commerce-api/documentation/AUTH.md",
+    "docs/product-facts.md"
+  ],
+  "meta": {
+    "title": "Cookie notice · Clafina",
+    "description": "The Clafina website sets no cookies of its own. Here is what it keeps in your browser, what the form bot check does, and how to clear it."
+  },
+  "hero": {
+    "eyebrow": "Legal",
+    "title": "Cookie notice",
+    "lede": "The Clafina website sets no cookies of its own and runs no advertising or tracking. This page lists the little it does keep in your browser, and why."
+  },
+  "updated": "2026-11-06",
+  "status": "draft",
+  "sections": [
+    {
+      "id": "what-they-are",
+      "heading": "Cookies and browser storage",
+      "paragraphs": [
+        "A cookie is a small file a website asks your browser to keep, which is sent back to the site on later visits. Browsers also have other ways to keep small items, called local storage and session storage. These stay on your device and are read only by the page that saved them. The rules on cookies usually cover these too, so we list them all here."
+      ]
+    },
+    {
+      "id": "website",
+      "heading": "What this website keeps",
+      "paragraphs": [
+        "The website keeps two items in your browser. Both are needed for something you asked for, so we do not ask for consent first. Neither is used to follow you across other sites."
+      ],
+      "list": [
+        "Your country choice (local storage, named clafina.country). When you choose a country edition, such as Nigeria or global, the site remembers it, so prices and wording match your country on your next visit. It stays until you clear your browser's storage or choose again.",
+        "Campaign tags (session storage, named clafina.campaign). If the link that brought you here carried campaign tags, for example from an advert or a partner, the site keeps them for this visit. It adds them to sign-up links and enquiry forms so we know where a sign-up came from. They are cleared when you close the tab."
+      ]
+    },
+    {
+      "id": "bot-check",
+      "heading": "The bot check on forms",
+      "paragraphs": [
+        "Pages with an enquiry form load a bot check from our bot-check provider, in a small frame on the form. It reads technical signals from your browser and device to tell a person from an automated program, and it may keep what it needs to finish the check. It runs only on pages with a form, and only to keep the form free of abuse. Our privacy notice explains what it receives."
+      ]
+    },
+    {
+      "id": "analytics",
+      "heading": "Analytics and advertising",
+      "paragraphs": [
+        "At present the website runs no analytics, advertising or social media scripts, and no tracking pixels.",
+        "We plan to count visits with a statistics service from our website hosting provider that works without cookies and without identifying you. If we turn it on, we will add it to this page first. If we ever want to add anything that does need cookies or tracks you, such as advertising, it will stay off until you agree to it in a consent banner, and you will be able to change your mind at any time."
+      ]
+    },
+    {
+      "id": "app",
+      "heading": "Inside the Clafina app",
+      "paragraphs": [
+        "Once you sign in, the Clafina app keeps your sign-in in your browser's storage rather than in cookies, so it can tell it is you on each request. It also remembers choices such as your theme and language, and some screen states, so the app looks the way you left it. The till can keep sales made without a connection on the device until they sync. These are needed for the app to work. Signing out ends your session."
+      ]
+    },
+    {
+      "id": "control",
+      "heading": "How to clear or block them",
+      "paragraphs": [
+        "You can clear everything a site has stored from your browser's settings, usually under privacy or site data. You can also block sites from storing anything. The website still works if you do: it will forget your country choice, and campaign tags will be used on the current page only. The app needs its storage to keep you signed in."
+      ]
+    },
+    {
+      "id": "changes",
+      "heading": "Changes to this notice",
+      "paragraphs": [
+        "If we change what the website or the app keeps in your browser, we will update this page before the change goes live and change the date at the top."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Questions about cookies",
+    "body": "If you have a question about what we keep in your browser, write to our privacy contact.",
+    "email": "privacy",
+    "routes": ["legal-privacy", "legal-terms"]
+  }
+}
