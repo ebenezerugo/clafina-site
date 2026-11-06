@@ -38,11 +38,12 @@ export default async function GlossaryPage({ params }: Props) {
         {letters.map((l) => (
           <section key={l} id={`letter-${l === '#' ? 'other' : l}`} aria-labelledby={`letter-${l}-title`} className="mt-10 scroll-mt-24 first:mt-0">
             <h2 id={`letter-${l}-title`} className="text-3xl font-extrabold">{l}</h2>
-            <dl className="mt-4 divide-y divide-line border-y border-line">
+            {/* Styled from the list, not per term: a long glossary stays light to load and to wire up. */}
+            <dl className="mt-4 divide-y divide-line border-y border-line [&>div]:py-4 [&_dt]:text-lg [&_dt]:font-bold [&_dd]:mt-1 [&_small]:text-sm [&_small]:text-muted [&_a:hover]:underline">
               {terms.filter((t) => letterOf(t.word) === l).map((t) => (
-                <div key={t.word} className="py-4">
-                  <dt className="text-lg font-bold">{t.word}</dt>
-                  <dd className="mt-1">{t.meaning}{t.see && <> <span className="text-sm text-muted">{c.seeIn} <a href={localePath(locale, t.see.path)} className="hover:underline">{t.see.label}</a></span></>}</dd>
+                <div key={t.word}>
+                  <dt>{t.word}</dt>
+                  <dd>{t.meaning}{t.see && <> <small>{c.seeIn} <a href={localePath(locale, t.see.path)}>{t.see.label}</a></small></>}</dd>
                 </div>
               ))}
             </dl>

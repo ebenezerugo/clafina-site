@@ -8,6 +8,7 @@ import { localePath } from '@/lib/paths';
 import { CountrySwitcher } from '@/components/switchers/CountrySwitcher';
 import { LanguageSwitcher } from '@/components/switchers/LanguageSwitcher';
 import { footerModel, type FooterColumnId } from './footer-model';
+import { FooterSection } from './FooterSection';
 
 /**
  * The footer's link area, laid out by weight: Product (in its groups) and Industries take wide columns of their own,
@@ -62,11 +63,10 @@ export async function Footer({ locale }: { locale: Locale }) {
         </div>
 
         {model.columns.length > 0 && (
-          <nav aria-label={t('footer.label')} className="grid grid-cols-2 gap-x-6 gap-y-12 border-t border-line py-12 sm:gap-x-8 lg:grid-cols-[2fr_1.5fr_1fr] xl:grid-cols-[2.1fr_1.6fr_1fr_1fr_1fr]">
+          <nav aria-label={t('footer.label')} className="grid border-t border-line pt-2 lg:grid-cols-[2fr_1.5fr_1fr] lg:gap-x-8 lg:gap-y-12 lg:py-12 xl:grid-cols-[2.1fr_1.6fr_1fr_1fr_1fr]">
             {model.productGroups.length > 0 && (
-              <section aria-labelledby="footer-product" className="col-span-2 min-w-0 lg:col-span-1">
-                <h2 id="footer-product" className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{t('footer.columns.product')}</h2>
-                <div className="mt-5 columns-2 gap-x-6">
+              <FooterSection id="product" title={t('footer.columns.product')}>
+                <div className="mt-2 columns-2 gap-x-6 lg:mt-5">
                   {model.productGroups.map((g) => (
                     <div key={g.id} className="mb-7 min-w-0 break-inside-avoid">
                       <Heading id={`footer-group-${g.id}`}>{t(g.id === 'plans' ? 'footer.plansAndApps' : (`nav.groups.${g.id}` as never))}</Heading>
@@ -74,34 +74,33 @@ export async function Footer({ locale }: { locale: Locale }) {
                     </div>
                   ))}
                 </div>
-              </section>
+              </FooterSection>
             )}
 
             {industries && (
-              <section aria-labelledby="footer-industries" className="col-span-2 min-w-0 sm:col-span-1">
-                <h2 id="footer-industries" className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{t('footer.columns.industries')}</h2>
-                <ul aria-labelledby="footer-industries" className="mt-5 columns-2 gap-x-6 text-[14px] leading-snug">
+              <FooterSection id="industries" title={t('footer.columns.industries')}>
+                <ul aria-labelledby="footer-industries" className="mt-2 columns-2 gap-x-6 text-[14px] leading-snug lg:mt-5">
                   {industries.items.map((id) => <li key={id} className={`mb-2.5 break-inside-avoid ${id === 'industries' ? 'font-semibold [column-span:all] mb-3.5' : ''}`}><a href={href(id)} className={id === 'industries' ? 'text-ink hover:underline' : 'text-muted transition-colors hover:text-ink'}>{name(id)}</a></li>)}
                 </ul>
-              </section>
+              </FooterSection>
             )}
 
             {stacks.map((stack) => (
-              <div key={stack.map((c) => c.id).join('-')} className="grid min-w-0 content-start gap-9">
+              // On a phone the stack dissolves and each section is its own fold; wider, they share a column.
+              <div key={stack.map((c) => c.id).join('-')} className="contents lg:grid lg:min-w-0 lg:content-start lg:gap-9">
                 {stack.map((c) => (
-                  <section key={c.id} aria-labelledby={`footer-${c.id}`}>
-                    <h2 id={`footer-${c.id}`} className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{t(`footer.columns.${c.id}`)}</h2>
-                    <ul aria-labelledby={`footer-${c.id}`} className="mt-5 grid gap-2.5 text-[14px] leading-snug">
+                  <FooterSection key={c.id} id={c.id} title={t(`footer.columns.${c.id}`)}>
+                    <ul aria-labelledby={`footer-${c.id}`} className="mt-2 grid gap-2.5 text-[14px] leading-snug lg:mt-5">
                       {c.items.map((id) => <li key={id}><a href={href(id)} className="text-muted transition-colors hover:text-ink">{name(id)}</a></li>)}
                     </ul>
-                  </section>
+                  </FooterSection>
                 ))}
               </div>
             ))}
           </nav>
         )}
 
-        <div className="flex flex-col gap-5 border-t border-line py-8 text-sm text-muted lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col gap-5 py-8 text-sm lg:border-t lg:border-line text-muted lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:gap-x-4">
             <span>{t('footer.copyright', { year: model.bottom.year })}</span>
             {(model.bottom.legalName || model.bottom.address) && <span>{[model.bottom.legalName, model.bottom.address].filter(Boolean).join(' · ')}</span>}
