@@ -1,11 +1,17 @@
 'use client';
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 import type { Menu, MenuItem } from './MegaMenu';
 
 const FOCUSABLE = 'a[href], button, select, summary';
 
-/** Below 1024 px: one toggle, a panel from the start side; Tab cycles through the toggle and the panel while open, Escape closes. */
+/**
+ * Below 1024 px: one toggle and a sheet under the header (full width on a phone, a side panel with the page dimmed
+ * behind it on a tablet). Tab cycles through the toggle and the sheet while open; Escape or the dimmed page closes it.
+ * The sheet is drawn at the end of <body>: inside the header, whose backdrop blur makes a new containing block, a
+ * fixed panel would be squeezed into the header's own height.
+ */
 export function MobileMenu({ menus, links, labels, actions }: {
   menus: Menu[];
   links: MenuItem[];
@@ -54,37 +60,50 @@ export function MobileMenu({ menus, links, labels, actions }: {
           {open ? <path d="M5 5l14 14M19 5L5 19" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
         </svg>
       </button>
-      <div
-        id="mobile-menu"
-        ref={panel}
-        hidden={!open}
-        data-testid="mobile-menu"
-        className="fixed inset-y-0 start-0 top-16 z-40 w-full max-w-sm overflow-y-auto border-e border-line bg-raised px-4 pb-10 shadow-lg"
-      >
-        <nav aria-label={labels.nav} className="py-4">
-          {menus.map((menu) => (
-            <details key={menu.id} className="border-b border-line py-2">
-              <summary className="flex min-h-11 cursor-pointer items-center font-medium">{menu.label}</summary>
-              {menu.groups.map((group) => (
-                <div key={group.id} className="pb-3">
-                  <p className="px-2 pt-2 text-xs font-bold uppercase tracking-[0.12em] text-muted">{group.label}</p>
-                  <ul>
-                    {group.items.map((item) => (
-                      <li key={item.id}><a href={item.href} className="block rounded-md px-2 py-2 hover:bg-surface">{item.label}</a></li>
+      {open && createPortal(
+        <>
+          <div aria-hidden="true" onClick={() => setOpen(false)} className="fixed inset-x-0 bottom-0 top-16 z-40 hidden bg-ink/30 sm:block lg:hidden" />
+          <div
+            id="mobile-menu"
+            ref={panel}
+            data-testid="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label={labels.nav}
+            className="fixed bottom-0 start-0 top-16 z-50 flex w-full flex-col bg-page sm:max-w-md sm:border-e sm:border-line sm:shadow-lg lg:hidden"
+          >
+            <nav aria-label={labels.nav} className="flex-1 overflow-y-auto overscroll-contain px-4 pb-6">
+              {menus.map((menu) => (
+                <details key={menu.id} className="group border-b border-line">
+                  <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                    {menu.label}
+                    <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" className="text-muted transition-transform group-open:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
+                  </summary>
+                  <div className="grid gap-5 pb-5">
+                    {menu.groups.map((group) => (
+                      <div key={group.id}>
+                        {menu.groups.length > 1 && <p className="pb-1 text-xs font-bold uppercase tracking-[0.12em] text-muted">{group.label}</p>}
+                        <ul className={group.items.length > 8 ? 'grid grid-cols-2 gap-x-4' : 'grid'}>
+                          {group.items.map((item) => (
+                            <li key={item.id}><a href={item.href} className="flex min-h-11 items-center rounded-md text-[15px] text-ink hover:text-primary">{item.label}</a></li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
-                  </ul>
-                </div>
+                  </div>
+                </details>
               ))}
-            </details>
-          ))}
-          <ul>
-            {links.map((link) => (
-              <li key={link.id}><a href={link.href} className="flex min-h-11 items-center border-b border-line font-medium">{link.label}</a></li>
-            ))}
-          </ul>
-        </nav>
-        <div className="grid gap-3">{actions}</div>
-      </div>
+              <ul>
+                {links.map((link) => (
+                  <li key={link.id}><a href={link.href} className="flex min-h-14 items-center border-b border-line text-lg font-semibold">{link.label}</a></li>
+                ))}
+              </ul>
+            </nav>
+            <div className="grid grid-cols-2 gap-3 border-t border-line bg-page p-4">{actions}</div>
+          </div>
+        </>,
+        document.body,
+      )}
     </div>
   );
 }

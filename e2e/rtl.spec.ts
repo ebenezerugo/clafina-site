@@ -49,5 +49,5 @@ test('Tab stays inside the open mobile menu, including its close button', async 
   await page.keyboard.press('Shift+Tab');
   await page.keyboard.press('Shift+Tab');
   await page.keyboard.press('Shift+Tab');
-  expect(await page.evaluate(() => !!document.activeElement?.closest('header'))).toBe(true);
+  expect(await page.evaluate(() => { const el = document.activeElement; return !!el && (!!el.closest('#mobile-menu') || el.getAttribute('aria-controls') === 'mobile-menu'); })).toBe(true);
 });
