@@ -2,6 +2,7 @@ import { ROUTES, type RouteDef, type RouteId } from '../../config/routes';
 import { SITE, fact } from '../../config/site';
 import { isOn, type SwitchKey } from '../../config/switches';
 import { buildMode, type BuildMode } from '../../lib/build-mode';
+import { NAV } from '../../config/nav';
 
 export type FooterColumnId = 'product' | 'industries' | 'solutions' | 'resources' | 'partners' | 'developers' | 'company' | 'trust' | 'legal';
 
@@ -19,9 +20,17 @@ const COLUMNS: { id: FooterColumnId; items: RouteId[] }[] = [
   { id: 'legal', items: byGroup('legal') },
 ];
 
+/** Product is long, so the footer shows it in the menu's own groups, plus plans and apps. */
+const PRODUCT_GROUPS: { id: string; items: string[] }[] = [
+  ...NAV.menus.find((m) => m.id === 'product')!.groups.map((g) => ({ id: g.id, items: g.items as string[] })),
+  { id: 'plans', items: ['platform', 'pricing', 'pricing-compare', 'download'] },
+];
+
 export interface FooterModel {
   top: { newsletter: boolean; appBadges: { appStore?: string; googlePlay?: string } };
   columns: { id: FooterColumnId; items: string[] }[];
+  /** The product column again, in its groups; groups with nothing available are dropped. */
+  productGroups: { id: string; items: string[] }[];
   bottom: { socials: { name: string; url: string }[]; legalName?: string; address?: string; year: number };
 }
 
@@ -38,6 +47,7 @@ export function footerModelFor(routes: readonly RouteDef[], mode: BuildMode): Fo
     // The newsletter form arrives in phase 2; until then the slot stays closed.
     top: { newsletter: false, appBadges: { ...(appStore && { appStore }), ...(googlePlay && { googlePlay }) } },
     columns: COLUMNS.map((c) => ({ id: c.id, items: c.items.filter(available) })).filter((c) => c.items.length),
+    productGroups: PRODUCT_GROUPS.map((g) => ({ id: g.id, items: g.items.filter(available) })).filter((g) => g.items.length),
     bottom: {
       socials: Object.entries(SITE.socials).flatMap(([name, f]) => { const url = fact(f); return url ? [{ name, url }] : []; }),
       legalName: fact(SITE.legalName),
