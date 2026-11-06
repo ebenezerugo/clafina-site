@@ -1,0 +1,184 @@
+{
+  "kind": "doc",
+  "sources": [
+    "docs/product-facts.md",
+    "/home/user/commerce-api/documentation/CONSOLE.md",
+    "/home/user/commerce-api/documentation/CLIENT_RECORDS.md",
+    "/home/user/commerce-api/documentation/COMMERCE_AI.md",
+    "/home/user/commerce-api/documentation/COMMUNICATION.md",
+    "/home/user/commerce-api/documentation/BILLING_HELP_PERSONAL.md",
+    "/home/user/commerce-api/documentation/AUTH.md",
+    "/home/user/commerce-mail/docs/specs/2026-11-05-business-email-design.md"
+  ],
+  "meta": {
+    "title": "Data processing terms · Clafina",
+    "description": "How Clafina handles personal data on behalf of your organisation: your instructions, security, sub-processors, help with requests, and deletion at the end."
+  },
+  "hero": {
+    "eyebrow": "Legal",
+    "title": "Data processing terms",
+    "lede": "When your organisation keeps personal data in Clafina, we handle it for you and on your instructions. These terms set out what that means for both of us."
+  },
+  "updated": "2026-11-06",
+  "status": "draft",
+  "sections": [
+    {
+      "id": "parties",
+      "heading": "Who these terms are between",
+      "paragraphs": [
+        "These terms are part of the agreement between Clafina and your organisation under our terms of service. They apply whenever we handle personal data on your organisation's behalf in providing the service.",
+        "Your organisation decides why and how that personal data is used, so it is the controller. We handle it only to provide Clafina to you, so we are the processor. Where we decide how data is used for our own reasons, such as your people's accounts, billing and support, our privacy notice applies instead.",
+        {
+          "text": "These terms are written to meet the requirements of the GDPR and the NDPA for agreements between a controller and a processor.",
+          "claim": "claims.complianceLabels"
+        }
+      ]
+    },
+    {
+      "id": "what-we-process",
+      "heading": "The data and the people it is about",
+      "paragraphs": [
+        "What we handle depends on what your organisation puts into Clafina and which parts it uses. It usually includes:"
+      ],
+      "list": [
+        "people: your customers, suppliers and their contacts, your staff and job applicants, members, guests, students, patients and clients, donors, and anyone else you keep records about;",
+        "details: names, contact details, addresses, identity and business documents, orders, invoices and payments, bank and payment details you record, pay and tax details for staff, attendance and leave, messages, call and meeting recordings and transcripts, files, and notes;",
+        "sensitive records, where your organisation chooses to keep them, such as health records kept with the client records pack.",
+        "We handle this data to store it, show it to the people you allow, carry out what your people ask Clafina to do, send the messages you ask us to send, back it up, keep it secure, and support you. We keep doing so for as long as your organisation uses Clafina, and until the data is erased as described below."
+      ]
+    },
+    {
+      "id": "instructions",
+      "heading": "We act on your instructions",
+      "paragraphs": [
+        "We handle your organisation's personal data only on its instructions. Those instructions are these terms, our terms of service, and what your people do and set in Clafina. If the law requires us to do something else, we will tell you first unless the law forbids it.",
+        "If we think an instruction breaks data protection law, we will tell you.",
+        "We do not sell your organisation's data, and we do not use it to train shared AI models."
+      ]
+    },
+    {
+      "id": "separation",
+      "heading": "Your data is kept apart",
+      "paragraphs": [
+        "Each organisation's records are kept under that organisation and shown only to the people it lets in, with the roles and permissions it sets. The AI assistant answers each person only from records they are allowed to open.",
+        {
+          "text": "Each organisation's business email is kept apart from every other organisation's, and every mail session is confined to one mailbox.",
+          "prelaunch": "product-email"
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "heading": "Our people",
+      "paragraphs": [
+        "Only people at Clafina who need access to do their job can reach your organisation's data, and they are bound to keep it confidential. Our support team sees inside your account only when an owner agrees, for as long as the owner chooses. That access is read-only unless the owner allows more, and it is recorded."
+      ]
+    },
+    {
+      "id": "security",
+      "heading": "Security",
+      "paragraphs": [
+        "We take technical and organisational measures to protect your organisation's data against loss, misuse and unauthorised access. They include:"
+      ],
+      "list": [
+        "sign-in with an optional second step by emailed code, which your organisation can require, and single sign-on;",
+        "a list of each person's signed-in devices, with remote sign-out;",
+        "connection secrets sealed with strong encryption and never shown again, and connection keys stored only in protected form;",
+        "signed webhooks, so the services you connect can check a message came from Clafina;",
+        "an audit trail for finance that cannot be changed without it showing, and separation of duties, so the person who asks cannot also approve;",
+        "for the client records pack, each organisation's records encrypted under its own key, with every access logged;",
+        "regular encrypted backups.",
+        {
+          "text": "For business email, encrypted backups every 15 minutes, with restores of a whole server or a single mailbox tested.",
+          "prelaunch": "product-email"
+        }
+      ]
+    },
+    {
+      "id": "sub-processors",
+      "heading": "Sub-processors",
+      "paragraphs": [
+        "You agree that we may use other providers to help us run Clafina. We call them sub-processors. We put each under written terms that protect your organisation's data at least as well as these terms, and we remain responsible to you for what they do. They fall into these roles:"
+      ],
+      "list": [
+        "our hosting provider, which runs the servers and databases;",
+        "our storage and backup providers, which keep files and encrypted backups;",
+        "the providers that deliver the emails and messages Clafina sends for you.",
+        "We will keep a list of our sub-processors and tell you before we add or replace one. If you have a reasonable objection on data protection grounds, tell us, and we will try to find a way forward. If we cannot, your organisation may end the affected part of the service.",
+        "Services your organisation connects itself, such as a payment provider, a bank, a messaging channel or its own AI provider, are not our sub-processors. Your organisation chose them, and its own agreement with them applies."
+      ]
+    },
+    {
+      "id": "transfers",
+      "heading": "Data handled in other countries",
+      "paragraphs": [
+        "Our sub-processors may handle data in countries other than your own. Where the law requires it, we put safeguards in place before data leaves, such as contract terms approved for that purpose."
+      ]
+    },
+    {
+      "id": "requests",
+      "heading": "Helping you with people's requests",
+      "paragraphs": [
+        "People may ask your organisation to see, correct or delete their data. Clafina gives you tools to answer, and we help where you need more:"
+      ],
+      "list": [
+        "your people can find, correct and export records from the screens they use;",
+        "for the client records pack, data requests are logged and tracked against a clock, and a request decided as done erases the clinical content while keeping a record that it happened;",
+        "we can prepare a full copy of your organisation's data, as files a computer can read, kept for seven days;",
+        "if a person writes to us about your organisation's records, we pass the request to you and do not answer it ourselves unless you ask us to."
+      ]
+    },
+    {
+      "id": "retention",
+      "heading": "Retention settings you control",
+      "paragraphs": [
+        "Your organisation decides how long many kinds of record are kept. If it sets nothing, they are kept until it removes them."
+      ],
+      "list": [
+        "messages, notifications, campaign recipients and the message log, by the number of months you set; after that, what they said and where they went is cleared, and the record that they existed stays;",
+        "conversations with the assistant, and recordings sent to it, by the number of days you set;",
+        "client records, by the retention rule your privacy officer applies. The defaults are ten years for adults, and seven years after a child comes of age if that is later. You can change them.",
+        {
+          "text": "Business email: a mailbox you remove refuses new mail, but its mail is kept so you can restore it, and is removed for good after 30 days. Encrypted backups keep every copy for 48 hours, then one a day for 30 days, one a week for 12 weeks and one a month for 12 months.",
+          "prelaunch": "product-email"
+        }
+      ]
+    },
+    {
+      "id": "breaches",
+      "heading": "If something goes wrong",
+      "paragraphs": [
+        "If we become aware of a breach of security that affects your organisation's personal data, we will tell you without undue delay. We will tell you what we know, what we are doing about it and what you may need to do, and keep you updated. We will help you meet any duty you have to tell the authorities or the people affected."
+      ]
+    },
+    {
+      "id": "assistance",
+      "heading": "Other help, and checking we keep our word",
+      "paragraphs": [
+        "Where you need it, we will give reasonable help with risk assessments and with questions from data protection authorities about our part of the service.",
+        "We will give you the information you reasonably need to show that we keep these terms. If that is not enough, you may ask for an audit, with reasonable notice, at a reasonable time, and in a way that protects other organisations' data and our security. The cost of an audit is yours unless it finds that we have seriously broken these terms."
+      ]
+    },
+    {
+      "id": "end",
+      "heading": "At the end of the service",
+      "paragraphs": [
+        "Before your organisation stops using Clafina, owners can ask for a full copy of its data. We then set a date for erasure. On that date we remove your organisation's files and every record that belongs to it, and the people who belonged to no other organisation are made anonymous. We keep only a short note that the erasure happened, without your name.",
+        "Erasure waits while a legal hold stands, or while the law requires us to keep something. Copies that other organisations hold of what you sent them, such as an invoice they received, are their own records and stay with them. Backups are not changed one by one: they are replaced in their normal cycle."
+      ]
+    },
+    {
+      "id": "changes",
+      "heading": "Changes to these terms",
+      "paragraphs": [
+        "We may update these terms when Clafina or the law changes. The date at the top shows when they last changed. We will tell owners before an important change takes effect, and a change will not lower the protection these terms give your organisation's data."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Questions about data processing",
+    "body": "Write to our privacy contact for a signed copy of these terms, the list of sub-processors, or help with a request.",
+    "email": "privacy",
+    "routes": ["legal-privacy", "legal-terms", "trust-privacy", "trust-security"]
+  }
+}

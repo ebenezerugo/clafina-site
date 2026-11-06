@@ -1,0 +1,122 @@
+{
+  "kind": "solution",
+  "sources": [
+    "docs/product-facts.md#product-stock",
+    "docs/product-facts.md#product-pos",
+    "docs/product-facts.md#product-online-shop",
+    "docs/product-facts.md#product-hr",
+    "docs/product-facts.md#product-purchasing",
+    "docs/product-facts.md#product-finance",
+    "ACCESS.md",
+    "SALES.md",
+    "STOCK.md",
+    "src/config/plans.ts"
+  ],
+  "meta": {
+    "title": "Growing business · Clafina",
+    "description": "A second branch, a depot, more staff and an online shop, on the same stock and the same books. Clafina grows with you, place by place."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Growing business",
+    "title": "Open the next branch without starting again.",
+    "lede": "Add places, tills, people and an online shop to the records you already keep. Stock, payroll and the books stay one set.",
+    "screen": "stock-levels"
+  },
+  "painsTitle": "What changes when you grow",
+  "pains": [
+    {
+      "pain": "A second branch means a second set of records.",
+      "fix": "Each new place joins the same organisation. Stock is kept per place, and every sale and purchase posts to the same books."
+    },
+    {
+      "pain": "Stock moves between places on a phone call.",
+      "fix": "Transfers between places record what left, what is in transit and what arrived, so nothing goes missing on the road."
+    },
+    {
+      "pain": "Payroll still lives in a spreadsheet.",
+      "fix": "Payroll runs are calculated, approved and paid in Clafina, with a payslip for each person and the cost posted to the books."
+    },
+    {
+      "pain": "Selling online means keeping a second catalogue.",
+      "fix": "Open an online shop from Clafina. It sells your stock at your prices, and orders come back as sales orders."
+    },
+    {
+      "pain": "New staff either see everything or nothing.",
+      "fix": "Invite each person with a role at the places they work. Accepting gives them exactly that, and you change it from their page."
+    },
+    {
+      "pain": "Nobody can say which branch is doing well.",
+      "fix": "Till reports show sales by place, till, cashier and hour, and stock levels show what each place holds and what it is worth."
+    }
+  ],
+  "storyTitle": "One growing business, before and after",
+  "story": {
+    "business": {
+      "name": "Ojo Building Supplies",
+      "place": "Abeokuta",
+      "label": true
+    },
+    "before": "Ojo began as one yard. Then came a second yard across town and a shop near the market. Cement and rods moved between them on a phone call, wages lived in a spreadsheet, and the owner kept the figures for all three in his head.",
+    "after": "Now the three places share one stock ledger, each with its own count, and transfers show what is on the road. Payroll runs once a month in Clafina. Builders order from the online shop at the counter's prices, and the books show the whole business in one place."
+  },
+  "modulesTitle": "What a growing business adds",
+  "modules": [
+    {
+      "route": "product-stock",
+      "why": "Stock per place, transfers in transit and reorder levels for each item in each place."
+    },
+    {
+      "route": "product-pos",
+      "why": "Register more tills at each place, with shifts, cash counts and reports by till and cashier."
+    },
+    {
+      "route": "product-online-shop",
+      "why": "An online shop on the same stock and price lists as your tills."
+    },
+    {
+      "route": "product-hr",
+      "why": "Staff, rotas, leave and payroll runs that post to the books."
+    },
+    {
+      "route": "product-purchasing",
+      "why": "Requisitions, quotes compared and bills matched to what was received, before anyone pays."
+    },
+    {
+      "route": "product-finance",
+      "why": "One set of books for every place, with budgets that warn or block before money leaves."
+    },
+    {
+      "route": "product-business-health",
+      "why": "Margin, runway and the cash cycle in plain sentences as the business gets bigger."
+    }
+  ],
+  "planTitle": "The plan for this stage",
+  "plan": {
+    "id": "growth",
+    "why": "Growth adds more users, places and tills to the free plan, with an online shop, payroll and the industry packs. When you want approval policies, the API and the audit trail, Business adds them."
+  },
+  "faqTitle": "Questions growing businesses ask",
+  "faq": [
+    {
+      "q": "Do I lose anything when I change plan?",
+      "a": "No. Your records stay as they are, and the new plan adds what it includes."
+    },
+    {
+      "q": "Can each branch have its own document numbers?",
+      "a": "Yes. Numbering is set per kind of document and per place."
+    },
+    {
+      "q": "Can I add an industry pack later?",
+      "a": "Yes. Packs such as Restaurant or Events add to the same records, from the Growth plan up."
+    },
+    {
+      "q": "How do new staff get in?",
+      "a": "You invite them by email with a role at a place. An invitation lasts a week, and accepting it gives them exactly what it offered."
+    }
+  ],
+  "cta": {
+    "title": "Grow on the records you already keep.",
+    "body": "Add your next place, till or online shop to Clafina, and keep one set of books."
+  }
+}

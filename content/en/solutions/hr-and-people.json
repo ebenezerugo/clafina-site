@@ -1,0 +1,117 @@
+{
+  "kind": "solution",
+  "sources": [
+    "docs/product-facts.md#product-hr",
+    "docs/product-facts.md#product-finance",
+    "docs/product-facts.md#product-projects",
+    "docs/product-facts.md#product-mobile",
+    "docs/product-facts.md#product-assets",
+    "docs/product-facts.md#product-communication",
+    "HR.md",
+    "src/config/plans.ts"
+  ],
+  "meta": {
+    "title": "HR and people · Clafina",
+    "description": "Staff records, rotas, clock-in, leave and payroll in one place, with payslips for everyone and the cost posted to the books."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "HR and people",
+    "title": "People, time, leave and pay in one place.",
+    "lede": "Plan the rota, decide leave, run payroll and post it to the books. Everyone reads their own payslips.",
+    "screen": "hr-overview"
+  },
+  "painsTitle": "What wears HR down",
+  "pains": [
+    {
+      "pain": "Contracts and papers run out without anyone noticing.",
+      "fix": "Staff records hold contracts, right to work and documents, and compliance records carry their expiry. The HR overview lists contracts ending soon."
+    },
+    {
+      "pain": "The rota is redrawn by hand every week.",
+      "fix": "Rotation plans generate the rota from your shifts, leaving out holidays and approved leave. Attendance is checked against each shift."
+    },
+    {
+      "pain": "Leave is agreed in the corridor.",
+      "fix": "Entitlements carry over to a limit you set. Requests go to whoever your policy names, who sees the balance and who else is away."
+    },
+    {
+      "pain": "Payroll is a spreadsheet nobody else can check.",
+      "fix": "Payroll runs are calculated from pay groups, grades and components with the tax tables you enter, then approved, paid and posted to the books."
+    },
+    {
+      "pain": "Tax and pension have to be paid over by hand.",
+      "fix": "Paying over tax and pension is raised from the run as payment requests, and employer contributions are posted."
+    },
+    {
+      "pain": "Staff ask HR for every payslip.",
+      "fix": "Everyone reads their own record, leave and payslips, and clocks in themselves where you allow it."
+    }
+  ],
+  "storyTitle": "One team of 86, before and after",
+  "story": {
+    "business": {
+      "name": "Bright Harbour Traders",
+      "place": "Lagos",
+      "label": true
+    },
+    "before": "Bright Harbour has 86 people across a store, a depot and a shop. Wages were worked out in a spreadsheet the night before pay day. Leave was agreed in the corridor, and nobody noticed a contract ending until the person asked.",
+    "after": "Now the October run is calculated in Clafina, checked line by line and approved before pay day, with the cost posted to the books. Leave requests wait in the inbox with the balance beside them. The HR overview lists the contracts ending this month.",
+    "screen": "hr-payroll-run"
+  },
+  "modulesTitle": "What HR uses",
+  "modules": [
+    {
+      "route": "product-hr",
+      "why": "Staff, contracts, rotas, attendance, leave, payroll and performance reviews."
+    },
+    {
+      "route": "product-finance",
+      "why": "Payroll posted to the books, and tax and pension paid over as payment requests."
+    },
+    {
+      "route": "product-projects",
+      "why": "Weekly timesheets through approval, costed at each person's rate."
+    },
+    {
+      "route": "product-mobile",
+      "why": "Leave on the phone, for staff who ask and managers who decide."
+    },
+    {
+      "route": "product-assets",
+      "why": "A return checklist for leavers, so laptops and keys come back."
+    },
+    {
+      "route": "product-communication",
+      "why": "Team chat by department or team, and announcements people acknowledge."
+    }
+  ],
+  "planTitle": "The plan for HR",
+  "plan": {
+    "id": "growth",
+    "why": "Payroll comes with Growth, along with more users and places. Business adds approval policies and the audit trail."
+  },
+  "faqTitle": "Questions HR teams ask",
+  "faq": [
+    {
+      "q": "Does Clafina come with our country's tax tables?",
+      "a": "You enter your own tax tables by country and state, with reliefs and non-resident tables, so the rules stay yours to check."
+    },
+    {
+      "q": "Can staff clock in themselves?",
+      "a": "Yes, where you allow it. Clocking in is checked against the shift, in your organisation's time zone, so late arrivals and early leavers are recorded."
+    },
+    {
+      "q": "Can a paid run be undone?",
+      "a": "Yes. Voiding a paid run shows how the money comes back."
+    },
+    {
+      "q": "Can people change their own details?",
+      "a": "They read their own record, and changes they ask for go through HR."
+    }
+  ],
+  "cta": {
+    "title": "Run your next payroll in Clafina.",
+    "body": "Start with your staff and pay groups, and the rota, leave and payslips follow."
+  }
+}

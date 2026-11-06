@@ -1,0 +1,119 @@
+{
+  "kind": "solution",
+  "sources": [
+    "docs/product-facts.md#product-sales",
+    "docs/product-facts.md#product-pos",
+    "docs/product-facts.md#product-stock",
+    "docs/product-facts.md#product-finance",
+    "docs/product-facts.md#product-tax",
+    "docs/product-facts.md#product-mobile",
+    "docs/product-facts.md#product-capture",
+    "SALES.md",
+    "POINT_OF_SALE.md",
+    "APPROVALS.md",
+    "src/config/plans.ts"
+  ],
+  "meta": {
+    "title": "Small business · Clafina",
+    "description": "Quotes, invoices, a till and your stock in one app, with the books written as you sell. Start free with one place and one till."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Small business",
+    "title": "Run the whole business from one place, and start free.",
+    "lede": "Quotations, invoices, a till and your stock in one app, with the books written as you sell. Nobody has to type anything twice.",
+    "screen": "sales-home"
+  },
+  "painsTitle": "What gets in the way",
+  "pains": [
+    {
+      "pain": "Invoices live in a notebook, a spreadsheet and your memory.",
+      "fix": "Quotations, invoices and receipts live in Clafina, each usable on its own. Turn a quotation into an invoice in one step, and see who owes you, oldest first."
+    },
+    {
+      "pain": "The internet drops and the queue waits.",
+      "fix": "The till runs on a desktop computer, an Android device or in the browser, and keeps selling offline. Each sale is sent when the line is back."
+    },
+    {
+      "pain": "You find out you have run out when a customer asks.",
+      "fix": "Every sale moves stock as it happens. Set a reorder level for each item, and Clafina lists what needs ordering."
+    },
+    {
+      "pain": "The books get done once a quarter, from a box of receipts.",
+      "fix": "Every invoice, receipt and bill writes its own journal entry into a chart of accounts made for your country. Profit and loss is there whenever you look."
+    },
+    {
+      "pain": "Tax is worked out by hand on every invoice.",
+      "fix": "The tax engine puts the right tax on each line from rules you own, and shows how it decided. Country presets give you a place to start."
+    }
+  ],
+  "storyTitle": "One small business, before and after",
+  "story": {
+    "business": {
+      "name": "Ofure Prints and Stationery",
+      "place": "Benin City",
+      "label": true
+    },
+    "before": "Ofure ran the counter, the printing and the paperwork on her own. Quotes went out on paper, sales went into a notebook, and she counted reams by eye on Saturdays. Her accountant pieced the year together from a box of receipts.",
+    "after": "Now quotes go out as links and come back accepted. The till on the shop laptop keeps selling when the line drops. Paper and ink come off the count as they sell, and the books are ready when her accountant asks. She checks what is owed on her phone between jobs."
+  },
+  "modulesTitle": "Where a small business starts",
+  "modules": [
+    {
+      "route": "product-sales",
+      "why": "Quotations, invoices and receipts, with stock and the books following each one."
+    },
+    {
+      "route": "product-pos",
+      "why": "A till that sells online or off, with cashier PINs and a Z report at close."
+    },
+    {
+      "route": "product-stock",
+      "why": "One count of what you hold, with reorder levels and counts on a phone."
+    },
+    {
+      "route": "product-finance",
+      "why": "Books that post themselves, with profit and loss, balance sheet and ageing ready to export."
+    },
+    {
+      "route": "product-tax",
+      "why": "The right tax on every line, with the working kept on the line."
+    },
+    {
+      "route": "product-mobile",
+      "why": "Sales today, cash and what needs ordering on your phone, and invoices sent from it."
+    },
+    {
+      "route": "product-capture",
+      "why": "Photograph a supplier bill or receipt and get a draft to check, not a typing job."
+    }
+  ],
+  "planTitle": "The plan to start on",
+  "plan": {
+    "id": "free",
+    "why": "Free covers the books, sales, stock and a till for one place. When you add a second place, a second till or an online shop, move to Growth and keep everything you have."
+  },
+  "faqTitle": "Questions small businesses ask",
+  "faq": [
+    {
+      "q": "Do I need an accountant to set it up?",
+      "a": "No. You start from a chart of accounts made for your country, and every document posts to it by itself. Your accountant can work in the same books when you invite them."
+    },
+    {
+      "q": "Can I run it from my phone?",
+      "a": "Yes. The phone app shows sales today, cash and what needs ordering, and you can make quotations, invoices and receipts on it. Prices and taxes come from Clafina, not from the phone."
+    },
+    {
+      "q": "Do I have to set up approvals?",
+      "a": "No. Until you set an approval policy, documents go straight through. Approval policies come with the Business plan, for when staff should ask first."
+    },
+    {
+      "q": "What happens when I outgrow the free plan?",
+      "a": "You change plan and keep your records. Growth adds more places and tills, an online shop, payroll and the industry packs."
+    }
+  ],
+  "cta": {
+    "title": "Start free today.",
+    "body": "Send your first invoice and open your till on the free plan. Add places, tills and people as you grow."
+  }
+}

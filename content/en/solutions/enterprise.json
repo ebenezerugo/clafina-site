@@ -1,0 +1,123 @@
+{
+  "kind": "solution",
+  "sources": [
+    "docs/product-facts.md#platform-wide-facts-home-and-platform-pages",
+    "docs/product-facts.md#product-finance",
+    "docs/product-facts.md#product-business-health",
+    "docs/product-facts.md#product-integrations",
+    "docs/product-facts.md#product-trading-network",
+    "docs/product-facts.md#product-purchasing",
+    "docs/product-facts.md#product-tax",
+    "GROUP_CONSOLIDATION.md",
+    "APPROVALS.md",
+    "ACCESS.md",
+    "src/config/plans.ts"
+  ],
+  "meta": {
+    "title": "Enterprise · Clafina",
+    "description": "Single sign-on, group consolidation, approval policies, a hash-chained audit trail and an API, for groups with many companies, places and teams."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Enterprise",
+    "title": "Many companies and teams, one set of rules.",
+    "lede": "Sign in through your own identity provider, consolidate the group with eliminations, and keep every approval and posting on the record.",
+    "screen": "business-health-executive"
+  },
+  "painsTitle": "What slows a large organisation down",
+  "pains": [
+    {
+      "pain": "Every team signs in a different way.",
+      "fix": "Single sign-on by SAML or OIDC. People see their signed-in devices and can sign them out remotely."
+    },
+    {
+      "pain": "Group accounts take weeks of spreadsheets.",
+      "fix": "Group consolidation takes each company's books into the group currency, takes out what they trade with each other line by line, and shows non-controlling interest and goodwill."
+    },
+    {
+      "pain": "Nobody can show who approved what.",
+      "fix": "Approval policies name who decides, by person, role or group, and can hold only documents over an amount or from a place. Finance keeps a hash-chained audit trail."
+    },
+    {
+      "pain": "Group companies retype each other's orders.",
+      "fix": "Group companies trade over the trading network into intercompany. One side's purchase order becomes the other side's sales order."
+    },
+    {
+      "pain": "Your own systems never hear what happened.",
+      "fix": "Outgoing webhooks are signed, retried, logged and replayable. API keys are scoped to permissions, hashed and shown once."
+    },
+    {
+      "pain": "Supplier bank details change without anyone noticing.",
+      "fix": "A change to a supplier's bank account needs three people, and the requester cannot approve their own payments or bills."
+    }
+  ],
+  "storyTitle": "One group, before and after",
+  "story": {
+    "business": {
+      "name": "Ndani Holdings",
+      "place": "Lagos and Abuja",
+      "label": true
+    },
+    "before": "Ndani owns a distributor and a chain of shops outright, and a share in a packaging firm. Each company kept its own books. The group accounts were built each quarter in spreadsheets, trade between the companies was taken out by hand, and staff kept a separate password for every system.",
+    "after": "Now each company keeps its books in Clafina, and the group consolidates them with eliminations line by line, with the packaging firm taken in by the equity method. Staff sign in through the group's own identity provider. Every approval and posting sits in one audit trail."
+  },
+  "modulesTitle": "What an enterprise relies on",
+  "modules": [
+    {
+      "route": "product-finance",
+      "why": "Intercompany links, group consolidation, period close and a hash-chained audit trail."
+    },
+    {
+      "route": "product-business-health",
+      "why": "Group dashboards that read the consolidated statements, and figures that say whether they agree with the books."
+    },
+    {
+      "route": "product-integrations",
+      "why": "Single sign-on, scoped API keys, signed webhooks and an MCP server for outside AI tools."
+    },
+    {
+      "route": "product-trading-network",
+      "why": "Group companies order from each other without retyping, into intercompany."
+    },
+    {
+      "route": "product-purchasing",
+      "why": "Supplier lifecycle, compliance documents with expiry and bank changes that need three people."
+    },
+    {
+      "route": "product-tax",
+      "why": "Tax rules owned by the business, with every change saved only on approval."
+    },
+    {
+      "route": "product-assistant",
+      "why": "Answers and drafts that act with each person's permissions, with every call audited."
+    }
+  ],
+  "planTitle": "The plan for a group",
+  "plan": {
+    "id": "enterprise",
+    "why": "Enterprise has everything in Business, with single sign-on, priority support and help to get set up. Users, places and tills have no set limit."
+  },
+  "faqTitle": "Questions enterprises ask",
+  "faq": [
+    {
+      "q": "Which sign-on standards do you support?",
+      "a": "SAML and OIDC. Two-step sign-in is there for anyone not signing in through your identity provider."
+    },
+    {
+      "q": "Can we consolidate companies we only part own?",
+      "a": "Yes. Each holding takes a method: in full with non-controlling interest, proportionally, or by the equity method. The screen suggests one from the share held."
+    },
+    {
+      "q": "Can our own systems read and write data?",
+      "a": "Yes, through the API with keys scoped to permissions, and signed outgoing webhooks. Outside AI tools sign in to the MCP server instead of using a key."
+    },
+    {
+      "q": "How does Clafina support reach our account?",
+      "a": "Only with the owner's consent. The session is read-only by default, and it is recorded."
+    }
+  ],
+  "cta": {
+    "title": "Talk to us about your group.",
+    "body": "Tell us how your companies, places and teams fit together, and we will show you Clafina set up that way."
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "kind": "solution",
+  "sources": [
+    "docs/product-facts.md#product-stock",
+    "docs/product-facts.md#product-purchasing",
+    "docs/product-facts.md#product-sales",
+    "docs/product-facts.md#product-mobile",
+    "docs/product-facts.md#product-assets",
+    "docs/product-facts.md#product-capture",
+    "STOCK.md",
+    "src/config/plans.ts"
+  ],
+  "meta": {
+    "title": "Operations and stock · Clafina",
+    "description": "Know what you hold, where and what it is worth. Reorder levels, blind counts on a phone, transfers in transit and bills matched to what arrived."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Operations and stock",
+    "title": "Know what you hold, where, and what to order next.",
+    "lede": "One movement ledger for every place, with reorder levels, counts on a phone and purchases matched to what really arrived.",
+    "screen": "stock-reorder"
+  },
+  "painsTitle": "Where stock goes wrong",
+  "pains": [
+    {
+      "pain": "You find out you have run out when a customer asks.",
+      "fix": "Reorder levels set a minimum, a safety level, a reorder point and a quantity for each item in each place. Order what needs it turns the shortfall into orders."
+    },
+    {
+      "pain": "Counts never agree with the books.",
+      "fix": "Count sheets can be blind, so the counter sees what was expected only after saving. Count on a phone, shelf by shelf."
+    },
+    {
+      "pain": "Stock goes missing between places.",
+      "fix": "Transfers record what left, what is in transit and what arrived. Adjustments above a value you set go through approval."
+    },
+    {
+      "pain": "Suppliers bill for what never arrived.",
+      "fix": "Goods received are checked against the order, and the bill against both. A bill that doesn't match is held before it is paid."
+    },
+    {
+      "pain": "Short-dated stock is found too late.",
+      "fix": "Batches carry their expiry, and stock classes with cycle counts keep attention on the items that matter most."
+    },
+    {
+      "pain": "Deliveries leave with no proof they arrived.",
+      "fix": "Waybills take stock out when they leave, are followed on the road and are signed for or disputed at the door."
+    }
+  ],
+  "storyTitle": "One warehouse, before and after",
+  "story": {
+    "business": {
+      "name": "Arewa Grains and Provisions",
+      "place": "Kano",
+      "label": true
+    },
+    "before": "Arewa sells grain, oil and provisions to shops across the city from a warehouse and a depot. Reorders were the storekeeper's guess. The monthly count took a weekend and never matched, and bills were paid on the supplier's word.",
+    "after": "Now each item has a level at each place, and the reorder list builds the orders. The storekeeper counts on a phone without seeing what is expected. Goods received are checked against the order, and a bill for more than arrived waits."
+  },
+  "modulesTitle": "What operations teams use",
+  "modules": [
+    {
+      "route": "product-stock",
+      "why": "One movement ledger, reorder levels, counts, batches and transfers between places."
+    },
+    {
+      "route": "product-purchasing",
+      "why": "Requisitions, quotes compared, goods received and bills matched before payment."
+    },
+    {
+      "route": "product-sales",
+      "why": "Waybills that move stock when they leave and are signed for on delivery."
+    },
+    {
+      "route": "product-mobile",
+      "why": "Counts and goods received on a phone."
+    },
+    {
+      "route": "product-assets",
+      "why": "Machines and vehicles kept maintained, with parts taken from stock."
+    },
+    {
+      "route": "product-capture",
+      "why": "Delivery notes and supplier bills read into drafts to check."
+    }
+  ],
+  "planTitle": "The plan for operations",
+  "plan": {
+    "id": "business",
+    "why": "Stock and sales come with every plan. Business adds approval policies for transfers, adjustments and purchases, the API for your own tools and the audit trail."
+  },
+  "faqTitle": "Questions operations teams ask",
+  "faq": [
+    {
+      "q": "How is stock valued?",
+      "a": "By moving average or FIFO, with landed costs, and the stock account always equals the stock value."
+    },
+    {
+      "q": "Can we see what we held on a past date?",
+      "a": "Yes. The movement ledger only adds, never overwrites, so you can see the position on any past date."
+    },
+    {
+      "q": "Can stock change without a document?",
+      "a": "You choose. One setting means stock moves only through documents, and adjustment requests above a value go through approval."
+    },
+    {
+      "q": "Can we count on a phone?",
+      "a": "Yes. Count on a phone with a blind count, and receive goods on it as they arrive."
+    }
+  ],
+  "cta": {
+    "title": "Count it once, and trust it.",
+    "body": "Start with your items and places, and set reorder levels as you go."
+  }
+}

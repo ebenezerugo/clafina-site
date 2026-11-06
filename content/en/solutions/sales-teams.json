@@ -1,0 +1,116 @@
+{
+  "kind": "solution",
+  "sources": [
+    "docs/product-facts.md#product-sales",
+    "docs/product-facts.md#product-crm",
+    "docs/product-facts.md#product-communication",
+    "docs/product-facts.md#product-mobile",
+    "docs/product-facts.md#product-assistant",
+    "docs/product-facts.md#product-business-health",
+    "docs/product-facts.md#product-trading-network",
+    "src/config/plans.ts"
+  ],
+  "meta": {
+    "title": "Sales and customer teams · Clafina",
+    "description": "Quotations customers can answer, deals on a pipeline, support tickets answered on time and loyalty points in the books, all on one customer page."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Sales and customer teams",
+    "title": "Every customer on one page, from first quote to last ticket.",
+    "lede": "Quote, follow up, invoice and answer support with what each customer bought, owes and said in front of you.",
+    "screen": "crm-customers"
+  },
+  "painsTitle": "What gets in the way of selling",
+  "pains": [
+    {
+      "pain": "Quotes go out and nobody hears back.",
+      "fix": "Send a quotation as a link. The customer accepts it or proposes other prices, and every offer is kept."
+    },
+    {
+      "pain": "Deals live in someone's head.",
+      "fix": "Deals sit on pipeline boards with their activities, so anyone on the team can pick one up."
+    },
+    {
+      "pain": "Prices depend on who you ask.",
+      "fix": "Prices come from the price book, with base, wholesale and quantity breaks, and discount policies set how far each person may go."
+    },
+    {
+      "pain": "Support questions get lost in someone's inbox.",
+      "fix": "Support tickets are numbered, owned and due, with first-response and resolution times, and escalation when they slip."
+    },
+    {
+      "pain": "Customers buy once and drift away.",
+      "fix": "A loyalty scheme with tiers and points, and campaigns to saved audiences with consent records and one-click unsubscribe."
+    },
+    {
+      "pain": "The meeting ends and the quote takes days.",
+      "fix": "Record the meeting on your phone. The assistant writes the minutes and drafts the quotation for you to check, and nothing is sent until you confirm."
+    }
+  ],
+  "storyTitle": "One sales team, before and after",
+  "story": {
+    "business": {
+      "name": "Tidewater Office Supplies",
+      "place": "Victoria Island, Lagos",
+      "label": true
+    },
+    "before": "Tidewater's four reps kept their deals in notebooks and quoted from an old price list. Customers rang the office to ask where their order was, and complaints sat in one person's email.",
+    "after": "Now quotes go out as links from the price book, and counter-offers come back on the quotation. Deals move across one board. Every complaint is a ticket with an owner and a due time, and the customer page shows what each buyer owes before the next call."
+  },
+  "modulesTitle": "What sales and customer teams use",
+  "modules": [
+    {
+      "route": "product-crm",
+      "why": "One page per customer, deals on pipelines, support tickets, loyalty and campaigns."
+    },
+    {
+      "route": "product-sales",
+      "why": "Quotations customers can answer, proformas, invoices and waybills."
+    },
+    {
+      "route": "product-communication",
+      "why": "Conversations tied to the customer or document they are about, in one inbox."
+    },
+    {
+      "route": "product-mobile",
+      "why": "Quotes, orders and invoices on the road, priced by Clafina, and the deal board."
+    },
+    {
+      "route": "product-assistant",
+      "why": "Minutes and draft quotations from a meeting voice note."
+    },
+    {
+      "route": "product-business-health",
+      "why": "What it costs to win a customer, by channel, and what a customer is worth over time."
+    }
+  ],
+  "planTitle": "The plan for sales teams",
+  "plan": {
+    "id": "growth",
+    "why": "Growth gives the team more users, an online shop and the industry packs on top of sales and invoicing. Business adds approval policies for quotations and discounts above your limits."
+  },
+  "faqTitle": "Questions sales teams ask",
+  "faq": [
+    {
+      "q": "Can customers answer a quote without an account?",
+      "a": "Yes. Shared links need no password. Acting on one, such as accepting, asks for a one-time code."
+    },
+    {
+      "q": "Can we sell from a phone?",
+      "a": "Yes. Make quotations, orders, invoices and proformas on the phone, priced by Clafina, and turn a quotation straight into an invoice."
+    },
+    {
+      "q": "Do loyalty points show in the books?",
+      "a": "Yes. Points earned and spent both post to the ledger."
+    },
+    {
+      "q": "Which channels can campaigns use?",
+      "a": "Email, SMS, chat apps and in-app messages, with opens, clicks and conversions for each."
+    }
+  ],
+  "cta": {
+    "title": "Give every customer one page.",
+    "body": "Start free with quotations and invoices, and add deals, tickets and loyalty as the team grows."
+  }
+}
