@@ -34,7 +34,9 @@ test('Tab stays inside the open mobile menu, including its close button', async 
   const panel = page.getByTestId('mobile-menu');
   await expect(panel.locator(':focus')).toHaveCount(1);
   let reachedToggle = false;
-  for (let i = 0; i < 6; i++) {
+  // Tab through every control in the panel and past its end, so focus has to come round to the toggle.
+  const stops = await panel.locator('a:visible, button:visible, summary:visible').count();
+  for (let i = 0; i < stops + 2; i++) {
     await page.keyboard.press('Tab');
     reachedToggle ||= await page.evaluate(() => document.activeElement?.getAttribute('aria-controls') === 'mobile-menu');
     const inside = await page.evaluate(() => {

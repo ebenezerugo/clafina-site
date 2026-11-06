@@ -67,7 +67,7 @@ export default async function WhyPage({ params }: Props) {
         </section>
       )}
 
-      <section id="explainer" aria-labelledby="why-title">
+      <div id="explainer">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
           {c.sections.map((s) => (
             <section key={s.id} id={s.id} aria-labelledby={`${s.id}-title`} className="mt-12 first:mt-0 scroll-mt-24">
@@ -76,7 +76,7 @@ export default async function WhyPage({ params }: Props) {
             </section>
           ))}
         </div>
-      </section>
+      </div>
 
       <section id="faq" aria-labelledby="faq-title" className="bg-surface">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">

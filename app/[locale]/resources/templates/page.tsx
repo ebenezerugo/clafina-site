@@ -34,13 +34,13 @@ export default async function TemplatesPage({ params }: Props) {
           <ol className="mt-3 grid list-decimal gap-2 ps-6">{c.howTo.map((s) => <li key={s}>{s}</li>)}</ol>
         </div>
       </section>
-      <section id="templates" aria-labelledby="templates-title">
+      <section id="templates" aria-label={c.hero.eyebrow}>
         <div className="mx-auto grid max-w-4xl gap-16 px-4 py-16 sm:px-6">
           {c.templates.map((d) => {
             const subtotal = d.lines.reduce((n, l) => n + l.qty * l.price, 0);
             const tax = Math.round(subtotal * d.taxRate * 100) / 100;
             return (
-              <article key={d.id} id={d.id} aria-labelledby={`${d.id}-title`} className="scroll-mt-24">
+              <article key={d.id} id={d.id} aria-labelledby={`${d.id}-title`} className="min-w-0 scroll-mt-24">
                 <div data-no-print="">
                   <h2 id={`${d.id}-title`} className="text-2xl font-extrabold tracking-tight">{d.title}</h2>
                   <p className="mt-2 text-muted">{d.body}</p>

@@ -51,7 +51,7 @@
 
 /* Free templates: printing one document hides the rest of the page. */
 @media print {
-  body[data-printing] > *:not(main), body[data-printing] main > *:not(#templates) { display: none !important; }
+  body[data-printing] header, body[data-printing] footer, body[data-printing] main > *:not(#templates) { display: none !important; }
   body[data-printing] [data-print] { display: none; }
   body[data-printing="invoice"] [data-print="invoice"],
   body[data-printing="quotation"] [data-print="quotation"],
