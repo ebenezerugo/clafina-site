@@ -1,0 +1,130 @@
+{
+  "kind": "doc",
+  "sources": [
+    "docs/product-facts.md",
+    "/home/user/commerce-api/documentation/CONSOLE.md",
+    "/home/user/commerce-api/documentation/COMMUNICATION.md",
+    "/home/user/commerce-api/documentation/RATE_LIMITS.md",
+    "/home/user/commerce-mail/docs/specs/2026-11-05-business-email-design.md"
+  ],
+  "meta": {
+    "title": "Acceptable use policy · Clafina",
+    "description": "What you may not do with Clafina: unlawful use, spam, fraud, harm to others or attacks on the service, and what we do if the rules are broken."
+  },
+  "hero": {
+    "eyebrow": "Legal",
+    "title": "Acceptable use policy",
+    "lede": "Clafina is shared by many businesses. These rules keep it safe and fair for all of them, and for the customers, staff and suppliers they deal with."
+  },
+  "updated": "2026-11-06",
+  "status": "draft",
+  "sections": [
+    {
+      "id": "scope",
+      "heading": "Who these rules apply to",
+      "paragraphs": [
+        "This policy is part of our terms of service. It applies to every organisation on Clafina and to everyone who signs in for one, and to everything made with Clafina, including online shops, booking pages, shared documents, messages, email and connections to the service. Your organisation is responsible for what its people and its connections do."
+      ]
+    },
+    {
+      "id": "unlawful",
+      "heading": "Unlawful and harmful use",
+      "paragraphs": [
+        "Do not use Clafina to:"
+      ],
+      "list": [
+        "break the law, or help anyone else break it;",
+        "sell or advertise goods or services that are illegal where you or your buyer are;",
+        "defraud anyone, including with false invoices, fake payment links, false business details or documents for verification that are not genuine;",
+        "launder money or get around sanctions;",
+        "pretend to be another person or business, or hide who you are in order to mislead;",
+        "harass, threaten or abuse anyone, or share content that sexually exploits children, promotes violence or hatred, or invades someone's privacy;",
+        "infringe anyone's copyright, trade marks or other rights."
+      ]
+    },
+    {
+      "id": "messages",
+      "heading": "Messages, campaigns and email",
+      "paragraphs": [
+        "Clafina lets you send messages, campaigns and, with business email, mail from your own domain. Do not use them to send spam or messages people have not agreed to receive. Keep the consent records the law needs, honour unsubscribe requests, and say who the message is from.",
+        "Stay within the sending allowances set for your organisation and mailboxes. Do not try to get around them, for example by spreading sends across accounts.",
+        {
+          "text": "Business email is for your organisation's own mail, not for bulk or marketing sending: use campaigns for that. A mailbox that sends spam is held until an administrator releases it, and an organisation that sends a lot of spam can have its sending suspended.",
+          "prelaunch": "product-email"
+        }
+      ]
+    },
+    {
+      "id": "personal-data",
+      "heading": "Other people's personal data",
+      "paragraphs": [
+        "Only put personal data into Clafina when you have the right to. Give the people concerned the notices the law requires, and use their data only for the reasons you told them. Take particular care with sensitive records, such as health records and payroll, and with records about children. Give access only to the people in your organisation who need it."
+      ]
+    },
+    {
+      "id": "service",
+      "heading": "Respect the service and other organisations",
+      "paragraphs": [
+        "Do not:"
+      ],
+      "list": [
+        "try to reach another organisation's data, or any part of Clafina you have not been given access to;",
+        "probe, scan or test Clafina for weaknesses without our written permission;",
+        "upload viruses or other harmful code, or use Clafina to spread them;",
+        "overload the service, flood it with requests, or try to get around rate limits;",
+        "copy, scrape or harvest data from Clafina, its public pages or the trading network directory by automated means, except through our published connections;",
+        "copy, take apart or rebuild the Clafina software, except as the law allows;",
+        "resell or rent out Clafina, or offer it to others as your own, without an agreement with us;",
+        "share sign-in details, or let a connection key or AI agent act beyond what the person who set it up is allowed to do."
+      ]
+    },
+    {
+      "id": "assistant",
+      "heading": "The AI assistant and connected agents",
+      "paragraphs": [
+        "Use the assistant and any AI agent you connect within these same rules. Do not use them to produce unlawful or harmful content, to get around permissions, or to deceive people. Check what they prepare before you send it, post it or pay it."
+      ]
+    },
+    {
+      "id": "security-reports",
+      "heading": "If you find a weakness",
+      "paragraphs": [
+        "If you find a security weakness in Clafina, please tell us through our security contact and give us time to fix it before telling anyone else. Do not use it to see or change data that is not yours. We will not take action against anyone who reports a weakness to us in good faith and follows this policy."
+      ]
+    },
+    {
+      "id": "enforcement",
+      "heading": "What happens if the rules are broken",
+      "paragraphs": [
+        "If we believe these rules have been broken, we may, depending on how serious it is:"
+      ],
+      "list": [
+        "ask you to stop or to remove the content;",
+        "hold the part that is causing harm, such as a mailbox, a shop, a link or a connection key;",
+        "suspend the organisation, or end the service under our terms;",
+        "report the matter to the authorities where the law requires it, or where people may be at risk.",
+        "Where we can, we tell you first and give you a chance to put things right. If you think we got it wrong, write to us and we will look again."
+      ]
+    },
+    {
+      "id": "report-abuse",
+      "heading": "Reporting misuse",
+      "paragraphs": [
+        "If you think someone is misusing Clafina, for example by sending you spam from a Clafina address or sending a false invoice, tell us through our security contact. Include what you received and when, so we can trace it."
+      ]
+    },
+    {
+      "id": "changes",
+      "heading": "Changes to this policy",
+      "paragraphs": [
+        "We may update this policy as Clafina changes and as new kinds of misuse appear. The date at the top shows when it last changed. We will tell owners about important changes before they take effect."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Report misuse or a weakness",
+    "body": "Write to our security contact to report misuse of Clafina or a security weakness.",
+    "email": "security",
+    "routes": ["legal-terms", "legal-privacy", "trust-security"]
+  }
+}

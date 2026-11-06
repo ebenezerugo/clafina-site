@@ -1,0 +1,112 @@
+{
+  "kind": "solution",
+  "sources": [
+    "docs/product-facts.md#product-business-health",
+    "docs/product-facts.md#product-mobile",
+    "docs/product-facts.md#product-finance",
+    "docs/product-facts.md#product-assistant",
+    "docs/product-facts.md#product-communication",
+    "ACCESS.md",
+    "BUSINESS_HEALTH.md",
+    "src/config/plans.ts"
+  ],
+  "meta": {
+    "title": "Owners · Clafina",
+    "description": "How the business is doing in plain sentences, approvals on your phone and a cash forecast in three scenarios, all read from the books."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "For owners",
+    "title": "Know how the business is doing without having to ask.",
+    "lede": "Margin, cash and runway in plain sentences, with the working shown. Decide what waits for you from your phone.",
+    "screen": "phone-home"
+  },
+  "painsTitle": "What keeps owners up at night",
+  "pains": [
+    {
+      "pain": "You only learn the numbers when the accountant tells you.",
+      "fix": "Business health shows margin, runway and the cash cycle in plain sentences, each with a drawer that shows how it is worked out, and says whether it agrees with the books."
+    },
+    {
+      "pain": "Everything waits for your signature.",
+      "fix": "Approvals reach your phone with the facts and the money. Declining asks for a reason, so the person who asked knows why."
+    },
+    {
+      "pain": "You can't tell whether cash will last the quarter.",
+      "fix": "The cash forecast runs three scenarios with checkpoints, and alerts tell you when a figure crosses a floor you set."
+    },
+    {
+      "pain": "A report means waiting for someone to build it.",
+      "fix": "Ask the assistant for a report in words. It answers from your records as a table or chart, and you can save it or add it to your dashboard."
+    },
+    {
+      "pain": "You worry about who can see and do what.",
+      "fix": "Only an owner can make another owner, and an organisation always keeps one. Each person holds roles at places, and a removed role stays on the record."
+    }
+  ],
+  "storyTitle": "One owner, before and after",
+  "story": {
+    "business": {
+      "name": "Ewa Beauty Supplies",
+      "place": "Ibadan",
+      "label": true
+    },
+    "before": "Bisi runs Ewa with a shop, a small store room and eight staff. She learnt the month's profit three weeks after it ended. Purchase orders waited on her desk, and she checked the bank each night to see whether wages were safe.",
+    "after": "Now her phone opens on sales today, cash and what needs her. She approves the supplier run from the market, with the cash left after shown first. The runway card tells her how long the money lasts, and why."
+  },
+  "modulesTitle": "What owners use most",
+  "modules": [
+    {
+      "route": "product-business-health",
+      "why": "Margin, runway and the cash cycle in plain sentences, with alerts at the floors you set."
+    },
+    {
+      "route": "product-mobile",
+      "why": "Approvals, sales today, cash and payment runs on your phone."
+    },
+    {
+      "route": "product-finance",
+      "why": "Payment requests checked by a second person, and books that close on time."
+    },
+    {
+      "route": "product-assistant",
+      "why": "Ask for a report in words. It never sends, posts or pays by itself."
+    },
+    {
+      "route": "product-sales",
+      "why": "See what customers owe, oldest first, and who is late."
+    },
+    {
+      "route": "product-communication",
+      "why": "One approvals inbox for everything that waits for you."
+    }
+  ],
+  "planTitle": "The plan for owner-run businesses",
+  "plan": {
+    "id": "business",
+    "why": "Business adds approval policies and the audit trail to everything in Growth, so staff ask before they spend and you decide from your phone."
+  },
+  "faqTitle": "Questions owners ask",
+  "faq": [
+    {
+      "q": "Are the numbers final?",
+      "a": "Business health never shows a short figure as final. A card marked provisional says what is not posted yet."
+    },
+    {
+      "q": "Can I set what counts as healthy?",
+      "a": "Yes. You set your own margin floors and the runway alert."
+    },
+    {
+      "q": "Does the assistant do anything by itself?",
+      "a": "No. It drafts and asks. It acts with your permissions, and never sends, posts or pays until you confirm."
+    },
+    {
+      "q": "Can reports come to me by email?",
+      "a": "Yes. Reports can be scheduled, with a test send first, and alerts come in the app and by email."
+    }
+  ],
+  "cta": {
+    "title": "See your business in plain words.",
+    "body": "Start free, and your dashboard fills in as you sell, buy and pay."
+  }
+}

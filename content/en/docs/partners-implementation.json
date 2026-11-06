@@ -1,0 +1,118 @@
+{
+  "kind": "doc",
+  "sources": [
+    "INDUSTRY_PACKS.md",
+    "CATALOGUE.md",
+    "CRM.md",
+    "FINANCE.md",
+    "STUDIO.md",
+    "STOREFRONT_STUDIO.md",
+    "INTEGRATIONS.md",
+    "ROADMAP.md",
+    "STATUS.md",
+    "docs/product-facts.md#product-integrations",
+    "docs/product-facts.md#product-online-shop",
+    "src/config/site.ts"
+  ],
+  "meta": {
+    "title": "Clafina for implementation partners",
+    "description": "For firms that set Clafina up for clients: industry packs, imports, Studio designs, integrations and the API."
+  },
+  "hero": {
+    "eyebrow": "Implementation partners",
+    "title": "Set clients up on Clafina, and set them up well.",
+    "lede": "You know your clients' trades. Clafina gives you the packs, imports, designs and connections to fit it to each one without writing a fork."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "who",
+      "heading": "Who this is for",
+      "paragraphs": [
+        "Consultancies, system integrators and agencies that move businesses onto new systems and look after them afterwards. You plan the set-up, bring the data across, make it look like the client and connect it to what they already use."
+      ]
+    },
+    {
+      "id": "packs",
+      "heading": "Industry packs",
+      "paragraphs": [
+        "One core, packs on top. A pack gives a trade its workflow: the screens it switches on, the words it uses and the settings it starts with. You can preview what a pack will add before you install it."
+      ],
+      "list": [
+        "Turn a pack on for the whole organisation or for one place, such as one restaurant in a group.",
+        "Change any word to the client's own, for the organisation or for one place.",
+        "Turning a pack off hides it and keeps every record.",
+        "Packs are versioned. An upgrade shows what is new and what will change, keeps the client's own settings, and can be undone for 30 days."
+      ]
+    },
+    {
+      "id": "imports",
+      "heading": "Bringing the data across",
+      "paragraphs": [
+        "Most of a move is data. Clafina takes it in the shape the client already has it, and tells you which rows it couldn't use and why."
+      ],
+      "list": [
+        "Products and prices from a sheet, or pasted into the import grid. Imports run in the background and report rejected rows.",
+        "Customers from a CSV file, with any refused rows named.",
+        "Opening balances as one entry on the day you choose. Receivables, payables and stock come in as opening invoices and an opening stock count, so they agree with their documents.",
+        "Bank statements in CSV, OFX, MT940 or CAMT.053.",
+        "Assets with their tags, and time from timesheets."
+      ]
+    },
+    {
+      "id": "studio",
+      "heading": "Studio designs",
+      "paragraphs": [
+        "Studio decides how everything the client sends looks. Set up the brand kit once, with logos, colours and fonts, and it flows into every email and every PDF. Colour pairs are checked for contrast as you type.",
+        "The document designer lays out quotations, invoices, purchase orders, receipts, delivery notes and customer statements, with reusable blocks, versions and publishing. It also covers till rolls, receipt printers, barcodes and labels. A location that needs to look different can have its own design."
+      ],
+      "list": [
+        "Storefront Studio designs the client's online shops: theme, pages, menus and collections.",
+        "Every change is a version you can preview, send for approval, publish and roll back."
+      ]
+    },
+    {
+      "id": "integrations",
+      "heading": "Integrations",
+      "paragraphs": [
+        "Connections live in one place, in slots for the whole organisation or one location, each with its health shown. Sign in once and the connection refreshes itself; when one fails, admins are told."
+      ],
+      "list": [
+        "Email sent from the client's own domain or work account.",
+        "Accounting export, CRM sync and a document archive to cloud storage.",
+        "Single sign-on by SAML or OIDC.",
+        "Automation tools that use REST hooks."
+      ]
+    },
+    {
+      "id": "api",
+      "heading": "The API",
+      "paragraphs": [
+        "When a client needs something bespoke, build it on the API. Every module connects through events and the API."
+      ],
+      "list": [
+        "API keys scoped to the permissions they need, stored as a hash and shown in full only once.",
+        "Outgoing webhooks that are signed with HMAC-SHA256, retried, logged, replayable and paused after repeated failures.",
+        "An MCP server, so outside AI tools can read, draft and confirm with the person's own sign-in and only the permissions they give."
+      ]
+    },
+    {
+      "id": "programme",
+      "heading": "The partner programme",
+      "paragraphs": [
+        "We are setting up a programme for implementation partners. The details are shared when you apply, so tell us about your firm, the trades you work in and the projects you take on."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Become a partner",
+    "body": "Apply and we will share the programme details with you.",
+    "routes": [
+      "partners-apply",
+      "developers",
+      "product-integrations",
+      "industries"
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "kind": "solution",
+  "sources": [
+    "docs/product-facts.md#product-stock",
+    "docs/product-facts.md#product-pos",
+    "docs/product-facts.md#product-online-shop",
+    "docs/product-facts.md#product-trading-network",
+    "docs/product-facts.md#product-finance",
+    "POINT_OF_SALE.md",
+    "ACCESS.md",
+    "APPROVALS.md",
+    "GROUP_CONSOLIDATION.md",
+    "docs/industry-facts.md#industry-retail",
+    "src/config/plans.ts"
+  ],
+  "meta": {
+    "title": "Multi-branch and franchise · Clafina",
+    "description": "Branches, tills and online shops on one stock and one set of books, with roles and approvals per place, and franchise orders over the trading network."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Multi-branch and franchise",
+    "title": "Every branch on one stock and one set of books.",
+    "lede": "Each place keeps its own tills, stock and numbering. You see them side by side, and move stock between them in a few clicks.",
+    "screen": "stock-levels"
+  },
+  "painsTitle": "What goes wrong across branches",
+  "pains": [
+    {
+      "pain": "Each branch keeps its stock its own way.",
+      "fix": "Stock is one movement ledger, kept per place. Counts, transfers and reorder levels are set for each item in each place."
+    },
+    {
+      "pain": "One branch runs out while another has plenty.",
+      "fix": "Transfers record what left, what is in transit and what arrived. When two tills oversell while offline, the manager gets a button to transfer from the branch that has it."
+    },
+    {
+      "pain": "Branch managers need a say, but not over everything.",
+      "fix": "Each person holds a role at a place. Approval policies can ask the holders of a role where the document is, and can hold only documents over an amount or from a place."
+    },
+    {
+      "pain": "Every branch closes the day differently.",
+      "fix": "Tills are registered to a place, and shifts close with a counted drawer and a Z report. Till reports read each sale in the time zone of its place."
+    },
+    {
+      "pain": "Franchisees order from you by phone and spreadsheet.",
+      "fix": "When a franchisee runs its own Clafina, its purchase order arrives as your sales order over the trading network, with items mapped once and remembered."
+    },
+    {
+      "pain": "Each branch wants its own online shop.",
+      "fix": "Run several online shops, by place, inventory type or brand. Each sells from the same count as the tills."
+    }
+  ],
+  "storyTitle": "Two branches, before and after",
+  "story": {
+    "business": {
+      "name": "Adaeze Home and Electronics",
+      "place": "Enugu",
+      "label": true
+    },
+    "before": "Adaeze has two branches, Ogui Road and Garden Avenue, with three tills between them. Each branch kept its own stock book. When Ogui Road ran out, someone rang Garden Avenue and a box went across town with nothing written down.",
+    "after": "Now both branches sell from one stock ledger, each with its own count. When two tills at Ogui Road sold the last blender while the line was down, both sales stood, and the manager moved one from Garden Avenue with a single button. Adaeze sees each till's shift from her desk.",
+    "screen": "retail-sync-exceptions"
+  },
+  "modulesTitle": "What a multi-branch business uses",
+  "modules": [
+    {
+      "route": "product-stock",
+      "why": "Stock per place, transfers in transit and counts for each branch."
+    },
+    {
+      "route": "product-pos",
+      "why": "Tills registered to each place, with shifts, Z reports and reports by place, till and cashier."
+    },
+    {
+      "route": "product-online-shop",
+      "why": "Several online shops, each selling from the same stock as the tills."
+    },
+    {
+      "route": "product-trading-network",
+      "why": "Franchisees' purchase orders arrive as your sales orders, with no retyping."
+    },
+    {
+      "route": "product-finance",
+      "why": "One set of books for every branch, and intercompany and consolidation when branches are separate companies."
+    },
+    {
+      "route": "product-purchasing",
+      "why": "Buying for every branch, with goods received into the place where they arrive."
+    },
+    {
+      "route": "product-business-health",
+      "why": "A home dashboard aware of places, and reports you can filter by branch."
+    },
+    {
+      "route": "product-mobile",
+      "why": "Approvals and the day's sales on the owner's phone, wherever they are."
+    }
+  ],
+  "planTitle": "The plan for many branches",
+  "plan": {
+    "id": "business",
+    "why": "Business has no set limit on tills and room for many places, with approval policies, the API and the audit trail. A larger group, or one that wants single sign-on, moves to Enterprise."
+  },
+  "faqTitle": "Questions about branches and franchises",
+  "faq": [
+    {
+      "q": "Can each branch manager see only their own figures?",
+      "a": "Till reports show each reader only the places they may see, and people hold their roles place by place."
+    },
+    {
+      "q": "Does each branch have its own invoice numbers?",
+      "a": "Yes. Numbering is set per kind of document and per place."
+    },
+    {
+      "q": "Our franchisees are separate companies. Can they use Clafina?",
+      "a": "Yes. Each runs its own organisation and trades with you over the trading network, where every arrival is a draft until someone accepts it. Where you hold a share in them, group consolidation brings their books together."
+    },
+    {
+      "q": "What if a branch loses the internet?",
+      "a": "Its tills keep selling within the offline limits you set, and send the sales when the line is back."
+    }
+  ],
+  "cta": {
+    "title": "Bring every branch onto one record.",
+    "body": "Start with the branches you have, and add places, tills and online shops as you open them."
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "kind": "doc",
+  "sources": [
+    "docs/product-facts.md",
+    "src/config/plans.ts",
+    "src/config/site.ts",
+    "/home/user/commerce-api/documentation/CONSOLE.md",
+    "/home/user/commerce-api/documentation/BILLING_HELP_PERSONAL.md",
+    "/home/user/commerce-api/documentation/ACCESS.md",
+    "/home/user/commerce-api/documentation/AUTH.md",
+    "/home/user/commerce-api/documentation/COMMERCE_AI.md",
+    "/home/user/commerce-mail/docs/specs/2026-11-05-business-email-design.md"
+  ],
+  "meta": {
+    "title": "Terms of service · Clafina",
+    "description": "The agreement between Clafina and the businesses and people who use it: accounts, plans and billing, your data, our duties, and ending the service."
+  },
+  "hero": {
+    "eyebrow": "Legal",
+    "title": "Terms of service",
+    "lede": "These terms are the agreement between Clafina and the business that uses it, and the people who sign in for that business. Please read them before you start."
+  },
+  "updated": "2026-11-06",
+  "status": "draft",
+  "sections": [
+    {
+      "id": "agreement",
+      "heading": "The agreement",
+      "paragraphs": [
+        "In these terms, \"we\" and \"us\" mean Clafina. \"Your organisation\" means the business, charity or other body that has a Clafina account, and \"you\" means your organisation and anyone who signs in for it. \"The service\" means the Clafina app on the web, the phone app, the tills, online shops and public pages made with Clafina, and the connections to it.",
+        "By creating an organisation or signing in, you agree to these terms, to our acceptable use policy and, where your organisation keeps personal data in Clafina, to our data processing terms. If you accept for an organisation, you confirm you are allowed to bind it.",
+        "If your organisation has signed a separate agreement with us, that agreement wins where the two differ."
+      ]
+    },
+    {
+      "id": "accounts",
+      "heading": "Accounts and organisations",
+      "paragraphs": [
+        "Each person has their own account and signs in with their own details. Keep your password private, and turn on two-step sign-in. Tell us straight away if you think someone else has used your account.",
+        "An organisation has one or more owners. Owners decide who joins, which roles they hold and which parts of Clafina are switched on. An organisation always needs at least one owner, so the only owner cannot leave or close their account until they make someone else an owner.",
+        "In some countries we review a new organisation before letting it in. A business that asks to be verified on the trading network sends us documents, and we may ask it to verify again later. We may refuse or remove verification if the documents do not hold up."
+      ]
+    },
+    {
+      "id": "plans-billing",
+      "heading": "Plans and billing",
+      "paragraphs": [
+        "The plans and what each includes are shown on our pricing page and in the app. Owners can change the plan and the features in use from the Billing page.",
+        "We measure your organisation's use of Clafina each day. The Billing page shows that use against what your plan includes, an estimate for the month, and your invoices. You agree to pay our invoices on time, together with any taxes that apply. If an invoice stays unpaid, we may limit the service after telling you, as described below.",
+        "We may change our prices. We will tell owners before a change applies to your organisation, and you can change plan or close before it does."
+      ]
+    },
+    {
+      "id": "your-data",
+      "heading": "Your data",
+      "paragraphs": [
+        "What your organisation puts into Clafina stays your organisation's. You give us permission to store, copy and process it only as needed to run the service for you, to keep it safe, and as the law requires.",
+        "You are responsible for having the right to put that data into Clafina, including any notices or consents the people in it need. Our data processing terms explain how we handle personal data for you.",
+        "You can ask for a full copy of your organisation's data at any time, as files a computer can read. We do not use your organisation's data to train shared AI models."
+      ]
+    },
+    {
+      "id": "connected-services",
+      "heading": "Services you connect",
+      "paragraphs": [
+        "Clafina can work with services your organisation chooses and connects, such as payment providers, banks, messaging channels, tax authorities and your own AI provider. Your agreement with each of those services is between you and them. We are not responsible for what they do, for their fees, or for a service they stop offering.",
+        "Clafina is software. It is not a bank, a payment institution, a tax adviser or an accountant. Clafina works out figures, prepares documents and keeps your books, but you remain responsible for your tax returns, your payments and the decisions you make from them."
+      ]
+    },
+    {
+      "id": "assistant",
+      "heading": "The AI assistant",
+      "paragraphs": [
+        "The assistant works as the person using it, with that person's permissions. It prepares drafts, such as quotations, orders and messages, for you to check. It never sends, posts or pays anything by itself. Its answers can be wrong, so check anything important before you rely on it."
+      ]
+    },
+    {
+      "id": "our-duties",
+      "heading": "What we do",
+      "paragraphs": [
+        "We provide the service with reasonable skill and care, keep it secure, and keep improving it. We may change features, as long as a change does not take away the core of what your plan includes without telling you first.",
+        "We work to keep Clafina running at all times, but it may sometimes be unavailable, for example for maintenance or for reasons outside our control. Tills can keep selling without a connection within the limits your organisation sets, and catch up when they reconnect.",
+        "Our support team looks inside your organisation's account only when an owner agrees. That access is read-only unless the owner allows more, and it is recorded."
+      ]
+    },
+    {
+      "id": "your-duties",
+      "heading": "What you do",
+      "paragraphs": [
+        "You use Clafina lawfully and in line with our acceptable use policy. You keep your sign-in details safe, give access only to people who need it, and remove people who leave. You check the documents and figures Clafina prepares before you send or file them."
+      ]
+    },
+    {
+      "id": "suspension",
+      "heading": "Holding or suspending an account",
+      "paragraphs": [
+        "We may suspend an organisation, or hold part of it such as a mailbox that is sending spam, if it breaks these terms or the acceptable use policy, if invoices stay unpaid, if the law requires it, or to protect other people or the service. Where we can, we tell you first and give you a chance to put things right.",
+        "While an organisation is suspended, its people and its connection keys cannot use it, and the app explains why. Scheduled work and public links may keep running until the matter is settled.",
+        {
+          "text": "A business email organisation suspended for an unpaid bill keeps receiving mail, so nothing is lost while the bill is settled.",
+          "prelaunch": "product-email"
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "heading": "Leaving and ending the service",
+      "paragraphs": [
+        "You can leave an organisation, or close your own account, at any time from your account settings. Closing an account takes effect after 14 days, and you can cancel it before then. The records you made for an organisation stay with that organisation.",
+        "Your organisation can stop using Clafina at any time. We may end the service for your organisation if it seriously or repeatedly breaks these terms, after telling you.",
+        "Before an organisation's data is erased, owners can ask for a full copy of it. We then set a date for erasure, and on that date its files and records are removed. Erasure waits while a legal hold stands. Backups are replaced in their normal cycle."
+      ]
+    },
+    {
+      "id": "liability",
+      "heading": "Responsibility if things go wrong",
+      "paragraphs": [
+        "Nothing in these terms limits responsibility that the law does not allow to be limited, such as for death or personal injury caused by negligence, or for fraud.",
+        "Apart from that, we are not responsible for losses that were not foreseeable, for lost profits, revenue or business opportunities, or for losses caused by services you connect or by your own use of the figures Clafina produces. Our total responsibility to your organisation in any year is limited to the amount it paid us in the period set out in your plan or agreement.",
+        "You are responsible to us for losses caused by your breach of these terms or the acceptable use policy."
+      ]
+    },
+    {
+      "id": "changes",
+      "heading": "Changes to these terms",
+      "paragraphs": [
+        "We may update these terms as Clafina changes or the law changes. The date at the top shows when they last changed. We will tell owners by email or in the app before an important change takes effect. If you do not agree, you can stop using Clafina before then. If you keep using it, the new terms apply."
+      ]
+    },
+    {
+      "id": "general",
+      "heading": "Law and disputes",
+      "paragraphs": [
+        "These terms are governed by the law of the country where Clafina is registered, unless the law where you are gives you a right to rely on your own law. If you have a complaint, please tell us first so we can try to settle it together. If we cannot, the courts of that country can decide it.",
+        "If a court finds part of these terms cannot be enforced, the rest still applies. If we do not enforce a term straight away, we can still enforce it later."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Questions about these terms",
+    "body": "Write to us if anything in these terms is unclear, or if your organisation needs its own agreement.",
+    "email": "hello",
+    "routes": ["legal-acceptable-use", "legal-dpa", "legal-privacy", "pricing", "contact-sales"]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "kind": "doc",
+  "sources": [
+    "docs/product-source/POINT_OF_SALE.md",
+    "commerce-api/documentation/PLATFORM_ARCHITECTURE.md",
+    "commerce-api/documentation/EVENT_LOG.md",
+    "commerce-api/documentation/OUTBOX.md",
+    "commerce-api/documentation/LIVE_UPDATES.md",
+    "commerce-api/documentation/INTEGRATIONS.md",
+    "commerce-api/documentation/SALES_CHANNELS.md",
+    "commerce-api/documentation/MOBILE.md",
+    "commerce-mail/docs/specs/2026-11-05-business-email-design.md",
+    "docs/product-facts.md#platform-wide-facts-home-and-platform-pages",
+    "docs/product-facts.md#product-pos--point-of-sale"
+  ],
+  "meta": {
+    "title": "Reliability · Clafina",
+    "description": "Tills that keep selling offline, records that are never lost between steps, copies rebuilt from the source, and screens that show where things stand."
+  },
+  "hero": {
+    "eyebrow": "Trust centre",
+    "title": "Built to keep working.",
+    "lede": "Internet drops, a phone runs out of signal, a service you connect to goes quiet. Clafina is built so the work carries on and nothing is lost when it does."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "offline-tills",
+      "heading": "Tills that sell offline",
+      "paragraphs": [
+        "A Clafina till writes every sale to its own journal first, then sends it. Selling online and selling offline are the same path; offline, the queue is just longer. The browser till opens with no network at all.",
+        "Sales are sent oldest first and retried until Clafina says it has them. The till deletes nothing it has not been told has arrived, and each sale is posted once, however many times it is sent.",
+        "You decide how far a till may go on its own: which products it may sell offline and how many, how long it may stay offline, the value per shift and which ways to pay. The till checks these before the customer is charged, not after."
+      ],
+      "list": [
+        "Stock you set aside for a till cannot be sold by the shop or another till.",
+        "If two tills sold the last unit while offline, both sales stand and Clafina flags it, with where else the item is in stock.",
+        "Anything that needs a person, such as a price that changed, waits as a sync exception for someone to settle."
+      ]
+    },
+    {
+      "id": "phone",
+      "heading": "Phones and the shop floor",
+      "paragraphs": [
+        "The phone app keeps some work when the signal goes and sends it later. Approvals and anything that moves money wait for a connection, so nothing is approved twice or paid on old figures.",
+        "The production floor screen and asset checks in the field also keep working offline and catch up when they reconnect."
+      ]
+    },
+    {
+      "id": "nothing-lost",
+      "heading": "Nothing lost between steps",
+      "paragraphs": [
+        "When you save something, the record, its audit entry and the news that it changed are written together, or not at all. So a change that fails never tells another part of Clafina it happened.",
+        "A document that cannot post to the books straight away waits in a backlog and is tried again. A webhook that your system does not answer is retried, and a connection to another service that stops working is marked as failing, with why."
+      ]
+    },
+    {
+      "id": "recovery",
+      "heading": "Backups and recovery",
+      "paragraphs": [
+        "What you save is the source. The fast copies your screens read from are rebuilt from it, and the events between them are kept long enough to replay. If a copy is lost, it is rebuilt, not guessed.",
+        "Your figures can be checked against the source too: dashboards say whether they agree with the books, and the finance audit trail can be checked for any break.",
+        {
+          "text": "Business email is backed up with encryption to a separate place, often through the day. A whole mail server or a single mailbox can be restored, and mail that arrives during an outage waits and is delivered afterwards.",
+          "prelaunch": "product-email"
+        }
+      ]
+    },
+    {
+      "id": "live-status",
+      "heading": "Seeing where things stand",
+      "paragraphs": [
+        "Clafina's screens update as things happen, over one live connection, without refreshing. If the connection drops, the screen catches up when it returns.",
+        "Each part tells you its own state. A till shows what it is still sending and any problems. The integrations page shows each connection as connected or failing, with the reason. A webhook endpoint that keeps failing is paused and says so, and an online shop's health page shows how far behind its feed is."
+      ]
+    },
+    {
+      "id": "availability",
+      "heading": "Availability",
+      "paragraphs": [
+        "We will publish an availability figure here only once we can stand behind it.",
+        {
+          "text": "Clafina is available 99.9% of the time.",
+          "claim": "claims.uptime"
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Something not working?",
+    "body": "Tell our support team what you see and when it started. The help centre has the answers to common questions.",
+    "email": "support",
+    "routes": ["help", "why-offline", "product-pos", "trust-security"]
+  }
+}

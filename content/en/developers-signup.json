@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Developer sign-up · Clafina",
+    "description": "Ask for access to the Clafina API. Tell us what you are building and we will help you get started with keys, webhooks and the MCP server."
+  },
+  "eyebrow": "Developer sign-up",
+  "title": "Build on Clafina.",
+  "lede": "Tell us what you want to build. We will set you up with API access and point you to what you need.",
+  "expect": [
+    {
+      "title": "Keys that do only their job",
+      "body": "API keys are scoped to the permissions you need and shown in full only once."
+    },
+    {
+      "title": "Events as they happen",
+      "body": "Outgoing webhooks are signed, retried and logged, and you can replay a failed delivery."
+    },
+    {
+      "title": "Someone to ask",
+      "body": "We answer your questions about the API while you build."
+    }
+  ],
+  "form": {
+    "steps": [
+      "About you",
+      "The trade",
+      "Your team",
+      "What you are building"
+    ],
+    "stepOf": "Step {n} of {total}",
+    "fields": {
+      "name": "Your name",
+      "email": "Work email",
+      "company": "Company or project name",
+      "country": "Country",
+      "industry": "Which trade is your project for?",
+      "teamSize": "How many people are on your team?",
+      "slot": "When can we reach you? (optional)",
+      "message": "What do you want to build? (optional)"
+    },
+    "slotHint": "For example: weekday mornings, Accra time.",
+    "other": "Something else, or any trade",
+    "teamSizes": {
+      "1-5": "1 to 5",
+      "6-20": "6 to 20",
+      "21-100": "21 to 100",
+      "101-500": "101 to 500",
+      "500+": "More than 500"
+    },
+    "errors": {
+      "required": "Please fill this in.",
+      "email": "Please enter an email address like name@company.com.",
+      "choose": "Please choose one.",
+      "generic": "Please check this."
+    },
+    "next": "Continue",
+    "back": "Back",
+    "send": "Ask for access",
+    "sending": "Sending…",
+    "notConnected": "The form is not connected yet, so your request was not sent.",
+    "notConnectedEmail": "Please email us at {email} instead.",
+    "failed": "Something went wrong and your request was not sent. Please try again in a minute.",
+    "botFailed": "We could not confirm you are not a robot. Please try again.",
+    "sent": "Thanks. We have your request for API access and will be in touch soon.",
+    "privacy": "We use these details only to answer your request."
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "kind": "doc",
+  "sources": [
+    "docs/superpowers/specs/2026-11-05-clafina-website-design.md#12-testing",
+    "e2e/a11y.spec.ts",
+    "e2e/rtl.spec.ts",
+    "e2e/phase4.spec.ts",
+    "e2e/product.spec.ts",
+    "e2e/industry.spec.ts",
+    "e2e/help.spec.ts",
+    "test/theme/tokens.test.ts",
+    "lighthouserc.json",
+    "commerce-web/docs/design-guards.md",
+    "commerce-web/docs/screen-kit.md",
+    "commerce-web/docs/testing.md",
+    "docs/product-source/POINT_OF_SALE.md"
+  ],
+  "meta": {
+    "title": "Accessibility statement · Clafina",
+    "description": "What we aim for (WCAG 2.2 AA), how we check this website and the Clafina app, and how to tell us about a barrier you meet."
+  },
+  "hero": {
+    "eyebrow": "Trust centre",
+    "title": "Clafina should work for everyone who runs a business.",
+    "lede": "Whether you use a keyboard, a screen reader, a small phone or a language that reads right to left, you should be able to do your work. Here is what we aim for, how we check it, and how to tell us when we fall short."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "aim",
+      "heading": "What we aim for",
+      "paragraphs": [
+        "We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at level AA, on this website and in the Clafina app.",
+        "We check with automatic tools on every change, and they catch a lot, but not everything. So we also build to a set of rules about keyboards, focus and colour that every screen follows. Where something still gets in your way, we want to hear about it."
+      ]
+    },
+    {
+      "id": "website",
+      "heading": "How we check this website",
+      "paragraphs": [
+        "Every change to this website runs a set of checks before it can go live. A page that fails one is not published."
+      ],
+      "list": [
+        "Every kind of page is tested with axe, an automatic accessibility checker. The home page is checked against WCAG 2.2 AA in English, Arabic and Japanese, and again with the menu open on a phone.",
+        "Pages are checked at phone width, so nothing needs scrolling sideways.",
+        "Arabic reads right to left: the layout mirrors, and the menu opens from the side you start reading.",
+        "Text colours are tested for contrast against their background, in both the light and the dark theme, to at least 4.5 to 1.",
+        "Menus and lists can be used by keyboard: Escape closes them and puts focus back where you were, and Tab stays inside an open menu.",
+        "When a form has a problem, the message shows by the field and focus moves to it.",
+        "Pictures of Clafina screens are labelled as illustrative, so a screen reader says what they are."
+      ]
+    },
+    {
+      "id": "app",
+      "heading": "How we check the Clafina app",
+      "paragraphs": [
+        "In the app, every screen test also runs axe against WCAG 2.1 A and AA. Beyond that, every screen follows the rules below."
+      ],
+      "list": [
+        "Colours are tuned to WCAG 2.2 AA: 4.5 to 1 for words and 3 to 1 for lines and marks. This holds when your organisation picks its own theme, in light and dark.",
+        "What is chosen or current is never shown by colour alone: it is also announced to screen readers.",
+        "Dialogs and side panels take focus when they open, close with Escape and return focus to what opened them.",
+        "A record named on a screen opens a preview card on keyboard focus as well as hover, and Escape closes it.",
+        "Charts carry a table a screen reader can read.",
+        "On a phone, buttons are large enough to press easily, with one main action to a card.",
+        "The browser till is touch first, works in light and dark, and is checked with axe on every screen."
+      ]
+    },
+    {
+      "id": "known-gaps",
+      "heading": "Where we may fall short",
+      "paragraphs": [
+        "Automatic checks cannot judge everything, such as whether a label makes sense or a flow is easy to follow with a screen reader. Documents and files that your own business adds, such as a scanned bill, may not be accessible.",
+        "If you meet a barrier, tell us and we will work on it."
+      ]
+    },
+    {
+      "id": "report",
+      "heading": "Tell us about a barrier",
+      "paragraphs": [
+        "Email our support team with the page or screen, what you were trying to do and what got in the way. It helps to know the browser or device you use and any assistive technology, such as a screen reader or magnifier."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Met a barrier?",
+    "body": "Write to our support team. Tell us where it happened and what you were trying to do.",
+    "email": "support",
+    "routes": [
+      "help",
+      "contact"
+    ]
+  }
+}

@@ -10,7 +10,7 @@ const INDUSTRIES: string[] = ROUTES.filter((r) => r.group === 'industry' && r.id
 
 /** One shape for a demo or sales enquiry, checked in the browser and again in the function. */
 export const LeadSchema = z.strictObject({
-  kind: z.enum(['demo', 'sales']),
+  kind: z.enum(['demo', 'sales', 'partner', 'developer']),
   name: z.string().trim().min(1).max(120),
   email: z.email().max(200),
   company: z.string().trim().min(1).max(160),

@@ -18,7 +18,8 @@ describe('switches', () => {
     expect(() => isOn('sections.nothing' as SwitchKey)).toThrow('Unknown switch: sections.nothing');
   });
   it('only shows pages that are built and switched on', () => {
-    expect(pageAvailable('solution-owners', 'preview')).toBe(false);
+    SWITCHES.pages['solution-owners'].on = false;
+    try { expect(pageAvailable('solution-owners', 'production')).toBe(false); } finally { SWITCHES.pages['solution-owners'].on = true; }
     expect(pageAvailable('home', 'production')).toBe(true);
     expect(() => pageAvailable('nope', 'preview')).toThrow('Unknown page: nope');
   });

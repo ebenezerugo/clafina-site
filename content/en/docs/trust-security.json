@@ -1,0 +1,145 @@
+{
+  "kind": "doc",
+  "sources": [
+    "commerce-api/documentation/AUTH.md",
+    "commerce-api/documentation/ACCESS.md",
+    "commerce-api/documentation/PLATFORM_ARCHITECTURE.md",
+    "commerce-api/documentation/EVENT_LOG.md",
+    "commerce-api/documentation/INTEGRATIONS.md",
+    "commerce-api/documentation/RATE_LIMITS.md",
+    "commerce-api/documentation/CONSOLE.md",
+    "commerce-api/documentation/FINANCE_MANAGEMENT.md",
+    "commerce-api/documentation/DRIVE.md",
+    "commerce-api/documentation/CLIENT_RECORDS.md",
+    "commerce-api/documentation/STATUS.md",
+    "commerce-mail/docs/specs/2026-11-05-business-email-design.md",
+    "docs/product-facts.md#platform-wide-facts-home-and-platform-pages"
+  ],
+  "meta": {
+    "title": "Security · Clafina",
+    "description": "How Clafina protects your business: sign-in and two-step codes, roles, organisations kept apart, sealed secrets, audit trails and how to report a problem."
+  },
+  "hero": {
+    "eyebrow": "Trust centre",
+    "title": "Security, in plain words.",
+    "lede": "Your sales, stock, books and people live in Clafina, so we treat them with care. This page says how you sign in, who can see what, how secrets are kept and how to tell us about a problem."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "sign-in",
+      "heading": "Signing in",
+      "paragraphs": [
+        "You sign in with your email and a password. A wrong password and an unknown email get the same answer, so nobody can use the sign-in form to find out who has an account.",
+        "Pages where something can be guessed, such as signing in, a two-step code or a shared document's passcode, count the wrong answers from each address. After too many, the page says how long to wait. Right answers do not count, so an office full of people signing in is never held back.",
+        "Your business can also sign its people in through its own identity provider, by OpenID Connect or SAML 2.0. Each email domain is proved first with a DNS record, and only people who are already members of your organisation are let in."
+      ]
+    },
+    {
+      "id": "two-step",
+      "heading": "Two-step sign-in",
+      "paragraphs": [
+        "Turn on two-step sign-in and a stolen password is no longer enough. After your password, Clafina emails you a six-digit code. It lasts an hour and works once. After four wrong guesses the code is thrown away and you start again.",
+        "You turn it on or off yourself in your settings, and you confirm with your password, so a computer left signed in is not enough to switch it off. Your organisation can ask everyone to use it. When you sign in through your own identity provider, its second step stands in for ours."
+      ]
+    },
+    {
+      "id": "sessions",
+      "heading": "Sessions and devices",
+      "paragraphs": [
+        "Each signed-in device is a session. You can see every one, with the device, when it was last used and roughly where, and sign out any of them, or all but the one you are on.",
+        "People who manage access can do the same for others in your organisation. A phone that is signed out can also be told to remove what it has saved: it hears this the next time it connects.",
+        "Your organisation sets how many devices one person may be signed in on at once. Signing out ends the session for good: it cannot be brought back, and live screens on that device close at once."
+      ]
+    },
+    {
+      "id": "roles",
+      "heading": "Roles and permissions",
+      "paragraphs": [
+        "Everyone in your organisation holds a role at a place: a branch, a warehouse, a shop. A role is a set of permissions, so a cashier at one branch sees that branch's till and not the books.",
+        "An organisation always keeps an owner, and only an owner can make or remove another owner. People join by invitation, and accepting it gives them exactly what the invitation offered. When access is taken away, the record of what they held and when it ended stays readable.",
+        "In finance, the person who submits a payment, a journal or a budget cannot approve it unless your own finance controls allow it."
+      ]
+    },
+    {
+      "id": "kept-apart",
+      "heading": "Your organisation, kept apart",
+      "paragraphs": [
+        "Every record in Clafina carries the organisation it belongs to, and every query names it. The screens' fast copies add the same filter in one place, so no screen can forget it.",
+        "Our tests sign in as two organisations and check, route by route, that one cannot see or change the other's records. Your business email, once you use it, is kept apart from every other organisation's in the same way."
+      ]
+    },
+    {
+      "id": "secrets",
+      "heading": "Secrets and encryption",
+      "paragraphs": [
+        "Passwords and keys you give Clafina to connect other services are sealed with AES-256-GCM when you save them, and are never shown again. Forms show only that something is stored.",
+        "API keys are shown once, when they are made. We keep only a hash of each key, so not even we can read it back. Webhook signing secrets are shown once too.",
+        "Client records for clinics and salons go further: clinical notes are encrypted again under a key of your organisation's own, and every opening of a record is logged."
+      ],
+      "list": [
+        "Till PINs are stored as a hash and never returned.",
+        "An export of your organisation's data leaves out anything that looks like a password, token or key.",
+        "Requests that move money take an idempotency key, so a retry never pays twice."
+      ]
+    },
+    {
+      "id": "audit",
+      "heading": "Audit trails",
+      "paragraphs": [
+        "Finance keeps an audit trail of who did what, to which record, what changed and why. Each entry is chained by hash to the one before, so changing, removing or reordering any entry breaks the chain at that point. Anyone with access can check the chain from the audit trail screen.",
+        "Files in the Drive have an audit log of every change and every download, and searching that log is itself recorded. Every call an AI assistant or an API key makes through Clafina's tools is written down with its outcome."
+      ]
+    },
+    {
+      "id": "support-access",
+      "heading": "When our support team needs to look",
+      "paragraphs": [
+        "Our support staff cannot open your account on their own. They ask, and an owner decides: yes or no, and for how long, from five minutes to seven days. An owner can end it at any time.",
+        "A support session can only read, unless the owner allows more. It cannot reach sign-in, keys or billing, a banner shows on every page while it lasts, and every request it makes is recorded for your owners to read."
+      ]
+    },
+    {
+      "id": "backups",
+      "heading": "Backups and recovery",
+      "paragraphs": [
+        "The records you write are the source. The fast copies your screens read from can be rebuilt from them at any time, and the events between them are kept long enough to replay.",
+        {
+          "text": "Business email is backed up with encryption to a separate place, and a single mailbox can be restored on its own.",
+          "prelaunch": "product-email"
+        },
+        "The reliability page says more about what happens when something goes wrong."
+      ]
+    },
+    {
+      "id": "certifications",
+      "heading": "Certifications",
+      "paragraphs": [
+        "We list a certification here only once it has been granted.",
+        {
+          "text": "Clafina is certified to ISO 27001 and has a SOC 2 report.",
+          "claim": "claims.complianceLabels"
+        }
+      ]
+    },
+    {
+      "id": "report",
+      "heading": "Report a security problem",
+      "paragraphs": [
+        "If you think you have found a weakness in Clafina, please email our security team with what you found and the steps to see it. Please do not test against other people's accounts or data, and give us time to fix it before you tell anyone else."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Found something?",
+    "body": "Write to our security team. For questions about your own account, the help centre and support are quicker.",
+    "email": "security",
+    "routes": [
+      "trust-privacy",
+      "trust-reliability",
+      "help",
+      "contact"
+    ]
+  }
+}

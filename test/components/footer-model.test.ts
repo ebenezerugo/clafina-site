@@ -18,12 +18,15 @@ describe('footer model', () => {
     expect(ROUTES.filter((r) => r.id !== 'home' && r.id !== 'start' && !('previewOnly' in r) && !linked.has(r.id)).map((r) => r.id)).toEqual([]);
   });
   it('drops pages that do not exist yet, and empty columns', () => {
-    const cols = footerModel('preview').columns;
-    expect(cols.map((c) => c.id)).toEqual(['product', 'industries', 'resources', 'company']);
-    expect(cols[0]!.items).toHaveLength(25); // platform, 22 products, pricing, compare
-    expect(cols[1]!.items).toHaveLength(18); // the index and 17 stories
-    expect(cols[2]!.items).toEqual(['help']);
-    expect(cols[3]!.items).toEqual(['contact-sales', 'demo']);
+    // A site with only the core, product and company pages built: the other columns go.
+    const some = ROUTES.map((r) => ({ ...r, built: ['core', 'product'].includes(r.group) || ['contact', 'about'].includes(r.id) }));
+    const cols = footerModelFor(some, 'preview').columns;
+    expect(cols.map((c) => c.id)).toEqual(['product', 'company']);
+    expect(cols[1]!.items).toEqual(['about', 'contact', 'contact-sales', 'demo'].filter((id) => cols[1]!.items.includes(id)));
+    expect(cols[1]!.items).not.toContain('careers');
+  });
+  it('shows every column once every page is built', () => {
+    expect(footerModel('preview').columns.map((c) => c.id)).toEqual(['product', 'industries', 'solutions', 'resources', 'partners', 'developers', 'company', 'trust', 'legal']);
   });
   it('shows socials, badges and company lines only once they are set', () => {
     const m = footerModel('preview');

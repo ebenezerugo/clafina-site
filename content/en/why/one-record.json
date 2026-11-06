@@ -1,0 +1,134 @@
+{
+  "kind": "explainer",
+  "sources": [
+    "docs/product-facts.md",
+    "SALES.md",
+    "STOCK.md",
+    "FINANCE.md",
+    "LIVE_UPDATES.md",
+    "Online-Shop-Product-Document.md",
+    "POINT_OF_SALE.md",
+    "Trading-Network-Product-Document.md",
+    "MOBILE.md",
+    "ROADMAP.md"
+  ],
+  "meta": {
+    "title": "One record for the whole business · Clafina",
+    "description": "The till, the online shop, the phone app, the books and the assistant all read one set of records. Each sale is posted once, and every screen keeps up."
+  },
+  "hero": {
+    "eyebrow": "Why Clafina",
+    "title": "One record that everything reads.",
+    "lede": "A sale at the till is not four jobs in four systems. It is written once, and the stock, the books, the owner's phone and the assistant all read the same thing."
+  },
+  "points": [
+    {
+      "title": "Posted once",
+      "body": "Invoices, receipts, stock moves and payroll post their own entries to the books, once each, by the rules you set."
+    },
+    {
+      "title": "One stock, one price list",
+      "body": "The till and the online shop sell from the same count at the same prices, so the last unit is not sold twice."
+    },
+    {
+      "title": "Every screen keeps up",
+      "body": "When someone changes a document, it changes on your screen too, without a reload."
+    }
+  ],
+  "diagram": {
+    "label": "One record at the centre, read and written by the till, the online shop, the web app, the phone app, the books and the assistant.",
+    "centre": "One record",
+    "spokes": [
+      "The till",
+      "The online shop",
+      "The web app",
+      "The phone app",
+      "The books",
+      "The assistant"
+    ]
+  },
+  "sections": [
+    {
+      "id": "what-it-means",
+      "heading": "What one record means",
+      "paragraphs": [
+        "Most small businesses run on several systems that don't talk. The till has its own list of products. The online shop has another. The books are kept somewhere else, and someone types the day's sales into them at night. Each copy drifts a little, and the owner never quite knows which number to trust.",
+        "Clafina keeps one set of records for the whole business. A sale, a stock move, a supplier's bill and a payslip are each written once. The till, the online shop, the web app, the phone app and the assistant are different ways of looking at the same records, not separate systems that have to be matched up.",
+        "So when a cashier sells a kettle, there is nothing to copy across. The stock at that branch goes down, the money lands in the right account, the invoice and the receipt exist, and the owner's phone shows the day's sales with that kettle in them."
+      ]
+    },
+    {
+      "id": "posting-once",
+      "heading": "Every document posts itself, once",
+      "paragraphs": [
+        "Sales, stock, buying, payroll, assets and production all post to one general ledger. Each kind of posting goes to the account you chose for it, so an invoice puts what the customer owes into receivables, the sale into revenue and the tax into output VAT, and the goods' cost moves from stock to cost of sales.",
+        "Each document posts once for each thing that happens to it. If the same posting is tried again, by a retry or a second click, it finds the first entry and stops. A till sale sent twice still makes one invoice, one receipt and one stock move.",
+        "If the books can't take an entry yet, because the period is closed or no account is set for that kind of posting, the document is not lost. It waits in a backlog with the reason in words, and posts once the cause is put right.",
+        "Because nothing is retyped, the books agree with the documents behind them. What customers owe in the ledger is what they owe on posted invoices, and the month-end checklist asks whether each account kept by documents, such as receivables, payables, stock and the bank, agrees before the period closes."
+      ]
+    },
+    {
+      "id": "one-stock",
+      "heading": "One stock, one price list",
+      "paragraphs": [
+        "Stock is kept as one history of movements. Every receipt, sale, transfer, count and adjustment adds a line; nothing is overwritten. What is on the shelf at any place is the sum of what has happened there.",
+        "The till and the online shop sell from that same stock, at the same prices from the same price books. What the shop offers is what is on hand at its places, less what is already promised and less any safety stock you keep back. Two shops and the till can't sell the last unit twice.",
+        "A till that may sell while the internet is down has its share of stock set aside for it. The shop and the other tills can't sell those units, so the offline sales have somewhere to come from."
+      ],
+      "list": [
+        "A till sale moves stock once, at the branch that sold it.",
+        "An online order arrives as a sales order tagged with the shop.",
+        "A return puts the goods back where they were sold from."
+      ]
+    },
+    {
+      "id": "one-party",
+      "heading": "One record for each business you trade with",
+      "paragraphs": [
+        "A business you sell to and buy from is one record, not a customer in one place and a supplier in another. Its name, tax number, addresses and contacts are kept once.",
+        "Credit, balances, ageing and statements are worked out from that record, so what a customer owes you and what you owe them sit side by side. The till finds the same customer by phone number, with their points, store credit and credit limit."
+      ]
+    },
+    {
+      "id": "live",
+      "heading": "Screens that keep up",
+      "paragraphs": [
+        "Clafina's screens follow other people's changes without a reload. When a colleague approves a quotation, it turns Approved on your screen. A new invoice appears in your list. Summary figures such as money owed and stock on hand move as the documents behind them do. Nothing has to poll or refresh.",
+        "Reports work the same way. When something a report shows changes, it runs again quietly, and the rows stay on screen while it does.",
+        "Each person hears only what they could read anyway: their organisation, their permissions and their branches. When someone signs out, their screens stop receiving at once."
+      ]
+    },
+    {
+      "id": "phone-and-assistant",
+      "heading": "The phone and the assistant read the same records",
+      "paragraphs": [
+        "The phone app is not a copy of the business. It reads and writes through the same records and the same rules as the web app. The owner sees today's sales, cash and what needs ordering, approves a payment run with its facts in front of them, and opens the same invoice the office is looking at.",
+        "The assistant works the same way. It acts as you, with your permissions, and answers from records and documents only for people who may open them. Ask it for a report and it reads the same figures the reports do.",
+        "It never sends, posts or pays by itself. What it prepares, a quotation, an order or a task, comes to you as a draft to check, and every call it makes is recorded."
+      ]
+    }
+  ],
+  "faqTitle": "Questions about one record",
+  "faq": [
+    {
+      "q": "Do I have to enter till sales into the books?",
+      "a": "No. Each till sale is posted as an invoice and a receipt, the stock moves at that branch, and the money lands in its own account."
+    },
+    {
+      "q": "What happens if something can't be posted?",
+      "a": "It waits in a backlog with the reason in words, such as a closed period or an account not yet chosen, and posts once that is put right."
+    },
+    {
+      "q": "Can the till and the online shop sell the same stock?",
+      "a": "Yes. They sell from the same count at the same prices, and the last unit can't be sold twice."
+    },
+    {
+      "q": "Can the assistant change my books?",
+      "a": "No. It acts with your permissions, and what it prepares comes to you as a draft. It never sends, posts or pays by itself."
+    }
+  ],
+  "cta": {
+    "title": "Run the business on one record.",
+    "body": "Start free with the books, sales, stock and a till, all reading the same records."
+  }
+}

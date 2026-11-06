@@ -1,0 +1,100 @@
+{
+  "kind": "doc",
+  "sources": [
+    "ACCESS.md",
+    "AUTH.md",
+    "DASHBOARD.md",
+    "FINANCE.md",
+    "STATUS.md",
+    "ROADMAP.md",
+    "docs/product-facts.md#product-finance",
+    "docs/product-facts.md#product-business-health",
+    "src/config/site.ts"
+  ],
+  "meta": {
+    "title": "Clafina for accountants and bookkeepers",
+    "description": "Work across all your clients' books with one sign-in: your own role in each, finance reports, a month-end close checklist and a view built for finance."
+  },
+  "hero": {
+    "eyebrow": "Accountants and bookkeepers",
+    "title": "All your clients' books, one sign-in.",
+    "lede": "When your clients run on Clafina, their sales, stock and payroll post to the books by themselves. You spend your time checking and advising, not keying in."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "who",
+      "heading": "Who this is for",
+      "paragraphs": [
+        "Accountants, bookkeepers and small practices who look after the books for several businesses. Your clients run their day in Clafina. You keep their books in order, close their months and tell them how they are doing."
+      ]
+    },
+    {
+      "id": "one-sign-in",
+      "heading": "One account in every client's organisation",
+      "paragraphs": [
+        "Each client invites you to their organisation by email. If you already have a Clafina account, you accept with your own password and the client is added to it. You don't need a new login for each business.",
+        "After you sign in, you choose which organisation to work in, and the session remembers it. Switch to the next client when you are done."
+      ]
+    },
+    {
+      "id": "roles",
+      "heading": "Roles that fit the work you do",
+      "paragraphs": [
+        "Your access in each organisation is a role at a location, and a role is a set of permissions. The client chooses what you can see and do: post journals, approve payments, read reports only, or more. You can hold different roles with different clients."
+      ],
+      "list": [
+        "Whoever raises a finance document can't approve it too, so payments and journals always pass a second pair of eyes.",
+        "Finance keeps an audit trail in which each entry is chained to the one before, so a change can't be hidden.",
+        "Only an owner can make someone an owner, so your access never grows by accident.",
+        "When a client removes your last role, you leave their organisation and the record of what you held stays readable."
+      ]
+    },
+    {
+      "id": "your-view",
+      "heading": "A home page built for finance",
+      "paragraphs": [
+        "When you open an organisation, your home page is chosen from what your role lets you read. With finance permissions you start on the finance page, not a shop floor. Arrange it with Customise, or let the client's administrator set a default for your role. You only ever see what your permissions allow."
+      ]
+    },
+    {
+      "id": "reports",
+      "heading": "The reports you need",
+      "paragraphs": [
+        "Trial balance, profit and loss, balance sheet, cash flow and ageing are ready whenever you need them, and export to PDF, XLSX or CSV. In the reports hub you can filter, group, save a view, pin it and schedule it to arrive by email.",
+        "Dashboards say whether their figures agree with the books, and every business health card shows how its number is worked out."
+      ]
+    },
+    {
+      "id": "closing",
+      "heading": "Closing a month",
+      "paragraphs": [
+        "Each document posts its own journal entry, so the books are mostly done before you start. Postings that were refused wait in a backlog and retry, rather than going missing."
+      ],
+      "list": [
+        "Import bank statements and work through them in reconciliation sessions that lock once approved.",
+        "Close the period from a checklist, with foreign currency revaluation built in.",
+        "Close the year at the end of the client's own fiscal year, whichever month it starts, and reopen a period when you need to.",
+        "Bring a new client's balances across from their old system as opening balances, with invoices and stock coming in as their own documents."
+      ]
+    },
+    {
+      "id": "programme",
+      "heading": "The partner programme",
+      "paragraphs": [
+        "We are setting up a programme for accountants and bookkeepers. The details are shared when you apply, so tell us about your practice and the clients you serve."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Become a partner",
+    "body": "Apply and we will share the programme details with you.",
+    "routes": [
+      "partners-apply",
+      "solution-finance-teams",
+      "product-finance",
+      "product-business-health"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "kind": "doc",
+  "sources": [
+    "docs/superpowers/specs/2026-11-05-clafina-website-design.md",
+    "src/config/site.ts"
+  ],
+  "meta": {
+    "title": "Careers · Clafina",
+    "description": "How the Clafina team works and what it values, the roles open now, and how to send us a note if none of them fits."
+  },
+  "hero": {
+    "eyebrow": "Careers",
+    "title": "Help businesses see clearly.",
+    "lede": "We build the software that a shop, a kitchen, a warehouse and a finance team run on every day. Here is how we work, and what we look for."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "work",
+      "heading": "The work",
+      "paragraphs": [
+        "Clafina keeps a business's books, stock, sales and people on one record, with a till, a phone app and online shops reading the same numbers. The work is broad: accounting rules, offline tills, live screens, design, writing and support all matter, and each one touches the others."
+      ]
+    },
+    {
+      "id": "how-we-work",
+      "heading": "How we work",
+      "paragraphs": [
+        "We work in small teams that own a piece of the product from the first idea to the people using it. We write things down, so decisions can be read and questioned later. We review each other's work carefully and kindly."
+      ],
+      "list": [
+        "We start from the person at the counter, in the warehouse or at the desk, and the job they are trying to do.",
+        "We test against real conditions: slow connections, shared devices, many currencies and many languages.",
+        "We say what is built and what is not, to customers and to each other.",
+        "We would rather ship something small that works than something large that almost does."
+      ]
+    },
+    {
+      "id": "values",
+      "heading": "What we value",
+      "paragraphs": [
+        "Clarity, in the product and in how we talk. Care for the details that cost a business money when they go wrong. Respect for people's data and their time. And making things everyone can use, whatever device, language or ability they bring."
+      ]
+    },
+    {
+      "id": "speculative",
+      "heading": "If no role fits",
+      "paragraphs": [
+        "If you think you could help but don't see a role for you, send us a short note through the Contact page. Tell us what you would like to work on and share something you have made. We read every note, though we can't always reply quickly."
+      ]
+    },
+    {
+      "id": "open-roles",
+      "heading": "Open roles",
+      "paragraphs": [
+        "The roles we are hiring for are listed below. When none are listed, we are not hiring for a set role right now, and a note through the Contact page is still welcome."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Write to us",
+    "body": "Questions about working at Clafina, or a speculative note, are welcome through the Contact page.",
+    "routes": [
+      "contact",
+      "about"
+    ]
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "title": "What's new · Clafina",
+    "description": "What you can now do in Clafina, newest first: wallets, payments on every document, industry packs, themes, payroll and more."
+  },
+  "hero": {
+    "eyebrow": "What's new",
+    "title": "What you can do now that you couldn't before.",
+    "lede": "The changes that reach your working day, newest first. Each one says what it lets you do, and links to the page that covers it."
+  },
+  "entries": [
+    {
+      "date": "2026-11-02",
+      "title": "Verify your business to open wallets",
+      "body": "Give your company registration number in Settings and check each director. You can see where the check stands and what to do next. Until the business is verified, wallet services stay visible but locked, and they tell you why. The identity numbers you type are checked and never kept.",
+      "route": "product-payments"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Pay a bill from a wallet",
+      "body": "Pay for airtime, data, electricity and cable TV from a business wallet. Electricity is checked first, so you see whose meter it is and what is owed before you pay. The review shows the fee and what the wallet has left, and the receipt keeps the token for you to copy or share.",
+      "route": "product-payments"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "One payment section on every document",
+      "body": "Invoices, supplier bills, payroll runs, expense claims and credit notes now show what is owed, what is paid, what is on its way and what is left. From the same place you can get a payment link, record a payment or ask for one to be approved.",
+      "route": "product-sales"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "Let outside AI assistants work with Clafina",
+      "body": "Connect an AI assistant you already use to Clafina. It signs in with your consent, sees only what you may see, and reads first. Anything it wants to change starts as a draft for you to confirm.",
+      "route": "product-integrations"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Take goods back from an invoice",
+      "body": "Choose Credit note or return on an invoice, pick how many of each line come back, and say whether the goods return to stock. The credit takes the price and tax the invoice charged, and comes off what the customer owes.",
+      "route": "product-sales"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Pay payroll from your bank account",
+      "body": "A payroll run now names the account net pay leaves from, so your books show the money going out. Salary components can also be paid by the employer on top of pay, such as the employer's pension, without touching anyone's gross pay or tax.",
+      "route": "product-hr"
+    },
+    {
+      "date": "2026-10-27",
+      "title": "Give the app your own colours",
+      "body": "Choose one of the ready-made themes in Settings, or build your own from a single colour or your brand palette. Clafina checks every colour so text stays easy to read in light and dark. Each location can have its own look."
+    },
+    {
+      "date": "2026-10-27",
+      "title": "Every approval in one place",
+      "body": "The new Approvals page lists the requests you made, the ones asked of you and the ones you decided, with each step and what was said. Stock transfers can now wait for someone's yes too. Point at any document number to see a short summary without leaving the page."
+    },
+    {
+      "date": "2026-10-25",
+      "title": "Packs for guest houses, field service, clinics and rentals",
+      "body": "Run the front desk, room rack and folios for a guest house or hotel. Dispatch jobs to technicians and work through a checklist on site. Keep client records that open only with a reason. Hire items out and take them back with their condition recorded.",
+      "route": "industry-accommodation"
+    },
+    {
+      "date": "2026-10-25",
+      "title": "Seven more industry packs",
+      "body": "Construction, property, classes, courses, fundraising, distribution and the product configurator now have their own screens. Value a stage of building work, keep a rent roll, check people in to a class, enrol learners, record gifts and grants, settle a van at the end of the day, or configure a product and quote it.",
+      "route": "industry-construction"
+    },
+    {
+      "date": "2026-10-25",
+      "title": "The farm pack",
+      "body": "Map your fields, plan crops by season, record the work done and what went on each field, follow a batch of birds, fish or animals, record a harvest and pay outgrowers. See what each field and crop earned.",
+      "route": "industry-farm"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "A weekly business digest",
+      "body": "Get a short summary of your week by email or in the app, on the day and at the time you choose. You only see the sections your role may read. Owners choose who gets it, and overdue invoices come with a button to send reminders.",
+      "route": "product-business-health"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "Set up tax your way",
+      "body": "Adopt a country preset, then see every tax rule as a plain sentence. Add new rates from a date when the law changes, and use Test a sale to see exactly which taxes a sale would charge and why.",
+      "route": "product-tax"
+    },
+    {
+      "date": "2026-10-16",
+      "title": "The restaurant pack",
+      "body": "Draw your floor and its tables, make menus with options and set menus, and send each dish to the right kitchen station. Write recipes to see what a dish costs and earns, mark dishes sold out, record waste and share out tips.",
+      "route": "industry-restaurant"
+    },
+    {
+      "date": "2026-10-16",
+      "title": "How the business is doing, on your dashboard",
+      "body": "Six cards sit at the top of the dashboard: gross and net margin, the cost of winning a customer, what a customer is worth, burn and runway, and how fast cash comes back. Each says in a sentence how you are doing, and How this is worked out shows the sums.",
+      "route": "product-business-health"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Loyalty and gift cards at the till",
+      "body": "Cashiers can find a customer, let them earn and spend points, and sell or top up gift cards at the till. New till reports show sales by till, cashier and hour, the payment mix and cash differences.",
+      "route": "product-pos"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Reviews, delivery and company buyers in your online shop",
+      "body": "Shoppers can leave reviews for you to approve and ask to be told when an item is back in stock. Set delivery zones, rates and collection points, show prices in more than one currency, and let businesses apply for company accounts.",
+      "route": "product-online-shop"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Trade with other businesses on Clafina",
+      "body": "Connect with a supplier or customer who also uses Clafina. Your purchase order arrives as their sales order, and their invoice arrives as your draft bill, matched against what you received. Nothing is typed twice, and everything arrives as a draft for you to check.",
+      "route": "product-trading-network"
+    },
+    {
+      "date": "2026-10-11",
+      "title": "Manufacturing, from bill of materials to finished goods",
+      "body": "Make bills of materials and routings, plan and schedule production orders, and let the shop floor start, report and complete each step. Inspect what you make, hold output for quality, and see what each job cost.",
+      "route": "product-manufacturing"
+    },
+    {
+      "date": "2026-10-11",
+      "title": "Look after your assets",
+      "body": "Register assets and print their tags, assign them to people, schedule upkeep by date or by use, and run depreciation each month. Field checks work without a connection and sync when you are back online.",
+      "route": "product-assets"
+    },
+    {
+      "date": "2026-10-10",
+      "title": "Reconcile your bank and see where cash is heading",
+      "body": "Import a bank statement, match it to your books with rules you set, and lock the account once it is reconciled. The cash flow view shows what is coming in and going out, and warns you before cash runs short.",
+      "route": "product-finance"
+    },
+    {
+      "date": "2026-10-08",
+      "title": "HR and payroll",
+      "body": "Keep staff records, build the rota, see who clocked in, and handle leave requests. Run payroll for a period, approve it, pay it and print payslips. Everyone can see their own payslips, leave and reviews in My profile.",
+      "route": "product-hr"
+    },
+    {
+      "date": "2026-10-06",
+      "title": "Inbox, team chat and Meet",
+      "body": "Answer customers and suppliers from one inbox, talk to your team in channels, and start a video meeting with Meet. Meetings can be recorded, and the minutes can be written for you.",
+      "route": "product-communication"
+    },
+    {
+      "date": "2026-09-27",
+      "title": "Notifications that reach you",
+      "body": "The bell now shows your notifications as they happen, with an unread count. Choose which ones you get and how, and set up rules for your organisation."
+    },
+    {
+      "date": "2026-09-26",
+      "title": "Share a document by link",
+      "body": "Send a customer a link to a quotation or invoice, protected by a code or passcode if you like. They see a clean page with a PDF, and you can send reminders.",
+      "route": "product-sales"
+    }
+  ],
+  "readMore": "Read more"
+}

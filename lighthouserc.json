@@ -13,7 +13,9 @@
         "http://127.0.0.1:4311/en/industries/retail/",
         "http://127.0.0.1:4311/en/industries/manufacturing/",
         "http://127.0.0.1:4311/en/help/",
-        "http://127.0.0.1:4311/en/help/assets/"
+        "http://127.0.0.1:4311/en/help/assets/",
+        "http://127.0.0.1:4311/en/solutions/multi-branch/",
+        "http://127.0.0.1:4311/en/resources/glossary/"
       ],
       "numberOfRuns": 3,
       "settings": {
@@ -72,7 +74,7 @@
           "aggregationMethod": "median-run"
         },
         {
-          "matchingUrlPattern": "/en/(platform|pricing|product/pos|industries|industries/retail|industries/manufacturing|help|help/assets)/$",
+          "matchingUrlPattern": "/en/(platform|pricing|product/pos|industries|industries/retail|industries/manufacturing|help|help/assets|solutions/multi-branch|resources/glossary)/$",
           "aggregationMethod": "median-run",
           "assertions": {
             "categories:performance": [

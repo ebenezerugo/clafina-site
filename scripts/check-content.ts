@@ -6,6 +6,7 @@ import { checkScreenSpec } from '../src/content/screen-spec';
 import { ProductContent } from '../src/content/product';
 import { IndustryStory } from '../src/content/industry';
 import { HelpCatalogue, HelpModuleGuide, NAMED_SERVICES } from '../src/content/help';
+import { DocContent, ExplainerContent, GuidesContent, SolutionContent } from '../src/content/pages';
 import { LOCALE_CODES, isLocale } from '../src/config/locales';
 import { SWITCHES, localeIndexed } from '../src/config/switches';
 import { buildMode, type BuildMode } from '../src/lib/build-mode';
@@ -115,6 +116,23 @@ export function checkHelp(root: string): string[] {
   return problems;
 }
 
+/** Reading paths on Guides must point at how-tos that exist in the help centre. */
+export function checkGuides(root: string): string[] {
+  const problems: string[] = [];
+  for (const locale of readdirSync(root).filter((d) => isLocale(d))) {
+    const file = join(root, locale, 'guides.json');
+    if (!existsSync(file)) continue;
+    const g = GuidesContent.safeParse(JSON.parse(readFileSync(file, 'utf8')));
+    if (!g.success) continue; // the schema check reports it
+    g.data.paths.forEach((p, i) => p.steps.forEach((s, j) => {
+      const guide = join(root, 'en', 'help', 'guides', `${s.module}.json`);
+      const has = existsSync(guide) && (JSON.parse(readFileSync(guide, 'utf8')) as { articles: { slug: string }[] }).articles.some((a) => a.slug === s.article);
+      if (!has) problems.push(`${locale}/guides.json paths.${i}.steps.${j} points at ${s.module}/${s.article}, which is not a how-to`);
+    }));
+  }
+  return problems;
+}
+
 /** Problems that must fail the build. In production, gaps in indexed languages count too. */
 export function checkContent(root: string, mode: BuildMode = buildMode()): string[] {
   const problems: string[] = [];
@@ -132,7 +150,7 @@ export function checkContent(root: string, mode: BuildMode = buildMode()): strin
     }
   }
   // Pages with one file each: products in content/<locale>/product/, stories in content/<locale>/industries/.
-  for (const [folder, schema] of [['product', ProductContent], ['industries', IndustryStory]] as const) {
+  for (const [folder, schema] of [['product', ProductContent], ['industries', IndustryStory], ['solutions', SolutionContent], ['why', ExplainerContent], ['docs', DocContent]] as const) {
     for (const locale of readdirSync(root).filter((d) => isLocale(d))) {
       const dir = join(root, locale, folder);
       if (!existsSync(dir)) continue;
@@ -157,7 +175,7 @@ export function checkContent(root: string, mode: BuildMode = buildMode()): strin
       else if (data.spec === 1) problems.push(...checkScreenSpec(data).map((p) => `${where} ${p}`));
     }
   }
-  problems.push(...checkHelp(root));
+  problems.push(...checkHelp(root), ...checkGuides(root));
   if (mode === 'production') {
     problems.push(...translationGaps(root).filter((g) => isLocale(g.split('/')[0] ?? '') && localeIndexed(g.split('/')[0] as never)));
   }

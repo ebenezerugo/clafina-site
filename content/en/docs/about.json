@@ -1,0 +1,72 @@
+{
+  "kind": "doc",
+  "sources": [
+    "docs/superpowers/specs/2026-11-05-clafina-website-design.md",
+    "docs/product-facts.md#platform-wide-facts-home-and-platform-pages",
+    "INDUSTRY_PACKS.md",
+    "POINT_OF_SALE.md",
+    "MOBILE.md"
+  ],
+  "meta": {
+    "title": "About Clafina",
+    "description": "Why Clafina exists, where the name comes from, who it is for and how it works across languages, currencies and devices."
+  },
+  "hero": {
+    "eyebrow": "About",
+    "title": "Clarity about the business, in one place.",
+    "lede": "Clafina keeps a business's books, stock, sales, people and online shop on one record, so the people who run it can see what is really happening."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "why",
+      "heading": "Why Clafina exists",
+      "paragraphs": [
+        "Most businesses run on a pile of separate tools. The till knows what sold, a spreadsheet knows the stock, and the books catch up at the end of the month. Someone copies numbers from one to the next, and the owner waits to find out how things went.",
+        "We built Clafina so that work is written once. A sale, a delivery, a payslip or a stock count goes into one record, and the books, the stock and the dashboards all read it straight away. You see the business as it is today, not as it was last month."
+      ]
+    },
+    {
+      "id": "name",
+      "heading": "Where the name comes from",
+      "paragraphs": [
+        "Clafina joins two words: clarity and finance. Clarity, because every number should say where it came from and what it means. Finance, because in the end every part of a business shows up in its money.",
+        "The name also carries an idea from before it was chosen: a river of solutions. A river is one current, not a row of buckets. Work flows from the counter to the warehouse to the books without being poured from one container into another, and it keeps moving when one part of the business is busy."
+      ]
+    },
+    {
+      "id": "who",
+      "heading": "Who it is for",
+      "paragraphs": [
+        "Clafina is for businesses that sell, make, book or serve, from a single shop to a group with many branches. The core covers books, sales, stock, buying, people and projects.",
+        "Each trade then adds a pack. A pack switches on the screens the trade needs, uses its own words and starts with sensible settings. A restaurant sees its floor and tabs, a hotel sees its guests and stays, and a farm sees its fields and seasons, all on the same record underneath."
+      ],
+      "list": [
+        "Owners who want to know how the business is doing without waiting for a report.",
+        "Finance teams and accountants who want books that post themselves and close on time.",
+        "Staff at the counter, in the warehouse and on the road who need a screen that fits the job."
+      ]
+    },
+    {
+      "id": "everywhere",
+      "heading": "How it works across languages, currencies and devices",
+      "paragraphs": [
+        "People use the screen that suits the work. The office uses the web app. The counter uses the till on desktop, on Android or in the browser, and it keeps selling offline within the allowance you set. Owners and staff on the move use the phone app. Customers buy from your online shop, which sells from the same stock and prices as the till.",
+        "Every amount carries its currency, and the books keep the rate and any gain or loss. Invoices and emails go out in your customer's language when you have a template for it. Screens change the moment something happens, so nobody presses refresh to see the latest figure."
+      ]
+    },
+    {
+      "id": "how-we-work",
+      "heading": "How we build it",
+      "paragraphs": [
+        "We say only what Clafina does today, and we mark what is still coming. Every number on a dashboard can be traced back to the entries behind it. And we design for real conditions: a shared phone, a slow connection, a till that has to keep going when the power or the network drops."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "See it for yourself",
+    "body": "Take a look at how the platform fits together, find your trade, or get in touch.",
+    "routes": ["platform", "industries", "demo", "contact"]
+  }
+}

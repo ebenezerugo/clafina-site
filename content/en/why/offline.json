@@ -1,0 +1,145 @@
+{
+  "kind": "explainer",
+  "sources": [
+    "docs/product-facts.md",
+    "POINT_OF_SALE.md",
+    "Point-of-Sale-Product-Document.md",
+    "ROADMAP.md",
+    "MANUFACTURING.md",
+    "MOBILE.md",
+    "docs/industry-facts.md#industry-retail"
+  ],
+  "meta": {
+    "title": "Works offline: the till keeps selling · Clafina",
+    "description": "The Clafina till keeps selling when the internet drops, within the allowances you set, then sends every sale once and shows anything that needs a person."
+  },
+  "hero": {
+    "eyebrow": "Why Clafina",
+    "title": "The till keeps selling when the line drops.",
+    "lede": "Every sale is written on the till first and sent when the connection is back. You decide what a till may sell offline, and for how long."
+  },
+  "points": [
+    {
+      "title": "Within your allowances",
+      "body": "You set which products a till may sell offline, how many, for how long and up to what value."
+    },
+    {
+      "title": "Sent once, in order",
+      "body": "When the line is back, the till sends its sales oldest first, and a sale sent twice is recorded once."
+    },
+    {
+      "title": "Nothing quietly dropped",
+      "body": "Anything the books can't settle by themselves becomes a sync exception in plain words, with what to do next."
+    }
+  ],
+  "diagram": {
+    "label": "The till at the centre, and what its sales become when they sync: invoices and receipts, stock moved at the branch, money in its accounts, shift reports, allowances topped up, and sync exceptions for a person to decide.",
+    "centre": "The till",
+    "spokes": [
+      "Invoices and receipts",
+      "Stock at the branch",
+      "Money in its accounts",
+      "Shift reports",
+      "Allowances topped up",
+      "Sync exceptions"
+    ]
+  },
+  "sections": [
+    {
+      "id": "journal-then-sync",
+      "heading": "Written on the till first, always",
+      "paragraphs": [
+        "The Clafina till runs on desktop computers, on Android and in the browser. All three work the same way: every sale, return, void, shift and cash movement is written to the till's own encrypted store first, in the same step as the sale itself, and then sent.",
+        "Selling online is the same path as selling offline, with a shorter queue. So when the internet drops in the middle of a busy hour, nothing changes for the cashier. The sale is taken, the receipt prints, and the record waits on the till until it can be sent.",
+        "The till keeps what it needs to go on selling: the products it sells with their barcodes, prices and tax rules, the regular customers it may need, the cashiers and their PINs, its receipt layouts, and a block of receipt numbers set aside for it, so two tills never print the same number.",
+        "The browser till opens and sells with no network at all. Because a browser can clear a site's stored data after a while without a visit, keep a browser till online whenever it can be, so its sales are sent promptly."
+      ]
+    },
+    {
+      "id": "allowances",
+      "heading": "Allowances you set in the web app",
+      "paragraphs": [
+        "You decide, for each product or category and each set of tills, what a till may do without the office. A product can be sellable offline or not. A phone with a serial number or an item in short supply can be kept online only: the till shows it but won't sell it until the line is back.",
+        "For the products that may be sold offline, choose how much each till may sell: a fixed number of units, a share of that branch's stock split across its tills, or any amount, for plentiful things like bread or water where selling a few too many does no harm.",
+        "Fixed and shared allowances are set aside from the branch's stock. The online shop and the other tills can't sell those units, so what a till sells offline has somewhere to come from.",
+        "There are limits on time and money too. A till may stay offline for 24 hours by default before it locks and asks for a supervisor; you can change that for a set of tills or a single till. You also set the most a shift may sell offline, and which payment types may be taken offline."
+      ]
+    },
+    {
+      "id": "what-works",
+      "heading": "What works offline, and what waits",
+      "paragraphs": [
+        "The till checks every limit before the customer pays, not afterwards. If something isn't allowed offline, the cashier is told in words at the counter, and the customer can pay another way.",
+        "While offline, the till shows clearly that it is offline, for how long, and how much of each allowance is left. The office sets the rules; the till keeps to them on its own."
+      ],
+      "list": [
+        "Cash sales, with change and rounding, work offline.",
+        "Bank transfers are taken and confirmed later, when the money arrives.",
+        "Supervisor approvals by PIN work offline, above the discount, price, refund and void limits you set.",
+        "Points and store credit can be spent against what the till last saw, less what it has already let the customer spend.",
+        "Sales on account work offline within an allowance, and above it with a supervisor's PIN.",
+        "Points earned offline are credited when the sale is sent.",
+        "QR payments and payment links need a connection, because the payer's bank has to confirm them."
+      ]
+    },
+    {
+      "id": "sync",
+      "heading": "When the line is back",
+      "paragraphs": [
+        "The till sends its queue in order, oldest first, in batches. The server confirms what it has received, and the till keeps each record until that confirmation arrives, retrying for as long as it takes.",
+        "Every record carries its own id from the till, so a sale that is sent twice, or six times at once, is recorded once. Each sale becomes an invoice and a receipt at the till's branch, the stock moves, and the money is booked to the account for its payment type. A return becomes a credit note and a refund, paid back the way the sale was paid.",
+        "Then the allowance is put right. The units sold offline are released from what was set aside, and the till's allowance is topped up from the branch's stock. The till fetches what changed while it was away: prices, products, stock and allowances.",
+        "A price changed in the office while the till was offline applies from the next sync. The sale keeps the price the customer actually paid."
+      ]
+    },
+    {
+      "id": "exceptions",
+      "heading": "Sync exceptions: the facts kept, a person decides",
+      "paragraphs": [
+        "A sale made offline is a fact. The customer has paid and left with the goods. So Clafina records it as it happened and never refuses it for disagreeing with the books. Where something doesn't line up, it raises a sync exception for the manager, in plain words.",
+        "The usual ones are a price that changed meanwhile, a product retired meanwhile, a sale for more than was in stock, a payment with no account to land in, an unknown customer, or a return of a sale the books never saw. The sale stands, and the exception says what is wrong.",
+        "The manager decides each one: accept it, mark it put right elsewhere, write it off, or, for a sale the books refused, post it again. Every decision is kept, and the till sees it. Nothing is deleted."
+      ],
+      "list": [
+        "Oversold: both sales stand, and the exception names other branches that have the item, with a button that opens a transfer already filled in.",
+        "No account for a payment: make the missing account in one click, and every waiting payment of that kind is booked.",
+        "Reports show each till's time offline by day, and each exception with its age in hours."
+      ]
+    },
+    {
+      "id": "elsewhere",
+      "heading": "Offline beyond the till",
+      "paragraphs": [
+        "On the factory floor, the operator's screen keeps an offline queue. Starts, pauses, good and spoilt units, stops, materials and comments are sent in the order they were done. Each is checked as of the moment it happened, applied once however often it is sent, and one that fails is turned back in words without undoing the rest.",
+        "The phone app is built to need a connection for most things. A few small actions queue and send later, such as comments, following a record, marking notifications read and answering a meeting invitation. Approvals, anything that moves money, and the assistant wait for a connection, so nothing that needs the office's checks happens without them."
+      ]
+    }
+  ],
+  "faqTitle": "Questions about working offline",
+  "faq": [
+    {
+      "q": "How long can a till stay offline?",
+      "a": "24 hours by default, and you can change it for a set of tills or for one till. After that it locks and asks for a supervisor."
+    },
+    {
+      "q": "What if two tills sell the last one while offline?",
+      "a": "Both sales stand. The manager sees an oversold exception, with the branches that have stock and a button to transfer one."
+    },
+    {
+      "q": "Can a sale be recorded twice when the line comes back?",
+      "a": "No. Each record carries its own id from the till, so a sale sent more than once is still one invoice, one receipt and one stock move."
+    },
+    {
+      "q": "Does the browser till work with no internet?",
+      "a": "Yes. It opens and sells with no network. Keep it online when you can, because a browser may clear a site's stored data after a while without a visit."
+    },
+    {
+      "q": "Does the phone app work offline?",
+      "a": "A few small actions queue, such as comments and answering an invitation. Approvals and anything that moves money need a connection."
+    }
+  ],
+  "cta": {
+    "title": "Keep the queue moving.",
+    "body": "Start free with a till that sells offline, and set its allowances from the web app."
+  }
+}

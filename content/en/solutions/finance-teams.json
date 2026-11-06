@@ -1,0 +1,120 @@
+{
+  "kind": "solution",
+  "sources": [
+    "docs/product-facts.md#product-finance",
+    "docs/product-facts.md#product-purchasing",
+    "docs/product-facts.md#product-capture",
+    "docs/product-facts.md#product-tax",
+    "docs/product-facts.md#product-integrations",
+    "GROUP_CONSOLIDATION.md",
+    "APPROVALS.md",
+    "src/config/plans.ts"
+  ],
+  "meta": {
+    "title": "Finance teams and accountants · Clafina",
+    "description": "Documents that post their own entries, bank reconciliation, a period close checklist, three-way match and a hash-chained audit trail."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "Finance teams and accountants",
+    "title": "Books that are posted before you open them.",
+    "lede": "Every sale, bill, payroll run and stock movement posts its own entry. You check, reconcile and close.",
+    "screen": "finance-overview"
+  },
+  "painsTitle": "What slows the close down",
+  "pains": [
+    {
+      "pain": "Month end starts with typing up everyone else's documents.",
+      "fix": "Sales, purchases, payroll, stock and assets post their own journal entries by posting role. A refused posting waits in a backlog and retries once the account is set."
+    },
+    {
+      "pain": "Bank reconciliation is a spreadsheet exercise.",
+      "fix": "Import statements as CSV, OFX, MT940 or CAMT.053, and reconcile in sessions that lock on approval."
+    },
+    {
+      "pain": "Bills get paid that were never received, or paid twice.",
+      "fix": "Supplier bills go through a three-way match with the order and the goods received. Capture reads a bill into a draft and flags possible duplicates, which must be answered."
+    },
+    {
+      "pain": "The close drags on for weeks.",
+      "fix": "Period close runs from a checklist, with revaluation, year end and reopening when you need it."
+    },
+    {
+      "pain": "Auditors ask who approved what.",
+      "fix": "Finance keeps a hash-chained audit trail, and the person who submits a finance document cannot approve it unless you allow it."
+    },
+    {
+      "pain": "Nobody can explain the tax on a line.",
+      "fix": "Each line keeps the trace of how its tax was decided, and changes to tax rules are saved only with an approval."
+    }
+  ],
+  "storyTitle": "One finance team, before and after",
+  "story": {
+    "business": {
+      "name": "Ikenna Paints and Coatings",
+      "place": "Onitsha",
+      "label": true
+    },
+    "before": "Ikenna's finance team of three keyed in invoices from sales, bills from purchasing and the payroll sheet from HR every month, then matched the bank line by line. The close took most of the next month.",
+    "after": "Now the documents post themselves, and the team starts month end from the backlog and the close checklist. Bank statements are imported and reconciled in sessions. Bills that don't match what was received are held before anyone pays."
+  },
+  "modulesTitle": "What finance teams use",
+  "modules": [
+    {
+      "route": "product-finance",
+      "why": "Posting by role, bank reconciliation, period close, budgets and the audit trail."
+    },
+    {
+      "route": "product-purchasing",
+      "why": "Bills matched to orders and goods received, with variances posted."
+    },
+    {
+      "route": "product-capture",
+      "why": "Bills and receipts read into drafts, with duplicates caught before payment."
+    },
+    {
+      "route": "product-tax",
+      "why": "Tax decided on every line from your rules, with the trace kept, and a VAT return report."
+    },
+    {
+      "route": "product-payments",
+      "why": "Payment requests checked by a second person, and payouts never sent twice."
+    },
+    {
+      "route": "product-business-health",
+      "why": "Reports with filters, saved views and schedules, and KPIs that say whether they agree with the books."
+    },
+    {
+      "route": "product-integrations",
+      "why": "Read-only API keys for the accountant's tools, and accounting exports."
+    }
+  ],
+  "planTitle": "The plan for finance teams",
+  "plan": {
+    "id": "business",
+    "why": "Business adds approval policies, the audit trail and the API to the books, sales, stock and payroll in Growth."
+  },
+  "faqTitle": "Questions finance teams ask",
+  "faq": [
+    {
+      "q": "Can our outside accountant work in it?",
+      "a": "Yes. Invite them with a role that fits, or give their tools an API key that can only read finance. Reports export as PDF, XLSX and CSV."
+    },
+    {
+      "q": "Can we consolidate several companies?",
+      "a": "Yes. Group consolidation translates each company's books into the group currency and takes out trade between them line by line, with your adjustments kept as audited entries."
+    },
+    {
+      "q": "Does it handle more than one currency?",
+      "a": "Yes. Every amount carries its currency, and the ledger keeps rates, base amounts, revaluation and realised gains and losses."
+    },
+    {
+      "q": "Can we stop money leaving before it is spent?",
+      "a": "Yes. Budgets warn or block at requisition, order and invoice, and payment requests need a second person."
+    }
+  ],
+  "cta": {
+    "title": "Close the month on books that are already posted.",
+    "body": "Start free, or ask us to walk your team through a month end in Clafina."
+  }
+}
