@@ -12,10 +12,9 @@ describe('routes', () => {
     expect(new Set(ROUTES.map((r) => r.path)).size).toBe(ROUTES.length);
     expect(new Set(ROUTES.map((r) => r.id)).size).toBe(ROUTES.length);
   });
-  it('lists the pages built so far', () => {
-    const built = ROUTES.filter((r) => r.built && !('previewOnly' in r)).map((r) => r.id);
-    expect(built.filter((id) => !id.startsWith('product-'))).toEqual(['home', 'platform', 'pricing', 'pricing-compare', 'demo', 'contact-sales', ...ROUTES.filter((r) => r.group === 'industry').map((r) => r.id), 'help']);
-    expect(built.filter((id) => id.startsWith('product-'))).toHaveLength(22);
+  it('has every page of the site map built', () => {
+    expect(ROUTES.filter((r) => !r.built).map((r) => r.id)).toEqual([]);
+    expect(ROUTES.filter((r) => r.group === 'product')).toHaveLength(22);
   });
   it('writes paths with leading and trailing slashes', () => {
     expect(ROUTES.every((r) => r.path.startsWith('/') && r.path.endsWith('/'))).toBe(true);

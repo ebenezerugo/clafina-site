@@ -1,0 +1,97 @@
+{
+  "kind": "doc",
+  "sources": [
+    "commerce-api/documentation/INTEGRATIONS.md",
+    "commerce-api/documentation/SALES_CHANNELS.md",
+    "commerce-api/documentation/OUTBOX.md",
+    "commerce-api/documentation/STATUS.md",
+    "docs/product-facts.md#product-integrations--integrations-and-api"
+  ],
+  "meta": {
+    "title": "Webhooks · Clafina",
+    "description": "Get told when something happens in Clafina: the events you can choose, how each delivery is signed, how retries work and the delivery log."
+  },
+  "hero": {
+    "eyebrow": "Developers",
+    "title": "Webhooks: hear about it as it happens.",
+    "lede": "Give Clafina an address and choose the events. Each time one happens, we send it there, signed, and keep trying until your system answers."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "endpoints",
+      "heading": "Endpoints",
+      "paragraphs": [
+        "An endpoint is an address of yours that receives events. Add as many as you like, in Integrations: a name, the address, the events it wants, and whether it is active or paused.",
+        "The address must be HTTPS on the public internet. It is checked when you save it and again at every call, and redirects are not followed. Because an address often carries a token, it is sealed and shown without its query.",
+        "When you add an endpoint you get its signing secret. It is shown once, so keep it somewhere safe."
+      ]
+    },
+    {
+      "id": "events",
+      "heading": "Events",
+      "paragraphs": [
+        "Each kind of record has four events: created, updated, status changed (an update that moved its status) and deleted. Choose the ones each endpoint needs.",
+        "Events are kept thin on purpose. Each carries its id, its type, when it happened, your organisation, and the record's kind, id, status, previous status and place. Your system reads the rest through the API with its own key, so a webhook never hands out more than that key may read."
+      ],
+      "list": [
+        "Quotations, sales orders, invoices, payments and waybills",
+        "Purchase orders, goods receipts, supplier bills and supplier payments",
+        "Customers, suppliers and products",
+        "Deals and support tickets"
+      ]
+    },
+    {
+      "id": "delivery",
+      "heading": "How events are sent",
+      "paragraphs": [
+        "An event is sent only after the change it describes has been saved. A change that fails never sends one.",
+        "Each event goes once to each endpoint that wants it. The event id is the same for every endpoint and every retry, so if you see an id twice, you have already handled it."
+      ]
+    },
+    {
+      "id": "signing",
+      "heading": "Checking the signature",
+      "paragraphs": [
+        "Every delivery is signed with HMAC-SHA256 using the endpoint's secret. A signature header carries the time it was sent, in seconds, and the signature, in the form t=<seconds>,v1=<hex>. Other headers carry the event id, the event type and the delivery id.",
+        "To check a delivery, take the seconds, a full stop and the raw body exactly as received, work out the HMAC-SHA256 with your secret, and compare it with v1. Refuse a delivery whose time is more than five minutes old, so an old message cannot be sent again."
+      ],
+      "list": [
+        "Use the raw body, before any parsing, or the signature will not match.",
+        "Compare signatures in constant time.",
+        "Press New secret to change it: deliveries are signed with the new one from then on."
+      ]
+    },
+    {
+      "id": "retries",
+      "heading": "Retries and pausing",
+      "paragraphs": [
+        "Answer with a 2xx status as soon as you have the event. If your system does not, the delivery is tried again, up to eight attempts in all: a minute apart at first, then doubling, over about four hours.",
+        "If an endpoint fails 15 times in a row, it is paused, with the reason shown. Resume it when your system is ready. While an endpoint is paused or removed, its deliveries are skipped, not saved up for later."
+      ]
+    },
+    {
+      "id": "delivery-log",
+      "heading": "The delivery log",
+      "paragraphs": [
+        "Each endpoint keeps a log of its latest deliveries: the event, the status, how many attempts, when the next one is due, and what your system answered, including the first part of its reply and any error.",
+        "From the log you can send any delivery again, exactly as it was. Test sends a ping and shows the answer straight away. Removing an endpoint retires it and keeps its log."
+      ]
+    },
+    {
+      "id": "shops-and-platforms",
+      "heading": "Online shops and integration platforms",
+      "paragraphs": [
+        "An online shop run outside Clafina can have its own webhook for its sales channel, signed and retried in the same way, with its own delivery log and replay.",
+        "Integration platforms subscribe with an API key: they list the event types, fetch a sample of each, and turn a subscription on or off. Each one shows up as an ordinary endpoint your admins can test, pause or remove."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Ready to connect?",
+    "body": "Sign up for developer access, or go back to the API overview for keys and limits.",
+    "email": "support",
+    "routes": ["developers", "developers-signup", "product-integrations", "help"]
+  }
+}

@@ -81,7 +81,7 @@
       "paragraphs": [
         "We will publish an availability figure here only once we can stand behind it.",
         {
-          "text": "Clafina is available 99.9% of the time, measured each month.",
+          "text": "Clafina is available 99.9% of the time.",
           "claim": "claims.uptime"
         }
       ]
