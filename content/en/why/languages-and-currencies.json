@@ -59,7 +59,7 @@
           "text": "This site is published in 20 languages: English, Spanish, Portuguese, French, Hausa, Yoruba, Igbo, Nigerian Pidgin, Swahili, Arabic, Simplified Chinese, Hindi, German, Indonesian, Turkish, Japanese, Russian, Amharic, Zulu and Twi.",
           "claim": "claims.metrics"
         },
-        "English is written first, and each translation is reviewed by a native speaker. A page keeps the same address in every language, and the language switcher keeps you on the page you were reading.",
+        "English is written first, and the other languages are translated from it. A page keeps the same address in every language, and the language switcher keeps you on the page you were reading.",
         "Numbers, dates and money are written the way each language writes them. The type is chosen to carry every letter a language needs, including the marks of Yoruba, Igbo and Hausa, and the naira and cedi signs."
       ]
     },
@@ -75,7 +75,7 @@
       "id": "the-app",
       "heading": "The app, and what your customers receive",
       "paragraphs": [
-        "The Clafina web app, the till and the phone app work in English for now. Their words are kept apart from the code, so further languages can be added without rebuilding the screens.",
+        "The Clafina web app, the till and the phone app work in English for now.",
         "What your customers and suppliers receive is a different matter. Each customer and supplier has a language on their record. When Clafina sends an invoice, a receipt, an order confirmation or a purchase order, it picks the wording in that person's language, then the one for the document's branch, then English.",
         "The wording is yours. You write your own templates for each kind of message, each channel and each language, and yours are used before the ones Clafina ships, which are in English. Money, numbers and dates in a message are written the way the recipient's language writes them.",
         "Printed documents follow the same idea. Your document settings set the locale and number format for PDFs, alongside your logo, colours, footer and terms."
@@ -86,22 +86,15 @@
       "heading": "Several currencies in one set of books",
       "paragraphs": [
         "Every amount in Clafina carries its currency. A quotation, an invoice, a receipt, a bank account and a gift card each have their own. Your organisation keeps its own list of currencies and their rates by date.",
-        "Your books have one base currency, taken from the country of your main place of business. Every journal line is kept in its own currency and in the base currency, at the rate it was posted at. Reports are in the base currency, and ageing is shown per customer and currency.",
+        "Your books have one base currency, taken from the country of your main place of business. Every journal line is kept in its own currency and in the base currency, at the rate it was posted at. Reports are in the base currency, and ageing is shown per customer and currency. It can be changed until the first entry posts, and is then fixed, because every entry depends on it.",
         "When a foreign receipt comes in at a different rate from the invoice it pays, the difference posts to exchange gain or loss, one line for each invoice, so you can see where it came from.",
         "At the end of a period, Clafina restates what you are owed, what you owe and what is in foreign bank accounts at the closing rate, after showing you what it would post. The revaluation is reversed the next day, so the next period starts from the rates the documents were posted at."
       ],
       "list": [
         "The currencies page shows each rate's age, and flags a rate that is a week old or more.",
         "It also shows what you are exposed to in each currency: what you are owed less what you owe.",
-        "A bank statement must be in its account's currency, or it is refused."
-      ]
-    },
-    {
-      "id": "what-it-wont-guess",
-      "heading": "What Clafina won't guess",
-      "paragraphs": [
-        "Some things are better asked than guessed. A receipt in one currency is not converted to settle an invoice in another. A price book in one currency is not compared with a document in another. Clafina says so, rather than picking a rate for you.",
-        "Your base currency and the start of your financial year can be changed until the first entry posts. After that they are fixed, because every entry depends on them."
+        "A bank statement must be in its account's currency, or it is refused.",
+        "Pay an invoice in the currency it was raised in: a receipt in one currency is not converted to settle an invoice in another."
       ]
     },
     {
@@ -110,7 +103,7 @@
       "paragraphs": [
         "This site comes in three editions: Global, Nigeria and Latin America. The edition is chosen separately from the language, and changes only the currency and the prices you see. The Global and Latin America editions show US dollars, and the Nigeria edition shows naira.",
         "Inside the app, the country shapes the starting point. Your books start from a chart of accounts template, and the tax engine has presets for Nigeria, Ghana, Kenya, South Africa, the United Kingdom, India and the 27 EU member states. Every rate is dated and every rule is yours to change.",
-        "An online shop can show prices in display currencies for visitors from elsewhere, while the order is still kept in your books in its own currency."
+        "An online shop can show its prices in display currencies for visitors from elsewhere."
       ]
     }
   ],
