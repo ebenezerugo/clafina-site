@@ -1,0 +1,13 @@
+{
+  "meta": { "title": "Glossary · Clafina", "description": "The words you will meet in Clafina and in your trade, in plain English: from blind close and folio to retention and Z report." },
+  "hero": { "eyebrow": "Glossary", "title": "The words, in plain English.", "lede": "Every word the app and the industry pages use, with what it means and where you will meet it." },
+  "terms": [
+    { "word": "Posting", "meaning": "Writing a document into the books. A posted invoice is owed by the customer; until then it is a draft you can change." },
+    { "word": "Draft", "meaning": "A document still being written. Only a draft can be changed or deleted; after that, you cancel or void it." },
+    { "word": "Void", "meaning": "Undoing a posted document so it no longer counts, while keeping it on record with the reason." },
+    { "word": "Chart of accounts", "meaning": "The list of accounts your books use. A new organisation starts with one for its country." },
+    { "word": "Price book", "meaning": "The prices you sell at, for a place or a kind of customer." }
+  ],
+  "seeIn": "See it in",
+  "jumpTo": "Jump to a letter"
+}

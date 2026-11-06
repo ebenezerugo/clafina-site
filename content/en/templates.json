@@ -1,0 +1,37 @@
+{
+  "meta": { "title": "Free invoice, quotation and receipt templates · Clafina", "description": "Print a clean invoice, quotation or receipt, or save it as a PDF. When you are ready, make them in Clafina and they post to your books." },
+  "illustrative": "Illustrative example",
+  "hero": { "eyebrow": "Free templates", "title": "An invoice, a quotation and a receipt, ready to print.", "lede": "Each one has what a customer expects to see: who it is from, who it is to, a number, a date, the lines, the tax and the total." },
+  "howToTitle": "How to use them",
+  "howTo": [
+    "Choose the template you need and press Print or save as PDF.",
+    "In the print window, choose a printer, or Save as PDF to email it.",
+    "Use your own business name, the customer's details, a new number for each one, and your own lines and tax.",
+    "When you would rather not do it by hand, make it in Clafina: the number, tax and totals are done for you, and it posts to your books."
+  ],
+  "print": "Print or save as PDF",
+  "makeIt": "Make it in Clafina",
+  "labels": { "number": "No.", "date": "Date", "to": "To", "item": "Item", "qty": "Qty", "price": "Price", "amount": "Amount", "subtotal": "Subtotal", "tax": "Tax", "total": "Total", "paid": "Paid", "validUntil": "Valid until" },
+  "business": { "name": "Bright Harbour Traders", "place": "12 Marina Road, Lagos", "label": true },
+  "currency": "NGN",
+  "templates": [
+    {
+      "id": "invoice", "title": "Invoice", "body": "What a customer owes you, with when it is due.",
+      "number": "INV-2026-0042", "date": "6 November 2026", "to": "Adaobi Stores, Lekki",
+      "lines": [{ "item": "Vegetable oil 1 L", "qty": 24, "price": 3200 }, { "item": "Spaghetti 500 g", "qty": 40, "price": 1150 }, { "item": "Delivery", "qty": 1, "price": 5000 }],
+      "taxRate": 0.075, "taxName": "VAT", "note": "Due in 14 days. Pay by bank transfer and put the invoice number in the reference.", "page": "/sales/invoices"
+    },
+    {
+      "id": "quotation", "title": "Quotation", "body": "A price you offer before the customer agrees to buy.",
+      "number": "QUO-2026-0018", "date": "6 November 2026", "to": "Green Valley Mills, Ikeja",
+      "lines": [{ "item": "Shelving unit, 4 tiers", "qty": 6, "price": 48000 }, { "item": "Fitting on site", "qty": 1, "price": 25000 }],
+      "taxRate": 0.075, "taxName": "VAT", "note": "Valid for 30 days. Prices include fitting in Lagos.", "page": "/sales/quotations"
+    },
+    {
+      "id": "receipt", "title": "Receipt", "body": "Proof that a customer has paid you.",
+      "number": "RCT-2026-0107", "date": "6 November 2026", "to": "Kunle Ade",
+      "lines": [{ "item": "Payment for INV-2026-0039", "qty": 1, "price": 86000 }],
+      "taxRate": 0, "taxName": "VAT", "note": "Received with thanks by bank transfer.", "page": "/sales/receipts"
+    }
+  ]
+}
