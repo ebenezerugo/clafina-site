@@ -1,0 +1,108 @@
+{
+  "kind": "doc",
+  "sources": [
+    "commerce-api/documentation/INTEGRATIONS.md",
+    "commerce-api/documentation/MCP_CATALOG.md",
+    "commerce-api/documentation/RATE_LIMITS.md",
+    "commerce-api/documentation/AUTH.md",
+    "commerce-api/documentation/SALES_CHANNELS.md",
+    "commerce-api/documentation/STATUS.md",
+    "docs/product-facts.md#product-integrations--integrations-and-api"
+  ],
+  "meta": {
+    "title": "Developers · Clafina",
+    "description": "Build on Clafina: the API and its keys, what a key may do, rate limits, events and webhooks, and the MCP server for AI assistants."
+  },
+  "hero": {
+    "eyebrow": "Developers",
+    "title": "Build on the same record you run your business on.",
+    "lede": "Everything a Clafina screen does goes through the API. Your scripts, your systems and your AI assistants can use it too, held to the same permissions as the person who connects them."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "api",
+      "heading": "The API",
+      "paragraphs": [
+        "Clafina's API is the one its own screens use: JSON over HTTPS, under a versioned path. Every module is there, from invoices and stock to payroll and projects, so most things you can do on a screen, a script can do too.",
+        "Each call is checked against the permission it needs, in the organisation it acts for. A refusal comes back in words, naming the field or the rule, as the screen would show it."
+      ],
+      "list": [
+        "Requests that move money take an idempotency key, so a retry never does the work twice.",
+        "Every amount carries its currency."
+      ]
+    },
+    {
+      "id": "keys",
+      "heading": "API keys",
+      "paragraphs": [
+        "A key is made by a person who manages your organisation's settings, from Integrations → API keys. Give it a name, the permissions it needs and an expiry: never, 30 or 90 days, or a year.",
+        "The key is shown once. We keep only a hash of it, with a hint of its last characters so you can tell keys apart. You can see when each was last used, and from where.",
+        "Revoking a key stops it at once. A key is kept with who revoked it and when."
+      ]
+    },
+    {
+      "id": "scopes",
+      "heading": "What a key may do",
+      "paragraphs": [
+        "A key acts as the person who made it, in that organisation, with only the permissions it was given. It can never do more than its maker still may: if they leave or lose a role, the key loses it too.",
+        "A key cannot reach a person's own profile, password or sessions, and it cannot make or manage other keys.",
+        "On top of permissions, each key carries a policy for AI tools: whether it may only read, also make drafts, or also confirm things that reach people or move money; whether a confirm is asked of the person first, saved as a proposal they confirm in Clafina, or simply run; and which modules it may use."
+      ]
+    },
+    {
+      "id": "rate-limits",
+      "heading": "Rate limits",
+      "paragraphs": [
+        "Anything open without signing in is held to limits per address, so nobody can guess a password or a code by trying them all, or flood an inbox. Pages where something is guessed count only the wrong answers.",
+        "An online shop's channel key has its own limit of calls a minute, which you can set for that channel.",
+        "When a limit is reached, the answer is 429 with a Retry-After header and a sentence saying how long to wait. Wait that long, then try again."
+      ]
+    },
+    {
+      "id": "events",
+      "heading": "Events and webhooks",
+      "paragraphs": [
+        "Clafina can tell your system when something happens: an invoice is made, a payment comes in, a sales order changes status, a ticket closes. You choose the events, give an HTTPS address, and each event is sent there, signed, and retried if your system does not answer.",
+        "Integration platforms can subscribe the same way with an API key: they read the event types and sample events, then turn a trigger on and off. Each subscription is an ordinary webhook your admins can see, test, pause or remove.",
+        "The webhooks page has the events, how to check a signature and how retries work."
+      ]
+    },
+    {
+      "id": "mcp",
+      "heading": "The MCP server for AI assistants",
+      "paragraphs": [
+        "Clafina runs a Model Context Protocol server, so an AI assistant that speaks MCP can work with your business: look up overdue invoices, check stock, draft a quotation priced from your price book.",
+        "The assistant signs in with OAuth. You approve it in your browser, choose the organisation and tick what it may do. Nothing is pasted anywhere. It then acts as you, within your permissions, cut down further by what you ticked, and checked again at every call. For a tool without OAuth, use an API key with a policy.",
+        "Every tool is marked read, draft or confirm. Anything that reaches people, moves money or stock, posts to the books or cannot be undone is a confirm, and by default the person is asked before it runs. An assistant finds what it needs by walking the modules and searching by words, rather than being handed every tool at once."
+      ],
+      "list": [
+        "Only what the caller may use is ever listed.",
+        "Security settings stay out: keys, agent connections, consent, support access, and changes to webhooks or payment providers are never tools.",
+        "Writing tools take an idempotency key, so a retry does the work once.",
+        "Long work reports progress, or runs as a task the assistant can check.",
+        "Every call is written to an audit trail with its outcome.",
+        "You see and disconnect your assistants under Integrations → Agent connections, and your organisation can turn assistants off."
+      ]
+    },
+    {
+      "id": "single-sign-on",
+      "heading": "Single sign-on",
+      "paragraphs": [
+        "Connect your identity provider by OpenID Connect or SAML 2.0 from Integrations. Prove each email domain with a DNS record; then members whose email is in a proved domain sign in through your provider."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Start building",
+    "body": "Sign up for developer access, or read how webhooks work. For help with a call that does not behave, write to support.",
+    "email": "support",
+    "routes": [
+      "developers-signup",
+      "developers-webhooks",
+      "product-integrations",
+      "help"
+    ]
+  }
+}

@@ -101,7 +101,7 @@
   "faq": [
     {
       "q": "Which sign-on standards do you support?",
-      "a": "SAML and OIDC. Two-step sign-in is there for anyone not signing in through your identity provider."
+      "a": "SAML and OIDC. Two-step sign-in, with codes sent by email, is there as well."
     },
     {
       "q": "Can we consolidate companies we only part own?",
