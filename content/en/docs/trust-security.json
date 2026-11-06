@@ -80,7 +80,7 @@
       ],
       "list": [
         "Till PINs are stored as a hash and never returned.",
-        "Data you export leaves out anything that looks like a password, token or key.",
+        "An export of your organisation's data leaves out anything that looks like a password, token or key.",
         "Requests that move money take an idempotency key, so a retry never pays twice."
       ]
     },
@@ -89,7 +89,7 @@
       "heading": "Audit trails",
       "paragraphs": [
         "Finance keeps an audit trail of who did what, to which record, what changed and why. Each entry is chained by hash to the one before, so changing, removing or reordering any entry breaks the chain at that point. Anyone with access can check the chain from the audit trail screen.",
-        "Files in the Drive have an audit log of every change and every download, and searching that log is itself recorded. Every call an AI assistant or an API key makes is written down with its outcome."
+        "Files in the Drive have an audit log of every change and every download, and searching that log is itself recorded. Every call an AI assistant or an API key makes through Clafina's tools is written down with its outcome."
       ]
     },
     {
@@ -127,8 +127,7 @@
       "id": "report",
       "heading": "Report a security problem",
       "paragraphs": [
-        "If you think you have found a weakness in Clafina, please email our security team with what you found and how to see it. Please do not test against other people's accounts or data.",
-        "We will tell you we have it, keep you told while we look into it, and say when it is fixed."
+        "If you think you have found a weakness in Clafina, please email our security team with what you found and the steps to see it. Please do not test against other people's accounts or data, and give us time to fix it before you tell anyone else."
       ]
     }
   ],
@@ -136,6 +135,11 @@
     "title": "Found something?",
     "body": "Write to our security team. For questions about your own account, the help centre and support are quicker.",
     "email": "security",
-    "routes": ["trust-privacy", "trust-reliability", "help", "contact"]
+    "routes": [
+      "trust-privacy",
+      "trust-reliability",
+      "help",
+      "contact"
+    ]
   }
 }
