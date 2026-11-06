@@ -48,3 +48,13 @@
 }
 .one-record-step { animation: one-record-glow 6s var(--ease-out) infinite; }
 @media (prefers-reduced-motion: reduce) { .one-record-step { animation: none; } }
+
+/* Free templates: printing one document hides the rest of the page. */
+@media print {
+  body[data-printing] > *:not(main), body[data-printing] main > *:not(#templates) { display: none !important; }
+  body[data-printing] [data-print] { display: none; }
+  body[data-printing="invoice"] [data-print="invoice"],
+  body[data-printing="quotation"] [data-print="quotation"],
+  body[data-printing="receipt"] [data-print="receipt"] { display: block; break-inside: avoid; }
+  body[data-printing] [data-no-print] { display: none !important; }
+}

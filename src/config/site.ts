@@ -31,6 +31,7 @@ export const SITE = {
     googlePlay: todo<string>('Google Play listing URL'),
     tillDesktop: todo<string>('Desktop till download URL'),
     tillAndroid: todo<string>('Android till download URL'),
+    tillWeb: todo<string>('Browser till address'),
   },
   ios: {
     teamId: todo<string>('Apple developer team ID'),
@@ -48,6 +49,8 @@ export const SITE = {
     youtube: todo<string>('YouTube channel URL'),
     tiktok: todo<string>('TikTok profile URL'),
   },
+  /** Open roles on Careers. Empty or a placeholder: the page says there are none open. */
+  openRoles: todo<{ title: string; place: string; href: string }[]>('Open roles: title, place and the application link'),
   crmEndpoint: todo<string>('Where form leads are sent (CRM endpoint or webhook)'),
   turnstileSiteKey: todo<string>('Cloudflare Turnstile site key'),
 };

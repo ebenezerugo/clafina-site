@@ -1,0 +1,8 @@
+{
+  "meta": { "title": "Download the apps · Clafina", "description": "The Clafina phone app for iPhone and Android, and the till for desktop computers, Android and the browser." },
+  "hero": { "eyebrow": "Download", "title": "Clafina on every device you work on.", "lede": "The phone app for owners and staff, and the till for the counter. Both work from the same records as the web app." },
+  "phone": { "title": "The phone app", "body": "Approvals, sales, stock and your day, on iPhone and Android. Sign in with the same account you use on the web.", "appStore": "App Store", "googlePlay": "Google Play", "qr": "Scan with your phone's camera to get the app." },
+  "till": { "title": "The till", "body": "For the counter: on desktop computers, on Android, or in the browser. It keeps selling when the internet drops.", "desktop": "Desktop till", "android": "Android till", "browser": "Browser till" },
+  "notYet": "link coming at launch",
+  "forYourDevice": "For this phone"
+}

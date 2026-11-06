@@ -10,7 +10,7 @@ import { LeadForm } from './LeadForm';
 const COUNTRIES = ['NG', 'GH', 'KE', 'ZA', 'EG', 'MA', 'SN', 'CI', 'CM', 'ET', 'TZ', 'UG', 'RW', 'AE', 'SA', 'IN', 'ID', 'TR', 'CN', 'JP', 'RU', 'GB', 'FR', 'DE', 'ES', 'PT', 'US', 'CA', 'BR', 'MX', 'CO', 'AR', 'CL', 'PE'];
 
 /** The Book a demo and Contact sales pages: the same form with different words around it. */
-export async function LeadPage({ locale, id, kind }: { locale: Locale; id: 'demo' | 'contact-sales'; kind: 'demo' | 'sales' }) {
+export async function LeadPage({ locale, id, kind }: { locale: Locale; id: 'demo' | 'contact-sales' | 'partners-apply' | 'developers-signup'; kind: 'demo' | 'sales' | 'partner' | 'developer' }) {
   const t = await getTranslations({ locale });
   const c = loadContent(locale, id, LeadPageContent);
   const names = new Intl.DisplayNames([localeInfo(locale).hreflang, 'en'], { type: 'region' });

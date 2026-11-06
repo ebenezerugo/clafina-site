@@ -16,7 +16,7 @@ function storedCampaign(): Campaign {
 
 /** A four-step enquiry. It only says thanks after the server accepted the request. */
 export function LeadForm({ kind, locale, text, industries, countries, salesEmail, turnstileSiteKey }: {
-  kind: 'demo' | 'sales'; locale: string; text: LeadFormText;
+  kind: 'demo' | 'sales' | 'partner' | 'developer'; locale: string; text: LeadFormText;
   industries: { id: string; label: string }[]; countries: { code: string; name: string }[];
   salesEmail?: string; turnstileSiteKey?: string;
 }) {
