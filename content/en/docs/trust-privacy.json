@@ -1,0 +1,102 @@
+{
+  "kind": "doc",
+  "sources": [
+    "commerce-api/documentation/CONSOLE.md",
+    "commerce-api/documentation/BILLING_HELP_PERSONAL.md",
+    "commerce-api/documentation/AUTH.md",
+    "commerce-api/documentation/ACCESS.md",
+    "commerce-api/documentation/CLIENT_RECORDS.md",
+    "commerce-api/documentation/INTEGRATIONS.md",
+    "commerce-api/documentation/COMMERCE_AI.md",
+    "docs/product-facts.md#platform-wide-facts-home-and-platform-pages"
+  ],
+  "meta": {
+    "title": "Privacy and data protection · Clafina",
+    "description": "What Clafina keeps for your business, who can see it, how to get a copy or close an account, and the data-request tools for client records."
+  },
+  "hero": {
+    "eyebrow": "Trust centre",
+    "title": "Your data stays yours.",
+    "lede": "Clafina keeps the records your business makes so you can run it. This page says what we keep, who can see it, and how you take a copy or ask for it to go."
+  },
+  "updated": "2026-11-06",
+  "status": "final",
+  "sections": [
+    {
+      "id": "what-we-keep",
+      "heading": "What Clafina keeps",
+      "paragraphs": [
+        "For your business, Clafina keeps what you put in and what your work makes: customers and suppliers, sales and purchases, stock, the books, your people and their pay, bookings, files and messages.",
+        "For each person who signs in, we keep their name, email and phone, a hash of their password (never the password itself), the organisations and roles they hold, and their sessions: the device, when and roughly where they signed in. Audit trails record who did what in finance and in the Drive."
+      ],
+      "list": [
+        "Secrets you give us to connect other services are sealed and never shown again.",
+        "API keys are kept only as a hash.",
+        "Events sent to your webhooks carry ids and states, and the receiver reads the rest with its own key."
+      ]
+    },
+    {
+      "id": "who-sees",
+      "heading": "Who can see it",
+      "paragraphs": [
+        "Only the people in your organisation, and only what their role allows at their place. Your owners decide the roles, and an owner is always there to decide.",
+        "Our support staff can look inside your account only when an owner says yes, for the time the owner chooses. The session reads only, unless the owner allows more, and every request it makes is recorded for your owners.",
+        "An AI assistant you connect acts as you and never more: it sees only what you could see, cut down further by what you ticked when you connected it. When someone leaves your organisation, the assistants they connected lose their access too."
+      ]
+    },
+    {
+      "id": "copy",
+      "heading": "Getting a copy of your data",
+      "paragraphs": [
+        "Reports export as PDF, spreadsheet or CSV from the screen you are on, whenever you like.",
+        "For everything at once, ask us. We prepare one file for each kind of record your organisation holds, with your people and your Drive files, and a list of what is inside. Anything that looks like a password, token or key is left out. The download link works for a short time and the file is kept for seven days.",
+        "A person can also ask for a copy of what is held about them: their account details, organisations and roles, sessions, and how many records they made."
+      ]
+    },
+    {
+      "id": "closing",
+      "heading": "Leaving, closing and deleting",
+      "paragraphs": [
+        "You can leave an organisation from your account settings, unless you are its only owner: make someone else an owner first.",
+        "Closing your own account waits 14 days. Until then you can cancel it. After that, you can no longer sign in and every session ends. The records you made stay with the businesses you made them for, because they are those businesses' books.",
+        "When a business closes its Clafina account, it can ask for everything to be erased. We then remove every record that belongs to it and take out the names, phones and addresses of people who belonged to nothing else. A legal hold, where one applies, waits first."
+      ],
+      "list": [
+        "Copies other businesses hold of what you sent them, such as an invoice, are their records and stay with them.",
+        "Backups age out on their own schedule rather than at once.",
+        "A short record that the erasure happened is kept, without who you were."
+      ]
+    },
+    {
+      "id": "client-records",
+      "heading": "Client records for clinics and salons",
+      "paragraphs": [
+        "Clinics, therapists, vets, opticians and salons that keep client records get stronger tools, built in from the first day.",
+        "Clinical notes are encrypted under your organisation's own key and never searched or sent in notifications. Opening a record is logged every time, and front desk staff see names, bookings and consent, not notes. Consent is a record of its own: what it was for, the wording, who signed and when, and when it was withdrawn."
+      ],
+      "list": [
+        "Data requests: log a client's request for a copy, a correction or deletion. Each has a due date 30 days from receipt, and overdue ones are marked.",
+        "Deletion only by a decided request or by your retention rule: the clinical content is erased and the log of it stays.",
+        "Retention rules for adults and for children, set by your privacy officer.",
+        "An access log your privacy officer reviews, with unusual reading flagged at once."
+      ]
+    },
+    {
+      "id": "laws",
+      "heading": "Data-protection law",
+      "paragraphs": [
+        "Our privacy policy and our data processing terms say how we handle personal data on your behalf.",
+        {
+          "text": "Clafina is GDPR compliant and meets the Nigeria Data Protection Act.",
+          "claim": "claims.complianceLabels"
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Questions about your data?",
+    "body": "Write to our privacy team to ask for a copy, a correction or an erasure, or to ask anything about how we handle data.",
+    "email": "privacy",
+    "routes": ["legal-privacy", "legal-dpa", "trust-security", "contact"]
+  }
+}

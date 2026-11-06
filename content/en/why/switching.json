@@ -1,0 +1,133 @@
+{
+  "kind": "explainer",
+  "sources": [
+    "docs/product-facts.md",
+    "FINANCE.md",
+    "CATALOGUE.md",
+    "CATALOGUE_HANDOVER.md",
+    "STOCK.md",
+    "CRM.md",
+    "SUPPLIER_MANAGEMENT.md",
+    "ASSETS.md",
+    "FINANCE_MANAGEMENT.md",
+    "ACCOUNT_SETUP.md",
+    "POINT_OF_SALE.md",
+    "ROADMAP.md",
+    "commerce-web/src/app/features/finance/presentation/books.component.ts"
+  ],
+  "meta": {
+    "title": "Switching to Clafina · Clafina",
+    "description": "What moving to Clafina involves: your books set up, then products and stock, opening balances, customers, suppliers, assets and bank statements brought in from files."
+  },
+  "hero": {
+    "eyebrow": "Why Clafina",
+    "title": "Bring what you already have.",
+    "lede": "Moving to Clafina means setting up your books, bringing in what you already know from spreadsheets and files, and then working from one record."
+  },
+  "points": [
+    {
+      "title": "From the files you have",
+      "body": "Products and stock, customers, suppliers and assets come in from a spreadsheet, with a template for each."
+    },
+    {
+      "title": "Checked before it is saved",
+      "body": "Each import says what is wrong with a row in words, and the good rows are not held up by the bad ones."
+    },
+    {
+      "title": "Books that start in balance",
+      "body": "Opening balances go in as one entry on the day you choose, and what you are owed comes in as real invoices."
+    }
+  ],
+  "diagram": {
+    "label": "Your Clafina books at the centre, with what you bring in around them: products and opening stock, opening balances, customers, suppliers, assets and bank statements.",
+    "centre": "Your Clafina books",
+    "spokes": [
+      "Products and opening stock",
+      "Opening balances",
+      "Customers",
+      "Suppliers",
+      "Assets",
+      "Bank statements"
+    ]
+  },
+  "sections": [
+    {
+      "id": "what-it-involves",
+      "heading": "What switching involves",
+      "paragraphs": [
+        "Switching is mostly a matter of saying what you already have. Your products and what is on the shelf, the balances in your old books, who your customers and suppliers are, the equipment you own and what has been through the bank. Clafina takes each of these from a file, checks it, and puts it where the rest of the business can read it.",
+        "The order matters a little. Set up the books first, because everything else posts into them. Then bring in products and stock, opening balances, customers and suppliers. Assets and bank statements can follow when you are ready.",
+        "After that, you invite your people, pair your tills and start trading. From the first sale, the till, the shop, the books and the phone app all read the same records."
+      ]
+    },
+    {
+      "id": "books-first",
+      "heading": "Your books, set up first",
+      "paragraphs": [
+        "A new organisation's books are opened when it is made: a base currency, a chart of accounts, the account each kind of posting goes to, and a fiscal year. The base currency comes from the country of your main place of business, and the chart starts from a template you can rename, add to or replace.",
+        "Two choices are worth making carefully before you post anything: the base currency and the month your financial year starts. Both can be changed freely until the first entry posts, and are then fixed, because every entry after that depends on them.",
+        "Which account a sale, a refund or a gift card posts to can be changed at any time. You choose it once, and every document follows it."
+      ]
+    },
+    {
+      "id": "products-and-stock",
+      "heading": "Products and stock from a spreadsheet",
+      "paragraphs": [
+        "Products come in through the import page. Choose first what the import is for: adding new items, updating items you already stock at that place, or both. Then upload a sheet made from the template, or paste rows straight into the grid. The template and the grid take their columns from the same list, so they always match.",
+        "Each row is read for the place you are importing into. An item that doesn't exist yet is made, with its stock and price. An item you already have but don't stock at this place gets a stock record and a price there, which is what happens when you open a second branch. An item already stocked there has its quantity, price, cost or barcode updated.",
+        "Updates set figures; they don't add to them. A quantity of 40 means you have forty. A blank cell is left alone, not read as an instruction to clear it. Rows that can't be used are listed with the reason, and every import is kept in the history.",
+        "The stock you bring in is written into the stock history as an opening balance, not as a purchase. So it has a record from day one, and your first month's buying reports don't count your whole shelf as goods bought."
+      ]
+    },
+    {
+      "id": "opening-balances",
+      "heading": "Opening balances that agree with your documents",
+      "paragraphs": [
+        "Balances from your old system go in as one opening entry. In the books, choose Bring in opening balances, say the day they stood at, and paste from a spreadsheet: an account code, a debit and a credit, one account a line. Anything that doesn't balance goes to opening balance equity, and the entry can be reversed if you need to start again.",
+        "Some accounts are kept by documents, and those don't take a typed balance. Receivables, payables, customer deposits, supplier advances, stock and goods received but not yet invoiced are refused in the opening entry.",
+        "Instead, what customers owe comes in as their open invoices, what you owe as your open bills, and stock through the product import. That way each balance is made of real documents that can be paid, chased and aged, and the ledger agrees with them from the start."
+      ]
+    },
+    {
+      "id": "customers-suppliers-assets",
+      "heading": "Customers, suppliers and assets",
+      "paragraphs": [
+        "Customers come in from a CSV file on the customers page, and the rows that can't be taken are named. You can export them again as CSV whenever you like.",
+        "Suppliers come in from a CSV or xlsx file, with a template to start from. Before anything is written, the import says row by row what would happen: a missing name, a name or code that appears twice or already exists, a tax number or bank account that can't be right. The good rows are then registered exactly as a supplier typed in by hand would be, with numbering and the duplicate check, and one bad row never stops the rest. You choose whether suppliers already there are skipped or updated.",
+        "Assets come in from a CSV or xlsx file too. Every row is checked before anything is saved: an unknown category, place or department, a serial number used twice, a date or amount that isn't one. You confirm the whole batch, or skip the rows that failed, and the register fills in the background while the page shows its progress."
+      ]
+    },
+    {
+      "id": "bank-and-people",
+      "heading": "Bank statements, people and tills",
+      "paragraphs": [
+        "Bank statements can be imported as CSV, OFX, MT940 or CAMT.053 files. For CSV, you save a column mapping once: which column holds the date, the amount, the reference and so on. Each import is previewed first, with the lines that are new and any problems. Each line comes in once, so a statement that overlaps the last one brings in only what is new, and you can reconcile from there.",
+        "People join by invitation, and each sets their own password; no one else ever knows it. Cashiers sign in to a till with a PIN, not an office account.",
+        "A till is paired with a one-time code made when you register it in the web app. Once paired, it downloads its products, prices, cashiers and offline allowances, and is ready to sell."
+      ]
+    }
+  ],
+  "faqTitle": "Questions about switching",
+  "faq": [
+    {
+      "q": "Can I bring my products in from a spreadsheet?",
+      "a": "Yes. Download the template, fill it in or paste rows into the grid, and choose whether the import adds new items, updates ones you have, or both. Opening stock comes in with them."
+    },
+    {
+      "q": "How do I bring in what customers already owe me?",
+      "a": "Enter their open invoices. Receivables are kept by documents, so they don't take a typed balance, and each amount can then be paid, chased and aged like any other invoice."
+    },
+    {
+      "q": "What if I import the same file twice?",
+      "a": "A bank statement brings in only the lines that are new. A product import sets figures rather than adding to them, so running the same sheet again doesn't double your stock."
+    },
+    {
+      "q": "Can I change my base currency later?",
+      "a": "Until anything has posted, yes. After the first entry it is fixed, so choose it before you start trading."
+    }
+  ],
+  "cta": {
+    "title": "Start with what you have.",
+    "body": "Open your books, bring in your products and balances, and sell from day one."
+  }
+}
