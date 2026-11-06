@@ -15,7 +15,7 @@
     "serve:out": "node scripts/serve-out.mjs",
     "check:production": "tsx --tsconfig tsconfig.json scripts/check-production.ts",
     "check:css": "tsx scripts/check-logical-css.ts",
-    "check:content": "tsx scripts/check-content.ts",
+    "check:content": "tsx scripts/check-content.ts && tsx scripts/check-translations.ts",
     "prebuild": "tsx scripts/generate-well-known.ts && tsx scripts/script-fonts.ts",
     "postbuild": "tsx scripts/postbuild.ts",
     "check:links": "tsx scripts/check-links.ts",
