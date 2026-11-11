@@ -12,9 +12,12 @@ describe('deploy workflow', () => {
   it('never puts a branch name straight into a shell command', () => {
     for (const line of deploy.split('\n').filter((l) => l.includes('run:'))) expect(line).not.toMatch(/\$\{\{[^}]*head_branch/);
   });
-  it('does not rebuild pull-request code next to the deploy secrets', () => {
-    expect(preview).not.toMatch(/npm (ci|install|run)/);
-    expect(preview).toContain('actions/download-artifact');
+  it('builds a preview only from the exact commit CI checked, of a branch in this repository', () => {
+    // Forks are excluded above, so only people who can push here can put code next to the deploy secrets,
+    // the same trust the production job relies on.
+    expect(preview).toContain('ref: ${{ github.event.workflow_run.head_sha }}');
+    expect(preview).toContain("github.event.workflow_run.conclusion == 'success'");
+    expect(preview).toContain('persist-credentials: false');
   });
   it('refuses to publish a preview to the main branch', () => {
     expect(preview).toMatch(/main/);
@@ -22,10 +25,14 @@ describe('deploy workflow', () => {
   });
 });
 
-describe('CI artifact', () => {
+describe('CI artifacts', () => {
   const ci = readFileSync('.github/workflows/ci.yml', 'utf8');
-  it('carries what the Pages Functions need to build', () => {
-    for (const path of ['out/', 'functions/', 'src/', 'package.json', 'node_modules/zod/']) expect(ci).toContain(path);
+  it('stores no copy of the site, so artifact storage cannot block a preview', () => {
+    expect(ci).not.toMatch(/name: site/);
+  });
+  it('keeps test reports only when something failed, briefly', () => {
+    expect(ci).toContain('if: failure()');
+    expect(ci).toMatch(/retention-days: \d/);
   });
 });
 
