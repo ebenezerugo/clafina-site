@@ -50,7 +50,7 @@
   --sh-sm: 0 1px 2px rgb(17 21 28 / 0.06);
   --sh-md: 0 4px 16px rgb(17 21 28 / 0.08);
   --sh-lg: 0 16px 48px rgb(17 21 28 / 0.12);
-  --sh-glow: 0 40px 100px -30px rgb(37 99 235 / 0.45), 0 18px 40px -20px rgb(14 165 164 / 0.35);
+  --sh-glow: 0 30px 60px -28px rgb(37 99 235 / 0.45), 0 14px 28px -18px rgb(14 165 164 / 0.35);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --dur-fast: 120ms;
   --dur-base: 220ms;

@@ -76,21 +76,21 @@
 /* ── The design language: the river with an aura ───────────────────────────────────────────────── */
 
 /* A decorative glow and a fine grid behind a hero; never holds content. */
-.aura { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.aura { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; contain: strict; }
 .aura::before {
   content: ''; position: absolute; inset: -20% -10% auto; height: 120%;
   background:
     radial-gradient(40% 50% at 15% 20%, var(--c-aura-a), transparent 70%),
     radial-gradient(45% 55% at 60% 0%, var(--c-aura-b), transparent 70%),
     radial-gradient(35% 45% at 95% 30%, var(--c-aura-c), transparent 70%);
-  filter: blur(10px);
 }
 .aura::after {
-  content: ''; position: absolute; inset: 0;
-  background-image: linear-gradient(var(--c-line) 1px, transparent 1px), linear-gradient(90deg, var(--c-line) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(60% 55% at 50% 0%, #000 30%, transparent 80%);
-  opacity: 0.55;
+  content: ''; position: absolute; inset: 0; opacity: 0.55;
+  /* The grid fades out through a gradient layer drawn over it: no mask, which is costly to paint. */
+  background-image:
+    radial-gradient(60% 55% at 50% 0%, transparent 30%, var(--c-page) 80%),
+    linear-gradient(var(--c-line) 1px, transparent 1px), linear-gradient(90deg, var(--c-line) 1px, transparent 1px);
+  background-size: 100% 100%, 56px 56px, 56px 56px;
 }
 
 /* The river as a line of colour on text, an edge or a dot. */
@@ -98,13 +98,8 @@
 .dot-river { background: var(--grad-river); }
 
 /* A product screen lit from below: a soft river glow and a gradient edge. */
-.lit-frame { border-radius: var(--r-xl); box-shadow: var(--sh-glow); }
-.lit-frame::before {
-  content: ''; position: absolute; inset: -1px; border-radius: inherit; padding: 1px;
-  background: linear-gradient(160deg, color-mix(in srgb, var(--c-river-2) 55%, transparent), var(--c-line) 40%, color-mix(in srgb, var(--c-river-1) 45%, transparent));
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
-  pointer-events: none;
-}
+/* A product screen lit from below: a soft river glow and a thin river edge, both in one shadow (no mask). */
+.lit-frame { border-radius: var(--r-xl); box-shadow: 0 0 0 1px color-mix(in srgb, var(--c-river-2) 28%, var(--c-line)), var(--sh-glow); }
 
 /* Cards lift a little under the pointer. */
 .lift { transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out); }
