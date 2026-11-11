@@ -14,7 +14,7 @@ import { SalesHome } from '@/screens/SalesHome';
 import { ShopPhone } from '@/screens/ShopPhone';
 import { TillSell } from '@/screens/TillSell';
 import { OneRecordDiagram } from '@/components/sections/OneRecordDiagram';
-import { ClaimText, CtaButtons, IllustrativeLabel, Section } from '@/components/sections/ui';
+import { ClaimText, CtaButtons, Eyebrow, IllustrativeLabel, Section } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string }> };
 const localeOf = async (p: Props['params']): Promise<Locale> => { const { locale } = await p; return isLocale(locale) ? locale : 'en'; };
@@ -41,7 +41,7 @@ export default async function Platform({ params }: Props) {
   return (
     <main>
       <section aria-labelledby="platform-title" className="mx-auto max-w-7xl px-4 pb-6 pt-16 sm:px-6 lg:pt-24">
-        <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+        <Eyebrow>{c.hero.eyebrow}</Eyebrow>
         <h1 id="platform-title" className="mt-4 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-tight sm:text-6xl">{c.hero.title}</h1>
         <p className="mt-6 max-w-2xl text-xl text-muted">{c.hero.lede}</p>
       </section>
@@ -71,14 +71,14 @@ export default async function Platform({ params }: Props) {
 
       <Section id="packs" eyebrow={c.packs.eyebrow} title={c.packs.title} intro={c.packs.intro}>
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {c.packs.examples.map((e) => <li key={e.pack} className="rounded-xl border border-line bg-raised p-5"><p className="text-sm text-muted">{e.pack}</p><p className="mt-1 text-xl font-bold">{e.words}</p></li>)}
+          {c.packs.examples.map((e) => <li key={e.pack} className="lift shadow-sm rounded-xl border border-line bg-raised p-5"><p className="text-sm text-muted">{e.pack}</p><p className="mt-1 text-xl font-bold">{e.words}</p></li>)}
         </ul>
         <p className="mt-6 max-w-3xl text-muted">{c.packs.note}</p>
       </Section>
 
       <Section id="everywhere" eyebrow={c.everywhere.eyebrow} title={c.everywhere.title} tone="surface">
         <ul className="grid gap-6 md:grid-cols-3">
-          {c.everywhere.items.map((w) => <li key={w.id} className="rounded-xl border border-line bg-raised p-6"><h3 className="text-lg font-bold">{w.title}</h3><p className="mt-2 text-muted">{w.body}</p></li>)}
+          {c.everywhere.items.map((w) => <li key={w.id} className="lift shadow-sm rounded-xl border border-line bg-raised p-6"><h3 className="text-lg font-bold">{w.title}</h3><p className="mt-2 text-muted">{w.body}</p></li>)}
         </ul>
       </Section>
 
@@ -95,7 +95,7 @@ export default async function Platform({ params }: Props) {
 
       <Section id="connect" eyebrow={c.connect.eyebrow} title={c.connect.title} tone="surface">
         <ul className="grid gap-6 md:grid-cols-3">
-          {c.connect.items.map((w) => <li key={w.id} className="rounded-xl border border-line bg-raised p-6"><h3 className="text-lg font-bold">{w.title}</h3><p className="mt-2 text-muted">{w.body}</p></li>)}
+          {c.connect.items.map((w) => <li key={w.id} className="lift shadow-sm rounded-xl border border-line bg-raised p-6"><h3 className="text-lg font-bold">{w.title}</h3><p className="mt-2 text-muted">{w.body}</p></li>)}
         </ul>
       </Section>
 

@@ -8,6 +8,7 @@ import { HelpHome } from '@/content/help';
 import { helpArticlePath, helpArticles, helpGuide, helpModulePath, helpModules, openPage } from '@/lib/help';
 import { HELP_LOCALES, localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
+import { HeroAura } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string; module: string; article: string }> };
 
@@ -48,7 +49,8 @@ export default async function HelpArticlePage({ params }: Props) {
   return (
     <main>
       <article aria-labelledby="article-title">
-        <section id="hero" aria-labelledby="article-title" className="bg-surface">
+        <section id="hero" aria-labelledby="article-title" className="isolate relative bg-surface">
+        <HeroAura />
           <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
             <nav aria-label="Breadcrumb" className="text-sm text-muted">
               <a href={path('/help/')} className="hover:underline">{t('routes.help')}</a> <span aria-hidden="true">›</span> <a href={path(helpModulePath(m.slug))} className="hover:underline">{m.title}</a>

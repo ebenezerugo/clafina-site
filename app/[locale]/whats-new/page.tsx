@@ -7,7 +7,7 @@ import { WhatsNewContent } from '@/content/pages';
 import { localePath } from '@/lib/paths';
 import { enabledLocales, pageLocale, pageMetadata } from '@/lib/simple-page';
 import { visible } from '@/lib/visible';
-import { ClaimText } from '@/components/sections/ui';
+import { ClaimText, Eyebrow, HeroAura } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string }> };
 export const generateStaticParams = enabledLocales;
@@ -27,9 +27,10 @@ export default async function WhatsNewPage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="new-title" className="bg-surface">
+      <section id="hero" aria-labelledby="new-title" className="isolate relative bg-surface">
+        <HeroAura />
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:py-20">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+          <Eyebrow>{c.hero.eyebrow}</Eyebrow>
           <h1 id="new-title" className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">{c.hero.title}</h1>
           <p className="mt-5 text-lg text-muted">{c.hero.lede}</p>
         </div>

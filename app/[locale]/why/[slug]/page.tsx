@@ -11,7 +11,7 @@ import { localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
 import { visible } from '@/lib/visible';
 import { OneRecordDiagram } from '@/components/sections/OneRecordDiagram';
-import { ClaimText, CtaButtons } from '@/components/sections/ui';
+import { ClaimText, CtaBand, CtaButtons, Eyebrow, HeroAura } from '@/components/sections/ui';
 import { Paragraphs } from '@/components/sections/Prose';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -50,9 +50,10 @@ export default async function WhyPage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="why-title" className="bg-surface">
+      <section id="hero" aria-labelledby="why-title" className="isolate relative bg-surface">
+        <HeroAura />
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:py-24">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+          <Eyebrow>{c.hero.eyebrow}</Eyebrow>
           <h1 id="why-title" className="mt-4 text-5xl font-extrabold leading-[1.05] tracking-tight">{c.hero.title}</h1>
           <p className="mt-6 text-xl text-muted">{c.hero.lede}</p>
           <ul className="mt-10 grid gap-6 sm:grid-cols-3">
@@ -93,13 +94,7 @@ export default async function WhyPage({ params }: Props) {
         </div>
       </section>
 
-      <section id="cta" aria-labelledby="cta-title" className="bg-ink text-page">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <h2 id="cta-title" className="max-w-3xl text-4xl font-extrabold tracking-tight">{c.cta.title}</h2>
-          <p className="mt-4 max-w-2xl text-lg opacity-80">{c.cta.body}</p>
-          <div className="mt-8"><CtaButtons primary={{ href: signupUrl({ locale }), label: t('nav.startFree') }} secondary={demo ? { href: demo, label: t('routes.demo') } : null} /></div>
-        </div>
-      </section>
+      <CtaBand title={c.cta.title} body={c.cta.body} primary={{ href: signupUrl({ locale }), label: t('nav.startFree') }} secondary={demo ? { href: demo, label: t('routes.demo') } : null} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
     </main>
   );

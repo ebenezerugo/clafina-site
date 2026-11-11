@@ -5,7 +5,7 @@ import { TemplatesContent } from '@/content/pages';
 import { formatMoney } from '@/screens/kit/money';
 import { openPage } from '@/lib/help';
 import { enabledLocales, pageLocale, pageMetadata } from '@/lib/simple-page';
-import { IllustrativeLabel } from '@/components/sections/ui';
+import { Eyebrow, HeroAura, IllustrativeLabel } from '@/components/sections/ui';
 import { PrintButton } from '@/components/resources/PrintButton';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -25,9 +25,10 @@ export default async function TemplatesPage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="templates-title" className="bg-surface" data-no-print="">
+      <section id="hero" aria-labelledby="templates-title" className="isolate relative bg-surface" data-no-print="">
+        <HeroAura />
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:py-20">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+          <Eyebrow>{c.hero.eyebrow}</Eyebrow>
           <h1 id="templates-title" className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">{c.hero.title}</h1>
           <p className="mt-5 max-w-2xl text-lg text-muted">{c.hero.lede}</p>
           <h2 className="mt-10 text-xl font-bold">{c.howToTitle}</h2>
@@ -49,7 +50,7 @@ export default async function TemplatesPage({ params }: Props) {
                     <a href={openPage(d.page)} className="inline-flex min-h-11 items-center rounded-control border border-line px-5 font-semibold hover:bg-surface">{c.makeIt}</a>
                   </div>
                 </div>
-                <div data-print={d.id} className="mt-6 rounded-xl border border-line bg-raised p-6 sm:p-10">
+                <div data-print={d.id} className="lift shadow-sm mt-6 rounded-xl border border-line bg-raised p-6 sm:p-10">
                   <div className="flex flex-wrap items-start justify-between gap-6">
                     <div><p className="text-xl font-extrabold">{c.business.name}</p><p className="text-muted">{c.business.place}</p></div>
                     <div className="text-end"><p className="text-2xl font-extrabold uppercase tracking-wide">{d.title}</p><p className="text-sm text-muted">{L.number} {d.number} · {L.date} {d.date}</p></div>

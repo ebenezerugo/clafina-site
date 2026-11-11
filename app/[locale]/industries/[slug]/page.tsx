@@ -11,7 +11,7 @@ import { localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
 import { visible } from '@/lib/visible';
 import { Screen, isPhoneScreen } from '@/screens/Screen';
-import { ClaimText, CtaButtons, IllustrativeLabel, Section } from '@/components/sections/ui';
+import { ClaimText, CtaBand, CtaButtons, Eyebrow, HeroAura, IllustrativeLabel, Section } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -54,16 +54,17 @@ export default async function IndustryPage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="story-title" className="overflow-hidden">
+      <section id="hero" aria-labelledby="story-title" className="isolate relative overflow-hidden">
+        <HeroAura />
         <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:pt-24">
-          <p className="flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[0.12em] text-muted">
-            <span>{c.hero.eyebrow}</span>
-            <span className="rounded-full border border-line px-2 py-0.5 tracking-normal normal-case">{t(c.core ? 'industry.core' : 'industry.pack')}</span>
-          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <Eyebrow>{c.hero.eyebrow}</Eyebrow>
+            <span className="rounded-full bg-[color-mix(in_srgb,var(--c-river-2)_10%,transparent)] px-3 py-1 text-xs font-semibold text-primary">{t(c.core ? 'industry.core' : 'industry.pack')}</span>
+          </div>
           <h1 id="story-title" className="mt-4 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-tight sm:text-6xl">{c.hero.title}</h1>
           <p className="mt-6 max-w-2xl text-xl text-muted">{c.hero.lede}</p>
           <div className="mt-10"><CtaButtons primary={{ href: signupUrl({ locale }), label: t('nav.startFree') }} secondary={demo ? { href: demo, label: t('routes.demo') } : null} /></div>
-          <div className={`mt-14 rounded-2xl border border-line bg-surface p-2 shadow-lg sm:p-3 ${isPhoneScreen(c.hero.screen) ? 'mx-auto max-w-[340px]' : ''}`}><Screen id={c.hero.screen} locale={locale} /></div>
+          <div className={`mt-14 lit-frame relative bg-surface p-2 sm:p-3 ${isPhoneScreen(c.hero.screen) ? 'mx-auto max-w-[340px]' : ''}`}><Screen id={c.hero.screen} locale={locale} /></div>
           <IllustrativeLabel text={c.illustrative} />
         </div>
       </section>
@@ -106,7 +107,7 @@ export default async function IndustryPage({ params }: Props) {
         <ul className="grid gap-4 md:grid-cols-2">
           {c.shares.filter((x) => mentionable(x.route)).map((x) => {
             const href = link(x.route);
-            return <li key={x.route} className="rounded-xl border border-line bg-raised p-5">{href ? <a href={href} className="font-bold hover:underline">{name(x.route)}</a> : <span className="font-bold">{name(x.route)}</span>}<p className="mt-1 text-muted">{x.text}</p></li>;
+            return <li key={x.route} className="lift shadow-sm rounded-xl border border-line bg-raised p-5">{href ? <a href={href} className="font-bold hover:underline">{name(x.route)}</a> : <span className="font-bold">{name(x.route)}</span>}<p className="mt-1 text-muted">{x.text}</p></li>;
           })}
         </ul>
       </Section>
@@ -134,16 +135,7 @@ export default async function IndustryPage({ params }: Props) {
         </Section>
       )}
 
-      <section id="cta" aria-labelledby="cta-title" className="bg-ink text-page">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <h2 id="cta-title" className="max-w-3xl text-4xl font-extrabold tracking-tight">{c.cta.title}</h2>
-          <p className="mt-4 max-w-2xl text-lg opacity-80">{c.cta.body}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={signupUrl({ locale })} data-signup="" className="inline-flex min-h-12 items-center rounded-control bg-page px-6 font-semibold text-ink">{t('nav.startFree')}</a>
-            {demo && <a href={demo} className="inline-flex min-h-12 items-center rounded-control border border-page/40 px-6 font-semibold">{t('routes.demo')}</a>}
-          </div>
-        </div>
-      </section>
+      <CtaBand title={c.cta.title} body={c.cta.body} primary={{ href: signupUrl({ locale }), label: t('nav.startFree') }} secondary={demo ? { href: demo, label: t('routes.demo') } : null} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
     </main>
   );

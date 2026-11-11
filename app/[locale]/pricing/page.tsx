@@ -10,6 +10,7 @@ import { signupUrl } from '@/lib/links';
 import { localePath } from '@/lib/paths';
 import { PLANS, featureLines, limitLines, plansVisible, pricesConfirmed, type PlanId } from '@/lib/pricing-page';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
+import { Eyebrow, HeroAura } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string }> };
 const localeOf = async (p: Props['params']): Promise<Locale> => { const { locale } = await p; return isLocale(locale) ? locale : 'en'; };
@@ -41,9 +42,10 @@ export default async function Pricing({ params }: Props) {
   const appLd = pricesConfirmed() ? { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'Clafina', applicationCategory: 'BusinessApplication', offers: PLANS.filter((p) => p.price.global.amount !== null).map((p) => ({ '@type': 'Offer', name: c.plans[p.id].name, price: p.price.global.amount, priceCurrency: 'USD' })) } : null;
 
   return (
-    <main>
+    <main className="relative isolate">
+      <HeroAura />
       <section aria-labelledby="pricing-title" className="mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:pt-24">
-        <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+        <Eyebrow>{c.hero.eyebrow}</Eyebrow>
         <h1 id="pricing-title" className="mt-4 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-tight sm:text-6xl">{c.hero.title}</h1>
         <p className="mt-6 max-w-2xl text-xl text-muted">{c.hero.lede}</p>
       </section>

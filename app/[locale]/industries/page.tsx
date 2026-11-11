@@ -8,7 +8,7 @@ import { IndustriesIndex, IndustryStory } from '@/content/industry';
 import { signupUrl } from '@/lib/links';
 import { localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
-import { Section } from '@/components/sections/ui';
+import { CtaBand, Eyebrow, HeroAura, Section } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -40,9 +40,10 @@ export default async function IndustriesPage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="industries-title">
+      <section id="hero" aria-labelledby="industries-title" className="relative isolate">
+        <HeroAura />
         <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:pt-24">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+          <Eyebrow>{c.hero.eyebrow}</Eyebrow>
           <h1 id="industries-title" className="mt-4 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-tight sm:text-6xl">{c.hero.title}</h1>
           <p className="mt-6 max-w-2xl text-xl text-muted">{c.hero.lede}</p>
         </div>
@@ -55,7 +56,7 @@ export default async function IndustriesPage({ params }: Props) {
               const route = routeById(id)!;
               const story = loadContent(locale, `industries/${slugOf(route.path)}`, IndustryStory);
               return (
-                <li key={id} className="flex flex-col rounded-xl border border-line bg-raised p-6">
+                <li key={id} className="lift shadow-sm flex flex-col rounded-xl border border-line bg-raised p-6">
                   <p className="text-xs font-semibold text-muted">{story.core ? c.coreLabel : c.packLabel}</p>
                   <h3 className="mt-2 text-xl font-bold">{t(`routes.${id}` as never)}</h3>
                   <p className="mt-2 flex-1 text-muted">{story.meta.description}</p>
@@ -67,16 +68,7 @@ export default async function IndustriesPage({ params }: Props) {
         </Section>
       ))}
 
-      <section id="cta" aria-labelledby="cta-title" className="bg-ink text-page">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <h2 id="cta-title" className="max-w-3xl text-4xl font-extrabold tracking-tight">{c.cta.title}</h2>
-          <p className="mt-4 max-w-2xl text-lg opacity-80">{c.cta.body}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={signupUrl({ locale })} data-signup="" className="inline-flex min-h-12 items-center rounded-control bg-page px-6 font-semibold text-ink">{t('nav.startFree')}</a>
-            {demo && <a href={demo} className="inline-flex min-h-12 items-center rounded-control border border-page/40 px-6 font-semibold">{t('routes.demo')}</a>}
-          </div>
-        </div>
-      </section>
+      <CtaBand title={c.cta.title} body={c.cta.body} primary={{ href: signupUrl({ locale }), label: t('nav.startFree') }} secondary={demo ? { href: demo, label: t('routes.demo') } : null} />
     </main>
   );
 }

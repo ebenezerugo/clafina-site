@@ -6,6 +6,7 @@ import { StartContent } from '@/content/pages';
 import { signupUrl } from '@/lib/links';
 import { enabledLocales, pageLocale, pageMetadata } from '@/lib/simple-page';
 import { StartRedirect } from '@/components/resources/StartRedirect';
+import { HeroAura } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string }> };
 export const generateStaticParams = enabledLocales;
@@ -23,7 +24,8 @@ export default async function StartPage({ params }: Props) {
   const packs = ROUTES.filter((r) => r.group === 'industry' && r.id !== 'industries').map((r) => r.path.split('/').filter(Boolean).pop()!);
   return (
     <main>
-      <section id="hero" aria-labelledby="start-title">
+      <section id="hero" aria-labelledby="start-title" className="relative isolate">
+        <HeroAura />
         <div className="mx-auto max-w-2xl px-4 py-24 text-center sm:px-6">
           <h1 id="start-title" className="text-4xl font-extrabold tracking-tight">{c.title}</h1>
           <p className="mt-4 text-lg text-muted">{c.body}</p>

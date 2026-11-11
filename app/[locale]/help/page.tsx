@@ -8,6 +8,7 @@ import { helpArticles, helpCatalogue, helpGuide, helpModulePath } from '@/lib/he
 import { HELP_LOCALES, localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
 import { HelpSearch } from '@/components/help/HelpSearch';
+import { Eyebrow, HeroAura } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -42,9 +43,10 @@ export default async function HelpPage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="help-title" className="bg-surface">
+      <section id="hero" aria-labelledby="help-title" className="isolate relative bg-surface">
+        <HeroAura />
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:py-24">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+          <Eyebrow>{c.hero.eyebrow}</Eyebrow>
           <h1 id="help-title" className="mt-4 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">{c.hero.title}</h1>
           <p className="mt-5 max-w-2xl text-lg text-muted">{c.hero.lede}</p>
           <div className="mt-8"><HelpSearch index={path('/help/search.json')} placeholder={c.hero.search} empty={c.noResults} /></div>
@@ -78,7 +80,7 @@ export default async function HelpPage({ params }: Props) {
                     const howTos = helpArticles(helpGuide(locale, m.slug)).length;
                     return (
                       <li key={m.slug}>
-                        <a href={path(helpModulePath(m.slug))} className="block h-full rounded-xl border border-line bg-raised p-5 hover:border-ink">
+                        <a href={path(helpModulePath(m.slug))} className="lift shadow-sm block h-full rounded-xl border border-line bg-raised p-5 hover:border-ink">
                           <span className="font-bold">{m.title}</span>
                           <span className="mt-1 block text-sm text-muted">{pages} {c.pagesLabel}{howTos ? ` · ${howTos} ${c.articlesLabel}` : ''}</span>
                         </a>

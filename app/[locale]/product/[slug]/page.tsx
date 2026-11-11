@@ -11,7 +11,7 @@ import { signupUrl } from '@/lib/links';
 import { localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
 import { Screen, isPhoneScreen } from '@/screens/Screen';
-import { ClaimText, CtaButtons, IllustrativeLabel, Section } from '@/components/sections/ui';
+import { ClaimText, CtaBand, CtaButtons, Eyebrow, HeroAura, IllustrativeLabel, Section } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -48,20 +48,21 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="product-title" className="overflow-hidden">
+      <section id="hero" aria-labelledby="product-title" className="isolate relative overflow-hidden">
+        <HeroAura />
         <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:pt-24">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+          <Eyebrow>{c.hero.eyebrow}</Eyebrow>
           <h1 id="product-title" className="mt-4 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-tight sm:text-6xl">{c.hero.title}</h1>
           <p className="mt-6 max-w-2xl text-xl text-muted">{c.hero.lede}</p>
           <div className="mt-10"><CtaButtons primary={{ href: signupUrl({ locale }), label: t('nav.startFree') }} secondary={demo ? { href: demo, label: t('routes.demo') } : null} /></div>
-          <div className="mt-14 rounded-2xl border border-line bg-surface p-2 shadow-lg sm:p-3"><Screen id={c.hero.screen} locale={locale} /></div>
+          <div className="mt-14 lit-frame relative bg-surface p-2 sm:p-3"><Screen id={c.hero.screen} locale={locale} /></div>
           <IllustrativeLabel text={c.illustrative} />
         </div>
       </section>
 
       <Section id="jobs" title={c.jobsTitle}>
         <ul className="grid gap-6 md:grid-cols-3">
-          {c.jobs.map((j) => <li key={j.title} className="rounded-xl border border-line bg-raised p-6"><h3 className="text-xl font-bold">{j.title}</h3><p className="mt-2 text-muted">{j.body}</p></li>)}
+          {c.jobs.map((j) => <li key={j.title} className="lift shadow-sm rounded-xl border border-line bg-raised p-6"><h3 className="text-xl font-bold">{j.title}</h3><p className="mt-2 text-muted">{j.body}</p></li>)}
         </ul>
       </Section>
 
@@ -102,7 +103,7 @@ export default async function ProductPage({ params }: Props) {
           {c.connects.filter((x) => mentionable(x.route)).map((x) => {
             const href = link(x.route);
             const name = t(`routes.${x.route}` as never);
-            return <li key={x.route} className="rounded-xl border border-line bg-raised p-5">{href ? <a href={href} className="font-bold hover:underline">{name}</a> : <span className="font-bold">{name}</span>}<p className="mt-1 text-muted">{x.text}</p></li>;
+            return <li key={x.route} className="lift shadow-sm rounded-xl border border-line bg-raised p-5">{href ? <a href={href} className="font-bold hover:underline">{name}</a> : <span className="font-bold">{name}</span>}<p className="mt-1 text-muted">{x.text}</p></li>;
           })}
         </ul>
       </Section>
@@ -130,16 +131,7 @@ export default async function ProductPage({ params }: Props) {
         </div>
       </section>
 
-      <section id="cta" aria-labelledby="cta-title" className="bg-ink text-page">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <h2 id="cta-title" className="max-w-3xl text-4xl font-extrabold tracking-tight">{c.cta.title}</h2>
-          <p className="mt-4 max-w-2xl text-lg opacity-80">{c.cta.body}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={signupUrl({ locale })} data-signup="" className="inline-flex min-h-12 items-center rounded-control bg-page px-6 font-semibold text-ink">{t('nav.startFree')}</a>
-            {demo && <a href={demo} className="inline-flex min-h-12 items-center rounded-control border border-page/40 px-6 font-semibold">{t('routes.demo')}</a>}
-          </div>
-        </div>
-      </section>
+      <CtaBand title={c.cta.title} body={c.cta.body} primary={{ href: signupUrl({ locale }), label: t('nav.startFree') }} secondary={demo ? { href: demo, label: t('routes.demo') } : null} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
     </main>
   );

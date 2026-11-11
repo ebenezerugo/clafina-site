@@ -8,6 +8,7 @@ import { localePath } from '@/lib/paths';
 import { SITE_ORIGIN } from '@/lib/seo';
 import { enabledLocales, pageLocale, pageMetadata } from '@/lib/simple-page';
 import { DeviceStore } from '@/components/resources/DeviceStore';
+import { Eyebrow, HeroAura } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string }> };
 export const generateStaticParams = enabledLocales;
@@ -34,9 +35,10 @@ export default async function DownloadPage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="download-title" className="bg-surface">
+      <section id="hero" aria-labelledby="download-title" className="isolate relative bg-surface">
+        <HeroAura />
         <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:py-20">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+          <Eyebrow>{c.hero.eyebrow}</Eyebrow>
           <h1 id="download-title" className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">{c.hero.title}</h1>
           <p className="mt-5 max-w-2xl text-lg text-muted">{c.hero.lede}</p>
         </div>
