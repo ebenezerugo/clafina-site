@@ -31,17 +31,24 @@ jobs:
       - run: npx playwright test
       - run: npx lhci autorun
       - uses: actions/upload-artifact@v4
-        if: always()
+        # Reports are kept only when something failed, and only for a few days: artifact storage is limited.
+        if: failure()
         with:
           name: reports
+          retention-days: 3
           path: |
             playwright-report/
             test-results/
             .lighthouseci/
           if-no-files-found: ignore
       - uses: actions/upload-artifact@v4
+        # The built site, for the preview deploy only. Deploy deletes it once published; a day is the most it is kept.
+        if: github.event_name == 'pull_request'
+        # A full artifact store must not fail a correct pull request; only its preview is skipped.
+        continue-on-error: true
         with:
           name: site
+          retention-days: 1
           # The Pages Functions import shared code from src/ and use zod, so the deploy can build them.
           path: |
             out/

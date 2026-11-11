@@ -36,8 +36,8 @@ export function PlanCards({ plans, text, labels, countries, lang }: {
         {plans.map((p) => {
           const t = text[p.id];
           return (
-            <li key={p.id} className={`relative flex min-w-0 flex-col gap-5 rounded-2xl border bg-raised p-6 ${p.highlighted ? 'border-primary shadow-lg' : 'border-line'}`}>
-              {p.highlighted && <span className="absolute -top-3 start-6 rounded-full bg-primary px-3 py-1 text-xs font-bold text-on-primary">{labels.mostChosen}</span>}
+            <li key={p.id} className={`relative flex min-w-0 flex-col gap-5 rounded-2xl border bg-raised p-6 ${p.highlighted ? 'lit-frame border-transparent' : 'lift border-line shadow-sm'}`}>
+              {p.highlighted && <span className="absolute -top-3 start-6 rounded-full bg-primary px-3 py-1 text-xs font-bold text-on-primary shadow-[0_6px_16px_-6px_var(--c-primary)]">{labels.mostChosen}</span>}
               <div>
                 <h2 className="text-xl font-bold">{t.name}</h2>
                 <p className="mt-1 text-sm text-muted">{t.tagline}</p>

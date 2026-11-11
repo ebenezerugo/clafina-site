@@ -8,6 +8,7 @@ import { HelpHome } from '@/content/help';
 import { helpArticlePath, helpArticles, helpGuide, helpModulePath, helpModules, openPage } from '@/lib/help';
 import { HELP_LOCALES, localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
+import { HeroAura } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string; module: string }> };
 
@@ -46,7 +47,8 @@ export default async function HelpModulePage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="module-title" className="bg-surface">
+      <section id="hero" aria-labelledby="module-title" className="isolate relative bg-surface">
+        <HeroAura />
         <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
           <nav aria-label="Breadcrumb" className="text-sm text-muted"><a href={path('/help/')} className="hover:underline">{t('routes.help')}</a> <span aria-hidden="true">›</span> {m.section}</nav>
           <h1 id="module-title" className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">{m.title}</h1>
@@ -77,7 +79,7 @@ export default async function HelpModulePage({ params }: Props) {
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {articles.map((a) => (
                 <li key={a.slug} data-prelaunch={a.prelaunch}>
-                  <a href={path(helpArticlePath(m.slug, a.slug))} className="block h-full rounded-xl border border-line bg-raised p-4 hover:border-ink">
+                  <a href={path(helpArticlePath(m.slug, a.slug))} className="lift shadow-sm block h-full rounded-xl border border-line bg-raised p-4 hover:border-ink">
                     <span className="font-semibold">{a.title}</span>
                     <span className="mt-1 block text-sm text-muted">{a.summary}</span>
                   </a>

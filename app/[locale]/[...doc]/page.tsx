@@ -11,6 +11,7 @@ import { docRoutes } from '@/lib/docs';
 import { localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
 import { Paragraphs } from '@/components/sections/Prose';
+import { Eyebrow, HeroAura } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string; doc: string[] }> };
 
@@ -48,9 +49,10 @@ export default async function DocPage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="doc-title" className="bg-surface">
+      <section id="hero" aria-labelledby="doc-title" className="isolate relative bg-surface">
+        <HeroAura />
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+          <Eyebrow>{c.hero.eyebrow}</Eyebrow>
           <h1 id="doc-title" className="mt-4 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">{c.hero.title}</h1>
           <p className="mt-5 max-w-2xl text-lg text-muted">{c.hero.lede}</p>
           <p className="mt-6 text-sm text-muted">{w.updated} <time dateTime={c.updated}>{updated}</time></p>

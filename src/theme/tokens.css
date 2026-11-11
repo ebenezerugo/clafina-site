@@ -4,13 +4,13 @@
  */
 :root {
   --c-page: #ffffff;
-  --c-surface: #f5f6f8;
+  --c-surface: #f6f7fb;
   --c-raised: #ffffff;
-  --c-ink: #11151c;
-  --c-muted: #4b5563;
-  --c-line: #dfe3e8;
-  --c-primary: #2f4a8a;
-  --c-primary-hover: #243b70;
+  --c-ink: #0b1020;
+  --c-muted: #4a5468;
+  --c-line: #e3e6ef;
+  --c-primary: #2742c4;
+  --c-primary-hover: #1d34a3;
   --c-on-primary: #ffffff;
   --c-accent: #0f766e;
   --c-good: #146c43;
@@ -22,6 +22,21 @@
   --c-info: #1d4ed8;
   --c-info-fill: #e8eefd;
 
+  /* The river with an aura: a teal-to-indigo current, used sparingly for glow, accents and key moments. */
+  --c-river-1: #0ea5a4;
+  --c-river-2: #2563eb;
+  --c-river-3: #6d4fe0;
+  --grad-river: linear-gradient(100deg, var(--c-river-1), var(--c-river-2) 52%, var(--c-river-3));
+  --c-aura-a: rgb(14 165 164 / 0.22);
+  --c-aura-b: rgb(37 99 235 / 0.22);
+  --c-aura-c: rgb(109 79 224 / 0.18);
+  /* Night: the dark sections (trust, calls to action) in both themes. */
+  --c-night: #0a1024;
+  --c-night-raised: #121a36;
+  --c-night-line: #253055;
+  --c-on-night: #eef2ff;
+  --c-on-night-muted: #aab4d4;
+
   --font-display: var(--font-inter), var(--font-script, system-ui), system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-body: var(--font-inter), var(--font-script, system-ui), system-ui, -apple-system, 'Segoe UI', sans-serif;
 
@@ -29,11 +44,13 @@
   --r-md: 10px;
   --r-lg: 16px;
   --r-xl: 24px;
+  --r-2xl: 32px;
   /* Buttons: the same radius as the app's buttons (commerce-web --radius: 0.5rem). */
   --r-control: 8px;
   --sh-sm: 0 1px 2px rgb(17 21 28 / 0.06);
   --sh-md: 0 4px 16px rgb(17 21 28 / 0.08);
   --sh-lg: 0 16px 48px rgb(17 21 28 / 0.12);
+  --sh-glow: 0 30px 60px -28px rgb(37 99 235 / 0.45), 0 14px 28px -18px rgb(14 165 164 / 0.35);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --dur-fast: 120ms;
   --dur-base: 220ms;
@@ -61,6 +78,17 @@
     --c-bad-fill: #2a1211;
     --c-info: #93b4fd;
     --c-info-fill: #111c33;
+    --c-aura-a: rgb(14 165 164 / 0.16);
+    --c-aura-b: rgb(37 99 235 / 0.2);
+    --c-aura-c: rgb(109 79 224 / 0.18);
+    --c-night: #070b19;
+    --c-night-raised: #10182f;
+    --c-night-line: #222c4d;
+    --c-river-1: #2dd4bf;
+    --c-river-2: #60a5fa;
+    --c-river-3: #a78bfa;
+    --c-on-night: #eef2ff;
+    --c-on-night-muted: #aab4d4;
     color-scheme: dark;
   }
 }
@@ -84,6 +112,17 @@
   --c-bad-fill: #2a1211;
   --c-info: #93b4fd;
   --c-info-fill: #111c33;
+  --c-aura-a: rgb(14 165 164 / 0.16);
+  --c-aura-b: rgb(37 99 235 / 0.2);
+  --c-aura-c: rgb(109 79 224 / 0.18);
+  --c-night: #070b19;
+  --c-night-raised: #10182f;
+  --c-night-line: #222c4d;
+  --c-river-1: #2dd4bf;
+  --c-river-2: #60a5fa;
+  --c-river-3: #a78bfa;
+  --c-on-night: #eef2ff;
+  --c-on-night-muted: #aab4d4;
   color-scheme: dark;
 }
 

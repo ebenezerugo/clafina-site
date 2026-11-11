@@ -26,6 +26,16 @@
   --radius-md: var(--r-md);
   --radius-lg: var(--r-lg);
   --radius-xl: var(--r-xl);
+  --radius-2xl: var(--r-2xl);
+  --color-night: var(--c-night);
+  --color-night-raised: var(--c-night-raised);
+  --color-night-line: var(--c-night-line);
+  --color-on-night: var(--c-on-night);
+  --color-on-night-muted: var(--c-on-night-muted);
+  --color-river-1: var(--c-river-1);
+  --color-river-2: var(--c-river-2);
+  --color-river-3: var(--c-river-3);
+  --shadow-glow: var(--sh-glow);
   --radius-control: var(--r-control);
   --shadow-sm: var(--sh-sm);
   --shadow-md: var(--sh-md);
@@ -35,8 +45,11 @@
 
 @layer base {
   html { background: var(--c-page); color: var(--c-ink); }
-  body { font-family: var(--font-body); font-size: 17px; line-height: 1.6; background: var(--c-page); }
-  h1, h2, h3, h4 { font-family: var(--font-display); text-wrap: balance; }
+  body { font-family: var(--font-body); font-size: 17px; line-height: 1.6; background: var(--c-page); font-feature-settings: 'cv11', 'ss01', 'ss03'; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: var(--font-display); text-wrap: balance; letter-spacing: -0.022em; }
+  h1 { letter-spacing: -0.035em; }
+  p { text-wrap: pretty; }
+  ::selection { background: color-mix(in srgb, var(--c-river-2) 22%, transparent); }
   :focus-visible { outline: 2px solid var(--c-primary); outline-offset: 3px; }
   .tabular { font-variant-numeric: tabular-nums; }
 }
@@ -57,4 +70,57 @@
   body[data-printing="quotation"] [data-print="quotation"],
   body[data-printing="receipt"] [data-print="receipt"] { display: block; break-inside: avoid; }
   body[data-printing] [data-no-print] { display: none !important; }
+}
+
+@layer components {
+/* ── The design language: the river with an aura ───────────────────────────────────────────────── */
+
+/* A decorative glow and a fine grid behind a hero; never holds content. */
+.aura { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; contain: strict; }
+.aura::before {
+  content: ''; position: absolute; inset: -20% -10% auto; height: 120%;
+  background:
+    radial-gradient(40% 50% at 15% 20%, var(--c-aura-a), transparent 70%),
+    radial-gradient(45% 55% at 60% 0%, var(--c-aura-b), transparent 70%),
+    radial-gradient(35% 45% at 95% 30%, var(--c-aura-c), transparent 70%);
+}
+.aura::after {
+  content: ''; position: absolute; inset: 0; opacity: 0.55;
+  /* The grid fades out through a gradient layer drawn over it: no mask, which is costly to paint. */
+  background-image:
+    radial-gradient(60% 55% at 50% 0%, transparent 30%, var(--c-page) 80%),
+    linear-gradient(var(--c-line) 1px, transparent 1px), linear-gradient(90deg, var(--c-line) 1px, transparent 1px);
+  background-size: 100% 100%, 56px 56px, 56px 56px;
+}
+
+/* The river as a line of colour on text, an edge or a dot. */
+.text-river { background: var(--grad-river); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.dot-river { background: var(--grad-river); }
+
+/* A product screen lit from below: a soft river glow and a gradient edge. */
+/* A product screen lit from below: a soft river glow and a thin river edge, both in one shadow (no mask). */
+.lit-frame { border-radius: var(--r-xl); box-shadow: 0 0 0 1px color-mix(in srgb, var(--c-river-2) 28%, var(--c-line)), var(--sh-glow); }
+
+/* Cards lift a little under the pointer. */
+.lift { transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out); }
+.lift:hover { transform: translateY(-2px); box-shadow: var(--sh-md); border-color: color-mix(in srgb, var(--c-river-2) 35%, var(--c-line)); }
+
+/* Sections rise into view as they are scrolled to, where the browser can tie motion to scrolling. */
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@supports (animation-timeline: view()) {
+  .reveal { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
+}
+
+/* The night: dark sections in either theme. */
+.night { background: var(--c-night); color: var(--c-on-night); color-scheme: dark; }
+.night .night-muted { color: var(--c-on-night-muted); }
+.night-glow { position: absolute; inset: 0; z-index: 0; pointer-events: none; background:
+  radial-gradient(50% 70% at 10% 0%, rgb(14 165 164 / 0.28), transparent 70%),
+  radial-gradient(45% 70% at 90% 100%, rgb(109 79 224 / 0.3), transparent 70%); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { animation: none !important; }
+  .lift, .lift:hover { transition: none; transform: none; }
+}
+
 }

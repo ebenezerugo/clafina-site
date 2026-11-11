@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: read
-  actions: read
+  actions: write
 
 jobs:
   preview:
@@ -38,6 +38,17 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Delete the built site now that it is published
+        # Artifact storage is limited; the preview lives on Cloudflare, so this run's copy is no longer needed.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          for id in $(gh api "repos/$REPO/actions/runs/$RUN_ID/artifacts" --jq '.artifacts[] | select(.name == "site") | .id'); do
+            gh api -X DELETE "repos/$REPO/actions/artifacts/$id"
+          done
 
   production:
     # Production stays off until the repository variable CLAFINA_PRODUCTION_ENABLED is "true".

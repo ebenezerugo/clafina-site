@@ -5,6 +5,7 @@ import { GlossaryContent } from '@/content/pages';
 import { glossaryTerms } from '@/lib/glossary';
 import { localePath } from '@/lib/paths';
 import { enabledLocales, pageLocale, pageMetadata } from '@/lib/simple-page';
+import { Eyebrow, HeroAura } from '@/components/sections/ui';
 
 type Props = { params: Promise<{ locale: string }> };
 export const generateStaticParams = enabledLocales;
@@ -26,9 +27,10 @@ export default async function GlossaryPage({ params }: Props) {
 
   return (
     <main>
-      <section id="hero" aria-labelledby="glossary-title" className="bg-surface">
+      <section id="hero" aria-labelledby="glossary-title" className="isolate relative bg-surface">
+        <HeroAura />
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:py-20">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{c.hero.eyebrow}</p>
+          <Eyebrow>{c.hero.eyebrow}</Eyebrow>
           <h1 id="glossary-title" className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">{c.hero.title}</h1>
           <p className="mt-5 max-w-2xl text-lg text-muted">{c.hero.lede}</p>
           <nav aria-label={c.jumpTo} className="mt-8"><ul className="flex flex-wrap gap-1">{letters.map((l) => <li key={l}><a href={`#letter-${l === '#' ? 'other' : l}`} className="inline-flex size-11 items-center justify-center rounded-control border border-line bg-raised font-bold hover:border-ink">{l}</a></li>)}</ul></nav>
