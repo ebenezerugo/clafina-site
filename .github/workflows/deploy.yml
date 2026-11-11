@@ -7,12 +7,12 @@ on:
 
 permissions:
   contents: read
-  actions: write
 
 jobs:
   preview:
-    # Previews only for branches of this repository. The job deploys the site CI already built and
-    # uploaded; it never installs or runs pull-request code next to the Cloudflare secrets.
+    # Previews only for branches of this repository (never forks), built here from the exact commit CI checked,
+    # the same way production is built. No copy of the site is stored between workflows, so artifact storage
+    # can never block a preview.
     if: >-
       github.event.workflow_run.conclusion == 'success' &&
       github.event.workflow_run.event == 'pull_request' &&
@@ -26,29 +26,21 @@ jobs:
           if [ "$HEAD_BRANCH" = "main" ]; then echo "Refusing to publish a preview to main"; exit 1; fi
           SAFE=$(printf '%s' "$HEAD_BRANCH" | tr -c 'A-Za-z0-9-' '-' | cut -c1-28)
           echo "PREVIEW_BRANCH=preview-$SAFE" >> "$GITHUB_ENV"
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v4
         with:
-          name: site
-          run-id: ${{ github.event.workflow_run.id }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          path: site
+          ref: ${{ github.event.workflow_run.head_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
       - name: Deploy the preview
-        working-directory: site
         run: npx --yes wrangler@4.157.0 pages deploy out --project-name clafina-site --branch "$PREVIEW_BRANCH"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      - name: Delete the built site now that it is published
-        # Artifact storage is limited; the preview lives on Cloudflare, so this run's copy is no longer needed.
-        if: always()
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-          RUN_ID: ${{ github.event.workflow_run.id }}
-        run: |
-          for id in $(gh api "repos/$REPO/actions/runs/$RUN_ID/artifacts" --jq '.artifacts[] | select(.name == "site") | .id'); do
-            gh api -X DELETE "repos/$REPO/actions/artifacts/$id"
-          done
 
   production:
     # Production stays off until the repository variable CLAFINA_PRODUCTION_ENABLED is "true".
