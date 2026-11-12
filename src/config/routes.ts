@@ -84,6 +84,7 @@ export const ROUTES = [
   r('why-offline', '/why/offline/', 'why', true),
   r('why-languages', '/why/languages-and-currencies/', 'why', true),
 
+  r('story-quo-0221', '/stories/journey-of-a-quote/', 'resource', true),
   r('resources-guides', '/resources/guides/', 'resource', true),
   r('resources-templates', '/resources/templates/', 'resource', true),
   r('resources-glossary', '/resources/glossary/', 'resource', true),

@@ -59,8 +59,8 @@
     "steps": [
       {
         "id": "till",
-        "title": "The till sells",
-        "body": "A cashier charges table 6 by cash, transfer or card. The till keeps selling if the connection drops.",
+        "title": "The price is agreed",
+        "body": "Ada sends quotation QUO-0221 as a link. Tunde answers with his own price, and she accepts it inside her limit.",
         "visual": [
           {
             "label": "Table 6 charged",
@@ -74,8 +74,8 @@
       },
       {
         "id": "stock",
-        "title": "Stock moves",
-        "body": "The dishes and the stock behind them come off that branch, so the next order sees what is really left.",
+        "title": "The papers write themselves",
+        "body": "The agreed quote becomes the invoice and the sales order in one tap. Nobody types the lines again.",
         "visual": [
           {
             "label": "Grilled chicken bowl",
@@ -89,8 +89,8 @@
       },
       {
         "id": "books",
-        "title": "The books post",
-        "body": "The sale, the VAT and the service charge post to the ledger by themselves. Nobody types them in again.",
+        "title": "Stock and delivery follow",
+        "body": "Forty cartons leave the Main store on waybill WB-0097, and Tunde signs for them at the door.",
         "visual": [
           {
             "label": "4000 Sales",
@@ -108,8 +108,8 @@
       },
       {
         "id": "phone",
-        "title": "The owner sees it",
-        "body": "Today's sales on the phone app change as it happens, next to what needs attention.",
+        "title": "Paid, and the books agree",
+        "body": "Tunde pays from the invoice link. The receipt goes out and the sale and VAT post to the books by themselves.",
         "visual": [
           {
             "label": "Sales today",
@@ -122,7 +122,11 @@
         ]
       }
     ],
-    "currency": "NGN"
+    "currency": "NGN",
+    "story": {
+      "link": "Follow one sale, start to finish",
+      "poster": "Ada and Tunde agree a price on quotation QUO-0221. The quote is stamped agreed."
+    }
   },
   "surfaces": {
     "eyebrow": "Everywhere you work",

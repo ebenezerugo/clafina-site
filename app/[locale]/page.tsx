@@ -10,12 +10,12 @@ import { signupUrl } from '@/lib/links';
 import { localePath } from '@/lib/paths';
 import { alternates, organizationJsonLd, robotsFor, SITE_ORIGIN } from '@/lib/seo';
 import { formatMoney } from '@/screens/kit/money';
-import { LedgerEntry } from '@/screens/LedgerEntry';
 import { PhoneHome } from '@/screens/PhoneHome';
 import { SalesHome } from '@/screens/SalesHome';
 import { ShopPhone } from '@/screens/ShopPhone';
 import { TillSell } from '@/screens/TillSell';
-import { OneRecord } from '@/components/sections/OneRecord';
+import { Scene } from '@/illustrations/Scene';
+import { readFrame } from '@/illustrations/frames';
 import { AskBand } from '@/components/sections/AskBand';
 import { FloatingCards, FLOAT_CARD, Mark } from '@/components/sections/FloatingCards';
 import { PhoneDevice, ReceiptPrinter, TillTerminal } from '@/components/devices/Devices';
@@ -61,19 +61,10 @@ export default async function Home({ params }: Props) {
   const start = { href: signupUrl({ locale }), label: c.hero.primaryCta };
   const demoCta = demo ? { href: demo, label: c.hero.secondaryCta } : null;
   const money = (v: string) => (/^\d+$/.test(v) ? formatMoney(Number(v), c.oneRecord.currency, locale) : v);
+  const storyHref = link(locale, 'story-quo-0221');
   const product = NAV.menus.find((m) => m.id === 'product')!;
   const industries = navItemIds(NAV.menus.find((m) => m.id === 'industries')!).filter((id) => id !== 'industries');
 
-  const stepVisual = (id: string) => {
-    const step = c.oneRecord.steps.find((s) => s.id === id)!;
-    return (
-      <dl className="grid gap-1 rounded-lg bg-surface p-3 text-sm tabular">
-        {step.visual.map((v) => (
-          <div key={v.label} className="flex justify-between gap-3"><dt className="text-muted">{v.label}</dt><dd className="font-semibold">{money(v.value)}</dd></div>
-        ))}
-      </dl>
-    );
-  };
 
   return (
     <main>
@@ -104,9 +95,26 @@ export default async function Home({ params }: Props) {
       </section>
 
       <Section id="one-record" eyebrow={c.oneRecord.eyebrow} title={c.oneRecord.title} intro={c.oneRecord.intro} tone="surface" align="center">
-        <OneRecord steps={c.oneRecord.steps} visuals={Object.fromEntries(c.oneRecord.steps.map((s) => [s.id, stepVisual(s.id)]))} />
-        <div className="lit-frame relative mx-auto mt-12 max-w-4xl bg-raised p-2"><LedgerEntry locale={locale} /></div>
-        <div className="text-center"><IllustrativeLabel text={c.illustrative} /></div>
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
+          <figure className="min-w-0">
+            <a href={storyHref ?? undefined} className="group block overflow-hidden rounded-2xl border border-line shadow-[0_30px_60px_-36px_rgb(11_16_32/0.55)] transition-transform hover:-translate-y-0.5">
+              <Scene markup={readFrame('quo-0221', 'agree')} label={c.oneRecord.story.poster} />
+            </a>
+            <IllustrativeLabel text={c.illustrative} />
+          </figure>
+          <div className="min-w-0">
+            <ol className="grid gap-5">
+              {c.oneRecord.steps.map((step, i) => (
+                <li key={step.id} data-step={step.id} className="grid grid-cols-[auto_1fr] gap-x-4">
+                  <span aria-hidden="true" className="dot-river row-span-2 inline-flex size-9 items-center justify-center rounded-full text-sm font-bold text-white">{i + 1}</span>
+                  <h3 className="text-lg font-bold">{step.title}</h3>
+                  <p className="text-muted">{step.body}</p>
+                </li>
+              ))}
+            </ol>
+            {storyHref && <a href={storyHref} className="group mt-8 inline-flex min-h-12 items-center gap-2 rounded-control bg-primary px-6 font-semibold text-on-primary transition-colors hover:bg-primary-hover">{c.oneRecord.story.link}<span className="transition-transform group-hover:translate-x-0.5 rtl:-scale-x-100"><SiteIcon name="arrow" size={18} /></span></a>}
+          </div>
+        </div>
       </Section>
 
       <Section id="surfaces" eyebrow={c.surfaces.eyebrow} title={c.surfaces.title} intro={c.surfaces.intro} tone="band">

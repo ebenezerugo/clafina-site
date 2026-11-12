@@ -37,7 +37,7 @@ export const HomeContent = z.object({
       trend: z.object({ title: z.string().min(1), value: z.number().int().positive(), note: z.string().min(1), points: z.array(z.number().nonnegative()).min(5), from: z.string().min(1), to: z.string().min(1) }),
     }),
   }),
-  oneRecord: z.object({ ...Section, intro: z.string(), currency: z.enum(['NGN', 'USD']), steps: z.array(Item.extend({ visual: z.array(z.object({ label: z.string(), value: z.string() })) })).length(4) }),
+  oneRecord: z.object({ ...Section, intro: z.string(), currency: z.enum(['NGN', 'USD']), story: z.object({ link: z.string().min(1), poster: z.string().min(1) }), steps: z.array(Item.extend({ visual: z.array(z.object({ label: z.string(), value: z.string() })) })).length(4) }),
   surfaces: z.object({
     ...Section, intro: z.string(),
     /** Each screen, with one small moment from it shown as a live card. */
@@ -56,3 +56,29 @@ export const HomeContent = z.object({
   cta: z.object({ title: z.string().min(1), body: z.string().min(1) }),
 });
 export type HomeContent = z.infer<typeof HomeContent>;
+
+/** An illustrated story: chapters drawn by scripts/draw-illustrations.mjs, a paper trail that fills as it plays. */
+const StoryPaper = z.enum(['quote', 'invoice', 'order', 'waybill', 'payment', 'receipt']);
+export const StoryContent = z.object({
+  kind: z.literal('story'),
+  meta: PageMeta,
+  illustrative: z.literal('Illustrative example'),
+  hero: z.object({ eyebrow: z.string().min(1), title: z.string().min(1), lede: z.string().min(1) }),
+  cast: z.array(z.object({ id: z.string().min(1), name: z.string().min(1), role: z.string().min(1) })).min(1),
+  trailTitle: z.string().min(1),
+  papers: z.array(z.object({ id: StoryPaper, name: z.string().min(1), number: z.string().min(1), stamp: z.string().min(1) })).min(1),
+  totals: z.object({ lines: z.array(z.object({ label: z.string().min(1), amount: z.number().int() })).min(1), totalLabel: z.string().min(1), total: z.number().int().positive(), currency: z.enum(['NGN', 'USD']) }),
+  didLabel: z.string().min(1),
+  controls: z.object({ list: z.string().min(1), play: z.string().min(1), pause: z.string().min(1), prev: z.string().min(1), next: z.string().min(1), chapter: z.string().includes('{n}'), bike: z.string().min(1), van: z.string().min(1) }),
+  chapters: z.array(z.object({
+    frame: z.string().regex(/^[a-z-]+$/), time: z.string().regex(/^[A-Z][a-z]{2} \d{2}:\d{2}$/), place: z.string().min(1), short: z.string().min(1),
+    paper: StoryPaper, done: z.array(StoryPaper), title: z.string().min(1), text: z.string().min(1),
+    did: z.array(z.object({ kind: z.enum(['record', 'books', 'stock', 'people']), text: z.string().min(1) })).min(1),
+    vehicle: z.literal(true).optional(),
+  })).min(2),
+  cta: z.object({ title: z.string().min(1), body: z.string().min(1) }),
+}).superRefine((s, ctx) => {
+  const sum = s.totals.lines.reduce((a, l) => a + l.amount, 0);
+  if (sum !== s.totals.total) ctx.addIssue({ code: 'custom', message: `totals add up to ${sum}, not ${s.totals.total}` });
+});
+export type StoryContent = z.infer<typeof StoryContent>;

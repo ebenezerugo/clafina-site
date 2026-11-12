@@ -1,0 +1,363 @@
+{
+  "kind": "story",
+  "meta": {
+    "title": "The journey of QUO-0221 · Clafina",
+    "description": "Follow one sale through Clafina: a quote Tunde can answer, an invoice that writes itself, a waybill signed at the door, and books that post themselves."
+  },
+  "illustrative": "Illustrative example",
+  "hero": {
+    "eyebrow": "A Clafina story",
+    "title": "The journey of QUO-0221",
+    "lede": "One quotation, eleven moments, five people and a van. Follow forty cartons of tomato paste from Ada's laptop to Tunde's shop, and watch every paper write the next one by itself."
+  },
+  "cast": [
+    {
+      "id": "ada",
+      "name": "Ada",
+      "role": "sales, Bright Harbour Traders"
+    },
+    {
+      "id": "tunde",
+      "name": "Tunde",
+      "role": "owner, Lagoon Foods"
+    },
+    {
+      "id": "ngozi",
+      "name": "Ngozi",
+      "role": "manager"
+    },
+    {
+      "id": "femi",
+      "name": "Femi",
+      "role": "warehouse"
+    },
+    {
+      "id": "musa",
+      "name": "Musa",
+      "role": "driver"
+    }
+  ],
+  "trailTitle": "The paper trail",
+  "papers": [
+    {
+      "id": "quote",
+      "name": "Quotation",
+      "number": "QUO-0221",
+      "stamp": "Agreed"
+    },
+    {
+      "id": "invoice",
+      "name": "Invoice",
+      "number": "INV-0412",
+      "stamp": "Paid"
+    },
+    {
+      "id": "order",
+      "name": "Sales order",
+      "number": "SO-0187",
+      "stamp": "Done"
+    },
+    {
+      "id": "waybill",
+      "name": "Waybill",
+      "number": "WB-0097",
+      "stamp": "Signed"
+    },
+    {
+      "id": "payment",
+      "name": "Payment",
+      "number": "PAY-1880",
+      "stamp": "In"
+    },
+    {
+      "id": "receipt",
+      "name": "Receipt",
+      "number": "RCT-0310",
+      "stamp": "Sent"
+    }
+  ],
+  "totals": {
+    "lines": [
+      {
+        "label": "40 cartons × ₦29,000",
+        "amount": 1160000
+      },
+      {
+        "label": "VAT 7.5%",
+        "amount": 87000
+      }
+    ],
+    "totalLabel": "Total",
+    "total": 1247000,
+    "currency": "NGN"
+  },
+  "didLabel": "Clafina did",
+  "controls": {
+    "play": "Play the story",
+    "pause": "Pause",
+    "prev": "Previous chapter",
+    "next": "Next chapter",
+    "chapter": "Chapter {n} of {total}",
+    "bike": "Send it on a bike",
+    "van": "Send it in the van",
+    "list": "Chapters"
+  },
+  "chapters": [
+    {
+      "frame": "write",
+      "time": "Mon 09:02",
+      "place": "Bright Harbour Traders, office",
+      "short": "The quote",
+      "paper": "quote",
+      "done": [],
+      "title": "Ada writes a quote",
+      "text": "Tunde from Lagoon Foods wants forty cartons of tomato paste. Ada picks the item, Clafina fills in the price, the VAT and how long the offer stands. One minute, no spreadsheet.",
+      "did": [
+        {
+          "kind": "record",
+          "text": "Price from the price list"
+        },
+        {
+          "kind": "books",
+          "text": "VAT worked out"
+        }
+      ]
+    },
+    {
+      "frame": "envelope",
+      "time": "Mon 09:04",
+      "place": "Bright Harbour Traders, office",
+      "short": "Sealed and sent",
+      "paper": "quote",
+      "done": [],
+      "title": "Sealed, and on its way",
+      "text": "The quote folds into its envelope and flies to Tunde as a link, by email or a chat app. He does not need an account to open it.",
+      "did": [
+        {
+          "kind": "people",
+          "text": "Sent as a link"
+        },
+        {
+          "kind": "record",
+          "text": "Opened 09:11, Ada can see it"
+        }
+      ]
+    },
+    {
+      "frame": "counter",
+      "time": "Mon 09:15",
+      "place": "Lagoon Foods, Yaba",
+      "short": "His own price",
+      "paper": "quote",
+      "done": [],
+      "title": "Tunde names his own price",
+      "text": "Tunde can accept, or answer with his own price on the same page. He offers ₦29,000 a carton instead of ₦31,000. Every offer is kept, line by line.",
+      "did": [
+        {
+          "kind": "people",
+          "text": "Counter-offer kept"
+        },
+        {
+          "kind": "record",
+          "text": "Ada notified"
+        }
+      ]
+    },
+    {
+      "frame": "agree",
+      "time": "Mon 09:20",
+      "place": "Office and shop",
+      "short": "Deal!",
+      "paper": "quote",
+      "done": [
+        "quote"
+      ],
+      "title": "A deal in five minutes",
+      "text": "₦29,000 is inside Ada's discount limit, so she accepts on the spot. Above her limit, it would have gone to Ngozi first. The quote is stamped agreed.",
+      "did": [
+        {
+          "kind": "record",
+          "text": "Within discount limit"
+        },
+        {
+          "kind": "books",
+          "text": "Total ₦1,247,000"
+        }
+      ]
+    },
+    {
+      "frame": "invoice",
+      "time": "Mon 09:22",
+      "place": "Bright Harbour Traders, office",
+      "short": "Invoice sent",
+      "paper": "invoice",
+      "done": [
+        "quote"
+      ],
+      "title": "The invoice writes itself",
+      "text": "One tap turns the agreed quote into invoice INV-0412, with a Pay now link inside. Nobody types the lines again, so nothing is mistyped.",
+      "did": [
+        {
+          "kind": "books",
+          "text": "Sale and VAT posted"
+        },
+        {
+          "kind": "people",
+          "text": "Pay link sent"
+        }
+      ]
+    },
+    {
+      "frame": "approve",
+      "time": "Mon 10:05",
+      "place": "Planning meeting",
+      "short": "Order approved",
+      "paper": "order",
+      "done": [
+        "quote"
+      ],
+      "title": "Ngozi approves the order",
+      "text": "Sales order SO-0187 asks for approval because it is a large one. Ngozi checks Lagoon Foods' credit on her phone, it is clear, and she approves from a meeting.",
+      "did": [
+        {
+          "kind": "people",
+          "text": "Approved on the phone"
+        },
+        {
+          "kind": "record",
+          "text": "Credit checked"
+        }
+      ]
+    },
+    {
+      "frame": "pick",
+      "time": "Mon 13:30",
+      "place": "Main store warehouse",
+      "short": "Picked and packed",
+      "paper": "order",
+      "done": [
+        "quote",
+        "order"
+      ],
+      "title": "Femi picks and packs",
+      "text": "The order appears on Femi's pick list in the warehouse. He scans forty cartons; Main store drops from 120 to 80 as each one leaves the shelf.",
+      "did": [
+        {
+          "kind": "stock",
+          "text": "Stock 120 → 80"
+        },
+        {
+          "kind": "record",
+          "text": "Pick list cleared"
+        }
+      ]
+    },
+    {
+      "frame": "road",
+      "time": "Tue 14:30",
+      "place": "On the road",
+      "short": "On the road",
+      "paper": "waybill",
+      "done": [
+        "quote",
+        "order"
+      ],
+      "title": "Musa takes the road",
+      "text": "Waybill WB-0097 goes with the load. Ada and Tunde can both see it move. Send it in the van, or on a bike for a small order: try the switch above the scene.",
+      "did": [
+        {
+          "kind": "stock",
+          "text": "In transit, 40 cartons"
+        },
+        {
+          "kind": "people",
+          "text": "Tunde told: 12 min away"
+        }
+      ],
+      "vehicle": true
+    },
+    {
+      "frame": "sign",
+      "time": "Tue 16:05",
+      "place": "Lagoon Foods, Yaba",
+      "short": "Signed",
+      "paper": "waybill",
+      "done": [
+        "quote",
+        "order",
+        "waybill"
+      ],
+      "title": "Signed at the door",
+      "text": "Tunde counts forty cartons and signs on Musa's phone. Name, time and signature are kept on the waybill, so there is never a \"we never got it\".",
+      "did": [
+        {
+          "kind": "record",
+          "text": "Proof of delivery"
+        },
+        {
+          "kind": "people",
+          "text": "Ada notified"
+        }
+      ]
+    },
+    {
+      "frame": "pay",
+      "time": "Wed 10:12",
+      "place": "Office and shop",
+      "short": "Paid",
+      "paper": "payment",
+      "done": [
+        "quote",
+        "order",
+        "waybill"
+      ],
+      "title": "Tunde pays from the invoice",
+      "text": "Tunde opens INV-0412 and taps Pay now. The money reaches Bright Harbour Traders and Clafina matches it to the invoice by itself.",
+      "did": [
+        {
+          "kind": "books",
+          "text": "Bank +₦1,247,000"
+        },
+        {
+          "kind": "record",
+          "text": "Matched to INV-0412"
+        }
+      ]
+    },
+    {
+      "frame": "receipt",
+      "time": "Wed 10:12",
+      "place": "Bright Harbour Traders, office",
+      "short": "Receipt",
+      "paper": "receipt",
+      "done": [
+        "quote",
+        "invoice",
+        "order",
+        "waybill",
+        "payment",
+        "receipt"
+      ],
+      "title": "A receipt, and the books agree",
+      "text": "In the same minute the receipt goes to Tunde and the books are posted: sales, VAT, the bank, and Lagoon Foods owing nothing. Six papers, one record, and nobody typed anything twice.",
+      "did": [
+        {
+          "kind": "books",
+          "text": "Books posted"
+        },
+        {
+          "kind": "people",
+          "text": "Receipt sent"
+        },
+        {
+          "kind": "record",
+          "text": "Customer balance ₦0"
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Run your next sale like this",
+    "body": "Start free and send your first quotation as a link today."
+  }
+}
