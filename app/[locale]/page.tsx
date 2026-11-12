@@ -94,7 +94,7 @@ export default async function Home({ params }: Props) {
             <IllustrativeLabel text={c.illustrative} />
           </div>
           <div className="relative max-h-[22rem] sm:max-h-[30rem] lg:h-[38rem] lg:max-h-none">
-            <FloatingCards cards={{ ...c.hero.cards, paid: { ...c.hero.cards.paid, amount: formatMoney(c.hero.cards.paid.amount, c.oneRecord.currency, locale) } }} />
+            <FloatingCards cards={{ ...c.hero.cards, paid: { ...c.hero.cards.paid, amount: formatMoney(c.hero.cards.paid.amount, c.oneRecord.currency, locale) }, trend: { ...c.hero.cards.trend, value: formatMoney(c.hero.cards.trend.value, c.oneRecord.currency, locale) } }} />
             <div className="overflow-hidden rounded-t-xl lg:absolute lg:inset-y-0 lg:start-0 lg:w-[62rem] lg:overflow-visible">
               <div className="rounded-xl bg-surface p-2 shadow-[0_0_0_1px_rgb(255_255_255/0.18),0_40px_80px_-30px_rgb(0_0_0/0.6)] sm:p-3 lg:mt-14"><SalesHome locale={locale} /></div>
             </div>

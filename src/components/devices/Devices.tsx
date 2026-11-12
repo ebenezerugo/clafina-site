@@ -42,12 +42,17 @@ export function ReceiptPrinter({ title, lines, total, footer }: { title: string;
   );
 }
 
-/** A phone: a dark rounded body with a camera pill, the screen inside. */
+/**
+ * A phone: a slim dark body with a camera pill, the screen inside. Every size is a share of the phone's own width
+ * (container units), so the bezel and corners keep their proportions from a small hero phone to a large one.
+ */
 export function PhoneDevice({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
-    <div className={`relative rounded-[44px] bg-[#15171d] p-[3.2%] shadow-[0_0_0_1px_rgb(255_255_255/0.08),0_40px_80px_-30px_rgb(0_0_0/0.75)] ${className}`}>
-      <div aria-hidden="true" className="absolute start-1/2 top-[2.4%] z-10 h-[2.6%] w-[28%] -translate-x-1/2 rounded-full bg-[#0b0c10] rtl:translate-x-1/2" />
-      <div className="overflow-hidden rounded-[36px] bg-white pt-[9%] [&_[data-screen]]:!rounded-none">{children}</div>
+    <div className={`@container ${className}`}>
+      <div className="relative rounded-[15cqw] bg-[#15171d] p-[2.2cqw] shadow-[0_0_0_1px_rgb(255_255_255/0.1),0_40px_80px_-30px_rgb(0_0_0/0.7)]">
+        <div aria-hidden="true" className="absolute start-1/2 top-[4.4cqw] z-10 h-[5.4cqw] w-[26cqw] -translate-x-1/2 rounded-full bg-[#0b0c10] rtl:translate-x-1/2" />
+        <div className="overflow-hidden rounded-[12.8cqw] bg-white pb-[3.5cqw] pt-[11cqw] [&_[data-screen]]:!rounded-none">{children}</div>
+      </div>
     </div>
   );
 }

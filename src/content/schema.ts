@@ -33,6 +33,8 @@ export const HomeContent = z.object({
       paid: z.object({ title: z.string().min(1), detail: z.string().min(1), amount: z.number().int().positive() }),
       low: z.object({ title: z.string().min(1), detail: z.string().min(1), action: z.string().min(1) }),
       insight: z.object({ title: z.string().min(1), detail: z.string().min(1) }),
+      /** A small chart: one month of daily sales, the total and how it compares. */
+      trend: z.object({ title: z.string().min(1), value: z.number().int().positive(), note: z.string().min(1), points: z.array(z.number().nonnegative()).min(5), from: z.string().min(1), to: z.string().min(1) }),
     }),
   }),
   oneRecord: z.object({ ...Section, intro: z.string(), currency: z.enum(['NGN', 'USD']), steps: z.array(Item.extend({ visual: z.array(z.object({ label: z.string(), value: z.string() })) })).length(4) }),

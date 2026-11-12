@@ -23,6 +23,31 @@
       "insight": {
         "title": "Sales are ₦380,000 up on last week",
         "detail": "Most of it came through the shop and Till 2"
+      },
+      "trend": {
+        "title": "Sales this month",
+        "value": 18240000,
+        "note": "₦2,100,000 ahead of September",
+        "points": [
+          42,
+          48,
+          45,
+          58,
+          54,
+          61,
+          57,
+          66,
+          72,
+          64,
+          70,
+          79,
+          75,
+          86,
+          83,
+          94
+        ],
+        "from": "1 Oct",
+        "to": "Today"
       }
     }
   },
