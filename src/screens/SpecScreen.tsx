@@ -7,8 +7,9 @@ import { AttentionRow, Avatar, Card, DataTable, KitButton, Pill, Progress, StatC
 import { ScaledScreen } from './kit/ScaledScreen';
 
 function cell(c: Cell, money: (n: number) => string) {
-  if (typeof c === 'string') return c;
-  if ('money' in c) return money(c.money);
+  // One word (a code, a reference, a time) never breaks across lines; text with spaces wraps to fit.
+  if (typeof c === 'string') return /\s/.test(c.trim()) ? c : <span className="s-nowrap">{c}</span>;
+  if ('money' in c) return <span className="s-nowrap">{money(c.money)}</span>;
   if ('pill' in c) return <Pill tone={c.pill}>{c.text}</Pill>;
   if ('strong' in c) return <b>{c.strong}</b>;
   return <span className="s-row" style={{ alignItems: 'center', gap: 8 }}><Avatar initials={c.avatar} />{c.text}</span>;
@@ -19,7 +20,7 @@ function BlockView({ b, money }: { b: Block; money: (n: number) => string }) {
   switch (b.type) {
     case 'stats':
       return (
-        <div className="s-grid" style={{ gridTemplateColumns: `repeat(${b.items.length}, minmax(0, 1fr))` }}>
+        <div className="s-grid" data-stats="" style={{ gridTemplateColumns: `repeat(${b.items.length}, minmax(0, 1fr))` }}>
           {b.items.map((s) => <StatCard key={s.label} icon={s.icon} label={s.label} value={text(s.value, money)} change={s.change} note={s.note} />)}
         </div>
       );

@@ -39,9 +39,13 @@
 .s-body { flex: 1; min-height: 0; overflow: hidden; padding: 24px 28px; display: flex; flex-direction: column; gap: 16px; }
 .s-title { font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -.3px; }
 .s-sub { color: var(--s-muted); }
+/* The page's title and its buttons share the row: the title wraps, the buttons keep their width. */
+.s-head-text { flex: 1; min-width: 0; }
+.s-head-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; flex-shrink: 0; max-width: 60%; }
 
 /* Phone */
 .s-phone-head { display: flex; align-items: center; gap: 8px; height: 56px; padding-inline: 4px 8px; flex-shrink: 0; background: var(--s-card); border-bottom: 1px solid var(--s-line); }
+.s-phone-body .s-stat-value { font-size: 20px; line-height: 24px; }
 .s-phone-body { flex: 1; min-height: 0; overflow: hidden; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
 .s-tabs { display: flex; height: 64px; flex-shrink: 0; background: var(--s-card); border-top: 1px solid var(--s-line); }
 .s-tab { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; font-size: 11px; line-height: 14px; color: var(--s-muted); position: relative; }
@@ -53,8 +57,9 @@
 .s-card-title { font-size: 15px; line-height: 20px; font-weight: 600; }
 .s-stat-head { display: flex; align-items: center; gap: 10px; font-weight: 600; }
 .s-icon-box { width: 28px; height: 28px; border-radius: 8px; background: var(--s-chip); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.s-stat-value { font-size: 24px; line-height: 28px; font-weight: 700; letter-spacing: -.4px; }
-.s-stat-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 4px; }
+.s-stat-value { font-size: 24px; line-height: 28px; font-weight: 700; letter-spacing: -.4px; white-space: nowrap; }
+/* The change pill sits beside the value when there is room and drops under it when there is not: never clipped. */
+.s-stat-row { display: flex; flex-wrap: wrap; align-items: center; column-gap: 8px; row-gap: 6px; margin-top: 4px; }
 .s-pill { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; line-height: 16px; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
 .s-pill[data-tone='good'] { background: var(--s-good-fill); color: var(--s-good); }
 .s-pill[data-tone='warn'] { background: var(--s-warn-fill); color: var(--s-warn); }
@@ -72,11 +77,16 @@
 .s-attn-icon[data-tone='info'] { background: var(--s-info-fill); color: var(--s-info); }
 .s-attn-title { font-size: 14px; font-weight: 600; }
 .s-table { width: 100%; border-collapse: collapse; }
-.s-table th { text-align: start; font-size: 12px; font-weight: 500; color: var(--s-subtle); padding: 8px 12px; border-bottom: 1px solid var(--s-line); white-space: nowrap; }
-.s-table td { padding: 10px 12px; border-bottom: 1px solid var(--s-line); white-space: nowrap; }
+.s-table th { text-align: start; font-size: 12px; font-weight: 500; color: var(--s-subtle); padding: 8px 8px; border-bottom: 1px solid var(--s-line); vertical-align: bottom; }
+/* Text in a cell wraps to fit the card, as in the app; amounts, figures and pills stay on one line. */
+.s-table td { padding: 10px 8px; border-bottom: 1px solid var(--s-line); overflow-wrap: break-word; }
+.s-nowrap { white-space: nowrap; }
+.s-table td[data-num], .s-table th[data-num] { white-space: nowrap; overflow-wrap: normal; }
 .s-table td[data-num], .s-table th[data-num] { text-align: end; }
 .s-progress { height: 6px; width: 100%; border-radius: 6px; background: var(--s-chip); overflow: hidden; }
 .s-progress > div { height: 100%; background: var(--s-brand); border-radius: 6px; }
 .s-avatar { width: 28px; height: 28px; border-radius: 999px; background: var(--s-chip); color: var(--s-ink); display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0; }
 .s-row { display: flex; gap: 12px; min-width: 0; }
 .s-grid { display: grid; gap: 12px; }
+/* On a phone, stat cards sit two to a row, however many there are. */
+.s-phone-body .s-grid[data-stats] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }

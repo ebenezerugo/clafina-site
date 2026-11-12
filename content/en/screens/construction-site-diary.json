@@ -4,7 +4,7 @@
   "label": "Illustrative example: a site engineer's diary entry for one day on a building site, submitted and waiting for the project manager to sign it off.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "PRJ-2026-0033 · Lagoonside Court, Ikoyi" },
+  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "Lagoonside Court, Ikoyi" },
   "nav": [
     { "label": "Construction", "items": [{ "label": "Progress billing" }, { "label": "Site diary", "active": true }, { "label": "Snag list" }, { "label": "Subcontractors", "badge": "3" }] },
     { "label": "Entries", "items": [{ "label": "Fri 16 Oct · rain, then dry", "badge": "New" }, { "label": "Thu 15 Oct · dry, hot" }, { "label": "Wed 14 Oct · dry" }, { "label": "Tue 13 Oct · light rain" }, { "label": "Mon 12 Oct · dry" }] }

@@ -39,8 +39,8 @@ export function AppFrame({ org, nav, goTo, search, title, subtitle, actions, chi
         </div>
         <div className="s-body">
           <div className="s-row" style={{ justifyContent: 'space-between', alignItems: 'flex-start' }}>
-            <div><div className="s-title">{title}</div>{subtitle && <p className="s-sub">{subtitle}</p>}</div>
-            {actions && <div className="s-row" style={{ gap: 8 }}>{actions}</div>}
+            <div className="s-head-text"><div className="s-title">{title}</div>{subtitle && <p className="s-sub">{subtitle}</p>}</div>
+            {actions && <div className="s-head-actions">{actions}</div>}
           </div>
           {children}
         </div>

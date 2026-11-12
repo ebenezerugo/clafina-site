@@ -27,7 +27,7 @@
         ["RCP-2026-1193", "Crestline Foods Ltd", "2 Oct", { "money": 2000000 }, { "pill": "good", "text": "Sent" }],
         ["RCP-2026-1192", "Okoro and Daughters", "28 Sep", { "money": 300000 }, { "pill": "bad", "text": "Bounced" }],
         ["RCP-2026-1191", "Chief Remi Oyelaran", "25 Sep", { "money": 1000000 }, { "pill": "good", "text": "Sent" }],
-        ["RCP-2026-1187", "Harbourline Logistics", "4 Sep", { "money": 500000 }, { "pill": "neutral", "text": "Voided, replaced by RCP-2026-1190" }]
+        ["RCP-2026-1187", "Harbourline Logistics", "4 Sep", { "money": 500000 }, { "pill": "neutral", "text": "Voided" }]
       ] },
       { "type": "kv", "title": "What the donor receives · RCP-2026-1193", "items": [
         { "label": "From", "value": "Ireti Care Foundation" },

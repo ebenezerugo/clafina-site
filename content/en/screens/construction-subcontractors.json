@@ -4,7 +4,7 @@
   "label": "Illustrative example: a contractor's subcontractors on one site, with retention held back and a plumber's payment certificate blocked by an expired tax clearance.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "PRJ-2026-0033 · Lagoonside Court, Ikoyi" },
+  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "Lagoonside Court, Ikoyi" },
   "nav": [
     { "label": "Construction", "items": [{ "label": "Progress billing" }, { "label": "Site diary" }, { "label": "Snag list" }, { "label": "Subcontractors", "active": true, "badge": "3" }] }
   ],
