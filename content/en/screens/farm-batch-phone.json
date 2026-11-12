@@ -4,7 +4,7 @@
   "label": "Illustrative example: a broiler batch on the supervisor's phone, with mortality over the limit and the last three daily records.",
   "currency": "NGN",
   "frame": "phone",
-  "org": { "initials": "GF", "name": "Garba Family Farms", "place": "Ogbomosho Farm" },
+  "org": { "initials": "GF", "name": "Greenvale Family Farms", "place": "Hillside Farm" },
   "tabs": [
     { "label": "Home", "icon": "home" },
     { "label": "Inbox", "icon": "bell" },

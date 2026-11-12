@@ -4,7 +4,7 @@
   "label": "Illustrative example: the farm home for a maize farm with a poultry site, showing land in season, cost a hectare, the weather and what needs a decision today.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "GF", "name": "Garba Family Farms", "place": "All farms" },
+  "org": { "initials": "GF", "name": "Greenvale Family Farms", "place": "All farms" },
   "nav": [
     { "label": "Farm", "items": [{ "label": "Home", "active": true }, { "label": "Fields" }, { "label": "Seasons" }, { "label": "Calendar" }, { "label": "Tasks and work" }, { "label": "Scouting", "badge": "3" }, { "label": "Batches" }, { "label": "Harvest and lots" }, { "label": "Growers" }] }
   ],
@@ -13,7 +13,7 @@
   "actions": [{ "label": "New season" }, { "label": "Record harvest", "primary": true, "icon": "leaf" }],
   "blocks": [
     { "type": "stats", "items": [
-      { "icon": "leaf", "label": "Land in season", "value": "103.8 ha", "note": "7 seasons: 89.0 ha at Zaria, 14.8 ha at Ogbomosho" },
+      { "icon": "leaf", "label": "Land in season", "value": "103.8 ha", "note": "7 seasons: 89.0 ha at Greenvale, 14.8 ha at Hillside" },
       { "icon": "money", "label": "Cost a hectare so far", "value": { "money": 842000 }, "change": { "tone": "good", "text": "7% under the plan", "dir": "down" }, "note": "The plan for now is ₦905,000" },
       { "icon": "chart", "label": "Expected harvest", "value": "306 t", "note": "Maize 276 t, soybean 30 t · a projection dated 19 Oct" },
       { "icon": "box", "label": "Eggs today", "value": "2,622", "note": "House 1 · 3,000 hens laying at 87.4%" }
@@ -22,10 +22,10 @@
       { "tone": "warn", "icon": "clock", "title": "Rain is forecast for Wednesday: spray on Tuesday", "body": "14 mm from 14:00 on Wednesday. Your rule is no spraying within 12 hours before rain.", "action": "See the week" },
       { "tone": "warn", "icon": "alert", "title": "Dam Field cannot be harvested before 30 Oct", "body": "Lambda-cyhalothrin was sprayed on 16 Oct and must wait 14 days. The harvest was planned for 26 Oct.", "action": "Move the harvest" },
       { "tone": "bad", "icon": "alert", "title": "House 3 lost 9 broilers yesterday (usual: 3)", "body": "Day 28 of the batch. Mortality is 3.1%, above the 2.5% you accept.", "action": "Open the batch" },
-      { "tone": "info", "icon": "leaf", "title": "A weak patch on Kwarbai West", "body": "Satellite imagery shows low vigour on about 2.2 ha. It is a scouting suggestion until someone looks.", "action": "Send a scout" }
+      { "tone": "info", "icon": "leaf", "title": "A weak patch on West Field", "body": "Satellite imagery shows low vigour on about 2.2 ha. It is a scouting suggestion until someone looks.", "action": "Send a scout" }
     ] },
     { "type": "row", "widths": "1fr 1fr", "blocks": [
-      { "type": "table", "title": "Weather at Zaria Farm, from the provider in your settings", "columns": [{ "label": "Day" }, { "label": "Temperature", "numeric": true }, { "label": "Rain", "numeric": true }, { "label": "Spraying" }], "rows": [
+      { "type": "table", "title": "Weather at Valley Farm, from the provider in your settings", "columns": [{ "label": "Day" }, { "label": "Temperature", "numeric": true }, { "label": "Rain", "numeric": true }, { "label": "Spraying" }], "rows": [
         ["Today", "31°", "0 mm", { "pill": "good", "text": "Dry" }],
         ["Tue", "30°", "0 mm", { "pill": "good", "text": "Spray day" }],
         ["Wed", "27°", "14 mm", { "pill": "bad", "text": "Rain from 14:00" }],
@@ -34,7 +34,7 @@
       ] },
       { "type": "table", "title": "Seasons nearest harvest: maturity against the plan", "columns": [{ "label": "Season" }, { "label": "Harvest from" }, { "label": "Maturity", "numeric": true }], "rows": [
         ["Dam Field · maize", "30 Oct, in 11 days", "93% of plan"],
-        ["Kwarbai East · maize", "2 Nov, in 14 days", "88% of plan"]
+        ["East Field · maize", "2 Nov, in 14 days", "88% of plan"]
       ] }
     ] }
   ]

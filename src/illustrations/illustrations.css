@@ -65,3 +65,24 @@
 @font-face { font-family: 'Caveat'; font-style: normal; font-weight: 600; font-display: swap; src: url('/illustrations/caveat-600.woff2') format('woff2'); }
 .ill { position: relative; overflow: hidden; aspect-ratio: 16 / 9; max-width: 100%; background: #dfe8ff; }
 .ill > svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* Farm and outdoor motion */
+.ill .sunrise, .ill .sway, .ill .peck, .ill .crawl, .ill .ripple, .ill .arrive, .ill .rays { transform-box: fill-box; }
+.ill .sunrise { animation: ill-sunrise 2.4s cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes ill-sunrise { from { transform: translateY(70px); opacity: .4; } }
+.ill .rays { transform-origin: center; animation: ill-spin 40s linear infinite; }
+.ill .sway { transform-origin: bottom center; animation: ill-sway 3.6s ease-in-out infinite; }
+@keyframes ill-sway { 50% { transform: rotate(3deg); } }
+.ill .peck { transform-origin: bottom center; animation: ill-peck 1.8s ease-in-out infinite; }
+@keyframes ill-peck { 0%, 60%, 100% { transform: none; } 75% { transform: rotate(18deg) translateY(4px); } }
+.ill .rainfall { animation: ill-rain .7s linear infinite; }
+@keyframes ill-rain { from { transform: translate(0, 0); } to { transform: translate(-27px, 100px); } }
+.ill .ripple { transform-origin: center; animation: ill-ripple 1.4s ease-out infinite; }
+@keyframes ill-ripple { from { transform: scale(.3); opacity: 1; } to { transform: scale(1.4); opacity: 0; } }
+.ill .flash { animation: ill-flash 4s steps(1) infinite; opacity: 0; }
+@keyframes ill-flash { 0%, 6%, 12% { opacity: 1; } 3%, 9%, 15%, 100% { opacity: 0; } }
+.ill .crawl { animation: ill-crawl 2s ease-in-out infinite; }
+@keyframes ill-crawl { 50% { transform: translateX(6px) scaleX(.94); } }
+.ill .arrive { animation: ill-arrive 1.8s cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes ill-arrive { from { transform: translateX(-420px); } }
+@media (prefers-reduced-motion: reduce) { .ill .rainfall, .ill .flash { animation: none !important; } .ill .flash { opacity: 0; } }

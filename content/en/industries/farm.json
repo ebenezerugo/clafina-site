@@ -17,27 +17,30 @@
     "screen": "farm-home"
   },
   "business": {
-    "name": "Garba Family Farms",
-    "place": "Zaria, Kaduna",
+    "name": "Greenvale Family Farms",
+    "place": "Greenvale",
     "label": true,
-    "about": "A maize and soybean farm near Zaria, with a poultry site at Ogbomosho and a scheme of maize outgrowers."
+    "about": "A maize and soybean farm in the Greenvale valley, with a poultry site at Hillside and a scheme of maize outgrowers."
   },
-  "dayTitle": "A day at Garba Family Farms",
+  "story": "farm",
+  "dayTitle": "A day at Greenvale Family Farms",
   "moments": [
     {
       "time": "06:00",
       "title": "What can't wait today",
-      "problem": "Amina has fields, flocks and growers to think about, and only a few minutes before the teams arrive.",
+      "problem": "Anna has fields, flocks and growers to think about, and only a few minutes before the teams arrive.",
       "handles": "The farm home shows the land in season, the cost a hectare against the budget, the expected harvest as a dated projection and today's eggs. Below it are the things that cost money or a crop if they wait, each with its next step. A weak patch seen in satellite imagery becomes a scouting suggestion, never a task.",
-      "surface": "web"
+      "surface": "web",
+      "scene": "dawn"
     },
     {
       "time": "08:20",
       "title": "Armyworm on Road Field",
-      "problem": "Hauwa finds fall armyworm in the maize on Road Field.",
+      "problem": "Hana finds fall armyworm in the maize on Road Field.",
       "handles": "Her report carries the place, how bad it is and her photos. The check shows the weather on the day, the waiting period against the planned harvest, what the store holds and what the treatment costs. Assigning it puts a task on the calendar.",
       "surface": "phone",
-      "screen": "farm-scouting"
+      "screen": "farm-scouting",
+      "scene": "scout"
     },
     {
       "time": "09:00",
@@ -45,14 +48,16 @@
       "problem": "A foliar spray is on the calendar for the day rain is forecast.",
       "handles": "The calendar marks every spray that meets rain, with the rule and the nearest dry day. The farm's rule is no spraying within twelve hours before rain, and the farm can change it. Moving the task shows the rain before and after.",
       "surface": "web",
-      "screen": "farm-calendar"
+      "screen": "farm-calendar",
+      "scene": "rain"
     },
     {
       "time": "10:00",
       "title": "A field sprayed last week is due for harvest",
       "problem": "Dam Field was planned for harvest, but it was sprayed only last week.",
-      "handles": "The spray set a waiting period from the product's profile. Harvesting inside it warns, or is refused if the farm has set it to block, so Amina moves the harvest.",
-      "surface": "web"
+      "handles": "The spray set a waiting period from the product's profile. Harvesting inside it warns, or is refused if the farm has set it to block, so Anna moves the harvest.",
+      "surface": "web",
+      "scene": "harvest"
     },
     {
       "time": "12:00",
@@ -60,14 +65,16 @@
       "problem": "Samuel sees more dead broilers than usual in one of the houses.",
       "handles": "He keeps one daily record a day. Each death needs a cause, and feed is issued from the store at that day's cost. Mortality over the limit shows on the farm home, and feed conversion, average weight and cost a kilo sit on the batch. A medicine's withdrawal blocks the sale until it ends.",
       "surface": "phone",
-      "screen": "farm-batch-phone"
+      "screen": "farm-batch-phone",
+      "scene": "broilers"
     },
     {
       "time": "15:00",
       "title": "Paying the harvest gang by the bag",
       "problem": "The pickers on Hilltop are paid for each bag, not by the day.",
-      "handles": "Piece work needs a unit, a rate and how many. When Hauwa signs it off, the labour is charged to the season once and the payroll lines are made once.",
-      "surface": "web"
+      "handles": "Piece work needs a unit, a rate and how many. When Hana signs it off, the labour is charged to the season once and the payroll lines are made once.",
+      "surface": "web",
+      "scene": "pickers"
     },
     {
       "time": "16:00",
@@ -75,14 +82,16 @@
       "problem": "Growers in the scheme deliver maize, and they have to be paid net of the seed and fertiliser they were advanced.",
       "handles": "Each receipt values the scale reading under the grower's contract, turns it down above the moisture limit and gives the grower a receipt. The payment run takes the produce less open advances, oldest first. Approving it makes one draft supplier bill for each grower who is ready, and each grower sees a statement on a private link.",
       "surface": "web",
-      "screen": "farm-payment-run"
+      "screen": "farm-payment-run",
+      "scene": "outgrowers"
     },
     {
       "time": "17:30",
       "title": "Where did this lot come from?",
       "problem": "A buyer asks where a lot of maize was grown and what went on it.",
       "handles": "The lot traces back to its field, season, inputs, weigh slips and storage, and forward to its sales, buyers and the stock left. A recall preview shows who it reaches and holds the stock left. Issuing it emails each buyer.",
-      "surface": "web"
+      "surface": "web",
+      "scene": "trace"
     }
   ],
   "wordsTitle": "Your words, in Clafina",
