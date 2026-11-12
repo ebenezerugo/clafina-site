@@ -5,6 +5,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { LIGHT, lightFor } from '../illustrations/kit.mjs';
 import { SCENES as QUO } from '../illustrations/stories/quo-0221.mjs';
+import { SCENES as FARM } from '../illustrations/stories/farm.mjs';
 
 /** The scenes of each story, in order, with the clock time each one shows. */
 const STORIES = {
@@ -15,6 +16,12 @@ const STORIES = {
       ['approve', 'Mon 10:05'], ['pick', 'Mon 13:30'], ['road', 'Tue 14:30'], ['road-bike', 'Tue 14:30'], ['sign', 'Tue 16:05'],
       ['pay', 'Wed 10:12'], ['receipt', 'Wed 10:12'],
     ],
+  },
+  farm: {
+    scenes: FARM,
+    // Outdoors the sky already carries the hour, so these frames take no extra light wash.
+    light: false,
+    frames: [['dawn', 'Wed 06:00'], ['scout', 'Wed 08:20'], ['rain', 'Wed 09:00'], ['harvest', 'Wed 10:00'], ['broilers', 'Wed 12:00'], ['pickers', 'Wed 15:00'], ['outgrowers', 'Wed 16:00'], ['trace', 'Wed 17:30']],
   },
 };
 
@@ -34,7 +41,7 @@ for (const [name, story] of Object.entries(STORIES)) {
   let total = 0;
   for (const [frame, time] of story.frames) {
     const [scene, variant] = frame.split('-');
-    const svg = story.scenes[scene](time, variant === 'bike' ? 'bike' : 'van') + LIGHT[lightFor(time)];
+    const svg = story.scenes[scene](time, variant === 'bike' ? 'bike' : 'van') + (story.light === false ? '' : LIGHT[lightFor(time)]);
     const body = squeeze(scopeIds(svg, `${name}-${frame}`)).replaceAll('JetBrains Mono, monospace', 'ui-monospace, SFMono-Regular, Menlo, monospace');
     // A fragment, not a document: the page puts it inside its own <svg> so the page's motion styles reach it.
     writeFileSync(`${dir}/${frame}.svgf`, body);

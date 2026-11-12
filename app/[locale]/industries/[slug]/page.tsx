@@ -4,6 +4,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { LOCALES, isLocale, type Locale } from '@/config/locales';
 import { ROUTES, routeById } from '@/config/routes';
 import { localeEnabled, mentionable, pageAvailable } from '@/config/switches';
+import { LazyScene } from '@/components/stories/LazyScene';
+import { frameUrl } from '@/illustrations/frames';
 import { loadContent } from '@/content/load';
 import { IndustryStory } from '@/content/industry';
 import { signupUrl } from '@/lib/links';
@@ -73,7 +75,7 @@ export default async function IndustryPage({ params }: Props) {
         <IllustrativeLabel text={c.illustrative} />
         <ol className="mt-10 grid gap-14">
           {moments.map((m) => (
-            <li key={m.time} data-prelaunch={m.prelaunch} className={`grid gap-6 border-s-2 border-line ps-6 ${m.screen ? (isPhoneScreen(m.screen) ? 'lg:grid-cols-[1fr_300px]' : 'lg:grid-cols-[1fr_1.4fr]') : ''} lg:gap-10`}>
+            <li key={m.time} data-prelaunch={m.prelaunch} className={`grid gap-6 border-s-2 border-line ps-6 ${m.scene && c.story ? 'lg:grid-cols-[1fr_1.4fr]' : m.screen ? (isPhoneScreen(m.screen) ? 'lg:grid-cols-[1fr_300px]' : 'lg:grid-cols-[1fr_1.4fr]') : ''} lg:gap-10`}>
               <div className="min-w-0">
                 <p className="flex flex-wrap items-center gap-3">
                   <time className="text-2xl font-extrabold tabular-nums">{m.time}</time>
@@ -85,7 +87,17 @@ export default async function IndustryPage({ params }: Props) {
                 <p className="mt-4 text-xs font-bold uppercase tracking-[0.12em] text-muted">{t('industry.handles')}</p>
                 <p className="mt-1 text-lg text-muted">{m.handles}</p>
               </div>
-              {m.screen && <div className={`min-w-0 ${isPhoneScreen(m.screen) ? 'mx-auto w-full max-w-[300px]' : ''}`}><Screen id={m.screen} locale={locale} /></div>}
+              {m.scene && c.story ? (
+                <div className="min-w-0">
+                  <LazyScene src={`${frameUrl(c.story)}/${m.scene}.svgf`} label={`${m.time}. ${m.title}`} />
+                  {m.screen && (
+                    <details className="group mt-4">
+                      <summary className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-control border border-line bg-raised px-4 text-sm font-semibold [&::-webkit-details-marker]:hidden">{t('industry.seeScreen')}<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" className="transition-transform group-open:rotate-180"><path d="m6 9 6 6 6-6" /></svg></summary>
+                      <div className={`mt-4 ${isPhoneScreen(m.screen) ? 'mx-auto w-full max-w-[300px]' : ''}`}><Screen id={m.screen} locale={locale} /></div>
+                    </details>
+                  )}
+                </div>
+              ) : m.screen && <div className={`min-w-0 ${isPhoneScreen(m.screen) ? 'mx-auto w-full max-w-[300px]' : ''}`}><Screen id={m.screen} locale={locale} /></div>}
             </li>
           ))}
         </ol>

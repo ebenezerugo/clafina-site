@@ -11,6 +11,8 @@ const Moment = z.strictObject({
   handles: z.string().min(1),
   surface: z.enum(SURFACES),
   screen: z.string().optional(),
+  /** The illustrated frame for this moment, from the industry's drawn story. */
+  scene: z.string().regex(/^[a-z-]+$/).optional(),
   prelaunch: z.string().optional(),
 });
 
@@ -28,6 +30,8 @@ export const IndustryStory = z
     core: z.boolean(),
     hero: z.strictObject({ eyebrow: z.string(), title: z.string(), lede: z.string(), screen: z.string() }),
     business: z.strictObject({ name: z.string().min(1), place: z.string().min(1), label: z.literal(true), about: z.string().min(1) }),
+    /** The drawn story in public/illustrations/<story>/ that the moments' scenes come from. */
+    story: z.string().regex(/^[a-z0-9-]+$/).optional(),
     dayTitle: z.string(),
     moments: z.array(Moment).min(6).max(8),
     wordsTitle: z.string(),

@@ -60,7 +60,7 @@
       {
         "id": "till",
         "title": "The price is agreed",
-        "body": "Ada sends quotation QUO-0221 as a link. Tunde answers with his own price, and she accepts it inside her limit.",
+        "body": "Maya sends quotation QUO-0221 as a link. Leo answers with his own price, and she accepts it inside her limit.",
         "visual": [
           {
             "label": "Table 6 charged",
@@ -90,7 +90,7 @@
       {
         "id": "books",
         "title": "Stock and delivery follow",
-        "body": "Forty cartons leave the Main store on waybill WB-0097, and Tunde signs for them at the door.",
+        "body": "Forty cartons leave the Main store on waybill WB-0097, and Leo signs for them at the door.",
         "visual": [
           {
             "label": "4000 Sales",
@@ -109,7 +109,7 @@
       {
         "id": "phone",
         "title": "Paid, and the books agree",
-        "body": "Tunde pays from the invoice link. The receipt goes out and the sale and VAT post to the books by themselves.",
+        "body": "Leo pays from the invoice link. The receipt goes out and the sale and VAT post to the books by themselves.",
         "visual": [
           {
             "label": "Sales today",
@@ -125,7 +125,7 @@
     "currency": "NGN",
     "story": {
       "link": "Follow one sale, start to finish",
-      "poster": "Ada and Tunde agree a price on quotation QUO-0221. The quote is stamped agreed."
+      "poster": "Maya and Leo agree a price on quotation QUO-0221. The quote is stamped agreed."
     }
   },
   "surfaces": {

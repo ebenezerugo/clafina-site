@@ -13,11 +13,18 @@ function shade(hex, amt) {
 const O = `stroke="${INK}" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"`;
 
 const CAST = {
-  ada:   { skin: '#8d5524', shirt: '#6d4fe0', inner: '#ffffff', pants: '#26304f', shoes: '#2b2f3f', hair: 'bun',  hairCol: '#1d1512', top: 'blazer' },
-  tunde: { skin: '#5c3a1e', shirt: '#0f766e', inner: '#f5c542', pants: '#3b3f4f', shoes: '#4a3426', hair: 'fade', hairCol: '#14100c', top: 'kaftan', beard: true },
-  ngozi: { skin: '#a16a3e', shirt: '#2563eb', inner: '#fbbf24', pants: '#23304f', shoes: '#2b2f3f', hair: 'puff', hairCol: '#1d1512', top: 'blouse' },
-  femi:  { sleeve: 'short', skin: '#c68642', shirt: '#9aa3b5', inner: '#f97316', pants: '#2f3a55', shoes: '#3b2a1e', hair: 'cap',  hairCol: '#1d4ed8', top: 'vest' },
-  musa:  { sleeve: 'short', skin: '#7a4a2a', shirt: '#334155', inner: '#6d4fe0', pants: '#1e2433', shoes: '#2b2f3f', hair: 'cap',  hairCol: '#0f766e', top: 'polo' },
+  maya:  { skin: '#8d5524', shirt: '#6d4fe0', inner: '#ffffff', pants: '#26304f', shoes: '#2b2f3f', hair: 'bun',  hairCol: '#1d1512', top: 'blazer' },
+  leo:   { skin: '#e0ac69', shirt: '#7aa7e6', inner: '#15803d', pants: '#3b3f4f', shoes: '#4a3426', hair: 'fade', hairCol: '#5a3a22', top: 'apron', beard: true },
+  priya: { skin: '#b07a4a', shirt: '#2563eb', inner: '#fbbf24', pants: '#23304f', shoes: '#2b2f3f', hair: 'puff', hairCol: '#1d1512', top: 'blouse' },
+  sam:   { sleeve: 'short', skin: '#f1c9a0', shirt: '#9aa3b5', inner: '#f97316', pants: '#2f3a55', shoes: '#3b2a1e', hair: 'cap',  hairCol: '#1d4ed8', top: 'vest' },
+  anna:  { skin: '#f2c9a3', shirt: '#3f7d4e', inner: '#e8f0e4', pants: '#2f4a7a', shoes: '#5b3b24', hair: 'bob',    hairCol: '#b9bcc4', top: 'shirt' },
+  hana:  { sleeve: 'short', skin: '#c08a5a', shirt: '#f5f5f4', inner: '#3b82c4', pants: '#3b82c4', shoes: '#5b3b24', hair: 'sunhat', hairCol: '#2a1d14', top: 'overalls' },
+  hanaRain: { skin: '#c08a5a', shirt: '#facc15', inner: '#fef9c3', pants: '#3b82c4', shoes: '#15803d', hair: 'cap', hairCol: '#eab308', top: 'shirt' },
+  samuel:{ skin: '#4a2c18', shirt: '#0e8f8e', inner: '#e6fffb', pants: '#2b3445', shoes: '#2b2f3f', hair: 'cap', hairCol: '#b45309', top: 'shirt' },
+  daniel:{ skin: '#e8b98f', shirt: '#334155', inner: '#ffffff', pants: '#283044', shoes: '#2b2f3f', hair: 'fade', hairCol: '#3b2a1e', top: 'blazer' },
+  pick1: { sleeve: 'short', skin: '#9a6440', shirt: '#e11d48', inner: '#fde68a', pants: '#3b3f4f', shoes: '#3b2a1e', hair: 'sunhat', hairCol: '#1d1512', top: 'shirt' },
+  pick2: { sleeve: 'short', skin: '#d8a477', shirt: '#f59e0b', inner: '#fff7ed', pants: '#26304f', shoes: '#3b2a1e', hair: 'cap', hairCol: '#15803d', top: 'shirt' },
+  omar:  { sleeve: 'short', skin: '#6b4226', shirt: '#334155', inner: '#6d4fe0', pants: '#1e2433', shoes: '#2b2f3f', hair: 'cap',  hairCol: '#0f766e', top: 'polo' },
 };
 
 /* ---------- The rig: shoulder and elbow angles in degrees (0 = hanging straight down, positive swings to screen-left) ---------- */
@@ -95,6 +102,8 @@ function hair(p, layer) {
     bun: `<path d="M-30.5 -162 C-33 -201 33 -201 30.5 -162 C24 -182 -4 -188 -30.5 -162Z" fill="${h}" ${O}/><path d="M-14 -185 Q-2 -192 10 -188" fill="none" stroke="${hl}" stroke-width="3" stroke-linecap="round"/>`,
     fade: `<path d="M-30.5 -160 C-32 -197 32 -197 30.5 -160 C27 -176 -27 -176 -30.5 -160Z" fill="${h}" ${O}/><path d="M-18 -186 Q0 -192 18 -186" fill="none" stroke="${hl}" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>`,
     puff: `<path d="M-30.5 -164 C-31 -193 31 -193 30.5 -164 C21 -180 -21 -180 -30.5 -164Z" fill="${h}" ${O}/><path d="M-22 -186 Q0 -198 22 -186" fill="none" stroke="#f97316" stroke-width="6" stroke-linecap="round"/><path d="M-22 -186 Q0 -198 22 -186" fill="none" stroke="${INK}" stroke-width="1.4" stroke-linecap="round" opacity=".5"/>`,
+    bob: `<path d="M-33 -146 C-38 -200 38 -200 33 -146 L27 -142 C29 -170 18 -180 0 -181 C-18 -180 -29 -170 -27 -142Z" fill="${h}" ${O}/><path d="M-14 -188 Q0 -193 14 -188" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".5"/>`,
+    sunhat: `<path d="M-30 -160 C-32 -190 32 -190 30 -160 C24 -172 -24 -172 -30 -160Z" fill="${h}" ${O}/><ellipse cx="0" cy="-178" rx="52" ry="10" fill="#e9c46a" ${O}/><path d="M-27 -178 C-25 -206 25 -206 27 -178Z" fill="#f2d27a" ${O}/><path d="M-26 -184 H26" stroke="#c2410c" stroke-width="5"/><path d="M-40 -176 Q0 -170 40 -176" fill="none" stroke="#c9a24a" stroke-width="1.6"/>`,
     cap: `<path d="M-31.5 -170 C-31 -203 31 -203 31.5 -170Z" fill="${h}" ${O}/><path d="M6 -175 H46 Q51 -171 45 -167 H6Z" fill="${shade(h, -.22)}" ${O}/><circle cx="0" cy="-198" r="3.2" fill="${shade(h, .3)}" stroke="${INK}" stroke-width="1.4"/><path d="M-20 -190 Q-8 -196 6 -194" fill="none" stroke="${shade(h, .3)}" stroke-width="2.6" stroke-linecap="round"/>`,
   }[p.hair];
 }
@@ -105,6 +114,9 @@ function outfit(p) {
     <path d="M-22 -116 Q-26 -96 -24 -74" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".22"/>`;
   return base + {
     blazer: `<path d="M-10 -126 L0 -100 L10 -126Z" fill="${p.inner}" stroke="${INK}" stroke-width="2"/><path d="M-12 -126 L-4 -96 L-14 -84 M12 -126 L4 -96 L14 -84" fill="none" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><circle cx="0" cy="-80" r="2.4" fill="${INK}"/><circle cx="0" cy="-70" r="2.4" fill="${INK}"/><rect x="-24" y="-98" width="10" height="3" rx="1.5" fill="${dark}"/>`,
+    shirt: `<path d="M-12 -126 L-2 -112 L-10 -104 Z M12 -126 L2 -112 L10 -104 Z" fill="${shade(p.shirt, .25)}" stroke="${INK}" stroke-width="1.8" stroke-linejoin="round"/><path d="M0 -112 V-62" stroke="${INK}" stroke-width="1.4" opacity=".6"/>${[-100, -88, -76].map((y) => `<circle cx="0" cy="${y}" r="1.7" fill="${INK}"/>`).join('')}<rect x="8" y="-104" width="13" height="12" rx="2" fill="none" stroke="${INK}" stroke-width="1.5" opacity=".7"/>`,
+    overalls: `<path d="M-20 -104 H20 L24 -58 Q0 -54 -24 -58Z" fill="${p.inner}" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><path d="M-16 -104 L-20 -126 M16 -104 L20 -126" stroke="${p.inner}" stroke-width="5" stroke-linecap="round"/><circle cx="-14" cy="-100" r="2.6" fill="#fbbf24" stroke="${INK}" stroke-width="1.2"/><circle cx="14" cy="-100" r="2.6" fill="#fbbf24" stroke="${INK}" stroke-width="1.2"/><rect x="-9" y="-94" width="18" height="12" rx="2" fill="none" stroke="${INK}" stroke-width="1.4" opacity=".6"/>`,
+    apron: `<path d="M-18 -110 H18 L23 -58 Q0 -53 -23 -58Z" fill="${p.inner}" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><path d="M-14 -110 L-22 -124 M14 -110 L22 -124" stroke="${p.inner}" stroke-width="4" stroke-linecap="round"/><rect x="-11" y="-92" width="22" height="14" rx="3" fill="none" stroke="#fff" stroke-width="1.6" opacity=".7"/><path d="M-26 -118 L-26 -60 M26 -118 L26 -60" stroke="#fff" stroke-width="1" opacity=".25"/>`,
     kaftan: `<path d="M-12 -126 Q0 -112 12 -126" fill="none" stroke="${p.inner}" stroke-width="4.5"/><path d="M0 -114 V-74" stroke="${p.inner}" stroke-width="3.2" stroke-dasharray="1 6" stroke-linecap="round"/><path d="M-6 -78 Q0 -72 6 -78" fill="none" stroke="${p.inner}" stroke-width="3"/>`,
     blouse: `<path d="M-12 -126 Q0 -108 12 -126" fill="${shade(p.shirt, .2)}" stroke="${INK}" stroke-width="2"/>${[-9, -3, 3, 9].map((x) => `<circle cx="${x}" cy="${-118 + Math.abs(x) * .6}" r="2.7" fill="${p.inner}" stroke="${INK}" stroke-width="1"/>`).join('')}`,
     vest: `<path d="M-30 -60 C-32 -90 -26 -116 -16 -124 L-6 -124 L-6 -58 Q-18 -56 -30 -60Z M30 -60 C32 -90 26 -116 16 -124 L6 -124 L6 -58 Q18 -56 30 -60Z" fill="${p.inner}" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><path d="M-28 -84 H-6 M6 -84 H28" stroke="#e5e7eb" stroke-width="5"/><path d="M-28 -84 H-6 M6 -84 H28" stroke="${INK}" stroke-width="1" opacity=".3"/>`,
@@ -225,7 +237,7 @@ function office(time) {
 function shopfront(time) {
   return `<rect width="800" height="450" fill="#fff4e3"/>
   <g transform="translate(0 0)">${Array.from({ length: 11 }, (_, i) => `<path d="M${i * 76} 0 H${i * 76 + 76} V44 Q${i * 76 + 38} 70 ${i * 76} 44Z" fill="${i % 2 ? '#fff' : C.teal}" ${B} stroke-width="2"/>`).join('')}</g>
-  <text x="400" y="30" text-anchor="middle" font-size="19" font-weight="900" letter-spacing="3" fill="#fff" stroke="#0b4f49" stroke-width="5" paint-order="stroke">LAGOON FOODS</text>
+  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="900" letter-spacing="2.4" fill="#fff" stroke="#0b4f49" stroke-width="5" paint-order="stroke">GREENLEAF GROCERS</text>
   <g transform="translate(470 100)">${[0, 1, 2].map((r) => `<rect x="-6" y="${r * 72 + 58}" width="300" height="10" rx="2" fill="${C.woodDark}" ${B} stroke-width="2"/>${Array.from({ length: 7 }, (_, i) => { const col = ['#e11d48', '#f59e0b', '#16a34a', '#2563eb', '#e11d48', '#a855f7', '#f59e0b'][(i + r) % 7]; return r === 1 && i > 3 ? `<path d="M${6 + i * 41} ${r * 72 + 58} V${r * 72 + 26} Q${20 + i * 41} ${r * 72 + 14} ${34 + i * 41} ${r * 72 + 26} V${r * 72 + 58}Z" fill="#e8d3a8" ${B} stroke-width="1.8"/>` : `<rect x="${8 + i * 41}" y="${r * 72 + 18}" width="28" height="40" rx="5" fill="${col}" ${B} stroke-width="1.8"/><rect x="${8 + i * 41}" y="${r * 72 + 30}" width="28" height="13" fill="#fff" opacity=".75"/>`; }).join('')}`).join('')}</g>
   ${clock(300, 110, 26, time)}
   <g transform="translate(40 96)"><rect width="110" height="44" rx="8" fill="#fff" ${B} stroke-width="2"/><text x="55" y="29" text-anchor="middle" font-size="17" font-weight="900" fill="${C.green}">OPEN</text><path d="M30 0 L55 -24 L80 0" fill="none" stroke="${INK}" stroke-width="2"/></g>

@@ -4,7 +4,7 @@
   "label": "Illustrative example: a draft payment run for maize outgrowers, with each grower's produce less the inputs advanced, oldest first.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "GF", "name": "Garba Family Farms", "place": "Zaria Maize Scheme 2026" },
+  "org": { "initials": "GF", "name": "Greenvale Family Farms", "place": "Greenvale Maize Scheme 2026" },
   "nav": [
     { "label": "Growers", "items": [{ "label": "Outgrowers" }, { "label": "Contracts" }, { "label": "Advances" }, { "label": "Receipts" }, { "label": "Payment runs", "active": true }] }
   ],
@@ -19,8 +19,8 @@
       { "icon": "alert", "label": "Still owed to you", "value": { "money": 26000 }, "note": "Danjuma Auta, carried to his next delivery" }
     ] },
     { "type": "table", "columns": [{ "label": "Grower" }, { "label": "Delivered", "numeric": true }, { "label": "Produce value", "numeric": true }, { "label": "Less advances", "numeric": true }, { "label": "Net to pay", "numeric": true }, { "label": "State" }], "rows": [
-      [{ "avatar": "MD", "text": "Musa Danladi" }, "2.84 t", { "money": 1476800 }, { "money": -368000 }, { "money": 1108800 }, { "pill": "good", "text": "Ready" }],
-      [{ "avatar": "ZY", "text": "Hajiya Zainab Yusuf" }, "2.10 t", { "money": 1092000 }, { "money": -210000 }, { "money": 882000 }, { "pill": "good", "text": "Ready" }],
+      [{ "avatar": "MD", "text": "Daniel Ross" }, "2.84 t", { "money": 1476800 }, { "money": -368000 }, { "money": 1108800 }, { "pill": "good", "text": "Ready" }],
+      [{ "avatar": "ZY", "text": "Mrs Grace Moreno" }, "2.10 t", { "money": 1092000 }, { "money": -210000 }, { "money": 882000 }, { "pill": "good", "text": "Ready" }],
       [{ "avatar": "ED", "text": "Emmanuel Dung" }, "3.62 t", { "money": 1882400 }, { "money": -496000 }, { "money": 1386400 }, { "pill": "good", "text": "Ready" }],
       [{ "avatar": "SG", "text": "Sunday Gyang" }, "3.10 t", { "money": 1612000 }, { "money": -262000 }, { "money": 1350000 }, { "pill": "good", "text": "Ready" }],
       [{ "avatar": "FO", "text": "Mrs Folake Ogunbanjo" }, "0.60 t", { "money": 312000 }, { "money": -280000 }, { "money": 32000 }, { "pill": "good", "text": "Ready" }],
