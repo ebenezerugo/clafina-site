@@ -16,6 +16,8 @@ import { ShopPhone } from '@/screens/ShopPhone';
 import { TillSell } from '@/screens/TillSell';
 import { Scene } from '@/illustrations/Scene';
 import { readFrame } from '@/illustrations/frames';
+import { Tk } from '@/profiles/Tk';
+import { resolveText } from '@/profiles/tokens';
 import { AskBand } from '@/components/sections/AskBand';
 import { FloatingCards, FLOAT_CARD, Mark } from '@/components/sections/FloatingCards';
 import { PhoneDevice, ReceiptPrinter, TillTerminal } from '@/components/devices/Devices';
@@ -98,7 +100,7 @@ export default async function Home({ params }: Props) {
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
           <figure className="min-w-0">
             <a href={storyHref ?? undefined} className="group block overflow-hidden rounded-2xl border border-line shadow-[0_30px_60px_-36px_rgb(11_16_32/0.55)] transition-transform hover:-translate-y-0.5">
-              <Scene markup={readFrame('quo-0221', 'agree')} label={c.oneRecord.story.poster} />
+              <Scene markup={readFrame('quo-0221', 'agree')} label={resolveText(c.oneRecord.story.poster)} />
             </a>
             <IllustrativeLabel text={c.illustrative} />
           </figure>
@@ -107,8 +109,8 @@ export default async function Home({ params }: Props) {
               {c.oneRecord.steps.map((step, i) => (
                 <li key={step.id} data-step={step.id} className="grid grid-cols-[auto_1fr] gap-x-4">
                   <span aria-hidden="true" className="dot-river row-span-2 inline-flex size-9 items-center justify-center rounded-full text-sm font-bold text-white">{i + 1}</span>
-                  <h3 className="text-lg font-bold">{step.title}</h3>
-                  <p className="text-muted">{step.body}</p>
+                  <h3 className="text-lg font-bold"><Tk text={step.title} /></h3>
+                  <p className="text-muted"><Tk text={step.body} /></p>
                 </li>
               ))}
             </ol>

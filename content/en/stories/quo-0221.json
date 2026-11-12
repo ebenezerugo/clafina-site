@@ -2,38 +2,38 @@
   "kind": "story",
   "meta": {
     "title": "The journey of QUO-0221 · Clafina",
-    "description": "Follow one sale through Clafina: a quote Leo can answer, an invoice that writes itself, a waybill signed at the door, and books that post themselves."
+    "description": "Follow one sale through Clafina: a quote ⟦n:customer⟧ can answer, an invoice that writes itself, a waybill signed at the door, and books that post themselves."
   },
   "illustrative": "Illustrative example",
   "hero": {
     "eyebrow": "A Clafina story",
     "title": "The journey of QUO-0221",
-    "lede": "One quotation, eleven moments, five people and a van. Follow forty cartons of tomato paste from Maya's laptop to Leo's shop, and watch every paper write the next one by itself."
+    "lede": "One quotation, eleven moments, five people and a van. Follow forty cartons of tomato paste from ⟦n:sales⟧'s laptop to ⟦n:customer⟧'s shop, and watch every paper write the next one by itself."
   },
   "cast": [
     {
       "id": "maya",
-      "name": "Maya",
+      "name": "⟦n:sales⟧",
       "role": "sales, Bright Harbour Traders"
     },
     {
       "id": "leo",
-      "name": "Leo",
-      "role": "owner, Greenleaf Grocers"
+      "name": "⟦n:customer⟧",
+      "role": "owner, ⟦n:shop⟧"
     },
     {
       "id": "priya",
-      "name": "Priya",
+      "name": "⟦n:manager⟧",
       "role": "manager"
     },
     {
       "id": "sam",
-      "name": "Sam",
+      "name": "⟦n:warehouse⟧",
       "role": "warehouse"
     },
     {
       "id": "omar",
-      "name": "Omar",
+      "name": "⟦n:driver⟧",
       "role": "driver"
     }
   ],
@@ -79,17 +79,16 @@
   "totals": {
     "lines": [
       {
-        "label": "40 cartons × $29.00",
-        "amount": 1160
+        "label": "40 cartons × ⟦m:quo.offer⟧",
+        "amount": "⟦m:quo.subtotal⟧"
       },
       {
-        "label": "VAT 7.5%",
-        "amount": 87
+        "label": "⟦t:label⟧ ⟦t:rate⟧",
+        "amount": "⟦m:quo.tax⟧"
       }
     ],
     "totalLabel": "Total",
-    "total": 1247,
-    "currency": "USD"
+    "total": "⟦m:quo.total⟧"
   },
   "didLabel": "Clafina did",
   "controls": {
@@ -110,8 +109,8 @@
       "short": "The quote",
       "paper": "quote",
       "done": [],
-      "title": "Maya writes a quote",
-      "text": "Leo from Greenleaf Grocers wants forty cartons of tomato paste. Maya picks the item, Clafina fills in the price, the VAT and how long the offer stands. One minute, no spreadsheet.",
+      "title": "⟦n:sales⟧ writes a quote",
+      "text": "⟦n:customer⟧ from ⟦n:shop⟧ wants forty cartons of tomato paste. ⟦n:sales⟧ picks the item, Clafina fills in the price, the ⟦t:label⟧ and how long the offer stands. One minute, no spreadsheet.",
       "did": [
         {
           "kind": "record",
@@ -119,7 +118,7 @@
         },
         {
           "kind": "books",
-          "text": "VAT worked out"
+          "text": "⟦t:label⟧ worked out"
         }
       ]
     },
@@ -131,7 +130,7 @@
       "paper": "quote",
       "done": [],
       "title": "Sealed, and on its way",
-      "text": "The quote folds into its envelope and flies to Leo as a link, by email or a chat app. He does not need an account to open it.",
+      "text": "The quote folds into its envelope and flies to ⟦n:customer⟧ as a link, by email or a chat app. He does not need an account to open it.",
       "did": [
         {
           "kind": "people",
@@ -139,19 +138,19 @@
         },
         {
           "kind": "record",
-          "text": "Opened 09:11, Maya can see it"
+          "text": "Opened 09:11, ⟦n:sales⟧ can see it"
         }
       ]
     },
     {
       "frame": "counter",
       "time": "Mon 09:15",
-      "place": "Greenleaf Grocers, Riverside",
+      "place": "⟦n:shop⟧, ⟦n:district⟧",
       "short": "His own price",
       "paper": "quote",
       "done": [],
-      "title": "Leo names his own price",
-      "text": "Leo can accept, or answer with his own price on the same page. He offers $29.00 a carton instead of $31.00. Every offer is kept, line by line.",
+      "title": "⟦n:customer⟧ names his own price",
+      "text": "⟦n:customer⟧ can accept, or answer with his own price on the same page. He offers ⟦m:quo.offer⟧ a carton instead of ⟦m:quo.price⟧. Every offer is kept, line by line.",
       "did": [
         {
           "kind": "people",
@@ -159,7 +158,7 @@
         },
         {
           "kind": "record",
-          "text": "Maya notified"
+          "text": "⟦n:sales⟧ notified"
         }
       ]
     },
@@ -173,7 +172,7 @@
         "quote"
       ],
       "title": "A deal in five minutes",
-      "text": "$29.00 is inside Maya's discount limit, so she accepts on the spot. Above her limit, it would have gone to Priya first. The quote is stamped agreed.",
+      "text": "⟦m:quo.offer⟧ is inside ⟦n:sales⟧'s discount limit, so she accepts on the spot. Above her limit, it would have gone to ⟦n:manager⟧ first. The quote is stamped agreed.",
       "did": [
         {
           "kind": "record",
@@ -181,7 +180,7 @@
         },
         {
           "kind": "books",
-          "text": "Total $1,247.00"
+          "text": "Total ⟦m:quo.total⟧"
         }
       ]
     },
@@ -199,7 +198,7 @@
       "did": [
         {
           "kind": "books",
-          "text": "Sale and VAT posted"
+          "text": "Sale and ⟦t:label⟧ posted"
         },
         {
           "kind": "people",
@@ -216,8 +215,8 @@
       "done": [
         "quote"
       ],
-      "title": "Priya approves the order",
-      "text": "Sales order SO-0187 asks for approval because it is a large one. Priya checks Greenleaf Grocers' credit on her phone, it is clear, and she approves from a meeting.",
+      "title": "⟦n:manager⟧ approves the order",
+      "text": "Sales order SO-0187 asks for approval because it is a large one. ⟦n:manager⟧ checks ⟦n:shop⟧' credit on her phone, it is clear, and she approves from a meeting.",
       "did": [
         {
           "kind": "people",
@@ -239,8 +238,8 @@
         "quote",
         "order"
       ],
-      "title": "Sam picks and packs",
-      "text": "The order appears on Sam's pick list in the warehouse. He scans forty cartons; Main store drops from 120 to 80 as each one leaves the shelf.",
+      "title": "⟦n:warehouse⟧ picks and packs",
+      "text": "The order appears on ⟦n:warehouse⟧'s pick list in the warehouse. He scans forty cartons; Main store drops from 120 to 80 as each one leaves the shelf.",
       "did": [
         {
           "kind": "stock",
@@ -262,8 +261,8 @@
         "quote",
         "order"
       ],
-      "title": "Omar takes the road",
-      "text": "Waybill WB-0097 goes with the load. Maya and Leo can both see it move. Send it in the van, or on a bike for a small order: try the switch above the scene.",
+      "title": "⟦n:driver⟧ takes the road",
+      "text": "Waybill WB-0097 goes with the load. ⟦n:sales⟧ and ⟦n:customer⟧ can both see it move. Send it in the van, or on a bike for a small order: try the switch above the scene.",
       "did": [
         {
           "kind": "stock",
@@ -271,7 +270,7 @@
         },
         {
           "kind": "people",
-          "text": "Leo told: 12 min away"
+          "text": "⟦n:customer⟧ told: 12 min away"
         }
       ],
       "vehicle": true
@@ -279,7 +278,7 @@
     {
       "frame": "sign",
       "time": "Tue 16:05",
-      "place": "Greenleaf Grocers, Riverside",
+      "place": "⟦n:shop⟧, ⟦n:district⟧",
       "short": "Signed",
       "paper": "waybill",
       "done": [
@@ -288,7 +287,7 @@
         "waybill"
       ],
       "title": "Signed at the door",
-      "text": "Leo counts forty cartons and signs on Omar's phone. Name, time and signature are kept on the waybill, so there is never a \"we never got it\".",
+      "text": "⟦n:customer⟧ counts forty cartons and signs on ⟦n:driver⟧'s phone. Name, time and signature are kept on the waybill, so there is never a \"we never got it\".",
       "did": [
         {
           "kind": "record",
@@ -296,7 +295,7 @@
         },
         {
           "kind": "people",
-          "text": "Maya notified"
+          "text": "⟦n:sales⟧ notified"
         }
       ]
     },
@@ -311,12 +310,12 @@
         "order",
         "waybill"
       ],
-      "title": "Leo pays from the invoice",
-      "text": "Leo opens INV-0412 and taps Pay now. The money reaches Bright Harbour Traders and Clafina matches it to the invoice by itself.",
+      "title": "⟦n:customer⟧ pays from the invoice",
+      "text": "⟦n:customer⟧ opens INV-0412 and taps Pay now. The money reaches Bright Harbour Traders and Clafina matches it to the invoice by itself.",
       "did": [
         {
           "kind": "books",
-          "text": "Bank +$1,247.00"
+          "text": "Bank +⟦m:quo.total⟧"
         },
         {
           "kind": "record",
@@ -339,7 +338,7 @@
         "receipt"
       ],
       "title": "A receipt, and the books agree",
-      "text": "In the same minute the receipt goes to Leo and the books are posted: sales, VAT, the bank, and Greenleaf Grocers owing nothing. Six papers, one record, and nobody typed anything twice.",
+      "text": "In the same minute the receipt goes to ⟦n:customer⟧ and the books are posted: sales, ⟦t:label⟧, the bank, and ⟦n:shop⟧ owing nothing. Six papers, one record, and nobody typed anything twice.",
       "did": [
         {
           "kind": "books",
@@ -351,7 +350,7 @@
         },
         {
           "kind": "record",
-          "text": "Customer balance $0.00"
+          "text": "Customer balance ⟦m:quo.zero⟧"
         }
       ]
     }

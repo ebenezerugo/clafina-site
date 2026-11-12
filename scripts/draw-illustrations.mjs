@@ -1,9 +1,11 @@
 /**
  * Draws the illustrated stories into finished SVG, so pages ship pictures and no drawing code.
- * Run: node scripts/draw-illustrations.mjs (also part of prebuild). Output: public/illustrations/<story>/<frame>.svgf.
+ * Names and amounts are tokens: each is drawn with the global profile inside a <tspan data-tk>, which the browser
+ * swaps for the visitor's country. Run: npx tsx scripts/draw-illustrations.mjs (also part of prebuild). Output: public/illustrations/<story>/<frame>.svgf.
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { LIGHT, lightFor } from '../illustrations/kit.mjs';
+import { tokenMarkup } from '../src/profiles/tokens';
 import { SCENES as QUO } from '../illustrations/stories/quo-0221.mjs';
 import { SCENES as FARM } from '../illustrations/stories/farm.mjs';
 
@@ -42,7 +44,7 @@ for (const [name, story] of Object.entries(STORIES)) {
   for (const [frame, time] of story.frames) {
     const [scene, variant] = frame.split('-');
     const svg = story.scenes[scene](time, variant === 'bike' ? 'bike' : 'van') + (story.light === false ? '' : LIGHT[lightFor(time)]);
-    const body = squeeze(scopeIds(svg, `${name}-${frame}`)).replaceAll('JetBrains Mono, monospace', 'ui-monospace, SFMono-Regular, Menlo, monospace');
+    const body = tokenMarkup(squeeze(scopeIds(svg, `${name}-${frame}`)), 'tspan').replaceAll('JetBrains Mono, monospace', 'ui-monospace, SFMono-Regular, Menlo, monospace');
     // A fragment, not a document: the page puts it inside its own <svg> so the page's motion styles reach it.
     writeFileSync(`${dir}/${frame}.svgf`, body);
     total += body.length;

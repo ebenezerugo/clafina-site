@@ -50,3 +50,16 @@ test('each moment on the Farm page shows its drawn scene as it scrolls into view
   await expect(scenes.first()).toHaveAttribute('aria-label', /^06:00\. /);
   await expect(page.locator('#day').getByText('Greenvale Family Farms', { exact: false }).first()).toBeVisible();
 });
+
+test('names, money and tax follow the visitor\'s country', async ({ page }) => {
+  await page.goto('/en/stories/journey-of-a-quote/?country=NG');
+  await expect(page.getByRole('heading', { level: 2, name: 'Ada writes a quote' })).toBeVisible();
+  await expect(page.locator('aside dl')).toContainText('₦1,247,000');
+  await page.getByRole('button', { name: 'Next chapter' }).click();
+  await page.getByRole('button', { name: 'Next chapter' }).click();
+  await expect(page.getByRole('heading', { level: 2, name: 'Tunde names his own price' })).toBeVisible();
+  await expect(page.locator('.ill svg')).toContainText('₦29,000');
+
+  await page.goto('/en/industries/farm/?country=GB');
+  await expect(page.locator('#day h2')).toHaveText('A day at Cotswold Family Farms');
+});
