@@ -30,6 +30,15 @@
   --c-aura-a: rgb(14 165 164 / 0.22);
   --c-aura-b: rgb(37 99 235 / 0.22);
   --c-aura-c: rgb(109 79 224 / 0.18);
+  /* The band: the brand's bold colour for the hero and colour sections, the same in both themes. */
+  --c-band-1: #1631b8;
+  --c-band-2: #2c44e0;
+  --c-band-3: #5b34d6;
+  /* Tints: soft panels for cards, one per family. */
+  --c-tint-mint: #e6f6f3;
+  --c-tint-sky: #e8efff;
+  --c-tint-lilac: #efeaff;
+  --c-tint-sand: #fbf2e4;
   /* Night: the dark sections (trust, calls to action) in both themes. */
   --c-night: #0a1024;
   --c-night-raised: #121a36;
@@ -82,6 +91,13 @@
     --c-aura-b: rgb(37 99 235 / 0.2);
     --c-aura-c: rgb(109 79 224 / 0.18);
     --c-night: #070b19;
+    --c-band-1: #11258f;
+    --c-band-2: #2136b8;
+    --c-band-3: #4a2bb0;
+    --c-tint-mint: #10292a;
+    --c-tint-sky: #131f3d;
+    --c-tint-lilac: #1d1838;
+    --c-tint-sand: #2a2216;
     --c-night-raised: #10182f;
     --c-night-line: #222c4d;
     --c-river-1: #2dd4bf;
@@ -116,6 +132,13 @@
   --c-aura-b: rgb(37 99 235 / 0.2);
   --c-aura-c: rgb(109 79 224 / 0.18);
   --c-night: #070b19;
+  --c-band-1: #11258f;
+  --c-band-2: #2136b8;
+  --c-band-3: #4a2bb0;
+  --c-tint-mint: #10292a;
+  --c-tint-sky: #131f3d;
+  --c-tint-lilac: #1d1838;
+  --c-tint-sand: #2a2216;
   --c-night-raised: #10182f;
   --c-night-line: #222c4d;
   --c-river-1: #2dd4bf;

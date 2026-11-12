@@ -16,10 +16,15 @@ import { SalesHome } from '@/screens/SalesHome';
 import { ShopPhone } from '@/screens/ShopPhone';
 import { TillSell } from '@/screens/TillSell';
 import { OneRecord } from '@/components/sections/OneRecord';
-import { ClaimText, CtaBand, CtaButtons, Eyebrow, HeroAura, IllustrativeLabel, Section } from '@/components/sections/ui';
+import { AskBand } from '@/components/sections/AskBand';
+import { FloatingCards } from '@/components/sections/FloatingCards';
+import { ClaimText, CtaBand, CtaButtons, Eyebrow, IllustrativeLabel, Section } from '@/components/sections/ui';
 import { IconTile, MODULE_ICONS, POINT_ICONS, SiteIcon } from '@/components/icons/SiteIcon';
 
 type Props = { params: Promise<{ locale: string }> };
+
+/** The soft panels of the product grid, one family each. */
+const BENTO_TINTS = ['bg-tint-sky', 'bg-tint-mint', 'bg-tint-lilac', 'bg-tint-sand', 'bg-tint-sky'];
 
 async function localeOf(params: Props['params']): Promise<Locale> {
   const { locale } = await params;
@@ -78,25 +83,27 @@ export default async function Home({ params }: Props) {
     <main>
       {org && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />}
 
-      <section id="hero" aria-labelledby="hero-title" className="relative isolate overflow-hidden">
-        <HeroAura />
-        <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:pt-24">
-          <div className="mx-auto max-w-5xl text-center">
-            <Eyebrow>{c.hero.eyebrow}</Eyebrow>
-            <h1 id="hero-title" className="mt-6 text-5xl font-extrabold leading-[1.02] sm:text-6xl lg:text-[5.25rem]">{c.hero.title}</h1>
-            <p className="mx-auto mt-6 max-w-2xl text-xl text-muted">{c.hero.lede}</p>
-            <div className="mt-10 flex justify-center"><CtaButtons primary={start} secondary={demoCta} /></div>
-            <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted">
+      <section id="hero" aria-labelledby="hero-title" className="band relative isolate overflow-hidden">
+        <div className="mx-auto grid max-w-7xl items-center gap-x-14 gap-y-16 px-4 pt-14 sm:px-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:pt-20">
+          <div className="lg:pb-20">
+            <Eyebrow tone="band">{c.hero.eyebrow}</Eyebrow>
+            <h1 id="hero-title" className="mt-6 text-5xl font-extrabold leading-[1.02] sm:text-6xl lg:text-[4.25rem]">{c.hero.title}</h1>
+            <p className="band-muted mt-6 max-w-xl text-xl">{c.hero.lede}</p>
+            <div className="mt-10"><CtaButtons primary={start} secondary={demoCta} tone="colour" /></div>
+            <ul className="band-muted mt-8 grid max-w-md grid-cols-2 gap-x-6 gap-y-2.5 text-sm">
               {c.works.items.map((w) => (
-                <li key={w.id} className="inline-flex items-center gap-2"><SiteIcon name={POINT_ICONS[w.id] ?? 'check'} size={16} className="text-primary" />{w.title}</li>
+                <li key={w.id} className="inline-flex items-center gap-2"><SiteIcon name={POINT_ICONS[w.id] ?? 'check'} size={16} />{w.title}</li>
               ))}
             </ul>
+            <IllustrativeLabel text={c.illustrative} />
           </div>
-          <div className="relative mt-16 pb-10 lg:mt-20">
-            <div className="lit-frame relative bg-surface p-2 sm:p-3"><SalesHome locale={locale} /></div>
-            <div className="lit-frame absolute -bottom-2 end-2 hidden w-[200px] rounded-[28px] bg-raised p-2 md:block lg:end-8 lg:w-[240px]"><PhoneHome locale={locale} /></div>
+          <div className="relative max-h-[22rem] sm:max-h-[30rem] lg:h-[38rem] lg:max-h-none">
+            <FloatingCards cards={{ ...c.hero.cards, paid: { ...c.hero.cards.paid, amount: formatMoney(c.hero.cards.paid.amount, c.oneRecord.currency, locale) } }} />
+            <div className="overflow-hidden rounded-t-xl lg:absolute lg:inset-y-0 lg:start-0 lg:w-[62rem] lg:overflow-visible">
+              <div className="rounded-xl bg-surface p-2 shadow-[0_0_0_1px_rgb(255_255_255/0.18),0_40px_80px_-30px_rgb(0_0_0/0.6)] sm:p-3 lg:mt-14"><SalesHome locale={locale} /></div>
+            </div>
+            <div className="absolute end-4 top-[13rem] hidden w-[13rem] rounded-[28px] bg-raised p-2 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.55)] ring-1 ring-black/10 lg:block xl:end-0"><PhoneHome locale={locale} /></div>
           </div>
-          <IllustrativeLabel text={c.illustrative} />
         </div>
       </section>
 
@@ -106,46 +113,46 @@ export default async function Home({ params }: Props) {
         <div className="text-center"><IllustrativeLabel text={c.illustrative} /></div>
       </Section>
 
-      <Section id="surfaces" eyebrow={c.surfaces.eyebrow} title={c.surfaces.title} intro={c.surfaces.intro}>
+      <Section id="surfaces" eyebrow={c.surfaces.eyebrow} title={c.surfaces.title} intro={c.surfaces.intro} tone="band">
         <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
-          <div className="lit-frame relative min-w-0 bg-surface p-2 sm:p-3">{surfaceScreens.till}</div>
+          <div className="relative min-w-0 rounded-xl bg-surface p-2 shadow-[0_0_0_1px_rgb(255_255_255/0.18),0_40px_80px_-30px_rgb(0_0_0/0.6)] sm:p-3">{surfaceScreens.till}</div>
           <div className="min-w-0 self-center">{surfaceScreens.shop}</div>
         </div>
         <IllustrativeLabel text={c.illustrative} />
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {c.surfaces.items.map((s) => (
-            <li key={s.id} className="reveal lift flex min-w-0 gap-4 rounded-xl border border-line bg-raised p-6">
-              <IconTile name={POINT_ICONS[s.id] ?? 'check'} />
-              <div><h3 className="text-lg font-bold">{s.title}</h3><p className="mt-1.5 text-muted">{s.body}</p></div>
+            <li key={s.id} className="reveal flex min-w-0 gap-4 rounded-xl border border-white/20 bg-white/10 p-6">
+              <IconTile name={POINT_ICONS[s.id] ?? 'check'} tone="night" />
+              <div><h3 className="text-lg font-bold">{s.title}</h3><p className="band-muted mt-1.5">{s.body}</p></div>
             </li>
           ))}
         </ul>
       </Section>
 
-      <Section id="modules" eyebrow={c.modules.eyebrow} title={c.modules.title} intro={c.modules.intro} tone="surface" align="center">
-        <div className="gap-5 md:columns-2 xl:columns-3">
-          {product.groups.map((g) => (
-            <div key={g.id} className="reveal mb-5 min-w-0 break-inside-avoid rounded-2xl border border-line bg-raised p-6 shadow-sm">
-              <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-muted"><span aria-hidden="true" className="dot-river size-1.5 rounded-full" />{t(`nav.groups.${g.id}` as never)}</h3>
-              <ul className="mt-4 grid gap-1">
-                {g.items.filter((id) => mentionable(id)).map((id) => {
-                  const href = link(locale, id);
-                  const name = t(`routes.${id}` as never);
-                  const inner = (
-                    <>
-                      <IconTile name={MODULE_ICONS[id] ?? 'check'} size={18} />
-                      <span className="min-w-0"><span className="block font-semibold">{name}</span><span className="mt-0.5 block text-sm text-muted">{c.modules.items[id]}</span></span>
-                    </>
-                  );
-                  return (
-                    <li key={id} className="min-w-0">
-                      {href ? <a href={href} className="flex gap-3 rounded-xl p-2.5 transition-colors hover:bg-surface">{inner}</a> : <span className="flex gap-3 p-2.5">{inner}</span>}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
+      <Section id="modules" eyebrow={c.modules.eyebrow} title={c.modules.title} intro={c.modules.intro} align="center">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {product.groups.map((g, i) => {
+            const items = g.items.filter((id) => mentionable(id));
+            const wide = i === product.groups.length - 1 && product.groups.length % 3 === 2;
+            return (
+              <div key={g.id} className={`reveal lift min-w-0 rounded-2xl p-7 ${BENTO_TINTS[i % BENTO_TINTS.length]} ${wide ? 'md:col-span-2' : ''}`}>
+                <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{t(`nav.groups.${g.id}` as never)}</h3>
+                <ul className={`mt-5 grid gap-1 ${wide ? 'sm:grid-cols-2' : ''}`}>
+                  {items.map((id) => {
+                    const href = link(locale, id);
+                    const name = t(`routes.${id}` as never);
+                    const inner = (
+                      <>
+                        <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-raised text-primary shadow-sm ring-1 ring-line"><SiteIcon name={MODULE_ICONS[id] ?? 'check'} size={18} /></span>
+                        <span className="min-w-0"><span className="block font-semibold">{name}</span><span className="mt-0.5 block text-sm text-muted">{c.modules.items[id]}</span></span>
+                      </>
+                    );
+                    return <li key={id} className="min-w-0">{href ? <a href={href} className="flex gap-3 rounded-xl p-2.5 transition-colors hover:bg-raised/70">{inner}</a> : <span className="flex gap-3 p-2.5">{inner}</span>}</li>;
+                  })}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </Section>
 
@@ -169,6 +176,8 @@ export default async function Home({ params }: Props) {
           ))}
         </ul>
       </Section>
+
+      <AskBand {...c.ask} href={link(locale, 'product-assistant')} />
 
       <Section id="trust" eyebrow={c.trust.eyebrow} title={c.trust.title} tone="night">
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

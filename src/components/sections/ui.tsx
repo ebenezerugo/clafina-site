@@ -3,20 +3,26 @@ import { isOn, type SwitchKey } from '@/config/switches';
 import { SiteIcon } from '@/components/icons/SiteIcon';
 
 /** A small label over a heading: a pill with a dot of the river's colour. */
-export function Eyebrow({ children, tone = 'page' }: { children: ReactNode; tone?: 'page' | 'night' }) {
+const EYEBROW = {
+  page: 'border border-line bg-raised text-muted shadow-sm',
+  night: 'border border-night-line bg-night-raised text-on-night-muted',
+  band: 'border border-white/25 bg-white/10 text-white',
+} as const;
+
+export function Eyebrow({ children, tone = 'page' }: { children: ReactNode; tone?: keyof typeof EYEBROW }) {
   return (
-    <p className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] ${tone === 'night' ? 'border border-night-line bg-night-raised text-on-night-muted' : 'border border-line bg-raised text-muted shadow-sm'}`}>
-      <span aria-hidden="true" className="dot-river size-1.5 rounded-full" />
+    <p className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] ${EYEBROW[tone]}`}>
+      <span aria-hidden="true" className={`size-1.5 rounded-full ${tone === 'band' ? 'bg-white' : 'dot-river'}`} />
       {children}
     </p>
   );
 }
 
-const TONES = { page: '', surface: 'bg-surface', night: 'night relative isolate overflow-hidden' } as const;
+const TONES = { page: '', surface: 'bg-surface', night: 'night relative isolate overflow-hidden', band: 'band relative isolate overflow-hidden' } as const;
 
 export function Section({ id, eyebrow, title, intro, children, tone = 'page', align = 'start' }: {
   id: string; eyebrow?: string; title: string; intro?: string; children: ReactNode;
-  tone?: 'page' | 'surface' | 'night'; align?: 'start' | 'center';
+  tone?: keyof typeof TONES; align?: 'start' | 'center';
 }) {
   const centred = align === 'center';
   return (
@@ -24,9 +30,9 @@ export function Section({ id, eyebrow, title, intro, children, tone = 'page', al
       {tone === 'night' && <div aria-hidden="true" className="night-glow" />}
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
         <div className={`reveal max-w-3xl ${centred ? 'mx-auto text-center' : ''}`}>
-          {eyebrow && <Eyebrow tone={tone === 'night' ? 'night' : 'page'}>{eyebrow}</Eyebrow>}
+          {eyebrow && <Eyebrow tone={tone === 'night' || tone === 'band' ? tone : 'page'}>{eyebrow}</Eyebrow>}
           <h2 id={`${id}-title`} className="mt-5 text-3xl font-extrabold leading-[1.08] sm:text-4xl lg:text-[3.25rem]">{title}</h2>
-          {intro && <p className={`mt-5 text-lg sm:text-xl ${tone === 'night' ? 'night-muted' : 'text-muted'} ${centred ? 'mx-auto max-w-2xl' : 'max-w-2xl'}`}>{intro}</p>}
+          {intro && <p className={`mt-5 text-lg sm:text-xl ${tone === 'night' ? 'night-muted' : tone === 'band' ? 'band-muted' : 'text-muted'} ${centred ? 'mx-auto max-w-2xl' : 'max-w-2xl'}`}>{intro}</p>}
         </div>
         <div className="mt-12 lg:mt-16">{children}</div>
       </div>
@@ -53,16 +59,21 @@ const PRIMARY = 'group inline-flex min-h-12 items-center gap-2 rounded-control b
 const SECONDARY = 'inline-flex min-h-12 items-center rounded-control border border-line bg-raised px-6 font-semibold shadow-sm transition-colors hover:border-ink/30 hover:bg-surface';
 const Arrow = () => <span className="transition-transform duration-200 group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5"><SiteIcon name="arrow" size={18} /></span>;
 
-export function CtaButtons({ primary, secondary }: { primary: { href: string; label: string }; secondary?: { href: string; label: string } | null }) {
+const ON_COLOUR_PRIMARY = 'group inline-flex min-h-12 items-center gap-2 rounded-control bg-white px-6 font-semibold text-[#0b1020] shadow-[0_10px_30px_-10px_rgb(0_0_0/0.45)] transition-transform duration-200 hover:-translate-y-px';
+const ON_COLOUR_SECONDARY = 'inline-flex min-h-12 items-center rounded-control border border-white/40 px-6 font-semibold text-white transition-colors hover:bg-white/10';
+
+/** Start free and an optional second action. On a band or night panel ("colour"), the primary turns white. */
+export function CtaButtons({ primary, secondary, tone = 'page' }: { primary: { href: string; label: string }; secondary?: { href: string; label: string } | null; tone?: 'page' | 'colour' }) {
+  const onColour = tone === 'colour';
   return (
     <div className="flex flex-wrap gap-3">
-      <a href={primary.href} data-signup="" className={PRIMARY}>{primary.label}<Arrow /></a>
-      {secondary && <a href={secondary.href} className={SECONDARY}>{secondary.label}</a>}
+      <a href={primary.href} data-signup="" className={onColour ? ON_COLOUR_PRIMARY : PRIMARY}>{primary.label}<Arrow /></a>
+      {secondary && <a href={secondary.href} className={onColour ? ON_COLOUR_SECONDARY : SECONDARY}>{secondary.label}</a>}
     </div>
   );
 }
 
-/** The glow and grid behind a hero. Put it first inside a `relative isolate` hero. */
+/** The soft glow behind a hero. Put it first inside a `relative isolate` hero. */
 export function HeroAura() {
   return <div aria-hidden="true" className="aura" />;
 }
@@ -80,10 +91,7 @@ export function CtaBand({ title, body, primary, secondary }: { title: string; bo
         <div className="relative reveal">
           <h2 id="cta-title" className="max-w-3xl text-4xl font-extrabold leading-[1.08] text-on-night sm:text-5xl">{title}</h2>
           <p className="night-muted mt-5 max-w-2xl text-lg">{body}</p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <a href={primary.href} data-signup="" className="group inline-flex min-h-12 items-center gap-2 rounded-control bg-white px-6 font-semibold text-[#0b1020] shadow-[0_10px_30px_-10px_rgb(125_211_252/0.6)] transition-transform duration-200 hover:-translate-y-px">{primary.label}<Arrow /></a>
-            {secondary && <a href={secondary.href} className="inline-flex min-h-12 items-center rounded-control border border-white/25 px-6 font-semibold text-on-night transition-colors hover:bg-white/10">{secondary.label}</a>}
-          </div>
+          <div className="mt-9"><CtaButtons primary={primary} secondary={secondary} tone="colour" /></div>
         </div>
       </div>
     </section>

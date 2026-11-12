@@ -8,7 +8,23 @@
     "title": "Run the whole business from one place.",
     "lede": "Books, stock, sales, people and your online shop on one record, with a till, a phone app and an assistant reading the same numbers.",
     "primaryCta": "Start free",
-    "secondaryCta": "Book a demo"
+    "secondaryCta": "Book a demo",
+    "cards": {
+      "paid": {
+        "title": "Payment received",
+        "detail": "INV-0412 · Bright Harbour Traders",
+        "amount": 1240000
+      },
+      "low": {
+        "title": "Running low",
+        "detail": "Rice, 50kg bag · 6 left at Main store",
+        "action": "Reorder"
+      },
+      "insight": {
+        "title": "Sales are ₦380,000 up on last week",
+        "detail": "Most of it came through the shop and Till 2"
+      }
+    }
   },
   "illustrative": "Illustrative example",
   "oneRecord": {
@@ -207,6 +223,17 @@
         "text": "99.9% uptime, measured every minute.",
         "claim": "claims.uptime"
       }
+    ]
+  },
+  "ask": {
+    "eyebrow": "The assistant",
+    "title": "Ask anything about your business",
+    "intro": "It reads the same record as you do, so the answer comes from your own numbers, not a guess.",
+    "placeholder": "How did the shop do this week?",
+    "suggestions": [
+      "Who owes us money?",
+      "What should I reorder?",
+      "Which branch sold most in October?"
     ]
   },
   "cta": {

@@ -28,6 +28,12 @@ export const HomeContent = z.object({
     lede: z.string().min(1),
     primaryCta: z.string().min(1),
     secondaryCta: z.string().min(1),
+    /** The small cards floating over the product in the hero: one moment each from money, stock and the assistant. */
+    cards: z.object({
+      paid: z.object({ title: z.string().min(1), detail: z.string().min(1), amount: z.number().int().positive() }),
+      low: z.object({ title: z.string().min(1), detail: z.string().min(1), action: z.string().min(1) }),
+      insight: z.object({ title: z.string().min(1), detail: z.string().min(1) }),
+    }),
   }),
   oneRecord: z.object({ ...Section, intro: z.string(), currency: z.enum(['NGN', 'USD']), steps: z.array(Item.extend({ visual: z.array(z.object({ label: z.string(), value: z.string() })) })).length(4) }),
   surfaces: z.object({ ...Section, intro: z.string(), items: z.array(Item).min(1) }),
@@ -35,6 +41,8 @@ export const HomeContent = z.object({
   industries: z.object({ ...Section, intro: z.string() }),
   works: z.object({ ...Section, items: z.array(Item).min(1) }),
   trust: z.object({ ...Section, items: z.array(Claim).min(1) }),
+  /** The assistant band: a question box and suggested questions, all leading to the assistant's page. */
+  ask: z.object({ ...Section, intro: z.string().min(1), placeholder: z.string().min(1), suggestions: z.array(z.string().min(1)).min(2).max(4) }),
   cta: z.object({ title: z.string().min(1), body: z.string().min(1) }),
 });
 export type HomeContent = z.infer<typeof HomeContent>;
