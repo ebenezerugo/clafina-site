@@ -125,7 +125,7 @@ export default async function Home({ params }: Props) {
         <IllustrativeLabel text={c.illustrative} />
         <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {c.surfaces.items.map((s) => (
-            <li key={s.id} className="reveal group flex min-w-0 flex-col rounded-2xl bg-white/[0.08] p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.18)] ring-1 ring-white/15 transition-colors hover:bg-white/[0.12]">
+            <li key={s.id} className="reveal lift group flex min-w-0 flex-col rounded-2xl bg-white/[0.08] p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.18)] ring-1 ring-white/15 hover:bg-white/[0.12]">
               <div className="flex items-center gap-3">
                 <span aria-hidden="true" className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-white text-[var(--c-band-2)] shadow-[0_8px_20px_-10px_rgb(0_0_0/0.5)]"><SiteIcon name={POINT_ICONS[s.id] ?? 'check'} size={20} /></span>
                 <h3 className="text-lg font-bold">{s.title}</h3>
