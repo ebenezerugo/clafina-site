@@ -39,7 +39,9 @@ export const HomeContent = z.object({
   }),
   oneRecord: z.object({ ...Section, intro: z.string(), currency: z.enum(['NGN', 'USD']), steps: z.array(Item.extend({ visual: z.array(z.object({ label: z.string(), value: z.string() })) })).length(4) }),
   surfaces: z.object({
-    ...Section, intro: z.string(), items: z.array(Item).min(1),
+    ...Section, intro: z.string(),
+    /** Each screen, with one small moment from it shown as a live card. */
+    items: z.array(Item.extend({ moment: z.string().min(1) })).min(1),
     /** The receipt the till's printer is printing: the same order as on the till screen. Amounts in minor-less units. */
     receipt: z.object({ title: z.string().min(1), lines: z.array(z.object({ label: z.string().min(1), amount: z.number().int().nonnegative() })).min(1), total: z.object({ label: z.string().min(1), amount: z.number().int().positive() }), footer: z.string().min(1) }),
     /** A moment floating over the till. */
