@@ -123,11 +123,18 @@ export default async function Home({ params }: Props) {
           <PhoneDevice className="mx-auto w-full max-w-[230px] min-w-0 sm:max-w-[290px]"><ShopPhone locale={locale} /></PhoneDevice>
         </div>
         <IllustrativeLabel text={c.illustrative} />
-        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {c.surfaces.items.map((s) => (
-            <li key={s.id} className="reveal flex min-w-0 gap-4 rounded-xl border border-white/20 bg-white/10 p-6">
-              <IconTile name={POINT_ICONS[s.id] ?? 'check'} tone="night" />
-              <div><h3 className="text-lg font-bold">{s.title}</h3><p className="band-muted mt-1.5">{s.body}</p></div>
+            <li key={s.id} className="reveal group flex min-w-0 flex-col rounded-2xl bg-white/[0.08] p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.18)] ring-1 ring-white/15 transition-colors hover:bg-white/[0.12]">
+              <div className="flex items-center gap-3">
+                <span aria-hidden="true" className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-white text-[var(--c-band-2)] shadow-[0_8px_20px_-10px_rgb(0_0_0/0.5)]"><SiteIcon name={POINT_ICONS[s.id] ?? 'check'} size={20} /></span>
+                <h3 className="text-lg font-bold">{s.title}</h3>
+              </div>
+              <p className="band-muted mt-4 flex-1">{s.body}</p>
+              <p className="mt-6 flex items-center gap-2.5 rounded-xl bg-raised px-3.5 py-2.5 text-sm font-medium text-ink shadow-[0_14px_28px_-16px_rgb(0_0_0/0.6)]">
+                <span aria-hidden="true" className="relative flex size-2 shrink-0"><span className="absolute inset-0 rounded-full bg-[#22c55e] opacity-60 motion-safe:animate-ping" /><span className="relative size-2 rounded-full bg-[#22c55e]" /></span>
+                <span className="min-w-0">{s.moment}</span>
+              </p>
             </li>
           ))}
         </ul>

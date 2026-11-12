@@ -107,32 +107,38 @@
       {
         "id": "web",
         "title": "The web app",
-        "body": "Books, sales, stock, people and projects. Every page says what it is for and what to do next."
+        "body": "Books, sales, stock, people and projects. Every page says what it is for and what to do next.",
+        "moment": "INV-0412 sent to Bright Harbour Traders"
       },
       {
         "id": "till",
         "title": "The till",
-        "body": "Sells on desktop, on Android and in the browser, and keeps going offline within the limits you set."
+        "body": "Sells on desktop, on Android and in the browser, and keeps going offline within the limits you set.",
+        "moment": "Table 6 charged · ₦23,400"
       },
       {
         "id": "shop",
         "title": "Your online shop",
-        "body": "Built in Storefront Studio in your own brand, selling from the same stock and the same prices."
+        "body": "Built in Storefront Studio in your own brand, selling from the same stock and the same prices.",
+        "moment": "New pickup order for 7:30 pm"
       },
       {
         "id": "phone",
         "title": "The phone app",
-        "body": "Your numbers, approvals, sales and stock counts in your pocket."
+        "body": "Your numbers, approvals, sales and stock counts in your pocket.",
+        "moment": "2 purchase orders need your approval"
       },
       {
         "id": "assistant",
         "title": "The assistant",
-        "body": "Drafts replies, sums up long conversations, sorts what comes in and takes meeting notes."
+        "body": "Drafts replies, sums up long conversations, sorts what comes in and takes meeting notes.",
+        "moment": "Meeting notes ready, with 3 actions"
       },
       {
         "id": "meet",
         "title": "Meet",
-        "body": "Video calls and audio rooms of your own, started from any chat."
+        "body": "Video calls and audio rooms of your own, started from any chat.",
+        "moment": "Weekly stand-up · 4 people in the room"
       }
     ],
     "receipt": {
