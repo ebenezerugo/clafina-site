@@ -35,3 +35,13 @@ describe('country profiles', () => {
     expect(resolveText('⟦n:nobody⟧')).toBe('⟦n:nobody⟧');
   });
 });
+
+describe('screens follow the visitor', () => {
+  it('turns naira into local money at the story price levels, and story names into local names', async () => {
+    const { localiseText } = await import('../../src/profiles/tokens');
+    expect(localiseText('Cost ₦842,000 · plan ₦905,000 · −₦180,000 · ₦1.2m', 'gb')).toBe('Cost £673.60 · plan £724.00 · −£144.00 · £960');
+    expect(localiseText('Greenvale Family Farms, Hana K.', 'in')).toBe('Nashik Family Farms, Kavya K.');
+    expect(localiseText('₦842,000 at Greenvale', 'ng')).toBe('₦842,000 at Zaria');
+    expect(localiseText('Samuelson paid ₦100', 'global')).toBe('Samuelson paid $0.10');
+  });
+});

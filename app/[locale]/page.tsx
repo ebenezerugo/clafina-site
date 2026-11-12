@@ -69,7 +69,7 @@ export default async function Home({ params }: Props) {
 
 
   return (
-    <main>
+    <main data-local-money="">
       {org && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />}
 
       <section id="hero" aria-labelledby="hero-title" className="band relative isolate overflow-hidden">

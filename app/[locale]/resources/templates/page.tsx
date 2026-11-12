@@ -24,7 +24,7 @@ export default async function TemplatesPage({ params }: Props) {
   const L = c.labels;
 
   return (
-    <main>
+    <main data-local-money="">
       <section id="hero" aria-labelledby="templates-title" className="isolate relative bg-surface" data-no-print="">
         <HeroAura />
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:py-20">
