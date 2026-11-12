@@ -6,10 +6,10 @@ import { Icon } from './kit/Icon';
 import { formatMoney } from './kit/money';
 import { ScaledScreen } from './kit/ScaledScreen';
 
-// A storefront wears the business's own brand (here a fictional restaurant's terracotta), not Clafina's.
-const shop = { '--s-page': '#fff8f0', '--s-ink': '#2b1b14', '--s-line': '#ebdccb', '--s-muted': '#6b5648', '--s-brand': '#b5300f' } as CSSProperties;
+// A storefront wears the business's own brand (here a fictional restaurant's deep teal), not Clafina's.
+const shop = { '--s-page': '#f5faf9', '--s-ink': '#0f2321', '--s-line': '#d6e6e3', '--s-muted': '#4a605d', '--s-brand': '#0f6e66' } as CSSProperties;
 const serif = "Georgia, 'Times New Roman', serif";
-const plates = ['#f8e3d3', '#f3ead2', '#e3ecd8', '#f7dede'];
+const plates = ['#dff1ee', '#e3ebfb', '#ebe6fa', '#e6f2e4'];
 
 export function ShopPhone({ locale }: { locale: Locale }) {
   const c = loadContent(locale, 'screens/shop-phone', ShopPhoneScreen);
@@ -40,12 +40,12 @@ export function ShopPhone({ locale }: { locale: Locale }) {
           {c.dishes.map((d, i) => (
             <div key={d.name} className="s-row" style={{ gap: 14, padding: '14px 16px', borderBottom: '1px solid var(--s-line)' }}>
               <span style={{ width: 96, height: 96, borderRadius: 14, background: plates[i % plates.length], flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ width: 64, height: 64, borderRadius: '50%', background: '#fff', boxShadow: 'inset 0 0 0 10px rgba(181,48,15,.18)' }} />
+                <span style={{ width: 64, height: 64, borderRadius: '50%', background: '#fff', boxShadow: 'inset 0 0 0 10px rgba(15,110,102,.16)' }} />
               </span>
               <span style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <span><span style={{ fontFamily: serif, fontWeight: 700, fontSize: 17, lineHeight: 1.2, display: 'block' }}>{d.name}</span><span className="s-sub">{d.note}</span></span>
                 <span className="s-row" style={{ justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span><b style={{ fontSize: 16 }}>{m(d.price)}</b>{d.tag && <span style={{ fontSize: 12, fontWeight: 700, color: '#833d07', marginInlineStart: 8 }}>{d.tag}</span>}</span>
+                  <span><b style={{ fontSize: 16 }}>{m(d.price)}</b>{d.tag && <span style={{ fontSize: 12, fontWeight: 700, color: '#0b5a53', marginInlineStart: 8 }}>{d.tag}</span>}</span>
                   <span style={{ width: 48, height: 48, borderRadius: '50%', background: 'var(--s-brand)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Icon name="plus" size={24} strokeWidth={2.4} /></span>
                 </span>
               </span>

@@ -17,7 +17,8 @@ import { ShopPhone } from '@/screens/ShopPhone';
 import { TillSell } from '@/screens/TillSell';
 import { OneRecord } from '@/components/sections/OneRecord';
 import { AskBand } from '@/components/sections/AskBand';
-import { FloatingCards } from '@/components/sections/FloatingCards';
+import { FloatingCards, FLOAT_CARD, Mark } from '@/components/sections/FloatingCards';
+import { PhoneDevice, ReceiptPrinter, TillTerminal } from '@/components/devices/Devices';
 import { ClaimText, CtaBand, CtaButtons, Eyebrow, IllustrativeLabel, Section } from '@/components/sections/ui';
 import { IconTile, MODULE_ICONS, POINT_ICONS, SiteIcon } from '@/components/icons/SiteIcon';
 
@@ -74,11 +75,6 @@ export default async function Home({ params }: Props) {
     );
   };
 
-  const surfaceScreens: Record<string, React.ReactNode> = {
-    till: <TillSell locale={locale} />,
-    shop: <div className="mx-auto max-w-[300px]"><ShopPhone locale={locale} /></div>,
-  };
-
   return (
     <main>
       {org && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />}
@@ -102,7 +98,7 @@ export default async function Home({ params }: Props) {
             <div className="overflow-hidden rounded-t-xl lg:absolute lg:inset-y-0 lg:start-0 lg:w-[62rem] lg:overflow-visible">
               <div className="rounded-xl bg-surface p-2 shadow-[0_0_0_1px_rgb(255_255_255/0.18),0_40px_80px_-30px_rgb(0_0_0/0.6)] sm:p-3 lg:mt-14"><SalesHome locale={locale} /></div>
             </div>
-            <div className="absolute end-4 top-[13rem] hidden w-[13rem] rounded-[28px] bg-raised p-2 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.55)] ring-1 ring-black/10 lg:block xl:end-0"><PhoneHome locale={locale} /></div>
+            <PhoneDevice className="!absolute end-4 top-[12rem] hidden w-[13.5rem] lg:block xl:end-0"><PhoneHome locale={locale} /></PhoneDevice>
           </div>
         </div>
       </section>
@@ -114,9 +110,17 @@ export default async function Home({ params }: Props) {
       </Section>
 
       <Section id="surfaces" eyebrow={c.surfaces.eyebrow} title={c.surfaces.title} intro={c.surfaces.intro} tone="band">
-        <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
-          <div className="relative min-w-0 rounded-xl bg-surface p-2 shadow-[0_0_0_1px_rgb(255_255_255/0.18),0_40px_80px_-30px_rgb(0_0_0/0.6)] sm:p-3">{surfaceScreens.till}</div>
-          <div className="min-w-0 self-center">{surfaceScreens.shop}</div>
+        <div className="grid items-end gap-x-12 gap-y-14 lg:grid-cols-[minmax(0,2.4fr)_minmax(0,1fr)]">
+          <div className="relative min-w-0">
+            <div aria-hidden="true" className={`${FLOAT_CARD} !z-30 -top-8 start-[34%] hidden sm:flex`}>
+              <Mark icon="wifiOff" tone="bg-[#dcfce7] text-[#15803d]" />
+              <div><p className="text-sm font-semibold">{c.surfaces.moment.title}</p><p className="text-xs text-muted">{c.surfaces.moment.detail}</p></div>
+            </div>
+            <TillTerminal printer={<ReceiptPrinter title={c.surfaces.receipt.title} lines={c.surfaces.receipt.lines.map((l) => ({ label: l.label, amount: money(String(l.amount)) }))} total={{ label: c.surfaces.receipt.total.label, amount: money(String(c.surfaces.receipt.total.amount)) }} footer={c.surfaces.receipt.footer} />}>
+              <TillSell locale={locale} />
+            </TillTerminal>
+          </div>
+          <PhoneDevice className="mx-auto w-full max-w-[230px] min-w-0 sm:max-w-[290px]"><ShopPhone locale={locale} /></PhoneDevice>
         </div>
         <IllustrativeLabel text={c.illustrative} />
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
