@@ -10,7 +10,7 @@
   "nav": [
     { "label": "Conversations", "items": [
       { "label": "Overdue invoices and reminders" },
-      { "label": "Visit to Corner Shop Provisions", "badge": "4", "active": true },
+      { "label": "Corner Shop visit", "badge": "4", "active": true },
       { "label": "September stock write-offs" }
     ] }
   ],
