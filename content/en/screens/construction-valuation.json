@@ -4,7 +4,7 @@
   "label": "Illustrative example: a contractor's monthly valuation of a block of flats, stage by stage, with retention held and tax shown before anything is invoiced.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "PRJ-2026-0033 · Lagoonside Court, Ikoyi" },
+  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "Lagoonside Court, Ikoyi" },
   "nav": [
     { "label": "Construction", "items": [{ "label": "Progress billing", "active": true }, { "label": "Site diary" }, { "label": "Snag list" }, { "label": "Subcontractors" }] },
     { "label": "Valuations", "items": [{ "label": "Valuation 4 · October", "badge": "Open" }, { "label": "Valuation 3 · September" }, { "label": "Valuation 2 · August" }, { "label": "Valuation 1 · July" }] }
@@ -26,8 +26,8 @@
     ] },
     { "type": "row", "widths": "1fr 1fr", "blocks": [
       { "type": "table", "title": "Variations", "columns": [{ "label": "Variation" }, { "label": "Stage" }, { "label": "Amount", "numeric": true }, { "label": "State" }], "rows": [
-        ["VO-0004 · Extra column at grid D, floor 3", "Superstructure", { "money": 2400000 }, { "pill": "good", "text": "Instructed, nothing built yet" }],
-        ["VO-0006 · Roof access hatch", "Roofing", { "money": 900000 }, { "pill": "warn", "text": "Priced, waiting for the client" }]
+        ["VO-0004 · Extra column at grid D, floor 3", "Superstructure", { "money": 2400000 }, { "pill": "good", "text": "Instructed" }],
+        ["VO-0006 · Roof access hatch", "Roofing", { "money": 900000 }, { "pill": "warn", "text": "Awaiting client" }]
       ] },
       { "type": "kv", "title": "This valuation", "items": [
         { "label": "Work done to date", "value": { "money": 442800000 } },

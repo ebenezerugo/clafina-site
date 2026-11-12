@@ -4,7 +4,7 @@
   "label": "Illustrative example: a snag list for a block of flats, with open snags counted unit by unit and by trade, and one flat's list with who must put each one right.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "PRJ-2026-0033 · Lagoonside Court, Ikoyi" },
+  "org": { "initials": "KC", "name": "Kanwa Construction", "place": "Lagoonside Court, Ikoyi" },
   "nav": [
     { "label": "Construction", "items": [{ "label": "Progress billing" }, { "label": "Site diary" }, { "label": "Snag list", "active": true }, { "label": "Subcontractors", "badge": "3" }] }
   ],

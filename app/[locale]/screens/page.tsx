@@ -22,7 +22,7 @@ function isSpec(id: string): boolean {
   try { return JSON.parse(readFileSync(join(process.cwd(), 'content', 'en', 'screens', `${id}.json`), 'utf8')).spec === 1; } catch { return false; }
 }
 
-const org = { initials: 'BH', name: 'Bright Harbour Traders (example)', place: 'Main store' };
+const org = { initials: 'BH', name: 'Bright Harbour Traders', place: 'Main store' };
 
 /** Internal: every part of the product screen kit. Built in preview only. */
 export default async function ScreenGallery({ params }: { params: Promise<{ locale: string }> }) {

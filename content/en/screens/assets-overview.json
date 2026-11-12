@@ -18,7 +18,7 @@
     { "type": "stats", "items": [
       { "icon": "box", "label": "Assets in the register", "value": "214", "note": "6 are being repaired now" },
       { "icon": "money", "label": "Net book value", "value": { "money": 186400000 }, "note": "₦3,100,000 depreciation this month" },
-      { "icon": "chart", "label": "Spent on maintenance", "value": { "money": 1420000 }, "change": { "tone": "warn", "text": "₦380,000 more than September", "dir": "up" } },
+      { "icon": "chart", "label": "Spent on maintenance", "value": { "money": 1420000 }, "change": { "tone": "warn", "text": "₦380,000 up on Sept", "dir": "up" } },
       { "icon": "clock", "label": "Papers and cover ending", "value": "9", "note": "Within 30 days" }
     ] },
     { "type": "row", "widths": "2fr 1fr", "blocks": [

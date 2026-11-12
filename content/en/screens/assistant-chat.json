@@ -10,7 +10,7 @@
   "nav": [
     { "label": "Conversations", "items": [
       { "label": "Overdue invoices and reminders", "active": true },
-      { "label": "Minutes: visit to Corner Shop Provisions", "badge": "4" },
+      { "label": "Minutes: Corner Shop visit", "badge": "4" },
       { "label": "September stock write-offs" },
       { "label": "Shared by Kemi: VAT September" },
       { "label": "Price list for Lantern Valley Foods" }
