@@ -19,11 +19,12 @@ const LEDGERS: Record<string, (p: Profile) => Record<string, number>> = {
     return { maize, seed: -seed, fertiliser: -fertiliser, net: maize - seed - fertiliser };
   },
 };
-const digits = (p: Profile) => (p.currency === 'NGN' ? 0 : 2);
+/** Currencies people quote without minor units in daily trade. */
+const digits = (p: Profile) => (p.currency === 'NGN' || p.currency === 'INR' || p.currency === 'KES' ? 0 : 2);
 function roundMoney(v: number, p: Profile): number { const f = 10 ** digits(p); return Math.round(v * f) / f; }
 
 export function money(v: number, p: Profile): string {
-  return new Intl.NumberFormat(p.currency === 'INR' ? 'en-IN' : 'en', { style: 'currency', currency: p.currency, currencyDisplay: 'narrowSymbol', minimumFractionDigits: digits(p), maximumFractionDigits: digits(p) }).format(v);
+  return new Intl.NumberFormat(p.currency === 'INR' ? 'en-IN' : p.currency === 'KES' ? 'en-KE' : 'en', { style: 'currency', currency: p.currency, currencyDisplay: 'narrowSymbol', minimumFractionDigits: digits(p), maximumFractionDigits: digits(p) }).format(v);
 }
 
 /** The text for one token under a profile. Unknown tokens come back as they are, so a typo shows rather than hides. */
@@ -55,5 +56,37 @@ export function splitTokens(text: string): (string | { kind: string; key: string
     last = m.index + m[0].length;
   }
   if (last < text.length) out.push(text.slice(last));
+  return out;
+}
+
+/**
+ * Money already written in naira (the app screens and a few page lines), converted to the visitor's currency at
+ * the same price levels as the stories. "₦842,000" in a UK visit becomes "£673.60"; "₦1.2m" becomes "£960".
+ */
+export const NAIRA = /(−|-)?₦\s?(\d[\d,]*(?:\.\d+)?)(?:\s?(k|m|bn)(?![\w]))?/gi;
+const NAIRA_SCALE = PROFILES.ng.scale;
+export function convertNaira(text: string, id: ProfileId): string {
+  if (id === 'ng') return text;
+  const p = PROFILES[id];
+  return text.replace(NAIRA, (_, sign: string | undefined, num: string, suffix: string | undefined) => {
+    const mult = suffix ? { k: 1e3, m: 1e6, bn: 1e9 }[suffix.toLowerCase() as 'k' | 'm' | 'bn'] : 1;
+    const local = (Number(num.replace(/,/g, '')) * mult / NAIRA_SCALE) * p.scale;
+    const out = suffix
+      ? new Intl.NumberFormat(p.currency === 'KES' ? 'en-KE' : 'en', { style: 'currency', currency: p.currency, currencyDisplay: 'narrowSymbol', notation: 'compact', minimumFractionDigits: 0, maximumFractionDigits: 1 }).format(local)
+      : money(local, p);
+    return (sign ? '−' : '') + out;
+  });
+}
+
+/** The story names as built (global profile), longest first, as whole-word patterns. */
+const GLOBAL_NAMES = (Object.entries(PROFILES.global.names) as [Part, string][])
+  .sort((a, b) => b[1].length - a[1].length)
+  .map(([part, name]) => [part, new RegExp(`(?<![\\p{L}])${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}])`, 'gu')] as const);
+
+/** Text inside an app screen or a marked part of a page: story names and naira, both in the visitor's version. */
+export function localiseText(text: string, id: ProfileId): string {
+  let out = convertNaira(text, id);
+  if (id === 'global') return out;
+  for (const [part, re] of GLOBAL_NAMES) out = out.replace(re, PROFILES[id].names[part]);
   return out;
 }
