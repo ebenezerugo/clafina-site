@@ -53,7 +53,7 @@
         "body": "The dishes and the stock behind them come off that branch, so the next order sees what is really left.",
         "visual": [
           {
-            "label": "Jollof rice and chicken",
+            "label": "Grilled chicken bowl",
             "value": "−2"
           },
           {
@@ -134,7 +134,45 @@
         "title": "Meet",
         "body": "Video calls and audio rooms of your own, started from any chat."
       }
-    ]
+    ],
+    "receipt": {
+      "title": "JUNIPER KITCHEN",
+      "lines": [
+        {
+          "label": "Chicken bowl ×2",
+          "amount": 10000
+        },
+        {
+          "label": "Salmon teriyaki",
+          "amount": 6000
+        },
+        {
+          "label": "Lemonade ×2",
+          "amount": 3600
+        },
+        {
+          "label": "Garlic bread",
+          "amount": 1200
+        },
+        {
+          "label": "Service charge",
+          "amount": 1040
+        },
+        {
+          "label": "VAT",
+          "amount": 1560
+        }
+      ],
+      "total": {
+        "label": "Total",
+        "amount": 23400
+      },
+      "footer": "Paid · Cash · Till 2"
+    },
+    "moment": {
+      "title": "Kept selling offline",
+      "detail": "Till 2 · 14 sales sync when the line is back"
+    }
   },
   "modules": {
     "eyebrow": "What it covers",
