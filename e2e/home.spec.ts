@@ -53,6 +53,8 @@ test('home looks the same above the fold', async ({ page }) => {
   for (const l of ['en', 'ar']) {
     await page.goto(`/${l}/`);
     await page.evaluate(() => document.fonts.ready);
-    await expect(page).toHaveScreenshot(`home-${l}.png`, { maxDiffPixelRatio: 0.03 });
+    // The illustrative screens are masked: their tiny text wraps differently across machines, and the screens
+    // have their own checks (screens-fit, screens.spec). This compares the page's design around them.
+    await expect(page).toHaveScreenshot(`home-${l}.png`, { maxDiffPixelRatio: 0.03, mask: [page.locator('[data-screen]')] });
   }
 });
