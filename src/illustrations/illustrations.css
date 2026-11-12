@@ -1,0 +1,67 @@
+/* Motion for the illustrated scenes. Every scene is complete at rest; under reduced motion each animation jumps to its end. */
+/* Cartoon motion. Every scene re-mounts, so its animations replay from the start. */
+.ill .bob, .ill .grow, .ill .pop, .ill .stamp, .ill .spin, .ill .shake, .ill .press, .ill .tick, .ill .flap, .ill .fly, .ill .fly2, .ill .slidein, .ill .coin, .ill .confetti, .ill .printout, .ill .tap { transform-box: fill-box; }
+.ill .scene-in { animation: ill-scenein .55s cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes ill-scenein { from { opacity: 0; transform: scale(1.04); } }
+.ill .steam { animation: ill-steam 2.4s ease-in-out infinite; }
+@keyframes ill-steam { 0% { opacity: 0; transform: translateY(6px); } 40% { opacity: .9; } 100% { opacity: 0; transform: translateY(-10px); } }
+.ill .caret { animation: ill-beam 1s steps(2) infinite; }
+.ill .blink { animation: ill-beam 1.2s steps(2) infinite; }
+.ill .tap { transform-origin: center; animation: ill-tap 1.2s ease-in-out 2.2s 2 both; }
+@keyframes ill-tap { 50% { transform: translate(-4px, 6px) scale(.92); } }
+.ill .belt { animation: ill-roll 3.2s linear infinite; }
+.ill .drift { animation: ill-drift 30s linear infinite; }
+@keyframes ill-drift { to { transform: translateX(-160px); } }
+.ill .parallax-slow { animation: ill-roll 14s linear infinite; }
+.ill .fly2 { animation: ill-fly2 1.4s cubic-bezier(.55, 0, .25, 1) both; }
+@keyframes ill-fly2 { to { transform: translate(250px, 110px) scale(.3) rotate(10deg); opacity: 0; } }
+.ill-grain::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.45 0 0 0 0 0.4 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.ill .bob { animation: ill-bob 3.2s ease-in-out infinite; transform-origin: center; }
+@keyframes ill-bob { 50% { transform: translateY(-6px); } }
+.ill .grow { transform-origin: left center; animation: ill-grow .7s ease-out both; }
+@keyframes ill-grow { from { transform: scaleX(0); } }
+.ill .pop { transform-origin: center; animation: ill-pop .45s cubic-bezier(.3, 1.6, .5, 1) both; }
+@keyframes ill-pop { from { transform: scale(0); opacity: 0; } }
+.ill .fadein { animation: ill-fadein .5s ease-out both; }
+@keyframes ill-fadein { from { opacity: 0; } }
+.ill .fadeout { animation: ill-fadeout .4s ease-in both; }
+@keyframes ill-fadeout { to { opacity: 0; } }
+.ill .slidein { animation: ill-slidein .9s cubic-bezier(.3, .9, .3, 1) both; }
+@keyframes ill-slidein { from { transform: translateY(-80px); } }
+.ill .flap { transform-origin: center top; animation: ill-flap .5s ease-in both; }
+@keyframes ill-flap { from { transform: scaleY(-1); } }
+.ill .fly { animation: ill-fly 1.6s cubic-bezier(.55, 0, .25, 1) both; }
+@keyframes ill-fly { 0% { transform: translate(0, 0) rotate(0); } 45% { transform: translate(200px, -120px) rotate(-14deg); } 100% { transform: translate(400px, -12px) rotate(4deg) scale(.55); opacity: 0; } }
+.ill .stamp { transform-origin: center; animation: ill-stamp .45s cubic-bezier(.2, 1.4, .4, 1) both; }
+@keyframes ill-stamp { from { transform: scale(2.6) rotate(-28deg); opacity: 0; } to { transform: scale(1) rotate(-10deg); opacity: 1; } }
+.ill .wave { animation: ill-wave 1s ease-in-out infinite; transform-box: view-box; transform-origin: 0 0; }
+@keyframes ill-wave { 50% { transform: rotate(-22deg); } }
+.ill .spin { animation: ill-spin .5s linear infinite; transform-origin: center; }
+@keyframes ill-spin { to { transform: rotate(360deg); } }
+.ill .roll { animation: ill-roll 1.4s linear infinite; }
+@keyframes ill-roll { to { transform: translateX(-120px); } }
+.ill .parallax { animation: ill-roll 7s linear infinite; }
+.ill .drive { animation: ill-drive 5s cubic-bezier(.4, 0, .4, 1) both; }
+@keyframes ill-drive { from { transform: translateX(-120px); } to { transform: translateX(90px); } }
+.ill .shake { animation: ill-shake .35s ease-in-out 3; transform-origin: center; }
+@keyframes ill-shake { 25% { transform: rotate(-3deg); } 75% { transform: rotate(3deg); } }
+.ill .draw { stroke-dasharray: 520; animation: ill-draw 1.8s ease-out both; }
+@keyframes ill-draw { from { stroke-dashoffset: 520; } to { stroke-dashoffset: 0; } }
+.ill .coin { animation: ill-coin 1.4s cubic-bezier(.5, 0, .4, 1) both; }
+@keyframes ill-coin { 0% { transform: translate(0, 0); opacity: 0; } 15% { opacity: 1; } 100% { transform: translate(-330px, -40px); opacity: 0; } }
+.ill .confetti { animation: ill-confetti 2.6s ease-in both; }
+@keyframes ill-confetti { from { transform: translateY(-260px) rotate(0); opacity: 1; } to { transform: translateY(40px) rotate(320deg); opacity: 0; } }
+.ill .beam { animation: ill-beam .5s steps(2) 5 both; }
+@keyframes ill-beam { 50% { opacity: 0; } }
+.ill .printout { animation: ill-printout 1.6s ease-out both; }
+@keyframes ill-printout { from { transform: translateY(110px); } }
+.ill .press { animation: ill-press .5s ease-in-out both; transform-origin: center; }
+@keyframes ill-press { 50% { transform: scale(.9); } }
+.ill .tick { animation: ill-pop .35s cubic-bezier(.3, 1.6, .5, 1) both; transform-origin: center; }
+@media (prefers-reduced-motion: reduce) { .ill *, .ill { animation-duration: 1ms !important; animation-iteration-count: 1 !important; animation-delay: 0s !important; } }
+
+
+@font-face { font-family: 'Caveat'; font-style: normal; font-weight: 600; font-display: swap; src: url('/illustrations/caveat-600.woff2') format('woff2'); }
+.ill { position: relative; overflow: hidden; aspect-ratio: 16 / 9; max-width: 100%; background: #dfe8ff; }
+.ill > svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }

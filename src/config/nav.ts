@@ -33,7 +33,7 @@ export const NAV: { menus: NavMenu[]; links: RouteId[] } = {
       id: 'resources',
       groups: [
         { id: 'learn', items: ['resources-guides', 'resources-templates', 'resources-glossary', 'help', 'whats-new'] },
-        { id: 'why', items: ['why-one-record', 'why-switching', 'why-offline', 'why-languages'] },
+        { id: 'why', items: ['story-quo-0221', 'why-one-record', 'why-switching', 'why-offline', 'why-languages'] },
       ],
     },
   ],

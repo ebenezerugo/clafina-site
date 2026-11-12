@@ -30,6 +30,7 @@
   "routes": {
     "home": "Home",
     "platform": "Platform overview",
+    "story-quo-0221": "The journey of a sale",
     "pricing": "Pricing",
     "pricing-compare": "Compare plans",
     "demo": "Book a demo",
