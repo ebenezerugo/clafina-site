@@ -67,7 +67,8 @@ export const StoryContent = z.object({
   cast: z.array(z.object({ id: z.string().min(1), name: z.string().min(1), role: z.string().min(1) })).min(1),
   trailTitle: z.string().min(1),
   papers: z.array(z.object({ id: StoryPaper, name: z.string().min(1), number: z.string().min(1), stamp: z.string().min(1) })).min(1),
-  totals: z.object({ lines: z.array(z.object({ label: z.string().min(1), amount: z.number().int() })).min(1), totalLabel: z.string().min(1), total: z.number().int().positive(), currency: z.enum(['NGN', 'USD']) }),
+  /** Amounts are money tokens, worked out per country from the story's ledger, so they always add up. */
+  totals: z.object({ lines: z.array(z.object({ label: z.string().min(1), amount: z.string().includes('⟦m:') })).min(1), totalLabel: z.string().min(1), total: z.string().includes('⟦m:') }),
   didLabel: z.string().min(1),
   controls: z.object({ list: z.string().min(1), play: z.string().min(1), pause: z.string().min(1), prev: z.string().min(1), next: z.string().min(1), chapter: z.string().includes('{n}'), bike: z.string().min(1), van: z.string().min(1) }),
   chapters: z.array(z.object({
@@ -77,8 +78,5 @@ export const StoryContent = z.object({
     vehicle: z.literal(true).optional(),
   })).min(2),
   cta: z.object({ title: z.string().min(1), body: z.string().min(1) }),
-}).superRefine((s, ctx) => {
-  const sum = s.totals.lines.reduce((a, l) => a + l.amount, 0);
-  if (sum !== s.totals.total) ctx.addIssue({ code: 'custom', message: `totals add up to ${sum}, not ${s.totals.total}` });
 });
 export type StoryContent = z.infer<typeof StoryContent>;

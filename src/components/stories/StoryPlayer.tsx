@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from 'react';
 import { Scene } from '@/illustrations/Scene';
+import { Tk } from '@/profiles/Tk';
+import { resolveText } from '@/profiles/tokens';
 
 type Paper = { id: string; name: string; number: string; stamp: string };
 type Chapter = {
@@ -70,21 +72,21 @@ export function StoryPlayer({ chapters, papers, trailTitle, totals, didLabel, co
       <article aria-roledescription="story" className="overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_30px_60px_-40px_rgb(11_16_32/0.5)]">
         <div className="relative">
           <p className="absolute start-3 top-3 z-10 inline-flex -rotate-1 items-center gap-2 rounded-md border-2 border-[#1b2033] bg-[#fde68a] px-2.5 py-1 text-xs font-bold text-[#0b1020] sm:text-sm">
-            <span>{at + 1}/{chapters.length}</span><span>{chapter.place}</span><time className="font-medium tabular">{chapter.time}</time>
+            <span>{at + 1}/{chapters.length}</span><span><Tk text={chapter.place} /></span><time className="font-medium tabular">{chapter.time}</time>
           </p>
           {chapter.vehicle && (
             <button type="button" onClick={() => setVehicle((v) => (v === 'van' ? 'bike' : 'van'))} className="absolute end-3 top-3 z-10 min-h-11 rounded-lg border-2 border-[#1b2033] bg-white px-3 text-sm font-semibold text-[#0b1020]">
               {vehicle === 'van' ? controls.bike : controls.van}
             </button>
           )}
-          {markup ? <Scene key={frameOf(chapter)} markup={markup} label={chapter.title} /> : <div className="ill" aria-busy="true" />}
+          {markup ? <Scene key={frameOf(chapter)} markup={markup} label={resolveText(chapter.title)} /> : <div className="ill" aria-busy="true" />}
         </div>
         <div className="grid gap-3 p-5 sm:p-6" aria-live="polite">
-          <h2 className="text-2xl font-extrabold sm:text-[1.65rem]">{chapter.title}</h2>
-          <p className="max-w-[70ch] text-muted">{chapter.text}</p>
+          <h2 className="text-2xl font-extrabold sm:text-[1.65rem]"><Tk text={chapter.title} /></h2>
+          <p className="max-w-[70ch] text-muted"><Tk text={chapter.text} /></p>
           <p className="flex flex-wrap items-center gap-2 pt-1">
             <span className="me-1 text-xs font-bold uppercase tracking-[0.08em] text-primary">{didLabel}</span>
-            {chapter.did.map((d) => <span key={d.text} className={`rounded-full px-3 py-1 text-sm font-semibold ${DID_TONE[d.kind]}`}>{d.text}</span>)}
+            {chapter.did.map((d) => <span key={d.text} className={`rounded-full px-3 py-1 text-sm font-semibold ${DID_TONE[d.kind]}`}><Tk text={d.text} /></span>)}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3 px-5 pb-5 sm:px-6">
@@ -121,8 +123,8 @@ export function StoryPlayer({ chapters, papers, trailTitle, totals, didLabel, co
           })}
         </ol>
         <dl className="mt-1 grid gap-1 rounded-xl bg-surface p-3.5 text-sm text-muted tabular">
-          {totals.lines.map((l) => <div key={l.label} className="flex justify-between gap-3"><dt>{l.label}</dt><dd>{l.amount}</dd></div>)}
-          <div className="flex justify-between gap-3 font-bold text-ink"><dt>{totals.totalLabel}</dt><dd>{totals.total}</dd></div>
+          {totals.lines.map((l) => <div key={l.label} className="flex justify-between gap-3"><dt><Tk text={l.label} /></dt><dd><Tk text={l.amount} /></dd></div>)}
+          <div className="flex justify-between gap-3 font-bold text-ink"><dt>{totals.totalLabel}</dt><dd><Tk text={totals.total} /></dd></div>
         </dl>
       </aside>
 
@@ -133,7 +135,7 @@ export function StoryPlayer({ chapters, papers, trailTitle, totals, didLabel, co
               <button type="button" onClick={() => go(i)} aria-current={i === at ? 'step' : undefined}
                 className={`grid min-h-11 w-32 gap-0.5 rounded-xl border px-3 py-2 text-start ${i === at ? 'border-primary bg-tint-sky' : 'border-line bg-raised'}`}>
                 <span className="font-mono text-[11px] text-muted">{String(i + 1).padStart(2, '0')} · {c.time}</span>
-                <b className="text-[13px] leading-tight">{c.short}</b>
+                <b className="text-[13px] leading-tight"><Tk text={c.short} /></b>
               </button>
             </li>
           ))}

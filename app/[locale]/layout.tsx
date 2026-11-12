@@ -12,6 +12,7 @@ import { Header } from '@/components/header/Header';
 import { SkipLink } from '@/components/SkipLink';
 import { Footer } from '@/components/footer/Footer';
 import { CampaignLinks } from '@/components/CampaignLinks';
+import { ProfileSwapper } from '@/profiles/ProfileSwapper';
 
 export const dynamicParams = false;
 
@@ -37,6 +38,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <Footer locale={locale} />
           <CampaignLinks />
         </NextIntlClientProvider>
+        <ProfileSwapper />
       </body>
     </html>
   );

@@ -16,11 +16,11 @@
     "check:production": "tsx --tsconfig tsconfig.json scripts/check-production.ts",
     "check:css": "tsx scripts/check-logical-css.ts",
     "check:content": "tsx scripts/check-content.ts",
-    "prebuild": "tsx scripts/generate-well-known.ts && tsx scripts/script-fonts.ts && node scripts/draw-illustrations.mjs",
+    "prebuild": "tsx scripts/generate-well-known.ts && tsx scripts/script-fonts.ts && tsx scripts/draw-illustrations.mjs",
     "postbuild": "tsx scripts/postbuild.ts",
     "check:links": "tsx scripts/check-links.ts",
     "sync:help": "tsx scripts/sync-help.ts",
-    "draw": "node scripts/draw-illustrations.mjs"
+    "draw": "tsx scripts/draw-illustrations.mjs"
   },
   "dependencies": {
     "next": "16.4.5",

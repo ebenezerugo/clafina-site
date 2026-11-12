@@ -17,18 +17,18 @@
     "screen": "farm-home"
   },
   "business": {
-    "name": "Greenvale Family Farms",
-    "place": "Greenvale",
+    "name": "⟦n:farm⟧",
+    "place": "⟦n:valley⟧",
     "label": true,
-    "about": "A maize and soybean farm in the Greenvale valley, with a poultry site at Hillside and a scheme of maize outgrowers."
+    "about": "A maize and soybean farm in the ⟦n:valley⟧ valley, with a poultry site at ⟦n:hillside⟧ and a scheme of maize outgrowers."
   },
   "story": "farm",
-  "dayTitle": "A day at Greenvale Family Farms",
+  "dayTitle": "A day at ⟦n:farm⟧",
   "moments": [
     {
       "time": "06:00",
       "title": "What can't wait today",
-      "problem": "Anna has fields, flocks and growers to think about, and only a few minutes before the teams arrive.",
+      "problem": "⟦n:farmer⟧ has fields, flocks and growers to think about, and only a few minutes before the teams arrive.",
       "handles": "The farm home shows the land in season, the cost a hectare against the budget, the expected harvest as a dated projection and today's eggs. Below it are the things that cost money or a crop if they wait, each with its next step. A weak patch seen in satellite imagery becomes a scouting suggestion, never a task.",
       "surface": "web",
       "scene": "dawn"
@@ -36,7 +36,7 @@
     {
       "time": "08:20",
       "title": "Armyworm on Road Field",
-      "problem": "Hana finds fall armyworm in the maize on Road Field.",
+      "problem": "⟦n:agronomist⟧ finds fall armyworm in the maize on Road Field.",
       "handles": "Her report carries the place, how bad it is and her photos. The check shows the weather on the day, the waiting period against the planned harvest, what the store holds and what the treatment costs. Assigning it puts a task on the calendar.",
       "surface": "phone",
       "screen": "farm-scouting",
@@ -55,14 +55,14 @@
       "time": "10:00",
       "title": "A field sprayed last week is due for harvest",
       "problem": "Dam Field was planned for harvest, but it was sprayed only last week.",
-      "handles": "The spray set a waiting period from the product's profile. Harvesting inside it warns, or is refused if the farm has set it to block, so Anna moves the harvest.",
+      "handles": "The spray set a waiting period from the product's profile. Harvesting inside it warns, or is refused if the farm has set it to block, so ⟦n:farmer⟧ moves the harvest.",
       "surface": "web",
       "scene": "harvest"
     },
     {
       "time": "12:00",
       "title": "A broiler house lost more birds than usual",
-      "problem": "Samuel sees more dead broilers than usual in one of the houses.",
+      "problem": "⟦n:poultry⟧ sees more dead broilers than usual in one of the houses.",
       "handles": "He keeps one daily record a day. Each death needs a cause, and feed is issued from the store at that day's cost. Mortality over the limit shows on the farm home, and feed conversion, average weight and cost a kilo sit on the batch. A medicine's withdrawal blocks the sale until it ends.",
       "surface": "phone",
       "screen": "farm-batch-phone",
@@ -72,7 +72,7 @@
       "time": "15:00",
       "title": "Paying the harvest gang by the bag",
       "problem": "The pickers on Hilltop are paid for each bag, not by the day.",
-      "handles": "Piece work needs a unit, a rate and how many. When Hana signs it off, the labour is charged to the season once and the payroll lines are made once.",
+      "handles": "Piece work needs a unit, a rate and how many. When ⟦n:agronomist⟧ signs it off, the labour is charged to the season once and the payroll lines are made once.",
       "surface": "web",
       "scene": "pickers"
     },

@@ -60,7 +60,7 @@
       {
         "id": "till",
         "title": "The price is agreed",
-        "body": "Maya sends quotation QUO-0221 as a link. Leo answers with his own price, and she accepts it inside her limit.",
+        "body": "⟦n:sales⟧ sends quotation QUO-0221 as a link. ⟦n:customer⟧ answers with his own price, and she accepts it inside her limit.",
         "visual": [
           {
             "label": "Table 6 charged",
@@ -90,14 +90,14 @@
       {
         "id": "books",
         "title": "Stock and delivery follow",
-        "body": "Forty cartons leave the Main store on waybill WB-0097, and Leo signs for them at the door.",
+        "body": "Forty cartons leave the Main store on waybill WB-0097, and ⟦n:customer⟧ signs for them at the door.",
         "visual": [
           {
             "label": "4000 Sales",
             "value": "20800"
           },
           {
-            "label": "2310 VAT",
+            "label": "2310 ⟦t:label⟧",
             "value": "1560"
           },
           {
@@ -109,7 +109,7 @@
       {
         "id": "phone",
         "title": "Paid, and the books agree",
-        "body": "Leo pays from the invoice link. The receipt goes out and the sale and VAT post to the books by themselves.",
+        "body": "⟦n:customer⟧ pays from the invoice link. The receipt goes out and the sale and ⟦t:label⟧ post to the books by themselves.",
         "visual": [
           {
             "label": "Sales today",
@@ -125,7 +125,7 @@
     "currency": "NGN",
     "story": {
       "link": "Follow one sale, start to finish",
-      "poster": "Maya and Leo agree a price on quotation QUO-0221. The quote is stamped agreed."
+      "poster": "⟦n:sales⟧ and ⟦n:customer⟧ agree a price on quotation QUO-0221. The quote is stamped agreed."
     }
   },
   "surfaces": {

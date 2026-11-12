@@ -6,6 +6,8 @@ import { ROUTES, routeById } from '@/config/routes';
 import { localeEnabled, mentionable, pageAvailable } from '@/config/switches';
 import { LazyScene } from '@/components/stories/LazyScene';
 import { frameUrl } from '@/illustrations/frames';
+import { Tk } from '@/profiles/Tk';
+import { resolveText } from '@/profiles/tokens';
 import { loadContent } from '@/content/load';
 import { IndustryStory } from '@/content/industry';
 import { signupUrl } from '@/lib/links';
@@ -71,7 +73,7 @@ export default async function IndustryPage({ params }: Props) {
         </div>
       </section>
 
-      <Section id="day" title={c.dayTitle} intro={`${c.business.name}, ${c.business.place}. ${c.business.about}`} tone="surface">
+      <Section id="day" title={<Tk text={c.dayTitle} />} intro={<Tk text={`${c.business.name}, ${c.business.place}. ${c.business.about}`} />} tone="surface">
         <IllustrativeLabel text={c.illustrative} />
         <ol className="mt-10 grid gap-14">
           {moments.map((m) => (
@@ -81,15 +83,15 @@ export default async function IndustryPage({ params }: Props) {
                   <time className="text-2xl font-extrabold tabular-nums">{m.time}</time>
                   <span className="rounded-full border border-line bg-raised px-3 py-0.5 text-sm font-semibold">{t(`surfaces.${m.surface}`)}</span>
                 </p>
-                <h3 className="mt-3 text-2xl font-bold">{m.title}</h3>
+                <h3 className="mt-3 text-2xl font-bold"><Tk text={m.title} /></h3>
                 <p className="mt-4 text-xs font-bold uppercase tracking-[0.12em] text-muted">{t('industry.moment')}</p>
-                <p className="mt-1 text-lg">{m.problem}</p>
+                <p className="mt-1 text-lg"><Tk text={m.problem} /></p>
                 <p className="mt-4 text-xs font-bold uppercase tracking-[0.12em] text-muted">{t('industry.handles')}</p>
-                <p className="mt-1 text-lg text-muted">{m.handles}</p>
+                <p className="mt-1 text-lg text-muted"><Tk text={m.handles} /></p>
               </div>
               {m.scene && c.story ? (
                 <div className="min-w-0">
-                  <LazyScene src={`${frameUrl(c.story)}/${m.scene}.svgf`} label={`${m.time}. ${m.title}`} />
+                  <LazyScene src={`${frameUrl(c.story)}/${m.scene}.svgf`} label={resolveText(`${m.time}. ${m.title}`)} />
                   {m.screen && (
                     <details className="group mt-4">
                       <summary className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-control border border-line bg-raised px-4 text-sm font-semibold [&::-webkit-details-marker]:hidden">{t('industry.seeScreen')}<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" className="transition-transform group-open:rotate-180"><path d="m6 9 6 6 6-6" /></svg></summary>

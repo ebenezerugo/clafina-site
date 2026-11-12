@@ -21,7 +21,7 @@ export function Eyebrow({ children, tone = 'page' }: { children: ReactNode; tone
 const TONES = { page: '', surface: 'bg-surface', night: 'night relative isolate overflow-hidden', band: 'band relative isolate overflow-hidden' } as const;
 
 export function Section({ id, eyebrow, title, intro, children, tone = 'page', align = 'start' }: {
-  id: string; eyebrow?: string; title: string; intro?: string; children: ReactNode;
+  id: string; eyebrow?: string; title: ReactNode; intro?: ReactNode; children: ReactNode;
   tone?: keyof typeof TONES; align?: 'start' | 'center';
 }) {
   const centred = align === 'center';

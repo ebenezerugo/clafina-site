@@ -97,7 +97,7 @@ export const SCENES = {
     <g transform="translate(40 388)"><rect x="0" y="0" width="120" height="10" fill="#8a5a3b" ${O}/><rect x="8" y="10" width="9" height="36" fill="#6b4226" ${O} stroke-width="2"/><rect x="103" y="10" width="9" height="36" fill="#6b4226" ${O} stroke-width="2"/></g>
     ${person('anna', 230, 440, { pose: 'look', hold: 'phoneBack', look: 3 })}
     <g transform="translate(90 388)"><path d="M-10 -22 H10 V-4 Q10 0 6 0 H-6 Q-10 0 -10 -4Z" fill="#fff" ${O} stroke-width="2"/><path class="steam" d="M-2 -28 Q-6 -36 -2 -42" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></g>
-    ${callout(330, 60, 260, 176, `<text font-size="9" font-weight="800" letter-spacing="1.1" fill="#3d4a66">GREENVALE · TODAY</text>
+    ${callout(330, 60, 260, 176, `<text font-size="9" font-weight="800" letter-spacing="1.1" fill="#3d4a66">⟦u:valley⟧ · TODAY</text>
       ${[['Land in season', '412 ha'], ['Cost a hectare', 'under plan by 7%'], ['Rain', 'Wed, 18 mm'], ['Waiting', '2 tasks need you']].map(([k, v], i) => `<text y="${24 + i * 22}" font-size="9.5" fill="#6b7590">${k}</text><text x="228" y="${24 + i * 22}" text-anchor="end" font-size="10" font-weight="700" fill="${INK}">${v}</text>`).join('')}
       <rect y="100" width="228" height="20" rx="6" fill="#ecfdf5"/><text x="8" y="114" font-size="9" font-weight="700" fill="${C.green}">✓ All flocks recorded yesterday</text>`, ...at(230, 440, 'look'), { title: 'Clafina · Farm home' })}
     ${bubble(40, 150, 170, 50, 'Good morning, farm.', { tail: 'right', delay: 1.2, size: 21 })}`,
@@ -174,9 +174,9 @@ export const SCENES = {
     <g class="arrive">${pickup(250, 386, 7)}</g>
     ${person('daniel', 560, 430, { pose: 'wave', look: -3 })}
     ${callout(500, 40, 270, 200, `<text font-size="9" font-weight="800" letter-spacing="1.1" fill="#3d4a66">OUTGROWER RECEIPT</text>
-      <text y="20" font-size="11" font-weight="800" fill="${INK}">Daniel Ross · 2,480 kg</text>
-      ${[['Maize at contract price', '₦1,240,000'], ['Seed advanced', '−₦180,000'], ['Fertiliser advanced', '−₦260,000']].map(([k, v], i) => `<g class="fadein" style="animation-delay:${.6 + i * .4}s"><text y="${42 + i * 18}" font-size="9.5" fill="#6b7590">${k}</text><text x="238" y="${42 + i * 18}" text-anchor="end" font-size="10" font-weight="700" fill="${INK}">${v}</text></g>`).join('')}
-      <path d="M0 102 H238" stroke="#d7deec"/><text y="122" font-size="11" font-weight="900" fill="${INK}">To pay</text><text class="pop" style="animation-delay:2s" x="238" y="122" text-anchor="end" font-size="13" font-weight="900" fill="${C.green}">₦800,000</text>`, 480, 252, { title: 'Clafina · Outgrowers', delay: .3 })}`,
+      <text y="20" font-size="11" font-weight="800" fill="${INK}">⟦n:outgrower⟧ · 2,480 kg</text>
+      ${[['Maize at contract price', '⟦m:farm.maize⟧'], ['Seed advanced', '⟦m:farm.seed⟧'], ['Fertiliser advanced', '⟦m:farm.fertiliser⟧']].map(([k, v], i) => `<g class="fadein" style="animation-delay:${.6 + i * .4}s"><text y="${42 + i * 18}" font-size="9.5" fill="#6b7590">${k}</text><text x="238" y="${42 + i * 18}" text-anchor="end" font-size="10" font-weight="700" fill="${INK}">${v}</text></g>`).join('')}
+      <path d="M0 102 H238" stroke="#d7deec"/><text y="122" font-size="11" font-weight="900" fill="${INK}">To pay</text><text class="pop" style="animation-delay:2s" x="238" y="122" text-anchor="end" font-size="13" font-weight="900" fill="${C.green}">⟦m:farm.net⟧</text>`, 480, 252, { title: 'Clafina · Outgrowers', delay: .3 })}`,
 
   trace: (t) => `${sky('dusk', 'ft1')}${sun(640, 250, 50, '#ff8c42')}${cloud(80, 70, .8, '#ffe2c7')}
     ${hills(-.08)}${barn(80, 320, .8)}${silo(190, 320, .8)}
@@ -184,6 +184,6 @@ export const SCENES = {
     ${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => sack(260 + (i % 4) * 46, 420 - Math.floor(i / 4) * 50, i === 0 ? 'LOT 7' : '', 1)).join('')}
     ${person('anna', 520, 430, { pose: 'show', hold: 'phoneOut', look: 4 })}
     ${callout(470, 40, 300, 210, `<text font-size="9" font-weight="800" letter-spacing="1.1" fill="#3d4a66">TRACE · MAIZE LOT 7</text>
-      ${[['Field', 'West Field, 38 ha'], ['Season', 'Maize 2026'], ['Inputs', '2 sprays, waiting kept'], ['Weigh slips', '14 · 21.6 t'], ['Sold to', 'Riverside Mills']].map(([k, v], i) => `<g class="fadein" style="animation-delay:${.5 + i * .35}s"><circle cx="5" cy="${18 + i * 26}" r="5" fill="${C.green}"/>${i < 4 ? `<path d="M5 ${23 + i * 26} V${39 + i * 26}" stroke="${C.green}" stroke-width="2"/>` : ''}<text x="18" y="${22 + i * 26}" font-size="9.5" fill="#6b7590">${k}</text><text x="268" y="${22 + i * 26}" text-anchor="end" font-size="10" font-weight="700" fill="${INK}">${v}</text></g>`).join('')}`, ...at(520, 430, 'show'), { title: 'Clafina · Traceability', delay: .2 })}
+      ${[['Field', 'West Field, 38 ha'], ['Season', 'Maize 2026'], ['Inputs', '2 sprays, waiting kept'], ['Weigh slips', '14 · 21.6 t'], ['Sold to', '⟦n:mills⟧']].map(([k, v], i) => `<g class="fadein" style="animation-delay:${.5 + i * .35}s"><circle cx="5" cy="${18 + i * 26}" r="5" fill="${C.green}"/>${i < 4 ? `<path d="M5 ${23 + i * 26} V${39 + i * 26}" stroke="${C.green}" stroke-width="2"/>` : ''}<text x="18" y="${22 + i * 26}" font-size="9.5" fill="#6b7590">${k}</text><text x="268" y="${22 + i * 26}" text-anchor="end" font-size="10" font-weight="700" fill="${INK}">${v}</text></g>`).join('')}`, ...at(520, 430, 'show'), { title: 'Clafina · Traceability', delay: .2 })}
     ${hand(250, 250, 'field to buyer', 30, '#7c2d12', 'fadein', 2.6, -6)}`,
 };

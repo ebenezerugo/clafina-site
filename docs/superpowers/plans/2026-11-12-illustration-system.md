@@ -96,6 +96,15 @@ Every industry page already tells "a day" in six to eight time-stamped moments. 
 
 **Production order:** Accommodation, Restaurant, Retail first (most visited), then the rest in two batches. Each batch: scenes drawn, the page's names made international in the text and its app screens, a contact sheet for the owner, then merge.
 
+## 4a. The world follows the visitor's country
+
+- `functions/api/where.ts` returns the visitor's country from Cloudflare; the browser asks once and remembers it. `?country=XX` overrides it for previews.
+- `src/profiles/profiles.ts`: 14 profiles (global, Nigeria, Ghana, Kenya, South Africa, UK, US, Canada, Germany, France, India, UAE, Brazil, Mexico). Each has popular local names for every part (matching the drawn character), a city and neighbourhood, local business names, the currency at a natural price level, and the local sales tax. A country maps to a profile only where the currency is its own; everyone else sees the global profile.
+- Content and drawings use tokens: `⟦n:part⟧` names, `⟦u:part⟧` in capitals, `⟦m:story.amount⟧` money from the story's ledger (totals recomputed per country, so they always add up), `⟦c:symbol⟧`, `⟦t:label⟧`/`⟦t:rate⟧` tax.
+- Pages are built with the global profile (what search engines see); `ProfileSwapper` turns every token into the visitor's version, including frames that load later.
+- Pricing follows the detected country unless the visitor chose one in the footer.
+- **Next:** the same tokens for the app screens (`content/en/screens/*.json`) and the home hero cards, industry by industry with each illustration batch, so screens, prose and drawings always agree. New parts are added to `Part` with a name in every profile.
+
 ## 5. Phases
 
 1. **Kit in the site, journey live (this week).** Port the kit to `src/illustrations/` in TypeScript; story content in `content/en/stories/quo-0221.json`; the story page and its player; the home poster replacing the One-record cards; link from Sales. Contact-sheet and accessibility tests; Lighthouse on home and the story page.
