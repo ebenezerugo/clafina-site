@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test('home shows its sections in order', async ({ page }) => {
   await page.goto('/en/');
   const ids = await page.locator('main > section').evaluateAll((s) => s.map((x) => x.id));
-  expect(ids).toEqual(['hero', 'one-record', 'surfaces', 'modules', 'industries', 'works-where-you-work', 'trust', 'cta']);
+  expect(ids).toEqual(['hero', 'one-record', 'surfaces', 'modules', 'industries', 'works-where-you-work', 'ask', 'trust', 'cta']);
 });
 
 test('every screen on the home page is labelled illustrative', async ({ page }) => {

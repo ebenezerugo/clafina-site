@@ -35,6 +35,10 @@
   --color-river-1: var(--c-river-1);
   --color-river-2: var(--c-river-2);
   --color-river-3: var(--c-river-3);
+  --color-tint-mint: var(--c-tint-mint);
+  --color-tint-sky: var(--c-tint-sky);
+  --color-tint-lilac: var(--c-tint-lilac);
+  --color-tint-sand: var(--c-tint-sand);
   --shadow-glow: var(--sh-glow);
   --radius-control: var(--r-control);
   --shadow-sm: var(--sh-sm);
@@ -84,14 +88,6 @@
     radial-gradient(45% 55% at 60% 0%, var(--c-aura-b), transparent 70%),
     radial-gradient(35% 45% at 95% 30%, var(--c-aura-c), transparent 70%);
 }
-.aura::after {
-  content: ''; position: absolute; inset: 0; opacity: 0.55;
-  /* The grid fades out through a gradient layer drawn over it: no mask, which is costly to paint. */
-  background-image:
-    radial-gradient(60% 55% at 50% 0%, transparent 30%, var(--c-page) 80%),
-    linear-gradient(var(--c-line) 1px, transparent 1px), linear-gradient(90deg, var(--c-line) 1px, transparent 1px);
-  background-size: 100% 100%, 56px 56px, 56px 56px;
-}
 
 /* The river as a line of colour on text, an edge or a dot. */
 .text-river { background: var(--grad-river); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -112,6 +108,13 @@
 }
 
 /* The night: dark sections in either theme. */
+/* The band: a bold field of the brand's blue running into violet, with white type. */
+.band { color: #fff; color-scheme: dark; background:
+  radial-gradient(55% 80% at 100% 0%, rgb(139 92 246 / 0.5), transparent 65%),
+  radial-gradient(45% 70% at 0% 100%, rgb(14 165 164 / 0.3), transparent 65%),
+  linear-gradient(135deg, var(--c-band-1), var(--c-band-2) 55%, var(--c-band-3)); }
+.band .band-muted { color: rgb(255 255 255 / 0.9); }
+
 .night { background: var(--c-night); color: var(--c-on-night); color-scheme: dark; }
 .night .night-muted { color: var(--c-on-night-muted); }
 .night-glow { position: absolute; inset: 0; z-index: 0; pointer-events: none; background:

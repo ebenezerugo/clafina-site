@@ -22,6 +22,11 @@ describe('placeholder theme', () => {
       expect(contrast(t['c-muted']!, t['c-surface']!)).toBeGreaterThanOrEqual(4.5);
       expect(contrast(t['c-on-primary']!, t['c-primary']!)).toBeGreaterThanOrEqual(4.5);
       expect(contrast(t['c-primary']!, t['c-page']!)).toBeGreaterThanOrEqual(4.5);
+      for (const band of ['c-band-1', 'c-band-2', 'c-band-3']) expect(contrast('#ffffff', t[band]!)).toBeGreaterThanOrEqual(4.5);
+      for (const tint of ['c-tint-mint', 'c-tint-sky', 'c-tint-lilac', 'c-tint-sand']) {
+        expect(contrast(t['c-ink']!, t[tint]!)).toBeGreaterThanOrEqual(4.5);
+        expect(contrast(t['c-muted']!, t[tint]!)).toBeGreaterThanOrEqual(4.5);
+      }
     });
   }
   it('redefines every colour for dark mode, both ways', () => {
