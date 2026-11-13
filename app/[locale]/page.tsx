@@ -138,7 +138,7 @@ export default async function Home({ params }: Props) {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-20">
           <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {c.surfaces.items.map((s) => (
-              <li key={s.id} className="reveal lift group flex min-w-0 flex-col rounded-2xl border border-line bg-raised p-6 shadow-sm">
+              <li key={s.id} className="lift group flex min-w-0 flex-col rounded-2xl border border-line bg-raised p-6 shadow-sm">
                 <div className="flex items-center gap-3">
                   <span aria-hidden="true" className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-tint-sky text-primary"><SiteIcon name={POINT_ICONS[s.id] ?? 'check'} size={20} /></span>
                   <h3 className="text-lg font-bold">{s.title}</h3>
@@ -159,7 +159,7 @@ export default async function Home({ params }: Props) {
             const items = g.items.filter((id) => mentionable(id));
             const wide = i === product.groups.length - 1 && product.groups.length % 3 === 2;
             return (
-              <div key={g.id} className={`reveal lift min-w-0 rounded-2xl p-7 ${BENTO_TINTS[i % BENTO_TINTS.length]} ${wide ? 'md:col-span-2' : ''}`}>
+              <div key={g.id} className={`lift min-w-0 rounded-2xl p-7 ${BENTO_TINTS[i % BENTO_TINTS.length]} ${wide ? 'md:col-span-2' : ''}`}>
                 <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{t(`nav.groups.${g.id}` as never)}</h3>
                 <ul className={`mt-5 grid gap-1 ${wide ? 'sm:grid-cols-2' : ''}`}>
                   {items.map((id) => {
@@ -181,7 +181,7 @@ export default async function Home({ params }: Props) {
       </Section>
 
       <Section id="industries" eyebrow={c.industries.eyebrow} title={c.industries.title} intro={c.industries.intro}>
-        <ul className="reveal flex flex-wrap gap-3">
+        <ul className="flex flex-wrap gap-3">
           {industries.map((id) => {
             const href = link(locale, id);
             const name = t(`routes.${id}` as never);
@@ -193,7 +193,7 @@ export default async function Home({ params }: Props) {
       <Section id="works-where-you-work" eyebrow={c.works.eyebrow} title={c.works.title} tone="surface" align="center">
         <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {c.works.items.map((w) => (
-            <li key={w.id} className="reveal lift min-w-0 rounded-xl border border-line bg-raised p-6 shadow-sm">
+            <li key={w.id} className="lift min-w-0 rounded-xl border border-line bg-raised p-6 shadow-sm">
               <IconTile name={POINT_ICONS[w.id] ?? 'check'} />
               <h3 className="mt-5 text-lg font-bold">{w.title}</h3><p className="mt-2 text-muted">{w.body}</p>
             </li>
@@ -208,7 +208,7 @@ export default async function Home({ params }: Props) {
           {c.trust.items.map((item) => {
             const text = <ClaimText text={item.text} claim={item.claim} />;
             return text ? (
-              <li key={item.text} className="reveal flex gap-4 rounded-xl border border-night-line bg-night-raised/70 p-5">
+              <li key={item.text} className="flex gap-4 rounded-xl border border-night-line bg-night-raised/70 p-5">
                 <IconTile name="shield" tone="night" />
                 <span className="pt-2.5">{text}</span>
               </li>
