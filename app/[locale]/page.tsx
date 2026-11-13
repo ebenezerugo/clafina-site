@@ -133,22 +133,25 @@ export default async function Home({ params }: Props) {
           <PhoneDevice className="mx-auto w-full max-w-[230px] min-w-0 sm:max-w-[290px]"><ShopPhone locale={locale} /></PhoneDevice>
         </div>
         <IllustrativeLabel text={c.illustrative} />
-        <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {c.surfaces.items.map((s) => (
-            <li key={s.id} className="reveal lift group flex min-w-0 flex-col rounded-2xl bg-white/[0.08] p-6 shadow-[inset_0_1px_0_rgb(255_255_255/0.18)] ring-1 ring-white/15 hover:bg-white/[0.12]">
-              <div className="flex items-center gap-3">
-                <span aria-hidden="true" className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-white text-[var(--c-band-2)] shadow-[0_8px_20px_-10px_rgb(0_0_0/0.5)]"><SiteIcon name={POINT_ICONS[s.id] ?? 'check'} size={20} /></span>
-                <h3 className="text-lg font-bold">{s.title}</h3>
-              </div>
-              <p className="band-muted mt-4 flex-1">{s.body}</p>
-              <p className="mt-6 flex items-center gap-2.5 rounded-xl bg-raised px-3.5 py-2.5 text-sm font-medium text-ink shadow-[0_14px_28px_-16px_rgb(0_0_0/0.6)]">
-                <span aria-hidden="true" className="relative flex size-2 shrink-0"><span className="absolute inset-0 rounded-full bg-[#22c55e] opacity-60 motion-safe:animate-ping" /><span className="relative size-2 rounded-full bg-[#22c55e]" /></span>
-                <span className="min-w-0">{s.moment}</span>
-              </p>
-            </li>
-          ))}
-        </ul>
       </Section>
+      {/* The six screens, on the light page under the band: what each is for, and one live moment from it. */}
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-20">
+          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {c.surfaces.items.map((s) => (
+              <li key={s.id} className="lift group flex min-w-0 flex-col rounded-2xl border border-line bg-raised p-6 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span aria-hidden="true" className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-tint-sky text-primary"><SiteIcon name={POINT_ICONS[s.id] ?? 'check'} size={20} /></span>
+                  <h3 className="text-lg font-bold">{s.title}</h3>
+                </div>
+                <p className="mt-4 flex-1 text-muted">{s.body}</p>
+                <p className="mt-6 flex items-center gap-2.5 rounded-xl bg-surface px-3.5 py-2.5 text-sm font-medium text-ink">
+                  <span aria-hidden="true" className="relative flex size-2 shrink-0"><span className="absolute inset-0 rounded-full bg-[#22c55e] opacity-60 motion-safe:animate-ping" /><span className="relative size-2 rounded-full bg-[#22c55e]" /></span>
+                  <span className="min-w-0">{s.moment}</span>
+                </p>
+              </li>
+            ))}
+          </ul>
+      </div>
 
       <Section id="modules" eyebrow={c.modules.eyebrow} title={c.modules.title} intro={c.modules.intro} align="center">
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -156,7 +159,7 @@ export default async function Home({ params }: Props) {
             const items = g.items.filter((id) => mentionable(id));
             const wide = i === product.groups.length - 1 && product.groups.length % 3 === 2;
             return (
-              <div key={g.id} className={`reveal lift min-w-0 rounded-2xl p-7 ${BENTO_TINTS[i % BENTO_TINTS.length]} ${wide ? 'md:col-span-2' : ''}`}>
+              <div key={g.id} className={`lift min-w-0 rounded-2xl p-7 ${BENTO_TINTS[i % BENTO_TINTS.length]} ${wide ? 'md:col-span-2' : ''}`}>
                 <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-muted">{t(`nav.groups.${g.id}` as never)}</h3>
                 <ul className={`mt-5 grid gap-1 ${wide ? 'sm:grid-cols-2' : ''}`}>
                   {items.map((id) => {
@@ -178,7 +181,7 @@ export default async function Home({ params }: Props) {
       </Section>
 
       <Section id="industries" eyebrow={c.industries.eyebrow} title={c.industries.title} intro={c.industries.intro}>
-        <ul className="reveal flex flex-wrap gap-3">
+        <ul className="flex flex-wrap gap-3">
           {industries.map((id) => {
             const href = link(locale, id);
             const name = t(`routes.${id}` as never);
@@ -190,7 +193,7 @@ export default async function Home({ params }: Props) {
       <Section id="works-where-you-work" eyebrow={c.works.eyebrow} title={c.works.title} tone="surface" align="center">
         <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {c.works.items.map((w) => (
-            <li key={w.id} className="reveal lift min-w-0 rounded-xl border border-line bg-raised p-6 shadow-sm">
+            <li key={w.id} className="lift min-w-0 rounded-xl border border-line bg-raised p-6 shadow-sm">
               <IconTile name={POINT_ICONS[w.id] ?? 'check'} />
               <h3 className="mt-5 text-lg font-bold">{w.title}</h3><p className="mt-2 text-muted">{w.body}</p>
             </li>
@@ -205,7 +208,7 @@ export default async function Home({ params }: Props) {
           {c.trust.items.map((item) => {
             const text = <ClaimText text={item.text} claim={item.claim} />;
             return text ? (
-              <li key={item.text} className="reveal flex gap-4 rounded-xl border border-night-line bg-night-raised/70 p-5">
+              <li key={item.text} className="flex gap-4 rounded-xl border border-night-line bg-night-raised/70 p-5">
                 <IconTile name="shield" tone="night" />
                 <span className="pt-2.5">{text}</span>
               </li>

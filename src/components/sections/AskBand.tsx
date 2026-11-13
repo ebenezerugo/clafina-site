@@ -10,7 +10,7 @@ export function AskBand({ eyebrow, title, intro, placeholder, suggestions, href 
 }) {
   const Box = href ? 'a' : 'div';
   return (
-    <section id="ask" aria-labelledby="ask-title" className="px-4 sm:px-6">
+    <section id="ask" aria-labelledby="ask-title" className="px-4 py-20 sm:px-6 lg:py-28">
       <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-2xl bg-[linear-gradient(135deg,var(--c-tint-lilac),var(--c-tint-sky)_55%,var(--c-tint-mint))] px-6 py-16 text-center sm:px-12 lg:py-20">
         <div className="reveal mx-auto max-w-3xl">
           <Eyebrow>{eyebrow}</Eyebrow>
