@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 const deploy = readFileSync('.github/workflows/deploy.yml', 'utf8');
-const jobs = deploy.split(/\n  (?=preview:|production:)/);
+const jobs = deploy.split(/\n  (?=preview:|prelaunch:|production:)/);
 const preview = jobs.find((j) => j.startsWith('preview:'))!;
 
 describe('deploy workflow', () => {
@@ -22,6 +22,20 @@ describe('deploy workflow', () => {
   it('refuses to publish a preview to the main branch', () => {
     expect(preview).toMatch(/main/);
     expect(preview).toContain('exit 1');
+  });
+});
+
+describe('pre-launch main address', () => {
+  const prelaunch = jobs.find((j) => j.startsWith('prelaunch:'))!;
+  it('publishes the latest main to the main address only until production is switched on', () => {
+    expect(prelaunch).toContain("github.event.workflow_run.head_branch == 'main'");
+    expect(prelaunch).toContain("vars.CLAFINA_PRODUCTION_ENABLED != 'true'");
+    expect(prelaunch).toContain("github.event.workflow_run.conclusion == 'success'");
+    expect(prelaunch).toContain('ref: ${{ github.event.workflow_run.head_sha }}');
+  });
+  it('keeps the pre-launch site out of search engines', () => {
+    expect(prelaunch).toContain('X-Robots-Tag: noindex');
+    expect(prelaunch).toContain('Disallow: /');
   });
 });
 
