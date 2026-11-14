@@ -22,3 +22,19 @@ describe('site settings', () => {
     expect('placeholder' in SITE.legalName && SITE.legalName.placeholder.length).toBeGreaterThan(5);
   });
 });
+
+describe('app links per environment', () => {
+  it('take the addresses set for the environment, and stay placeholders otherwise', async () => {
+    const { vi } = await import('vitest');
+    vi.resetModules();
+    vi.stubEnv('CLAFINA_APP_URL', 'https://app.staging.example/');
+    vi.stubEnv('CLAFINA_SIGNUP_URL', 'https://app.staging.example/signup');
+    const withEnv = await import('../../src/config/site');
+    expect(withEnv.fact(withEnv.SITE.appUrl)).toBe('https://app.staging.example/');
+    expect(withEnv.fact(withEnv.SITE.signupUrl)).toBe('https://app.staging.example/signup');
+    vi.unstubAllEnvs();
+    vi.resetModules();
+    const without = await import('../../src/config/site');
+    expect(without.fact(without.SITE.appUrl)).toBeUndefined();
+  });
+});
