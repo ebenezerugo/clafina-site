@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 const deploy = readFileSync('.github/workflows/deploy.yml', 'utf8');
-const jobs = deploy.split(/\n  (?=preview:|production:)/);
+const jobs = deploy.split(/\n  (?=preview:|staging:|production:)/);
 const preview = jobs.find((j) => j.startsWith('preview:'))!;
 
 describe('deploy workflow', () => {
@@ -25,6 +25,21 @@ describe('deploy workflow', () => {
   });
 });
 
+describe('staging', () => {
+  const staging = jobs.find((j) => j.startsWith('staging:'))!;
+  it('publishes every passing main to the staging branch, never to production', () => {
+    expect(staging).toContain("github.event.workflow_run.head_branch == 'main'");
+    expect(staging).toContain("github.event.workflow_run.conclusion == 'success'");
+    expect(staging).toContain('ref: ${{ github.event.workflow_run.head_sha }}');
+    expect(staging).toContain('--branch staging');
+    expect(staging).not.toContain('--branch main');
+  });
+  it('keeps staging out of search engines', () => {
+    expect(staging).toContain('X-Robots-Tag: noindex');
+    expect(staging).toContain('Disallow: /');
+  });
+});
+
 describe('CI artifacts', () => {
   const ci = readFileSync('.github/workflows/ci.yml', 'utf8');
   it('stores no copy of the site, so artifact storage cannot block a preview', () => {
@@ -43,5 +58,11 @@ describe('production build script', () => {
   });
   it('checks content, output and links on the production output', () => {
     for (const step of ['check:production', 'check:content', 'check:output', 'check:links']) expect(scripts['build:production']).toContain(step);
+  });
+});
+
+describe('job conditions', () => {
+  it('never end with a dangling && or ||', () => {
+    for (const m of deploy.matchAll(/if: >-\n((?: {6}.*\n)+)/g)) expect(m[1]!.trim()).not.toMatch(/(&&|\|\|)$/);
   });
 });
