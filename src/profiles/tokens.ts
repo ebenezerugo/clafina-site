@@ -88,15 +88,17 @@ export function convertNaira(text: string, id: ProfileId): string {
 
 /** The story names as built (global profile), longest first, as whole-word patterns. */
 const capital = (s: string) => s.charAt(0).toLocaleUpperCase() + s.slice(1);
-const GLOBAL_NAMES = (Object.entries(PROFILES.global.names) as [Part, string][])
+/** Built on first use: every global name as a whole-word pattern, longest first. */
+let globalNames: (readonly [Part, boolean, RegExp])[] | null = null;
+const GLOBAL_NAMES = () => (globalNames ??= (Object.entries(PROFILES.global.names) as [Part, string][])
   .flatMap(([part, name]) => (capital(name) === name ? [[part, name, false]] : [[part, name, false], [part, capital(name), true]]) as [Part, string, boolean][])
   .sort((a, b) => b[1].length - a[1].length)
-  .map(([part, name, cap]) => [part, cap, new RegExp(`(?<![\\p{L}])${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}])`, 'gu')] as const);
+  .map(([part, name, cap]) => [part, cap, new RegExp(`(?<![\\p{L}])${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}])`, 'gu')] as const));
 
 /** Text inside an app screen or a marked part of a page: story names and naira, both in the visitor's version. */
 export function localiseText(text: string, id: ProfileId): string {
   let out = convertNaira(text, id);
   if (id === 'global') return out;
-  for (const [part, cap, re] of GLOBAL_NAMES) out = out.replace(re, cap ? capital(PROFILES[id].names[part]) : PROFILES[id].names[part]);
+  for (const [part, cap, re] of GLOBAL_NAMES()) out = out.replace(re, cap ? capital(PROFILES[id].names[part]) : PROFILES[id].names[part]);
   return out;
 }
