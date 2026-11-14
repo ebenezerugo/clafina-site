@@ -19,56 +19,63 @@
     "screen": "accommodation-front-desk"
   },
   "business": {
-    "name": "Marina Court Hotel",
-    "place": "Calabar",
+    "name": "⟦n:hotel⟧",
+    "place": "⟦n:hotelCity⟧",
     "label": true,
     "about": "A 24-room hotel with a restaurant and a bar, taking guests on holiday and on business."
   },
-  "dayTitle": "A day at Marina Court Hotel",
+  "story": "hotel",
+  "dayTitle": "A day at ⟦n:hotel⟧",
   "moments": [
     {
       "time": "03:00",
       "title": "Closing yesterday",
       "problem": "Before the new day starts, every guest in the house needs last night on their folio.",
       "handles": "The night audit runs by itself after the hotel's audit time. It posts one room night to each guest in the house, marks arrivals who never came as no-shows with the fee rule, counts the folios still owing and closes the day.",
-      "surface": "web"
+      "surface": "web",
+      "scene": "night"
     },
     {
       "time": "08:00",
       "title": "Which room first?",
-      "problem": "Blessing has five rooms to clean, and a guest is coming early to one of them.",
-      "handles": "Her phone lists each room's tasks for the day. Room 108 is at the top, marked as an early-arrival priority because Mr Okafor arrives at 11:00.",
+      "problem": "⟦n:housekeeper⟧ has five rooms to clean, and a guest is coming early to one of them.",
+      "handles": "Her phone lists each room's tasks for the day. Room 108 is at the top, marked as an early-arrival priority because ⟦n:earlyGuest⟧ arrives at 11:00.",
       "surface": "phone",
-      "screen": "accommodation-housekeeping-phone"
+      "screen": "accommodation-housekeeping-phone",
+      "scene": "housekeeping"
     },
     {
       "time": "10:50",
       "title": "Is the room ready yet?",
       "problem": "The front desk keeps phoning upstairs to ask.",
-      "handles": "Rooms go from dirty to clean to inspected. Each change Blessing or the inspector makes reaches the desk at once, with no refresh.",
-      "surface": "phone"
+      "handles": "Rooms go from dirty to clean to inspected. Each change ⟦n:housekeeper⟧ or the inspector makes reaches the desk at once, with no refresh.",
+      "surface": "phone",
+      "scene": "ready"
     },
     {
       "time": "11:00",
       "title": "A guest arrives early",
-      "problem": "Mr Okafor is at the desk three hours before check-in, and room 108 is still being cleaned.",
+      "problem": "⟦n:earlyGuest⟧ is at the desk three hours before check-in, and room 108 is still being cleaned.",
       "handles": "Check-in only puts a guest into an inspected room, or a clean one if you allow it. The desk sees that 109 is inspected and free tonight, and moves him there.",
-      "surface": "web"
+      "surface": "web",
+      "scene": "arrive"
     },
     {
       "time": "13:00",
       "title": "Lunch on the room",
-      "problem": "Mrs Okon has lunch in the restaurant and asks for it to go on her room.",
+      "problem": "⟦n:lunchGuest⟧ has lunch in the restaurant and asks for it to go on her room.",
       "handles": "The restaurant till posts the bill by room number to her open folio, once only. It is there before she is back upstairs.",
-      "surface": "till"
+      "surface": "till",
+      "scene": "lunch"
     },
     {
       "time": "14:00",
       "title": "The company pays the rooms, not the bar",
-      "problem": "Ikom Cocoa Growers is paying for three rooms this week, but not the drinks.",
+      "problem": "⟦n:company⟧ is paying for three rooms this week, but not the drinks.",
       "handles": "The folio names the company and what it covers, room nights or everything. A charge can be moved to the company bill, and the company's share becomes one customer invoice. The guest pays her own lunch, bar and laundry.",
       "surface": "web",
-      "screen": "accommodation-folio"
+      "screen": "accommodation-folio",
+      "scene": "company"
     },
     {
       "time": "16:00",
@@ -76,14 +83,16 @@
       "problem": "A trade fair in town at the end of November will fill the hotel.",
       "handles": "The manager adds a special date with a higher price and a two-night minimum stay. Try a price shows each step from the base rate to the night's price.",
       "surface": "web",
-      "screen": "accommodation-rates"
+      "screen": "accommodation-rates",
+      "scene": "weekend"
     },
     {
       "time": "17:30",
       "title": "A guest asks to move rooms",
-      "problem": "Mrs Bassey would like a quieter room for her last two nights.",
+      "problem": "⟦n:movingGuest⟧ would like a quieter room for her last two nights.",
       "handles": "The stay is dragged on the room rack. A move onto a room already held for those nights is refused, so no room is ever sold twice.",
-      "surface": "web"
+      "surface": "web",
+      "scene": "move"
     }
   ],
   "wordsTitle": "Your words, in Clafina",

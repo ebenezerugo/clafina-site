@@ -4,7 +4,7 @@
   "label": "Illustrative example: the floor on a restaurant till at lunch, with each table's state and time, a booked party due now and the open tab at table 6.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "RT", "name": "Red Tile Kitchen", "place": "Till 2 · Amaka" },
+  "org": { "initials": "RT", "name": "Juniper Kitchen", "place": "Till 2 · Aisha" },
   "nav": [
     { "label": "Till", "items": [{ "label": "Floor", "active": true }, { "label": "Orders" }, { "label": "Kitchen" }, { "label": "Bookings" }, { "label": "Customers" }, { "label": "Reports" }] },
     { "label": "Floors", "items": [{ "label": "Inside room", "active": true }, { "label": "Terrace" }, { "label": "Bar" }] }
@@ -38,7 +38,7 @@
       ] },
       { "type": "kv", "title": "Table 6 · Order #1047", "items": [
         { "label": "Guests", "value": "3 · Tayo" },
-        { "label": "Waiter", "value": { "avatar": "AO", "text": "Amaka" } },
+        { "label": "Waiter", "value": { "avatar": "AO", "text": "Aisha" } },
         { "label": "Seated", "value": "52 min" },
         { "label": "Starters", "value": { "pill": "good", "text": "Served" } },
         { "label": "Mains", "value": { "pill": "warn", "text": "Cooking · 12 min" } },

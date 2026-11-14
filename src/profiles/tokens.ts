@@ -2,10 +2,11 @@ import { PROFILES, type Part, type Profile, type ProfileId } from './profiles';
 
 /**
  * Tokens in content and drawings: ⟦n:part⟧ a name (⟦u:part⟧ in capitals), ⟦m:story.amount⟧ money, ⟦c:symbol⟧ the
- * currency sign, ⟦t:label⟧ / ⟦t:rate⟧ the sales tax.
+ * currency sign, ⟦t:label⟧ / ⟦t:rate⟧ the sales tax, ⟦k:part⟧ a name with a capital first letter (a sentence's
+ * first word), ⟦x:23400⟧ an amount first written in naira, in local money.
  * Pages are built with the global profile; the browser swaps every token to the visitor's profile.
  */
-export const TOKEN = /⟦([nmtuc]):([a-z0-9.]+)⟧/g;
+export const TOKEN = /⟦([nmtuckx]):([a-zA-Z0-9.]+)⟧/g;
 
 /** Each story's amounts, in base units (US dollars), and how its totals follow from them. */
 const LEDGERS: Record<string, (p: Profile) => Record<string, number>> = {
@@ -20,17 +21,24 @@ const LEDGERS: Record<string, (p: Profile) => Record<string, number>> = {
   },
 };
 /** Currencies people quote without minor units in daily trade. */
+/** Dollars other than the US's show their country (CA$, MX$), so a price is never read as US dollars. */
+const display = (p: Profile) => (p.currency === 'CAD' || p.currency === 'MXN' ? 'symbol' : 'narrowSymbol');
 const digits = (p: Profile) => (p.currency === 'NGN' || p.currency === 'INR' || p.currency === 'KES' ? 0 : 2);
 function roundMoney(v: number, p: Profile): number { const f = 10 ** digits(p); return Math.round(v * f) / f; }
 
 export function money(v: number, p: Profile): string {
-  return new Intl.NumberFormat(p.currency === 'INR' ? 'en-IN' : p.currency === 'KES' ? 'en-KE' : 'en', { style: 'currency', currency: p.currency, currencyDisplay: 'narrowSymbol', minimumFractionDigits: digits(p), maximumFractionDigits: digits(p) }).format(v);
+  return new Intl.NumberFormat(p.currency === 'INR' ? 'en-IN' : p.currency === 'KES' ? 'en-KE' : 'en', { style: 'currency', currency: p.currency, currencyDisplay: display(p), minimumFractionDigits: digits(p), maximumFractionDigits: digits(p) }).format(v);
 }
 
 /** The text for one token under a profile. Unknown tokens come back as they are, so a typo shows rather than hides. */
 export function resolve(kind: string, key: string, id: ProfileId): string {
   const p = PROFILES[id];
-  if (kind === 'n' || kind === 'u') { const n = p.names[key as Part]; return n === undefined ? `⟦${kind}:${key}⟧` : kind === 'u' ? n.toLocaleUpperCase() : n; }
+  if (kind === 'n' || kind === 'u' || kind === 'k') {
+    const n = p.names[key as Part];
+    if (n === undefined) return `⟦${kind}:${key}⟧`;
+    return kind === 'u' ? n.toLocaleUpperCase() : kind === 'k' ? n.charAt(0).toLocaleUpperCase() + n.slice(1) : n;
+  }
+  if (kind === 'x') return convertNaira(`₦${Number(key).toLocaleString('en')}`, id);
   if (kind === 'c') return money(0, p).replace(/[\d.,\s]/g, '');
   if (kind === 't') return key === 'rate' ? `${p.tax.rate}%` : key === 'label' ? p.tax.label : `⟦t:${key}⟧`;
   const [story, amount] = key.split('.');
@@ -72,21 +80,23 @@ export function convertNaira(text: string, id: ProfileId): string {
     const mult = suffix ? { k: 1e3, m: 1e6, bn: 1e9 }[suffix.toLowerCase() as 'k' | 'm' | 'bn'] : 1;
     const local = (Number(num.replace(/,/g, '')) * mult / NAIRA_SCALE) * p.scale;
     const out = suffix
-      ? new Intl.NumberFormat(p.currency === 'KES' ? 'en-KE' : 'en', { style: 'currency', currency: p.currency, currencyDisplay: 'narrowSymbol', notation: 'compact', minimumFractionDigits: 0, maximumFractionDigits: 1 }).format(local)
+      ? new Intl.NumberFormat(p.currency === 'KES' ? 'en-KE' : 'en', { style: 'currency', currency: p.currency, currencyDisplay: display(p), notation: 'compact', minimumFractionDigits: 0, maximumFractionDigits: 1 }).format(local)
       : money(local, p);
     return (sign ? '−' : '') + out;
   });
 }
 
 /** The story names as built (global profile), longest first, as whole-word patterns. */
+const capital = (s: string) => s.charAt(0).toLocaleUpperCase() + s.slice(1);
 const GLOBAL_NAMES = (Object.entries(PROFILES.global.names) as [Part, string][])
+  .flatMap(([part, name]) => (capital(name) === name ? [[part, name, false]] : [[part, name, false], [part, capital(name), true]]) as [Part, string, boolean][])
   .sort((a, b) => b[1].length - a[1].length)
-  .map(([part, name]) => [part, new RegExp(`(?<![\\p{L}])${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}])`, 'gu')] as const);
+  .map(([part, name, cap]) => [part, cap, new RegExp(`(?<![\\p{L}])${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}])`, 'gu')] as const);
 
 /** Text inside an app screen or a marked part of a page: story names and naira, both in the visitor's version. */
 export function localiseText(text: string, id: ProfileId): string {
   let out = convertNaira(text, id);
   if (id === 'global') return out;
-  for (const [part, re] of GLOBAL_NAMES) out = out.replace(re, PROFILES[id].names[part]);
+  for (const [part, cap, re] of GLOBAL_NAMES) out = out.replace(re, cap ? capital(PROFILES[id].names[part]) : PROFILES[id].names[part]);
   return out;
 }

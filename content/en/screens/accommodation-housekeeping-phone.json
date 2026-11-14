@@ -4,7 +4,7 @@
   "label": "Illustrative example: a housekeeper's rooms for the day on her phone, with the room for an early arrival first.",
   "currency": "NGN",
   "frame": "phone",
-  "org": { "initials": "MC", "name": "Marina Court Hotel", "place": "Calabar" },
+  "org": { "initials": "MC", "name": "Harbourview Hotel", "place": "Bayside" },
   "tabs": [
     { "label": "Home", "icon": "home" },
     { "label": "Inbox", "icon": "bell" },
@@ -12,7 +12,7 @@
     { "label": "More", "icon": "more" }
   ],
   "title": "My rooms today",
-  "subtitle": "Blessing Etim · floors 1 and 2 · 08:00",
+  "subtitle": "Marta · floors 1 and 2 · 08:00",
   "blocks": [
     { "type": "stats", "items": [
       { "icon": "clock", "label": "To clean", "value": "5" },

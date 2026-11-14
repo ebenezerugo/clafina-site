@@ -4,25 +4,25 @@
   "label": "Illustrative example: a guest's folio at a hotel, with lunch charged to the room from the restaurant till and the room nights billed to the company that pays for them.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "MC", "name": "Marina Court Hotel", "place": "Calabar" },
+  "org": { "initials": "MC", "name": "Harbourview Hotel", "place": "Bayside" },
   "nav": [
     { "label": "Accommodation", "items": [{ "label": "Front desk" }, { "label": "Room rack" }, { "label": "Housekeeping" }, { "label": "Folios", "active": true }] }
   ],
   "title": "Folio FOL-2026-0412 · Mrs Ndidi Okon",
-  "subtitle": "Room 203 · Deluxe · 17 to 21 October · 4 nights · company: Ikom Cocoa Growers pays the room nights",
+  "subtitle": "Room 203 · Deluxe · 17 to 21 October · 4 nights · company: Northgate Logistics pays the room nights",
   "actions": [{ "label": "Add a charge" }, { "label": "Move a charge" }, { "label": "Take payment" }, { "label": "Check out", "primary": true, "icon": "check" }],
   "blocks": [
     { "type": "table", "title": "Charges", "columns": [{ "label": "Date" }, { "label": "Charge" }, { "label": "From" }, { "label": "Bill to" }, { "label": "Amount", "numeric": true }], "rows": [
-      ["17 Oct", "Room 203, Deluxe, night 1", "Night audit", "Ikom Cocoa Growers", { "money": 95000 }],
-      ["18 Oct", "Room 203, Deluxe, night 2", "Night audit", "Ikom Cocoa Growers", { "money": 95000 }],
-      ["18 Oct", "Bar: 3 drinks", "Bar till · charge to room", "Mrs Okon", { "money": 9600 }],
-      ["18 Oct", "Laundry, 6 items", "Housekeeping", "Mrs Okon", { "money": 8000 }],
-      ["19 Oct", "Lunch, restaurant table 4 · 4 items", "Restaurant till · charge to room", "Mrs Okon", { "money": 18400 }],
-      ["19 Oct", "Room 203, Deluxe, night 3", { "pill": "neutral", "text": "Posts at tonight's audit" }, "Ikom Cocoa Growers", { "money": 95000 }],
-      ["20 Oct", "Room 203, Deluxe, night 4", { "pill": "neutral", "text": "Planned" }, "Ikom Cocoa Growers", { "money": 95000 }]
+      ["17 Oct", "Room 203, Deluxe, night 1", "Night audit", "Northgate Logistics", { "money": 95000 }],
+      ["18 Oct", "Room 203, Deluxe, night 2", "Night audit", "Northgate Logistics", { "money": 95000 }],
+      ["18 Oct", "Bar: 3 drinks", "Bar till · charge to room", "Mrs Lindqvist", { "money": 9600 }],
+      ["18 Oct", "Laundry, 6 items", "Housekeeping", "Mrs Lindqvist", { "money": 8000 }],
+      ["19 Oct", "Lunch, restaurant table 4 · 4 items", "Restaurant till · charge to room", "Mrs Lindqvist", { "money": 18400 }],
+      ["19 Oct", "Room 203, Deluxe, night 3", { "pill": "neutral", "text": "Posts at tonight's audit" }, "Northgate Logistics", { "money": 95000 }],
+      ["20 Oct", "Room 203, Deluxe, night 4", { "pill": "neutral", "text": "Planned" }, "Northgate Logistics", { "money": 95000 }]
     ] },
     { "type": "row", "widths": "1fr 1fr", "blocks": [
-      { "type": "kv", "title": "Ikom Cocoa Growers · posted so far", "items": [
+      { "type": "kv", "title": "Northgate Logistics · posted so far", "items": [
         { "label": "Room nights, 2 of 4", "value": { "money": 190000 } },
         { "label": "Service charge 10%", "value": { "money": 19000 } },
         { "label": "VAT 7.5%", "value": { "money": 15675 } },
@@ -30,7 +30,7 @@
         { "label": "Company's share so far", "value": { "strong": "₦235,125" } },
         { "label": "At check-out", "value": "One customer invoice to the company" }
       ] },
-      { "type": "kv", "title": "Mrs Okon · her own charges", "items": [
+      { "type": "kv", "title": "Mrs Lindqvist · her own charges", "items": [
         { "label": "Restaurant and bar", "value": { "money": 28000 } },
         { "label": "Laundry", "value": { "money": 8000 } },
         { "label": "Service charge 10%", "value": { "money": 3600 } },

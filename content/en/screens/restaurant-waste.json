@@ -4,7 +4,7 @@
   "label": "Illustrative example: a restaurant's waste for the last seven days, with stock lost by hand, voids and comps, each with what it cost and what it would have sold for.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "RT", "name": "Red Tile Kitchen", "place": "Bodija, Ibadan" },
+  "org": { "initials": "RT", "name": "Juniper Kitchen", "place": "Old Town" },
   "nav": [
     { "label": "Restaurant", "items": [{ "label": "Floor" }, { "label": "Menus" }, { "label": "Options" }, { "label": "Sold out" }, { "label": "Kitchen" }, { "label": "Recipes" }, { "label": "Dish costs" }, { "label": "Waste", "active": true }, { "label": "Prices" }, { "label": "Tips" }] }
   ],
@@ -19,13 +19,13 @@
     ] },
     { "type": "table", "title": "Stock lost, voids and comps", "columns": [{ "label": "When" }, { "label": "Kind" }, { "label": "Dish or item" }, { "label": "Why" }, { "label": "Cost", "numeric": true }, { "label": "Would have sold for", "numeric": true }], "rows": [
       ["Tue 13:05", { "pill": "neutral", "text": "Stock" }, "Chicken thighs, 3.2 kg", "Spoiled: fridge 2 was off overnight", { "money": 12600 }, "Stock, not a dish"],
-      ["Tue 19:40", { "pill": "warn", "text": "Void" }, "Egusi soup and pounded yam × 1", "Wrong order: guest wanted ofada", { "money": 2960 }, { "money": 7800 }],
-      ["Wed 12:15", { "pill": "info", "text": "Comp" }, "Suya platter × 1", "Late: waited 38 minutes · approved by Bola A.", { "money": 3180 }, { "money": 8500 }],
-      ["Thu 16:30", { "pill": "neutral", "text": "Stock" }, "Plantain, ripe, 12 pieces", "Expired", { "money": 4800 }, "Stock, not a dish"],
-      ["Fri 20:05", { "pill": "warn", "text": "Void" }, "Chapman, large × 2", "Dropped by the waiter", { "money": 1900 }, { "money": 5000 }],
+      ["Tue 19:40", { "pill": "warn", "text": "Void" }, "Beef stew and mash × 1", "Wrong order: guest wanted mushroom risotto", { "money": 2960 }, { "money": 7800 }],
+      ["Wed 12:15", { "pill": "info", "text": "Comp" }, "Steak skewers × 1", "Late: waited 38 minutes · approved by Nadia A.", { "money": 3180 }, { "money": 8500 }],
+      ["Thu 16:30", { "pill": "neutral", "text": "Stock" }, "Fries, ripe, 12 pieces", "Expired", { "money": 4800 }, "Stock, not a dish"],
+      ["Fri 20:05", { "pill": "warn", "text": "Void" }, "Fresh lemonade, large × 2", "Dropped by the waiter", { "money": 1900 }, { "money": 5000 }],
       ["Sat 14:50", { "pill": "neutral", "text": "Stock" }, "Palm oil, 2 L", "Dropped: container cracked", { "money": 6400 }, "Stock, not a dish"],
-      ["Sun 21:10", { "pill": "info", "text": "Comp" }, "Jollof rice and grilled chicken × 2", "Birthday table · approved by Bola A.", { "money": 4820 }, { "money": 13000 }],
-      ["Mon 15:00", { "pill": "info", "text": "Comp" }, "Ofada rice and ayamase × 1", "Late main: waited 40 minutes · approved by Bola A.", { "money": 3350 }, { "money": 7200 }]
+      ["Sun 21:10", { "pill": "info", "text": "Comp" }, "Grilled chicken bowl × 2", "Birthday table · approved by Nadia A.", { "money": 4820 }, { "money": 13000 }],
+      ["Mon 15:00", { "pill": "info", "text": "Comp" }, "Mushroom risotto × 1", "Late main: waited 40 minutes · approved by Nadia A.", { "money": 3350 }, { "money": 7200 }]
     ] }
   ]
 }

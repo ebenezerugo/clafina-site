@@ -7,13 +7,16 @@
  * Names follow the drawn characters (a woman's part takes a woman's name), so the pictures still fit.
  */
 
+import { INDUSTRY_NAMES, type IndustryPart } from './industry-names';
+
 export type ProfileId = 'global' | 'ng' | 'gh' | 'ke' | 'za' | 'gb' | 'us' | 'ca' | 'de' | 'fr' | 'in' | 'ae' | 'br' | 'mx';
 
 /** The parts in the stories. Sale: seller's people and the customer. Farm: the family farm and its people. */
 export type Part =
   | 'sales' | 'customer' | 'manager' | 'warehouse' | 'driver'
   | 'farmer' | 'agronomist' | 'poultry' | 'outgrower' | 'picker1' | 'picker2'
-  | 'seller' | 'shop' | 'district' | 'farm' | 'valley' | 'hillside' | 'mills';
+  | 'seller' | 'shop' | 'district' | 'farm' | 'valley' | 'hillside' | 'mills'
+  | IndustryPart;
 
 export interface Profile {
   id: ProfileId;
@@ -26,9 +29,10 @@ export interface Profile {
 }
 
 const P = (id: ProfileId, city: string, currency: Profile['currency'], scale: number, tax: [string, number], n: string[]): Profile => {
-  const parts: Part[] = ['sales', 'customer', 'manager', 'warehouse', 'driver', 'farmer', 'agronomist', 'poultry', 'outgrower', 'picker1', 'picker2', 'seller', 'shop', 'district', 'farm', 'valley', 'hillside', 'mills'];
+  const parts = ['sales', 'customer', 'manager', 'warehouse', 'driver', 'farmer', 'agronomist', 'poultry', 'outgrower', 'picker1', 'picker2', 'seller', 'shop', 'district', 'farm', 'valley', 'hillside', 'mills'] as const;
   if (n.length !== parts.length) throw new Error(`Profile ${id} needs ${parts.length} names`);
-  return { id, city, currency, scale, tax: { label: tax[0], rate: tax[1] }, names: Object.fromEntries(parts.map((p, i) => [p, n[i]!])) as Record<Part, string> };
+  const base = Object.fromEntries(parts.map((p, i) => [p, n[i]!]));
+  return { id, city, currency, scale, tax: { label: tax[0], rate: tax[1] }, names: { ...base, ...INDUSTRY_NAMES[id] } as Record<Part, string> };
 };
 
 //                                                                     sales      customer   manager    warehouse  driver     farmer      agronomist poultry    outgrower            picker1    picker2    seller                    shop                     district       farm                          valley           hillside        mills
