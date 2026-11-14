@@ -8,6 +8,9 @@ import { LIGHT, lightFor } from '../illustrations/kit.mjs';
 import { tokenMarkup } from '../src/profiles/tokens';
 import { SCENES as QUO } from '../illustrations/stories/quo-0221.mjs';
 import { SCENES as FARM } from '../illustrations/stories/farm.mjs';
+import { SCENES as HOTEL } from '../illustrations/stories/hotel.mjs';
+import { SCENES as RESTAURANT } from '../illustrations/stories/restaurant.mjs';
+import { SCENES as RETAIL } from '../illustrations/stories/retail.mjs';
 
 /** The scenes of each story, in order, with the clock time each one shows. */
 const STORIES = {
@@ -24,6 +27,18 @@ const STORIES = {
     // Outdoors the sky already carries the hour, so these frames take no extra light wash.
     light: false,
     frames: [['dawn', 'Wed 06:00'], ['scout', 'Wed 08:20'], ['rain', 'Wed 09:00'], ['harvest', 'Wed 10:00'], ['broilers', 'Wed 12:00'], ['pickers', 'Wed 15:00'], ['outgrowers', 'Wed 16:00'], ['trace', 'Wed 17:30']],
+  },
+  hotel: {
+    scenes: HOTEL,
+    frames: [['night', 'Thu 03:00'], ['housekeeping', 'Thu 08:00'], ['ready', 'Thu 10:50'], ['arrive', 'Thu 11:00'], ['lunch', 'Thu 13:00'], ['company', 'Thu 14:00'], ['weekend', 'Thu 16:00'], ['move', 'Thu 17:30']],
+  },
+  restaurant: {
+    scenes: RESTAURANT,
+    frames: [['costing', 'Mon 10:00'], ['nofish', 'Mon 11:30'], ['party', 'Mon 12:30'], ['stations', 'Mon 12:45'], ['low', 'Mon 13:10'], ['takeaway', 'Mon 14:00'], ['comp', 'Mon 15:00'], ['tips', 'Mon 16:30']],
+  },
+  retail: {
+    scenes: RETAIL,
+    frames: [['open', 'Sat 08:30'], ['offline', 'Sat 10:15'], ['points', 'Sat 11:40'], ['online', 'Sat 13:00'], ['return', 'Sat 15:20'], ['clash', 'Sat 16:00'], ['banner', 'Sat 17:30'], ['close', 'Sat 19:00']],
   },
 };
 

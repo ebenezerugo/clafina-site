@@ -20,72 +20,81 @@
     "screen": "restaurant-floor"
   },
   "business": {
-    "name": "Red Tile Kitchen",
-    "place": "Bodija, Ibadan",
+    "name": "⟦n:restaurant⟧",
+    "place": "⟦n:restaurantPlace⟧",
     "label": true,
     "about": "A restaurant with an inside room, a terrace and a bar, serving lunch on weekdays and dinner every night."
   },
-  "dayTitle": "A Monday at Red Tile Kitchen",
+  "story": "restaurant",
+  "dayTitle": "A Monday at ⟦n:restaurant⟧",
   "moments": [
     {
       "time": "10:00",
       "title": "What does each dish earn today?",
-      "problem": "Chicken has gone up again. Femi, the head chef, wants to know what the jollof earns at today's costs.",
+      "problem": "Chicken has gone up again. ⟦n:chef⟧, the head chef, wants to know what the ⟦n:dishMain⟧ earns at today's costs.",
       "handles": "Dish costs works out a portion from the recipe at today's stock cost, sets it against the price without tax and shows the margin. Two dishes set up to leave stock twice are flagged, and one click fixes them.",
       "surface": "web",
-      "screen": "restaurant-dish-costs"
+      "screen": "restaurant-dish-costs",
+      "scene": "costing"
     },
     {
       "time": "11:30",
       "title": "The fish did not come",
-      "problem": "The croaker delivery has not arrived, and lunch opens in half an hour.",
-      "handles": "Bola marks the grilled croaker sold out once, with a reason. Every till and menu shows it straight away. With the setting on, a dish whose ingredients run out is sold out by itself.",
-      "surface": "web"
+      "problem": "The ⟦n:fish⟧ delivery has not arrived, and lunch opens in half an hour.",
+      "handles": "⟦n:floorManager⟧ marks the grilled ⟦n:fish⟧ sold out once, with a reason. Every till and menu shows it straight away. With the setting on, a dish whose ingredients run out is sold out by itself.",
+      "surface": "web",
+      "scene": "nofish"
     },
     {
       "time": "12:30",
       "title": "A booked party of four arrives",
-      "problem": "The Okafors are at the door, and Amaka needs to know which table is theirs and which are free.",
-      "handles": "The floor shows every table in the colour and words of its state and how long it has been there, with table 5 held for their booking. Amaka seats them and opens the tab.",
-      "surface": "till"
+      "problem": "⟦k:partyFamily⟧ are at the door, and ⟦n:host⟧ needs to know which table is theirs and which are free.",
+      "handles": "The floor shows every table in the colour and words of its state and how long it has been there, with table 5 held for their booking. ⟦n:host⟧ seats them and opens the tab.",
+      "surface": "till",
+      "scene": "party"
     },
     {
       "time": "12:45",
       "title": "The order has to reach the right cooks",
-      "problem": "Suya goes to the grill, the rice to the kitchen and the drinks to the bar.",
-      "handles": "The till asks the choices that must be answered, such as how the suya is cooked, before it sends. Each dish goes to its station by your rules. On the kitchen screen, tickets turn amber and then red as they wait, and the cooks bump them when they are done.",
+      "problem": "Orders of ⟦n:dishGrill⟧ go to the grill, the mains to the kitchen and the drinks to the bar.",
+      "handles": "The till asks the choices that must be answered, such as how the ⟦n:dishGrill⟧ should be done, before it sends. Each dish goes to its station by your rules. On the kitchen screen, tickets turn amber and then red as they wait, and the cooks bump them when they are done.",
       "surface": "till",
-      "screen": "pos-kitchen"
+      "screen": "pos-kitchen",
+      "scene": "stations"
     },
     {
       "time": "13:10",
-      "title": "Nearly out of moi moi",
-      "problem": "A table orders moi moi, and the beans are running low.",
-      "handles": "With warn the waiter set, the till lists what is short and Amaka can send it anyway. You choose per place whether to allow and flag, warn, block the send or mark the dish sold out.",
-      "surface": "till"
+      "title": "Nearly out of ⟦n:dishSide⟧",
+      "problem": "A table orders ⟦n:dishSide⟧, and the kitchen is low on ⟦n:sideIngredient⟧.",
+      "handles": "With warn the waiter set, the till lists what is short and ⟦n:host⟧ can send it anyway. You choose per place whether to allow and flag, warn, block the send or mark the dish sold out.",
+      "surface": "till",
+      "scene": "low"
     },
     {
       "time": "14:00",
       "title": "A takeaway during the lunch offer",
-      "problem": "A customer at the counter wants jollof to take away, at the weekday lunch price.",
+      "problem": "A customer at the counter wants a ⟦n:dishMain⟧ to take away, at the weekday lunch price.",
       "handles": "The tab is marked takeaway. Price rules by order type, day and hour change the price book's price, and the till shows the name of the rule that applied.",
-      "surface": "till"
+      "surface": "till",
+      "scene": "takeaway"
     },
     {
       "time": "15:00",
       "title": "A late main is given free",
-      "problem": "Table 9 waited forty minutes for the ofada rice, and Bola comps it.",
+      "problem": "Table 9 waited forty minutes for the ⟦n:dishLate⟧, and ⟦n:floorManager⟧ comps it.",
       "handles": "The comp is recorded with what the dish cost and what it would have sold for, kept apart from voids and from stock lost by hand.",
       "surface": "till",
-      "screen": "restaurant-waste"
+      "screen": "restaurant-waste",
+      "scene": "comp"
     },
     {
       "time": "16:30",
       "title": "Last week's tips, shared fairly",
       "problem": "It is Monday, and the waiters, runners, bar and kitchen all want their share of last week's tips.",
-      "handles": "A tip run pools the week's tips by the hours on the timeclock and each role's points, to the kobo. Approving it books it. Cash shares are paid out, and the rest go into the next payroll.",
+      "handles": "A tip run pools the week's tips by the hours on the timeclock and each role's points, to the smallest coin. Approving it books it. Cash shares are paid out, and the rest go into the next payroll.",
       "surface": "web",
-      "screen": "restaurant-tips"
+      "screen": "restaurant-tips",
+      "scene": "tips"
     }
   ],
   "wordsTitle": "Your words, in Clafina",

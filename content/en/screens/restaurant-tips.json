@@ -4,7 +4,7 @@
   "label": "Illustrative example: a restaurant's tip run for one week, pooled by hours worked and role points, with each share paid in cash or added to payroll.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "RT", "name": "Red Tile Kitchen", "place": "Bodija, Ibadan" },
+  "org": { "initials": "RT", "name": "Juniper Kitchen", "place": "Old Town" },
   "nav": [
     { "label": "Restaurant", "items": [{ "label": "Floor" }, { "label": "Menus" }, { "label": "Kitchen" }, { "label": "Recipes" }, { "label": "Dish costs" }, { "label": "Waste" }, { "label": "Prices" }, { "label": "Tips", "active": true }] },
     { "label": "Tip runs", "items": [{ "label": "12 to 18 Oct", "badge": "Draft", "active": true }, { "label": "5 to 11 Oct", "badge": "Approved" }, { "label": "28 Sep to 4 Oct", "badge": "Paid" }] }
@@ -24,8 +24,8 @@
       [{ "avatar": "TA", "text": "Tolu Adeyemi" }, "Waiter", "30:00", { "money": 24480 }, { "pill": "info", "text": "Waiting · cash" }],
       [{ "avatar": "SJ", "text": "Sade Johnson" }, "Runner", "34:00", { "money": 18500 }, { "pill": "info", "text": "Waiting · cash" }],
       [{ "avatar": "UN", "text": "Ugo Nnamdi" }, "Runner", "28:00", { "money": 15300 }, { "pill": "info", "text": "Waiting · cash" }],
-      [{ "avatar": "FO", "text": "Femi Ogunleye" }, "Head chef", "40:00", { "money": 35900 }, { "pill": "neutral", "text": "Waiting · payroll" }],
-      [{ "avatar": "BA", "text": "Bola Akinwale" }, "Host", "40:00", { "money": 16200 }, { "pill": "neutral", "text": "Waiting · payroll" }],
+      [{ "avatar": "FO", "text": "Marco Ogunleye" }, "Head chef", "40:00", { "money": 35900 }, { "pill": "neutral", "text": "Waiting · payroll" }],
+      [{ "avatar": "BA", "text": "Nadia Akinwale" }, "Host", "40:00", { "money": 16200 }, { "pill": "neutral", "text": "Waiting · payroll" }],
       [{ "avatar": "KA", "text": "Kayode Ali" }, "Bar", "32:00", { "money": 7494 }, { "pill": "neutral", "text": "Waiting · payroll" }],
       [{ "strong": "Shared out" }, "", "278:30", { "money": 178674 }, ""]
     ] },

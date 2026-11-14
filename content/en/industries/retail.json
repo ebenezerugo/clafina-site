@@ -21,19 +21,21 @@
     "screen": "till-sell"
   },
   "business": {
-    "name": "Adaeze Home and Electronics",
-    "place": "Enugu",
+    "name": "⟦n:store⟧",
+    "place": "⟦n:storePlace⟧",
     "label": true,
     "about": "A homeware and small electronics shop with two branches, three tills and an online shop."
   },
-  "dayTitle": "A day at Adaeze Home and Electronics",
+  "story": "retail",
+  "dayTitle": "A day at ⟦n:store⟧",
   "moments": [
     {
       "time": "08:30",
       "title": "Opening the till",
-      "problem": "Chiamaka starts her shift. The drawer has to start from a known float, or the evening count means nothing.",
+      "problem": "⟦n:cashier⟧ starts her shift. The drawer has to start from a known float, or the evening count means nothing.",
       "handles": "She signs in to the till with her PIN, not an office account, and counts the float note by note. The shift starts from that number.",
-      "surface": "till"
+      "surface": "till",
+      "scene": "open"
     },
     {
       "time": "10:15",
@@ -41,14 +43,16 @@
       "problem": "The internet drops at the busiest hour.",
       "handles": "The till keeps selling. Every sale is written on the till first and sent when the line is back, within the offline limits the office set for each product, payment type and number of hours.",
       "surface": "till",
-      "screen": "pos-retail"
+      "screen": "pos-retail",
+      "scene": "offline"
     },
     {
       "time": "11:40",
       "title": "A regular pays two ways",
-      "problem": "Mrs Okafor wants to use her points and pay the rest in cash.",
-      "handles": "Chiamaka finds her by phone number, sees her points, store credit and wallet, and splits the payment. Points are earned on the part paid in cash.",
-      "surface": "till"
+      "problem": "⟦n:regular⟧ wants to use her points and pay the rest in cash.",
+      "handles": "⟦n:cashier⟧ finds her by phone number, sees her points, store credit and wallet, and splits the payment. Points are earned on the part paid in cash.",
+      "surface": "till",
+      "scene": "points"
     },
     {
       "time": "13:00",
@@ -56,37 +60,42 @@
       "problem": "A customer orders a blender on the shop while another is looking at one in the branch.",
       "handles": "The shop and the till sell the same stock at the same prices. The order arrives as a sales order tagged with the shop, and the two can't both sell the last unit.",
       "surface": "shop",
-      "screen": "shop-storefronts"
+      "screen": "shop-storefronts",
+      "scene": "online"
     },
     {
       "time": "15:20",
       "title": "A kettle comes back",
       "problem": "A customer returns a kettle bought last week by card.",
       "handles": "The return becomes a credit note and a refund, paid back the way the sale was paid. The kettle goes back into stock.",
-      "surface": "till"
+      "surface": "till",
+      "scene": "return"
     },
     {
       "time": "16:00",
       "title": "Two tills sold the last one",
-      "problem": "While the line was down, both tills at Ogui Road sold the last blender.",
-      "handles": "Both sales stand. The manager sees an oversold exception in plain words, with a button to transfer one from Garden Avenue, which has six.",
+      "problem": "While the line was down, both tills at ⟦n:branchRoad⟧ sold the last blender.",
+      "handles": "Both sales stand. The manager sees an oversold exception in plain words, with a button to transfer one from ⟦n:branch2⟧, which has six.",
       "surface": "web",
-      "screen": "retail-sync-exceptions"
+      "screen": "retail-sync-exceptions",
+      "scene": "clash"
     },
     {
       "time": "17:30",
       "title": "A new banner for the weekend",
-      "problem": "Adaeze wants the weekend offer on the shop's front page.",
+      "problem": "⟦n:owner⟧ wants the weekend offer on the shop's front page.",
       "handles": "She changes the banner in Storefront Studio as a draft, previews it and sends it for approval. Once it's published, a bad change can be rolled back.",
-      "surface": "web"
+      "surface": "web",
+      "scene": "banner"
     },
     {
       "time": "19:00",
       "title": "Is the cash right?",
       "problem": "Closing time. The drawer has to match the day.",
-      "handles": "Chiamaka counts the drawer. The till shows the difference from what it expects, or hides it on a blind close, and prints the Z report. Adaeze sees the shift and the difference from her desk.",
+      "handles": "⟦n:cashier⟧ counts the drawer. The till shows the difference from what it expects, or hides it on a blind close, and prints the Z report. ⟦n:owner⟧ sees the shift and the difference from her desk.",
       "surface": "till",
-      "screen": "retail-shift-close"
+      "screen": "retail-shift-close",
+      "scene": "close"
     }
   ],
   "wordsTitle": "Your words, in Clafina",

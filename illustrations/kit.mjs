@@ -24,6 +24,28 @@ const CAST = {
   daniel:{ skin: '#e8b98f', shirt: '#334155', inner: '#ffffff', pants: '#283044', shoes: '#2b2f3f', hair: 'fade', hairCol: '#3b2a1e', top: 'blazer' },
   pick1: { sleeve: 'short', skin: '#9a6440', shirt: '#e11d48', inner: '#fde68a', pants: '#3b3f4f', shoes: '#3b2a1e', hair: 'sunhat', hairCol: '#1d1512', top: 'shirt' },
   pick2: { sleeve: 'short', skin: '#d8a477', shirt: '#f59e0b', inner: '#fff7ed', pants: '#26304f', shoes: '#3b2a1e', hair: 'cap', hairCol: '#15803d', top: 'shirt' },
+  // Hotel
+  marta:  { sleeve: 'short', skin: '#b67a4c', shirt: '#2a9d8f', inner: '#e9f5f3', pants: '#264653', shoes: '#2b2f3f', hair: 'ponytail', hairCol: '#2a1d14', top: 'tunic' },
+  desk:   { skin: '#d9a47c', shirt: '#1f3a6b', inner: '#ffffff', pants: '#1c2740', shoes: '#2b2f3f', hair: 'fade', hairCol: '#2b1d14', top: 'blazer' },
+  novak:  { skin: '#f0c8a0', shirt: '#4b5563', inner: '#dbeafe', pants: '#374151', shoes: '#3b2a1e', hair: 'fade', hairCol: '#8a6a4a', top: 'blazer' },
+  lindq:  { skin: '#f4d3b5', shirt: '#be185d', inner: '#fde68a', pants: '#3b3f4f', shoes: '#5b3b24', hair: 'bob', hairCol: '#e5d3a0', top: 'blouse' },
+  duarte: { skin: '#8d5a3b', shirt: '#0e7490', inner: '#fef3c7', pants: '#1e293b', shoes: '#2b2f3f', hair: 'long', hairCol: '#1d1512', top: 'blouse' },
+  hmgr:   { skin: '#a8714a', shirt: '#6d4fe0', inner: '#ffffff', pants: '#26304f', shoes: '#2b2f3f', hair: 'puff', hairCol: '#1d1512', top: 'blazer' },
+  // Restaurant
+  marco:  { skin: '#e2b48c', shirt: '#ffffff', inner: '#dc2626', pants: '#1f2937', shoes: '#111827', hair: 'toque', hairCol: '#3b2a1e', top: 'chef', beard: true },
+  aisha:  { skin: '#7c4a2d', shirt: '#111827', inner: '#f59e0b', pants: '#111827', shoes: '#2b2f3f', hair: 'long', hairCol: '#1d1512', top: 'blouse' },
+  nadia:  { skin: '#c99a73', shirt: '#7c2d12', inner: '#fde68a', pants: '#1c1917', shoes: '#2b2f3f', hair: 'bun', hairCol: '#3b2414', top: 'blazer' },
+  waiter: { skin: '#5c3a22', shirt: '#ffffff', inner: '#111827', pants: '#111827', shoes: '#111827', hair: 'fade', hairCol: '#140f0b', top: 'waiter' },
+  bennM:  { skin: '#e8b98f', shirt: '#2563eb', inner: '#e0f2fe', pants: '#334155', shoes: '#3b2a1e', hair: 'fade', hairCol: '#4a3324', top: 'shirt' },
+  bennF:  { skin: '#a0663e', shirt: '#e11d48', inner: '#ffe4e6', pants: '#1e293b', shoes: '#2b2f3f', hair: 'long', hairCol: '#2a1a12', top: 'blouse' },
+  kid:    { sleeve: 'short', skin: '#c88e64', shirt: '#f59e0b', inner: '#fff7ed', pants: '#1d4ed8', shoes: '#ef4444', hair: 'puff', hairCol: '#2a1a12', top: 'shirt' },
+  diner:  { skin: '#f1c9a0', shirt: '#0f766e', inner: '#ccfbf1', pants: '#334155', shoes: '#3b2a1e', hair: 'cap', hairCol: '#7c3aed', top: 'shirt' },
+  // Shop
+  clara:  { skin: '#efc39b', shirt: '#0f766e', inner: '#ffffff', pants: '#26304f', shoes: '#2b2f3f', hair: 'long', hairCol: '#6b3e1f', top: 'blazer' },
+  lily:   { sleeve: 'short', skin: '#8a5634', shirt: '#7c3aed', inner: '#f5f3ff', pants: '#1f2937', shoes: '#2b2f3f', hair: 'ponytail', hairCol: '#1d1512', top: 'polo' },
+  whit:   { skin: '#f6d6bd', shirt: '#9333ea', inner: '#fdf4ff', pants: '#4b5563', shoes: '#5b3b24', hair: 'bob', hairCol: '#c9ccd3', top: 'blouse' },
+  shopper:{ skin: '#6b4226', shirt: '#ea580c', inner: '#fff7ed', pants: '#1e3a8a', shoes: '#2b2f3f', hair: 'fade', hairCol: '#140f0b', top: 'shirt' },
+  shopper2:{ skin: '#d6a07a', shirt: '#16a34a', inner: '#f0fdf4', pants: '#374151', shoes: '#3b2a1e', hair: 'puff', hairCol: '#2a1a12', top: 'blouse' },
   omar:  { sleeve: 'short', skin: '#6b4226', shirt: '#334155', inner: '#6d4fe0', pants: '#1e2433', shoes: '#2b2f3f', hair: 'cap',  hairCol: '#0f766e', top: 'polo' },
 };
 
@@ -95,6 +117,8 @@ function hair(p, layer) {
   const h = p.hairCol, hl = shade(h, .28);
   if (layer === 'back') {
     if (p.hair === 'bun') return `<circle cx="0" cy="-201" r="14" fill="${h}" ${O}/><path d="M-6 -208 Q0 -212 6 -208" fill="none" stroke="${hl}" stroke-width="2.4" stroke-linecap="round"/>`;
+    if (p.hair === 'long') return `<path d="M-34 -170 C-40 -140 -40 -112 -30 -96 L30 -96 C40 -112 40 -140 34 -170Z" fill="${h}" ${O}/>`;
+    if (p.hair === 'ponytail') return `<path d="M24 -184 C48 -186 54 -160 44 -130 C40 -146 34 -160 22 -170Z" fill="${h}" ${O}/>`;
     if (p.hair === 'puff') return `<circle cx="0" cy="-205" r="27" fill="${h}" ${O}/><path d="M-14 -218 Q-6 -226 4 -222" fill="none" stroke="${hl}" stroke-width="3" stroke-linecap="round"/>`;
     return '';
   }
@@ -102,6 +126,9 @@ function hair(p, layer) {
     bun: `<path d="M-30.5 -162 C-33 -201 33 -201 30.5 -162 C24 -182 -4 -188 -30.5 -162Z" fill="${h}" ${O}/><path d="M-14 -185 Q-2 -192 10 -188" fill="none" stroke="${hl}" stroke-width="3" stroke-linecap="round"/>`,
     fade: `<path d="M-30.5 -160 C-32 -197 32 -197 30.5 -160 C27 -176 -27 -176 -30.5 -160Z" fill="${h}" ${O}/><path d="M-18 -186 Q0 -192 18 -186" fill="none" stroke="${hl}" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>`,
     puff: `<path d="M-30.5 -164 C-31 -193 31 -193 30.5 -164 C21 -180 -21 -180 -30.5 -164Z" fill="${h}" ${O}/><path d="M-22 -186 Q0 -198 22 -186" fill="none" stroke="#f97316" stroke-width="6" stroke-linecap="round"/><path d="M-22 -186 Q0 -198 22 -186" fill="none" stroke="${INK}" stroke-width="1.4" stroke-linecap="round" opacity=".5"/>`,
+    long: `<path d="M-32 -150 C-38 -200 38 -200 32 -150 L28 -146 C28 -170 16 -180 0 -181 C-16 -180 -28 -170 -28 -146Z" fill="${h}" ${O}/><path d="M-16 -188 Q0 -194 16 -188" fill="none" stroke="${hl}" stroke-width="2.6" stroke-linecap="round"/>`,
+    ponytail: `<path d="M-30.5 -162 C-33 -201 33 -201 30.5 -162 C24 -182 -4 -188 -30.5 -162Z" fill="${h}" ${O}/><path d="M-12 -188 Q0 -193 12 -189" fill="none" stroke="${hl}" stroke-width="2.6" stroke-linecap="round"/>`,
+    toque: `<path d="M-30 -162 C-31 -186 31 -186 30 -162 C24 -172 -24 -172 -30 -162Z" fill="${h}" ${O}/><rect x="-26" y="-196" width="52" height="22" rx="4" fill="#fff" ${O}/><circle cx="-16" cy="-206" r="14" fill="#fff" ${O}/><circle cx="16" cy="-206" r="14" fill="#fff" ${O}/><circle cx="0" cy="-214" r="16" fill="#fff" ${O}/><path d="M-26 -182 H26" stroke="#e5e7eb" stroke-width="3"/>`,
     bob: `<path d="M-33 -146 C-38 -200 38 -200 33 -146 L27 -142 C29 -170 18 -180 0 -181 C-18 -180 -29 -170 -27 -142Z" fill="${h}" ${O}/><path d="M-14 -188 Q0 -193 14 -188" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".5"/>`,
     sunhat: `<path d="M-30 -160 C-32 -190 32 -190 30 -160 C24 -172 -24 -172 -30 -160Z" fill="${h}" ${O}/><ellipse cx="0" cy="-178" rx="52" ry="10" fill="#e9c46a" ${O}/><path d="M-27 -178 C-25 -206 25 -206 27 -178Z" fill="#f2d27a" ${O}/><path d="M-26 -184 H26" stroke="#c2410c" stroke-width="5"/><path d="M-40 -176 Q0 -170 40 -176" fill="none" stroke="#c9a24a" stroke-width="1.6"/>`,
     cap: `<path d="M-31.5 -170 C-31 -203 31 -203 31.5 -170Z" fill="${h}" ${O}/><path d="M6 -175 H46 Q51 -171 45 -167 H6Z" fill="${shade(h, -.22)}" ${O}/><circle cx="0" cy="-198" r="3.2" fill="${shade(h, .3)}" stroke="${INK}" stroke-width="1.4"/><path d="M-20 -190 Q-8 -196 6 -194" fill="none" stroke="${shade(h, .3)}" stroke-width="2.6" stroke-linecap="round"/>`,
@@ -116,6 +143,9 @@ function outfit(p) {
     blazer: `<path d="M-10 -126 L0 -100 L10 -126Z" fill="${p.inner}" stroke="${INK}" stroke-width="2"/><path d="M-12 -126 L-4 -96 L-14 -84 M12 -126 L4 -96 L14 -84" fill="none" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><circle cx="0" cy="-80" r="2.4" fill="${INK}"/><circle cx="0" cy="-70" r="2.4" fill="${INK}"/><rect x="-24" y="-98" width="10" height="3" rx="1.5" fill="${dark}"/>`,
     shirt: `<path d="M-12 -126 L-2 -112 L-10 -104 Z M12 -126 L2 -112 L10 -104 Z" fill="${shade(p.shirt, .25)}" stroke="${INK}" stroke-width="1.8" stroke-linejoin="round"/><path d="M0 -112 V-62" stroke="${INK}" stroke-width="1.4" opacity=".6"/>${[-100, -88, -76].map((y) => `<circle cx="0" cy="${y}" r="1.7" fill="${INK}"/>`).join('')}<rect x="8" y="-104" width="13" height="12" rx="2" fill="none" stroke="${INK}" stroke-width="1.5" opacity=".7"/>`,
     overalls: `<path d="M-20 -104 H20 L24 -58 Q0 -54 -24 -58Z" fill="${p.inner}" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><path d="M-16 -104 L-20 -126 M16 -104 L20 -126" stroke="${p.inner}" stroke-width="5" stroke-linecap="round"/><circle cx="-14" cy="-100" r="2.6" fill="#fbbf24" stroke="${INK}" stroke-width="1.2"/><circle cx="14" cy="-100" r="2.6" fill="#fbbf24" stroke="${INK}" stroke-width="1.2"/><rect x="-9" y="-94" width="18" height="12" rx="2" fill="none" stroke="${INK}" stroke-width="1.4" opacity=".6"/>`,
+    chef: `<path d="M-14 -126 L0 -112 L14 -126" fill="none" stroke="${INK}" stroke-width="2"/><path d="M-10 -124 Q0 -112 10 -124 L8 -116 Q0 -108 -8 -116Z" fill="${p.inner}" stroke="${INK}" stroke-width="1.6"/>${[-104, -90, -76].map((y) => `<circle cx="-8" cy="${y}" r="2.4" fill="#d1d5db" stroke="${INK}" stroke-width="1"/><circle cx="8" cy="${y}" r="2.4" fill="#d1d5db" stroke="${INK}" stroke-width="1"/>`).join('')}<path d="M-18 -68 H18" stroke="#e5e7eb" stroke-width="3"/>`,
+    tunic: `<path d="M-12 -126 L0 -106 L12 -126" fill="${p.inner}" stroke="${INK}" stroke-width="2"/><path d="M0 -106 L14 -60" stroke="${INK}" stroke-width="2" opacity=".6"/><rect x="-22" y="-100" width="12" height="9" rx="2" fill="${p.inner}" stroke="${INK}" stroke-width="1.4"/>`,
+    waiter: `<path d="M-22 -122 L-10 -60 H10 L22 -122 L10 -126 L0 -100 L-10 -126Z" fill="${p.inner}" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><path d="M-9 -122 L0 -116 L9 -122 L9 -112 L0 -116 L-9 -112Z" fill="${INK}"/>${[-96, -84, -72].map((y) => `<circle cx="0" cy="${y}" r="1.8" fill="#fbbf24"/>`).join('')}`,
     apron: `<path d="M-18 -110 H18 L23 -58 Q0 -53 -23 -58Z" fill="${p.inner}" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><path d="M-14 -110 L-22 -124 M14 -110 L22 -124" stroke="${p.inner}" stroke-width="4" stroke-linecap="round"/><rect x="-11" y="-92" width="22" height="14" rx="3" fill="none" stroke="#fff" stroke-width="1.6" opacity=".7"/><path d="M-26 -118 L-26 -60 M26 -118 L26 -60" stroke="#fff" stroke-width="1" opacity=".25"/>`,
     kaftan: `<path d="M-12 -126 Q0 -112 12 -126" fill="none" stroke="${p.inner}" stroke-width="4.5"/><path d="M0 -114 V-74" stroke="${p.inner}" stroke-width="3.2" stroke-dasharray="1 6" stroke-linecap="round"/><path d="M-6 -78 Q0 -72 6 -78" fill="none" stroke="${p.inner}" stroke-width="3"/>`,
     blouse: `<path d="M-12 -126 Q0 -108 12 -126" fill="${shade(p.shirt, .2)}" stroke="${INK}" stroke-width="2"/>${[-9, -3, 3, 9].map((x) => `<circle cx="${x}" cy="${-118 + Math.abs(x) * .6}" r="2.7" fill="${p.inner}" stroke="${INK}" stroke-width="1"/>`).join('')}`,
@@ -180,6 +210,8 @@ const LIGHT = {
   morning: `<defs><radialGradient id="lm" cx=".82" cy=".05" r=".95"><stop offset="0" stop-color="#fff6cf" stop-opacity=".6"/><stop offset=".6" stop-color="#fff6cf" stop-opacity=".08"/><stop offset="1" stop-color="#fff6cf" stop-opacity="0"/></radialGradient></defs><rect width="800" height="450" fill="url(#lm)" style="mix-blend-mode:screen"/><rect width="800" height="450" fill="#bcd2ff" opacity=".07" style="mix-blend-mode:multiply"/>`,
   noon: `<rect width="800" height="450" fill="#ffffff" opacity=".06"/>`,
   afternoon: `<defs><radialGradient id="la" cx=".9" cy=".1" r="1"><stop offset="0" stop-color="#ffe0a3" stop-opacity=".5"/><stop offset="1" stop-color="#ffe0a3" stop-opacity="0"/></radialGradient></defs><rect width="800" height="450" fill="url(#la)" style="mix-blend-mode:screen"/><rect width="800" height="450" fill="#ffcf8a" opacity=".1" style="mix-blend-mode:multiply"/>`,
+  night: `<rect width="800" height="450" fill="#0b1330" opacity=".42" style="mix-blend-mode:multiply"/><defs><radialGradient id="ln" cx=".25" cy=".2" r=".7"><stop offset="0" stop-color="#ffd98a" stop-opacity=".22"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient></defs><rect width="800" height="450" fill="url(#ln)" style="mix-blend-mode:screen"/>`,
+  evening: `<rect width="800" height="450" fill="#3b2a6b" opacity=".22" style="mix-blend-mode:multiply"/><defs><radialGradient id="le" cx=".5" cy=".15" r=".8"><stop offset="0" stop-color="#ffd59a" stop-opacity=".3"/><stop offset="1" stop-color="#ffd59a" stop-opacity="0"/></radialGradient></defs><rect width="800" height="450" fill="url(#le)" style="mix-blend-mode:screen"/>`,
   golden: `<defs><linearGradient id="lg" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9f43" stop-opacity=".34"/><stop offset="1" stop-color="#ff6f61" stop-opacity=".1"/></linearGradient></defs><rect width="800" height="450" fill="url(#lg)" style="mix-blend-mode:multiply"/><rect width="800" height="450" fill="#ffd9a0" opacity=".12" style="mix-blend-mode:screen"/>`,
 };
 
@@ -262,5 +294,5 @@ function street() {
 }
 
 
-export const lightFor = (time) => { const hr = +time.match(/(\d+):/)[1]; return hr < 12 ? 'morning' : hr < 14 ? 'noon' : hr < 16 ? 'afternoon' : 'golden'; };
+export const lightFor = (time) => { const hr = +time.match(/(\d+):/)[1]; return hr < 6 ? 'night' : hr < 12 ? 'morning' : hr < 14 ? 'noon' : hr < 16 ? 'afternoon' : hr < 19 ? 'golden' : 'evening'; };
 export { INK, C, O, B, CAST, POSES, SHOULDER, joints, angles, handAt, person, callout, clock, plant, mug, doc, phone, laptop, box, stampMark, bubble, hand, sparkle, motion, notify, office, shopfront, warehouse, street, LIGHT };

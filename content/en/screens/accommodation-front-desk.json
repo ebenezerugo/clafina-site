@@ -4,7 +4,7 @@
   "label": "Illustrative example: a hotel's front desk at 11:00, with today's arrivals and departures, which rooms are ready, and an early guest whose room is still being cleaned.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "MC", "name": "Marina Court Hotel", "place": "Calabar" },
+  "org": { "initials": "MC", "name": "Harbourview Hotel", "place": "Bayside" },
   "nav": [
     { "label": "Accommodation", "items": [{ "label": "Front desk", "active": true }, { "label": "Room rack" }, { "label": "Housekeeping", "badge": "6" }, { "label": "Folios" }] },
     { "label": "Set-up", "items": [{ "label": "Rates" }, { "label": "Channels" }, { "label": "Night audit" }] }
@@ -20,12 +20,12 @@
       { "icon": "check", "label": "Free tonight", "value": "2 rooms", "note": "Of 22 on sale · 2 out of order" }
     ] },
     { "type": "attention", "title": "Needs you", "items": [
-      { "tone": "warn", "icon": "clock", "title": "Mr Emeka Okafor is early and room 108 is still being cleaned", "body": "Blessing Etim is on it and finishes about 12:20. Room 109 is inspected and free tonight.", "action": "Put him in 109" }
+      { "tone": "warn", "icon": "clock", "title": "Mr Novak is early and room 108 is still being cleaned", "body": "Marta is on it and finishes about 12:20. Room 109 is inspected and free tonight.", "action": "Put him in 109" }
     ] },
     { "type": "row", "widths": "1fr 1fr", "blocks": [
       { "type": "table", "title": "Arriving today · check-in from 14:00", "columns": [{ "label": "Guest" }, { "label": "Room and stay" }, { "label": "Room" }], "rows": [
         ["Mrs Ekaette Bassey", "Deluxe 204 · 3 nights · Direct", { "pill": "good", "text": "Inspected" }],
-        ["Mr Emeka Okafor", "Standard 108 · 2 nights · Phone", { "pill": "warn", "text": "Cleaning · early, 11:00" }],
+        ["Mr Novak", "Standard 108 · 2 nights · Phone", { "pill": "warn", "text": "Cleaning · early, 11:00" }],
         ["Mr Tunde Adebisi", "Standard 112 · 1 night · Email", { "pill": "bad", "text": "Dirty · deposit not paid" }],
         ["Akamkpa Builders, 3 rooms", "Deluxe 205 to 207 · 2 nights · Company account", { "pill": "info", "text": "Clean, to inspect" }]
       ] },

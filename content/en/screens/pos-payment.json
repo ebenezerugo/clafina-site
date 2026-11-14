@@ -4,7 +4,7 @@
   "label": "Illustrative example: paying for a restaurant order in two parts, part by bank transfer and the rest in cash, with the change to give.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "RT", "name": "Red Tile Kitchen", "place": "Till 2 · Amaka" },
+  "org": { "initials": "RT", "name": "Juniper Kitchen", "place": "Till 2 · Amaka" },
   "nav": [
     { "label": "Pay with", "items": [{ "label": "Cash", "active": true }, { "label": "Bank transfer", "badge": "Paid" }, { "label": "Card" }, { "label": "Points" }, { "label": "Gift card" }, { "label": "Store credit" }, { "label": "Wallet" }, { "label": "On account" }] }
   ],

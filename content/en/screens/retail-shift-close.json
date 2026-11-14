@@ -4,7 +4,7 @@
   "label": "Illustrative example: closing a till shift at a homeware shop. The drawer is counted by note, the difference from expected is shown, and the Z report is ready to print.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "AH", "name": "Adaeze Home and Electronics", "place": "Ogui Road · Till 2 · Chiamaka" },
+  "org": { "initials": "AH", "name": "Maple & Co. Home", "place": "Mill Road · Till 2 · Lily" },
   "nav": [
     { "label": "Till", "items": [{ "label": "Sell" }, { "label": "Orders" }, { "label": "Customers" }, { "label": "Returns" }, { "label": "Cash", "active": true }, { "label": "Reports" }] }
   ],

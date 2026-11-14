@@ -86,3 +86,19 @@
 .ill .arrive { animation: ill-arrive 1.8s cubic-bezier(.2, .8, .2, 1) both; }
 @keyframes ill-arrive { from { transform: translateX(-420px); } }
 @media (prefers-reduced-motion: reduce) { .ill .rainfall, .ill .flash { animation: none !important; } .ill .flash { opacity: 0; } }
+
+/* Hotel, restaurant and shop motion */
+.ill .fly-across, .ill .slide-down, .ill .flame, .ill .ticket, .ill .shutter, .ill .wobble { transform-box: fill-box; }
+.ill .fly-across { animation: ill-fly-across 9s linear infinite; }
+@keyframes ill-fly-across { from { transform: translateX(-260px); } to { transform: translateX(620px); } }
+.ill .slide-down { animation: ill-slide-down 1.2s cubic-bezier(.3, .9, .3, 1) both; }
+@keyframes ill-slide-down { from { transform: translateY(0); } to { transform: translateY(48px); } }
+.ill .flame { transform-origin: bottom center; animation: ill-flame .5s ease-in-out infinite alternate; }
+@keyframes ill-flame { to { transform: scaleY(1.18) scaleX(.9); } }
+.ill .ticket { animation: ill-ticket 1.2s cubic-bezier(.4, 0, .2, 1) both; }
+@keyframes ill-ticket { from { transform: translate(var(--fx, -200px), var(--fy, 80px)) scale(.4); opacity: 0; } 30% { opacity: 1; } }
+.ill .shutter { transform-origin: top center; animation: ill-shutter 2s cubic-bezier(.4, 0, .2, 1) both; }
+@keyframes ill-shutter { to { transform: scaleY(.08); } }
+.ill .wobble { transform-origin: bottom center; animation: ill-wobble 1.8s ease-in-out infinite; }
+@keyframes ill-wobble { 50% { transform: rotate(-4deg); } }
+@media (prefers-reduced-motion: reduce) { .ill .fly-across { animation: none !important; } }

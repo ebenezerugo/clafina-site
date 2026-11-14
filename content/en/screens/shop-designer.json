@@ -4,7 +4,7 @@
   "label": "Illustrative example: the Storefront Studio designer on a restaurant's home page, editing a strip of cold drinks that reads its products from the ERP.",
   "currency": "NGN",
   "frame": "app",
-  "org": { "initials": "RT", "name": "Red Tile Kitchen", "place": "Storefront · Live" },
+  "org": { "initials": "RT", "name": "Juniper Kitchen", "place": "Storefront · Live" },
   "goTo": "Go to page…",
   "nav": [
     { "label": "Storefront", "items": [{ "label": "Overview" }, { "label": "Pages", "active": true }, { "label": "Theme and brand" }, { "label": "Navigation" }, { "label": "Catalogue presentation" }, { "label": "Publishing", "badge": "5" }] },
@@ -17,8 +17,8 @@
     { "type": "steps", "items": ["Draft", "Validated", "Approved", "Published"], "current": 0 },
     { "type": "row", "widths": "3fr 2fr", "blocks": [
       { "type": "table", "title": "Cold drinks, as shoppers will see it", "columns": [{ "label": "Drink" }, { "label": "What is in it" }, { "label": "Price", "numeric": true }], "rows": [
-        ["Chapman", "Orange soda, lemon-lime soda, grenadine, cucumber", { "money": 1800 }],
-        ["Zobo", "Hibiscus, ginger, pineapple", { "money": 1200 }],
+        ["Fresh lemonade", "Orange soda, lemon-lime soda, grenadine, cucumber", { "money": 1800 }],
+        ["Iced tea", "Hibiscus, ginger, pineapple", { "money": 1200 }],
         ["Kunu", "Millet, ginger, sweet spice", { "money": 1000 }],
         ["Tiger nut", "Chilled, lightly sweet", { "money": 1500 }]
       ] },

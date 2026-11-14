@@ -17,7 +17,8 @@
         "http://127.0.0.1:4311/en/solutions/multi-branch/",
         "http://127.0.0.1:4311/en/resources/glossary/",
         "http://127.0.0.1:4311/en/stories/journey-of-a-quote/",
-        "http://127.0.0.1:4311/en/industries/farm/"
+        "http://127.0.0.1:4311/en/industries/farm/",
+        "http://127.0.0.1:4311/en/industries/accommodation/"
       ],
       "numberOfRuns": 3,
       "settings": {
@@ -76,7 +77,7 @@
           "aggregationMethod": "median-run"
         },
         {
-          "matchingUrlPattern": "/en/(platform|pricing|product/pos|industries|industries/retail|industries/manufacturing|help|help/assets|solutions/multi-branch|resources/glossary|stories/journey-of-a-quote|industries/farm)/$",
+          "matchingUrlPattern": "/en/(platform|pricing|product/pos|industries|industries/retail|industries/manufacturing|help|help/assets|solutions/multi-branch|resources/glossary|stories/journey-of-a-quote|industries/farm|industries/accommodation)/$",
           "aggregationMethod": "median-run",
           "assertions": {
             "categories:performance": [
