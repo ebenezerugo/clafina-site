@@ -61,6 +61,25 @@ describe('production build script', () => {
   });
 });
 
+describe('production release', () => {
+  const production = jobs.find((j) => j.startsWith('production:'))!;
+  it('runs only by hand, from main, once switched on, and waits for approval', () => {
+    expect(deploy).toContain('workflow_dispatch:');
+    expect(production).toContain("github.event_name == 'workflow_dispatch'");
+    expect(production).toContain("github.ref == 'refs/heads/main'");
+    expect(production).toContain("vars.CLAFINA_PRODUCTION_ENABLED == 'true'");
+    expect(production).toContain('environment: production');
+  });
+  it('tests and builds in production mode before it deploys', () => {
+    expect(production.indexOf('npm test')).toBeLessThan(production.indexOf('pages deploy'));
+    expect(production.indexOf('build:production')).toBeLessThan(production.indexOf('pages deploy'));
+  });
+  it('never runs from a pull request or a workflow_run', () => {
+    expect(production).not.toContain("event == 'pull_request'");
+    expect(production).not.toContain('workflow_run.head_sha');
+  });
+});
+
 describe('job conditions', () => {
   it('never end with a dangling && or ||', () => {
     for (const m of deploy.matchAll(/if: >-\n((?: {6}.*\n)+)/g)) expect(m[1]!.trim()).not.toMatch(/(&&|\|\|)$/);

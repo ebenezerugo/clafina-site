@@ -8,6 +8,11 @@ export function fact<T>(f: Fact<T>): T | undefined {
 }
 
 const todo = <T>(placeholder: string): Fact<T> => ({ placeholder });
+/** A fact set per environment at build time (GitHub environment variables), else still to fill in. */
+const fromEnv = (name: string, placeholder: string): Fact<string> => {
+  const value = process.env[name]?.trim();
+  return value ? { value } : { placeholder: `${placeholder} (or set ${name} for the environment)` };
+};
 
 /**
  * Facts someone can check and act on. Fill these in before go-live; production refuses placeholders.
@@ -24,8 +29,8 @@ export const SITE = {
     security: todo<string>('Security reports inbox'),
     press: todo<string>('Press inbox'),
   },
-  appUrl: todo<string>('Web app address, e.g. https://app.clafina.com/'),
-  signupUrl: todo<string>('Sign-up address, e.g. https://app.clafina.com/signup'),
+  appUrl: fromEnv('CLAFINA_APP_URL', 'Web app address, e.g. https://app.clafina.com/'),
+  signupUrl: fromEnv('CLAFINA_SIGNUP_URL', 'Sign-up address, e.g. https://app.clafina.com/signup'),
   stores: {
     appStore: todo<string>('App Store listing URL'),
     googlePlay: todo<string>('Google Play listing URL'),
