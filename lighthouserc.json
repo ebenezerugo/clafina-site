@@ -20,7 +20,7 @@
         "http://127.0.0.1:4311/en/industries/farm/",
         "http://127.0.0.1:4311/en/industries/accommodation/"
       ],
-      "numberOfRuns": 3,
+      "numberOfRuns": 5,
       "settings": {
         "formFactor": "mobile",
         "screenEmulation": {
