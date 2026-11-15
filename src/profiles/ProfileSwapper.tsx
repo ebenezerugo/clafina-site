@@ -2,8 +2,14 @@
 
 import { useEffect } from 'react';
 import { COUNTRY_STORAGE_KEY, setCountry } from '@/components/switchers/CountrySwitcher';
-import { PROFILES, pricingCountryFor, profileFor, type ProfileId } from './profiles';
-import { localiseText, resolve } from './tokens';
+import type { ProfileId } from './profiles';
+
+/* The names, money and patterns for every country load only once a visitor's country is known, after the page
+   has drawn, so they never slow the first view. */
+type Kit = typeof import('./profiles') & typeof import('./tokens');
+let kit: Promise<Kit> | null = null;
+let K: Kit | null = null;
+const loadKit = () => (kit ??= Promise.all([import('./profiles'), import('./tokens')]).then(([a, b]) => (K = { ...a, ...b })));
 
 const KEY = 'clafina.profile';
 const store = { get: (k: string) => { try { return localStorage.getItem(k); } catch { return null; } }, set: (k: string, v: string) => { try { localStorage.setItem(k, v); } catch { /* storage blocked */ } } };
@@ -11,14 +17,15 @@ const store = { get: (k: string) => { try { return localStorage.getItem(k); } ca
 /** Which profile this visitor sees: ?country=XX first (for previews), then what we found before, then the edge. */
 async function findProfile(): Promise<ProfileId | null> {
   const asked = new URLSearchParams(location.search).get('country');
-  if (asked) return profileFor(asked);
+  if (asked) return (await loadKit()).profileFor(asked);
   const saved = store.get(KEY);
-  if (saved && saved in PROFILES) return saved as ProfileId;
+  if (saved) { const { PROFILES } = await loadKit(); if (saved in PROFILES) return saved as ProfileId; }
   try {
     const r = await fetch('/api/where', { cache: 'no-store' });
     // No answer (offline, or a host without the edge function): leave the page exactly as it was built.
     if (!r.ok) return null;
     const { country } = (await r.json()) as { country?: string | null };
+    const { profileFor, pricingCountryFor } = await loadKit();
     const id = profileFor(country);
     store.set(KEY, id);
     // Prices follow the visitor's country too, unless they chose one in the footer.
@@ -33,7 +40,7 @@ function swap(root: ParentNode, id: ProfileId) {
   root.querySelectorAll<HTMLElement | SVGElement>('[data-tk]').forEach((el) => {
     const [kind, key] = (el.getAttribute('data-tk') ?? '').split(':');
     if (!kind || !key) return;
-    const text = resolve(kind, key, id);
+    const text = K!.resolve(kind, key, id);
     // Edit React's own text node in place, so later renders keep reaching the node that is on the page.
     const only = el.childNodes.length === 1 ? el.firstChild : null;
     if (only && only.nodeType === Node.TEXT_NODE) { if (only.nodeValue !== text) only.nodeValue = text; }
@@ -53,7 +60,7 @@ function convertMoney(root: ParentNode, id: ProfileId) {
     for (let n = walker.nextNode() as Text | null; n; n = walker.nextNode() as Text | null) {
       const seen = original.get(n);
       const from = seen && n.nodeValue === seen.to ? seen.from : (n.nodeValue ?? '');
-      const to = localiseText(from, id);
+      const to = K!.localiseText(from, id);
       if (to === from && !seen) continue;
       original.set(n, { from, to });
       if (n.nodeValue !== to) n.nodeValue = to;
@@ -63,7 +70,7 @@ function convertMoney(root: ParentNode, id: ProfileId) {
       if (!label) continue;
       const seen = labels.get(el);
       const from = seen && label === seen.to ? seen.from : label;
-      const to = localiseText(from, id);
+      const to = K!.localiseText(from, id);
       if (to === from && !seen) continue;
       labels.set(el, { from, to });
       if (label !== to) el.setAttribute('aria-label', to);
@@ -91,8 +98,10 @@ export function ProfileSwapper() {
         r.addedNodes.forEach((n) => { if (n instanceof Element) convertMoney(n, id); });
       }
     });
-    findProfile().then((found) => {
+    findProfile().then(async (found) => {
       if (!alive || found === null) return;
+      await loadKit();
+      if (!alive) return;
       id = found;
       document.documentElement.dataset.profile = id;
       swap(document, id);

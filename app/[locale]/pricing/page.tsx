@@ -31,6 +31,13 @@ export default async function Pricing({ params }: Props) {
   const number = (n: number) => new Intl.NumberFormat(lang).format(n);
   const contactSales = pageAvailable('contact-sales') ? localePath(locale, routeById('contact-sales')!.path) : null;
   const compare = pageAvailable('pricing-compare') ? localePath(locale, routeById('pricing-compare')!.path) : null;
+  // Every plan's price for every country, written here once so the browser never formats currencies.
+  const prices = Object.fromEntries(PLANS.map((p) => [p.id, Object.fromEntries((['global', 'ng', 'latam'] as const).map((code) => {
+    const { amount, currency } = p.price[code];
+    const shown = amount === null ? c.talkToUs : amount === 0 ? c.free
+      : new Intl.NumberFormat(lang, { style: 'currency', currency, currencyDisplay: 'narrowSymbol', maximumFractionDigits: 0 }).format(amount);
+    return [code, shown];
+  }))])) as Record<PlanId, Record<'global' | 'ng' | 'latam', string>>;
   const countries = (['global', 'ng', 'latam'] as const).filter((code) => isOn(`countries.${code}`)).map((code) => ({ code, name: t(`switcher.countries.${code}`) }));
   const text = Object.fromEntries(PLANS.map((p) => [p.id, {
     ...c.plans[p.id],
@@ -52,7 +59,7 @@ export default async function Pricing({ params }: Props) {
 
       {plansVisible() ? (
         <section aria-label={c.hero.eyebrow} className="mx-auto max-w-7xl px-4 pb-16 sm:px-6">
-          <PlanCards plans={PLANS} text={text} lang={lang} countries={countries} labels={{ pricesFor: c.pricesFor, perMonth: c.perMonth, free: c.free, talkToUs: c.talkToUs, mostChosen: c.mostChosen, notes: c.editionNote }} />
+          <PlanCards plans={PLANS} text={text} prices={prices} countries={countries} labels={{ pricesFor: c.pricesFor, perMonth: c.perMonth, free: c.free, talkToUs: c.talkToUs, mostChosen: c.mostChosen, notes: c.editionNote }} />
           <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-muted">
             {compare && <a href={compare} className="font-semibold text-ink underline underline-offset-4">{c.compareLink}</a>}
             {!pricesConfirmed() && <span>{c.samples}</span>}

@@ -6,22 +6,20 @@ import { setCountry, useCountry, type CountryCode } from '@/components/switchers
 
 export interface PlanCardText { name: string; tagline: string; cta: string; href: string; features: string[]; limits: string[] }
 
-/** Plan cards whose prices follow the visitor's country, chosen here or in the footer. */
-export function PlanCards({ plans, text, labels, countries, lang }: {
+/**
+ * Plan cards whose prices follow the visitor's country, chosen here or in the footer. Prices arrive already
+ * written for every country (formatted on the server), so the page does no currency formatting as it starts.
+ */
+export function PlanCards({ plans, text, labels, countries, prices }: {
   plans: Plan[];
-  lang: string;
+  prices: Record<PlanId, Record<CountryCode, string>>;
   text: Record<PlanId, PlanCardText>;
   labels: { pricesFor: string; perMonth: string; free: string; talkToUs: string; mostChosen: string; notes: Record<CountryCode, string> };
   countries: { code: CountryCode; name: string }[];
 }) {
   const id = useId();
   const country = useCountry();
-  const price = (p: Plan) => {
-    const { amount, currency } = p.price[country];
-    if (amount === null) return labels.talkToUs;
-    if (amount === 0) return labels.free;
-    return new Intl.NumberFormat(lang, { style: 'currency', currency, currencyDisplay: 'narrowSymbol', maximumFractionDigits: 0 }).format(amount);
-  };
+  const price = (p: Plan) => prices[p.id][country];
 
   return (
     <div>

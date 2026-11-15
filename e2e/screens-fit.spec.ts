@@ -9,6 +9,12 @@ for (const locale of ['en', 'ar']) {
     test.setTimeout(120_000);
     await page.setViewportSize({ width: 1440, height: 1000 });
     await page.goto(`/${locale}/screens/`, { waitUntil: 'networkidle' });
+    // Screens appear as they near the viewport: scroll through so every one is drawn before checking.
+    await page.evaluate(async () => {
+      for (let y = 0; y < document.body.scrollHeight; y += 700) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 30)); }
+    });
+    await expect.poll(() => page.locator('[data-screen] template').count()).toBe(0);
+    expect(await page.locator('[data-screen] .s-card').count()).toBeGreaterThan(100);
     await page.waitForTimeout(500);
     const problems = await page.evaluate(() => {
       const out: string[] = [];

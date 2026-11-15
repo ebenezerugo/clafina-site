@@ -8,6 +8,7 @@ import { localePath } from '@/lib/paths';
 import { CountrySwitcher } from '@/components/switchers/CountrySwitcher';
 import { LanguageSwitcher } from '@/components/switchers/LanguageSwitcher';
 import { footerModel, type FooterColumnId } from './footer-model';
+import { FooterFold } from './FooterFold';
 import { FooterSection } from './FooterSection';
 
 /**
@@ -119,6 +120,7 @@ export async function Footer({ locale }: { locale: Locale }) {
           </div>
         </div>
       </div>
+      <FooterFold />
     </footer>
   );
 }
