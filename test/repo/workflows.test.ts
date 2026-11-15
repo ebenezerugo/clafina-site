@@ -27,12 +27,13 @@ describe('deploy workflow', () => {
 
 describe('staging', () => {
   const staging = jobs.find((j) => j.startsWith('staging:'))!;
-  it('publishes every passing main to the staging branch, never to production', () => {
+  it('publishes every passing main to the staging project, at its main address and staging alias', () => {
     expect(staging).toContain("github.event.workflow_run.head_branch == 'main'");
     expect(staging).toContain("github.event.workflow_run.conclusion == 'success'");
     expect(staging).toContain('ref: ${{ github.event.workflow_run.head_sha }}');
-    expect(staging).toContain('--branch staging');
-    expect(staging).not.toContain('--branch main');
+    expect(staging).toContain('--project-name clafina-site --branch main');
+    expect(staging).toContain('--project-name clafina-site --branch staging');
+    for (const line of staging.split('\n').filter((l) => l.includes('pages deploy'))) expect(line).toContain('--project-name clafina-site');
   });
   it('keeps staging out of search engines', () => {
     expect(staging).toContain('X-Robots-Tag: noindex');
@@ -73,6 +74,13 @@ describe('production release', () => {
   it('tests and builds in production mode before it deploys', () => {
     expect(production.indexOf('npm test')).toBeLessThan(production.indexOf('pages deploy'));
     expect(production.indexOf('build:production')).toBeLessThan(production.indexOf('pages deploy'));
+  });
+  it('publishes to its own project, never to clafina-site (staging)', () => {
+    const deploys = production.split('\n').filter((l) => l.includes('pages deploy'));
+    expect(deploys.length).toBeGreaterThan(0);
+    for (const line of deploys) expect(line).not.toContain('clafina-site');
+    expect(production).toContain("vars.CLAFINA_PRODUCTION_PROJECT || 'clafina'");
+    expect(production).toContain('if [ "$PRODUCTION_PROJECT" = "clafina-site" ]');
   });
   it('never runs from a pull request or a workflow_run', () => {
     expect(production).not.toContain("event == 'pull_request'");
