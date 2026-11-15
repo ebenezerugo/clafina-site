@@ -28,3 +28,23 @@ test('Arabic money and layout on screens', async ({ page }) => {
   await page.goto('/ar/screens/');
   await expect(page.locator('[data-screen] .s-root').first()).toHaveAttribute('dir', 'rtl');
 });
+
+test('a screen is drawn when it nears the viewport, not before', async ({ page }) => {
+  await page.goto('/en/platform/');
+  const last = page.locator('[data-screen]').last();
+  await expect(last.locator('template')).toHaveCount(1);
+  await last.scrollIntoViewIfNeeded();
+  await expect(last.locator('template')).toHaveCount(0);
+  await expect(last.locator('.s-root > *').first()).toBeAttached();
+});
+
+test('money in a screen drawn later still follows the visitor\'s country', async ({ page }) => {
+  await page.goto('/en/industries/farm/?country=IN');
+  const moment = page.locator('#day ol > li').filter({ has: page.locator('details') }).first();
+  await moment.scrollIntoViewIfNeeded();
+  await moment.locator('summary').click();
+  const screen = moment.locator('details [data-screen]');
+  await expect(screen.locator('template')).toHaveCount(0);
+  await expect(screen).toContainText('₹');
+  await expect(screen).not.toContainText('₦');
+});

@@ -1,46 +1,17 @@
-'use client';
+import { createRequire } from 'node:module';
+import { join } from 'node:path';
+import type { ReactNode } from 'react';
+import { ScaledScreenFrame } from './ScaledScreenFrame';
 
-import { useLayoutEffect, useRef, useState, type ReactNode } from 'react';
-import { fitScale } from './scale';
-import './screen.css';
+/* The static renderer, loaded at build time from the project's own React. Screens are pure markup (no state, no
+   effects), so rendering them to a string is safe; Next.js does not allow importing it directly in a page. */
+const load = createRequire(join(process.cwd(), 'package.json'));
+const toHtml = (node: ReactNode): string => (load('react-dom/server') as typeof import('react-dom/server')).renderToStaticMarkup(node);
 
 /**
- * A product screen drawn at its design size and shrunk to fit its column.
- * Assistive technology gets one description instead of the screen's contents.
+ * A product screen drawn at its design size and shrunk to fit its column. Its contents never change, so they are
+ * rendered to HTML here on the server and handed to the frame as one block: the browser does not hydrate them.
  */
 export function ScaledScreen({ width, height, label, dir, children }: { width: number; height: number; label: string; dir?: 'ltr' | 'rtl'; children: ReactNode }) {
-  const outer = useRef<HTMLDivElement>(null);
-  const [scale, setScale] = useState<number | null>(null);
-
-  useLayoutEffect(() => {
-    const el = outer.current;
-    if (!el) return;
-    const update = () => setScale(fitScale(el.clientWidth, width));
-    update();
-    const observer = new ResizeObserver(update);
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [width]);
-
-  // Before measuring, fall back to CSS: the box keeps the screen's proportions so nothing jumps.
-  const s = scale ?? 0;
-  return (
-    <div
-      ref={outer}
-      role="img"
-      aria-label={label}
-      data-screen=""
-      style={{ width: '100%', maxWidth: width, aspectRatio: `${width} / ${height}`, position: 'relative', overflow: 'hidden', borderRadius: 12 }}
-    >
-      <div
-        aria-hidden="true"
-        inert
-        dir={dir}
-        className="s-root"
-        style={{ width, height, transform: `scale(${s})`, transformOrigin: dir === 'rtl' ? 'top right' : 'top left', position: 'absolute', insetInlineStart: 0, top: 0, visibility: scale === null ? 'hidden' : 'visible' }}
-      >
-        {children}
-      </div>
-    </div>
-  );
+  return <ScaledScreenFrame width={width} height={height} label={label} dir={dir} html={toHtml(<>{children}</>)} />;
 }
