@@ -13,6 +13,24 @@ const fromEnv = (name: string, placeholder: string): Fact<string> => {
   const value = process.env[name]?.trim();
   return value ? { value } : { placeholder: `${placeholder} (or set ${name} for the environment)` };
 };
+/**
+ * A web address set per environment. Accepts it with or without https:// (a bare "app.example.com" is common in
+ * settings forms), and fails the build with a clear message when it is not an address at all.
+ */
+const urlFromEnv = (name: string, placeholder: string, { folder = false } = {}): Fact<string> => {
+  const set = fromEnv(name, placeholder);
+  if (!('value' in set)) return set;
+  const raw = /^[a-z][a-z0-9+.-]*:\/\//i.test(set.value) ? set.value : `https://${set.value}`;
+  let url: URL;
+  try {
+    url = new URL(raw);
+  } catch {
+    throw new Error(`${name} must be a web address such as https://app.example.com/, got "${set.value}"`);
+  }
+  // Links are built relative to the app address, so it must end in "/" or its last part would be replaced.
+  if (folder && !url.pathname.endsWith('/')) url.pathname += '/';
+  return { value: url.toString() };
+};
 
 /**
  * Facts someone can check and act on. Fill these in before go-live; production refuses placeholders.
@@ -29,8 +47,8 @@ export const SITE = {
     security: todo<string>('Security reports inbox'),
     press: todo<string>('Press inbox'),
   },
-  appUrl: fromEnv('CLAFINA_APP_URL', 'Web app address, e.g. https://app.clafina.com/'),
-  signupUrl: fromEnv('CLAFINA_SIGNUP_URL', 'Sign-up address, e.g. https://app.clafina.com/signup'),
+  appUrl: urlFromEnv('CLAFINA_APP_URL', 'Web app address, e.g. https://app.clafina.com/', { folder: true }),
+  signupUrl: urlFromEnv('CLAFINA_SIGNUP_URL', 'Sign-up address, e.g. https://app.clafina.com/signup'),
   stores: {
     appStore: todo<string>('App Store listing URL'),
     googlePlay: todo<string>('Google Play listing URL'),

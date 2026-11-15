@@ -37,4 +37,23 @@ describe('app links per environment', () => {
     const without = await import('../../src/config/site');
     expect(without.fact(without.SITE.appUrl)).toBeUndefined();
   });
+
+  it('accept addresses written without https:// and fail clearly on nonsense', async () => {
+    const { vi } = await import('vitest');
+    vi.resetModules();
+    vi.stubEnv('CLAFINA_APP_URL', 'staging.app.example.com');
+    vi.stubEnv('CLAFINA_SIGNUP_URL', 'staging.app.example.com/signup');
+    const bare = await import('../../src/config/site');
+    expect(bare.fact(bare.SITE.appUrl)).toBe('https://staging.app.example.com/');
+    expect(bare.fact(bare.SITE.signupUrl)).toBe('https://staging.app.example.com/signup');
+    vi.stubEnv('CLAFINA_APP_URL', 'https://app.example.com/web');
+    vi.resetModules();
+    const sub = await import('../../src/config/site');
+    expect(sub.fact(sub.SITE.appUrl)).toBe('https://app.example.com/web/');
+    vi.stubEnv('CLAFINA_APP_URL', 'not a url');
+    vi.resetModules();
+    await expect(import('../../src/config/site')).rejects.toThrow(/CLAFINA_APP_URL must be a web address/);
+    vi.unstubAllEnvs();
+    vi.resetModules();
+  });
 });
