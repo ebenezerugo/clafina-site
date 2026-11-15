@@ -87,6 +87,11 @@ jobs:
     # once CLAFINA_PRODUCTION_ENABLED is "true". The production build refuses anything not ready for launch.
     # It publishes to its own Cloudflare project (CLAFINA_PRODUCTION_PROJECT, default "clafina"), never to
     # clafina-site, which is staging.
+    # Only a manual run on main reaches this job (never a workflow_run, so there is no triggering head_sha or
+    # conclusion to trust). CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID here must be ENVIRONMENT secrets of the
+    # protected "production" environment (required reviewers, main only), not repository secrets: a repository
+    # secret is handed to every branch build and the environment's protection would guard nothing. Keep a separate,
+    # preview-scoped token for the preview and staging jobs. wrangler is pinned to the exact version in package-lock.json.
     if: >-
       github.event_name == 'workflow_dispatch' &&
       github.ref == 'refs/heads/main' &&
