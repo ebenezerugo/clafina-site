@@ -45,8 +45,10 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
   staging:
-    # Every merge to main goes to staging (staging.clafina-site.pages.dev): the latest whole site for the team,
-    # kept out of search engines. Production stays reserved for approved releases.
+    # Every merge to main goes to staging: the latest whole site for the team, kept out of search engines.
+    # The clafina-site Cloudflare project is staging as a whole, so this publishes to its main address
+    # (clafina-site.pages.dev, and staging.clafina.com bound to it) and to the staging alias. Production
+    # lives in its own project (see the production job), so staging can never overwrite it.
     if: >-
       github.event.workflow_run.conclusion == 'success' &&
       github.event.workflow_run.event == 'push' &&
@@ -73,7 +75,9 @@ jobs:
           printf '\n/*\n  X-Robots-Tag: noindex, nofollow\n' >> out/_headers
           printf 'User-agent: *\nDisallow: /\n' > out/robots.txt
       - name: Deploy to staging
-        run: npx --yes wrangler@4.157.0 pages deploy out --project-name clafina-site --branch staging
+        run: |
+          npx --yes wrangler@4.157.0 pages deploy out --project-name clafina-site --branch main
+          npx --yes wrangler@4.157.0 pages deploy out --project-name clafina-site --branch staging
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -81,6 +85,8 @@ jobs:
   production:
     # Released by hand only (Run workflow on main), after approval on the "production" environment, and only
     # once CLAFINA_PRODUCTION_ENABLED is "true". The production build refuses anything not ready for launch.
+    # It publishes to its own Cloudflare project (CLAFINA_PRODUCTION_PROJECT, default "clafina"), never to
+    # clafina-site, which is staging.
     if: >-
       github.event_name == 'workflow_dispatch' &&
       github.ref == 'refs/heads/main' &&
@@ -102,7 +108,12 @@ jobs:
           CLAFINA_APP_URL: ${{ vars.CLAFINA_APP_URL }}
           CLAFINA_SIGNUP_URL: ${{ vars.CLAFINA_SIGNUP_URL }}
       - name: Deploy to production
-        run: npx --yes wrangler@4.157.0 pages deploy out --project-name clafina-site --branch main
+        run: |
+          if [ "$PRODUCTION_PROJECT" = "clafina-site" ]; then echo "clafina-site is staging; production needs its own project"; exit 1; fi
+          # Creates the project on the first release; afterwards it already exists.
+          npx --yes wrangler@4.157.0 pages project create "$PRODUCTION_PROJECT" --production-branch main || true
+          npx --yes wrangler@4.157.0 pages deploy out --project-name "$PRODUCTION_PROJECT" --branch main
         env:
+          PRODUCTION_PROJECT: ${{ vars.CLAFINA_PRODUCTION_PROJECT || 'clafina' }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
