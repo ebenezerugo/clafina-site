@@ -37,7 +37,7 @@ export const HomeContent = z.object({
       trend: z.object({ title: z.string().min(1), value: z.number().int().positive(), note: z.string().min(1), points: z.array(z.number().nonnegative()).min(5), from: z.string().min(1), to: z.string().min(1) }),
     }),
   }),
-  oneRecord: z.object({ ...Section, intro: z.string(), currency: z.enum(['NGN', 'USD']), story: z.object({ link: z.string().min(1), poster: z.string().min(1) }), steps: z.array(Item.extend({ visual: z.array(z.object({ label: z.string(), value: z.string() })) })).length(4) }),
+  oneRecord: z.object({ ...Section, intro: z.string(), currency: z.enum(['NGN', 'USD']), story: z.object({ link: z.string().min(1), watch: z.string().min(1), length: z.string().min(1), poster: z.string().min(1) }), steps: z.array(Item.extend({ visual: z.array(z.object({ label: z.string(), value: z.string() })) })).length(4) }),
   surfaces: z.object({
     ...Section, intro: z.string(),
     /** Each screen, with one small moment from it shown as a live card. */

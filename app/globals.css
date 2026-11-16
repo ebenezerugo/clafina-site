@@ -127,3 +127,9 @@
 }
 
 }
+
+/* A soft ring that pulses out of a play button, inviting a click. Still when motion is reduced. */
+.play-pulse { position: relative; }
+.play-pulse::after { content: ''; position: absolute; inset: 0; border-radius: 9999px; animation: play-pulse 2.2s ease-out infinite; }
+@keyframes play-pulse { 0% { box-shadow: 0 0 0 0 rgb(255 255 255 / .55); } 80%, 100% { box-shadow: 0 0 0 12px rgb(255 255 255 / 0); } }
+@media (prefers-reduced-motion: reduce) { .play-pulse::after { animation: none; } }
