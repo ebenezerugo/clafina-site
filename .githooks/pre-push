@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Runs on every push. Install once: npm run hooks   (git config core.hooksPath .githooks)
+set -e
+bash scripts/check-security.sh
