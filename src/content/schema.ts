@@ -59,6 +59,16 @@ export type HomeContent = z.infer<typeof HomeContent>;
 
 /** An illustrated story: chapters drawn by scripts/draw-illustrations.mjs, a paper trail that fills as it plays. */
 const StoryPaper = z.enum(['quote', 'invoice', 'order', 'waybill', 'payment', 'receipt']);
+/** A picture of the story (public/stories/<story>/<frame>-640.avif and -1280.avif). */
+const StoryFrame = z.string().regex(/^[a-z]+(-[a-z]+)*$/);
+/** The paperwork drawn beside a scene. Every name and amount is a token, so it follows the visitor's country. */
+const StoryCard = z.object({
+  kicker: z.string().min(1), number: z.string().min(1),
+  rows: z.array(z.object({ label: z.string().min(1), value: z.string().min(1), was: z.string().optional(), big: z.literal(true).optional(), count: z.tuple([z.number(), z.number()]).optional() })).min(1),
+  note: z.object({ tone: z.enum(['info', 'ok', 'warn']), text: z.string().min(1) }).optional(),
+  stamp: z.string().optional(), button: z.string().optional(),
+});
+export type StoryCard = z.infer<typeof StoryCard>;
 export const StoryContent = z.object({
   kind: z.literal('story'),
   meta: PageMeta,
@@ -70,12 +80,20 @@ export const StoryContent = z.object({
   /** Amounts are money tokens, worked out per country from the story's ledger, so they always add up. */
   totals: z.object({ lines: z.array(z.object({ label: z.string().min(1), amount: z.string().includes('⟦m:') })).min(1), totalLabel: z.string().min(1), total: z.string().includes('⟦m:') }),
   didLabel: z.string().min(1),
-  controls: z.object({ list: z.string().min(1), play: z.string().min(1), pause: z.string().min(1), prev: z.string().min(1), next: z.string().min(1), chapter: z.string().includes('{n}'), bike: z.string().min(1), van: z.string().min(1) }),
+  controls: z.object({ list: z.string().min(1), play: z.string().min(1), pause: z.string().min(1), prev: z.string().min(1), next: z.string().min(1), chapter: z.string().includes('{n}') }),
   chapters: z.array(z.object({
     frame: z.string().regex(/^[a-z-]+$/), time: z.string().regex(/^[A-Z][a-z]{2} \d{2}:\d{2}$/), place: z.string().min(1), short: z.string().min(1),
     paper: StoryPaper, done: z.array(StoryPaper), title: z.string().min(1), text: z.string().min(1),
     did: z.array(z.object({ kind: z.enum(['record', 'books', 'stock', 'people']), text: z.string().min(1) })).min(1),
-    vehicle: z.literal(true).optional(),
+    /** Where the paperwork card sits on the picture: left, top and width, in percent. */
+    cardAt: z.tuple([z.number(), z.number(), z.number()]),
+    /** Camera push for shots marked zoom: the point it moves towards (percent) and how far. */
+    zoom: z.tuple([z.number(), z.number(), z.number().min(1)]).optional(),
+    cards: z.array(StoryCard).min(1),
+    shots: z.array(z.object({
+      frame: StoryFrame, ms: z.number().int().min(800).max(12000), card: z.number().int().min(0).optional(), blink: StoryFrame.optional(),
+      fx: z.enum(['envelope', 'van']).optional(), chip: z.string().min(1).optional(), zoom: z.literal(true).optional(),
+    })).min(1),
   })).min(2),
   cta: z.object({ title: z.string().min(1), body: z.string().min(1) }),
 });

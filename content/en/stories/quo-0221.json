@@ -97,8 +97,6 @@
     "prev": "Previous chapter",
     "next": "Next chapter",
     "chapter": "Chapter {n} of {total}",
-    "bike": "Send it on a bike",
-    "van": "Send it in the van",
     "list": "Chapters"
   },
   "chapters": [
@@ -120,6 +118,47 @@
           "kind": "books",
           "text": "⟦t:label⟧ worked out"
         }
+      ],
+      "cardAt": [
+        71,
+        5,
+        26
+      ],
+      "cards": [
+        {
+          "kicker": "New quotation",
+          "number": "QUO-0221",
+          "rows": [
+            {
+              "label": "Customer",
+              "value": "⟦n:shop⟧"
+            },
+            {
+              "label": "Item",
+              "value": "40 × Tomato paste"
+            },
+            {
+              "label": "Price",
+              "value": "⟦m:quo.price⟧ a carton"
+            },
+            {
+              "label": "Valid for",
+              "value": "14 days"
+            }
+          ],
+          "note": {
+            "tone": "info",
+            "text": "⟦t:label⟧ ⟦t:rate⟧ worked out for you"
+          }
+        }
+      ],
+      "shots": [
+        {
+          "frame": "office-typing",
+          "ms": 5600,
+          "card": 0,
+          "blink": "office-blink"
+        }
       ]
     },
     {
@@ -140,6 +179,48 @@
           "kind": "record",
           "text": "Opened 09:11, ⟦n:sales⟧ can see it"
         }
+      ],
+      "cardAt": [
+        71,
+        5,
+        26
+      ],
+      "cards": [
+        {
+          "kicker": "New quotation",
+          "number": "QUO-0221",
+          "rows": [
+            {
+              "label": "Customer",
+              "value": "⟦n:shop⟧"
+            },
+            {
+              "label": "Item",
+              "value": "40 × Tomato paste"
+            },
+            {
+              "label": "Price",
+              "value": "⟦m:quo.price⟧ a carton"
+            },
+            {
+              "label": "Valid for",
+              "value": "14 days"
+            }
+          ]
+        }
+      ],
+      "shots": [
+        {
+          "frame": "office-press",
+          "ms": 2200,
+          "card": 0
+        },
+        {
+          "frame": "office-leanback",
+          "ms": 4400,
+          "fx": "envelope",
+          "chip": "Sent to ⟦n:customer⟧ as a link"
+        }
       ]
     },
     {
@@ -159,6 +240,60 @@
         {
           "kind": "record",
           "text": "⟦n:sales⟧ notified"
+        }
+      ],
+      "cardAt": [
+        76,
+        5,
+        21.5
+      ],
+      "cards": [
+        {
+          "kicker": "Quotation",
+          "number": "QUO-0221",
+          "rows": [
+            {
+              "label": "From",
+              "value": "Bright Harbour Traders"
+            },
+            {
+              "label": "40 cartons",
+              "value": "⟦m:quo.price⟧ each"
+            }
+          ]
+        },
+        {
+          "kicker": "Quotation",
+          "number": "QUO-0221",
+          "rows": [
+            {
+              "label": "40 cartons",
+              "value": "⟦m:quo.offer⟧ each",
+              "was": "⟦m:quo.price⟧"
+            }
+          ],
+          "note": {
+            "tone": "ok",
+            "text": "Offer sent to ⟦n:sales⟧"
+          }
+        }
+      ],
+      "shots": [
+        {
+          "frame": "shop-look",
+          "ms": 3200,
+          "card": 0,
+          "blink": "shop-blink"
+        },
+        {
+          "frame": "shop-think",
+          "ms": 3200,
+          "card": 0
+        },
+        {
+          "frame": "shop-type",
+          "ms": 4200,
+          "card": 1
         }
       ]
     },
@@ -182,6 +317,53 @@
           "kind": "books",
           "text": "Total ⟦m:quo.total⟧"
         }
+      ],
+      "cardAt": [
+        71,
+        5,
+        26
+      ],
+      "cards": [
+        {
+          "kicker": "Quotation",
+          "number": "QUO-0221",
+          "rows": [
+            {
+              "label": "Price",
+              "value": "⟦m:quo.offer⟧",
+              "was": "⟦m:quo.price⟧"
+            }
+          ]
+        },
+        {
+          "kicker": "Quotation",
+          "number": "QUO-0221",
+          "rows": [
+            {
+              "label": "Price",
+              "value": "⟦m:quo.offer⟧",
+              "was": "⟦m:quo.price⟧"
+            }
+          ],
+          "note": {
+            "tone": "ok",
+            "text": "Inside ⟦n:sales⟧'s discount limit"
+          },
+          "stamp": "Agreed"
+        }
+      ],
+      "shots": [
+        {
+          "frame": "office-typing",
+          "ms": 2600,
+          "card": 0,
+          "blink": "office-blink"
+        },
+        {
+          "frame": "office-thumbs",
+          "ms": 4600,
+          "card": 1
+        }
       ]
     },
     {
@@ -204,6 +386,55 @@
           "kind": "people",
           "text": "Pay link sent"
         }
+      ],
+      "cardAt": [
+        71,
+        5,
+        26
+      ],
+      "cards": [
+        {
+          "kicker": "Invoice",
+          "number": "INV-0412",
+          "rows": [
+            {
+              "label": "40 × ⟦m:quo.offer⟧",
+              "value": "⟦m:quo.subtotal⟧"
+            }
+          ]
+        },
+        {
+          "kicker": "Invoice",
+          "number": "INV-0412",
+          "rows": [
+            {
+              "label": "40 × ⟦m:quo.offer⟧",
+              "value": "⟦m:quo.subtotal⟧"
+            },
+            {
+              "label": "⟦t:label⟧ ⟦t:rate⟧",
+              "value": "⟦m:quo.tax⟧"
+            },
+            {
+              "label": "Total",
+              "value": "⟦m:quo.total⟧",
+              "big": true
+            }
+          ],
+          "button": "Pay now"
+        }
+      ],
+      "shots": [
+        {
+          "frame": "office-press",
+          "ms": 2600,
+          "card": 0
+        },
+        {
+          "frame": "office-printer",
+          "ms": 5000,
+          "card": 1
+        }
       ]
     },
     {
@@ -225,6 +456,67 @@
         {
           "kind": "record",
           "text": "Credit checked"
+        }
+      ],
+      "cardAt": [
+        72,
+        5,
+        25
+      ],
+      "cards": [
+        {
+          "kicker": "Sales order",
+          "number": "SO-0187",
+          "rows": [
+            {
+              "label": "Customer",
+              "value": "⟦n:shop⟧"
+            },
+            {
+              "label": "Total",
+              "value": "⟦m:quo.total⟧"
+            }
+          ],
+          "note": {
+            "tone": "warn",
+            "text": "Large order · needs ⟦n:manager⟧"
+          }
+        },
+        {
+          "kicker": "Sales order",
+          "number": "SO-0187",
+          "rows": [
+            {
+              "label": "Customer",
+              "value": "⟦n:shop⟧"
+            },
+            {
+              "label": "Total",
+              "value": "⟦m:quo.total⟧"
+            }
+          ],
+          "note": {
+            "tone": "ok",
+            "text": "Approved by ⟦n:manager⟧"
+          }
+        }
+      ],
+      "shots": [
+        {
+          "frame": "meeting-look",
+          "ms": 3600,
+          "card": 0,
+          "blink": "meeting-blink"
+        },
+        {
+          "frame": "meeting-tap",
+          "ms": 3000,
+          "card": 0
+        },
+        {
+          "frame": "meeting-nod",
+          "ms": 4000,
+          "card": 1
         }
       ]
     },
@@ -249,6 +541,89 @@
           "kind": "record",
           "text": "Pick list cleared"
         }
+      ],
+      "cardAt": [
+        70,
+        8,
+        27
+      ],
+      "cards": [
+        {
+          "kicker": "Pick list",
+          "number": "SO-0187",
+          "rows": [
+            {
+              "label": "Tomato paste",
+              "value": "40 cartons"
+            },
+            {
+              "label": "Main store",
+              "value": "120",
+              "count": [
+                120,
+                120
+              ]
+            }
+          ]
+        },
+        {
+          "kicker": "Pick list",
+          "number": "SO-0187",
+          "rows": [
+            {
+              "label": "Tomato paste",
+              "value": "40 cartons"
+            },
+            {
+              "label": "Main store",
+              "value": "100",
+              "count": [
+                120,
+                100
+              ]
+            }
+          ]
+        },
+        {
+          "kicker": "Pick list",
+          "number": "SO-0187",
+          "rows": [
+            {
+              "label": "Tomato paste",
+              "value": "40 cartons"
+            },
+            {
+              "label": "Main store",
+              "value": "80",
+              "count": [
+                100,
+                80
+              ]
+            }
+          ],
+          "note": {
+            "tone": "ok",
+            "text": "Packed: 40 of 40"
+          }
+        }
+      ],
+      "shots": [
+        {
+          "frame": "warehouse-reach",
+          "ms": 3200,
+          "card": 0
+        },
+        {
+          "frame": "warehouse-scan",
+          "ms": 3200,
+          "card": 1
+        },
+        {
+          "frame": "warehouse-load",
+          "ms": 4200,
+          "card": 2,
+          "blink": "warehouse-blink"
+        }
       ]
     },
     {
@@ -262,7 +637,7 @@
         "order"
       ],
       "title": "⟦n:driver⟧ takes the road",
-      "text": "Waybill WB-0097 goes with the load. ⟦n:sales⟧ and ⟦n:customer⟧ can both see it move. Send it in the van, or on a bike for a small order: try the switch above the scene.",
+      "text": "Waybill WB-0097 goes with the load in the van. ⟦n:sales⟧ and ⟦n:customer⟧ can both watch it move.",
       "did": [
         {
           "kind": "stock",
@@ -273,7 +648,43 @@
           "text": "⟦n:customer⟧ told: 12 min away"
         }
       ],
-      "vehicle": true
+      "cardAt": [
+        70,
+        4,
+        27
+      ],
+      "cards": [
+        {
+          "kicker": "Waybill",
+          "number": "WB-0097",
+          "rows": [
+            {
+              "label": "From",
+              "value": "Main store"
+            },
+            {
+              "label": "To",
+              "value": "⟦n:shop⟧"
+            },
+            {
+              "label": "Load",
+              "value": "40 cartons · van"
+            }
+          ],
+          "note": {
+            "tone": "info",
+            "text": "In transit · both sides can see it"
+          }
+        }
+      ],
+      "shots": [
+        {
+          "frame": "street",
+          "ms": 9400,
+          "card": 0,
+          "fx": "van"
+        }
+      ]
     },
     {
       "frame": "sign",
@@ -296,6 +707,81 @@
         {
           "kind": "people",
           "text": "⟦n:sales⟧ notified"
+        }
+      ],
+      "cardAt": [
+        72,
+        6,
+        25
+      ],
+      "zoom": [
+        41,
+        50,
+        1.7
+      ],
+      "cards": [
+        {
+          "kicker": "Waybill",
+          "number": "WB-0097",
+          "rows": [
+            {
+              "label": "To",
+              "value": "⟦n:shop⟧"
+            },
+            {
+              "label": "Goods",
+              "value": "40 cartons"
+            },
+            {
+              "label": "Driver",
+              "value": "⟦n:driver⟧"
+            }
+          ],
+          "note": {
+            "tone": "info",
+            "text": "At the door"
+          }
+        },
+        {
+          "kicker": "Waybill",
+          "number": "WB-0097",
+          "rows": [
+            {
+              "label": "To",
+              "value": "⟦n:shop⟧"
+            },
+            {
+              "label": "Goods",
+              "value": "40 cartons"
+            },
+            {
+              "label": "Driver",
+              "value": "⟦n:driver⟧"
+            }
+          ],
+          "note": {
+            "tone": "ok",
+            "text": "Signed by ⟦n:customer⟧ · 16:05"
+          }
+        }
+      ],
+      "shots": [
+        {
+          "frame": "door-sign",
+          "ms": 3400,
+          "card": 0,
+          "blink": "door-blink"
+        },
+        {
+          "frame": "door-sign",
+          "ms": 3400,
+          "zoom": true,
+          "card": 0
+        },
+        {
+          "frame": "door-smile",
+          "ms": 4200,
+          "card": 1
         }
       ]
     },
@@ -320,6 +806,53 @@
         {
           "kind": "record",
           "text": "Matched to INV-0412"
+        }
+      ],
+      "cardAt": [
+        76,
+        5,
+        21.5
+      ],
+      "cards": [
+        {
+          "kicker": "Invoice",
+          "number": "INV-0412",
+          "rows": [
+            {
+              "label": "Total",
+              "value": "⟦m:quo.total⟧",
+              "big": true
+            }
+          ],
+          "button": "Pay now"
+        },
+        {
+          "kicker": "Invoice",
+          "number": "INV-0412",
+          "rows": [
+            {
+              "label": "Total",
+              "value": "⟦m:quo.total⟧",
+              "big": true
+            }
+          ],
+          "note": {
+            "tone": "ok",
+            "text": "Paid"
+          }
+        }
+      ],
+      "shots": [
+        {
+          "frame": "shop-look",
+          "ms": 3400,
+          "card": 0,
+          "blink": "shop-blink"
+        },
+        {
+          "frame": "shop-cheer",
+          "ms": 4200,
+          "card": 1
         }
       ]
     },
@@ -351,6 +884,47 @@
         {
           "kind": "record",
           "text": "Customer balance ⟦m:quo.zero⟧"
+        }
+      ],
+      "cardAt": [
+        71,
+        5,
+        26
+      ],
+      "cards": [
+        {
+          "kicker": "Receipt",
+          "number": "RCT-0310",
+          "rows": [
+            {
+              "label": "Sales",
+              "value": "⟦m:quo.subtotal⟧"
+            },
+            {
+              "label": "⟦t:label⟧ owed",
+              "value": "⟦m:quo.tax⟧"
+            },
+            {
+              "label": "Bank",
+              "value": "+⟦m:quo.total⟧"
+            },
+            {
+              "label": "⟦n:shop⟧ owes",
+              "value": "⟦m:quo.zero⟧"
+            }
+          ]
+        }
+      ],
+      "shots": [
+        {
+          "frame": "office-manager",
+          "ms": 4600,
+          "card": 0
+        },
+        {
+          "frame": "office-highfive",
+          "ms": 4400,
+          "card": 0
         }
       ]
     }

@@ -6,27 +6,35 @@ const URL = '/en/stories/journey-of-a-quote/';
 test('the story opens on its first chapter and steps through by button and keyboard', async ({ page }) => {
   await page.goto(URL);
   await expect(page.getByRole('heading', { level: 2, name: 'Maya writes a quote' })).toBeVisible();
-  await expect(page.locator('.ill > svg')).toHaveAttribute('aria-label', 'Maya writes a quote');
+  await expect(page.locator('.ps')).toHaveAttribute('aria-label', 'Maya writes a quote');
+  await expect(page.locator('.ps img.f.on').first()).toHaveAttribute('src', /office-typing-1280\.avif$/);
   await page.getByRole('button', { name: 'Next chapter' }).click();
   await expect(page.getByRole('heading', { level: 2, name: 'Sealed, and on its way' })).toBeVisible();
-  await expect(page.locator('.ill > svg')).toHaveAttribute('aria-label', 'Sealed, and on its way');
+  await expect(page.locator('.ps')).toHaveAttribute('aria-label', 'Sealed, and on its way');
   await page.getByRole('button', { name: 'Next chapter' }).press('ArrowRight');
   await expect(page.getByRole('heading', { level: 2, name: 'Leo names his own price' })).toBeVisible();
 });
 
-test('the delivery chapter can go by bike, and the paper trail jumps to a paper', async ({ page }) => {
+test('each chapter plays its scene: poses change and the paperwork updates', async ({ page }) => {
+  await page.goto(URL);
+  await page.getByRole('button', { name: /Sales order/ }).click();
+  await expect(page.locator('.ps-card')).toContainText('needs Priya');
+  await expect(page.locator('.ps-card')).toContainText('Approved by Priya', { timeout: 12_000 });
+  await expect(page.locator('.ps img.f.on').first()).toHaveAttribute('src', /meeting-nod-1280\.avif$/);
+});
+
+test('the van drives through the delivery chapter, and the paper trail jumps to a paper', async ({ page }) => {
   await page.goto(URL);
   await page.getByRole('button', { name: /Waybill/ }).click();
   await expect(page.getByRole('heading', { level: 2, name: 'Omar takes the road' })).toBeVisible();
-  await page.getByRole('button', { name: 'Send it on a bike' }).click();
-  await expect(page.getByRole('button', { name: 'Send it in the van' })).toBeVisible();
-  await expect(page.locator('.ill > svg')).toHaveAttribute('aria-label', 'Omar takes the road');
+  await expect(page.locator('.ps-van img')).toBeVisible();
+  await expect(page.locator('.ps-card')).toContainText('In transit');
 });
 
 test('the story page has no accessibility violations and fits a phone', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(URL);
-  await expect(page.locator('.ill > svg')).toBeVisible();
+  await expect(page.locator('.ps img.f.on').first()).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   const results = await new AxeBuilder({ page }).analyze();
   expect(results.violations).toEqual([]);
@@ -58,7 +66,8 @@ test('names, money and tax follow the visitor\'s country', async ({ page }) => {
   await page.getByRole('button', { name: 'Next chapter' }).click();
   await page.getByRole('button', { name: 'Next chapter' }).click();
   await expect(page.getByRole('heading', { level: 2, name: 'Tunde names his own price' })).toBeVisible();
-  await expect(page.locator('.ill > svg')).toContainText('₦29,000');
+  await expect(page.locator('.ps-card')).toContainText('₦31,000');
+  await expect(page.locator('.ps-card')).toContainText('₦29,000', { timeout: 12_000 });
 
   await page.goto('/en/industries/farm/?country=GB');
   await expect(page.locator('#day h2')).toHaveText('A day at Cotswold Family Farms');

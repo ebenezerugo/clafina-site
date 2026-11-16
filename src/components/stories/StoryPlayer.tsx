@@ -1,16 +1,16 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from 'react';
-import { Scene } from '@/illustrations/Scene';
+import { useEffect, useState, type KeyboardEvent } from 'react';
 import { Tk } from '@/profiles/Tk';
 import { resolveText } from '@/profiles/tokens';
+import { framesOf, PhotoScene, type SceneChapter } from './PhotoScene';
 
 type Paper = { id: string; name: string; number: string; stamp: string };
-type Chapter = {
+type Chapter = SceneChapter & {
   frame: string; time: string; place: string; short: string; paper: string; done: string[];
-  title: string; text: string; did: { kind: 'record' | 'books' | 'stock' | 'people'; text: string }[]; vehicle?: true;
+  text: string; did: { kind: 'record' | 'books' | 'stock' | 'people'; text: string }[];
 };
-type Controls = { list: string; play: string; pause: string; prev: string; next: string; chapter: string; bike: string; van: string };
+type Controls = { list: string; play: string; pause: string; prev: string; next: string; chapter: string };
 
 const DID_TONE = { record: 'bg-tint-sky', books: 'bg-tint-lilac', stock: 'bg-tint-sand', people: 'bg-tint-mint' } as const;
 const PAPER_ICON: Record<string, string> = {
@@ -18,52 +18,63 @@ const PAPER_ICON: Record<string, string> = {
   waybill: 'M2 6h11v10H2zM13 9h4l4 4v3h-8zM6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4M17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4',
   payment: 'M3 7a2 2 0 0 1 2-2h12v4M3 7v10a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-3M3 7h16a1 1 0 0 1 1 1v3M20 11h-4a2 2 0 0 0 0 4h4z', receipt: 'M6 2h12v20l-3-2-3 2-3-2-3 2zM9 7h6M9 11h6M9 15h4',
 };
-const STEP_MS = 6500;
+
+const reducedMotion = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /**
- * Plays an illustrated story chapter by chapter. The first frame arrives with the page; later frames are fetched
- * as they are reached (and one ahead), so the page stays light. Everything works by keyboard; nothing plays by itself.
+ * Plays a picture story chapter by chapter. Each chapter runs its short scene once when it opens (a few poses and
+ * its paperwork); Play moves on through the chapters by itself, and stops on the last one. Pictures are loaded for
+ * the chapter on screen and the next one only. Everything works by keyboard.
  */
-export function StoryPlayer({ chapters, papers, trailTitle, totals, didLabel, controls, frameBase, firstFrame }: {
+export function StoryPlayer({ chapters, papers, trailTitle, totals, didLabel, controls, frameBase }: {
   chapters: Chapter[]; papers: Paper[]; trailTitle: string; totals: { lines: { label: string; amount: string }[]; totalLabel: string; total: string };
-  didLabel: string; controls: Controls; frameBase: string; firstFrame: string;
+  didLabel: string; controls: Controls; frameBase: string;
 }) {
   const [at, setAt] = useState(0);
+  const [shot, setShot] = useState(0);
+  const [blinking, setBlinking] = useState(false);
   const [playing, setPlaying] = useState(false);
-  const [vehicle, setVehicle] = useState<'van' | 'bike'>('van');
-  const [frames, setFrames] = useState<Record<string, string>>(() => ({ [chapters[0]!.frame]: firstFrame }));
-  const asked = useRef(new Set<string>([chapters[0]!.frame]));
-  const chapter = chapters[at]!;
-  const frameOf = useCallback((c: Chapter) => (c.vehicle && vehicle === 'bike' ? `${c.frame}-bike` : c.frame), [vehicle]);
-
-  const want = useCallback((name: string) => {
-    if (asked.current.has(name)) return;
-    asked.current.add(name);
-    fetch(`${frameBase}/${name}.svgf`).then((r) => (r.ok ? r.text() : Promise.reject(new Error(String(r.status)))))
-      .then((svg) => setFrames((f) => ({ ...f, [name]: svg })))
-      .catch(() => asked.current.delete(name));
-  }, [frameBase]);
-
+  // Until the page has loaded, only the opening picture is fetched, so it arrives first.
+  const [warm, setWarm] = useState(false);
   useEffect(() => {
-    want(frameOf(chapter));
-    const next = chapters[at + 1];
-    if (next) want(frameOf(next));
-  }, [at, chapter, chapters, frameOf, want]);
+    const on = () => setWarm(true);
+    if (document.readyState === 'complete') { const t = setTimeout(on, 300); return () => clearTimeout(t); }
+    addEventListener('load', on, { once: true });
+    return () => removeEventListener('load', on);
+  }, []);
+  const chapter = chapters[at]!;
+  const lastShot = chapter.shots.length - 1;
+  const cur = Math.min(shot, lastShot);
 
   // Playing stops by itself on the last chapter: it is derived, not stored.
   const running = playing && at < chapters.length - 1;
   useEffect(() => {
+    const ms = chapter.shots[cur]!.ms;
+    if (cur < lastShot) { const t = setTimeout(() => setShot(cur + 1), ms); return () => clearTimeout(t); }
     if (!running) return;
-    const t = setTimeout(() => setAt((i) => Math.min(i + 1, chapters.length - 1)), STEP_MS);
+    const t = setTimeout(() => { setShot(0); setAt((i) => Math.min(i + 1, chapters.length - 1)); }, ms);
     return () => clearTimeout(t);
-  }, [running, at, chapters.length]);
+  }, [running, at, cur, lastShot, chapter, chapters.length]);
 
-  const go = (i: number) => { setPlaying(false); setAt((i + chapters.length) % chapters.length); };
+  // A blink now and then while the story plays, so the people feel alive.
+  const blinkFrame = chapter.shots[cur]!.blink;
+  useEffect(() => {
+    if (!running || !blinkFrame || reducedMotion()) return;
+    let t: ReturnType<typeof setTimeout>;
+    const loop = () => { t = setTimeout(() => { setBlinking(true); t = setTimeout(() => { setBlinking(false); loop(); }, 150); }, 1400 + Math.random() * 1600); };
+    loop();
+    return () => { clearTimeout(t); setBlinking(false); };
+  }, [running, blinkFrame]);
+
+  const go = (i: number) => { setPlaying(false); setShot(reducedMotion() ? Number.MAX_SAFE_INTEGER : 0); setAt((i + chapters.length) % chapters.length); };
   const onKey = (e: KeyboardEvent) => {
     if (e.key === 'ArrowRight') { e.preventDefault(); go(at + 1); }
     if (e.key === 'ArrowLeft') { e.preventDefault(); go(at - 1); }
   };
-  const markup = frames[frameOf(chapter)];
+  const s = chapter.shots[cur]!;
+  const show = blinking && s.blink ? s.blink : s.frame;
+  // The pictures of the chapter before and after stay mounted, so moving between chapters is a dissolve, not a cut.
+  const keep = warm ? [...new Set([s.frame, ...framesOf(chapter), ...(chapters[at - 1] ? framesOf(chapters[at - 1]!) : []), ...(chapters[at + 1] ? framesOf(chapters[at + 1]!) : [])])] : [s.frame];
   const label = controls.chapter.replace('{n}', String(at + 1)).replace('{total}', String(chapters.length));
   const firstOf = (paper: string) => chapters.findIndex((c) => c.paper === paper);
 
@@ -74,12 +85,8 @@ export function StoryPlayer({ chapters, papers, trailTitle, totals, didLabel, co
           <p className="absolute start-3 top-3 z-10 inline-flex -rotate-1 items-center gap-2 rounded-md border-2 border-[#1b2033] bg-[#fde68a] px-2.5 py-1 text-xs font-bold text-[#0b1020] sm:text-sm">
             <span>{at + 1}/{chapters.length}</span><span><Tk text={chapter.place} /></span><time className="font-medium tabular">{chapter.time}</time>
           </p>
-          {chapter.vehicle && (
-            <button type="button" onClick={() => setVehicle((v) => (v === 'van' ? 'bike' : 'van'))} className="absolute end-3 top-3 z-10 min-h-11 rounded-lg border-2 border-[#1b2033] bg-white px-3 text-sm font-semibold text-[#0b1020]">
-              {vehicle === 'van' ? controls.bike : controls.van}
-            </button>
-          )}
-          {markup ? <Scene key={frameOf(chapter)} markup={markup} label={resolveText(chapter.title)} /> : <div className="ill" aria-busy="true" />}
+          <PhotoScene base={frameBase} chapter={chapter} shot={cur} show={show} keep={keep} label={resolveText(chapter.title)}
+            eager={at === 0} paused={false} chapterKey={at} />
         </div>
         <div className="grid gap-3 p-5 sm:p-6" aria-live="polite">
           <h2 className="text-2xl font-extrabold sm:text-[1.65rem]"><Tk text={chapter.title} /></h2>
@@ -91,7 +98,7 @@ export function StoryPlayer({ chapters, papers, trailTitle, totals, didLabel, co
         </div>
         <div className="flex flex-wrap items-center gap-3 px-5 pb-5 sm:px-6">
           <button type="button" onClick={() => go(at - 1)} aria-label={controls.prev} className="inline-flex size-11 items-center justify-center rounded-control border border-line bg-raised rtl:-scale-x-100">←</button>
-          <button type="button" onClick={() => { if (!running && at === chapters.length - 1) setAt(0); setPlaying(!running); }} aria-pressed={running} className="inline-flex min-h-11 items-center gap-2 rounded-control bg-primary px-5 font-semibold text-on-primary">
+          <button type="button" onClick={() => { if (!running && at === chapters.length - 1) { setAt(0); setShot(0); } setPlaying(!running); }} aria-pressed={running} className="inline-flex min-h-11 items-center gap-2 rounded-control bg-primary px-5 font-semibold text-on-primary">
             {running ? `❚❚ ${controls.pause}` : `▶ ${controls.play}`}
           </button>
           <button type="button" onClick={() => go(at + 1)} aria-label={controls.next} className="inline-flex size-11 items-center justify-center rounded-control border border-line bg-raised rtl:-scale-x-100">→</button>
