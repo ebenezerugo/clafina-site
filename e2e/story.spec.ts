@@ -33,8 +33,11 @@ test('the van drives through the delivery chapter, and the paper trail jumps to 
 
 test('the story page has no accessibility violations and fits a phone', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
+  // Contrast is judged on the finished card, not halfway through its fade-in.
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto(URL);
   await expect(page.locator('.ps img.f.on').first()).toBeVisible();
+  await expect(page.locator('.ps-card')).toContainText('worked out for you');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   const results = await new AxeBuilder({ page }).analyze();
   expect(results.violations).toEqual([]);
