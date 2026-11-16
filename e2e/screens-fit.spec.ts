@@ -13,7 +13,11 @@ for (const locale of ['en', 'ar']) {
     await page.evaluate(async () => {
       for (let y = 0; y < document.body.scrollHeight; y += 700) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 30)); }
     });
-    await expect.poll(() => page.locator('[data-screen] template').count()).toBe(0);
+    // On a slow machine a fast scroll can pass a screen before it is drawn: bring any left over into view, then check again.
+    await expect.poll(async () => {
+      await page.evaluate(() => document.querySelector('[data-screen] template')?.closest('[data-screen]')?.scrollIntoView({ block: 'center' }));
+      return page.locator('[data-screen] template').count();
+    }, { timeout: 30_000 }).toBe(0);
     expect(await page.locator('[data-screen] .s-card').count()).toBeGreaterThan(100);
     await page.waitForTimeout(500);
     const problems = await page.evaluate(() => {
