@@ -1,0 +1,559 @@
+{
+  "template": "next-web",
+  "about": "Next.js app, server and client (references: commerce-storefront, commerce-pos-web, clafina-site). Server code can be reached by anyone, so the API's server-side rules (SQL, outbound, shell) apply too. POSIX ERE; glob pathspecs. If a repo has no src/ folder, keep the app/** paths; a rule whose paths match nothing exits 2.",
+  "min_files": 930,
+  "rules": [
+    {
+      "name": "shell-or-eval",
+      "rule": "1.2",
+      "why": "code built from a string at run time: no eval, new Function or string timers",
+      "pattern": "(^|[^[:alnum:]_.$])eval\\(|new Function\\(|set(Timeout|Interval)\\([[:space:]]*['\"`]|(^|[^[:alnum:]_.$])(exec|execSync)\\(|shell:[[:space:]]*true",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx",
+        "scripts/**/*.mjs",
+        "scripts/**/*.ts"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*|\\{/\\*)"
+    },
+    {
+      "name": "html-unsanitised",
+      "rule": "1.3",
+      "why": "HTML written from data: use the sanitiser (mail: cleanPastedHtml / mail-clean-html; server-made HTML: openServerSheet) (WEB-04)",
+      "pattern": "dangerouslySetInnerHTML|(innerHTML|outerHTML)[[:space:]]*=[^=]|insertAdjacentHTML\\(|document\\.write(ln)?\\(|createContextualFragment\\(",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*|\\{/\\*)|sanitize(Html)?\\(|DOMPurify|JSON\\.stringify\\(|application/ld\\+json"
+    },
+    {
+      "name": "path-from-input",
+      "rule": "1.7",
+      "why": "a file path joined from a request value: join under a fixed root and check it stays inside; take names from the store",
+      "pattern": "(path|posix|win32)\\.(join|resolve|normalize)\\(.*(dto|body|query|params|input|req\\.|request\\.|originalname|originalName|fileName|filename)",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*|\\{/\\*)|safeJoin|insideRoot|within\\("
+    },
+    {
+      "name": "unsafe-deserialise",
+      "rule": "1.8",
+      "why": "untrusted data turned into objects or code: safe YAML schema, no object streams, no XML external entities",
+      "pattern": "(^|[^[:alnum:]_])(yaml|YAML)\\.load\\(|node-serialize|serialize-javascript.*unsafe|(^|[^[:alnum:]_.])unserialize\\(|v8\\.deserialize\\(|noent[[:space:]]*:[[:space:]]*true|resolveExternals|expandEntities[[:space:]]*:[[:space:]]*true|processEntities[[:space:]]*:[[:space:]]*true|allowExternalEntities",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*)|JSON_SCHEMA|FAILSAFE_SCHEMA|CORE_SCHEMA"
+    },
+    {
+      "name": "cors-open",
+      "rule": "2.9",
+      "why": "cross-origin access by wildcard or a reflected Origin: name the origins",
+      "pattern": "origin[[:space:]]*:[[:space:]]*(true|['\"]\\*['\"])|[aA]ccess-[cC]ontrol-[aA]llow-[oO]rigin['\"]?[[:space:]]*[,:][[:space:]]*(['\"]\\*['\"]|req(uest)?\\.headers)|callback\\([[:space:]]*null[[:space:]]*,[[:space:]]*(req(uest)?\\.headers\\.)?origin[[:space:]]*\\)|enableCors\\([[:space:]]*\\)",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx",
+        "next.config.ts",
+        "next.config.mjs",
+        "next.config.js"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*)"
+    },
+    {
+      "name": "secret-in-browser-storage",
+      "rule": "3.1",
+      "why": "something that authenticates written to localStorage, sessionStorage or IndexedDB: refresh tokens are HttpOnly cookies, access tokens live in memory (WEB-01)",
+      "pattern": "((local|session)Storage(\\.setItem\\(|\\[)|indexedDB|openDB\\(|idbSet\\(|\\.setItem\\().*([tT]oken|[sS]ecret|[pP]assword|[cC]redential|[jJ]wt|JWT|[bB]earer|[rR]efresh|[aA]piKey|[sS]ession[^S])",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*|<!--)"
+    },
+    {
+      "name": "secret-in-public-env",
+      "rule": "3.2",
+      "why": "a NEXT_PUBLIC_ variable is shipped to every browser: a secret there is public",
+      "pattern": "NEXT_PUBLIC_[A-Z0-9_]*(SECRET|TOKEN|PASSWORD|PRIVATE|API_KEY|SERVICE_KEY|SEAL)",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx",
+        "next.config.*",
+        ".env.example",
+        "**/.env.example",
+        "Dockerfile*",
+        "ci/**"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*|\\{/\\*)|^[[:space:]]*#"
+    },
+    {
+      "name": "secret-in-log",
+      "rule": "3.6, 15.2",
+      "why": "a value named like a secret goes to the console: never the value",
+      "pattern": "(console|logger)\\.(log|warn|error|debug|info|trace)\\(.*(\\$\\{|,[[:space:]]*)([[:alnum:]_]+\\.)*([pP]assword|[sS]ecret|[tT]oken|[aA]piKey|[aA]uthorization|[cC]ookie)[[:alnum:]_]*[[:space:]]*[]}),]",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*|\\{/\\*)"
+    },
+    {
+      "name": "secret-compare",
+      "rule": "3.7",
+      "why": "a secret compared with ===: use timingSafeEqual (or the service's constant-time helper)",
+      "pattern": "([sS]ignature|[hH]mac|HMAC|[sS]ecret|[aA]piKey|[vV]erifyToken|[pP]assword|(^|[^[:alpha:]])otp|Otp)[]['\"[:alnum:]_]*[[:space:]]*(===|!==|==|!=)[[:space:]]*[^[:space:]]|(===|!==|==|!=)[[:space:]]*[[:alnum:]_.]*([sS]ignature|[hH]mac|[sS]ecret|[aA]piKey|[vV]erifyToken|[pP]assword|otp|Otp)[[:alnum:]_]*",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*)|timingSafeEqual|(===|!==|==|!=)[[:space:]]*(undefined|null|''|\"\"|true|false|0|-1)([^[:alnum:]_]|$)|(undefined|null|true|false)[[:space:]]*(===|!==|==|!=)|typeof |Version[[:space:]]*(===|!==)|\\.id[[:space:]]*(===|!==)|(===|!==)[[:space:]]*[[:alnum:]_.]*\\.id([^[:alnum:]_]|$)|(==|!=)[[:space:]]*(true|false)([^[:alnum:]_]|$)"
+    },
+    {
+      "name": "outbound-raw",
+      "rule": "4.1",
+      "why": "a server-side request to a host that is not a literal or the configured API base: the address may be a tenant's (INT-02); fetch only configured bases",
+      "pattern": "(await|return|=>|[=(,:?])[[:space:]]*fetch\\(|(^|[^[:alnum:]_.$])axios(\\.[a-z]+)?\\(|new XMLHttpRequest\\(|new WebSocket\\(",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**",
+        "**/lib/api/**",
+        "**/lib/http/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*|\\{/\\*)|fetch\\([[:space:]]*['\"`](/|https://[a-z0-9.-]+[/'\"`])|fetch\\([[:space:]]*`\\$\\{[[:space:]]*(API|BASE|STORE|ERP|SERVICE)[A-Z_]*|process\\.env\\.[A-Z_]+(URL|BASE)"
+    },
+    {
+      "name": "tls-verification-off",
+      "rule": "4.2",
+      "why": "TLS verification switched off: never, tests included; use a test CA (L-13)",
+      "pattern": "rejectUnauthorized[[:space:]]*:[[:space:]]*false|NODE_TLS_REJECT_UNAUTHORIZED|checkServerIdentity[[:space:]]*:[[:space:]]*\\(\\)[[:space:]]*=>[[:space:]]*(undefined|null)|curl[^|;]*[[:space:]](-k|--insecure)([[:space:]]|$)|['\"]?secure['\"]?[[:space:]]*:[[:space:]]*false",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx",
+        "scripts/**",
+        "ci/**",
+        "**/*.sh",
+        "Dockerfile*"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*|#)",
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ]
+    },
+    {
+      "name": "install-not-from-lockfile",
+      "rule": "5.1",
+      "why": "an install that can resolve outside the lockfile: npm ci only, and never --legacy-peer-deps",
+      "pattern": "--legacy-peer-deps|(^|[^[:alnum:]_-])npm[[:space:]]+(install|i|add|update)([[:space:]]|$|['\"])|(^|[^[:alnum:]_-])yarn[[:space:]]+add([[:space:]]|$)",
+      "paths": [
+        "Dockerfile*",
+        "**/Dockerfile*",
+        "ci/**",
+        "Jenkinsfile*",
+        ".woodpecker/**",
+        ".github/workflows/**",
+        "scripts/**/*.sh",
+        "Makefile",
+        ".husky/**",
+        "package.json"
+      ],
+      "allow": "^[[:space:]]*(#|//)"
+    },
+    {
+      "name": "dependency-from-url",
+      "rule": "5.4",
+      "why": "a dependency from git, a URL, a tarball or the disk: registry packages with an integrity hash only",
+      "pattern": "\"[^\"]+\"[[:space:]]*:[[:space:]]*\"(git\\+|git:|github:|gitlab:|bitbucket:|file:|link:|https?://|[[:alnum:]_.-]+/[[:alnum:]_.-]+#)|\"resolved\"[[:space:]]*:[[:space:]]*\"",
+      "paths": [
+        "package.json",
+        "package-lock.json"
+      ],
+      "allow": "\"(url|homepage|\\$schema|repository|bugs|funding|author|email|registry)\"[[:space:]]*:|\"resolved\"[[:space:]]*:[[:space:]]*\"https://registry\\.npmjs\\.org/"
+    },
+    {
+      "name": "image-or-action-not-pinned",
+      "rule": "5.6",
+      "why": "an image or action by a tag that can move: pin it by @sha256 digest (images) or a 40-hex commit (actions) (CI-04)",
+      "pattern": "^[[:space:]]*FROM[[:space:]]|^[[:space:]]*ARG[[:space:]]+[A-Z0-9_]*(IMAGE|BASE)[A-Z0-9_]*=|^[[:space:]]*-?[[:space:]]*image:[[:space:]]*[^[:space:]]|^[[:space:]]*-?[[:space:]]*uses:[[:space:]]*[^.[:space:]]|^[A-Z0-9_]*IMAGE[A-Z0-9_]*=",
+      "paths": [
+        "Dockerfile*",
+        "**/Dockerfile*",
+        "**/docker-compose*.yml",
+        "**/compose*.yml",
+        ".github/workflows/**",
+        ".woodpecker/**",
+        "ci/images*.env",
+        "deployments/**"
+      ],
+      "allow": "@sha256:[0-9a-f]{64}|@[0-9a-f]{40}([[:space:]]|$)|^[[:space:]]*FROM[[:space:]]+(--platform=[^[:space:]]+[[:space:]]+)?(scratch|[a-z][a-z0-9_-]*|\\$\\{?[A-Za-z0-9_]+\\}?)([[:space:]]+[aA][sS][[:space:]]+[^[:space:]]+)?[[:space:]]*$|image:[[:space:]]*['\"]?\\$\\{[A-Z0-9_]+\\}['\"]?[[:space:]]*$|^[[:space:]]*-?[[:space:]]*uses:[[:space:]]*\\./"
+    },
+    {
+      "name": "branch-build-privileges",
+      "rule": "6.1",
+      "why": "a pipeline line that hands a build the host Docker daemon or a credential: only what the generator emits for master is in the baseline (CI-01, CI-02)",
+      "pattern": "/var/run/docker\\.sock|withCredentials|credentials\\(['\"]|secrets:[[:space:]]*\\[|from_secret|GITHUB_TOKEN|secrets\\.",
+      "paths": [
+        "Jenkinsfile*",
+        ".woodpecker/**",
+        ".github/workflows/**"
+      ],
+      "allow": "^[[:space:]]*(//|#)"
+    },
+    {
+      "name": "image-host-open",
+      "rule": "4.1",
+      "why": "the image optimiser fetches from any host: name the hosts in images.remotePatterns",
+      "pattern": "hostname[[:space:]]*:[[:space:]]*['\"]\\*\\*?['\"]|domains[[:space:]]*:[[:space:]]*\\[[[:space:]]*['\"]\\*",
+      "paths": [
+        "next.config.*"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*|\\{/\\*)"
+    },
+    {
+      "name": "weak-hash-or-cipher",
+      "rule": "13.1, 13.2",
+      "why": "MD5, SHA-1, DES, RC4 or ECB, or a fast hash on a password or PIN: use Argon2id/bcrypt for passwords and AES-GCM/ChaCha20-Poly1305 for data; a non-security use (cache key, ETag) is paid off by switching to sha256",
+      "pattern": "createHash\\([[:space:]]*['\"](md5|sha1|md4|ripemd160)['\"]|createHmac\\([[:space:]]*['\"](md5|sha1)['\"]|create(De)?[cC]ipher(iv)?\\([[:space:]]*['\"]([a-z0-9-]*-ecb|des[a-z0-9-]*|rc4[a-z0-9-]*|bf[a-z0-9-]*)['\"]|create(De)?[cC]ipher\\(|createHash\\([[:space:]]*['\"]sha(256|512)['\"]\\).*([pP]assword|[pP]in[^a-z]|[pP]asscode)",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*)"
+    },
+    {
+      "name": "insecure-random",
+      "rule": "13.3",
+      "why": "Math.random for something that must be unguessable: use crypto.randomBytes / randomUUID / randomInt",
+      "pattern": "Math\\.random\\(\\)",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*)|[jJ]itter|sleep\\(|delay|setTimeout|0\\.[0-9]+[[:space:]]*\\+[[:space:]]*Math\\.random|\\.sort\\(|JITTER|readonly id[[:space:]]*="
+    },
+    {
+      "name": "literal-key-or-iv",
+      "rule": "13.4",
+      "why": "a key, salt or IV written in code: load it from the sealed config; draw IVs and nonces fresh each time",
+      "pattern": "([iI][vV]|[nN]once|[sS]alt|[kK]ey|[sS]ecret)[[:space:]]*[:=][[:space:]]*(Buffer\\.from\\([[:space:]]*)?['\"`][A-Za-z0-9+/=_-]{16,}['\"`]|create(De)?[cC]ipheriv\\([^,]+,[[:space:]]*(Buffer\\.from\\()?['\"`]",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*)|[pP]ublic[kK]ey|([kK]ey|[iI][vV]|[sS]alt|[nN]once|[sS]ecret)[[:space:]]*[:=][[:space:]]*['\"`][A-Za-z_.:-]+['\"`]|_key[[:space:]]*="
+    },
+    {
+      "name": "jwt-algorithm-not-pinned",
+      "rule": "13.5",
+      "why": "a token verified without a pinned algorithm list, decoded without verifying, or with 'none' or no expiry: name the one algorithm",
+      "pattern": "[jJ]wt[A-Za-z]*\\.(verify|verifyAsync)\\(|jwt\\.decode\\(|algorithms?[[:space:]]*:[[:space:]]*\\[?[^]]*['\"]none['\"]|ignoreExpiration[[:space:]]*:[[:space:]]*true",
+      "paths": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*)|algorithms"
+    },
+    {
+      "name": "no-timeout",
+      "rule": "14.5",
+      "why": "a server-side fetch with no time limit: pass signal: AbortSignal.timeout(...)",
+      "pattern": "(await|return)[[:space:]]+fetch\\([^)]*\\)[[:space:]]*;?[[:space:]]*$|axios\\.create\\([[:space:]]*\\)",
+      "paths": [
+        "src/app/**/*.ts",
+        "src/app/**/*.tsx",
+        "src/lib/**/*.ts",
+        "src/server/**/*.ts",
+        "app/**/*.ts",
+        "app/**/*.tsx",
+        "lib/**/*.ts"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "e2e/**",
+        "test/**",
+        "tests/**",
+        "**/__tests__/**",
+        "**/*.stories.tsx",
+        ".next/**",
+        "**/.worktrees/**"
+      ],
+      "allow": "^[[:space:]]*(\\*|//|/\\*|\\{/\\*)|signal"
+    }
+  ],
+  "require": [
+    {
+      "name": "npm-ignore-scripts",
+      "rule": "5.2",
+      "why": "install scripts off; the packages that need a build step are rebuilt by name",
+      "file": ".npmrc",
+      "pattern": "^ignore-scripts[[:space:]]*=[[:space:]]*true[[:space:]]*$"
+    },
+    {
+      "name": "npm-min-release-age",
+      "rule": "5.3",
+      "why": "a version younger than 7 days is not installed (npm >= 11.10 key, in days)",
+      "file": ".npmrc",
+      "pattern": "^min-release-age[[:space:]]*=[[:space:]]*([7-9]|[1-9][0-9]+)[[:space:]]*$"
+    },
+    {
+      "name": "npm-no-git-deps",
+      "rule": "5.4",
+      "why": "npm refuses git dependencies",
+      "file": ".npmrc",
+      "pattern": "^allow-git[[:space:]]*=[[:space:]]*none[[:space:]]*$"
+    },
+    {
+      "name": "security-headers",
+      "rule": "8.5",
+      "why": "every response carries a content security policy and nosniff (next.config headers() or middleware)",
+      "file": "public/_headers",
+      "pattern": "Content-Security-Policy"
+    },
+    {
+      "name": "gate-on-push",
+      "rule": "11",
+      "why": "the gate runs on every push",
+      "file": ".githooks/pre-push",
+      "pattern": "scripts/check-security\\.sh"
+    }
+  ],
+  "lockfiles": [
+    "package-lock.json"
+  ],
+  "audit": [
+    "npm audit --audit-level=high --omit=dev"
+  ],
+  "require_off": {
+    "pipeline-generated": "16 Nov 2026: not in the pipeline generator; CI is .github/workflows/ci.yml (GitHub Actions, Cloudflare Pages). Moving it into the generator is the owner's call.",
+    "sbom": "16 Nov 2026: no ci/security.sh and no container image: a static site built by GitHub Actions has nothing for syft to scan. The owner decides whether a CycloneDX file of package-lock.json is wanted.",
+    "no-powered-by": "16 Nov 2026: output is a static export served by Cloudflare Pages; there is no Next server to send X-Powered-By, so next.config.ts has no poweredByHeader line."
+  }
+}

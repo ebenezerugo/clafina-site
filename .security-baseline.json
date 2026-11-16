@@ -1,0 +1,56 @@
+[
+  {
+    "rule": "branch-build-privileges",
+    "file": ".github/workflows/deploy.yml",
+    "text": "CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}",
+    "n": 1
+  },
+  {
+    "rule": "branch-build-privileges",
+    "file": ".github/workflows/deploy.yml",
+    "text": "CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}",
+    "n": 2
+  },
+  {
+    "rule": "branch-build-privileges",
+    "file": ".github/workflows/deploy.yml",
+    "text": "CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}",
+    "n": 3
+  },
+  {
+    "rule": "branch-build-privileges",
+    "file": ".github/workflows/deploy.yml",
+    "text": "CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}",
+    "n": 1
+  },
+  {
+    "rule": "branch-build-privileges",
+    "file": ".github/workflows/deploy.yml",
+    "text": "CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}",
+    "n": 2
+  },
+  {
+    "rule": "branch-build-privileges",
+    "file": ".github/workflows/deploy.yml",
+    "text": "CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}",
+    "n": 3
+  },
+  {
+    "rule": "html-unsanitised",
+    "file": "app/[locale]/download/page.tsx",
+    "text": "<div role=\"img\" aria-label={c.phone.qr} className=\"size-32 shrink-0 rounded-lg bg-white p-1\" dangerouslySetInnerHTML={{ __html: qr }} />",
+    "n": 1
+  },
+  {
+    "rule": "html-unsanitised",
+    "file": "src/illustrations/Scene.tsx",
+    "text": "<svg viewBox=\"0 0 800 450\" role=\"img\" aria-label={label} className=\"scene-in\" dangerouslySetInnerHTML={{ __html: markup }} />",
+    "n": 1
+  },
+  {
+    "rule": "html-unsanitised",
+    "file": "src/screens/kit/ScaledScreenFrame.tsx",
+    "text": "dangerouslySetInnerHTML={{ __html: `<template>${html}</template>` }}",
+    "n": 1
+  }
+]
