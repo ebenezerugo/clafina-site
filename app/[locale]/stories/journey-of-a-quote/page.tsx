@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
+import { preload } from 'react-dom';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isLocale, type Locale } from '@/config/locales';
 import { routeById } from '@/config/routes';
 import { pageAvailable } from '@/config/switches';
 import { loadContent } from '@/content/load';
 import { StoryContent } from '@/content/schema';
-import { frameUrl, readFrame } from '@/illustrations/frames';
 import { signupUrl } from '@/lib/links';
 import { localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
@@ -29,6 +29,8 @@ export default async function JourneyOfAQuote({ params }: Props) {
   setRequestLocale(locale);
   const c = loadContent(locale, `stories/${STORY}`, StoryContent);
   const t = await getTranslations({ locale });
+  const first = `/stories/${STORY}/${c.chapters[0]!.shots[0]!.frame}`;
+  preload(`${first}-1280.avif`, { as: 'image', fetchPriority: 'high', imageSrcSet: `${first}-640.avif 640w, ${first}-1280.avif 1280w`, imageSizes: '(min-width: 1024px) 60vw, 100vw' });
   const demo = pageAvailable('demo') ? { href: localePath(locale, routeById('demo')!.path), label: t('routes.demo') } : null;
 
   return (
@@ -48,7 +50,7 @@ export default async function JourneyOfAQuote({ params }: Props) {
         <StoryPlayer
           chapters={c.chapters} papers={c.papers} trailTitle={c.trailTitle} didLabel={c.didLabel} controls={c.controls}
           totals={c.totals}
-          frameBase={frameUrl(STORY)} firstFrame={readFrame(STORY, c.chapters[0]!.frame)}
+          frameBase={`/stories/${STORY}`}
         />
         <IllustrativeLabel text={c.illustrative} />
       </section>

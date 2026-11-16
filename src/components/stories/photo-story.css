@@ -1,0 +1,71 @@
+/* A story told with pictures: frames dissolve into one another, the paperwork is drawn live beside them. */
+.ps-wrap { position: relative; container-type: inline-size; }
+.ps { position: relative; aspect-ratio: 16 / 9; overflow: hidden; container-type: inline-size; background: #efe9df; }
+.ps-cam { position: absolute; inset: 0; transform-origin: var(--ps-ox, 50%) var(--ps-oy, 50%); transition: transform 1.4s cubic-bezier(.45, 0, .2, 1); }
+.ps-cam.zoom { transform: scale(var(--ps-z, 1.6)); }
+.ps-cam img.f { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s cubic-bezier(.4, 0, .2, 1); }
+.ps-cam img.f.on { opacity: 1; }
+.ps-cam img.f.snap { transition: none; }
+
+.ps-card { position: absolute; display: grid; gap: .6cqw; padding: 1.2cqw 1.4cqw 1.4cqw; border-radius: 1.2cqw; background: #fff; color: #1b2033;
+  font-size: max(9px, .98cqw); line-height: 1.35; box-shadow: 0 1cqw 3cqw rgb(40 30 80 / .2); transition: opacity .5s ease; }
+.ps-card.away { opacity: 0; }
+.ps-card .k { display: flex; justify-content: space-between; gap: .6cqw; font-size: max(8px, .76cqw); font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: #0f6b63; }
+.ps-card .k span:last-child { font-family: ui-monospace, Menlo, monospace; color: #1b2033; letter-spacing: 0; }
+.ps-card .r { display: flex; justify-content: space-between; gap: .8cqw; padding-bottom: .45cqw; border-bottom: 1px solid #ece9f1; }
+.ps-card .r > span { color: #5b6178; }
+.ps-card .r b { font-weight: 700; text-align: end; font-variant-numeric: tabular-nums; }
+.ps-card .r.big b { font-size: max(12px, 1.45cqw); font-weight: 800; }
+.ps-card .r.count b { font-size: max(16px, 2.4cqw); }
+.ps-card .was { color: #8d93a8; text-decoration: line-through; font-weight: 600; margin-inline-end: .5cqw; }
+.ps-card .good { color: #0f766e; font-weight: 800; }
+.ps-card .note { justify-self: start; display: inline-flex; align-items: center; gap: .5cqw; padding: .45cqw .85cqw; border-radius: .7cqw; font-weight: 700; }
+.ps-card .note.info { background: #e6f2f0; color: #0f5f58; }
+.ps-card .note.ok { background: #e8f8ee; color: #15703d; }
+.ps-card .note.warn { background: #fff4e0; color: #8a4b00; }
+.ps-card .btn { justify-self: start; padding: .55cqw 1.3cqw; border-radius: .7cqw; background: #15803d; color: #fff; font-weight: 800; }
+.ps-card .stamp { position: absolute; inset-inline-end: 1.3cqw; bottom: 1.2cqw; padding: .2cqw .8cqw; border: .25cqw solid #15803d; border-radius: .5cqw; background: rgb(255 255 255 / .9);
+  color: #15803d; font-size: max(10px, 1.25cqw); font-weight: 900; letter-spacing: .12em; text-transform: uppercase; animation: ps-stamp .35s ease-out .9s both; }
+.ps-card .tick, .ps-chip .tick { display: inline-grid; place-items: center; width: max(12px, 1.4cqw); height: max(12px, 1.4cqw); border-radius: 50%; background: #16a34a; color: #fff; font-size: max(8px, .8cqw); font-weight: 900; }
+.ps-card .rise { animation: ps-rise .45s ease both; }
+
+.ps-chip { position: absolute; display: flex; align-items: center; gap: .6cqw; padding: .6cqw 1.1cqw; border-radius: 99px; background: #fff; color: #1b2033;
+  font-size: max(10px, 1.1cqw); font-weight: 700; white-space: nowrap; box-shadow: 0 .4cqw 1.4cqw rgb(40 24 110 / .18); animation: ps-rise .45s ease 2.2s both; }
+.ps-env { position: absolute; left: 58%; top: 60%; width: 4.5cqw; animation: ps-fly 2.4s cubic-bezier(.4, 0, .3, 1) .4s both; }
+.ps-van { position: absolute; left: 0; bottom: 9%; width: 27%; animation: ps-drive 9s cubic-bezier(.35, .05, .65, .95) both; }
+.ps-van img { display: block; width: 100%; height: auto; animation: ps-bob .45s ease-in-out infinite alternate; }
+.ps-van::after { content: ''; position: absolute; left: 6%; right: 4%; bottom: -1.2%; z-index: -1; height: 7%; border-radius: 50%; background: radial-gradient(closest-side, rgb(20 24 40 / .32), transparent); }
+.ps-fg { position: absolute; left: 0; bottom: 0; width: 17.96%; height: auto; pointer-events: none; }
+
+@keyframes ps-rise { from { opacity: 0; transform: translateY(.6cqw); } to { opacity: 1; transform: none; } }
+@keyframes ps-stamp { from { opacity: 0; transform: rotate(-12deg) scale(1.6); } to { opacity: 1; transform: rotate(-12deg) scale(1); } }
+@keyframes ps-fly { 0% { opacity: 0; transform: translate(0, 0) scale(.5); } 10% { opacity: 1; } 60% { opacity: 1; transform: translate(10cqw, -22cqw) scale(1) rotate(-12deg); } 100% { opacity: 0; transform: translate(30cqw, -40cqw) scale(.7) rotate(-20deg); } }
+@keyframes ps-drive { from { transform: translateX(-110%); } to { transform: translateX(380%); } }
+@keyframes ps-bob { to { transform: translateY(-.25cqw); } }
+
+.ps.paused * { animation-play-state: paused !important; }
+
+/* On a phone the picture is too small to carry the paperwork: it sits under the picture instead. */
+@container (max-width: 639px) {
+  .ps-card { position: static; width: auto !important; margin: 12px 12px 0; padding: 12px 14px; gap: 6px; border-radius: 12px; font-size: 13.5px;
+    min-height: 8.5rem; align-content: start; border: 1px solid #e6e2ec; box-shadow: none; }
+  .ps-card.away { opacity: 1; }
+  .ps-card .k { font-size: 11px; }
+  .ps-card .r { gap: 12px; padding-bottom: 5px; }
+  .ps-card .r.big b { font-size: 16px; }
+  .ps-card .r.count b { font-size: 22px; }
+  .ps-card .note, .ps-card .btn { padding: 4px 10px; border-radius: 8px; gap: 6px; }
+  .ps-card .tick, .ps-chip .tick { width: 16px; height: 16px; font-size: 10px; }
+  .ps-card .stamp { inset-inline-end: 14px; bottom: 12px; font-size: 12px; border-width: 2px; padding: 2px 8px; }
+  .ps-chip { font-size: 11px; padding: 4px 9px; left: auto !important; right: 8px; top: auto !important; bottom: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ps-cam, .ps-cam img.f { transition: none; }
+  .ps-cam.zoom { transform: none; }
+  .ps-env { display: none; }
+  .ps-van, .ps-van img { animation: none; }
+  .ps-van { transform: translateX(130%); }
+  .ps-card .rise, .ps-card .stamp, .ps-chip { animation: none; }
+  .ps-card .stamp { transform: rotate(-12deg); }
+}
