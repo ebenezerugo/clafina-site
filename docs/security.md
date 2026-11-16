@@ -13,6 +13,11 @@ checked here.
 - `.security-exceptions.json` (optional) excuses one rule in one file, with a reason, an owner and an expiry no
   more than 30 days away.
 - `.npmrc` turns install scripts off, makes a version wait 7 days and refuses git dependencies. After `npm ci`, run
-  `npm run rebuild:native` once (it builds esbuild and the other native packages) and `npm run hooks`.
+  `npm run hooks` once (the pre-push gate). No package here needs its install script: esbuild, @swc/core, workerd
+  and @parcel/watcher each load the prebuilt binary of their platform package (checked 16 Nov with scripts off:
+  each one transforms, loads or runs). `npm run rebuild:native` is kept as a name and only runs `hooks`; under npm 12
+  the old `npm rebuild --ignore-scripts=false …` built nothing anyway (npm 12 runs a dependency's script only when
+  package.json `allowScripts` names it). With install scripts off npm also skips `pre<name>`/`post<name>` scripts:
+  `build` runs its steps itself. Never add a `pre*` or `post*` script.
 
 Never push with `--no-verify`. A gate that is wrong is fixed in the gate.
