@@ -124,7 +124,9 @@
     ],
     "currency": "NGN",
     "story": {
-      "link": "Follow one sale, start to finish",
+      "link": "Watch the full story",
+      "watch": "Watch the story",
+      "length": "11 short chapters · about 2 minutes",
       "poster": "⟦n:sales⟧ and ⟦n:customer⟧ agree a price on quotation QUO-0221. The quote is stamped agreed."
     }
   },

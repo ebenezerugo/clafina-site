@@ -45,8 +45,11 @@ test('the story page has no accessibility violations and fits a phone', async ({
 
 test('the home page shows the story poster and links to the story', async ({ page }) => {
   await page.goto('/en/');
-  await expect(page.locator('#one-record .ill svg')).toBeVisible();
-  await expect(page.locator('#one-record').getByRole('link', { name: 'Follow one sale, start to finish' })).toHaveAttribute('href', URL);
+  const poster = page.locator('#one-record .ps');
+  await poster.scrollIntoViewIfNeeded();
+  await expect(poster.locator('img.f.on')).toHaveAttribute('src', /office-thumbs-1280\.avif$/);
+  await expect(page.locator('#one-record .ps-card')).toContainText('Agreed');
+  await expect(page.locator('#one-record').getByRole('link', { name: /Watch the full story/ })).toHaveAttribute('href', URL);
 });
 
 test('each moment on the Farm page shows its drawn scene as it scrolls into view', async ({ page }) => {

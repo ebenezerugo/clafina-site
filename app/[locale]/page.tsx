@@ -4,7 +4,7 @@ import { isLocale, type Locale } from '@/config/locales';
 import { NAV, navItemIds } from '@/config/nav';
 import { routeById } from '@/config/routes';
 import { mentionable, pageAvailable } from '@/config/switches';
-import { HomeContent } from '@/content/schema';
+import { HomeContent, StoryContent } from '@/content/schema';
 import { loadContent } from '@/content/load';
 import { signupUrl } from '@/lib/links';
 import { localePath } from '@/lib/paths';
@@ -14,8 +14,7 @@ import { PhoneHome } from '@/screens/PhoneHome';
 import { SalesHome } from '@/screens/SalesHome';
 import { ShopPhone } from '@/screens/ShopPhone';
 import { TillSell } from '@/screens/TillSell';
-import { Scene } from '@/illustrations/Scene';
-import { readFrame } from '@/illustrations/frames';
+import { PhotoScene } from '@/components/stories/PhotoScene';
 import { Tk } from '@/profiles/Tk';
 import { resolveText } from '@/profiles/tokens';
 import { AskBand } from '@/components/sections/AskBand';
@@ -100,7 +99,13 @@ export default async function Home({ params }: Props) {
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
           <figure className="min-w-0">
             <a href={storyHref ?? undefined} className="group block overflow-hidden rounded-2xl border border-line shadow-[0_30px_60px_-36px_rgb(11_16_32/0.55)] transition-transform hover:-translate-y-0.5">
-              <Scene markup={readFrame('quo-0221', 'agree')} label={resolveText(c.oneRecord.story.poster)} />
+              {(() => {
+                // The deal moment from the story itself: the same picture and the same live, country-aware quote card.
+                const agree = loadContent(locale, 'stories/quo-0221', StoryContent).chapters.find((ch) => ch.frame === 'agree')!;
+                const last = agree.shots.length - 1;
+                return <PhotoScene base="/stories/quo-0221" chapter={agree} shot={last} show={agree.shots[last]!.frame} keep={[agree.shots[last]!.frame]}
+                  label={resolveText(c.oneRecord.story.poster)} eager={false} paused={false} chapterKey={0} poster play={c.oneRecord.story.watch} />;
+              })()}
             </a>
             <IllustrativeLabel text={c.illustrative} />
           </figure>
@@ -114,7 +119,18 @@ export default async function Home({ params }: Props) {
                 </li>
               ))}
             </ol>
-            {storyHref && <a href={storyHref} className="group mt-8 inline-flex min-h-12 items-center gap-2 rounded-control bg-primary px-6 font-semibold text-on-primary transition-colors hover:bg-primary-hover">{c.oneRecord.story.link}<span className="transition-transform group-hover:translate-x-0.5 rtl:-scale-x-100"><SiteIcon name="arrow" size={18} /></span></a>}
+            {storyHref && (
+              <a href={storyHref} className="group mt-8 inline-flex items-center gap-4 rounded-2xl bg-primary py-3 pe-6 ps-3 text-on-primary shadow-[0_18px_40px_-18px_var(--c-primary)] transition hover:-translate-y-0.5 hover:bg-primary-hover">
+                <span aria-hidden="true" className="play-pulse inline-flex size-12 shrink-0 items-center justify-center rounded-full bg-white text-primary">
+                  <svg width="18" height="20" viewBox="0 0 12 14" className="ms-0.5"><path d="M1 1l10 6-10 6z" fill="currentColor" /></svg>
+                </span>
+                <span className="grid text-start">
+                  <span className="text-lg font-bold leading-tight">{c.oneRecord.story.link}</span>
+                  <span className="text-sm opacity-90">{c.oneRecord.story.length}</span>
+                </span>
+                <span aria-hidden="true" className="transition-transform group-hover:translate-x-1 rtl:-scale-x-100"><SiteIcon name="arrow" size={20} /></span>
+              </a>
+            )}
           </div>
         </div>
       </Section>

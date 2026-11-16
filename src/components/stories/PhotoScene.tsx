@@ -16,17 +16,18 @@ export const framesOf = (c: SceneChapter) => [...new Set(c.shots.flatMap((s) => 
  * One chapter of a picture story. The frames stay stacked and dissolve into one another, so a change of pose reads
  * as movement. The paperwork is drawn here, not in the pictures, so its names and money follow the visitor.
  */
-export function PhotoScene({ base, chapter, shot, show, keep, label, eager, paused, chapterKey }: {
-  base: string; chapter: SceneChapter; shot: number; show: string; keep: string[]; label: string; eager: boolean; paused: boolean; chapterKey: number;
+export function PhotoScene({ base, chapter, shot, show, keep, label, eager, paused, chapterKey, poster, play }: {
+  poster?: boolean; play?: string; base: string; chapter: SceneChapter; shot: number; show: string; keep: string[]; label: string; eager: boolean; paused: boolean; chapterKey: number;
 }) {
   const s = chapter.shots[shot]!;
   const card = s.card === undefined ? null : chapter.cards[s.card]!;
-  const firstCard = s.card === chapter.shots.find((x) => x.card !== undefined)?.card;
+  // A poster stands still: its card is drawn finished, with nothing fading in.
+  const firstCard = !poster && s.card === chapter.shots.find((x) => x.card !== undefined)?.card;
   const [l, t, w] = chapter.cardAt;
   const zoom = chapter.zoom;
 
   return (
-    <div className="ps-wrap">
+    <div className={`ps-wrap${poster ? ' poster' : ''}`}>
       <div className={`ps${paused ? ' paused' : ''}`} role="img" aria-label={label}>
         <div className={`ps-cam${s.zoom ? ' zoom' : ''}`}
           style={zoom ? { ['--ps-ox' as string]: `${zoom[0]}%`, ['--ps-oy' as string]: `${zoom[1]}%`, ['--ps-z' as string]: zoom[2] } : undefined}>
@@ -50,11 +51,12 @@ export function PhotoScene({ base, chapter, shot, show, keep, label, eager, paus
           </svg>
         )}
   
-        {s.chip && <p key={`chip-${chapterKey}`} className="ps-chip" style={{ left: `${l - 4}%`, top: '10%' }} aria-hidden="true"><span className="tick">✓</span><Tk text={s.chip} /></p>}
+        {play && <span className="ps-play" aria-hidden="true"><i><svg viewBox="0 0 12 14"><path d="M1 1l10 6-10 6z" fill="currentColor" /></svg></i>{play}</span>}
+      {s.chip && <p key={`chip-${chapterKey}`} className="ps-chip" style={{ left: `${l - 4}%`, top: '10%' }} aria-hidden="true"><span className="tick">✓</span><span><Tk text={s.chip} /></span></p>}
       </div>
 
         {card && (
-          <div key={`${chapterKey}-${s.card}`} className={`ps-card${s.zoom ? ' away' : ''}`} style={{ left: `${l}%`, top: `${t}%`, width: `${w}%` }} aria-hidden="true">
+          <div key={`${chapterKey}-${s.card}`} className={`ps-card${s.zoom ? ' away' : ''}${card.stamp ? ' stamped' : ''}`} style={{ left: `${l}%`, top: `${t}%`, width: `${w}%` }} aria-hidden="true">
             <p className="k"><span>{card.kicker}</span><span>{card.number}</span></p>
             {card.rows.map((r, i) => (
               <p key={r.label} className={`r${r.big ? ' big' : ''}${r.count ? ' count' : ''}${firstCard ? ' rise' : ''}`} style={firstCard ? { animationDelay: `${0.3 + i * 0.4}s` } : undefined}>
@@ -62,9 +64,9 @@ export function PhotoScene({ base, chapter, shot, show, keep, label, eager, paus
                 <b>{r.was && <span className="was"><Tk text={r.was} /></span>}{r.count ? <Count from={r.count[0]} to={r.count[1]} /> : <span className={r.was ? 'good' : undefined}><Tk text={r.value} /></span>}</b>
               </p>
             ))}
-            {card.note && <p className={`note ${card.note.tone} rise`} style={{ animationDelay: firstCard ? `${0.4 + card.rows.length * 0.4}s` : '.3s' }}>{card.note.tone === 'ok' ? <span className="tick">✓</span> : card.note.tone === 'info' ? '→' : '•'} <Tk text={card.note.text} /></p>}
-            {card.button && <p className="btn rise" style={{ animationDelay: '1s' }}>{card.button}</p>}
-            {card.stamp && <p className="stamp">{card.stamp}</p>}
+            {card.note && <p className={`note ${card.note.tone}${poster ? '' : ' rise'}`} style={{ animationDelay: firstCard ? `${0.4 + card.rows.length * 0.4}s` : '.3s' }}>{card.note.tone === 'ok' ? <span className="tick">✓</span> : <span aria-hidden="true">{card.note.tone === 'info' ? '→' : '•'}</span>}<span><Tk text={card.note.text} /></span></p>}
+            {card.button && <p className={`btn${poster ? '' : ' rise'}`} style={{ animationDelay: '1s' }}>{card.button}</p>}
+            {card.stamp && <p className={`stamp${poster ? ' still' : ''}`}>{card.stamp}</p>}
           </div>
         )}
     </div>
