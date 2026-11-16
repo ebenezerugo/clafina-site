@@ -10,7 +10,8 @@ in `docs/superpowers/plans/`.
 ## Run it
 
 ```bash
-npm ci
+npm ci                 # from the lockfile; install scripts stay off (.npmrc)
+npm run hooks          # once: the pre-push gate (git config core.hooksPath .githooks)
 npm run dev            # http://localhost:4310
 npm run build          # static site in out/ (preview mode: every switch on)
 npm run serve:out      # serve out/ like Cloudflare does, on http://127.0.0.1:4311
