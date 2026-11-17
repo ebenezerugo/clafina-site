@@ -31,3 +31,14 @@ test('the till prices follow the visitor\'s country', async ({ page }) => {
   await on.first().scrollIntoViewIfNeeded();
   await expect(on.getByText('£3.60').first()).toBeVisible();
 });
+
+test('the phone\'s status bar shows the visitor\'s own local time', async ({ browser }) => {
+  const context = await browser.newContext({ timezoneId: 'Africa/Lagos', locale: 'en-GB' });
+  const page = await context.newPage();
+  await page.clock.setFixedTime(new Date('2026-11-17T13:07:00Z'));
+  await page.goto('/en/');
+  const phone = page.locator('#surfaces .ts-slide[data-state="on"]').last();
+  await phone.scrollIntoViewIfNeeded();
+  await expect(page.locator('#surfaces').getByText('14:07', { exact: true })).toBeVisible();
+  await context.close();
+});
