@@ -1828,6 +1828,1110 @@
         }
       },
       "catalogue": "Products"
+    },
+    {
+      "id": "farm",
+      "chip": "Farm and agro",
+      "headline": "farms and agro-dealers",
+      "cashier": {
+        "initials": "MU",
+        "name": "Musa",
+        "role": "Counter · Zaria store"
+      },
+      "search": "Search inputs, produce or scan",
+      "categories": [
+        {
+          "name": "All",
+          "count": 420,
+          "active": true
+        },
+        {
+          "name": "Seeds",
+          "count": 60,
+          "img": "/products/farm/seeds.webp"
+        },
+        {
+          "name": "Fertiliser",
+          "count": 24,
+          "img": "/products/farm/fertiliser.webp"
+        },
+        {
+          "name": "Equipment",
+          "count": 80,
+          "img": "/products/farm/sprayer.webp"
+        },
+        {
+          "name": "Produce",
+          "count": 120,
+          "img": "/products/farm/tomatoes.webp"
+        }
+      ],
+      "items": [
+        {
+          "name": "Maize, 50 kg sack",
+          "img": "/products/farm/maize.webp",
+          "price": 38000,
+          "stock": "2.4 tonnes in"
+        },
+        {
+          "name": "NPK fertiliser, 50 kg",
+          "img": "/products/farm/fertiliser.webp",
+          "price": 32000,
+          "stock": "18 bags left",
+          "flag": "Low"
+        },
+        {
+          "name": "Hybrid maize seed, 10 kg",
+          "img": "/products/farm/seeds.webp",
+          "price": 14500,
+          "stock": "40 packs"
+        },
+        {
+          "name": "Knapsack sprayer, 16 L",
+          "img": "/products/farm/sprayer.webp",
+          "price": 28000,
+          "stock": "7 left"
+        },
+        {
+          "name": "Tomatoes, basket",
+          "img": "/products/farm/tomatoes.webp",
+          "price": 18000,
+          "stock": "Bought today"
+        },
+        {
+          "name": "Eggs, crate of 30",
+          "img": "/products/farm/eggs.webp",
+          "price": 5400,
+          "stock": "60 crates"
+        },
+        {
+          "name": "Plantain, bunch",
+          "img": "/products/farm/plantain.webp",
+          "price": 3500,
+          "stock": "25 bunches"
+        },
+        {
+          "name": "Yams, sack",
+          "img": "/products/farm/yams.webp",
+          "price": 45000,
+          "stock": "12 sacks"
+        }
+      ],
+      "order": {
+        "title": "Sale #1408",
+        "meta": "Farmer: Garba · on credit",
+        "types": [
+          "Counter",
+          "Delivery",
+          "On credit"
+        ],
+        "lines": [
+          {
+            "name": "NPK fertiliser, 50 kg",
+            "detail": "Planting season",
+            "qty": 4,
+            "total": 128000
+          },
+          {
+            "name": "Hybrid maize seed, 10 kg",
+            "detail": "",
+            "qty": 6,
+            "total": 87000
+          },
+          {
+            "name": "Knapsack sprayer, 16 L",
+            "detail": "",
+            "qty": 1,
+            "total": 28000
+          }
+        ],
+        "warning": "NPK fertiliser: 18 bags left before the planting rush.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 243000
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 243000
+      },
+      "receipt": {
+        "title": "GREENFIELD AGRO",
+        "lines": [
+          {
+            "label": "NPK 50kg ×4",
+            "amount": 128000
+          },
+          {
+            "label": "Maize seed 10kg ×6",
+            "amount": 87000
+          },
+          {
+            "label": "Sprayer 16L",
+            "amount": 28000
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 243000
+        },
+        "footer": "On credit · due after harvest"
+      },
+      "notice": {
+        "title": "Bought from 6 farmers today",
+        "detail": "Paid by weight · 2.4 tonnes of maize in",
+        "icon": "scan"
+      },
+      "phone": {
+        "shop": {
+          "initials": "GA",
+          "name": "Greenfield Agro"
+        },
+        "brand": "#3f6212",
+        "pickup": {
+          "title": "Delivery to farm · Friday",
+          "place": "Free over 20 bags"
+        },
+        "categories": [
+          "Planting",
+          "Seeds",
+          "Fertiliser",
+          "Produce"
+        ],
+        "active": "Seeds",
+        "sectionCount": "60 seeds",
+        "dishes": [
+          {
+            "name": "Hybrid maize seed, 10 kg",
+            "note": "High yield, 90 days",
+            "price": 14500,
+            "img": "/products/farm/seeds.webp",
+            "tag": "Planting now"
+          },
+          {
+            "name": "NPK fertiliser, 50 kg",
+            "note": "15-15-15, for maize",
+            "price": 32000,
+            "img": "/products/farm/fertiliser.webp"
+          },
+          {
+            "name": "Knapsack sprayer, 16 L",
+            "note": "Adjustable nozzle",
+            "price": 28000,
+            "img": "/products/farm/sprayer.webp"
+          },
+          {
+            "name": "Eggs, crate of 30",
+            "note": "From our own farm",
+            "price": 5400,
+            "img": "/products/farm/eggs.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 46500
+        }
+      },
+      "catalogue": "Products"
+    },
+    {
+      "id": "bar",
+      "chip": "Bar and lounge",
+      "headline": "bars and lounges",
+      "cashier": {
+        "initials": "CH",
+        "name": "Chidi",
+        "role": "Bar · Till 1"
+      },
+      "search": "Search drinks or scan",
+      "categories": [
+        {
+          "name": "All",
+          "count": 96,
+          "active": true
+        },
+        {
+          "name": "Beer",
+          "count": 18,
+          "img": "/products/bar/beer.webp"
+        },
+        {
+          "name": "Cocktails",
+          "count": 22,
+          "img": "/products/bar/cocktail.webp"
+        },
+        {
+          "name": "Wine and spirits",
+          "count": 34,
+          "img": "/products/bar/wine.webp"
+        },
+        {
+          "name": "Small plates",
+          "count": 12,
+          "img": "/products/bar/suya.webp"
+        }
+      ],
+      "items": [
+        {
+          "name": "Lager, pint",
+          "img": "/products/bar/beer.webp",
+          "price": 2000,
+          "stock": "Keg 2 · 40% left"
+        },
+        {
+          "name": "Strawberry margarita",
+          "img": "/products/bar/cocktail.webp",
+          "price": 6500,
+          "stock": "Made to order"
+        },
+        {
+          "name": "Red wine, bottle",
+          "img": "/products/bar/wine.webp",
+          "price": 18000,
+          "stock": "4 bottles",
+          "flag": "Low"
+        },
+        {
+          "name": "Whisky on ice",
+          "img": "/products/bar/whisky.webp",
+          "price": 5000,
+          "stock": "Bottle 3 open"
+        },
+        {
+          "name": "Cola",
+          "img": "/products/bar/soft-drink.webp",
+          "price": 800,
+          "stock": "48 cans"
+        },
+        {
+          "name": "Suya skewers",
+          "img": "/products/bar/suya.webp",
+          "price": 4000,
+          "stock": "Grill open"
+        },
+        {
+          "name": "Roasted peanuts",
+          "img": "/products/bar/peanuts.webp",
+          "price": 1000,
+          "stock": "30 bowls"
+        },
+        {
+          "name": "Orange juice, jug",
+          "img": "/products/bar/juice.webp",
+          "price": 3500,
+          "stock": "Fresh today"
+        }
+      ],
+      "order": {
+        "title": "Tab · Table 4",
+        "meta": "4 guests · split 4 ways",
+        "types": [
+          "Tab",
+          "Pay now",
+          "Delivery"
+        ],
+        "lines": [
+          {
+            "name": "Lager, pint",
+            "detail": "",
+            "qty": 4,
+            "total": 8000
+          },
+          {
+            "name": "Strawberry margarita",
+            "detail": "",
+            "qty": 2,
+            "total": 13000
+          },
+          {
+            "name": "Suya skewers",
+            "detail": "Extra pepper",
+            "qty": 2,
+            "total": 8000
+          },
+          {
+            "name": "Roasted peanuts",
+            "detail": "",
+            "qty": 1,
+            "total": 1000
+          }
+        ],
+        "warning": "Red wine: 4 bottles left.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 30000
+          },
+          {
+            "label": "Service charge (5%)",
+            "amount": 1500
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 2250
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 33750
+      },
+      "receipt": {
+        "title": "THE VELVET LOUNGE",
+        "lines": [
+          {
+            "label": "Lager ×4",
+            "amount": 8000
+          },
+          {
+            "label": "Margarita ×2",
+            "amount": 13000
+          },
+          {
+            "label": "Suya ×2",
+            "amount": 8000
+          },
+          {
+            "label": "Peanuts",
+            "amount": 1000
+          },
+          {
+            "label": "Service charge",
+            "amount": 1500
+          },
+          {
+            "label": "VAT",
+            "amount": 2250
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 33750
+        },
+        "footer": "Paid · split 4 ways · Till 1"
+      },
+      "notice": {
+        "title": "Tab open: Table 4",
+        "detail": "4 guests · the bill splits four ways",
+        "icon": "check"
+      },
+      "phone": {
+        "shop": {
+          "initials": "TV",
+          "name": "The Velvet Lounge"
+        },
+        "brand": "#7c2d12",
+        "pickup": {
+          "title": "Reserve · Friday 8 pm",
+          "place": "Live band from 9 pm"
+        },
+        "categories": [
+          "Specials",
+          "Cocktails",
+          "Wine",
+          "Small plates"
+        ],
+        "active": "Cocktails",
+        "sectionCount": "22 cocktails",
+        "dishes": [
+          {
+            "name": "Strawberry margarita",
+            "note": "Fresh lime, salted rim",
+            "price": 6500,
+            "img": "/products/bar/cocktail.webp",
+            "tag": "Popular"
+          },
+          {
+            "name": "Suya skewers",
+            "note": "Yaji spice, onions, tomato",
+            "price": 4000,
+            "img": "/products/bar/suya.webp"
+          },
+          {
+            "name": "Red wine, bottle",
+            "note": "Smooth and fruity",
+            "price": 18000,
+            "img": "/products/bar/wine.webp",
+            "tag": "4 left"
+          },
+          {
+            "name": "Lager, pint",
+            "note": "Ice cold, on tap",
+            "price": 2000,
+            "img": "/products/bar/beer.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 10500
+        }
+      },
+      "catalogue": "Menu"
+    },
+    {
+      "id": "hotel",
+      "chip": "Hotel and events",
+      "headline": "hotels and event venues",
+      "cashier": {
+        "initials": "GR",
+        "name": "Grace",
+        "role": "Front desk"
+      },
+      "search": "Search rooms, guests or items",
+      "categories": [
+        {
+          "name": "All",
+          "count": 64,
+          "active": true
+        },
+        {
+          "name": "Events",
+          "count": 8,
+          "img": "/products/hotel/event-badge.webp"
+        },
+        {
+          "name": "Spa",
+          "count": 10,
+          "img": "/products/hotel/spa-voucher.webp"
+        },
+        {
+          "name": "Shop",
+          "count": 30,
+          "img": "/products/hotel/key-card.webp"
+        },
+        {
+          "name": "Rooms",
+          "count": 16,
+          "img": "/products/hotel/bathrobe.webp"
+        }
+      ],
+      "items": [
+        {
+          "name": "Hotel bathrobe",
+          "img": "/products/hotel/bathrobe.webp",
+          "price": 25000,
+          "stock": "14 left"
+        },
+        {
+          "name": "Spare key card",
+          "img": "/products/hotel/key-card.webp",
+          "price": 2000,
+          "stock": "Issued at desk"
+        },
+        {
+          "name": "Business Summit pass",
+          "img": "/products/hotel/event-badge.webp",
+          "price": 50000,
+          "stock": "12 left",
+          "flag": "Low"
+        },
+        {
+          "name": "Event tote bag",
+          "img": "/products/hotel/tote-bag.webp",
+          "price": 6000,
+          "stock": "80 left"
+        },
+        {
+          "name": "Bottled water",
+          "img": "/products/hotel/water.webp",
+          "price": 600,
+          "stock": "240 left"
+        },
+        {
+          "name": "Toiletry kit",
+          "img": "/products/hotel/toiletry-kit.webp",
+          "price": 7500,
+          "stock": "35 left"
+        },
+        {
+          "name": "Gift box",
+          "img": "/products/hotel/gift-box.webp",
+          "price": 15000,
+          "stock": "10 left"
+        },
+        {
+          "name": "Spa voucher, 60 min",
+          "img": "/products/hotel/spa-voucher.webp",
+          "price": 30000,
+          "stock": "Book any day"
+        }
+      ],
+      "order": {
+        "title": "Room 108",
+        "meta": "Mr Adeyemi · 3 nights",
+        "types": [
+          "To room",
+          "Pay now",
+          "Event"
+        ],
+        "lines": [
+          {
+            "name": "Business Summit pass",
+            "detail": "Saturday · Hall A",
+            "qty": 2,
+            "total": 100000
+          },
+          {
+            "name": "Spa voucher, 60 min",
+            "detail": "",
+            "qty": 1,
+            "total": 30000
+          },
+          {
+            "name": "Toiletry kit",
+            "detail": "",
+            "qty": 1,
+            "total": 7500
+          },
+          {
+            "name": "Bottled water",
+            "detail": "Minibar",
+            "qty": 4,
+            "total": 2400
+          }
+        ],
+        "warning": "Business Summit passes: 12 left for Saturday.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 139900
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 10492
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 150392
+      },
+      "receipt": {
+        "title": "HARBOUR SUITES",
+        "lines": [
+          {
+            "label": "Summit pass ×2",
+            "amount": 100000
+          },
+          {
+            "label": "Spa voucher",
+            "amount": 30000
+          },
+          {
+            "label": "Toiletry kit",
+            "amount": 7500
+          },
+          {
+            "label": "Water ×4",
+            "amount": 2400
+          },
+          {
+            "label": "VAT",
+            "amount": 10492
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 150392
+        },
+        "footer": "Charged to Room 108"
+      },
+      "notice": {
+        "title": "Charged to Room 108",
+        "detail": "Settles at check-out with the room bill",
+        "icon": "check"
+      },
+      "phone": {
+        "shop": {
+          "initials": "HS",
+          "name": "Harbour Suites"
+        },
+        "brand": "#1e40af",
+        "pickup": {
+          "title": "Saturday · Business Summit",
+          "place": "Hall A · doors 9 am"
+        },
+        "categories": [
+          "Featured",
+          "Events",
+          "Spa",
+          "Shop"
+        ],
+        "active": "Events",
+        "sectionCount": "8 events",
+        "dishes": [
+          {
+            "name": "Business Summit pass",
+            "note": "Talks, lunch, networking",
+            "price": 50000,
+            "img": "/products/hotel/event-badge.webp",
+            "tag": "12 left"
+          },
+          {
+            "name": "Spa voucher, 60 min",
+            "note": "Massage or facial",
+            "price": 30000,
+            "img": "/products/hotel/spa-voucher.webp"
+          },
+          {
+            "name": "Gift box",
+            "note": "Chocolates and candles",
+            "price": 15000,
+            "img": "/products/hotel/gift-box.webp"
+          },
+          {
+            "name": "Hotel bathrobe",
+            "note": "Soft cotton, one size",
+            "price": 25000,
+            "img": "/products/hotel/bathrobe.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 80000
+        }
+      },
+      "catalogue": "Products"
+    },
+    {
+      "id": "gym",
+      "chip": "Gym",
+      "headline": "gyms and fitness studios",
+      "cashier": {
+        "initials": "TO",
+        "name": "Tobi",
+        "role": "Front desk"
+      },
+      "search": "Search members, plans or items",
+      "categories": [
+        {
+          "name": "All",
+          "count": 48,
+          "active": true
+        },
+        {
+          "name": "Memberships",
+          "count": 6,
+          "img": "/products/gym/membership-card.webp"
+        },
+        {
+          "name": "Equipment",
+          "count": 14,
+          "img": "/products/gym/dumbbells.webp"
+        },
+        {
+          "name": "Shakes",
+          "count": 10,
+          "img": "/products/gym/protein-shake.webp"
+        },
+        {
+          "name": "Accessories",
+          "count": 18,
+          "img": "/products/gym/bands.webp"
+        }
+      ],
+      "items": [
+        {
+          "name": "Dumbbells, 2 × 5 kg",
+          "img": "/products/gym/dumbbells.webp",
+          "price": 22000,
+          "stock": "6 pairs"
+        },
+        {
+          "name": "Yoga mat",
+          "img": "/products/gym/yoga-mat.webp",
+          "price": 12000,
+          "stock": "15 left"
+        },
+        {
+          "name": "Protein shake",
+          "img": "/products/gym/protein-shake.webp",
+          "price": 3000,
+          "stock": "Made to order"
+        },
+        {
+          "name": "Monthly membership",
+          "img": "/products/gym/membership-card.webp",
+          "price": 35000,
+          "stock": "312 active"
+        },
+        {
+          "name": "Water bottle, 1 L",
+          "img": "/products/gym/water-bottle.webp",
+          "price": 4500,
+          "stock": "20 left"
+        },
+        {
+          "name": "Gym towel",
+          "img": "/products/gym/towel.webp",
+          "price": 3500,
+          "stock": "25 left"
+        },
+        {
+          "name": "Resistance bands, set",
+          "img": "/products/gym/bands.webp",
+          "price": 7000,
+          "stock": "3 sets",
+          "flag": "Low"
+        },
+        {
+          "name": "Skipping rope",
+          "img": "/products/gym/skipping-rope.webp",
+          "price": 5000,
+          "stock": "12 left"
+        }
+      ],
+      "order": {
+        "title": "Member: Kemi",
+        "meta": "Gold plan · since March",
+        "types": [
+          "Front desk",
+          "Class",
+          "Online"
+        ],
+        "lines": [
+          {
+            "name": "Monthly membership",
+            "detail": "Gold · 17 Nov – 17 Dec",
+            "qty": 1,
+            "total": 35000
+          },
+          {
+            "name": "Protein shake",
+            "detail": "Chocolate",
+            "qty": 2,
+            "total": 6000
+          },
+          {
+            "name": "Gym towel",
+            "detail": "",
+            "qty": 1,
+            "total": 3500
+          },
+          {
+            "name": "Resistance bands, set",
+            "detail": "",
+            "qty": 1,
+            "total": 7000
+          }
+        ],
+        "warning": "Kemi's plan renews by itself on 17 December.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 51500
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 3862
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 55362
+      },
+      "receipt": {
+        "title": "PULSE FITNESS",
+        "lines": [
+          {
+            "label": "Membership",
+            "amount": 35000
+          },
+          {
+            "label": "Protein shake ×2",
+            "amount": 6000
+          },
+          {
+            "label": "Towel",
+            "amount": 3500
+          },
+          {
+            "label": "Bands",
+            "amount": 7000
+          },
+          {
+            "label": "VAT",
+            "amount": 3862
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 55362
+        },
+        "footer": "Paid · Card · Front desk"
+      },
+      "notice": {
+        "title": "Membership renewed",
+        "detail": "Kemi · next due 17 Dec · reminder set",
+        "icon": "calendar"
+      },
+      "phone": {
+        "shop": {
+          "initials": "PF",
+          "name": "Pulse Fitness"
+        },
+        "brand": "#c2410c",
+        "pickup": {
+          "title": "Class · Spin, today 6 pm",
+          "place": "4 spots left"
+        },
+        "categories": [
+          "Plans",
+          "Memberships",
+          "Classes",
+          "Shop"
+        ],
+        "active": "Memberships",
+        "sectionCount": "6 plans",
+        "dishes": [
+          {
+            "name": "Monthly membership",
+            "note": "Gym, classes, sauna",
+            "price": 35000,
+            "img": "/products/gym/membership-card.webp",
+            "tag": "Popular"
+          },
+          {
+            "name": "Protein shake",
+            "note": "Whey, banana, oats",
+            "price": 3000,
+            "img": "/products/gym/protein-shake.webp"
+          },
+          {
+            "name": "Yoga mat",
+            "note": "Non-slip, 6 mm",
+            "price": 12000,
+            "img": "/products/gym/yoga-mat.webp"
+          },
+          {
+            "name": "Resistance bands, set",
+            "note": "Light, medium, heavy",
+            "price": 7000,
+            "img": "/products/gym/bands.webp",
+            "tag": "3 left"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 38000
+        }
+      },
+      "catalogue": "Products"
+    },
+    {
+      "id": "clinic",
+      "chip": "Clinic",
+      "headline": "clinics",
+      "cashier": {
+        "initials": "IF",
+        "name": "Nurse Ifeoma",
+        "role": "Reception"
+      },
+      "search": "Search patients, services or drugs",
+      "categories": [
+        {
+          "name": "All",
+          "count": 140,
+          "active": true
+        },
+        {
+          "name": "Consultations",
+          "count": 12,
+          "img": "/products/clinic/stethoscope.webp"
+        },
+        {
+          "name": "Lab tests",
+          "count": 40,
+          "img": "/products/clinic/lab-tubes.webp"
+        },
+        {
+          "name": "Pharmacy",
+          "count": 70,
+          "img": "/products/clinic/tablets.webp"
+        },
+        {
+          "name": "Equipment",
+          "count": 18,
+          "img": "/products/clinic/wheelchair.webp"
+        }
+      ],
+      "items": [
+        {
+          "name": "Consultation, GP",
+          "img": "/products/clinic/stethoscope.webp",
+          "price": 15000,
+          "stock": "Dr Bello · 4 waiting"
+        },
+        {
+          "name": "Blood pressure check",
+          "img": "/products/clinic/bp-monitor.webp",
+          "price": 3000,
+          "stock": "5 min"
+        },
+        {
+          "name": "Full blood count",
+          "img": "/products/clinic/lab-tubes.webp",
+          "price": 12000,
+          "stock": "Result in 2 h"
+        },
+        {
+          "name": "Gloves, box of 100",
+          "img": "/products/clinic/gloves.webp",
+          "price": 6000,
+          "stock": "2 boxes",
+          "flag": "Low"
+        },
+        {
+          "name": "Paracetamol, 10 tablets",
+          "img": "/products/clinic/tablets.webp",
+          "price": 800,
+          "stock": "Batch PC-31"
+        },
+        {
+          "name": "Follow-up visit",
+          "img": "/products/clinic/appointment-card.webp",
+          "price": 8000,
+          "stock": "Book a date"
+        },
+        {
+          "name": "Wheelchair hire, per day",
+          "img": "/products/clinic/wheelchair.webp",
+          "price": 5000,
+          "stock": "3 free"
+        },
+        {
+          "name": "First aid kit",
+          "img": "/products/clinic/first-aid.webp",
+          "price": 8500,
+          "stock": "5 left"
+        }
+      ],
+      "order": {
+        "title": "Visit #2207",
+        "meta": "Mr Eze · HMO: CareShield",
+        "types": [
+          "Walk-in",
+          "Appointment",
+          "HMO"
+        ],
+        "lines": [
+          {
+            "name": "Consultation, GP",
+            "detail": "Dr Bello",
+            "qty": 1,
+            "total": 15000
+          },
+          {
+            "name": "Full blood count",
+            "detail": "Sample taken 11:20",
+            "qty": 1,
+            "total": 12000
+          },
+          {
+            "name": "Blood pressure check",
+            "detail": "128/84",
+            "qty": 1,
+            "total": 3000
+          },
+          {
+            "name": "Paracetamol, 10 tablets",
+            "detail": "Batch PC-31",
+            "qty": 2,
+            "total": 1600
+          }
+        ],
+        "warning": "Lab result due at 3 pm. Patient will get a text.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 31600
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 31600
+      },
+      "receipt": {
+        "title": "WELLSPRING CLINIC",
+        "lines": [
+          {
+            "label": "Consultation",
+            "amount": 15000
+          },
+          {
+            "label": "Blood count",
+            "amount": 12000
+          },
+          {
+            "label": "BP check",
+            "amount": 3000
+          },
+          {
+            "label": "Paracetamol ×2",
+            "amount": 1600
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 31600
+        },
+        "footer": "HMO 80% · Patient 20% · Card"
+      },
+      "notice": {
+        "title": "Consultation and lab, one bill",
+        "detail": "HMO pays 80% · result goes to the doctor",
+        "icon": "calendar"
+      },
+      "phone": {
+        "shop": {
+          "initials": "WC",
+          "name": "Wellspring Clinic"
+        },
+        "brand": "#0369a1",
+        "pickup": {
+          "title": "Appointment · Thu 10:30 am",
+          "place": "Dr Bello · General practice"
+        },
+        "categories": [
+          "Book",
+          "Lab tests",
+          "Check-ups",
+          "Pharmacy"
+        ],
+        "active": "Lab tests",
+        "sectionCount": "40 tests",
+        "dishes": [
+          {
+            "name": "Full blood count",
+            "note": "Result the same day",
+            "price": 12000,
+            "img": "/products/clinic/lab-tubes.webp",
+            "tag": "Popular"
+          },
+          {
+            "name": "Consultation, GP",
+            "note": "30 minutes with a doctor",
+            "price": 15000,
+            "img": "/products/clinic/stethoscope.webp"
+          },
+          {
+            "name": "Blood pressure check",
+            "note": "No appointment needed",
+            "price": 3000,
+            "img": "/products/clinic/bp-monitor.webp"
+          },
+          {
+            "name": "Follow-up visit",
+            "note": "Within 14 days",
+            "price": 8000,
+            "img": "/products/clinic/appointment-card.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 27000
+        }
+      },
+      "catalogue": "Services"
     }
   ],
   "nav": [
