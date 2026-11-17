@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { ICON_NAMES } from '../screens/kit/types';
 
 const tone = z.enum(['good', 'warn', 'bad', 'info']);
 const icon = z.enum(['home', 'sales', 'money', 'more', 'plus', 'bell', 'help', 'box', 'bank', 'alert', 'check', 'up', 'down', 'chevron', 'search', 'cart', 'users', 'chart', 'menu', 'phone', 'clock', 'receipt', 'table', 'leaf']);
@@ -22,8 +23,12 @@ export const PhoneHomeScreen = z.object({
 
 export const TillSellScreen = z.object({
   ...base, search: z.string(), online: z.string(), cashier: z.object({ initials: z.string(), name: z.string(), role: z.string() }),
-  categories: z.array(z.object({ name: z.string(), count: z.number(), active: z.boolean().optional() })),
-  items: z.array(z.object({ name: z.string(), price: z.number(), stock: z.string(), initials: z.string(), flag: z.string().optional() })),
+  /** The business and its back-office menu, shown as a sidebar (the home page's till). */
+  business: z.object({ name: z.string(), initials: z.string(), brand: z.string() }).optional(),
+  nav: z.array(z.object({ label: z.string(), icon: z.enum(ICON_NAMES), active: z.boolean().optional() })).optional(),
+  payIcons: z.array(z.enum(ICON_NAMES)).optional(),
+  categories: z.array(z.object({ name: z.string(), count: z.number(), active: z.boolean().optional(), img: z.string().optional() })),
+  items: z.array(z.object({ name: z.string(), price: z.number(), stock: z.string(), initials: z.string().optional(), img: z.string().startsWith('/products/').optional(), flag: z.string().optional() })),
   order: z.object({
     title: z.string(), meta: z.string(), types: z.array(z.string()),
     lines: z.array(z.object({ name: z.string(), detail: z.string(), qty: z.number(), total: z.number() })),
@@ -35,7 +40,7 @@ export const TillSellScreen = z.object({
 export const ShopPhoneScreen = z.object({
   ...base, shop: z.object({ initials: z.string(), name: z.string() }), pickup: z.object({ title: z.string(), place: z.string() }),
   categories: z.array(z.string()), active: z.string(), sectionCount: z.string(),
-  dishes: z.array(z.object({ name: z.string(), note: z.string(), price: z.number(), tag: z.string().optional() })),
+  dishes: z.array(z.object({ name: z.string(), note: z.string(), price: z.number(), tag: z.string().optional(), img: z.string().startsWith('/products/').optional() })),
   basket: z.object({ count: z.number(), label: z.string(), amount: z.number() }),
 });
 
@@ -46,4 +51,38 @@ export const LedgerEntryScreen = z.object({
   lines: z.array(z.object({ account: z.string(), description: z.string(), debit: z.number().optional(), credit: z.number().optional() })),
   effectTitle: z.string(), effect: z.array(z.object({ label: z.string(), amount: z.number(), note: z.string() })),
   approve: z.string(), sendBack: z.string(), rule: z.string(),
+});
+
+/** The till as each kind of business uses it: the home page shows them one after another. */
+const Money = z.number().int();
+export const TillIndustriesScreen = z.object({
+  illustrative: z.literal(true), currency: z.literal('NGN'), online: z.string(), pay: z.array(z.string()).length(4), charge: z.string(),
+  lead: z.string(), chooser: z.string(), label: z.string().includes('{industry}'),
+  nav: z.array(z.object({ label: z.string(), icon: z.enum(ICON_NAMES) })).min(4), payIcons: z.array(z.enum(ICON_NAMES)).length(4),
+  industries: z.array(z.object({
+    id: z.string().regex(/^[a-z-]+$/), chip: z.string(), headline: z.string(), catalogue: z.string(),
+    cashier: z.object({ initials: z.string(), name: z.string(), role: z.string() }), search: z.string(),
+    categories: z.array(z.object({ name: z.string(), count: z.number(), active: z.boolean().optional(), img: z.string().startsWith('/products/').optional() })),
+    items: z.array(z.object({ name: z.string(), img: z.string().startsWith('/products/'), price: Money, stock: z.string(), flag: z.string().optional() })).length(8),
+    order: z.object({
+      title: z.string(), meta: z.string(), types: z.array(z.string()).length(3),
+      lines: z.array(z.object({ name: z.string(), detail: z.string(), qty: z.number(), total: Money })).min(1),
+      warning: z.string(), totals: z.array(z.object({ label: z.string(), amount: Money })), totalLabel: z.string(), total: Money,
+    }),
+    receipt: z.object({ title: z.string(), lines: z.array(z.object({ label: z.string(), amount: Money })), total: z.object({ label: z.string(), amount: Money }), footer: z.string() }),
+    notice: z.object({ title: z.string(), detail: z.string(), icon: z.enum(['wifiOff', 'boxes', 'calendar', 'check', 'scan']) }),
+    phone: z.object({
+      shop: z.object({ initials: z.string(), name: z.string() }), brand: z.string().regex(/^#[0-9a-f]{6}$/i),
+      pickup: z.object({ title: z.string(), place: z.string() }), categories: z.array(z.string()), active: z.string(), sectionCount: z.string(),
+      dishes: z.array(z.object({ name: z.string(), note: z.string(), price: Money, img: z.string().startsWith('/products/'), tag: z.string().optional() })).length(4),
+      basket: z.object({ count: z.number(), label: z.string(), amount: Money }),
+    }),
+  })).min(2),
+}).superRefine((c, ctx) => {
+  for (const ind of c.industries) {
+    const sub = ind.order.lines.reduce((s, l) => s + l.total, 0);
+    if (ind.order.totals[0]?.amount !== sub) ctx.addIssue({ code: 'custom', message: `${ind.id}: subtotal is not the sum of the lines` });
+    if (ind.order.totals.reduce((s, t) => s + t.amount, 0) !== ind.order.total) ctx.addIssue({ code: 'custom', message: `${ind.id}: total does not add up` });
+    if (ind.receipt.total.amount !== ind.order.total) ctx.addIssue({ code: 'custom', message: `${ind.id}: receipt total differs from the order` });
+  }
 });
