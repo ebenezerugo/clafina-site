@@ -270,6 +270,456 @@
         "A levy can only be raised on an approved budget, and only once a period.",
         "Spending can never go past a line, nor past what the levy has collected."
       ]
+    },
+    {
+      "slug": "offer-a-unit-to-let-or-sell",
+      "title": "Offer a unit to let or for sale",
+      "summary": "Make a listing for a unit, then publish it so it can go to the portals.",
+      "page": "/property/listings",
+      "before": [
+        "A unit on the Units page."
+      ],
+      "steps": [
+        {
+          "lead": "Press New listing",
+          "rest": "at the top of Listings."
+        },
+        {
+          "lead": "Choose the Property",
+          "rest": "the building the unit is in."
+        },
+        {
+          "lead": "Choose the Unit",
+          "rest": "the unit itself."
+        },
+        {
+          "lead": "Choose Offered",
+          "rest": "To let or For sale."
+        },
+        {
+          "lead": "Type the Title",
+          "rest": "the heading people will see."
+        },
+        {
+          "lead": "Type the Price or rent asked",
+          "rest": "and choose Rent is for if it is to let."
+        },
+        {
+          "lead": "Press Make the listing",
+          "rest": "to save it as a draft."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "on the draft's row."
+        },
+        {
+          "lead": "Choose Publish it",
+          "rest": "from the menu."
+        }
+      ],
+      "after": "The listing is Live. Photographs, viewings and offers are added from its drawer.",
+      "tips": [
+        "Features takes one feature to a line.",
+        "The Draft, Live, Under offer and Closed tabs sort your listings."
+      ]
+    },
+    {
+      "slug": "book-a-viewing",
+      "title": "Book a viewing of a listing",
+      "summary": "Put a viewing in the diary and, afterwards, record how it went.",
+      "page": "/property/listings",
+      "before": [
+        "A listing that is live."
+      ],
+      "steps": [
+        {
+          "lead": "Press Actions",
+          "rest": "on the listing's row."
+        },
+        {
+          "lead": "Choose Open",
+          "rest": "to see the listing."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "in the listing."
+        },
+        {
+          "lead": "Choose Book a viewing",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Type Who is coming",
+          "rest": "the visitor's name."
+        },
+        {
+          "lead": "Choose When",
+          "rest": "the day and time."
+        },
+        {
+          "lead": "Press Book the viewing",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The viewing shows under Viewings on the listing.",
+      "tips": [
+        "Afterwards press Actions beside the viewing and choose Record the outcome, then say whether it went ahead and how it went."
+      ]
+    },
+    {
+      "slug": "record-and-accept-an-offer",
+      "title": "Record an offer on a listing",
+      "summary": "Write down an offer, counter it, or accept it.",
+      "page": "/property/listings",
+      "before": [
+        "A listing that is live."
+      ],
+      "steps": [
+        {
+          "lead": "Press Actions",
+          "rest": "on the listing's row."
+        },
+        {
+          "lead": "Choose Open",
+          "rest": "to see the listing."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "in the listing."
+        },
+        {
+          "lead": "Choose Record an offer",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Type Who is offering",
+          "rest": "the name of the buyer or tenant."
+        },
+        {
+          "lead": "Type the Amount offered",
+          "rest": "in the listing's currency."
+        },
+        {
+          "lead": "Press Record the offer",
+          "rest": "to save it."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "beside the offer."
+        },
+        {
+          "lead": "Choose Accept the offer",
+          "rest": "from the menu."
+        }
+      ],
+      "after": "The listing shows Under offer.",
+      "tips": [
+        "Accepting an offer on a unit to let drafts the lease and asks for the tenant.",
+        "Accepting an offer on a unit for sale records the commission on a deal.",
+        "Closing a listing rejects the open offers."
+      ]
+    },
+    {
+      "slug": "switch-on-the-listing-feed",
+      "title": "Send your listings to the property portals",
+      "summary": "Switch on the feed that property portals read your live listings from.",
+      "page": "/property/listings",
+      "steps": [
+        {
+          "lead": "Press Listing feed",
+          "rest": "at the top of Listings."
+        },
+        {
+          "lead": "Press Switch the feed on",
+          "rest": "in the drawer."
+        },
+        {
+          "lead": "Press Copy",
+          "rest": "beside each address, and give the addresses to the portal."
+        }
+      ],
+      "after": "The feed is on, and portals read your live listings.",
+      "tips": [
+        "The addresses are shown only once. Press Make a new token for fresh ones; the old ones stop working.",
+        "Press Switch it off to stop the feed."
+      ]
+    },
+    {
+      "slug": "record-a-commission",
+      "title": "Record a commission on a letting or sale",
+      "summary": "Say who earns commission on a letting or a sale and how it is worked out.",
+      "page": "/property/deals",
+      "steps": [
+        {
+          "lead": "Press New deal",
+          "rest": "at the top of Commissions."
+        },
+        {
+          "lead": "Choose the Property",
+          "rest": "the building the unit is in."
+        },
+        {
+          "lead": "Choose the Unit",
+          "rest": "the unit itself."
+        },
+        {
+          "lead": "Choose Deal for",
+          "rest": "A letting or A sale."
+        },
+        {
+          "lead": "Type the Value",
+          "rest": "of the letting or the sale."
+        },
+        {
+          "lead": "Choose Commission is",
+          "rest": "A percent of the value, or A fixed sum."
+        },
+        {
+          "lead": "Type the Rate or sum",
+          "rest": "the percent or the amount."
+        },
+        {
+          "lead": "Choose Settled by",
+          "rest": "Invoice the landlord, or Take it off the landlord's statement."
+        },
+        {
+          "lead": "Press Make the deal",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The deal shows with the commission, and its agents' shares.",
+      "tips": [
+        "Leave the value empty on a deal made from an accepted offer to take it from the offer.",
+        "Choose Raise the invoice in the deal's Actions when it is settled by invoice.",
+        "Paying the agents their shares is not done here."
+      ]
+    },
+    {
+      "slug": "add-a-meter",
+      "title": "Add a meter to a unit",
+      "summary": "Set up a meter with its tariff, so readings can be taken and billed to the tenant.",
+      "page": "/property/meters",
+      "steps": [
+        {
+          "lead": "Press New meter",
+          "rest": "at the top of Meters."
+        },
+        {
+          "lead": "Choose the Property",
+          "rest": "the building the unit is in."
+        },
+        {
+          "lead": "Choose the Unit",
+          "rest": "the unit itself."
+        },
+        {
+          "lead": "Choose Meter for",
+          "rest": "Electricity, Water or Gas."
+        },
+        {
+          "lead": "Type the Tariff for each unit",
+          "rest": "what one unit of use costs."
+        },
+        {
+          "lead": "Type the Opening reading",
+          "rest": "what the meter shows today."
+        },
+        {
+          "lead": "Press Add the meter",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The meter is on the list, ready for its first reading.",
+      "tips": [
+        "Serial number and Standing charge are optional.",
+        "Choose Change the tariff in the meter's Actions when the price changes."
+      ]
+    },
+    {
+      "slug": "take-a-meter-reading",
+      "title": "Take a meter reading",
+      "summary": "Enter what a meter shows, so the use can be billed.",
+      "page": "/property/meters",
+      "before": [
+        "A meter in use."
+      ],
+      "steps": [
+        {
+          "lead": "Press Actions",
+          "rest": "on the meter's row."
+        },
+        {
+          "lead": "Choose Readings",
+          "rest": "to open the meter."
+        },
+        {
+          "lead": "Press Take a reading",
+          "rest": "in the drawer."
+        },
+        {
+          "lead": "Type the Meter reading",
+          "rest": "what the meter shows now."
+        },
+        {
+          "lead": "Choose Read on",
+          "rest": "the day you read it. Left empty, it is today."
+        },
+        {
+          "lead": "Press Record the reading",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The reading shows as To bill, with the use and the amount.",
+      "tips": [
+        "A reading cannot be below the last one.",
+        "Choose Photograph in a reading's Actions to keep a picture of the meter."
+      ]
+    },
+    {
+      "slug": "bill-meter-readings",
+      "title": "Bill meter readings to tenants",
+      "summary": "Invoice every reading that is waiting, in one go.",
+      "page": "/property/meters",
+      "before": [
+        "Readings that show To bill."
+      ],
+      "steps": [
+        {
+          "lead": "Press Bill readings",
+          "rest": "at the top of Meters."
+        },
+        {
+          "lead": "Choose Readings read by",
+          "rest": "the last day to include. Left empty, it is today."
+        },
+        {
+          "lead": "Press Bill the readings",
+          "rest": "to make the invoices."
+        }
+      ],
+      "after": "Each reading shows Billed with its invoice number.",
+      "tips": [
+        "If more are waiting, the page says so: bill again."
+      ]
+    },
+    {
+      "slug": "set-a-service-charge",
+      "title": "Set a building's service charge",
+      "summary": "Share a building's running costs among its units, with a budget for the year.",
+      "page": "/property/service-charges",
+      "steps": [
+        {
+          "lead": "Press New service charge",
+          "rest": "at the top of Service charges."
+        },
+        {
+          "lead": "Choose the Building",
+          "rest": "the building the charge is for."
+        },
+        {
+          "lead": "Type the Name",
+          "rest": "for example Block A 2027."
+        },
+        {
+          "lead": "Type the Year",
+          "rest": "of the budget."
+        },
+        {
+          "lead": "Choose Shared",
+          "rest": "how the cost is divided among the units."
+        },
+        {
+          "lead": "Choose Invoiced",
+          "rest": "Monthly, Quarterly or Yearly."
+        },
+        {
+          "lead": "Type the Budget lines",
+          "rest": "one to a line: a name, a comma and the amount."
+        },
+        {
+          "lead": "Press Make the service charge",
+          "rest": "to save it as a draft."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "on the new row."
+        },
+        {
+          "lead": "Choose Open",
+          "rest": "to see the service charge."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "in the drawer."
+        },
+        {
+          "lead": "Choose Approve the budget",
+          "rest": "from the menu."
+        }
+      ],
+      "after": "The instalments are written for each unit when the budget is approved.",
+      "tips": [
+        "Nothing is invoiced until you raise a period."
+      ]
+    },
+    {
+      "slug": "record-spending-and-raise-a-period",
+      "title": "Record spending and invoice a period",
+      "summary": "Keep the spending against the budget, and invoice each period to the units.",
+      "page": "/property/service-charges",
+      "before": [
+        "A service charge whose budget is approved."
+      ],
+      "steps": [
+        {
+          "lead": "Press Actions",
+          "rest": "on the service charge's row."
+        },
+        {
+          "lead": "Choose Open",
+          "rest": "to see its budget lines and instalments."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "in the drawer."
+        },
+        {
+          "lead": "Choose Record spending",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Choose the Budget line",
+          "rest": "the spending belongs to."
+        },
+        {
+          "lead": "Type the Amount",
+          "rest": "that was spent."
+        },
+        {
+          "lead": "Press Record the spending",
+          "rest": "to save it."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "again."
+        },
+        {
+          "lead": "Choose Raise a period",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Choose the Period to invoice",
+          "rest": "in the drawer."
+        },
+        {
+          "lead": "Press Invoice the period",
+          "rest": "to make the invoices."
+        }
+      ],
+      "after": "Spending shows against each budget line, and each unit's instalment is invoiced.",
+      "tips": [
+        "Choose Close and reconcile in Actions at year end. It shows what each unit owes or is owed, and asks you to raise every period first."
+      ]
     }
   ]
 }

@@ -125,6 +125,52 @@
       "related": [
         "do-a-job-on-site"
       ]
+    },
+    {
+      "slug": "make-a-job-template",
+      "title": "Make a job template",
+      "summary": "Name a kind of job once, so a new job starts with its title, length, checklist and parts.",
+      "page": "/field-service/job-templates",
+      "steps": [
+        {
+          "lead": "Press New template",
+          "rest": "at the top of Job templates."
+        },
+        {
+          "lead": "Type the Name",
+          "rest": "of the kind of job."
+        },
+        {
+          "lead": "Type the Title of its jobs",
+          "rest": "the title each new job gets."
+        },
+        {
+          "lead": "Type the Length in minutes",
+          "rest": "how long the job takes."
+        },
+        {
+          "lead": "Choose the Priority",
+          "rest": "from the list."
+        },
+        {
+          "lead": "Choose a Checklist",
+          "rest": "if the job follows one. This is optional."
+        },
+        {
+          "lead": "Type in Add a part",
+          "rest": "two letters of the item's name, then choose it from the list."
+        },
+        {
+          "lead": "Press Make the template",
+          "rest": "to save it."
+        }
+      ],
+      "after": "A new job can start from the template.",
+      "tips": [
+        "A change applies to jobs made after it. Jobs already made keep what they were given.",
+        "Press Retire to stop offering a template; Restore brings it back.",
+        "A job's window ends as long after it opens as the length you set."
+      ]
     }
   ]
 }

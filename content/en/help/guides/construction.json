@@ -117,6 +117,505 @@
         "A missing or expired paper blocks the certificate. If you must, press Let it through once and say why: it is logged.",
         "Papers ending soon are shown under Papers expiring or missing."
       ]
+    },
+    {
+      "slug": "add-a-programme-task",
+      "title": "Add a task or milestone to the programme",
+      "summary": "Put a task or a milestone on a contract's programme, with its start and its working days.",
+      "page": "/construction/programme",
+      "before": [
+        "A contract, made on Progress billing."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of Programme. Everything on the page is for that contract."
+        },
+        {
+          "lead": "Press Add a task",
+          "rest": "at the top of the page."
+        },
+        {
+          "lead": "Type the Name",
+          "rest": "of the task or milestone."
+        },
+        {
+          "lead": "Choose It is",
+          "rest": "A task or A milestone."
+        },
+        {
+          "lead": "Choose the Earliest start",
+          "rest": "the first day it could begin."
+        },
+        {
+          "lead": "Type the Working days",
+          "rest": "how long it takes. A milestone has none."
+        },
+        {
+          "lead": "Press Add the task",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The task is on the programme and shows on the chart.",
+      "tips": [
+        "Stage, Subcontractor, Percent done and Notes are optional. Choose Change it in a task's Actions to update the percent done."
+      ]
+    },
+    {
+      "slug": "link-programme-tasks",
+      "title": "Link two tasks on the programme",
+      "summary": "Say which task must finish before another can start, so the dates and the critical path work out.",
+      "page": "/construction/programme",
+      "before": [
+        "At least two tasks on the programme."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of Programme."
+        },
+        {
+          "lead": "Press Programme",
+          "rest": "the menu at the top of the page."
+        },
+        {
+          "lead": "Choose Link two tasks",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Choose the First task",
+          "rest": "the one that comes first."
+        },
+        {
+          "lead": "Choose Then",
+          "rest": "the task that follows it."
+        },
+        {
+          "lead": "Choose How they join",
+          "rest": "Finish to start, or Start to start."
+        },
+        {
+          "lead": "Type the Lag in working days",
+          "rest": "if there is a gap or an overlap. This is optional."
+        },
+        {
+          "lead": "Press Link them",
+          "rest": "to save the link."
+        }
+      ],
+      "after": "The link shows under Links, and the finish date and critical path are worked out again.",
+      "tips": [
+        "If the links go round in a loop, the page says so and the dates cannot be worked out until one is removed.",
+        "Press Remove beside a link under Links to take it away."
+      ]
+    },
+    {
+      "slug": "set-the-programme-baseline",
+      "title": "Set the baseline of a programme",
+      "summary": "Keep each task's start and length as they stand now, to measure later changes against.",
+      "page": "/construction/programme",
+      "before": [
+        "Tasks on the programme."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of Programme."
+        },
+        {
+          "lead": "Press Programme",
+          "rest": "the menu at the top of the page."
+        },
+        {
+          "lead": "Choose Set the baseline",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Press Set the baseline",
+          "rest": "to keep the programme as it stands."
+        }
+      ],
+      "after": "Later changes show as variance against the baseline.",
+      "tips": [
+        "Setting it again replaces the last baseline."
+      ]
+    },
+    {
+      "slug": "put-a-drawing-on-the-register",
+      "title": "Put a drawing on the register",
+      "summary": "Add a drawing to the contract's register, ready for its first revision.",
+      "page": "/construction/drawings",
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of Drawings."
+        },
+        {
+          "lead": "Press New drawing",
+          "rest": "at the top of the page."
+        },
+        {
+          "lead": "Type the Drawing number",
+          "rest": "its place on the register, for example A-101."
+        },
+        {
+          "lead": "Type the Title",
+          "rest": "of the drawing."
+        },
+        {
+          "lead": "Choose the Discipline",
+          "rest": "from the list."
+        },
+        {
+          "lead": "Press Put it on the register",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The drawing is on the register. Add its first revision next."
+    },
+    {
+      "slug": "add-a-drawing-revision",
+      "title": "Add a revision to a drawing",
+      "summary": "Record a new revision of a drawing, with its state and what changed.",
+      "page": "/construction/drawings",
+      "before": [
+        "A drawing on the register."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of Drawings."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "on the drawing's row."
+        },
+        {
+          "lead": "Choose Open",
+          "rest": "to see the drawing and its revisions."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "in the drawing."
+        },
+        {
+          "lead": "Choose Add a revision",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Type the Revision",
+          "rest": "for example P1 or B."
+        },
+        {
+          "lead": "Choose It is",
+          "rest": "For information, For construction or As-built."
+        },
+        {
+          "lead": "Choose Issued on",
+          "rest": "the day it was issued. This is optional."
+        },
+        {
+          "lead": "Type What changed",
+          "rest": "a line for the people reading it."
+        },
+        {
+          "lead": "Press Add the revision",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The revision shows on the drawing, and you can attach its file there.",
+      "tips": [
+        "A superseded revision cannot be changed, and is not offered in a transmittal.",
+        "Choose Void the drawing in Actions to take a drawing off the register; Put it back on the register undoes it."
+      ]
+    },
+    {
+      "slug": "send-drawings-in-a-transmittal",
+      "title": "Send drawings in a transmittal",
+      "summary": "Send chosen drawing revisions to someone for a purpose, from draft to issued.",
+      "page": "/construction/transmittals",
+      "before": [
+        "Drawings with at least one revision."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of Transmittals."
+        },
+        {
+          "lead": "Press New transmittal",
+          "rest": "at the top of the page."
+        },
+        {
+          "lead": "Tick the Revisions to send",
+          "rest": "one box for each drawing revision."
+        },
+        {
+          "lead": "Type Sent to",
+          "rest": "the name of the person or firm."
+        },
+        {
+          "lead": "Type the Email",
+          "rest": "if you will send it to them. This is optional."
+        },
+        {
+          "lead": "Choose the Purpose",
+          "rest": "from the list."
+        },
+        {
+          "lead": "Press Make the transmittal",
+          "rest": "to save it as a draft."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "on the draft."
+        },
+        {
+          "lead": "Choose Issue it",
+          "rest": "to send it."
+        }
+      ],
+      "after": "The transmittal shows as Issued, with the day it went.",
+      "tips": [
+        "A revision with no file shows (no file attached).",
+        "A superseded revision is not offered."
+      ]
+    },
+    {
+      "slug": "raise-an-rfi",
+      "title": "Raise a question to the design team",
+      "summary": "Raise an RFI when the drawings leave a question open, with who it is put to and the day it is due.",
+      "page": "/construction/rfis",
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of RFIs."
+        },
+        {
+          "lead": "Press Raise an RFI",
+          "rest": "at the top of the page."
+        },
+        {
+          "lead": "Type the Subject",
+          "rest": "a short title."
+        },
+        {
+          "lead": "Type the Question",
+          "rest": "in full."
+        },
+        {
+          "lead": "Type Put to",
+          "rest": "the name of who must answer."
+        },
+        {
+          "lead": "Choose Due on",
+          "rest": "the day an answer is due."
+        },
+        {
+          "lead": "Press Raise the RFI",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The RFI is Open. When its due day passes it shows as Overdue.",
+      "tips": [
+        "Tick the Drawings it is about to link it to the register.",
+        "The Overdue tab lists every open question past its due day."
+      ]
+    },
+    {
+      "slug": "record-an-rfi-answer",
+      "title": "Record the answer to an RFI",
+      "summary": "Write down the answer the design team gave, then close the question.",
+      "page": "/construction/rfis",
+      "before": [
+        "An open RFI."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of RFIs."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "on the RFI's row."
+        },
+        {
+          "lead": "Choose Record the answer",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Type the Answer",
+          "rest": "as it was given."
+        },
+        {
+          "lead": "Type Answered by",
+          "rest": "the name of who answered."
+        },
+        {
+          "lead": "Choose Answered on",
+          "rest": "the day it was answered."
+        },
+        {
+          "lead": "Press Record the answer",
+          "rest": "to save it."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "on the RFI again."
+        },
+        {
+          "lead": "Choose Close it",
+          "rest": "once the answer is accepted."
+        }
+      ],
+      "after": "The RFI shows as Answered, then Closed.",
+      "tips": [
+        "Choose Reopen it in Actions if the answer was not enough."
+      ]
+    },
+    {
+      "slug": "add-a-provisional-sum",
+      "title": "Add a provisional sum to the final account",
+      "summary": "Record an allowance for work not yet priced, and the actual cost once it is known.",
+      "page": "/construction/final-account",
+      "before": [
+        "A final account that has not been agreed."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of Final account."
+        },
+        {
+          "lead": "Press Add a provisional sum",
+          "rest": "under Provisional sums."
+        },
+        {
+          "lead": "Type What it is for",
+          "rest": "a short description."
+        },
+        {
+          "lead": "Type the Allowance",
+          "rest": "the amount allowed in the contract."
+        },
+        {
+          "lead": "Press Add the provisional sum",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The provisional sum shows, and the figures under Where it stands are worked out again.",
+      "tips": [
+        "Choose Change it in the sum's Actions to type the Actual cost. Leave it empty until the work is done.",
+        "Provisional sums cannot be changed once the final account is agreed."
+      ]
+    },
+    {
+      "slug": "agree-the-final-account",
+      "title": "Agree the final account",
+      "summary": "Lock the final sum once the client agrees it.",
+      "page": "/construction/final-account",
+      "before": [
+        "Check the figures under Where it stands, and clear anything listed as a problem."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of Final account."
+        },
+        {
+          "lead": "Press Agree the final account",
+          "rest": "at the top of the page."
+        },
+        {
+          "lead": "Type Agreed by (the client's name)",
+          "rest": "the person who agreed it for the client."
+        },
+        {
+          "lead": "Choose Agreed on",
+          "rest": "the day they agreed it."
+        },
+        {
+          "lead": "Press Agree it",
+          "rest": "to lock it."
+        }
+      ],
+      "after": "The final account shows as Agreed and locked.",
+      "tips": [
+        "The contract sum, stages, variations and provisional sums cannot change until it is reopened.",
+        "Press Reopen it, give the reason under Why it is reopened, and press Reopen the final account to open it again."
+      ]
+    },
+    {
+      "slug": "add-a-handover-item",
+      "title": "Add an item to the handover pack",
+      "summary": "Add a manual, certificate or warranty to the pack the client receives, and attach its files.",
+      "page": "/construction/handover",
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of Handover pack."
+        },
+        {
+          "lead": "Press Add an item",
+          "rest": "at the top of the page."
+        },
+        {
+          "lead": "Choose the Kind",
+          "rest": "from the list."
+        },
+        {
+          "lead": "Type the Title",
+          "rest": "of the item."
+        },
+        {
+          "lead": "Type the Supplier",
+          "rest": "if it came from one. This is optional."
+        },
+        {
+          "lead": "Choose Warranty ends",
+          "rest": "for a warranty. This is optional."
+        },
+        {
+          "lead": "Press Add the item",
+          "rest": "to save it."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "on the item's row."
+        },
+        {
+          "lead": "Choose Files to attach its files",
+          "rest": "from the menu."
+        }
+      ],
+      "after": "The item is in the pack, and the checklist shows how many items have files.",
+      "tips": [
+        "The checklist lists what is missing.",
+        "Choose Take it out of the pack in Actions to leave an item out; Put it back in the pack undoes it."
+      ]
+    },
+    {
+      "slug": "download-the-handover-pack",
+      "title": "Download the handover pack",
+      "summary": "Download every file of the pack as one ZIP for the client.",
+      "page": "/construction/handover",
+      "before": [
+        "Items with their files added to the pack."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Contract",
+          "rest": "at the top of Handover pack."
+        },
+        {
+          "lead": "Press Download the ZIP",
+          "rest": "at the top of the page."
+        }
+      ],
+      "after": "You have the ZIP, ready to give to the client.",
+      "tips": [
+        "The Checklist says Complete when nothing is missing."
+      ]
     }
   ]
 }

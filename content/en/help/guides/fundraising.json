@@ -255,6 +255,271 @@
       "related": [
         "record-a-gift"
       ]
+    },
+    {
+      "slug": "add-a-volunteer",
+      "title": "Add a volunteer",
+      "summary": "Record a person who gives time, starting from a donor or as a new person.",
+      "page": "/fundraising/volunteers",
+      "steps": [
+        {
+          "lead": "Press Add a volunteer",
+          "rest": "at the top of Volunteers."
+        },
+        {
+          "lead": "Choose Start from a donor",
+          "rest": "if they already give to you. Otherwise skip this step and type their Name, Email and Phone."
+        },
+        {
+          "lead": "Type their Skills (separate with commas)",
+          "rest": "for example first aid, driving."
+        },
+        {
+          "lead": "Type When they are free",
+          "rest": "for example Saturday mornings."
+        },
+        {
+          "lead": "Press Add the volunteer",
+          "rest": "to save them."
+        }
+      ],
+      "after": "The volunteer is on the list, and can be put down for shifts.",
+      "tips": [
+        "A person with the same email is reused, not added twice.",
+        "Choose Email their page link in Actions to send a volunteer their own page. Revoke links takes it back."
+      ]
+    },
+    {
+      "slug": "log-a-volunteers-hours",
+      "title": "Record a volunteer's hours",
+      "summary": "Log the hours a volunteer worked, and approve them as you enter them if you wish.",
+      "page": "/fundraising/volunteers",
+      "before": [
+        "A volunteer on the list."
+      ],
+      "steps": [
+        {
+          "lead": "Press Actions",
+          "rest": "on the volunteer's row in Volunteers."
+        },
+        {
+          "lead": "Choose Open",
+          "rest": "to see their page in a drawer."
+        },
+        {
+          "lead": "Press Log hours",
+          "rest": "under Hours."
+        },
+        {
+          "lead": "Choose the Day worked",
+          "rest": "the day the volunteer gave their time."
+        },
+        {
+          "lead": "Type the Hours",
+          "rest": "a number, for example 3.5."
+        },
+        {
+          "lead": "Type a Note",
+          "rest": "if you want one. This is optional."
+        },
+        {
+          "lead": "Press Log the hours",
+          "rest": "to save them."
+        }
+      ],
+      "after": "The hours show on the volunteer's page, and on Volunteer hours if they wait for a decision.",
+      "tips": [
+        "Tick Approve them as logged to skip the waiting list.",
+        "Approved hours are counted in Approved hours and Value of their time at the top of the volunteer's page."
+      ]
+    },
+    {
+      "slug": "decide-volunteer-hours",
+      "title": "Approve or turn down volunteer hours",
+      "summary": "Go through the hours waiting for a decision and approve each, or turn it down with a reason.",
+      "page": "/fundraising/volunteer-hours",
+      "before": [
+        "Hours logged by staff, by volunteers, or from shifts."
+      ],
+      "steps": [
+        {
+          "lead": "Choose Waiting",
+          "rest": "in Show hours to see the hours that need a decision."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "on the row of the hours to decide."
+        },
+        {
+          "lead": "Choose Approve",
+          "rest": "to accept them, or Turn down to refuse them."
+        },
+        {
+          "lead": "Type Why",
+          "rest": "if you chose Turn down. Say why the hours are not accepted."
+        },
+        {
+          "lead": "Press Turn them down",
+          "rest": "to confirm a refusal."
+        }
+      ],
+      "after": "The hours move to Approved or Turned down.",
+      "tips": [
+        "Approving fixes what an hour was worth at that time.",
+        "Hours already decided are found under Approved and Turned down."
+      ]
+    },
+    {
+      "slug": "add-a-volunteer-role",
+      "title": "Add a role for volunteers",
+      "summary": "Say what volunteers can be asked to do, so shifts can be made for it.",
+      "page": "/fundraising/volunteer-shifts",
+      "steps": [
+        {
+          "lead": "Choose Roles",
+          "rest": "in Show."
+        },
+        {
+          "lead": "Press Add a role",
+          "rest": "at the top of Volunteer shifts."
+        },
+        {
+          "lead": "Type the Role",
+          "rest": "for example Event marshal."
+        },
+        {
+          "lead": "Type What it involves",
+          "rest": "a few words for the volunteer."
+        },
+        {
+          "lead": "Type Skills asked for (separate with commas)",
+          "rest": "This is optional."
+        },
+        {
+          "lead": "Press Add the role",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The role can be chosen when you add a shift.",
+      "tips": [
+        "Choose Take no more sign-ups in the role's Actions to close it, and Open it to sign-ups to open it again."
+      ]
+    },
+    {
+      "slug": "add-a-volunteer-shift",
+      "title": "Add a volunteer shift",
+      "summary": "Make a shift for a role, with when it runs and how many volunteers it takes.",
+      "page": "/fundraising/volunteer-shifts",
+      "before": [
+        "A role, added under Roles."
+      ],
+      "steps": [
+        {
+          "lead": "Choose Shifts",
+          "rest": "in Show."
+        },
+        {
+          "lead": "Press Add a shift",
+          "rest": "at the top of Volunteer shifts."
+        },
+        {
+          "lead": "Choose the Role",
+          "rest": "from the list."
+        },
+        {
+          "lead": "Choose when it Starts",
+          "rest": "the day and time."
+        },
+        {
+          "lead": "Choose when it Ends",
+          "rest": "the day and time."
+        },
+        {
+          "lead": "Type Volunteers it takes",
+          "rest": "how many seats the shift has."
+        },
+        {
+          "lead": "Press Add the shift",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The shift is open, and you can put volunteers down for it.",
+      "tips": [
+        "Choose Change the seats in the shift's Actions to raise or lower the number. It cannot go below the seats taken.",
+        "Cancel the shift takes everyone off it. They are not told from here."
+      ]
+    },
+    {
+      "slug": "put-volunteers-down-for-a-shift",
+      "title": "Put a volunteer down for a shift",
+      "summary": "Add a volunteer to a shift, and afterwards mark who came.",
+      "page": "/fundraising/volunteer-shifts",
+      "before": [
+        "A shift with a free seat, and active volunteers."
+      ],
+      "steps": [
+        {
+          "lead": "Press Actions",
+          "rest": "on the shift's row."
+        },
+        {
+          "lead": "Choose Who is down for it",
+          "rest": "to open the shift."
+        },
+        {
+          "lead": "Choose the Volunteer",
+          "rest": "from the list under Put a volunteer down."
+        },
+        {
+          "lead": "Press Put them down",
+          "rest": "to add them."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "beside a volunteer after the shift."
+        },
+        {
+          "lead": "Choose They came",
+          "rest": "or They did not come."
+        }
+      ],
+      "after": "The volunteer is on the shift's list.",
+      "tips": [
+        "Choose Take them off in a volunteer's Actions to remove them before the shift.",
+        "When the shift is full, the page says The shift is full."
+      ]
+    },
+    {
+      "slug": "pause-or-cancel-a-standing-gift",
+      "title": "Pause, resume or cancel a standing gift",
+      "summary": "Stop a gift that repeats for a while, or for good.",
+      "page": "/fundraising/online-gifts",
+      "before": [
+        "A gift that repeats, with its first payment made."
+      ],
+      "steps": [
+        {
+          "lead": "Choose Standing gifts",
+          "rest": "in Show."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "on the donor's standing gift."
+        },
+        {
+          "lead": "Choose Pause it",
+          "rest": "to hold it, Resume it to start it again, or Cancel it to end it."
+        },
+        {
+          "lead": "Press Cancel it",
+          "rest": "to confirm, if you chose Cancel it."
+        }
+      ],
+      "after": "The standing gift shows its new state.",
+      "tips": [
+        "Cancelling asks for nothing more. Gifts already made stay.",
+        "Gifts started on a giving page show under Online gifts."
+      ]
     }
   ]
 }

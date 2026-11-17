@@ -1,0 +1,162 @@
+{
+  "kind": "help-module",
+  "module": "business",
+  "sources": [
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-api/documentation/APPEARANCE.md",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "How your organisation is set up: its details and places, the industry packs and features that suit your kind of business, and how the app looks.",
+  "start": [
+    "Check your organisation's name, number and contact details in Business details. They print on invoices, quotations and emails.",
+    "Add each shop, warehouse or office in Locations.",
+    "Switch on the industry pack that fits the work at each place.",
+    "Choose which features people see on Features."
+  ],
+  "articles": [
+    {
+      "slug": "choose-features-for-everyone",
+      "title": "Choose which features people see",
+      "summary": "Turn features on or off for everyone, for one role, or for one person.",
+      "page": "/packs/features",
+      "before": [
+        "Permission to manage packs. Without it you can see the choices but not change them."
+      ],
+      "steps": [
+        {
+          "lead": "Choose Everyone",
+          "rest": "under Choosing for. Choose A role or A person for a smaller group."
+        },
+        {
+          "lead": "Choose the Role",
+          "rest": "from the list, if you chose A role. For A person, type their name or email and choose them."
+        },
+        {
+          "lead": "Press the switch",
+          "rest": "beside a feature to turn it on or off for everyone."
+        },
+        {
+          "lead": "Press On, Off or As the organisation",
+          "rest": "beside a feature, for a role or a person."
+        }
+      ],
+      "after": "People see only the features you left on.",
+      "tips": [
+        "Turning a feature off hides it and keeps every record. Turning it on brings it all back.",
+        "A feature shows Off while the one it depends on is off, and some features are Always on."
+      ]
+    },
+    {
+      "slug": "set-your-organisation-details",
+      "title": "Set your organisation's name and details",
+      "summary": "Your name, registration number and contact details are used on invoices, quotations and emails.",
+      "page": "/admin/general",
+      "steps": [
+        {
+          "lead": "Open Organisation.",
+          "rest": "Under Who you are, give the organisation name, its identification number and its industry."
+        },
+        {
+          "lead": "Fill in How to reach you:",
+          "rest": "the website, email and phone customers should use."
+        },
+        {
+          "lead": "Press Save organisation details.",
+          "rest": "New documents and emails carry them."
+        }
+      ],
+      "tips": [
+        "The logo, colours and the small print at the foot of documents are set in Studio › Brand."
+      ],
+      "related": [
+        "add-a-location"
+      ]
+    },
+    {
+      "slug": "add-a-location",
+      "title": "Add a second shop or warehouse",
+      "summary": "Add a place. Stock, numbers and people can then be kept for each place.",
+      "page": "/admin/locations",
+      "steps": [
+        {
+          "lead": "Press Add location",
+          "rest": "on Locations."
+        },
+        {
+          "lead": "Give it a name and its address.",
+          "rest": "The address prints on documents made at this place."
+        },
+        {
+          "lead": "Set its currency, language, time zone and date format,",
+          "rest": "and its working hours, day by day."
+        },
+        {
+          "lead": "Press Create.",
+          "rest": "The place is listed, and can be chosen on documents, stock and people's access."
+        }
+      ],
+      "related": [
+        "switch-on-an-industry-pack"
+      ]
+    },
+    {
+      "slug": "switch-on-an-industry-pack",
+      "title": "Switch on the features for your kind of business",
+      "summary": "An industry pack adds the pages, words and starting settings a kind of business needs, at the places that do that work.",
+      "page": "/packs",
+      "steps": [
+        {
+          "lead": "Find the pack",
+          "rest": "under Add a pack, and press See what it adds."
+        },
+        {
+          "lead": "Choose where it should be on:",
+          "rest": "every place, only the places you choose, or off everywhere."
+        },
+        {
+          "lead": "Tick the places",
+          "rest": "it runs at. Each says when it suits the pack."
+        },
+        {
+          "lead": "Press Turn on",
+          "rest": "with the pack's name. Its pages appear in the menu for people at those places."
+        }
+      ],
+      "tips": [
+        "Turning a pack off hides it and keeps every record.",
+        "Where two packs name the same thing differently, choose the word on Your words.",
+        "When an update is ready, the pack says so. An update only replaces a setting nobody changed."
+      ],
+      "related": [
+        "add-a-location"
+      ]
+    },
+    {
+      "slug": "set-the-look-for-everyone",
+      "title": "Set how the app looks for everyone",
+      "summary": "Choose the brand colour, colour mode, density and font, and which of them people may change for themselves.",
+      "page": "/admin/appearance",
+      "steps": [
+        {
+          "lead": "Choose a colour",
+          "rest": "or type its code."
+        },
+        {
+          "lead": "Check the contrast line.",
+          "rest": "It says if text on it would be hard to read."
+        },
+        {
+          "lead": "Turn on People may choose their own",
+          "rest": "beside the colour mode, density or font you want to leave to each person."
+        },
+        {
+          "lead": "Press Save.",
+          "rest": "Everyone sees it at once."
+        }
+      ],
+      "tips": [
+        "The count beside each setting says how many people already chose their own."
+      ]
+    }
+  ]
+}
