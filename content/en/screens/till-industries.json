@@ -2932,6 +2932,231 @@
         }
       },
       "catalogue": "Services"
+    },
+    {
+      "id": "bookshop",
+      "chip": "Bookshop",
+      "headline": "bookshops and stationers",
+      "catalogue": "Products",
+      "cashier": {
+        "initials": "FA",
+        "name": "Fatima",
+        "role": "Counter · Till 1"
+      },
+      "search": "Search titles, ISBN or scan",
+      "categories": [
+        {
+          "name": "All",
+          "count": 2100,
+          "active": true
+        },
+        {
+          "name": "School list",
+          "count": 180,
+          "img": "/products/bookshop/exercise-books.webp"
+        },
+        {
+          "name": "Books",
+          "count": 900,
+          "img": "/products/bookshop/novel.webp"
+        },
+        {
+          "name": "Stationery",
+          "count": 640,
+          "img": "/products/bookshop/pens.webp"
+        },
+        {
+          "name": "Bags",
+          "count": 40,
+          "img": "/products/bookshop/backpack.webp"
+        }
+      ],
+      "items": [
+        {
+          "name": "Exercise books, pack of 10",
+          "img": "/products/bookshop/exercise-books.webp",
+          "price": 4500,
+          "stock": "120 packs"
+        },
+        {
+          "name": "Novel, hardcover",
+          "img": "/products/bookshop/novel.webp",
+          "price": 8500,
+          "stock": "9 left"
+        },
+        {
+          "name": "School backpack",
+          "img": "/products/bookshop/backpack.webp",
+          "price": 18000,
+          "stock": "14 left"
+        },
+        {
+          "name": "Ballpoint pens, box of 50",
+          "img": "/products/bookshop/pens.webp",
+          "price": 6000,
+          "stock": "30 boxes"
+        },
+        {
+          "name": "Scientific calculator",
+          "img": "/products/bookshop/calculator.webp",
+          "price": 15000,
+          "stock": "3 left",
+          "flag": "Low"
+        },
+        {
+          "name": "Colour pencils, 12",
+          "img": "/products/bookshop/pencils.webp",
+          "price": 2500,
+          "stock": "45 boxes"
+        },
+        {
+          "name": "Geometry set",
+          "img": "/products/bookshop/geometry-set.webp",
+          "price": 3500,
+          "stock": "60 sets"
+        },
+        {
+          "name": "A4 paper, ream",
+          "img": "/products/bookshop/paper.webp",
+          "price": 7000,
+          "stock": "80 reams"
+        }
+      ],
+      "order": {
+        "title": "School list #77",
+        "meta": "Mrs Uche · JSS 2",
+        "types": [
+          "Counter",
+          "School list",
+          "Delivery"
+        ],
+        "lines": [
+          {
+            "name": "Exercise books, pack of 10",
+            "detail": "JSS 2 list",
+            "qty": 2,
+            "total": 9000
+          },
+          {
+            "name": "Scientific calculator",
+            "detail": "",
+            "qty": 1,
+            "total": 15000
+          },
+          {
+            "name": "Geometry set",
+            "detail": "",
+            "qty": 1,
+            "total": 3500
+          },
+          {
+            "name": "School backpack",
+            "detail": "Blue",
+            "qty": 1,
+            "total": 18000
+          }
+        ],
+        "warning": "Scientific calculator: 3 left before school resumes.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 45500
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 3412
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 48912
+      },
+      "receipt": {
+        "title": "PAGES & PENS",
+        "lines": [
+          {
+            "label": "Exercise books ×2",
+            "amount": 9000
+          },
+          {
+            "label": "Calculator",
+            "amount": 15000
+          },
+          {
+            "label": "Geometry set",
+            "amount": 3500
+          },
+          {
+            "label": "Backpack",
+            "amount": 18000
+          },
+          {
+            "label": "VAT",
+            "amount": 3412
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 48912
+        },
+        "footer": "Paid · Transfer · Till 1"
+      },
+      "notice": {
+        "title": "School list: 18 items packed",
+        "detail": "Ready for pickup · parent notified",
+        "icon": "check"
+      },
+      "phone": {
+        "shop": {
+          "initials": "PP",
+          "name": "Pages & Pens"
+        },
+        "brand": "#1d4ed8",
+        "pickup": {
+          "title": "Pickup · tomorrow 9 am",
+          "place": "School lists packed for you"
+        },
+        "categories": [
+          "Back to school",
+          "School list",
+          "Books",
+          "Stationery"
+        ],
+        "active": "School list",
+        "sectionCount": "180 items",
+        "dishes": [
+          {
+            "name": "Exercise books, pack of 10",
+            "note": "60 leaves, ruled",
+            "price": 4500,
+            "img": "/products/bookshop/exercise-books.webp",
+            "tag": "School list"
+          },
+          {
+            "name": "Scientific calculator",
+            "note": "Two-line display",
+            "price": 15000,
+            "img": "/products/bookshop/calculator.webp",
+            "tag": "3 left"
+          },
+          {
+            "name": "Geometry set",
+            "note": "Compass, protractor, rulers",
+            "price": 3500,
+            "img": "/products/bookshop/geometry-set.webp"
+          },
+          {
+            "name": "School backpack",
+            "note": "Padded straps, 25 L",
+            "price": 18000,
+            "img": "/products/bookshop/backpack.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 19500
+        }
+      }
     }
   ],
   "nav": [
