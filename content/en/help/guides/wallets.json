@@ -1,0 +1,135 @@
+{
+  "kind": "help-module",
+  "module": "wallets",
+  "sources": [
+    "commerce-api/documentation/WALLET_BILLS.md",
+    "commerce-api/documentation/WALLET_CARDS.md",
+    "commerce-api/documentation/WALLET_FOREIGN_ACCOUNTS.md"
+  ],
+  "intro": "Your wallets: paying bills, cards and money held in other currencies.",
+  "start": [
+    "Open a wallet account, then pay a bill or issue a card from it."
+  ],
+  "articles": [
+    {
+      "slug": "pay-a-bill-from-a-wallet",
+      "title": "Pay airtime, data, electricity or cable TV from a wallet",
+      "summary": "Pay a bill from one of your wallets, see the fee before you confirm, and keep the receipt and any token.",
+      "page": "/finance/spend/bills",
+      "before": [
+        "Your business must be verified for wallets, under Settings › Organisation › Verification."
+      ],
+      "steps": [
+        {
+          "lead": "Press Pay a bill",
+          "rest": "and choose the wallet and what you are paying."
+        },
+        {
+          "lead": "Fill in the details.",
+          "rest": "For electricity and government payments, press Check to see whose number it is and what is owed."
+        },
+        {
+          "lead": "Review.",
+          "rest": "You see the amount, the fee, the total and what the wallet will have after."
+        },
+        {
+          "lead": "Press Pay.",
+          "rest": "If the connection drops, press Check status: it is never paid twice."
+        }
+      ],
+      "tips": [
+        "Processing means the network has not answered yet. The money stays held; do not pay again.",
+        "To find an electricity token, open the row's Actions and choose View receipt."
+      ],
+      "related": [
+        "categorise-card-and-bill-spending"
+      ]
+    },
+    {
+      "slug": "issue-a-card",
+      "title": "Give a team member a virtual card",
+      "summary": "Issue a card for a budget, put money on it, set its limits, and freeze it if it is lost.",
+      "page": "/finance/spend/cards",
+      "steps": [
+        {
+          "lead": "Press Issue a card",
+          "rest": "and choose the wallet the card draws on and the member who holds it."
+        },
+        {
+          "lead": "Add what it is for,",
+          "rest": "a budget line if you use one, and any limits."
+        },
+        {
+          "lead": "Review.",
+          "rest": "You see the fee, the total and what the wallet will have after."
+        },
+        {
+          "lead": "Press Issue the card.",
+          "rest": "If the connection drops, press Check status: the card is never issued twice."
+        },
+        {
+          "lead": "Put money on it:",
+          "rest": "open the row's Actions and choose Put money on. Take money back gives it back to the wallet."
+        }
+      ],
+      "tips": [
+        "Lost card? Open the row's Actions and choose Freeze. Unfreeze to use it again.",
+        "Show card details reveals the number, code and expiry, and hides them again after a minute."
+      ],
+      "related": [
+        "categorise-card-and-bill-spending"
+      ]
+    },
+    {
+      "slug": "categorise-card-and-bill-spending",
+      "title": "Put card and bill spending in an expense account",
+      "summary": "Each card payment and bill becomes an expense to categorise and keep a receipt for. Team members see their own.",
+      "page": "/finance/spend/company-expenses",
+      "steps": [
+        {
+          "lead": "Open the row's Actions",
+          "rest": "on an expense to categorise, and choose Categorise."
+        },
+        {
+          "lead": "Choose the expense account",
+          "rest": "and add a note if you want."
+        },
+        {
+          "lead": "Attach the receipt.",
+          "rest": "Upload a file or attach one from Drive."
+        }
+      ]
+    },
+    {
+      "slug": "open-a-foreign-account",
+      "title": "Get paid in dollars, euros or pounds",
+      "summary": "Open an account that receives a foreign currency into a wallet in that currency, and share its details with the payer.",
+      "page": "/finance/wallets/foreign-accounts",
+      "before": [
+        "You need a wallet in that currency. Open one on Wallets with New wallet."
+      ],
+      "steps": [
+        {
+          "lead": "Press Open a foreign account",
+          "rest": "and choose the currency."
+        },
+        {
+          "lead": "Choose the wallet that holds it.",
+          "rest": "It must be a wallet in that currency. For euros, choose the country too."
+        },
+        {
+          "lead": "Review and open.",
+          "rest": "The details to share appear as soon as it is open."
+        },
+        {
+          "lead": "Send your details to the payer:",
+          "rest": "open the row's Actions, choose Show details to share, then Copy all or Share."
+        }
+      ],
+      "tips": [
+        "Accounts can receive US dollars, euros, pounds, cedis and Kenyan shillings.",
+        "Opening means it is being set up. The details appear by themselves."
+      ]
+    }
+  ]
+}

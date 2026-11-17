@@ -1,0 +1,104 @@
+{
+  "kind": "help-module",
+  "module": "documents",
+  "sources": [
+    "commerce-api/documentation/DOCUMENT_SETTINGS.md",
+    "commerce-api/documentation/NUMBERING.md",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "How documents are numbered and behave, and the alerts and digests you receive.",
+  "start": [
+    "Go through Document settings with the guided setup, so each document behaves the way you work.",
+    "Check how invoices and other documents are numbered in Numbering."
+  ],
+  "articles": [
+    {
+      "slug": "change-invoice-numbers",
+      "title": "Change how invoice numbers look",
+      "summary": "Change the parts of a number and when the count starts again. Numbers already issued keep theirs.",
+      "page": "/admin/numbering",
+      "steps": [
+        {
+          "lead": "Open the document's series",
+          "rest": "on Number series, such as invoices."
+        },
+        {
+          "lead": "Say where it applies:",
+          "rest": "all places, or Add numbers for one place to give a place its own."
+        },
+        {
+          "lead": "Build the number.",
+          "rest": "Add a part for your own letters, the year, the month or a place code, and move them into order. The preview changes as you type."
+        },
+        {
+          "lead": "Choose when the count starts again:",
+          "rest": "never, each year, each month or each day."
+        },
+        {
+          "lead": "Press Save series.",
+          "rest": "The next document is numbered the new way."
+        }
+      ],
+      "tips": [
+        "Numbers already issued do not change. Nothing is renumbered.",
+        "A number is never issued twice. A series that starts again each year must show the year in it."
+      ]
+    },
+    {
+      "slug": "change-how-a-document-behaves",
+      "title": "Change how a document behaves",
+      "summary": "Each kind of document is a set of questions: approvals, prices, what it may be made from. Answer them for your business.",
+      "page": "/admin/document-settings",
+      "steps": [
+        {
+          "lead": "Press Start guided setup,",
+          "rest": "or open the kind of document you want to change, or search all the settings."
+        },
+        {
+          "lead": "Read each question in plain words,",
+          "rest": "with an example from your own answers, and choose. The recommended answer is marked."
+        },
+        {
+          "lead": "Press Save changes.",
+          "rest": "Documents follow it from then on."
+        }
+      ],
+      "tips": [
+        "Start from a preset sets many answers at once. Press See what changes before Apply. Most businesses pick Balanced.",
+        "A setting can be set for one place, where it says so. A place follows the organisation for everything it leaves alone.",
+        "Changed from the default lists what you changed. Reset takes one back."
+      ],
+      "related": [
+        "change-invoice-numbers"
+      ]
+    },
+    {
+      "slug": "set-up-the-weekly-digest",
+      "title": "Choose who gets the weekly digest",
+      "summary": "The weekly summary of your business goes to your team unless they say no. Choose who, when and what is in it.",
+      "page": "/settings/notifications/digest",
+      "steps": [
+        {
+          "lead": "Under Who gets it, turn on the roles.",
+          "rest": "People who join later with them get it too."
+        },
+        {
+          "lead": "Choose the day and the time.",
+          "rest": "Each person gets it in their own time zone."
+        },
+        {
+          "lead": "Press Save changes,",
+          "rest": "then Apply to current people to switch on those already here."
+        },
+        {
+          "lead": "Press Send a test to me.",
+          "rest": "It reaches you the way the team would get it."
+        }
+      ],
+      "tips": [
+        "Changing the default does not undo the choices people made for themselves.",
+        "Milestones are quiet notes when something real happens, like a first sale. They are set beside the digest."
+      ]
+    }
+  ]
+}

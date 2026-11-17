@@ -1,0 +1,70 @@
+{
+  "kind": "help-module",
+  "module": "planning",
+  "sources": [
+    "commerce-api/documentation/FINANCE.md",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "Planning ahead: budgets against what you spend, and loans you have taken or given.",
+  "start": [
+    "Set a budget for the year, then compare it with the books."
+  ],
+  "articles": [
+    {
+      "slug": "set-a-budget",
+      "title": "Set a budget and hold spending to it",
+      "summary": "Plan a year's amount per account, get it approved, and make it active so requisitions, orders and bills are checked against it.",
+      "page": "/finance/budgets",
+      "steps": [
+        {
+          "lead": "Press New budget,",
+          "rest": "give it a name and choose the fiscal year."
+        },
+        {
+          "lead": "Add the accounts",
+          "rest": "and the amount for the year. It is spread over the months."
+        },
+        {
+          "lead": "Open Its control",
+          "rest": "and choose how it controls: only warn or block when spending goes over, at which stages, and the thresholds to tell its owner at."
+        },
+        {
+          "lead": "Press Submit for approval,",
+          "rest": "then Activate once approved. Spending is now held against it."
+        }
+      ],
+      "after": "Each line shows what is spent, committed and still available, against the budget.",
+      "tips": [
+        "To move money between lines or change one, press Revise or transfer. It is approved like the budget."
+      ]
+    },
+    {
+      "slug": "record-a-loan",
+      "title": "Record a loan and its repayments",
+      "summary": "Add money you borrowed with its rate and term. The instalments are worked out and join the cash forecast.",
+      "page": "/finance/loans",
+      "steps": [
+        {
+          "lead": "Press Add a loan",
+          "rest": "on Loans."
+        },
+        {
+          "lead": "Give the lender, the amount borrowed, the interest a year and the term,",
+          "rest": "and the day it was lent."
+        },
+        {
+          "lead": "Choose how often instalments fall and how it is repaid:",
+          "rest": "equal payments, equal principal, or interest only, with any grace period."
+        },
+        {
+          "lead": "Press Add the loan.",
+          "rest": "Its instalments are worked out, always repaying the amount borrowed exactly."
+        },
+        {
+          "lead": "Choose Mark an instalment paid",
+          "rest": "when you pay one, with the amount and the day."
+        }
+      ]
+    }
+  ]
+}

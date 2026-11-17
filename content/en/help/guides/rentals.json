@@ -20,17 +20,34 @@
       "summary": "An item is what you hire out, with its rate and deposit. Its units are the real pieces, each with a tag you scan at hand-out and return.",
       "page": "/rentals/items",
       "steps": [
-        { "lead": "Press New item", "rest": "on Items." },
-        { "lead": "Give it a name and rate,", "rest": "charged per day or per hour, and the deposit for each unit. Add its own late rate if it has one." },
-        { "lead": "Press Make the item,", "rest": "then open it." },
-        { "lead": "Enter the new unit's tag code", "rest": "and press Add the unit, once for each piece you own." },
-        { "lead": "Use Is it free?", "rest": "to check how many units are free for a period: enter from, back by and how many, and press Ask." }
+        {
+          "lead": "Press New item",
+          "rest": "on Items."
+        },
+        {
+          "lead": "Give it a name and rate,",
+          "rest": "charged per day or per hour, and the deposit for each unit. Add its own late rate if it has one."
+        },
+        {
+          "lead": "Press Make the item,",
+          "rest": "then open it."
+        },
+        {
+          "lead": "Enter the new unit's tag code",
+          "rest": "and press Add the unit, once for each piece you own."
+        },
+        {
+          "lead": "Use Is it free?",
+          "rest": "to check how many units are free for a period: enter from, back by and how many, and press Ask."
+        }
       ],
       "tips": [
         "A unit that needs mending can be taken off for mending, so nobody hires it. Press Put back when it is fixed.",
         "Without its own late rate, an item's late fee follows your rentals settings."
       ],
-      "related": ["hire-something-out"]
+      "related": [
+        "hire-something-out"
+      ]
     },
     {
       "slug": "hire-something-out",
@@ -38,18 +55,39 @@
       "summary": "Reserve the units for the customer's dates, then hand them out with each tag scanned, the customer's signature and the deposit.",
       "page": "/rentals/agreements",
       "steps": [
-        { "lead": "Press Reserve a rental", "rest": "on Agreements." },
-        { "lead": "Choose the customer, the item and how many,", "rest": "with From and Due back, and who brings it back: the customer or your collector. Press Reserve." },
-        { "lead": "Press Hand out", "rest": "on the rental when the customer collects it." },
-        { "lead": "Scan each unit's tag", "rest": "and note its condition." },
-        { "lead": "Let the customer sign", "rest": "for the condition." },
-        { "lead": "Enter the deposit held", "rest": "with a reference, and press Hand out." }
+        {
+          "lead": "Press Reserve a rental",
+          "rest": "on Agreements."
+        },
+        {
+          "lead": "Choose the customer, the item and how many,",
+          "rest": "with From and Due back, and who brings it back: the customer or your collector. Press Reserve."
+        },
+        {
+          "lead": "Press Hand out",
+          "rest": "on the rental when the customer collects it."
+        },
+        {
+          "lead": "Scan each unit's tag",
+          "rest": "and note its condition."
+        },
+        {
+          "lead": "Let the customer sign",
+          "rest": "for the condition."
+        },
+        {
+          "lead": "Enter the deposit held",
+          "rest": "with a reference, and press Hand out."
+        }
       ],
       "tips": [
         "A unit is never held by two rentals at once.",
         "Press Extend to give a new due time, with the reason."
       ],
-      "related": ["take-a-rental-back", "add-an-item-to-hire"]
+      "related": [
+        "take-a-rental-back",
+        "add-an-item-to-hire"
+      ]
     },
     {
       "slug": "take-a-rental-back",
@@ -57,19 +95,63 @@
       "summary": "Scan each unit back, note any damage, then settle: rent, late fees and damage become one invoice, and the deposit pays them first.",
       "page": "/rentals/returns-due",
       "steps": [
-        { "lead": "Find the rental on Returns due", "rest": "and press Check in. The rental opens." },
-        { "lead": "Press Take it back.", "rest": "A drawer lists each unit on the rental." },
-        { "lead": "Tick each unit as its tag is scanned,", "rest": "and note its condition now." },
-        { "lead": "Tick Damaged if it is,", "rest": "and say what the damage comes to. The unit leaves the calendar until it is mended." },
-        { "lead": "Press Record the return.", "rest": "A late fee is charged for the time past due." },
-        { "lead": "Confirm or waive each damage charge", "rest": "under Charges." },
-        { "lead": "Press Settle,", "rest": "say where the rest of the deposit went, and press Settle the rental." }
+        {
+          "lead": "Find the rental on Returns due",
+          "rest": "and press Check in. The rental opens."
+        },
+        {
+          "lead": "Press Take it back.",
+          "rest": "A drawer lists each unit on the rental."
+        },
+        {
+          "lead": "Tick each unit as its tag is scanned,",
+          "rest": "and note its condition now."
+        },
+        {
+          "lead": "Tick Damaged if it is,",
+          "rest": "and say what the damage comes to. The unit leaves the calendar until it is mended."
+        },
+        {
+          "lead": "Press Record the return.",
+          "rest": "A late fee is charged for the time past due."
+        },
+        {
+          "lead": "Confirm or waive each damage charge",
+          "rest": "under Charges."
+        },
+        {
+          "lead": "Press Settle,",
+          "rest": "say where the rest of the deposit went, and press Settle the rental."
+        }
       ],
       "tips": [
         "Until the item is back, Returns due shows the late fee so far as an estimate.",
         "A rental cannot be settled while a damage charge is still undecided."
       ],
-      "related": ["hire-something-out"]
+      "related": [
+        "hire-something-out"
+      ]
+    },
+    {
+      "slug": "see-the-drivers-day",
+      "title": "See what the driver delivers and fetches today",
+      "summary": "See each delivery and collection for a day, by time, with the address.",
+      "page": "/rentals/driver-runs",
+      "steps": [
+        {
+          "lead": "Choose the Day",
+          "rest": "to look at. It shows the runs for that day, by time, with the address."
+        },
+        {
+          "lead": "Open the Rental",
+          "rest": "by choosing its number, to see the agreement."
+        }
+      ],
+      "after": "You know the day's runs in order.",
+      "tips": [
+        "A run with no driver says Nobody yet.",
+        "Only rentals your own driver delivers or fetches back show here."
+      ]
     }
   ]
 }

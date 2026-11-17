@@ -1,7 +1,7 @@
 {
   "synced": {
-    "web": "6da169d 2026-11-03",
-    "api": "395b0db 2026-11-03"
+    "web": "39d3d60b 2026-11-17",
+    "api": "30023336e 2026-11-17"
   },
   "sections": [
     {
@@ -244,6 +244,25 @@
                       }
                     ]
                   }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Mail",
+          "slug": "mail",
+          "groups": [
+            {
+              "heading": "Mail",
+              "pages": [
+                {
+                  "href": "/mail",
+                  "anchor": "mail",
+                  "title": "Mail",
+                  "where": "Mail",
+                  "description": "Your organisation’s email: read, write and organise the mailboxes you have.",
+                  "aliases": []
                 }
               ]
             }
@@ -2515,6 +2534,17 @@
                   "aliases": [
                     "bills"
                   ]
+                },
+                {
+                  "href": "/accommodation/groups",
+                  "anchor": "accommodation-groups",
+                  "title": "Groups",
+                  "where": "Operations › Accommodation › Groups",
+                  "description": "Groups holding rooms: what each company pays and its rooming list, booked in one go.",
+                  "aliases": [
+                    "rooming list",
+                    "group bookings"
+                  ]
                 }
               ]
             },
@@ -2588,6 +2618,16 @@
                   "aliases": []
                 },
                 {
+                  "href": "/field-service/job-templates",
+                  "anchor": "field-service-job-templates",
+                  "title": "Job templates",
+                  "where": "Operations › Field service › Job templates",
+                  "description": "Kinds of job named once: title, length, priority, checklist and the parts it needs.",
+                  "aliases": [
+                    "job types"
+                  ]
+                },
+                {
                   "href": "/field-service/service-areas",
                   "anchor": "field-service-service-areas",
                   "title": "Service areas",
@@ -2614,6 +2654,24 @@
                   "description": "Clients with their next visit; nothing clinical shows on the list.",
                   "aliases": [
                     "patients"
+                  ]
+                },
+                {
+                  "href": "/client-records/templates",
+                  "anchor": "client-records-templates",
+                  "title": "Record templates",
+                  "where": "Operations › Client records › Record templates",
+                  "description": "The fields a practice writes on a record: eyewear, hair colour, physio, therapy, vet.",
+                  "aliases": []
+                },
+                {
+                  "href": "/client-records/claims",
+                  "anchor": "client-records-claims",
+                  "title": "Insurer claims",
+                  "where": "Operations › Client records › Insurer claims",
+                  "description": "Insurer claims: what was claimed, the insurer’s answer and what it has paid.",
+                  "aliases": [
+                    "insurance"
                   ]
                 }
               ]
@@ -2647,6 +2705,16 @@
                   "description": "Requests for a copy, correction or deletion, each on a 30-day clock.",
                   "aliases": [
                     "retention"
+                  ]
+                },
+                {
+                  "href": "/client-records/key-rotation",
+                  "anchor": "client-records-key-rotation",
+                  "title": "Key rotation",
+                  "where": "Operations › Client records › Key rotation",
+                  "description": "Move every sealed value to a new key; where the keys stand and what is left.",
+                  "aliases": [
+                    "encryption"
                   ]
                 }
               ]
@@ -2683,6 +2751,17 @@
                   "where": "Operations › Rentals › Returns due",
                   "description": "What is overdue, due today and due later, and the late fee so far.",
                   "aliases": []
+                },
+                {
+                  "href": "/rentals/driver-runs",
+                  "anchor": "rentals-driver-runs",
+                  "title": "Driver runs",
+                  "where": "Operations › Rentals › Driver runs",
+                  "description": "The driver’s day: what to deliver and what to fetch back, by time, with the address.",
+                  "aliases": [
+                    "deliveries",
+                    "collections"
+                  ]
                 }
               ]
             }
@@ -3034,6 +3113,43 @@
                   "where": "Operations › Fundraising › Tax receipts",
                   "description": "Receipts waiting, issued, sent, bounced or voided; the year-end batch.",
                   "aliases": []
+                },
+                {
+                  "href": "/fundraising/online-gifts",
+                  "anchor": "fundraising-online-gifts",
+                  "title": "Online gifts",
+                  "where": "Operations › Fundraising › Online gifts",
+                  "description": "Gifts started on a giving page, and the standing gifts they began.",
+                  "aliases": []
+                }
+              ]
+            },
+            {
+              "heading": "Time given",
+              "pages": [
+                {
+                  "href": "/fundraising/volunteers",
+                  "anchor": "fundraising-volunteers",
+                  "title": "Volunteers",
+                  "where": "Operations › Fundraising › Volunteers",
+                  "description": "People who give time: their hours, their shifts and their own page.",
+                  "aliases": []
+                },
+                {
+                  "href": "/fundraising/volunteer-shifts",
+                  "anchor": "fundraising-volunteer-shifts",
+                  "title": "Volunteer shifts",
+                  "where": "Operations › Fundraising › Volunteer shifts",
+                  "description": "Shifts with the seats they take, who is down for them, and the roles.",
+                  "aliases": []
+                },
+                {
+                  "href": "/fundraising/volunteer-hours",
+                  "anchor": "fundraising-volunteer-hours",
+                  "title": "Volunteer hours",
+                  "where": "Operations › Fundraising › Volunteer hours",
+                  "description": "Hours waiting for a decision, approved or turned down.",
+                  "aliases": []
                 }
               ]
             }
@@ -3122,6 +3238,77 @@
                   "aliases": []
                 }
               ]
+            },
+            {
+              "heading": "Planning",
+              "pages": [
+                {
+                  "href": "/construction/programme",
+                  "anchor": "construction-programme",
+                  "title": "Programme",
+                  "where": "Operations › Construction › Programme",
+                  "description": "Tasks and milestones with their links, the baseline, the Gantt chart and the critical path.",
+                  "aliases": [
+                    "gantt",
+                    "schedule"
+                  ]
+                }
+              ]
+            },
+            {
+              "heading": "Documents",
+              "pages": [
+                {
+                  "href": "/construction/drawings",
+                  "anchor": "construction-drawings",
+                  "title": "Drawings",
+                  "where": "Operations › Construction › Drawings",
+                  "description": "The drawing register with each drawing’s revisions and files.",
+                  "aliases": []
+                },
+                {
+                  "href": "/construction/transmittals",
+                  "anchor": "construction-transmittals",
+                  "title": "Transmittals",
+                  "where": "Operations › Construction › Transmittals",
+                  "description": "Drawing revisions sent to someone for a purpose, from draft to issued.",
+                  "aliases": []
+                },
+                {
+                  "href": "/construction/rfis",
+                  "anchor": "construction-rfis",
+                  "title": "RFIs",
+                  "where": "Operations › Construction › RFIs",
+                  "description": "Questions put to the design team, with their due days, answers and the overdue list.",
+                  "aliases": [
+                    "requests for information"
+                  ]
+                }
+              ]
+            },
+            {
+              "heading": "Closing out",
+              "pages": [
+                {
+                  "href": "/construction/final-account",
+                  "anchor": "construction-final-account",
+                  "title": "Final account",
+                  "where": "Operations › Construction › Final account",
+                  "description": "The final sum, provisional sums, what is certified and invoiced, and agreeing it.",
+                  "aliases": []
+                },
+                {
+                  "href": "/construction/handover",
+                  "anchor": "construction-handover",
+                  "title": "Handover pack",
+                  "where": "Operations › Construction › Handover pack",
+                  "description": "As-built drawings, manuals, certificates and warranties, with what is missing and the ZIP.",
+                  "aliases": [
+                    "as-built",
+                    "o&m"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -3178,6 +3365,54 @@
                   "title": "Owners' levies",
                   "where": "Operations › Property › Owners' levies",
                   "description": "The year's levy for an estate, who has paid, who is behind and where it goes.",
+                  "aliases": []
+                }
+              ]
+            },
+            {
+              "heading": "Letting and selling",
+              "pages": [
+                {
+                  "href": "/property/listings",
+                  "anchor": "property-listings",
+                  "title": "Listings",
+                  "where": "Operations › Property › Listings",
+                  "description": "Units offered to let or for sale, with photographs, viewings, offers and the portal feed.",
+                  "aliases": [
+                    "viewings",
+                    "offers"
+                  ]
+                },
+                {
+                  "href": "/property/deals",
+                  "anchor": "property-deals",
+                  "title": "Commissions",
+                  "where": "Operations › Property › Commissions",
+                  "description": "Commission on lettings and sales, split between agents and settled by invoice or statement.",
+                  "aliases": [
+                    "commission",
+                    "deals"
+                  ]
+                }
+              ]
+            },
+            {
+              "heading": "Running costs",
+              "pages": [
+                {
+                  "href": "/property/meters",
+                  "anchor": "property-meters",
+                  "title": "Meters",
+                  "where": "Operations › Property › Meters",
+                  "description": "Electricity, water and gas meters by unit, their readings and billing them to tenants.",
+                  "aliases": []
+                },
+                {
+                  "href": "/property/service-charges",
+                  "anchor": "property-service-charges",
+                  "title": "Service charges",
+                  "where": "Operations › Property › Service charges",
+                  "description": "A building's service charge for the year: budget, instalments to the units and the year-end reconciliation.",
                   "aliases": []
                 }
               ]
@@ -3265,6 +3500,14 @@
                   "where": "Operations › Bookings › Waiting list",
                   "description": "Guests who wanted something that was full.",
                   "aliases": []
+                },
+                {
+                  "href": "/bookings/blocks",
+                  "anchor": "bookings-blocks",
+                  "title": "Group blocks",
+                  "where": "Operations › Bookings › Group blocks",
+                  "description": "Rooms held for groups and partners until their release date.",
+                  "aliases": []
                 }
               ]
             },
@@ -3319,6 +3562,137 @@
               ]
             }
           ]
+        },
+        {
+          "title": "Memberships",
+          "slug": "memberships",
+          "groups": [
+            {
+              "heading": "Every day",
+              "pages": [
+                {
+                  "href": "/memberships/members",
+                  "anchor": "memberships-members",
+                  "title": "Members",
+                  "where": "Operations › Memberships › Members",
+                  "description": "Everyone with a plan, what they pay and whether they can get in today.",
+                  "aliases": [
+                    "subscribers",
+                    "gym members"
+                  ]
+                },
+                {
+                  "href": "/memberships/access",
+                  "anchor": "memberships-access",
+                  "title": "Access",
+                  "where": "Operations › Memberships › Access",
+                  "description": "Check members in at the desk: scan a card or type a number.",
+                  "aliases": [
+                    "check in",
+                    "door"
+                  ]
+                },
+                {
+                  "href": "/memberships/billing-runs",
+                  "anchor": "memberships-billing-runs",
+                  "title": "Billing runs",
+                  "where": "Operations › Memberships › Billing runs",
+                  "description": "Everything due on a billing day, checked before any invoice is made.",
+                  "aliases": [
+                    "subscriptions billing",
+                    "recurring billing"
+                  ]
+                }
+              ]
+            },
+            {
+              "heading": "Set up",
+              "pages": [
+                {
+                  "href": "/memberships/plans",
+                  "anchor": "memberships-plans",
+                  "title": "Plans",
+                  "where": "Operations › Memberships › Plans",
+                  "description": "What members buy: a price, how often it renews and what it lets them into.",
+                  "aliases": [
+                    "membership plans",
+                    "subscription plans"
+                  ]
+                },
+                {
+                  "href": "/memberships/contracts",
+                  "anchor": "memberships-contracts",
+                  "title": "Contracts and retainers",
+                  "where": "Operations › Memberships › Contracts and retainers",
+                  "description": "Maintenance contracts, retainers and prepayments, with what is used and what is billed.",
+                  "aliases": [
+                    "retainers",
+                    "maintenance contracts",
+                    "service contracts"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Events",
+          "slug": "events",
+          "groups": [
+            {
+              "heading": "Every day",
+              "pages": [
+                {
+                  "href": "/events",
+                  "anchor": "events",
+                  "title": "Events",
+                  "where": "Operations › Events › Events",
+                  "description": "Every event you sell tickets for, from the first draft to the last scan at the door.",
+                  "aliases": [
+                    "ticketing",
+                    "conferences",
+                    "concerts"
+                  ]
+                },
+                {
+                  "href": "/events/orders",
+                  "anchor": "events-orders",
+                  "title": "Tickets sold",
+                  "where": "Operations › Events › Tickets sold",
+                  "description": "Every ticket order: who bought, how they paid, and a refund when one is due.",
+                  "aliases": [
+                    "ticket sales",
+                    "attendees"
+                  ]
+                },
+                {
+                  "href": "/events/check-in",
+                  "anchor": "events-check-in",
+                  "title": "Check-in",
+                  "where": "Operations › Events › Check-in",
+                  "description": "Scan tickets at the gate or a session and see who is in.",
+                  "aliases": [
+                    "gate",
+                    "scan tickets",
+                    "door"
+                  ]
+                }
+              ]
+            },
+            {
+              "heading": "Set up",
+              "pages": [
+                {
+                  "href": "/events/venues",
+                  "anchor": "events-venues",
+                  "title": "Venues",
+                  "where": "Operations › Events › Venues",
+                  "description": "The places your events are held.",
+                  "aliases": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3326,6 +3700,702 @@
       "title": "Money",
       "slug": "money",
       "modules": [
+        {
+          "title": "Overview",
+          "slug": "overview",
+          "groups": [
+            {
+              "heading": "Overview",
+              "pages": [
+                {
+                  "href": "/finance/overview",
+                  "anchor": "finance-overview",
+                  "title": "Overview",
+                  "where": "Money › Overview",
+                  "description": "Money in and out, what is waiting, and where to look next.",
+                  "aliases": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Wallets",
+          "slug": "wallets",
+          "groups": [
+            {
+              "heading": "Wallets",
+              "pages": [
+                {
+                  "href": "/finance/wallets",
+                  "anchor": "finance-wallets",
+                  "title": "All wallets",
+                  "where": "Money › Wallets › All wallets",
+                  "description": "Wallets that hold money for paying and collecting.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/spend/bills",
+                  "anchor": "finance-spend-bills",
+                  "title": "Pay a bill",
+                  "where": "Money › Wallets › Pay a bill",
+                  "description": "Airtime, data, electricity, cable TV, government payments, paid from a wallet.",
+                  "aliases": [],
+                  "help": {
+                    "purpose": "Pay airtime, data, electricity, cable TV, government payments from a wallet, and keep each receipt. The fee is shown before you confirm.",
+                    "tasks": [
+                      {
+                        "label": "Pay a bill",
+                        "steps": [
+                          {
+                            "lead": "Press Pay a bill",
+                            "rest": " and choose the wallet and what you are paying."
+                          },
+                          {
+                            "lead": "Fill in the details.",
+                            "rest": " For electricity, government payments, press Check to see whose number it is and what is owed."
+                          },
+                          {
+                            "lead": "Review.",
+                            "rest": " You see the amount, the fee, the total and what the wallet will have after."
+                          },
+                          {
+                            "lead": "Press Pay.",
+                            "rest": " If the connection drops, press Check status: it is never paid twice."
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Find an electricity token",
+                        "steps": [
+                          {
+                            "lead": "Open the row’s Actions",
+                            "rest": " and choose View receipt."
+                          },
+                          {
+                            "lead": "Copy the token",
+                            "rest": " or use Share or Download. Only people who can pay bills see it."
+                          }
+                        ]
+                      }
+                    ],
+                    "terms": [
+                      {
+                        "word": "Processing",
+                        "meaning": "The network has not said yes or no yet. The money stays held in the wallet and this screen updates by itself. It is not a failure: do not pay again."
+                      },
+                      {
+                        "word": "Did not go through",
+                        "meaning": "The bill was not paid and the money is back in the wallet."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "href": "/finance/spend/cards",
+                  "anchor": "finance-spend-cards",
+                  "title": "Cards",
+                  "where": "Money › Wallets › Cards",
+                  "description": "Virtual cards for your team, with limits, freezing and what each one spends.",
+                  "aliases": [],
+                  "help": {
+                    "purpose": "Virtual cards for your team. Issue a card to a member for a budget, put money on it, set its limits and freeze it. Each payment on a card becomes an expense to categorise.",
+                    "tasks": [
+                      {
+                        "label": "Issue a card",
+                        "steps": [
+                          {
+                            "lead": "Press Issue a card",
+                            "rest": " and choose the wallet the card draws on and the member who holds it."
+                          },
+                          {
+                            "lead": "Add what it is for",
+                            "rest": ", a budget line if you use one, and any limits."
+                          },
+                          {
+                            "lead": "Review.",
+                            "rest": " You see the fee, the total and what the wallet will have after."
+                          },
+                          {
+                            "lead": "Press Issue the card.",
+                            "rest": " If the connection drops, press Check status: the card is never issued twice."
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Put money on a card, or take it back",
+                        "steps": [
+                          {
+                            "lead": "Open the row’s Actions",
+                            "rest": " and choose Put money on or Take money back."
+                          },
+                          {
+                            "lead": "Enter the amount and review.",
+                            "rest": " The fee is shown before anything moves."
+                          }
+                        ]
+                      },
+                      {
+                        "label": "See a card’s number, code and expiry",
+                        "steps": [
+                          {
+                            "lead": "Open the card",
+                            "rest": " and press Show card details, then confirm."
+                          },
+                          {
+                            "lead": "Copy what you need.",
+                            "rest": " The details hide by themselves after a minute, and when you leave the page."
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Freeze a lost card",
+                        "steps": [
+                          {
+                            "lead": "Open the row’s Actions",
+                            "rest": " and choose Freeze. Choose Unfreeze to use it again."
+                          }
+                        ]
+                      }
+                    ],
+                    "terms": [
+                      {
+                        "word": "Processing",
+                        "meaning": "The card issuer has not said yes or no yet. Any money stays held in the wallet and this screen updates by itself. It is not a failure: do not start it again."
+                      },
+                      {
+                        "word": "Awaiting review",
+                        "meaning": "A payment on the card that has to be checked before it is booked. It becomes an expense once it has been."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "href": "/finance/spend/company-expenses",
+                  "anchor": "finance-spend-company-expenses",
+                  "title": "Card and bill expenses",
+                  "where": "Money › Wallets › Card and bill expenses",
+                  "description": "What cards and bills spent, ready to put in an expense account with its receipts.",
+                  "aliases": [],
+                  "help": {
+                    "purpose": "What cards and bills spent, each one an expense to put in an expense account and to keep a receipt for. Team members see their own.",
+                    "tasks": [
+                      {
+                        "label": "Categorise an expense",
+                        "steps": [
+                          {
+                            "lead": "Open the row’s Actions",
+                            "rest": " and choose Categorise."
+                          },
+                          {
+                            "lead": "Choose the expense account",
+                            "rest": " and add a note if you want."
+                          },
+                          {
+                            "lead": "Attach the receipt.",
+                            "rest": " Upload a file or attach one from Drive."
+                          }
+                        ]
+                      }
+                    ],
+                    "terms": [
+                      {
+                        "word": "To categorise",
+                        "meaning": "Spent, but not yet put in an expense account."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "href": "/finance/wallets/foreign-accounts",
+                  "anchor": "finance-wallets-foreign-accounts",
+                  "title": "Foreign accounts",
+                  "where": "Money › Wallets › Foreign accounts",
+                  "description": "Accounts that receive US dollars, euros, pounds, cedis and Kenyan shillings.",
+                  "aliases": [],
+                  "help": {
+                    "purpose": "Accounts that receive US dollars, euros, pounds, cedis and Kenyan shillings, so people and companies abroad can pay you in their own currency. The money arrives in a wallet in that currency.",
+                    "tasks": [
+                      {
+                        "label": "Open a foreign account",
+                        "steps": [
+                          {
+                            "lead": "Press Open a foreign account",
+                            "rest": " and choose the currency."
+                          },
+                          {
+                            "lead": "Choose the wallet that holds it.",
+                            "rest": " It must be a wallet in that currency. For euros, choose the country too."
+                          },
+                          {
+                            "lead": "Review and open.",
+                            "rest": " The details to share appear as soon as it is open."
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Send your details to a payer",
+                        "steps": [
+                          {
+                            "lead": "Open the row’s Actions",
+                            "rest": " and choose Show details to share."
+                          },
+                          {
+                            "lead": "Copy a line, Copy all or Share.",
+                            "rest": " These are receiving details: they are meant to be shared."
+                          }
+                        ]
+                      }
+                    ],
+                    "terms": [
+                      {
+                        "word": "Opening",
+                        "meaning": "The account is being set up. The details appear here by themselves; there is nothing to do."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "href": "/finance/wallets/stablecoin",
+                  "anchor": "finance-wallets-stablecoin",
+                  "title": "Stablecoin wallet",
+                  "where": "Money › Wallets › Stablecoin wallet",
+                  "description": "Hold, receive, withdraw and convert USDT and USDC.",
+                  "aliases": [],
+                  "help": {
+                    "purpose": "A wallet that holds USDT or USDC. Get a deposit address on a network to receive, withdraw to an address elsewhere, or convert to naira or US dollars. Fees and rates are shown before anything is sent.",
+                    "tasks": [
+                      {
+                        "label": "Receive USDT or USDC",
+                        "steps": [
+                          {
+                            "lead": "Press Get a deposit address",
+                            "rest": " under the network the sender will use."
+                          },
+                          {
+                            "lead": "Copy the address and send only that coin on that network.",
+                            "rest": " Anything else sent to it may be lost for good."
+                          },
+                          {
+                            "lead": "Wait for the deposit to be credited.",
+                            "rest": " Until then it says Awaiting confirmation and is not in your balance."
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Withdraw to another address",
+                        "steps": [
+                          {
+                            "lead": "Press Withdraw",
+                            "rest": " and choose the network the receiver uses."
+                          },
+                          {
+                            "lead": "Enter the address and the amount.",
+                            "rest": " Check the address with the receiver."
+                          },
+                          {
+                            "lead": "Review the fee and the balance after, then press Withdraw.",
+                            "rest": " If it says Processing, it is being confirmed: check its status, do not start another."
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Convert to naira or dollars",
+                        "steps": [
+                          {
+                            "lead": "Press Convert",
+                            "rest": " and choose the wallet on the other side."
+                          },
+                          {
+                            "lead": "Enter the amount you sell.",
+                            "rest": " The rate and what you receive follow."
+                          },
+                          {
+                            "lead": "Press Convert before the rate runs out.",
+                            "rest": " If it has, a new rate is shown first."
+                          }
+                        ]
+                      }
+                    ],
+                    "terms": [
+                      {
+                        "word": "Network",
+                        "meaning": "The chain a coin moves on, such as Tron or Polygon. The sender and the receiver must use the same one."
+                      },
+                      {
+                        "word": "Awaiting confirmation",
+                        "meaning": "The deposit has reached the network but is not credited yet. It is not in your balance."
+                      },
+                      {
+                        "word": "Not enabled yet",
+                        "meaning": "Your organisation can use this once it is switched on."
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Pay",
+          "slug": "pay",
+          "groups": [
+            {
+              "heading": "Pay",
+              "pages": [
+                {
+                  "href": "/finance/spend/payment-requests",
+                  "anchor": "finance-spend-payment-requests",
+                  "title": "Payment requests",
+                  "where": "Money › Pay › Payment requests",
+                  "description": "Requests to pay someone, waiting for approval or payment.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/spend/batches",
+                  "anchor": "finance-spend-batches",
+                  "title": "Payment batches",
+                  "where": "Money › Pay › Payment batches",
+                  "description": "Many payments sent together.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/spend/recurring",
+                  "anchor": "finance-spend-recurring",
+                  "title": "Recurring payments",
+                  "where": "Money › Pay › Recurring payments",
+                  "description": "Payments that repeat on a schedule.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/schedules",
+                  "anchor": "finance-schedules",
+                  "title": "All recurring",
+                  "where": "Money › Pay › All recurring",
+                  "description": "Every repeating payment, invoice and bill in one list.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/spend/expenses",
+                  "anchor": "finance-spend-expenses",
+                  "title": "Expenses",
+                  "where": "Money › Pay › Expenses",
+                  "description": "Money staff spent for the business, to approve and repay.",
+                  "aliases": [
+                    "reimbursements"
+                  ]
+                },
+                {
+                  "href": "/finance/spend/beneficiaries",
+                  "anchor": "finance-spend-beneficiaries",
+                  "title": "Beneficiaries",
+                  "where": "Money › Pay › Beneficiaries",
+                  "description": "The accounts you pay, saved and checked.",
+                  "aliases": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Get paid",
+          "slug": "get-paid",
+          "groups": [
+            {
+              "heading": "Get paid",
+              "pages": [
+                {
+                  "href": "/finance/receive/receipts",
+                  "anchor": "finance-receive-receipts",
+                  "title": "Receipts",
+                  "where": "Money › Get paid › Receipts",
+                  "description": "Every receipt, matched to the invoices it paid.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/receive/unidentified",
+                  "anchor": "finance-receive-unidentified",
+                  "title": "Money to identify",
+                  "where": "Money › Get paid › Money to identify",
+                  "description": "Money that arrived and has not been matched to anyone yet.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/receive/virtual-accounts",
+                  "anchor": "finance-receive-virtual-accounts",
+                  "title": "Virtual accounts",
+                  "where": "Money › Get paid › Virtual accounts",
+                  "description": "Account numbers given to customers so their payments find you.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/receive/other",
+                  "anchor": "finance-receive-other",
+                  "title": "Other receipts",
+                  "where": "Money › Get paid › Other receipts",
+                  "description": "Money received that is not for an invoice.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/payment-links",
+                  "anchor": "finance-payment-links",
+                  "title": "Payment links",
+                  "where": "Money › Get paid › Payment links",
+                  "description": "Links that let customers pay you online.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/payments",
+                  "anchor": "finance-payments",
+                  "title": "Payments",
+                  "where": "Money › Get paid › Payments",
+                  "description": "Card and transfer payments collected, with fees and status.",
+                  "aliases": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Banking",
+          "slug": "banking",
+          "groups": [
+            {
+              "heading": "Banking",
+              "pages": [
+                {
+                  "href": "/finance/treasury/accounts",
+                  "anchor": "finance-treasury-accounts",
+                  "title": "Financial accounts",
+                  "where": "Money › Banking › Financial accounts",
+                  "description": "Your bank, cash and wallet accounts and their balances.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/banks",
+                  "anchor": "finance-banks",
+                  "title": "Banking",
+                  "where": "Money › Banking › Banking",
+                  "description": "Your connected banks and their statements.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/transfers",
+                  "anchor": "finance-transfers",
+                  "title": "Transfers",
+                  "where": "Money › Banking › Transfers",
+                  "description": "Money moved between your own accounts.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/cash-flow",
+                  "anchor": "finance-cash-flow",
+                  "title": "Cash flow",
+                  "where": "Money › Banking › Cash flow",
+                  "description": "Cash you expect in and out over the coming weeks.",
+                  "aliases": []
+                }
+              ]
+            },
+            {
+              "heading": "Statements and reconciliation",
+              "pages": [
+                {
+                  "href": "/finance/statements",
+                  "anchor": "finance-statements",
+                  "title": "Statements",
+                  "where": "Money › Banking › Statements",
+                  "description": "Bank statements brought in to check against your books.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/statement-feeds",
+                  "anchor": "finance-statement-feeds",
+                  "title": "Statement feeds",
+                  "where": "Money › Banking › Statement feeds",
+                  "description": "Where each account’s statement comes from: an upload, a bank, its API or the wallet.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/reconciliation",
+                  "anchor": "finance-reconciliation",
+                  "title": "Reconciliation",
+                  "where": "Money › Banking › Reconciliation",
+                  "description": "Match your books to the bank, line by line.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/transactions",
+                  "anchor": "finance-transactions",
+                  "title": "Transactions",
+                  "where": "Money › Banking › Transactions",
+                  "description": "Every money movement, in order.",
+                  "aliases": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Planning",
+          "slug": "planning",
+          "groups": [
+            {
+              "heading": "Planning",
+              "pages": [
+                {
+                  "href": "/finance/budgets",
+                  "anchor": "finance-budgets",
+                  "title": "Budgets",
+                  "where": "Money › Planning › Budgets",
+                  "description": "What you plan to spend and earn, against what happened.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/obligations",
+                  "anchor": "finance-obligations",
+                  "title": "Obligations",
+                  "where": "Money › Planning › Obligations",
+                  "description": "Payments you are bound to make, with their dates.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/loans",
+                  "anchor": "finance-loans",
+                  "title": "Loans",
+                  "where": "Money › Planning › Loans",
+                  "description": "Money you borrowed or lent, and what is left to repay.",
+                  "aliases": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Accounting",
+          "slug": "accounting",
+          "groups": [
+            {
+              "heading": "Accounting",
+              "pages": [
+                {
+                  "href": "/finance/accounts",
+                  "anchor": "finance-accounts",
+                  "title": "Chart of accounts",
+                  "where": "Money › Accounting › Chart of accounts",
+                  "description": "The list of accounts your books are kept in.",
+                  "aliases": [
+                    "ledger",
+                    "coa"
+                  ]
+                },
+                {
+                  "href": "/finance/journals",
+                  "anchor": "finance-journals",
+                  "title": "Journal entries",
+                  "where": "Money › Accounting › Journal entries",
+                  "description": "Entries written straight into the books.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/adjustments",
+                  "anchor": "finance-adjustments",
+                  "title": "Adjustments",
+                  "where": "Money › Accounting › Adjustments",
+                  "description": "Corrections to the books, with the reason.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/books",
+                  "anchor": "finance-books",
+                  "title": "Books and posting",
+                  "where": "Money › Accounting › Books and posting",
+                  "description": "Which books are open, and when posting happens.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/fiscal-calendar",
+                  "anchor": "finance-fiscal-calendar",
+                  "title": "Fiscal calendar",
+                  "where": "Money › Accounting › Fiscal calendar",
+                  "description": "Your financial years and periods, open or closed.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/dimensions",
+                  "anchor": "finance-dimensions",
+                  "title": "Dimensions",
+                  "where": "Money › Accounting › Dimensions",
+                  "description": "Extra tags on entries, such as department or project.",
+                  "aliases": [
+                    "cost centres"
+                  ]
+                },
+                {
+                  "href": "/finance/currencies",
+                  "anchor": "finance-currencies",
+                  "title": "Currencies and exchange rates",
+                  "where": "Money › Accounting › Currencies and exchange rates",
+                  "description": "The currencies you use and their exchange rates.",
+                  "aliases": [
+                    "fx"
+                  ]
+                },
+                {
+                  "href": "/finance/tax",
+                  "anchor": "finance-tax",
+                  "title": "Tax",
+                  "where": "Money › Accounting › Tax",
+                  "description": "Tax collected and paid, ready to file.",
+                  "aliases": []
+                }
+              ]
+            },
+            {
+              "heading": "Group accounts",
+              "pages": [
+                {
+                  "href": "/finance/intercompany",
+                  "anchor": "finance-intercompany",
+                  "title": "Intercompany",
+                  "where": "Money › Accounting › Intercompany",
+                  "description": "What your companies owe each other.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/consolidation",
+                  "anchor": "finance-consolidation",
+                  "title": "Group consolidation",
+                  "where": "Money › Accounting › Group consolidation",
+                  "description": "Your companies’ books added together as one group.",
+                  "aliases": []
+                }
+              ]
+            },
+            {
+              "heading": "Reports",
+              "pages": [
+                {
+                  "href": "/finance/reports",
+                  "anchor": "finance-reports",
+                  "title": "Finance reports",
+                  "where": "Money › Accounting › Finance reports",
+                  "description": "Profit and loss, balance sheet and the other finance reports.",
+                  "aliases": []
+                },
+                {
+                  "href": "/finance/audit",
+                  "anchor": "finance-audit",
+                  "title": "Audit trail",
+                  "where": "Money › Accounting › Audit trail",
+                  "description": "Who changed what in finance, and when.",
+                  "aliases": []
+                }
+              ]
+            }
+          ]
+        },
         {
           "title": "Business insights",
           "slug": "business-insights",
@@ -3511,653 +4581,6 @@
                   "title": "Forecasts and insights",
                   "where": "Money › Business insights › Forecasts and insights",
                   "description": "Where sales and cash are heading, with suggestions.",
-                  "aliases": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "Finance",
-          "slug": "finance",
-          "groups": [
-            {
-              "heading": "Finance",
-              "pages": [
-                {
-                  "href": "/finance/overview",
-                  "anchor": "finance-overview",
-                  "title": "Overview",
-                  "where": "Money › Finance › Overview",
-                  "description": "Money in and out, what is waiting, and where to look next.",
-                  "aliases": []
-                }
-              ]
-            },
-            {
-              "heading": "Pay",
-              "pages": [
-                {
-                  "href": "/finance/spend/payment-requests",
-                  "anchor": "finance-spend-payment-requests",
-                  "title": "Payment requests",
-                  "where": "Money › Finance › Payment requests",
-                  "description": "Requests to pay someone, waiting for approval or payment.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/spend/batches",
-                  "anchor": "finance-spend-batches",
-                  "title": "Payment batches",
-                  "where": "Money › Finance › Payment batches",
-                  "description": "Many payments sent together.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/spend/recurring",
-                  "anchor": "finance-spend-recurring",
-                  "title": "Recurring payments",
-                  "where": "Money › Finance › Recurring payments",
-                  "description": "Payments that repeat on a schedule.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/schedules",
-                  "anchor": "finance-schedules",
-                  "title": "All recurring",
-                  "where": "Money › Finance › All recurring",
-                  "description": "Every repeating payment, invoice and bill in one list.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/spend/expenses",
-                  "anchor": "finance-spend-expenses",
-                  "title": "Expenses",
-                  "where": "Money › Finance › Expenses",
-                  "description": "Money staff spent for the business, to approve and repay.",
-                  "aliases": [
-                    "reimbursements"
-                  ]
-                },
-                {
-                  "href": "/finance/spend/beneficiaries",
-                  "anchor": "finance-spend-beneficiaries",
-                  "title": "Beneficiaries",
-                  "where": "Money › Finance › Beneficiaries",
-                  "description": "The accounts you pay, saved and checked.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/spend/bills",
-                  "anchor": "finance-spend-bills",
-                  "title": "Pay a bill",
-                  "where": "Money › Finance › Pay a bill",
-                  "description": "Airtime, data, electricity, cable TV, government payments, paid from a wallet.",
-                  "aliases": [],
-                  "help": {
-                    "purpose": "Pay airtime, data, electricity, cable TV, government payments from a wallet, and keep each receipt. The fee is shown before you confirm.",
-                    "tasks": [
-                      {
-                        "label": "Pay a bill",
-                        "steps": [
-                          {
-                            "lead": "Press Pay a bill",
-                            "rest": " and choose the wallet and what you are paying."
-                          },
-                          {
-                            "lead": "Fill in the details.",
-                            "rest": " For electricity, government payments, press Check to see whose number it is and what is owed."
-                          },
-                          {
-                            "lead": "Review.",
-                            "rest": " You see the amount, the fee, the total and what the wallet will have after."
-                          },
-                          {
-                            "lead": "Press Pay.",
-                            "rest": " If the connection drops, press Check status: it is never paid twice."
-                          }
-                        ]
-                      },
-                      {
-                        "label": "Find an electricity token",
-                        "steps": [
-                          {
-                            "lead": "Open the row’s Actions",
-                            "rest": " and choose View receipt."
-                          },
-                          {
-                            "lead": "Copy the token",
-                            "rest": " or use Share or Download. Only people who can pay bills see it."
-                          }
-                        ]
-                      }
-                    ],
-                    "terms": [
-                      {
-                        "word": "Processing",
-                        "meaning": "The network has not said yes or no yet. The money stays held in the wallet and this screen updates by itself. It is not a failure: do not pay again."
-                      },
-                      {
-                        "word": "Did not go through",
-                        "meaning": "The bill was not paid and the money is back in the wallet."
-                      }
-                    ]
-                  }
-                },
-                {
-                  "href": "/finance/spend/cards",
-                  "anchor": "finance-spend-cards",
-                  "title": "Cards",
-                  "where": "Money › Finance › Cards",
-                  "description": "Virtual cards for your team, with limits, freezing and what each one spends.",
-                  "aliases": [],
-                  "help": {
-                    "purpose": "Virtual cards for your team. Issue a card to a member for a budget, put money on it, set its limits and freeze it. Each payment on a card becomes an expense to categorise.",
-                    "tasks": [
-                      {
-                        "label": "Issue a card",
-                        "steps": [
-                          {
-                            "lead": "Press Issue a card",
-                            "rest": " and choose the wallet the card draws on and the member who holds it."
-                          },
-                          {
-                            "lead": "Add what it is for",
-                            "rest": ", a budget line if you use one, and any limits."
-                          },
-                          {
-                            "lead": "Review.",
-                            "rest": " You see the fee, the total and what the wallet will have after."
-                          },
-                          {
-                            "lead": "Press Issue the card.",
-                            "rest": " If the connection drops, press Check status: the card is never issued twice."
-                          }
-                        ]
-                      },
-                      {
-                        "label": "Put money on a card, or take it back",
-                        "steps": [
-                          {
-                            "lead": "Open the row’s Actions",
-                            "rest": " and choose Put money on or Take money back."
-                          },
-                          {
-                            "lead": "Enter the amount and review.",
-                            "rest": " The fee is shown before anything moves."
-                          }
-                        ]
-                      },
-                      {
-                        "label": "See a card’s number, code and expiry",
-                        "steps": [
-                          {
-                            "lead": "Open the card",
-                            "rest": " and press Show card details, then confirm."
-                          },
-                          {
-                            "lead": "Copy what you need.",
-                            "rest": " The details hide by themselves after a minute, and when you leave the page."
-                          }
-                        ]
-                      },
-                      {
-                        "label": "Freeze a lost card",
-                        "steps": [
-                          {
-                            "lead": "Open the row’s Actions",
-                            "rest": " and choose Freeze. Choose Unfreeze to use it again."
-                          }
-                        ]
-                      }
-                    ],
-                    "terms": [
-                      {
-                        "word": "Processing",
-                        "meaning": "The card issuer has not said yes or no yet. Any money stays held in the wallet and this screen updates by itself. It is not a failure: do not start it again."
-                      },
-                      {
-                        "word": "Awaiting review",
-                        "meaning": "A payment on the card that has to be checked before it is booked. It becomes an expense once it has been."
-                      }
-                    ]
-                  }
-                },
-                {
-                  "href": "/finance/spend/company-expenses",
-                  "anchor": "finance-spend-company-expenses",
-                  "title": "Card and bill expenses",
-                  "where": "Money › Finance › Card and bill expenses",
-                  "description": "What cards and bills spent, ready to put in an expense account with its receipts.",
-                  "aliases": [],
-                  "help": {
-                    "purpose": "What cards and bills spent, each one an expense to put in an expense account and to keep a receipt for. Team members see their own.",
-                    "tasks": [
-                      {
-                        "label": "Categorise an expense",
-                        "steps": [
-                          {
-                            "lead": "Open the row’s Actions",
-                            "rest": " and choose Categorise."
-                          },
-                          {
-                            "lead": "Choose the expense account",
-                            "rest": " and add a note if you want."
-                          },
-                          {
-                            "lead": "Attach the receipt.",
-                            "rest": " Upload a file or attach one from Drive."
-                          }
-                        ]
-                      }
-                    ],
-                    "terms": [
-                      {
-                        "word": "To categorise",
-                        "meaning": "Spent, but not yet put in an expense account."
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "heading": "Get paid",
-              "pages": [
-                {
-                  "href": "/finance/receive/receipts",
-                  "anchor": "finance-receive-receipts",
-                  "title": "Receipts",
-                  "where": "Money › Finance › Receipts",
-                  "description": "Every receipt, matched to the invoices it paid.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/receive/unidentified",
-                  "anchor": "finance-receive-unidentified",
-                  "title": "Money to identify",
-                  "where": "Money › Finance › Money to identify",
-                  "description": "Money that arrived and has not been matched to anyone yet.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/receive/virtual-accounts",
-                  "anchor": "finance-receive-virtual-accounts",
-                  "title": "Virtual accounts",
-                  "where": "Money › Finance › Virtual accounts",
-                  "description": "Account numbers given to customers so their payments find you.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/receive/other",
-                  "anchor": "finance-receive-other",
-                  "title": "Other receipts",
-                  "where": "Money › Finance › Other receipts",
-                  "description": "Money received that is not for an invoice.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/payment-links",
-                  "anchor": "finance-payment-links",
-                  "title": "Payment links",
-                  "where": "Money › Finance › Payment links",
-                  "description": "Links that let customers pay you online.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/payments",
-                  "anchor": "finance-payments",
-                  "title": "Payments",
-                  "where": "Money › Finance › Payments",
-                  "description": "Card and transfer payments collected, with fees and status.",
-                  "aliases": []
-                }
-              ]
-            },
-            {
-              "heading": "Cash and treasury",
-              "pages": [
-                {
-                  "href": "/finance/treasury/accounts",
-                  "anchor": "finance-treasury-accounts",
-                  "title": "Financial accounts",
-                  "where": "Money › Finance › Financial accounts",
-                  "description": "Your bank, cash and wallet accounts and their balances.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/banks",
-                  "anchor": "finance-banks",
-                  "title": "Banking",
-                  "where": "Money › Finance › Banking",
-                  "description": "Your connected banks and their statements.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/wallets",
-                  "anchor": "finance-wallets",
-                  "title": "Wallets",
-                  "where": "Money › Finance › Wallets",
-                  "description": "Wallets that hold money for paying and collecting.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/wallets/foreign-accounts",
-                  "anchor": "finance-wallets-foreign-accounts",
-                  "title": "Foreign accounts",
-                  "where": "Money › Finance › Foreign accounts",
-                  "description": "Accounts that receive US dollars, euros, pounds, cedis and Kenyan shillings.",
-                  "aliases": [],
-                  "help": {
-                    "purpose": "Accounts that receive US dollars, euros, pounds, cedis and Kenyan shillings, so people and companies abroad can pay you in their own currency. The money arrives in a wallet in that currency.",
-                    "tasks": [
-                      {
-                        "label": "Open a foreign account",
-                        "steps": [
-                          {
-                            "lead": "Press Open a foreign account",
-                            "rest": " and choose the currency."
-                          },
-                          {
-                            "lead": "Choose the wallet that holds it.",
-                            "rest": " It must be a wallet in that currency. For euros, choose the country too."
-                          },
-                          {
-                            "lead": "Review and open.",
-                            "rest": " The details to share appear as soon as it is open."
-                          }
-                        ]
-                      },
-                      {
-                        "label": "Send your details to a payer",
-                        "steps": [
-                          {
-                            "lead": "Open the row’s Actions",
-                            "rest": " and choose Show details to share."
-                          },
-                          {
-                            "lead": "Copy a line, Copy all or Share.",
-                            "rest": " These are receiving details: they are meant to be shared."
-                          }
-                        ]
-                      }
-                    ],
-                    "terms": [
-                      {
-                        "word": "Opening",
-                        "meaning": "The account is being set up. The details appear here by themselves; there is nothing to do."
-                      }
-                    ]
-                  }
-                },
-                {
-                  "href": "/finance/wallets/stablecoin",
-                  "anchor": "finance-wallets-stablecoin",
-                  "title": "Stablecoin wallet",
-                  "where": "Money › Finance › Stablecoin wallet",
-                  "description": "Hold, receive, withdraw and convert USDT and USDC.",
-                  "aliases": [],
-                  "help": {
-                    "purpose": "A wallet that holds USDT or USDC. Get a deposit address on a network to receive, withdraw to an address elsewhere, or convert to naira or US dollars. Fees and rates are shown before anything is sent.",
-                    "tasks": [
-                      {
-                        "label": "Receive USDT or USDC",
-                        "steps": [
-                          {
-                            "lead": "Press Get a deposit address",
-                            "rest": " under the network the sender will use."
-                          },
-                          {
-                            "lead": "Copy the address and send only that coin on that network.",
-                            "rest": " Anything else sent to it may be lost for good."
-                          },
-                          {
-                            "lead": "Wait for the deposit to be credited.",
-                            "rest": " Until then it says Awaiting confirmation and is not in your balance."
-                          }
-                        ]
-                      },
-                      {
-                        "label": "Withdraw to another address",
-                        "steps": [
-                          {
-                            "lead": "Press Withdraw",
-                            "rest": " and choose the network the receiver uses."
-                          },
-                          {
-                            "lead": "Enter the address and the amount.",
-                            "rest": " Check the address with the receiver."
-                          },
-                          {
-                            "lead": "Review the fee and the balance after, then press Withdraw.",
-                            "rest": " If it says Processing, it is being confirmed: check its status, do not start another."
-                          }
-                        ]
-                      },
-                      {
-                        "label": "Convert to naira or dollars",
-                        "steps": [
-                          {
-                            "lead": "Press Convert",
-                            "rest": " and choose the wallet on the other side."
-                          },
-                          {
-                            "lead": "Enter the amount you sell.",
-                            "rest": " The rate and what you receive follow."
-                          },
-                          {
-                            "lead": "Press Convert before the rate runs out.",
-                            "rest": " If it has, a new rate is shown first."
-                          }
-                        ]
-                      }
-                    ],
-                    "terms": [
-                      {
-                        "word": "Network",
-                        "meaning": "The chain a coin moves on, such as Tron or Polygon. The sender and the receiver must use the same one."
-                      },
-                      {
-                        "word": "Awaiting confirmation",
-                        "meaning": "The deposit has reached the network but is not credited yet. It is not in your balance."
-                      },
-                      {
-                        "word": "Not enabled yet",
-                        "meaning": "Your organisation can use this once it is switched on."
-                      }
-                    ]
-                  }
-                },
-                {
-                  "href": "/finance/transfers",
-                  "anchor": "finance-transfers",
-                  "title": "Transfers",
-                  "where": "Money › Finance › Transfers",
-                  "description": "Money moved between your own accounts.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/cash-flow",
-                  "anchor": "finance-cash-flow",
-                  "title": "Cash flow",
-                  "where": "Money › Finance › Cash flow",
-                  "description": "Cash you expect in and out over the coming weeks.",
-                  "aliases": []
-                }
-              ]
-            },
-            {
-              "heading": "Statements and reconciliation",
-              "pages": [
-                {
-                  "href": "/finance/statements",
-                  "anchor": "finance-statements",
-                  "title": "Statements",
-                  "where": "Money › Finance › Statements",
-                  "description": "Bank statements brought in to check against your books.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/reconciliation",
-                  "anchor": "finance-reconciliation",
-                  "title": "Reconciliation",
-                  "where": "Money › Finance › Reconciliation",
-                  "description": "Match your books to the bank, line by line.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/transactions",
-                  "anchor": "finance-transactions",
-                  "title": "Transactions",
-                  "where": "Money › Finance › Transactions",
-                  "description": "Every money movement, in order.",
-                  "aliases": []
-                }
-              ]
-            },
-            {
-              "heading": "Group accounts",
-              "pages": [
-                {
-                  "href": "/finance/intercompany",
-                  "anchor": "finance-intercompany",
-                  "title": "Intercompany",
-                  "where": "Money › Finance › Intercompany",
-                  "description": "What your companies owe each other.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/consolidation",
-                  "anchor": "finance-consolidation",
-                  "title": "Group consolidation",
-                  "where": "Money › Finance › Group consolidation",
-                  "description": "Your companies’ books added together as one group.",
-                  "aliases": []
-                }
-              ]
-            },
-            {
-              "heading": "Planning",
-              "pages": [
-                {
-                  "href": "/finance/budgets",
-                  "anchor": "finance-budgets",
-                  "title": "Budgets",
-                  "where": "Money › Finance › Budgets",
-                  "description": "What you plan to spend and earn, against what happened.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/obligations",
-                  "anchor": "finance-obligations",
-                  "title": "Obligations",
-                  "where": "Money › Finance › Obligations",
-                  "description": "Payments you are bound to make, with their dates.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/loans",
-                  "anchor": "finance-loans",
-                  "title": "Loans",
-                  "where": "Money › Finance › Loans",
-                  "description": "Money you borrowed or lent, and what is left to repay.",
-                  "aliases": []
-                }
-              ]
-            },
-            {
-              "heading": "Accounting",
-              "pages": [
-                {
-                  "href": "/finance/accounts",
-                  "anchor": "finance-accounts",
-                  "title": "Chart of accounts",
-                  "where": "Money › Finance › Chart of accounts",
-                  "description": "The list of accounts your books are kept in.",
-                  "aliases": [
-                    "ledger",
-                    "coa"
-                  ]
-                },
-                {
-                  "href": "/finance/journals",
-                  "anchor": "finance-journals",
-                  "title": "Journal entries",
-                  "where": "Money › Finance › Journal entries",
-                  "description": "Entries written straight into the books.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/adjustments",
-                  "anchor": "finance-adjustments",
-                  "title": "Adjustments",
-                  "where": "Money › Finance › Adjustments",
-                  "description": "Corrections to the books, with the reason.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/books",
-                  "anchor": "finance-books",
-                  "title": "Books and posting",
-                  "where": "Money › Finance › Books and posting",
-                  "description": "Which books are open, and when posting happens.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/fiscal-calendar",
-                  "anchor": "finance-fiscal-calendar",
-                  "title": "Fiscal calendar",
-                  "where": "Money › Finance › Fiscal calendar",
-                  "description": "Your financial years and periods, open or closed.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/dimensions",
-                  "anchor": "finance-dimensions",
-                  "title": "Dimensions",
-                  "where": "Money › Finance › Dimensions",
-                  "description": "Extra tags on entries, such as department or project.",
-                  "aliases": [
-                    "cost centres"
-                  ]
-                },
-                {
-                  "href": "/finance/currencies",
-                  "anchor": "finance-currencies",
-                  "title": "Currencies and exchange rates",
-                  "where": "Money › Finance › Currencies and exchange rates",
-                  "description": "The currencies you use and their exchange rates.",
-                  "aliases": [
-                    "fx"
-                  ]
-                },
-                {
-                  "href": "/finance/tax",
-                  "anchor": "finance-tax",
-                  "title": "Tax",
-                  "where": "Money › Finance › Tax",
-                  "description": "Tax collected and paid, ready to file.",
-                  "aliases": []
-                }
-              ]
-            },
-            {
-              "heading": "Insights",
-              "pages": [
-                {
-                  "href": "/finance/reports",
-                  "anchor": "finance-reports",
-                  "title": "Finance reports",
-                  "where": "Money › Finance › Finance reports",
-                  "description": "Profit and loss, balance sheet and the other finance reports.",
-                  "aliases": []
-                },
-                {
-                  "href": "/finance/audit",
-                  "anchor": "finance-audit",
-                  "title": "Audit trail",
-                  "where": "Money › Finance › Audit trail",
-                  "description": "Who changed what in finance, and when.",
                   "aliases": []
                 }
               ]
@@ -4531,6 +4954,20 @@
                   "description": "What your organisation sends, and the limits on it.",
                   "aliases": [
                     "sending limits"
+                  ]
+                },
+                {
+                  "href": "/email",
+                  "anchor": "email",
+                  "title": "Email",
+                  "where": "Workspace › Communication › Email",
+                  "description": "Business email on your own domains: set them up, create mailboxes, and keep them safe.",
+                  "aliases": [
+                    "mail",
+                    "mailboxes",
+                    "domains",
+                    "dns",
+                    "hosted email"
                   ]
                 }
               ]
@@ -5232,27 +5669,61 @@
           ]
         },
         {
-          "title": "Settings",
-          "slug": "settings",
+          "title": "Business",
+          "slug": "business",
           "groups": [
             {
-              "heading": "Organisation",
+              "heading": "Business",
               "pages": [
                 {
                   "href": "/admin/general",
                   "anchor": "admin-general",
-                  "title": "Organisation",
-                  "where": "Organisation › Settings › Organisation",
+                  "title": "Business details",
+                  "where": "Organisation › Business › Business details",
                   "description": "Your organisation’s name, address, currency and other basics.",
                   "aliases": [
                     "company details"
                   ]
                 },
                 {
+                  "href": "/admin/locations",
+                  "anchor": "admin-locations",
+                  "title": "Locations",
+                  "where": "Organisation › Business › Locations",
+                  "description": "Your shops, warehouses and offices.",
+                  "aliases": [
+                    "branches",
+                    "sites"
+                  ]
+                },
+                {
+                  "href": "/packs",
+                  "anchor": "packs",
+                  "title": "Industry packs",
+                  "where": "Organisation › Business › Industry packs",
+                  "description": "Switch on the features that suit your kind of business.",
+                  "aliases": [
+                    "industry"
+                  ]
+                },
+                {
+                  "href": "/packs/features",
+                  "anchor": "packs-features",
+                  "title": "Features",
+                  "where": "Organisation › Business › Features",
+                  "description": "Choose which features your members see and use, for everyone, a role or a person.",
+                  "aliases": [
+                    "modules",
+                    "turn off",
+                    "hide",
+                    "switch"
+                  ]
+                },
+                {
                   "href": "/admin/appearance",
                   "anchor": "admin-appearance",
                   "title": "Appearance",
-                  "where": "Organisation › Settings › Appearance",
+                  "where": "Organisation › Business › Appearance",
                   "description": "Set how the app looks for everyone, and what people may choose themselves.",
                   "aliases": [
                     "theme",
@@ -5324,33 +5795,23 @@
                       }
                     ]
                   }
-                },
-                {
-                  "href": "/admin/locations",
-                  "anchor": "admin-locations",
-                  "title": "Locations",
-                  "where": "Organisation › Settings › Locations",
-                  "description": "Your shops, warehouses and offices.",
-                  "aliases": [
-                    "branches",
-                    "sites"
-                  ]
-                },
-                {
-                  "href": "/packs",
-                  "anchor": "packs",
-                  "title": "Industry packs",
-                  "where": "Organisation › Settings › Industry packs",
-                  "description": "Switch on the features that suit your kind of business.",
-                  "aliases": [
-                    "industry"
-                  ]
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Security",
+          "slug": "security",
+          "groups": [
+            {
+              "heading": "Security",
+              "pages": [
                 {
                   "href": "/admin/security",
                   "anchor": "admin-security",
-                  "title": "Security",
-                  "where": "Organisation › Settings › Security",
+                  "title": "Security policies",
+                  "where": "Organisation › Security › Security policies",
                   "description": "Sign-in rules, sessions and who can reach your data.",
                   "aliases": []
                 },
@@ -5358,7 +5819,7 @@
                   "href": "/admin/verification",
                   "anchor": "admin-verification",
                   "title": "Verification",
-                  "where": "Organisation › Settings › Verification",
+                  "where": "Organisation › Security › Verification",
                   "description": "Verify your business to open wallets, payouts and bill payments.",
                   "aliases": [
                     "kyb",
@@ -5426,15 +5887,21 @@
                   }
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Documents",
+          "slug": "documents",
+          "groups": [
             {
-              "heading": "Documents and messages",
+              "heading": "Numbering and settings",
               "pages": [
                 {
                   "href": "/admin/numbering",
                   "anchor": "admin-numbering",
                   "title": "Number series",
-                  "where": "Organisation › Settings › Number series",
+                  "where": "Organisation › Documents › Number series",
                   "description": "How invoices, orders and other documents are numbered.",
                   "aliases": [
                     "numbering"
@@ -5444,15 +5911,20 @@
                   "href": "/admin/document-settings",
                   "anchor": "admin-document-settings",
                   "title": "Document settings",
-                  "where": "Organisation › Settings › Document settings",
+                  "where": "Organisation › Documents › Document settings",
                   "description": "How each kind of document behaves, from quotation to invoice.",
                   "aliases": []
-                },
+                }
+              ]
+            },
+            {
+              "heading": "Alerts",
+              "pages": [
                 {
                   "href": "/admin/notifications",
                   "anchor": "admin-notifications",
                   "title": "Notification rules",
-                  "where": "Organisation › Settings › Notification rules",
+                  "where": "Organisation › Documents › Notification rules",
                   "description": "Who is told what, when and how, and what was sent.",
                   "aliases": [
                     "alerts",
@@ -5464,7 +5936,7 @@
                   "href": "/settings/notifications/digest",
                   "anchor": "settings-notifications-digest",
                   "title": "Weekly digest",
-                  "where": "Organisation › Settings › Weekly digest",
+                  "where": "Organisation › Documents › Weekly digest",
                   "description": "The weekly summary of your business, and who gets it.",
                   "aliases": [],
                   "help": {
@@ -5532,7 +6004,7 @@
                   "href": "/settings/notifications/milestones",
                   "anchor": "settings-notifications-milestones",
                   "title": "Milestones",
-                  "where": "Organisation › Settings › Milestones",
+                  "where": "Organisation › Documents › Milestones",
                   "description": "Which firsts and records the app notices for you.",
                   "aliases": [],
                   "help": {
@@ -5580,7 +6052,13 @@
                   }
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Connections",
+          "slug": "connections",
+          "groups": [
             {
               "heading": "Connections",
               "pages": [
@@ -5588,7 +6066,7 @@
                   "href": "/admin/integrations",
                   "anchor": "admin-integrations",
                   "title": "Integrations",
-                  "where": "Organisation › Settings › Integrations",
+                  "where": "Organisation › Connections › Integrations",
                   "description": "The outside services your organisation uses.",
                   "aliases": []
                 },
@@ -5596,7 +6074,7 @@
                   "href": "/admin/payments",
                   "anchor": "admin-payments",
                   "title": "Online payments",
-                  "where": "Organisation › Settings › Online payments",
+                  "where": "Organisation › Connections › Online payments",
                   "description": "How you take payment: methods, accounts and checks.",
                   "aliases": []
                 },
@@ -5604,7 +6082,7 @@
                   "href": "/admin/network",
                   "anchor": "admin-network",
                   "title": "Network",
-                  "where": "Organisation › Settings › Network",
+                  "where": "Organisation › Connections › Network",
                   "description": "How your organisation trades with partners on the network.",
                   "aliases": []
                 },
@@ -5612,7 +6090,7 @@
                   "href": "/admin/shared-links",
                   "anchor": "admin-shared-links",
                   "title": "Shared links",
-                  "where": "Organisation › Settings › Shared links",
+                  "where": "Organisation › Connections › Shared links",
                   "description": "Every link your organisation has shared, with the power to cancel it.",
                   "aliases": []
                 }
@@ -5625,7 +6103,7 @@
                   "href": "/admin/routing",
                   "anchor": "admin-routing",
                   "title": "Routing",
-                  "where": "Organisation › Settings › Routing",
+                  "where": "Organisation › Connections › Routing",
                   "description": "Who gets each conversation that comes in.",
                   "aliases": []
                 },
@@ -5633,7 +6111,7 @@
                   "href": "/admin/service-levels",
                   "anchor": "admin-service-levels",
                   "title": "Service levels",
-                  "where": "Organisation › Settings › Service levels",
+                  "where": "Organisation › Connections › Service levels",
                   "description": "How fast conversations must be answered.",
                   "aliases": []
                 }
@@ -6770,6 +7248,108 @@
         "assign",
         "helpdesk",
         "nobody yet"
+      ]
+    },
+    {
+      "key": "bring-in-bank-statement",
+      "title": "Bring in a bank statement",
+      "summary": "Money › Banking › Banking: open the account, Bring in a statement, and upload the bank’s file (CSV, Excel, OFX, MT940 or CAMT.053) or paste its lines. Map the columns once, check the lines (new, already there, look-alike, could not be read), then bring in the new ones; they wait to be matched to the books.",
+      "path": "/finance/banks",
+      "where": "Money › Banking › Banking",
+      "words": [
+        "statement",
+        "bank statement",
+        "upload statement",
+        "import statement",
+        "csv",
+        "excel",
+        "ofx",
+        "mt940",
+        "camt"
+      ]
+    },
+    {
+      "key": "capture-bank-statement",
+      "title": "Bring in a bank statement from a photo or PDF",
+      "summary": "Capture the statement (a photo, a scan or the bank’s PDF) like any document. Capture sees it is a bank statement and reads the account, the period, the balances and every line. Bring its lines in: the account whose number is printed is chosen (or you say which), every line is checked as new, already there or look-alike, and nothing is in the books until you bring them in. They then wait to be matched in the account’s reconciliation.",
+      "path": "/capture",
+      "where": "Capture",
+      "words": [
+        "statement photo",
+        "statement pdf",
+        "scan statement",
+        "capture statement",
+        "paper statement",
+        "bank statement picture",
+        "read statement"
+      ]
+    },
+    {
+      "key": "capture-any-document",
+      "title": "Turn any paper document into its record",
+      "summary": "Capture reads every kind of business paper into the form that makes its record: invoices and proformas you wrote, waybills, refunds, price agreements, requisitions, requests for quotes, payment vouchers, return notes, inspection reports, supplier contracts, quotes and credit notes, credit and debit notes, payment requests, transfers, receipts, payees, loans, budgets, cash advances, leave requests, staff details and staff papers, insurance policies and claims, warranties, rental agreements, construction contracts and valuations, and bills of materials. Send it to Capture (upload, photo, Drive or email) and it says what the paper is; press Open in its form, or use Fill from a document on the form itself. The form opens filled, with doubtful fields marked, and the people, items, accounts and documents it names chosen when they are certain. Check it and save: nothing is saved until you do, and the capture is then tied to the record with the original kept on it.",
+      "path": "/capture",
+      "where": "Capture",
+      "words": [
+        "scan any document",
+        "read a document",
+        "fill from a document",
+        "paper to record",
+        "photo of a form",
+        "capture invoice",
+        "capture waybill",
+        "capture contract",
+        "capture leave form",
+        "capture payment voucher",
+        "digitise paperwork",
+        "every document"
+      ]
+    },
+    {
+      "key": "connect-bank-statement-feed",
+      "title": "Get a bank account’s statement by itself",
+      "summary": "Money › Banking › Statement feeds: open the account’s Statement feed and choose where its statement comes from — the bank connected (you give consent on the bank’s page; it is fetched on a schedule or with Fetch now), the bank sending lines to the API, or uploads. A wallet’s statement arrives by itself.",
+      "path": "/finance/statement-feeds",
+      "where": "Money › Banking › Statement feeds",
+      "words": [
+        "open banking",
+        "connect bank",
+        "bank feed",
+        "statement feed",
+        "automatic statement",
+        "fetch statement",
+        "sync bank"
+      ]
+    },
+    {
+      "key": "statement-api-key",
+      "title": "Let a bank or system send statement lines to Clafina",
+      "summary": "Money › Banking › Statement feeds › Statement API keys: make a key (shown once) for the bank or system, and set the account’s feed to “The bank sends it (API)”. Each line is taken once, by the bank’s transaction id; add a signing secret to require signed pushes. Rotate or revoke a key there.",
+      "path": "/finance/statement-feeds",
+      "where": "Money › Banking › Statement feeds",
+      "words": [
+        "api key",
+        "webhook",
+        "push statement",
+        "statement api",
+        "bank api",
+        "rotate key",
+        "revoke key"
+      ]
+    },
+    {
+      "key": "statement-feed-settings",
+      "title": "Choose how statement lines are handled when they arrive",
+      "summary": "Money › Banking › Statement feeds: how often connected accounts are fetched, what is done with a line that looks like one already there (flag it, keep it, leave it out), whether lines are matched to the books as they arrive, and who is told when a feed fails. An account may make its own choice in its feed.",
+      "path": "/finance/statement-feeds",
+      "where": "Money › Banking › Statement feeds",
+      "words": [
+        "duplicate",
+        "duplicates",
+        "auto match",
+        "feed failed",
+        "statement settings",
+        "fetch interval"
       ]
     },
     {

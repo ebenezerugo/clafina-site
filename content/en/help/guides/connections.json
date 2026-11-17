@@ -1,0 +1,73 @@
+{
+  "kind": "help-module",
+  "module": "connections",
+  "sources": [
+    "commerce-api/documentation/COMMUNICATION.md",
+    "commerce-api/documentation/TRADING_NETWORK.md",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "The connections to the outside: how conversations from other channels are routed to your team, and the trading network between businesses.",
+  "start": [
+    "Choose where each conversation channel is routed.",
+    "Join the trading network to trade with partner businesses."
+  ],
+  "articles": [
+    {
+      "slug": "route-conversations",
+      "title": "Choose who gets each conversation",
+      "summary": "Routing rules give a new conversation to a person or a team, and can set its priority, status and tags.",
+      "page": "/admin/routing",
+      "steps": [
+        {
+          "lead": "Press New rule",
+          "rest": "on Routing, and give it a name."
+        },
+        {
+          "lead": "Say which new conversations it takes,",
+          "rest": "such as those that come in by a channel or account, or say certain words."
+        },
+        {
+          "lead": "Choose who to give it to:",
+          "rest": "a person, or a team as a whole, each in turn, or whoever has least open."
+        },
+        {
+          "lead": "Set the priority, status and tags",
+          "rest": "if it should change them, then tick In use."
+        },
+        {
+          "lead": "Press Save rule.",
+          "rest": "Try it shows which rules a message would meet before it arrives."
+        }
+      ],
+      "tips": [
+        "Rules run in order. Let the rules after this one add to it lets a later rule add its tags too.",
+        "How fast each conversation must be answered is set in Service levels."
+      ]
+    },
+    {
+      "slug": "join-the-network",
+      "title": "Join the trading network",
+      "summary": "Turn the network on, set what partners see about you, and send your documents for verification.",
+      "page": "/admin/network",
+      "steps": [
+        {
+          "lead": "Turn on Use the network.",
+          "rest": "Your business gets a network ID."
+        },
+        {
+          "lead": "Fill in the names and numbers partners see,",
+          "rest": "your contact and address, and the addresses people can find you by."
+        },
+        {
+          "lead": "Choose the documents you send and accept,",
+          "rest": "then press Save the profile."
+        },
+        {
+          "lead": "Press Start a verification request",
+          "rest": "on the verification tab, attach each document asked for, and send it for review."
+        }
+      ],
+      "after": "Once verified, other verified businesses can find you and ask to connect. The verified tag is lost if the legal name or a number changes, until it is checked again."
+    }
+  ]
+}

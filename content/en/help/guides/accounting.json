@@ -1,0 +1,141 @@
+{
+  "kind": "help-module",
+  "module": "accounting",
+  "sources": [
+    "commerce-api/documentation/FINANCE.md",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "The books: journal entries, credit and debit notes, closing a month and the finance reports. Money paid or received is never deleted; a mistake is reversed, with the reason kept.",
+  "start": [
+    "Check your books in Books and posting: the base currency, the month your year starts, and opening balances from your old records.",
+    "Close each month when it is done."
+  ],
+  "articles": [
+    {
+      "slug": "write-a-journal-entry",
+      "title": "Write a journal entry",
+      "summary": "Write debits and credits straight into the books, check them before you send, and have the entry approved and posted.",
+      "page": "/finance/journals",
+      "steps": [
+        {
+          "lead": "Press New entry",
+          "rest": "on Journal entries."
+        },
+        {
+          "lead": "Give the date and why,",
+          "rest": "in a sentence the approver reads."
+        },
+        {
+          "lead": "Add the lines.",
+          "rest": "Each is a debit or a credit on an account, never both, and there are at least two."
+        },
+        {
+          "lead": "Read Check before you send.",
+          "rest": "It says whether the entry balances, the period is open and every account takes postings."
+        },
+        {
+          "lead": "Press Save and send for approval,",
+          "rest": "or Save as draft. With no approver needed, it is approved on sending."
+        },
+        {
+          "lead": "Press Post",
+          "rest": "once it is approved. It is in the ledger and every report."
+        }
+      ],
+      "tips": [
+        "A posted entry is not changed: Reverse the entry makes one with debits and credits swapped.",
+        "Make it recur repeats a posted entry on a schedule, after approval."
+      ]
+    },
+    {
+      "slug": "make-a-credit-or-debit-note",
+      "title": "Make a credit or debit note",
+      "summary": "Take something off what a customer or supplier owes, or add to it, with the reason, applied to their invoices.",
+      "page": "/finance/adjustments",
+      "steps": [
+        {
+          "lead": "Press New note",
+          "rest": "on Credit and debit notes."
+        },
+        {
+          "lead": "Choose what kind and who it is with:",
+          "rest": "a customer or a supplier, and the reason, such as goods returned or a price corrected."
+        },
+        {
+          "lead": "Add the lines",
+          "rest": "against items, a service or ledger accounts, with tax. The totals are worked out for you."
+        },
+        {
+          "lead": "Say which invoices it applies to,",
+          "rest": "and how much to each."
+        },
+        {
+          "lead": "Press Save and send for approval,",
+          "rest": "then Post and apply once approved. A credit note takes it off what is owed; a debit note adds to it."
+        }
+      ],
+      "tips": [
+        "To pay a customer back the credit, use the posted note's Payment section."
+      ]
+    },
+    {
+      "slug": "close-a-month",
+      "title": "Close a month",
+      "summary": "Each period has a checklist. When every check passes, close it, and nothing more can be posted into it.",
+      "page": "/finance/fiscal-calendar",
+      "steps": [
+        {
+          "lead": "Open Fiscal calendar",
+          "rest": "and choose the period."
+        },
+        {
+          "lead": "Read the checklist.",
+          "rest": "Each No says what to put right, such as journals not yet posted or balances not yet revalued."
+        },
+        {
+          "lead": "Press Put it right",
+          "rest": "beside each one to open the screen that fixes it."
+        },
+        {
+          "lead": "Press Preview revaluation",
+          "rest": "if you hold foreign-currency balances, then Revalue."
+        },
+        {
+          "lead": "Press Close",
+          "rest": "with the period's name once it says Ready to close. Nothing more can be posted into it."
+        }
+      ],
+      "tips": [
+        "Close anyway… lets you close with checks still failing. A reason is needed and kept.",
+        "Once every period is closed, Close the year moves the year's profit to retained earnings."
+      ]
+    },
+    {
+      "slug": "run-a-finance-report",
+      "title": "Run the profit and loss or balance sheet",
+      "summary": "Profit and loss, balance sheet, cash flow, trial balance and what is owed, for any span, compared and downloaded.",
+      "page": "/finance/reports",
+      "steps": [
+        {
+          "lead": "Open Finance reports",
+          "rest": "and choose the report."
+        },
+        {
+          "lead": "Choose the span",
+          "rest": "or the day it is as at, and what to compare with if you want."
+        },
+        {
+          "lead": "Read it.",
+          "rest": "Entries in the span not yet posted are counted apart, with what profit would be once they post."
+        },
+        {
+          "lead": "Press Download",
+          "rest": "for a PDF or spreadsheet."
+        }
+      ],
+      "tips": [
+        "The VAT return checks itself against the VAT accounts. Clafina does not file for you: file it with the tax authority yourself."
+      ]
+    }
+  ]
+}

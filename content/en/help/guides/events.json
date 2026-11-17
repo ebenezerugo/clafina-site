@@ -1,0 +1,123 @@
+{
+  "kind": "help-module",
+  "module": "events",
+  "sources": [
+    "commerce-api/documentation/EVENTS.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/events/presentation"
+  ],
+  "intro": "The events pack: events with their sessions, ticket types and seating, tickets sold at the desk, the door or online, entry at the gate by scanning, sponsors and venues. Switch it on in Organisation › Business › Industry packs.",
+  "start": [
+    "Turn the events pack on in Organisation › Business › Industry packs.",
+    "Add the places you hold events at on Venues.",
+    "Make an event on Events, with its ticket types.",
+    "Sell tickets, then check people in at the gate on Check-in."
+  ],
+  "articles": [
+    {
+      "slug": "add-a-venue",
+      "title": "Add a venue",
+      "summary": "Record a place where you hold events, so you can pick it when you plan one.",
+      "page": "/events/venues",
+      "steps": [
+        {
+          "lead": "Press Add a venue",
+          "rest": "at the top of Venues."
+        },
+        {
+          "lead": "Type the Name",
+          "rest": "of the place."
+        },
+        {
+          "lead": "Type the Address",
+          "rest": "and the City."
+        },
+        {
+          "lead": "Type Holds",
+          "rest": "how many people it holds."
+        },
+        {
+          "lead": "Press Add",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The venue shows in the list with where it is and how many it holds.",
+      "tips": [
+        "Choose Change… in a venue's Actions to correct it, or Retire when you no longer use it."
+      ]
+    },
+    {
+      "slug": "check-tickets-at-the-gate",
+      "title": "Check tickets at the gate",
+      "summary": "Scan each ticket as people arrive and see how many are in.",
+      "page": "/events/check-in",
+      "before": [
+        "An event with tickets sold."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Event",
+          "rest": "you are scanning tickets for."
+        },
+        {
+          "lead": "Choose Into",
+          "rest": "The gate, or one of the event's sessions. This shows only when the event has sessions."
+        },
+        {
+          "lead": "Click Scan the code, or type the ticket number",
+          "rest": "then scan the code, or type the number, for example T-XXXXXXXXXX."
+        },
+        {
+          "lead": "Press Check in",
+          "rest": "the answer shows as Welcome or Not let in, with the reason."
+        }
+      ],
+      "after": "The scan shows under Recent scans, and the count of people in goes up.",
+      "tips": [
+        "Above the scan box you see how many are in, how many are not yet in, and how many duplicates were refused.",
+        "A ticket scanned twice is refused the second time.",
+        "Press Show only refusals to see who was turned away."
+      ]
+    },
+    {
+      "slug": "find-an-order-and-refund-it",
+      "title": "Find a ticket order and refund it",
+      "summary": "Look up who bought tickets, send the tickets again, or refund the order.",
+      "page": "/events/orders",
+      "before": [
+        "An order that is paid or still waiting for payment, to refund it."
+      ],
+      "steps": [
+        {
+          "lead": "Type in Find an order",
+          "rest": "a buyer, email, order code or ticket number."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "on the order's row."
+        },
+        {
+          "lead": "Choose Email the tickets again",
+          "rest": "if the buyer lost them. Skip this and the next steps if you are refunding."
+        },
+        {
+          "lead": "Choose Refund…",
+          "rest": "from the menu, to refund the order."
+        },
+        {
+          "lead": "Type the Reason",
+          "rest": "for the refund. After the refund window you must say why."
+        },
+        {
+          "lead": "Press Refund",
+          "rest": "to confirm."
+        }
+      ],
+      "after": "The order shows as refunded, with the reason.",
+      "tips": [
+        "A refund voids the order's tickets and frees its tables.",
+        "Choose Open the tickets in Actions to see each ticket and whether it is in."
+      ]
+    }
+  ]
+}
