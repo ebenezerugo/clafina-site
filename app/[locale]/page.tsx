@@ -12,14 +12,13 @@ import { alternates, organizationJsonLd, robotsFor, SITE_ORIGIN } from '@/lib/se
 import { formatMoney } from '@/screens/kit/money';
 import { PhoneHome } from '@/screens/PhoneHome';
 import { SalesHome } from '@/screens/SalesHome';
-import { ShopPhone } from '@/screens/ShopPhone';
-import { TillSell } from '@/screens/TillSell';
+import { TillShowcase } from '@/components/till/TillShowcase';
 import { PhotoScene } from '@/components/stories/PhotoScene';
 import { Tk } from '@/profiles/Tk';
 import { resolveText } from '@/profiles/tokens';
 import { AskBand } from '@/components/sections/AskBand';
-import { FloatingCards, FLOAT_CARD, Mark } from '@/components/sections/FloatingCards';
-import { PhoneDevice, ReceiptPrinter, TillTerminal } from '@/components/devices/Devices';
+import { FloatingCards } from '@/components/sections/FloatingCards';
+import { PhoneDevice } from '@/components/devices/Devices';
 import { ClaimText, CtaBand, CtaButtons, Eyebrow, IllustrativeLabel, Section } from '@/components/sections/ui';
 import { IconTile, MODULE_ICONS, POINT_ICONS, SiteIcon } from '@/components/icons/SiteIcon';
 
@@ -61,7 +60,6 @@ export default async function Home({ params }: Props) {
   const demo = link(locale, 'demo');
   const start = { href: signupUrl({ locale }), label: c.hero.primaryCta };
   const demoCta = demo ? { href: demo, label: c.hero.secondaryCta } : null;
-  const money = (v: string) => (/^\d+$/.test(v) ? formatMoney(Number(v), c.oneRecord.currency, locale) : v);
   const storyHref = link(locale, 'story-quo-0221');
   const product = NAV.menus.find((m) => m.id === 'product')!;
   const industries = navItemIds(NAV.menus.find((m) => m.id === 'industries')!).filter((id) => id !== 'industries');
@@ -136,18 +134,7 @@ export default async function Home({ params }: Props) {
       </Section>
 
       <Section id="surfaces" eyebrow={c.surfaces.eyebrow} title={c.surfaces.title} intro={c.surfaces.intro} tone="band">
-        <div className="grid items-end gap-x-12 gap-y-14 lg:grid-cols-[minmax(0,2.4fr)_minmax(0,1fr)]">
-          <div className="relative min-w-0">
-            <div aria-hidden="true" className={`${FLOAT_CARD} !z-30 -top-8 start-[34%] hidden sm:flex`}>
-              <Mark icon="wifiOff" tone="bg-[#dcfce7] text-[#15803d]" />
-              <div><p className="text-sm font-semibold">{c.surfaces.moment.title}</p><p className="text-xs text-muted">{c.surfaces.moment.detail}</p></div>
-            </div>
-            <TillTerminal printer={<ReceiptPrinter title={c.surfaces.receipt.title} lines={c.surfaces.receipt.lines.map((l) => ({ label: l.label, amount: money(String(l.amount)) }))} total={{ label: c.surfaces.receipt.total.label, amount: money(String(c.surfaces.receipt.total.amount)) }} footer={c.surfaces.receipt.footer} />}>
-              <TillSell locale={locale} />
-            </TillTerminal>
-          </div>
-          <PhoneDevice className="mx-auto w-full max-w-[230px] min-w-0 sm:max-w-[290px]"><ShopPhone locale={locale} /></PhoneDevice>
-        </div>
+        <TillShowcase locale={locale} />
         <IllustrativeLabel text={c.illustrative} />
       </Section>
       {/* The six screens, on the light page under the band: what each is for, and one live moment from it. */}

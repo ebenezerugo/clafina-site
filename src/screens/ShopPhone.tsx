@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import type { z } from 'zod';
 import { localeInfo, type Locale } from '@/config/locales';
 import { loadContent } from '@/content/load';
 import { ShopPhoneScreen } from '@/content/screens';
@@ -12,11 +13,16 @@ const serif = "Georgia, 'Times New Roman', serif";
 const plates = ['#dff1ee', '#e3ebfb', '#ebe6fa', '#e6f2e4'];
 
 export function ShopPhone({ locale }: { locale: Locale }) {
-  const c = loadContent(locale, 'screens/shop-phone', ShopPhoneScreen);
+  return <ShopPhoneView c={loadContent(locale, 'screens/shop-phone', ShopPhoneScreen)} locale={locale} />;
+}
+
+/** A business's own online shop on a phone, in its own colour (brand). */
+export function ShopPhoneView({ c, locale, brand }: { c: z.infer<typeof ShopPhoneScreen>; locale: Locale; brand?: string }) {
+  const theme = brand ? ({ ...shop, '--s-brand': brand } as CSSProperties) : shop;
   const m = (n: number) => formatMoney(n, c.currency, locale);
   return (
     <ScaledScreen width={390} height={844} label={c.label} dir={localeInfo(locale).dir}>
-      <div style={{ ...shop, display: 'flex', flexDirection: 'column', height: '100%', background: '#fff', color: 'var(--s-ink)' }}>
+      <div style={{ ...theme, display: 'flex', flexDirection: 'column', height: '100%', background: '#fff', color: 'var(--s-ink)' }}>
         <div className="s-row" style={{ height: 60, alignItems: 'center', justifyContent: 'space-between', paddingInline: 16, borderBottom: '1px solid var(--s-line)' }}>
           <span className="s-row" style={{ alignItems: 'center', gap: 10 }}>
             <span style={{ width: 40, height: 40, borderRadius: '50%', background: 'var(--s-brand)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: serif, fontWeight: 700, fontSize: 16 }}>{c.shop.initials}</span>
@@ -39,13 +45,14 @@ export function ShopPhone({ locale }: { locale: Locale }) {
           <div className="s-row" style={{ padding: '16px 16px 6px', justifyContent: 'space-between', alignItems: 'baseline' }}><span style={{ fontFamily: serif, fontSize: 22, fontWeight: 700 }}>{c.active}</span><span className="s-sub">{c.sectionCount}</span></div>
           {c.dishes.map((d, i) => (
             <div key={d.name} className="s-row" style={{ gap: 14, padding: '14px 16px', borderBottom: '1px solid var(--s-line)' }}>
-              <span style={{ width: 96, height: 96, borderRadius: 14, background: plates[i % plates.length], flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ width: 64, height: 64, borderRadius: '50%', background: '#fff', boxShadow: 'inset 0 0 0 10px rgba(15,110,102,.16)' }} />
+              <span style={{ width: 96, height: 96, borderRadius: 14, background: d.img ? '#fbf3ec' : plates[i % plates.length], flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element -- static markup inside a scaled screen; already a small WebP */}
+                {d.img ? <img src={d.img} alt="" width={96} height={96} loading="lazy" decoding="async" /> : <span style={{ width: 64, height: 64, borderRadius: '50%', background: '#fff', boxShadow: 'inset 0 0 0 10px rgba(15,110,102,.16)' }} />}
               </span>
               <span style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <span><span style={{ fontFamily: serif, fontWeight: 700, fontSize: 17, lineHeight: 1.2, display: 'block' }}>{d.name}</span><span className="s-sub">{d.note}</span></span>
                 <span className="s-row" style={{ justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span><b style={{ fontSize: 16 }}>{m(d.price)}</b>{d.tag && <span style={{ fontSize: 12, fontWeight: 700, color: '#0b5a53', marginInlineStart: 8 }}>{d.tag}</span>}</span>
+                  <span><b style={{ fontSize: 16 }}>{m(d.price)}</b>{d.tag && <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--s-brand)', marginInlineStart: 8 }}>{d.tag}</span>}</span>
                   <span style={{ width: 48, height: 48, borderRadius: '50%', background: 'var(--s-brand)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Icon name="plus" size={24} strokeWidth={2.4} /></span>
                 </span>
               </span>

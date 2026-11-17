@@ -1,0 +1,36 @@
+/* One business at a time: the slides share one grid cell, the leaving one fades out over the arriving one. */
+.ts-stack { display: grid; }
+.ts-slide { grid-area: 1 / 1; min-width: 0; }
+.ts-slide[data-state='gone'] { display: none; }
+.ts-slide[data-state='off'] { opacity: 0; transition: opacity .7s ease; pointer-events: none; }
+.ts[data-moved] .ts-slide[data-state='on'] { animation: ts-in .7s ease both; }
+
+/* The arriving till lays its products down one after another, then the order slides in. */
+.ts[data-moved] .ts-slide[data-state='on'] .t-tile { animation: ts-tile .5s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i, 0) * 70ms); }
+.ts[data-moved] .ts-slide[data-state='on'] .receipt-paper { animation: ts-print 1.1s cubic-bezier(.3, .6, .3, 1) .2s both; }
+
+.ts-lead { margin-block-end: 1rem; text-align: center; font-size: clamp(1.15rem, 2.4vw, 1.5rem); font-weight: 700; }
+.ts-word { display: inline-block; overflow: hidden; vertical-align: bottom; }
+.ts-word > span { display: inline-block; padding-inline: .35em; border-radius: .4em; background: rgb(255 255 255 / .16); }
+.ts[data-moved] .ts-word > span { animation: ts-roll .5s cubic-bezier(.2, .7, .2, 1) both; }
+
+.ts-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-block-end: 3.5rem; }
+@media (max-width: 639px) {
+  .ts-chips { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; margin-inline: -1rem; padding-inline: 1rem; padding-block: 4px; }
+  .ts-chips::-webkit-scrollbar { display: none; }
+  .ts-chips button { flex-shrink: 0; }
+}
+.ts-chips button { white-space: nowrap; min-height: 2.75rem; padding-inline: 1rem; border-radius: 999px; border: 1px solid rgb(255 255 255 / .35); color: inherit; font-weight: 600; font-size: .9rem; transition: background .2s, color .2s; }
+.ts-chips button:hover { background: rgb(255 255 255 / .12); }
+.ts-chips button[aria-pressed='true'] { background: #fff; color: #1e2a78; border-color: #fff; }
+.ts-chips button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+@keyframes ts-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ts-tile { from { opacity: 0; transform: translateY(14px) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes ts-print { from { clip-path: inset(100% 0 0 0); transform: translateY(18px); } to { clip-path: inset(0 0 0 0); transform: none; } }
+@keyframes ts-roll { from { opacity: 0; transform: translateY(70%); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ts[data-moved] .ts-slide[data-state='on'], .ts[data-moved] .ts-slide[data-state='on'] .t-tile, .ts[data-moved] .ts-slide[data-state='on'] .receipt-paper, .ts[data-moved] .ts-word > span { animation: none; }
+  .ts-slide[data-state='off'] { display: none; }
+}

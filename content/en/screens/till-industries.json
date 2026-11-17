@@ -1,0 +1,1793 @@
+{
+  "illustrative": true,
+  "currency": "NGN",
+  "online": "Online",
+  "pay": [
+    "Cash",
+    "Transfer",
+    "Card",
+    "More"
+  ],
+  "charge": "Charge",
+  "lead": "One till for",
+  "chooser": "Choose a business",
+  "label": "Illustrative example: the till, its receipt and the business's online shop, shown for {industry}.",
+  "industries": [
+    {
+      "id": "restaurant",
+      "chip": "Restaurant",
+      "headline": "restaurants",
+      "cashier": {
+        "initials": "KO",
+        "name": "Kemi",
+        "role": "Cashier · Till 2"
+      },
+      "search": "Search the menu or scan a barcode",
+      "categories": [
+        {
+          "name": "All",
+          "count": 48,
+          "active": true
+        },
+        {
+          "name": "Bowls",
+          "count": 9
+        },
+        {
+          "name": "Pizza and pasta",
+          "count": 7
+        },
+        {
+          "name": "Grills",
+          "count": 6
+        },
+        {
+          "name": "Drinks",
+          "count": 12
+        }
+      ],
+      "items": [
+        {
+          "name": "Jollof rice and chicken",
+          "img": "/products/restaurant/jollof.webp",
+          "price": 4500,
+          "stock": "24 left · 61 sold today"
+        },
+        {
+          "name": "Margherita pizza",
+          "img": "/products/restaurant/pizza.webp",
+          "price": 5200,
+          "stock": "18 left"
+        },
+        {
+          "name": "Beef burger and fries",
+          "img": "/products/restaurant/burger.webp",
+          "price": 4800,
+          "stock": "12 left"
+        },
+        {
+          "name": "Salmon teriyaki",
+          "img": "/products/restaurant/salmon-bowl.webp",
+          "price": 6000,
+          "stock": "9 left"
+        },
+        {
+          "name": "Moi moi",
+          "img": "/products/restaurant/moi-moi.webp",
+          "price": 1200,
+          "stock": "3 left",
+          "flag": "Low"
+        },
+        {
+          "name": "Chicken wings (10)",
+          "img": "/products/restaurant/wings.webp",
+          "price": 3800,
+          "stock": "15 left"
+        },
+        {
+          "name": "Fresh lemonade",
+          "img": "/products/restaurant/lemonade.webp",
+          "price": 1800,
+          "stock": "Made to order"
+        },
+        {
+          "name": "Chocolate brownie",
+          "img": "/products/restaurant/brownie.webp",
+          "price": 1000,
+          "stock": "Sold out",
+          "flag": "Sold out"
+        }
+      ],
+      "order": {
+        "title": "Order #1047",
+        "meta": "Table 6 · 3 guests",
+        "types": [
+          "Dine in",
+          "Take away",
+          "Delivery"
+        ],
+        "lines": [
+          {
+            "name": "Jollof rice and chicken",
+            "detail": "Extra plantain · Seat 1, 2",
+            "qty": 2,
+            "total": 9000
+          },
+          {
+            "name": "Salmon teriyaki",
+            "detail": "No sesame · Seat 3",
+            "qty": 1,
+            "total": 6000
+          },
+          {
+            "name": "Fresh lemonade",
+            "detail": "Large · Seat 1, 3",
+            "qty": 2,
+            "total": 3600
+          },
+          {
+            "name": "Moi moi",
+            "detail": "Seat 2",
+            "qty": 1,
+            "total": 1200
+          }
+        ],
+        "warning": "Moi moi is running low: 3 left.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 19800
+          },
+          {
+            "label": "Service charge (5%)",
+            "amount": 990
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 1485
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 22275
+      },
+      "receipt": {
+        "title": "JUNIPER KITCHEN",
+        "lines": [
+          {
+            "label": "Jollof rice ×2",
+            "amount": 9000
+          },
+          {
+            "label": "Salmon teriyaki",
+            "amount": 6000
+          },
+          {
+            "label": "Lemonade ×2",
+            "amount": 3600
+          },
+          {
+            "label": "Moi moi",
+            "amount": 1200
+          },
+          {
+            "label": "Service charge",
+            "amount": 990
+          },
+          {
+            "label": "VAT",
+            "amount": 1485
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 22275
+        },
+        "footer": "Paid · Cash · Till 2"
+      },
+      "notice": {
+        "title": "Kept selling offline",
+        "detail": "Till 2 · 14 sales sync when the line is back",
+        "icon": "wifiOff"
+      },
+      "phone": {
+        "shop": {
+          "initials": "JK",
+          "name": "Juniper Kitchen"
+        },
+        "brand": "#0f6e66",
+        "pickup": {
+          "title": "Pickup · today 7:30 pm",
+          "place": "Open until 10 pm"
+        },
+        "categories": [
+          "Featured",
+          "Bowls",
+          "Pizza and pasta",
+          "Grills"
+        ],
+        "active": "Bowls",
+        "sectionCount": "9 dishes",
+        "dishes": [
+          {
+            "name": "Jollof rice and chicken",
+            "note": "Party jollof, fried plantain",
+            "price": 4500,
+            "img": "/products/restaurant/jollof.webp",
+            "tag": "Popular"
+          },
+          {
+            "name": "Salmon teriyaki bowl",
+            "note": "Sticky rice, cucumber, sesame",
+            "price": 6000,
+            "img": "/products/restaurant/salmon-bowl.webp",
+            "tag": "Chef's pick"
+          },
+          {
+            "name": "Chicken wings (10)",
+            "note": "Honey glaze, spring onion",
+            "price": 3800,
+            "img": "/products/restaurant/wings.webp"
+          },
+          {
+            "name": "Margherita pizza",
+            "note": "Tomato, mozzarella, basil",
+            "price": 5200,
+            "img": "/products/restaurant/pizza.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 10500
+        }
+      }
+    },
+    {
+      "id": "grocery",
+      "chip": "Supermarket",
+      "headline": "supermarkets",
+      "cashier": {
+        "initials": "TA",
+        "name": "Tolu",
+        "role": "Cashier · Lane 1"
+      },
+      "search": "Search products or scan a barcode",
+      "categories": [
+        {
+          "name": "All",
+          "count": 1240,
+          "active": true
+        },
+        {
+          "name": "Food cupboard",
+          "count": 320
+        },
+        {
+          "name": "Fresh",
+          "count": 96
+        },
+        {
+          "name": "Household",
+          "count": 140
+        },
+        {
+          "name": "Drinks",
+          "count": 180
+        }
+      ],
+      "items": [
+        {
+          "name": "Rice, 5 kg",
+          "img": "/products/grocery/rice.webp",
+          "price": 9500,
+          "stock": "42 bags"
+        },
+        {
+          "name": "Vegetable oil, 3 L",
+          "img": "/products/grocery/cooking-oil.webp",
+          "price": 7800,
+          "stock": "26 left"
+        },
+        {
+          "name": "Eggs, tray of 12",
+          "img": "/products/grocery/eggs.webp",
+          "price": 3200,
+          "stock": "4 trays",
+          "flag": "Low"
+        },
+        {
+          "name": "Sliced bread",
+          "img": "/products/grocery/bread.webp",
+          "price": 1600,
+          "stock": "Baked today"
+        },
+        {
+          "name": "Milk, 1 L",
+          "img": "/products/grocery/milk.webp",
+          "price": 2200,
+          "stock": "31 left"
+        },
+        {
+          "name": "Tomatoes, 1 kg",
+          "img": "/products/grocery/tomatoes.webp",
+          "price": 2500,
+          "stock": "Sold by weight"
+        },
+        {
+          "name": "Laundry liquid, 2 L",
+          "img": "/products/grocery/detergent.webp",
+          "price": 4600,
+          "stock": "18 left"
+        },
+        {
+          "name": "Water, 6 × 75 cl",
+          "img": "/products/grocery/water.webp",
+          "price": 1800,
+          "stock": "60 packs"
+        }
+      ],
+      "order": {
+        "title": "Sale #5821",
+        "meta": "Lane 1 · Mrs Okafor",
+        "types": [
+          "In store",
+          "Pickup",
+          "Delivery"
+        ],
+        "lines": [
+          {
+            "name": "Rice, 5 kg",
+            "detail": "Promo: 5% off",
+            "qty": 1,
+            "total": 9025
+          },
+          {
+            "name": "Vegetable oil, 3 L",
+            "detail": "",
+            "qty": 1,
+            "total": 7800
+          },
+          {
+            "name": "Tomatoes, 1 kg",
+            "detail": "1.4 kg weighed",
+            "qty": 1,
+            "total": 3500
+          },
+          {
+            "name": "Eggs, tray of 12",
+            "detail": "",
+            "qty": 2,
+            "total": 6400
+          }
+        ],
+        "warning": "Eggs are low: 4 trays. Reorder sent to the supplier.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 26725
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 2004
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 28729
+      },
+      "receipt": {
+        "title": "FRESHWAY MARKET",
+        "lines": [
+          {
+            "label": "Rice 5 kg",
+            "amount": 9025
+          },
+          {
+            "label": "Veg oil 3 L",
+            "amount": 7800
+          },
+          {
+            "label": "Tomatoes 1.4 kg",
+            "amount": 3500
+          },
+          {
+            "label": "Eggs ×2",
+            "amount": 6400
+          },
+          {
+            "label": "VAT",
+            "amount": 2004
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 28729
+        },
+        "footer": "Paid · Card · Lane 1"
+      },
+      "notice": {
+        "title": "Low stock: eggs",
+        "detail": "Reorder sent to the supplier · 4 trays left",
+        "icon": "boxes"
+      },
+      "phone": {
+        "shop": {
+          "initials": "FM",
+          "name": "Freshway Market"
+        },
+        "brand": "#2f7d32",
+        "pickup": {
+          "title": "Delivery · today by 6 pm",
+          "place": "Free over ₦20,000"
+        },
+        "categories": [
+          "Deals",
+          "Fresh",
+          "Food cupboard",
+          "Household"
+        ],
+        "active": "Fresh",
+        "sectionCount": "96 items",
+        "dishes": [
+          {
+            "name": "Bananas, bunch",
+            "note": "Ripe, sweet, about 1 kg",
+            "price": 1500,
+            "img": "/products/produce/bananas.webp",
+            "tag": "Fresh today"
+          },
+          {
+            "name": "Red peppers, 500 g",
+            "note": "Crisp and sweet",
+            "price": 1800,
+            "img": "/products/produce/peppers.webp"
+          },
+          {
+            "name": "Whole chicken",
+            "note": "About 1.5 kg, cleaned",
+            "price": 7500,
+            "img": "/products/produce/chicken.webp",
+            "tag": "Popular"
+          },
+          {
+            "name": "Cheddar cheese, 400 g",
+            "note": "Mild, sliced on request",
+            "price": 4200,
+            "img": "/products/produce/cheese.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 3300
+        }
+      }
+    },
+    {
+      "id": "pharmacy",
+      "chip": "Pharmacy",
+      "headline": "pharmacies",
+      "cashier": {
+        "initials": "NA",
+        "name": "Pharm. Ngozi",
+        "role": "Pharmacist · Counter 1"
+      },
+      "search": "Search medicines or scan a barcode",
+      "categories": [
+        {
+          "name": "All",
+          "count": 860,
+          "active": true
+        },
+        {
+          "name": "Pain and fever",
+          "count": 64
+        },
+        {
+          "name": "Cough and cold",
+          "count": 48
+        },
+        {
+          "name": "Vitamins",
+          "count": 72
+        },
+        {
+          "name": "First aid",
+          "count": 40
+        }
+      ],
+      "items": [
+        {
+          "name": "Pain relief tablets, 20",
+          "img": "/products/pharmacy/pain-relief.webp",
+          "price": 1200,
+          "stock": "Batch PR-24 · exp. 08/27"
+        },
+        {
+          "name": "Cough syrup, 100 ml",
+          "img": "/products/pharmacy/cough-syrup.webp",
+          "price": 2400,
+          "stock": "14 left"
+        },
+        {
+          "name": "Vitamin C, 60 tablets",
+          "img": "/products/pharmacy/vitamin-c.webp",
+          "price": 3500,
+          "stock": "22 left"
+        },
+        {
+          "name": "First aid kit",
+          "img": "/products/pharmacy/first-aid.webp",
+          "price": 8500,
+          "stock": "6 left"
+        },
+        {
+          "name": "Hand sanitiser, 500 ml",
+          "img": "/products/pharmacy/sanitiser.webp",
+          "price": 1800,
+          "stock": "40 left"
+        },
+        {
+          "name": "Digital thermometer",
+          "img": "/products/pharmacy/thermometer.webp",
+          "price": 4200,
+          "stock": "3 left",
+          "flag": "Low"
+        },
+        {
+          "name": "Crepe bandage",
+          "img": "/products/pharmacy/bandages.webp",
+          "price": 900,
+          "stock": "50 left"
+        },
+        {
+          "name": "Baby formula, 400 g",
+          "img": "/products/pharmacy/baby-formula.webp",
+          "price": 9800,
+          "stock": "Expires soon",
+          "flag": "Exp. soon"
+        }
+      ],
+      "order": {
+        "title": "Sale #3308",
+        "meta": "Walk-in · RX-118",
+        "types": [
+          "Walk-in",
+          "Prescription",
+          "Delivery"
+        ],
+        "lines": [
+          {
+            "name": "Pain relief tablets, 20",
+            "detail": "Batch PR-24 · exp. 08/27",
+            "qty": 2,
+            "total": 2400
+          },
+          {
+            "name": "Cough syrup, 100 ml",
+            "detail": "Batch CS-11 · exp. 03/27",
+            "qty": 1,
+            "total": 2400
+          },
+          {
+            "name": "Vitamin C, 60 tablets",
+            "detail": "",
+            "qty": 1,
+            "total": 3500
+          },
+          {
+            "name": "Digital thermometer",
+            "detail": "",
+            "qty": 1,
+            "total": 4200
+          }
+        ],
+        "warning": "Baby formula batch BF-09 expires in 30 days.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 12500
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 938
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 13438
+      },
+      "receipt": {
+        "title": "CAREPOINT PHARMACY",
+        "lines": [
+          {
+            "label": "Pain relief ×2",
+            "amount": 2400
+          },
+          {
+            "label": "Cough syrup",
+            "amount": 2400
+          },
+          {
+            "label": "Vitamin C",
+            "amount": 3500
+          },
+          {
+            "label": "Thermometer",
+            "amount": 4200
+          },
+          {
+            "label": "VAT",
+            "amount": 938
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 13438
+        },
+        "footer": "Paid · Transfer · Counter 1"
+      },
+      "notice": {
+        "title": "Batch and expiry tracked",
+        "detail": "Formula batch BF-09 expires in 30 days",
+        "icon": "calendar"
+      },
+      "phone": {
+        "shop": {
+          "initials": "CP",
+          "name": "CarePoint Pharmacy"
+        },
+        "brand": "#0b6aa8",
+        "pickup": {
+          "title": "Pickup · ready in 20 min",
+          "place": "Open until 9 pm"
+        },
+        "categories": [
+          "Popular",
+          "Vitamins",
+          "Cough and cold",
+          "Baby"
+        ],
+        "active": "Vitamins",
+        "sectionCount": "72 products",
+        "dishes": [
+          {
+            "name": "Vitamin C, 60 tablets",
+            "note": "1000 mg, orange flavour",
+            "price": 3500,
+            "img": "/products/pharmacy/vitamin-c.webp",
+            "tag": "Popular"
+          },
+          {
+            "name": "Hand sanitiser, 500 ml",
+            "note": "70% alcohol, pump bottle",
+            "price": 1800,
+            "img": "/products/pharmacy/sanitiser.webp"
+          },
+          {
+            "name": "First aid kit",
+            "note": "Home and car, 42 pieces",
+            "price": 8500,
+            "img": "/products/pharmacy/first-aid.webp"
+          },
+          {
+            "name": "Digital thermometer",
+            "note": "Reads in 10 seconds",
+            "price": 4200,
+            "img": "/products/pharmacy/thermometer.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 5300
+        }
+      }
+    },
+    {
+      "id": "fashion",
+      "chip": "Boutique",
+      "headline": "boutiques",
+      "cashier": {
+        "initials": "AD",
+        "name": "Adaeze",
+        "role": "Sales · Lekki branch"
+      },
+      "search": "Search styles or scan a tag",
+      "categories": [
+        {
+          "name": "All",
+          "count": 310,
+          "active": true
+        },
+        {
+          "name": "Women",
+          "count": 120
+        },
+        {
+          "name": "Men",
+          "count": 90
+        },
+        {
+          "name": "Shoes",
+          "count": 48
+        },
+        {
+          "name": "Accessories",
+          "count": 52
+        }
+      ],
+      "items": [
+        {
+          "name": "Ankara dress",
+          "img": "/products/fashion/ankara-dress.webp",
+          "price": 28000,
+          "stock": "S · M · L"
+        },
+        {
+          "name": "White sneakers",
+          "img": "/products/fashion/sneakers.webp",
+          "price": 35000,
+          "stock": "Sizes 38–45"
+        },
+        {
+          "name": "Denim jacket",
+          "img": "/products/fashion/denim-jacket.webp",
+          "price": 24000,
+          "stock": "M sold out",
+          "flag": "Size M"
+        },
+        {
+          "name": "Leather handbag",
+          "img": "/products/fashion/handbag.webp",
+          "price": 42000,
+          "stock": "5 left"
+        },
+        {
+          "name": "Oxford shirt",
+          "img": "/products/fashion/shirt.webp",
+          "price": 15000,
+          "stock": "S · M · L · XL"
+        },
+        {
+          "name": "Sunglasses",
+          "img": "/products/fashion/sunglasses.webp",
+          "price": 9500,
+          "stock": "12 left"
+        },
+        {
+          "name": "Classic watch",
+          "img": "/products/fashion/watch.webp",
+          "price": 38000,
+          "stock": "4 left"
+        },
+        {
+          "name": "Baseball cap",
+          "img": "/products/fashion/cap.webp",
+          "price": 6500,
+          "stock": "20 left"
+        }
+      ],
+      "order": {
+        "title": "Sale #2290",
+        "meta": "Lekki · Bisi",
+        "types": [
+          "In store",
+          "Pickup",
+          "Delivery"
+        ],
+        "lines": [
+          {
+            "name": "Ankara dress",
+            "detail": "Size M · Print 4",
+            "qty": 1,
+            "total": 28000
+          },
+          {
+            "name": "White sneakers",
+            "detail": "Size 40",
+            "qty": 1,
+            "total": 35000
+          },
+          {
+            "name": "Sunglasses",
+            "detail": "Tortoiseshell",
+            "qty": 1,
+            "total": 9500
+          },
+          {
+            "name": "Baseball cap",
+            "detail": "Navy",
+            "qty": 2,
+            "total": 13000
+          }
+        ],
+        "warning": "Denim jacket size M sold out here: 3 in Ikeja branch.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 85500
+          },
+          {
+            "label": "Discount",
+            "amount": -4250
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 6412
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 87662
+      },
+      "receipt": {
+        "title": "ADIRE HOUSE",
+        "lines": [
+          {
+            "label": "Ankara dress",
+            "amount": 28000
+          },
+          {
+            "label": "White sneakers",
+            "amount": 35000
+          },
+          {
+            "label": "Sunglasses",
+            "amount": 9500
+          },
+          {
+            "label": "Cap ×2",
+            "amount": 13000
+          },
+          {
+            "label": "Discount",
+            "amount": -4250
+          },
+          {
+            "label": "VAT",
+            "amount": 6412
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 87662
+        },
+        "footer": "Paid · Card · Lekki"
+      },
+      "notice": {
+        "title": "Size M sold out here",
+        "detail": "3 in Ikeja branch · transfer requested",
+        "icon": "boxes"
+      },
+      "phone": {
+        "shop": {
+          "initials": "AH",
+          "name": "Adire House"
+        },
+        "brand": "#9a3412",
+        "pickup": {
+          "title": "Delivery · tomorrow",
+          "place": "Free returns in 7 days"
+        },
+        "categories": [
+          "New in",
+          "Women",
+          "Men",
+          "Shoes"
+        ],
+        "active": "Women",
+        "sectionCount": "120 styles",
+        "dishes": [
+          {
+            "name": "Ankara dress",
+            "note": "Puff sleeves, cotton wax print",
+            "price": 28000,
+            "img": "/products/fashion/ankara-dress.webp",
+            "tag": "New"
+          },
+          {
+            "name": "Leather handbag",
+            "note": "Tan, gold hardware",
+            "price": 42000,
+            "img": "/products/fashion/handbag.webp"
+          },
+          {
+            "name": "White sneakers",
+            "note": "Leather, sizes 38–45",
+            "price": 35000,
+            "img": "/products/fashion/sneakers.webp",
+            "tag": "Bestseller"
+          },
+          {
+            "name": "Denim jacket",
+            "note": "Classic blue, unisex",
+            "price": 24000,
+            "img": "/products/fashion/denim-jacket.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 70000
+        }
+      }
+    },
+    {
+      "id": "electronics",
+      "chip": "Phone shop",
+      "headline": "phone and electronics shops",
+      "cashier": {
+        "initials": "EM",
+        "name": "Emeka",
+        "role": "Sales · Counter 2"
+      },
+      "search": "Search products, serial or IMEI",
+      "categories": [
+        {
+          "name": "All",
+          "count": 540,
+          "active": true
+        },
+        {
+          "name": "Phones",
+          "count": 80
+        },
+        {
+          "name": "Laptops",
+          "count": 36
+        },
+        {
+          "name": "Audio",
+          "count": 64
+        },
+        {
+          "name": "Accessories",
+          "count": 220
+        }
+      ],
+      "items": [
+        {
+          "name": "Smartphone, 128 GB",
+          "img": "/products/electronics/smartphone.webp",
+          "price": 285000,
+          "stock": "IMEI on sale"
+        },
+        {
+          "name": "Wireless earbuds",
+          "img": "/products/electronics/earbuds.webp",
+          "price": 45000,
+          "stock": "14 left"
+        },
+        {
+          "name": "Power bank, 20,000 mAh",
+          "img": "/products/electronics/power-bank.webp",
+          "price": 18000,
+          "stock": "22 left"
+        },
+        {
+          "name": "Fast charger and cable",
+          "img": "/products/electronics/charger.webp",
+          "price": 9500,
+          "stock": "40 left"
+        },
+        {
+          "name": "Laptop, 14 inch",
+          "img": "/products/electronics/laptop.webp",
+          "price": 620000,
+          "stock": "Serial on sale"
+        },
+        {
+          "name": "Smartwatch",
+          "img": "/products/electronics/smartwatch.webp",
+          "price": 75000,
+          "stock": "2 left",
+          "flag": "Low"
+        },
+        {
+          "name": "Phone case",
+          "img": "/products/electronics/phone-case.webp",
+          "price": 5000,
+          "stock": "60 left"
+        },
+        {
+          "name": "Bluetooth speaker",
+          "img": "/products/electronics/speaker.webp",
+          "price": 32000,
+          "stock": "9 left"
+        }
+      ],
+      "order": {
+        "title": "Sale #7712",
+        "meta": "Counter 2 · 1-yr warranty",
+        "types": [
+          "In store",
+          "Pickup",
+          "Delivery"
+        ],
+        "lines": [
+          {
+            "name": "Smartphone, 128 GB",
+            "detail": "IMEI 35 4821 0938 1274",
+            "qty": 1,
+            "total": 285000
+          },
+          {
+            "name": "Phone case",
+            "detail": "Purple",
+            "qty": 1,
+            "total": 5000
+          },
+          {
+            "name": "Fast charger and cable",
+            "detail": "",
+            "qty": 1,
+            "total": 9500
+          },
+          {
+            "name": "Wireless earbuds",
+            "detail": "Serial EB-20931",
+            "qty": 1,
+            "total": 45000
+          }
+        ],
+        "warning": "Smartwatch is low: 2 left. One is on hold for pickup.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 344500
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 25838
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 370338
+      },
+      "receipt": {
+        "title": "VOLT GADGETS",
+        "lines": [
+          {
+            "label": "Smartphone 128GB",
+            "amount": 285000
+          },
+          {
+            "label": "Phone case",
+            "amount": 5000
+          },
+          {
+            "label": "Charger",
+            "amount": 9500
+          },
+          {
+            "label": "Earbuds",
+            "amount": 45000
+          },
+          {
+            "label": "VAT",
+            "amount": 25838
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 370338
+        },
+        "footer": "Paid · Transfer · Counter 2"
+      },
+      "notice": {
+        "title": "Serial number recorded",
+        "detail": "IMEI and 12-month warranty on the receipt",
+        "icon": "scan"
+      },
+      "phone": {
+        "shop": {
+          "initials": "VG",
+          "name": "Volt Gadgets"
+        },
+        "brand": "#1e3a8a",
+        "pickup": {
+          "title": "Pickup · today 4 pm",
+          "place": "Pay on pickup or online"
+        },
+        "categories": [
+          "Deals",
+          "Phones",
+          "Audio",
+          "Accessories"
+        ],
+        "active": "Phones",
+        "sectionCount": "80 phones",
+        "dishes": [
+          {
+            "name": "Smartphone, 128 GB",
+            "note": "6.5 inch, 50 MP camera",
+            "price": 285000,
+            "img": "/products/electronics/smartphone.webp",
+            "tag": "Popular"
+          },
+          {
+            "name": "Wireless earbuds",
+            "note": "Noise cancelling, 24 h battery",
+            "price": 45000,
+            "img": "/products/electronics/earbuds.webp"
+          },
+          {
+            "name": "Smartwatch",
+            "note": "Heart rate, 7-day battery",
+            "price": 75000,
+            "img": "/products/electronics/smartwatch.webp",
+            "tag": "2 left"
+          },
+          {
+            "name": "Bluetooth speaker",
+            "note": "Waterproof, 12 h play",
+            "price": 32000,
+            "img": "/products/electronics/speaker.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 330000
+        }
+      }
+    },
+    {
+      "id": "salon",
+      "chip": "Salon and spa",
+      "headline": "salons and spas",
+      "cashier": {
+        "initials": "AM",
+        "name": "Amaka",
+        "role": "Front desk"
+      },
+      "search": "Search services, products or clients",
+      "categories": [
+        {
+          "name": "All",
+          "count": 86,
+          "active": true
+        },
+        {
+          "name": "Hair",
+          "count": 24
+        },
+        {
+          "name": "Nails",
+          "count": 16
+        },
+        {
+          "name": "Spa",
+          "count": 14
+        },
+        {
+          "name": "Products",
+          "count": 32
+        }
+      ],
+      "items": [
+        {
+          "name": "Haircut and shape-up",
+          "img": "/products/salon/clippers.webp",
+          "price": 5000,
+          "stock": "30 min · Tunde"
+        },
+        {
+          "name": "Knotless braids",
+          "img": "/products/salon/braids.webp",
+          "price": 35000,
+          "stock": "5 h · Joy"
+        },
+        {
+          "name": "Gel manicure",
+          "img": "/products/salon/nail-polish.webp",
+          "price": 8000,
+          "stock": "45 min"
+        },
+        {
+          "name": "Facial",
+          "img": "/products/salon/facial.webp",
+          "price": 15000,
+          "stock": "60 min · Rita"
+        },
+        {
+          "name": "Hair oil, 120 ml",
+          "img": "/products/salon/hair-oil.webp",
+          "price": 4500,
+          "stock": "18 left"
+        },
+        {
+          "name": "Shampoo, 500 ml",
+          "img": "/products/salon/shampoo.webp",
+          "price": 6000,
+          "stock": "12 left"
+        },
+        {
+          "name": "Manicure set",
+          "img": "/products/salon/manicure-set.webp",
+          "price": 7500,
+          "stock": "6 left"
+        },
+        {
+          "name": "Beard care kit",
+          "img": "/products/salon/beard-kit.webp",
+          "price": 12000,
+          "stock": "2 left",
+          "flag": "Low"
+        }
+      ],
+      "order": {
+        "title": "Ticket #418",
+        "meta": "Ada · booked 2:00 pm",
+        "types": [
+          "Walk-in",
+          "Booking",
+          "Products"
+        ],
+        "lines": [
+          {
+            "name": "Knotless braids",
+            "detail": "Joy · 5 h",
+            "qty": 1,
+            "total": 35000
+          },
+          {
+            "name": "Gel manicure",
+            "detail": "Chi · 45 min",
+            "qty": 1,
+            "total": 8000
+          },
+          {
+            "name": "Hair oil, 120 ml",
+            "detail": "",
+            "qty": 1,
+            "total": 4500
+          },
+          {
+            "name": "Shampoo, 500 ml",
+            "detail": "",
+            "qty": 1,
+            "total": 6000
+          }
+        ],
+        "warning": "Next booking 3:30 pm: Funke with Joy, braids.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 53500
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 4012
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 57512
+      },
+      "receipt": {
+        "title": "GLOW STUDIO",
+        "lines": [
+          {
+            "label": "Braids (Joy)",
+            "amount": 35000
+          },
+          {
+            "label": "Gel manicure",
+            "amount": 8000
+          },
+          {
+            "label": "Hair oil",
+            "amount": 4500
+          },
+          {
+            "label": "Shampoo",
+            "amount": 6000
+          },
+          {
+            "label": "VAT",
+            "amount": 4012
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 57512
+        },
+        "footer": "Paid · Transfer · Front desk"
+      },
+      "notice": {
+        "title": "Booking at 3:30 pm",
+        "detail": "Funke with Joy · braids · reminder sent",
+        "icon": "calendar"
+      },
+      "phone": {
+        "shop": {
+          "initials": "GS",
+          "name": "Glow Studio"
+        },
+        "brand": "#86198f",
+        "pickup": {
+          "title": "Book · Saturday 11 am",
+          "place": "3 stylists free"
+        },
+        "categories": [
+          "Popular",
+          "Hair",
+          "Nails",
+          "Spa"
+        ],
+        "active": "Hair",
+        "sectionCount": "24 services",
+        "dishes": [
+          {
+            "name": "Knotless braids",
+            "note": "Mid-back, includes hair",
+            "price": 35000,
+            "img": "/products/salon/braids.webp",
+            "tag": "Popular"
+          },
+          {
+            "name": "Facial",
+            "note": "Deep clean, 60 min",
+            "price": 15000,
+            "img": "/products/salon/facial.webp"
+          },
+          {
+            "name": "Gel manicure",
+            "note": "Shape, cuticle care, gel",
+            "price": 8000,
+            "img": "/products/salon/nail-polish.webp"
+          },
+          {
+            "name": "Haircut and shape-up",
+            "note": "Wash, cut, line-up",
+            "price": 5000,
+            "img": "/products/salon/clippers.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 50000
+        }
+      }
+    },
+    {
+      "id": "bakery",
+      "chip": "Bakery and café",
+      "headline": "bakeries and cafés",
+      "cashier": {
+        "initials": "SB",
+        "name": "Sade",
+        "role": "Counter · Till 1"
+      },
+      "search": "Search the menu or scan a barcode",
+      "categories": [
+        {
+          "name": "All",
+          "count": 64,
+          "active": true
+        },
+        {
+          "name": "Bread",
+          "count": 10
+        },
+        {
+          "name": "Pastries",
+          "count": 18
+        },
+        {
+          "name": "Cakes",
+          "count": 12
+        },
+        {
+          "name": "Coffee",
+          "count": 24
+        }
+      ],
+      "items": [
+        {
+          "name": "Sliced bread",
+          "img": "/products/bakery/bread.webp",
+          "price": 1600,
+          "stock": "12 of 40 left",
+          "flag": "Low"
+        },
+        {
+          "name": "Butter croissants (3)",
+          "img": "/products/bakery/croissants.webp",
+          "price": 3000,
+          "stock": "Baked 6 am"
+        },
+        {
+          "name": "Meat pie",
+          "img": "/products/bakery/meat-pie.webp",
+          "price": 1200,
+          "stock": "36 left"
+        },
+        {
+          "name": "Birthday cake",
+          "img": "/products/bakery/cake.webp",
+          "price": 25000,
+          "stock": "Order 24 h ahead"
+        },
+        {
+          "name": "Doughnuts (3)",
+          "img": "/products/bakery/doughnuts.webp",
+          "price": 2100,
+          "stock": "18 left"
+        },
+        {
+          "name": "Cappuccino",
+          "img": "/products/bakery/cappuccino.webp",
+          "price": 2500,
+          "stock": "Made to order"
+        },
+        {
+          "name": "Iced latte",
+          "img": "/products/bakery/iced-coffee.webp",
+          "price": 3000,
+          "stock": "Made to order"
+        },
+        {
+          "name": "Cinnamon rolls (3)",
+          "img": "/products/bakery/cinnamon-rolls.webp",
+          "price": 3600,
+          "stock": "9 left"
+        }
+      ],
+      "order": {
+        "title": "Order #902",
+        "meta": "Take away · Femi",
+        "types": [
+          "Eat in",
+          "Take away",
+          "Pre-order"
+        ],
+        "lines": [
+          {
+            "name": "Cappuccino",
+            "detail": "Oat milk",
+            "qty": 2,
+            "total": 5000
+          },
+          {
+            "name": "Meat pie",
+            "detail": "Warmed",
+            "qty": 2,
+            "total": 2400
+          },
+          {
+            "name": "Butter croissants (3)",
+            "detail": "",
+            "qty": 1,
+            "total": 3000
+          },
+          {
+            "name": "Sliced bread",
+            "detail": "",
+            "qty": 1,
+            "total": 1600
+          }
+        ],
+        "warning": "Sliced bread: 12 of 40 left. Next bake at 2 pm.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 12000
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 900
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 12900
+      },
+      "receipt": {
+        "title": "MORNING CRUMB",
+        "lines": [
+          {
+            "label": "Cappuccino ×2",
+            "amount": 5000
+          },
+          {
+            "label": "Meat pie ×2",
+            "amount": 2400
+          },
+          {
+            "label": "Croissants (3)",
+            "amount": 3000
+          },
+          {
+            "label": "Sliced bread",
+            "amount": 1600
+          },
+          {
+            "label": "VAT",
+            "amount": 900
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 12900
+        },
+        "footer": "Paid · Card · Till 1"
+      },
+      "notice": {
+        "title": "Today's bake: 40 loaves",
+        "detail": "12 left · next bake at 2 pm",
+        "icon": "boxes"
+      },
+      "phone": {
+        "shop": {
+          "initials": "MC",
+          "name": "Morning Crumb"
+        },
+        "brand": "#92400e",
+        "pickup": {
+          "title": "Pickup · 8:15 am",
+          "place": "Pre-order before 10 pm"
+        },
+        "categories": [
+          "Fresh today",
+          "Pastries",
+          "Cakes",
+          "Coffee"
+        ],
+        "active": "Pastries",
+        "sectionCount": "18 pastries",
+        "dishes": [
+          {
+            "name": "Butter croissants (3)",
+            "note": "Baked at 6 am",
+            "price": 3000,
+            "img": "/products/bakery/croissants.webp",
+            "tag": "Fresh"
+          },
+          {
+            "name": "Cinnamon rolls (3)",
+            "note": "Cream cheese icing",
+            "price": 3600,
+            "img": "/products/bakery/cinnamon-rolls.webp"
+          },
+          {
+            "name": "Birthday cake",
+            "note": "Chocolate drip, serves 12",
+            "price": 25000,
+            "img": "/products/bakery/cake.webp",
+            "tag": "Pre-order"
+          },
+          {
+            "name": "Doughnuts (3)",
+            "note": "Glazed, sprinkles",
+            "price": 2100,
+            "img": "/products/bakery/doughnuts.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 6600
+        }
+      }
+    },
+    {
+      "id": "hardware",
+      "chip": "Hardware store",
+      "headline": "hardware and building stores",
+      "cashier": {
+        "initials": "IB",
+        "name": "Ibrahim",
+        "role": "Counter · Yard 1"
+      },
+      "search": "Search items, sizes or scan",
+      "categories": [
+        {
+          "name": "All",
+          "count": 1800,
+          "active": true
+        },
+        {
+          "name": "Building",
+          "count": 240
+        },
+        {
+          "name": "Paint",
+          "count": 160
+        },
+        {
+          "name": "Tools",
+          "count": 380
+        },
+        {
+          "name": "Electrical",
+          "count": 290
+        }
+      ],
+      "items": [
+        {
+          "name": "Cement, 50 kg bag",
+          "img": "/products/hardware/cement.webp",
+          "price": 9800,
+          "stock": "320 bags in yard"
+        },
+        {
+          "name": "Emulsion paint, 4 L",
+          "img": "/products/hardware/paint.webp",
+          "price": 14500,
+          "stock": "Mixed to colour"
+        },
+        {
+          "name": "Claw hammer",
+          "img": "/products/hardware/hammer.webp",
+          "price": 6500,
+          "stock": "24 left"
+        },
+        {
+          "name": "Nails, 2 inch (1 kg)",
+          "img": "/products/hardware/nails.webp",
+          "price": 2200,
+          "stock": "Sold by the kg"
+        },
+        {
+          "name": "Cable 2.5 mm, per metre",
+          "img": "/products/hardware/cable.webp",
+          "price": 650,
+          "stock": "Sold by the metre"
+        },
+        {
+          "name": "PVC pipe 4 inch, 6 m",
+          "img": "/products/hardware/pipes.webp",
+          "price": 7800,
+          "stock": "40 lengths"
+        },
+        {
+          "name": "Cordless drill",
+          "img": "/products/hardware/drill.webp",
+          "price": 68000,
+          "stock": "3 left",
+          "flag": "Low"
+        },
+        {
+          "name": "Brass padlock",
+          "img": "/products/hardware/padlock.webp",
+          "price": 4500,
+          "stock": "30 left"
+        }
+      ],
+      "order": {
+        "title": "Sale #6150",
+        "meta": "Bello Builders · on account",
+        "types": [
+          "Counter",
+          "Site delivery",
+          "On account"
+        ],
+        "lines": [
+          {
+            "name": "Cement, 50 kg bag",
+            "detail": "Deliver to site",
+            "qty": 20,
+            "total": 196000
+          },
+          {
+            "name": "Cable 2.5 mm, per metre",
+            "detail": "Cut to length",
+            "qty": 50,
+            "total": 32500
+          },
+          {
+            "name": "Nails, 2 inch (1 kg)",
+            "detail": "",
+            "qty": 3,
+            "total": 6600
+          },
+          {
+            "name": "Emulsion paint, 4 L",
+            "detail": "Colour: Sand 104",
+            "qty": 4,
+            "total": 58000
+          }
+        ],
+        "warning": "Cordless drill is low: 3 left. Reorder suggested.",
+        "totals": [
+          {
+            "label": "Subtotal",
+            "amount": 293100
+          },
+          {
+            "label": "VAT (7.5%)",
+            "amount": 21982
+          }
+        ],
+        "totalLabel": "Total",
+        "total": 315082
+      },
+      "receipt": {
+        "title": "BELLO HARDWARE",
+        "lines": [
+          {
+            "label": "Cement 50kg ×20",
+            "amount": 196000
+          },
+          {
+            "label": "Cable 2.5mm ×50m",
+            "amount": 32500
+          },
+          {
+            "label": "Nails 2in ×3kg",
+            "amount": 6600
+          },
+          {
+            "label": "Paint 4L ×4",
+            "amount": 58000
+          },
+          {
+            "label": "VAT",
+            "amount": 21982
+          }
+        ],
+        "total": {
+          "label": "Total",
+          "amount": 315082
+        },
+        "footer": "On account · Bello Builders"
+      },
+      "notice": {
+        "title": "Sold by the bag, metre or kg",
+        "detail": "50 m of cable cut · stock drops by the metre",
+        "icon": "boxes"
+      },
+      "phone": {
+        "shop": {
+          "initials": "BH",
+          "name": "Bello Hardware"
+        },
+        "brand": "#a16207",
+        "pickup": {
+          "title": "Site delivery · tomorrow 9 am",
+          "place": "Truck for orders over 10 bags"
+        },
+        "categories": [
+          "Trade deals",
+          "Building",
+          "Paint",
+          "Tools"
+        ],
+        "active": "Building",
+        "sectionCount": "240 items",
+        "dishes": [
+          {
+            "name": "Cement, 50 kg bag",
+            "note": "Grade 42.5, delivered",
+            "price": 9800,
+            "img": "/products/hardware/cement.webp",
+            "tag": "Trade price"
+          },
+          {
+            "name": "Emulsion paint, 4 L",
+            "note": "Mixed to any colour",
+            "price": 14500,
+            "img": "/products/hardware/paint.webp"
+          },
+          {
+            "name": "Cordless drill",
+            "note": "18 V, two batteries",
+            "price": 68000,
+            "img": "/products/hardware/drill.webp",
+            "tag": "3 left"
+          },
+          {
+            "name": "PVC pipe 4 inch, 6 m",
+            "note": "Pressure rated",
+            "price": 7800,
+            "img": "/products/hardware/pipes.webp"
+          }
+        ],
+        "basket": {
+          "count": 2,
+          "label": "View order",
+          "amount": 24300
+        }
+      }
+    }
+  ]
+}

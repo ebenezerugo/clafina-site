@@ -26,7 +26,7 @@ export function TillTerminal({ children, printer }: { children: ReactNode; print
 export function ReceiptPrinter({ title, lines, total, footer }: { title: string; lines: { label: string; amount: string }[]; total: { label: string; amount: string }; footer: string }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="w-[86%] rounded-t-sm bg-white px-[7%] pb-4 pt-3.5 font-mono text-[9px] leading-[1.5] text-[#1c1f26] shadow-[0_10px_24px_-10px_rgb(0_0_0/0.4)] lg:text-[10.5px]">
+      <div className="receipt-paper w-[86%] rounded-t-sm bg-white px-[7%] pb-4 pt-3.5 font-mono text-[9px] leading-[1.5] text-[#1c1f26] shadow-[0_10px_24px_-10px_rgb(0_0_0/0.4)] lg:text-[10.5px]">
         <p className="text-center font-bold tracking-wide">{title}</p>
         <div className="my-2 border-t border-dashed border-[#c5c9d2]" />
         {lines.map((l) => <p key={l.label} className="flex justify-between gap-2"><span className="whitespace-nowrap">{l.label}</span><span className="tabular">{l.amount}</span></p>)}

@@ -1,4 +1,5 @@
 import { Fragment, type CSSProperties } from 'react';
+import type { z } from 'zod';
 import { localeInfo, type Locale } from '@/config/locales';
 import { loadContent } from '@/content/load';
 import { TillSellScreen } from '@/content/screens';
@@ -12,7 +13,11 @@ const till = { '--s-page': '#f4f5f8', '--s-line': '#e3e6ec', '--s-muted': '#5b64
 const tones = [['#fde8d7', '#8a3b0a'], ['#e3f1e8', '#1b6b45'], ['#fbe3e8', '#8f1d3a'], ['#e6ecfd', '#163ba6'], ['#f3e8fd', '#5b21b6'], ['#fff2cc', '#6b4e00']] as const;
 
 export function TillSell({ locale }: { locale: Locale }) {
-  const c = loadContent(locale, 'screens/till-sell', TillSellScreen);
+  return <TillSellView c={loadContent(locale, 'screens/till-sell', TillSellScreen)} locale={locale} />;
+}
+
+/** The till's sell screen for any business: its menu or shelf, the order on the right, and the payment buttons. */
+export function TillSellView({ c, locale }: { c: z.infer<typeof TillSellScreen>; locale: Locale }) {
   const m = (n: number) => formatMoney(n, c.currency, locale);
   const o = c.order;
   return (
@@ -37,9 +42,10 @@ export function TillSell({ locale }: { locale: Locale }) {
                 const [bg, fg] = tones[i % tones.length]!;
                 const out = item.flag && item.stock === item.flag;
                 return (
-                  <div key={item.name} style={{ background: '#fff', border: '1px solid var(--s-line)', borderRadius: 16, overflow: 'hidden', opacity: out ? 0.55 : 1 }}>
-                    <div style={{ position: 'relative', height: 92, background: bg, color: fg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28, fontWeight: 700 }}>
-                      {item.initials}
+                  <div key={item.name} className="t-tile" style={{ ['--i' as string]: i, background: '#fff', border: '1px solid var(--s-line)', borderRadius: 16, overflow: 'hidden', opacity: out ? 0.55 : 1 }}>
+                    <div style={{ position: 'relative', height: item.img ? 120 : 92, background: item.img ? '#fbf3ec' : bg, color: fg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28, fontWeight: 700 }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element -- static markup inside a scaled screen; already a small WebP */}
+                      {item.img ? <img src={item.img} alt="" width={120} height={120} loading="lazy" decoding="async" style={{ height: '100%', width: 'auto', filter: out ? 'grayscale(1)' : undefined }} /> : item.initials}
                       {item.flag && <span style={{ position: 'absolute', top: 8, insetInlineEnd: 8, fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 10, background: out ? '#14171f' : '#fff2dc', color: out ? '#fff' : '#8a5200' }}>{item.flag}</span>}
                     </div>
                     <div style={{ padding: '10px 12px 12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
