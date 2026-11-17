@@ -56,7 +56,6 @@ export function TillShowcase({ locale }: { locale: Locale }) {
   const slides = c.industries.map((ind) => ({
     id: ind.id, chip: ind.chip, headline: ind.headline,
     images: [...new Set([...ind.items.map((i) => i.img), ...ind.phone.dishes.map((d) => d.img)])],
-    src: `/fragments/till/${locale}/${ind.id}/`,
   }));
-  return <IndustryRotator lead={c.lead} chooser={c.chooser} slides={slides} first={industryParts(locale, c.industries[0]!.id)} />;
+  return <IndustryRotator locale={locale} lead={c.lead} chooser={c.chooser} slides={slides} first={industryParts(locale, c.industries[0]!.id)} />;
 }

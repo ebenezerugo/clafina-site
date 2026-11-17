@@ -6,7 +6,7 @@ import { FLOAT_CARD } from '@/components/sections/FloatingCards';
 import { fitScale } from '@/screens/kit/scale';
 import './till-showcase.css';
 
-type Slide = { id: string; chip: string; headline: string; images: string[]; src: string };
+type Slide = { id: string; chip: string; headline: string; images: string[] };
 type Part = 'notice' | 'till' | 'printer' | 'phone';
 const PARTS: Part[] = ['notice', 'till', 'printer', 'phone'];
 
@@ -38,7 +38,7 @@ function activate(root: HTMLElement): () => void {
  * business directly. The first business comes with the page; each other one is fetched (with its pictures) just
  * before its turn, so the page starts light and every change is instant.
  */
-export function IndustryRotator({ lead, chooser, slides, first }: { lead: string; chooser: string; slides: Slide[]; first: Record<Part, ReactNode> }) {
+export function IndustryRotator({ locale, lead, chooser, slides, first }: { locale: string; lead: string; chooser: string; slides: Slide[]; first: Record<Part, ReactNode> }) {
   const [at, setAt] = useState(0);
   const [leaving, setLeaving] = useState<number | null>(null);
   const [held, setHeld] = useState(false);
@@ -67,7 +67,8 @@ export function IndustryRotator({ lead, chooser, slides, first }: { lead: string
     const known = loading.current.get(i);
     if (known) return known;
     const s = slides[i]!;
-    const p = fetch(s.src).then((r) => (r.ok ? r.text() : Promise.reject(new Error(String(r.status))))).then((html) => {
+    // Same site only: the address is this site's own fragment page (app/(fragments)).
+    const p = fetch(`/fragments/till/${locale}/${s.id}/`).then((r) => (r.ok ? r.text() : Promise.reject(new Error(String(r.status))))).then((html) => {
       const doc = new DOMParser().parseFromString(html, 'text/html');
       for (const part of PARTS) {
         const into = holders.current.get(`${i}:${part}`); const from = doc.querySelector(`[data-part="${part}"]`);
@@ -78,7 +79,7 @@ export function IndustryRotator({ lead, chooser, slides, first }: { lead: string
     }).catch((e) => { loading.current.delete(i); throw e; });
     loading.current.set(i, p);
     return p;
-  }, [slides]);
+  }, [slides, locale]);
 
   const atRef = useRef(0);
   useEffect(() => { atRef.current = at; }, [at]);
