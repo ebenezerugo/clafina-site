@@ -19,15 +19,17 @@ export function ShopPhone({ locale }: { locale: Locale }) {
 
 /** A business's own online shop on a phone, in its own colour (brand). */
 export function ShopPhoneView({ c, locale, brand, height = 844 }: { c: z.infer<typeof ShopPhoneScreen>; locale: Locale; brand?: string; height?: number }) {
-  const theme = brand ? ({ ...shop, '--s-brand': brand } as CSSProperties) : shop;
+  // On the home page (brand given) the shop wears the till's face throughout, so the two screens read as one product.
+  const head = brand ? 'var(--font-till), var(--font-inter), sans-serif' : serif;
+  const theme = brand ? ({ ...shop, '--s-brand': brand, fontFamily: 'var(--font-till), var(--font-inter), sans-serif', fontVariantNumeric: 'tabular-nums' } as CSSProperties) : shop;
   const m = (n: number) => formatMoney(n, c.currency, locale);
   return (
     <ScaledScreen width={390} height={height} label={c.label} dir={localeInfo(locale).dir}>
       <div style={{ ...theme, display: 'flex', flexDirection: 'column', height: '100%', background: '#fff', color: 'var(--s-ink)' }}>
         <div className="s-row" style={{ height: 60, alignItems: 'center', justifyContent: 'space-between', paddingInline: 16, borderBottom: '1px solid var(--s-line)' }}>
           <span className="s-row" style={{ alignItems: 'center', gap: 10 }}>
-            <span style={{ width: 40, height: 40, borderRadius: '50%', background: 'var(--s-brand)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: serif, fontWeight: 700, fontSize: 16 }}>{c.shop.initials}</span>
-            <span style={{ fontFamily: serif, fontWeight: 700, fontSize: 19 }}>{c.shop.name}</span>
+            <span style={{ width: 40, height: 40, borderRadius: '50%', background: 'var(--s-brand)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: head, fontWeight: 700, fontSize: 16 }}>{c.shop.initials}</span>
+            <span style={{ fontFamily: head, fontWeight: 700, fontSize: 19 }}>{c.shop.name}</span>
           </span>
           <Icon name="search" size={20} />
         </div>
@@ -44,7 +46,7 @@ export function ShopPhoneView({ c, locale, brand, height = 844 }: { c: z.infer<t
           ))}
         </div>
         <div style={{ flex: 1, overflow: 'hidden' }}>
-          <div className="s-row" style={{ padding: '16px 16px 6px', justifyContent: 'space-between', alignItems: 'baseline' }}><span style={{ fontFamily: serif, fontSize: 22, fontWeight: 700 }}>{c.active}</span><span className="s-sub">{c.sectionCount}</span></div>
+          <div className="s-row" style={{ padding: '16px 16px 6px', justifyContent: 'space-between', alignItems: 'baseline' }}><span style={{ fontFamily: head, fontSize: 22, fontWeight: 700 }}>{c.active}</span><span className="s-sub">{c.sectionCount}</span></div>
           {c.dishes.map((d, i) => (
             <div key={d.name} className="s-row" style={{ gap: 14, padding: '14px 16px', borderBottom: '1px solid var(--s-line)' }}>
               <span style={{ width: 96, height: 96, borderRadius: 14, background: d.img ? '#fbf3ec' : plates[i % plates.length], flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
@@ -52,7 +54,7 @@ export function ShopPhoneView({ c, locale, brand, height = 844 }: { c: z.infer<t
                 {d.img ? <img src={d.img} alt="" width={96} height={96} loading="lazy" decoding="async" /> : <span style={{ width: 64, height: 64, borderRadius: '50%', background: '#fff', boxShadow: 'inset 0 0 0 10px rgba(15,110,102,.16)' }} />}
               </span>
               <span style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <span><span style={{ fontFamily: serif, fontWeight: 700, fontSize: 17, lineHeight: 1.2, display: 'block' }}>{d.name}</span><span className="s-sub">{d.note}</span></span>
+                <span><span style={{ fontFamily: head, fontWeight: 700, fontSize: 17, lineHeight: 1.2, display: 'block' }}>{d.name}</span><span className="s-sub">{d.note}</span></span>
                 <span className="s-row" style={{ justifyContent: 'space-between', alignItems: 'center' }}>
                   <span><b style={{ fontSize: 16 }}>{m(d.price)}</b>{d.tag && <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--s-brand)', marginInlineStart: 8, padding: '3px 8px', borderRadius: 6, background: 'color-mix(in srgb, var(--s-brand) 13%, #fff)' }}>{d.tag}</span>}</span>
                   <span style={{ width: 48, height: 48, borderRadius: '50%', background: 'var(--s-brand)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Icon name="plus" size={24} strokeWidth={2.4} /></span>

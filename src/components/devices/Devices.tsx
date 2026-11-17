@@ -8,13 +8,14 @@ import { PhoneClock } from './PhoneClock';
  */
 
 /** A counter-top till: photographed hardware (public/devices) with the live screen set into its display. */
-export function TillTerminal({ children, printer }: { children: ReactNode; printer?: ReactNode }) {
+export function TillTerminal({ children, printer, show = true }: { children: ReactNode; printer?: ReactNode; show?: boolean }) {
   return (
     <div className="relative">
       <div className="relative aspect-[1100/831] drop-shadow-[0_40px_45px_rgb(0_0_0/0.45)]">
         {/* The screen sits under the photo; the photo's display is cut out, so its bezel frames the screen exactly. */}
         <div className="absolute overflow-hidden bg-surface" style={{ left: '3.07%', top: '4.38%', width: '93.86%', height: '68.33%' }}>{children}</div>
-        <img src="/devices/monitor.webp" alt="" width={1100} height={831} loading="lazy" decoding="async" className="pointer-events-none absolute inset-0 size-full" />
+        {/* Until show, the photo is not requested: the page can hold it back until it is nearly in view. */}
+        {show && <img src="/devices/monitor.webp" alt="" width={1100} height={831} decoding="async" className="pointer-events-none absolute inset-0 size-full" />}
       </div>
       {printer && <div aria-hidden="true" className="absolute bottom-[3%] start-[-1%] z-20 hidden w-[32%] sm:block">{printer}</div>}
     </div>
@@ -42,7 +43,7 @@ export function ReceiptPrinter({ title, lines, total, footer }: { title: string;
  * A phone: photographed hardware (public/devices) with the live screen set into its display, and a status bar beside
  * the photo's camera pill. Sizes are shares of the phone's own width (container units), so it scales as one piece.
  */
-export function PhoneDevice({ children, className = '' }: { children: ReactNode; className?: string }) {
+export function PhoneDevice({ children, className = '', show = true }: { children: ReactNode; className?: string; show?: boolean }) {
   return (
     <div className={`@container ${className}`}>
       <div className="relative aspect-[560/1171] drop-shadow-[0_40px_40px_rgb(0_0_0/0.45)]">
@@ -57,7 +58,7 @@ export function PhoneDevice({ children, className = '' }: { children: ReactNode;
           </div>
           <div className="pt-[12.5cqw] [&_[data-screen]]:!rounded-none">{children}</div>
         </div>
-        <img src="/devices/phone.webp" alt="" width={560} height={1171} loading="lazy" decoding="async" className="pointer-events-none absolute inset-0 size-full" />
+        {show && <img src="/devices/phone.webp" alt="" width={560} height={1171} loading="lazy" decoding="async" className="pointer-events-none absolute inset-0 size-full" />}
       </div>
     </div>
   );
