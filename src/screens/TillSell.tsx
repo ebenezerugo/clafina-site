@@ -22,7 +22,7 @@ export function TillSellView({ c, locale }: { c: z.infer<typeof TillSellScreen>;
   const m = (n: number) => formatMoney(n, c.currency, locale);
   const o = c.order;
   return (
-    <ScaledScreen width={c.business ? 1440 : 1280} height={c.business ? 900 : 800} label={c.label} dir={localeInfo(locale).dir}>
+    <ScaledScreen width={c.business ? 1440 : 1280} height={c.business ? 792 : 800} label={c.label} dir={localeInfo(locale).dir}>
       <div style={{ ...till, display: 'contents' }}>
         <TillFrame>
           {c.business && c.nav && (

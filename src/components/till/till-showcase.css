@@ -1,3 +1,6 @@
+/* Off screen, the showcase is not drawn at all (nor its photos fetched), so the top of the page loads first. */
+.ts { content-visibility: auto; contain-intrinsic-size: auto 1150px; }
+
 /* One business at a time: the slides share one grid cell, the leaving one fades out over the arriving one. */
 .ts-stack { display: grid; }
 .ts-slide { grid-area: 1 / 1; min-width: 0; }

@@ -40,7 +40,7 @@ export function industryParts(locale: Locale, id: string): SlideParts {
         total={{ label: ind.receipt.total.label, amount: money(ind.receipt.total.amount) }} footer={ind.receipt.footer} />
     ),
     phone: (
-      <ShopPhoneView locale={locale} brand={ind.phone.brand} c={{
+      <ShopPhoneView locale={locale} brand={ind.phone.brand} height={806} c={{
         illustrative: true, label, currency: c.currency, shop: ind.phone.shop, pickup: ind.phone.pickup, categories: ind.phone.categories,
         active: ind.phone.active, sectionCount: ind.phone.sectionCount, dishes: ind.phone.dishes, basket: ind.phone.basket,
       }} />
