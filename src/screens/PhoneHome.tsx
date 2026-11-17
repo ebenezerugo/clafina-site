@@ -6,11 +6,11 @@ import { formatMoney } from './kit/money';
 import { AttentionRow, Card, StatCard } from './kit/parts';
 import { ScaledScreen } from './kit/ScaledScreen';
 
-export function PhoneHome({ locale }: { locale: Locale }) {
+export function PhoneHome({ locale, height = 844 }: { locale: Locale; height?: number }) {
   const c = loadContent(locale, 'screens/phone-home', PhoneHomeScreen);
   const m = (n: number) => formatMoney(n, c.currency, locale);
   return (
-    <ScaledScreen width={390} height={844} label={c.label} dir={localeInfo(locale).dir}>
+    <ScaledScreen width={390} height={height} label={c.label} dir={localeInfo(locale).dir}>
       <PhoneFrame org={c.org} tabs={c.tabs}>
         <div><div className="s-title">{c.greeting}</div><p className="s-sub">{c.intro}</p></div>
         <StatCard icon="sales" label={c.salesToday.label} value={m(c.salesToday.amount)} change={{ tone: 'good', text: c.salesToday.change, dir: 'up' }} note={c.salesToday.note} />

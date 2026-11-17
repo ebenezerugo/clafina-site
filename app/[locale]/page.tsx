@@ -88,7 +88,7 @@ export default async function Home({ params }: Props) {
             <div className="overflow-hidden rounded-t-xl lg:absolute lg:inset-y-0 lg:start-0 lg:w-[62rem] lg:overflow-visible">
               <div className="rounded-xl bg-surface p-2 shadow-[0_0_0_1px_rgb(255_255_255/0.18),0_40px_80px_-30px_rgb(0_0_0/0.6)] sm:p-3 lg:mt-14"><SalesHome locale={locale} /></div>
             </div>
-            <PhoneDevice className="!absolute end-4 top-[12rem] hidden w-[13.5rem] lg:block xl:end-0"><PhoneHome locale={locale} /></PhoneDevice>
+            <PhoneDevice className="!absolute end-4 top-[6.5rem] hidden w-[13.5rem] lg:block xl:end-0"><PhoneHome locale={locale} height={806} /></PhoneDevice>
           </div>
         </div>
       </section>
