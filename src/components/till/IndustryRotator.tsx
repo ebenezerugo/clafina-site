@@ -43,6 +43,8 @@ export function IndustryRotator({ locale, lead, chooser, slides, first }: { loca
   const [leaving, setLeaving] = useState<number | null>(null);
   const [held, setHeld] = useState(false);
   const [seen, setSeen] = useState(false);
+  // Nearly in view: the device photos are requested from here on, never during the first load at the top.
+  const [near, setNear] = useState(false);
   const [still, setStill] = useState(true);
   // The first business is drawn finished; the arrival animations start with the first change.
   const [moved, setMoved] = useState(false);
@@ -57,8 +59,9 @@ export function IndustryRotator({ locale, lead, chooser, slides, first }: { loca
     const on = () => setStill(mq.matches);
     on(); mq.addEventListener('change', on);
     const io = new IntersectionObserver(([e]) => setSeen(!!e?.isIntersecting), { threshold: 0.25 });
-    if (root.current) io.observe(root.current);
-    return () => { mq.removeEventListener('change', on); io.disconnect(); };
+    const soon = new IntersectionObserver(([e]) => { if (e?.isIntersecting) { setNear(true); soon.disconnect(); } }, { rootMargin: '700px 0px' });
+    if (root.current) { io.observe(root.current); soon.observe(root.current); }
+    return () => { mq.removeEventListener('change', on); io.disconnect(); soon.disconnect(); };
   }, []);
 
   /** Fetches a business's screens (once) and puts them in place, still hidden. */
@@ -148,9 +151,9 @@ export function IndustryRotator({ locale, lead, chooser, slides, first }: { loca
       <div className="grid items-end gap-x-12 gap-y-14 lg:grid-cols-[minmax(0,2.4fr)_minmax(0,1fr)]">
         <div className="relative min-w-0">
           <div aria-hidden="true" className={`${FLOAT_CARD} !z-30 -top-8 start-[34%] hidden min-w-[18rem] sm:flex`}>{stack('notice', 'w-full')}</div>
-          <TillTerminal printer={stack('printer')}>{stack('till')}</TillTerminal>
+          <TillTerminal show={near} printer={stack('printer')}>{stack('till')}</TillTerminal>
         </div>
-        <PhoneDevice className="mx-auto w-full max-w-[230px] min-w-0 sm:max-w-[290px]">{stack('phone')}</PhoneDevice>
+        <PhoneDevice show={near} className="mx-auto w-full max-w-[230px] min-w-0 sm:max-w-[290px]">{stack('phone')}</PhoneDevice>
       </div>
     </div>
   );

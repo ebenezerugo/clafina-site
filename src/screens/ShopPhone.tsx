@@ -19,7 +19,7 @@ export function ShopPhone({ locale }: { locale: Locale }) {
 
 /** A business's own online shop on a phone, in its own colour (brand). */
 export function ShopPhoneView({ c, locale, brand, height = 844 }: { c: z.infer<typeof ShopPhoneScreen>; locale: Locale; brand?: string; height?: number }) {
-  const theme = brand ? ({ ...shop, '--s-brand': brand } as CSSProperties) : shop;
+  const theme = brand ? ({ ...shop, '--s-brand': brand, fontFamily: 'var(--font-till), var(--font-inter), sans-serif', fontVariantNumeric: 'tabular-nums' } as CSSProperties) : shop;
   const m = (n: number) => formatMoney(n, c.currency, locale);
   return (
     <ScaledScreen width={390} height={height} label={c.label} dir={localeInfo(locale).dir}>
