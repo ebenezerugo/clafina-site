@@ -1,0 +1,186 @@
+{
+  "kind": "help-module",
+  "module": "pay",
+  "sources": [
+    "commerce-api/documentation/FINANCE_MANAGEMENT.md",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "Paying people and suppliers: asking to pay, the people you pay, payments in batches, repeating payments, and expenses to approve and repay.",
+  "start": [
+    "Add the people you pay in Beneficiaries, and have their accounts approved.",
+    "Ask to pay someone in Payment requests; it goes for approval before money moves."
+  ],
+  "articles": [
+    {
+      "slug": "ask-to-pay-someone",
+      "title": "Ask to pay someone, and get it approved",
+      "summary": "Write a payment request for a supplier's invoices or anything else, have it approved, then pay it now, on a date, or by hand.",
+      "page": "/finance/spend/payment-requests",
+      "before": [
+        "The person you pay needs an approved account in Beneficiaries."
+      ],
+      "steps": [
+        {
+          "lead": "Press Ask to pay",
+          "rest": "on Payment requests."
+        },
+        {
+          "lead": "Choose what it is for and who it goes to.",
+          "rest": "For a supplier, tick the invoices still owed and say how much each one settles, withholds or takes as a discount."
+        },
+        {
+          "lead": "Choose Into, How and From:",
+          "rest": "their account, the way it is paid, and the account it leaves. What is paid is worked out for you."
+        },
+        {
+          "lead": "Press Submit for approval.",
+          "rest": "If it looks like a payment already asked for, say why it is not a duplicate. You never approve your own request."
+        },
+        {
+          "lead": "Once approved, pay it:",
+          "rest": "Pay now, Pay on a date…, or Record as paid by hand with the bank's reference."
+        },
+        {
+          "lead": "Confirm it was paid",
+          "rest": "for a payment made by hand. Someone other than whoever recorded it confirms it."
+        }
+      ],
+      "after": "Paid, it is settled in the books and the person paid is emailed a remittance advice.",
+      "tips": [
+        "If the payment gives no answer, it shows as unknown. Press Verify with the provider: it is never sent twice.",
+        "Money the bank sends back? Press It came back. The invoices are owed again."
+      ],
+      "related": [
+        "add-a-beneficiary",
+        "pay-many-at-once"
+      ]
+    },
+    {
+      "slug": "add-a-beneficiary",
+      "title": "Add someone you pay, and their bank account",
+      "summary": "Save a supplier, member of staff or anyone else you pay, with an account checked with the bank and approved before it is used.",
+      "page": "/finance/spend/beneficiaries",
+      "steps": [
+        {
+          "lead": "Press Add a beneficiary",
+          "rest": "and choose the kind and who it is, or type a name for someone else."
+        },
+        {
+          "lead": "Press Add an account",
+          "rest": "on the beneficiary, and enter the bank and account number."
+        },
+        {
+          "lead": "Press Check with the bank.",
+          "rest": "The name the bank holds is shown beside the name you gave."
+        },
+        {
+          "lead": "Press Save the account.",
+          "rest": "If the names differ, or no bank could check it, say why. It is paid only once it is approved."
+        }
+      ],
+      "tips": [
+        "An account is never edited. Use Change to another account; the old one retires when the new one is approved.",
+        "Only the last four digits are shown, unless you have permission to see the whole number."
+      ]
+    },
+    {
+      "slug": "pay-many-at-once",
+      "title": "Pay many approved payments in one run",
+      "summary": "Put approved payments from one account into a batch, have it approved once, and pay it or write the bank file.",
+      "page": "/finance/spend/batches",
+      "steps": [
+        {
+          "lead": "Press New batch",
+          "rest": "on Payment batches. Give it a name and choose how it is paid."
+        },
+        {
+          "lead": "Tick the approved payments.",
+          "rest": "They are grouped by the account they are paid from, and the total adds up as you tick."
+        },
+        {
+          "lead": "Press Submit for approval.",
+          "rest": "The run is approved once, by someone other than you."
+        },
+        {
+          "lead": "Press Pay it,",
+          "rest": "or Write the bank file to upload at your bank yourself."
+        },
+        {
+          "lead": "Mark each line Paid or Not paid",
+          "rest": "as the bank reports, or press All paid, as the bank reports."
+        }
+      ],
+      "tips": [
+        "To pay suppliers' bills straight from what is due, press Pay bills and tick the bills.",
+        "Before anything is paid, Call it off frees its payments again."
+      ],
+      "related": [
+        "ask-to-pay-someone"
+      ]
+    },
+    {
+      "slug": "set-up-a-recurring-payment",
+      "title": "Pay rent or a subscription every month",
+      "summary": "A recurring payment raises a payment request ahead of each date, approved once as a standing order.",
+      "page": "/finance/spend/recurring",
+      "steps": [
+        {
+          "lead": "Press New recurring payment",
+          "rest": "on Recurring payments."
+        },
+        {
+          "lead": "Choose the beneficiary, what it is for and the amount,",
+          "rest": "with the account it is paid from and how."
+        },
+        {
+          "lead": "Choose how often and when:",
+          "rest": "every month on a day, from a start date, and when it ends. The next dates are shown before you save."
+        },
+        {
+          "lead": "Choose what happens then:",
+          "rest": "leave each request for review, submit it, or carry it through under this approval."
+        },
+        {
+          "lead": "Press Submit for approval.",
+          "rest": "Once approved, it raises a request on each date, once."
+        }
+      ],
+      "tips": [
+        "Pause it, Skip the next date or End it from its page. Changing the amount or dates sends it back for approval.",
+        "All recurring shows every repeating payment, invoice and bill, and What falls when shows them month by month."
+      ]
+    },
+    {
+      "slug": "approve-and-repay-expenses",
+      "title": "Approve a staff expense claim and pay it back",
+      "summary": "Approve or send back what staff spent for the business. Approved, it is booked and the person is repaid through a payment request.",
+      "page": "/finance/spend/expenses",
+      "before": [
+        "Set your categories and policies on the Categories and policies tab: the expense account each posts to, limits, and when a receipt is needed."
+      ],
+      "steps": [
+        {
+          "lead": "Open the Claims tab",
+          "rest": "and open a claim. You see each line, its receipt, and anything past the policy."
+        },
+        {
+          "lead": "Open the claim's Actions",
+          "rest": "and choose Approve, or Send back with why. You never approve your own claim."
+        },
+        {
+          "lead": "Approved, it is posted to the books",
+          "rest": "and what the person is owed becomes a payment request to repay them."
+        },
+        {
+          "lead": "Choose Ask to reimburse",
+          "rest": "if the claim is waiting, for example because the person had no approved account yet."
+        }
+      ],
+      "after": "When the payment request is paid, the claim shows as reimbursed.",
+      "tips": [
+        "Staff make claims from My expenses › New claim.",
+        "Cash advances are on their own tab: approve, issue, and record cash handed back."
+      ]
+    }
+  ]
+}

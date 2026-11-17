@@ -1,0 +1,347 @@
+{
+  "kind": "help-module",
+  "module": "memberships",
+  "sources": [
+    "commerce-api/documentation/MEMBERSHIPS.md",
+    "commerce-api/documentation/INDUSTRY_PACKS.md",
+    "commerce-web/src/app/features/memberships/presentation"
+  ],
+  "intro": "The memberships pack, for gyms, clubs, coworking spaces, schools and anyone who bills by the period: plans with a price and a rhythm, members with a card, freezes, billing runs that are checked before any invoice is made, entry at the door, and maintenance contracts and retainers. Switch it on in Organisation › Business › Industry packs.",
+  "start": [
+    "Turn the memberships pack on in Organisation › Business › Industry packs.",
+    "Make your plans on Plans: a price, how often it renews and what it lets members into.",
+    "Sign up your first member on Members.",
+    "On each billing day, check the run on Billing runs before any invoice is made."
+  ],
+  "articles": [
+    {
+      "slug": "make-a-plan",
+      "title": "Make a membership plan",
+      "summary": "A plan members can be signed up to: a price, how often it renews and what it lets them into.",
+      "page": "/memberships/plans",
+      "before": [
+        "The memberships pack switched on for your place."
+      ],
+      "steps": [
+        {
+          "lead": "Press New plan",
+          "rest": "at the top of Plans."
+        },
+        {
+          "lead": "Type the Name",
+          "rest": "members will see, for example Monthly gym."
+        },
+        {
+          "lead": "Choose What kind of plan",
+          "rest": "Renews, Class pack, Day pass or Corporate. Each one has a short line saying what it means."
+        },
+        {
+          "lead": "Type the Price",
+          "rest": "and check the Currency beside it."
+        },
+        {
+          "lead": "Type Renews every",
+          "rest": "a number, then choose Each: week, month, quarter or year."
+        },
+        {
+          "lead": "Type What it includes",
+          "rest": "one line for each thing the member gets."
+        },
+        {
+          "lead": "Press Make the plan",
+          "rest": "at the bottom of the drawer. The plan is on offer at once."
+        }
+      ],
+      "after": "The plan appears on Plans, and you can sign members up to it from Members.",
+      "tips": [
+        "A change to a plan applies to new members. Existing members keep their price until you move them with Move members to this price… in the plan's Actions.",
+        "Left empty, Bills on day uses your organisation's billing day.",
+        "Choose Retire the plan in Actions to stop selling it; Bring it back puts it on offer again."
+      ]
+    },
+    {
+      "slug": "sign-up-a-member",
+      "title": "Sign up a member",
+      "summary": "Put a customer, or someone new, on a plan, with their first day and how they pay.",
+      "page": "/memberships/members",
+      "before": [
+        "At least one plan, made on Plans."
+      ],
+      "steps": [
+        {
+          "lead": "Press New member",
+          "rest": "at the top of Members."
+        },
+        {
+          "lead": "Choose A customer I have",
+          "rest": "or Someone new if they are not yet a customer. For someone new, type their Name, Email and Phone."
+        },
+        {
+          "lead": "Type the customer's name",
+          "rest": "in Find a customer (two letters or more), then choose them from the list."
+        },
+        {
+          "lead": "Choose a plan",
+          "rest": "in Plan."
+        },
+        {
+          "lead": "Choose the First day",
+          "rest": "the day the membership starts."
+        },
+        {
+          "lead": "Choose How they pay",
+          "rest": "An invoice, paid by transfer or link, or A card on file."
+        },
+        {
+          "lead": "Press Sign them up",
+          "rest": "at the bottom of the drawer."
+        }
+      ],
+      "after": "The member is on the list under Active, with a membership number and a card.",
+      "tips": [
+        "Tick Invoice the first bill now to bill the first period straight away.",
+        "Tick Their ID was checked at sign-up if you have seen their ID.",
+        "Charging a card on file is not connected yet, so until then the bill is sent as an invoice."
+      ]
+    },
+    {
+      "slug": "freeze-a-membership",
+      "title": "Freeze a member's membership",
+      "summary": "Pause a member for a few days, with the days already paid for given back as a credit.",
+      "page": "/memberships/members",
+      "before": [
+        "A live member on a plan that allows freezes."
+      ],
+      "steps": [
+        {
+          "lead": "Press Actions",
+          "rest": "on the member's row in Members."
+        },
+        {
+          "lead": "Choose Freeze…",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Choose the First day",
+          "rest": "of the freeze."
+        },
+        {
+          "lead": "Choose the Last day",
+          "rest": "of the freeze."
+        },
+        {
+          "lead": "Type Why",
+          "rest": "the member is freezing. This is optional."
+        },
+        {
+          "lead": "Press Freeze",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The member shows under Frozen, and cannot come in until the freeze ends.",
+      "tips": [
+        "The days already paid for come back as a credit on the next invoice.",
+        "Each plan has a number of freeze days a year. The member's Freezes tab shows how many are used.",
+        "On the member's Freezes tab, Cancel it stops a freeze that has not started, and End it now ends one that has."
+      ]
+    },
+    {
+      "slug": "change-a-members-plan",
+      "title": "Move a member to another plan",
+      "summary": "Put a member on a different plan, from now or from the next bill.",
+      "page": "/memberships/members",
+      "steps": [
+        {
+          "lead": "Press Actions",
+          "rest": "on the member's row in Members."
+        },
+        {
+          "lead": "Choose Change plan…",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Choose the New plan",
+          "rest": "from the list. Only plans that renew at the same rhythm are shown."
+        },
+        {
+          "lead": "Choose When",
+          "rest": "Now, or At the next bill."
+        },
+        {
+          "lead": "Press Change plan",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The member is on the new plan.",
+      "tips": [
+        "Choosing Now shows what is left of the old price and the new one as lines on the next invoice."
+      ]
+    },
+    {
+      "slug": "check-and-run-a-billing-day",
+      "title": "Check and run a billing day",
+      "summary": "Look at everything due on a billing day before any invoice is made, then bill it.",
+      "page": "/memberships/billing-runs",
+      "before": [
+        "Members on plans, with a bill due on the day you choose."
+      ],
+      "steps": [
+        {
+          "lead": "Choose the Billing day",
+          "rest": "under Check a billing day."
+        },
+        {
+          "lead": "Press Check the run",
+          "rest": "to look at everything due that day. Nothing is invoiced yet."
+        },
+        {
+          "lead": "Open the run",
+          "rest": "in Past runs by choosing its date."
+        },
+        {
+          "lead": "Press Actions",
+          "rest": "beside a member who needs a look."
+        },
+        {
+          "lead": "Choose Leave out of this run",
+          "rest": "to hold that member back, or Open the member to put the problem right first."
+        },
+        {
+          "lead": "Press Run the billing",
+          "rest": "when you are happy. Each member gets an invoice for the period."
+        }
+      ],
+      "after": "Each member due has an invoice, and the run shows how many were invoiced and how many failed.",
+      "tips": [
+        "Nothing is charged or invoiced until you press Run the billing. Press Cancel the run to drop a checked run.",
+        "For a member whose invoice failed, choose Try again in their Actions.",
+        "Press Send reminders only to chase late payers without making invoices."
+      ]
+    },
+    {
+      "slug": "check-someone-in",
+      "title": "Check a member in at the desk",
+      "summary": "Scan a member's card or type their number, and see at once whether they may come in.",
+      "page": "/memberships/access",
+      "steps": [
+        {
+          "lead": "Click Scan the card, or type a member number",
+          "rest": "then scan the card, or type the number, for example M-00012."
+        },
+        {
+          "lead": "Choose Where",
+          "rest": "Front desk, Door, Class or Till."
+        },
+        {
+          "lead": "Type the Area (optional)",
+          "rest": "for example gym-floor, if your plan lets members into named areas."
+        },
+        {
+          "lead": "Press Check in",
+          "rest": "the answer shows as Welcome or Not let in, with the reason."
+        },
+        {
+          "lead": "Type Let them in once, because",
+          "rest": "only if they are refused and you decide to let them in anyway."
+        },
+        {
+          "lead": "Press Let them in",
+          "rest": "to let them in this once."
+        }
+      ],
+      "after": "The scan shows under Recent scans.",
+      "tips": [
+        "A card scanned a moment ago is not counted as another visit.",
+        "Press Show only refusals to see who was turned away."
+      ]
+    },
+    {
+      "slug": "make-a-contract-or-retainer",
+      "title": "Make a maintenance contract or retainer",
+      "summary": "Record what a customer has bought: a maintenance contract, a retainer or a prepayment.",
+      "page": "/memberships/contracts",
+      "before": [
+        "The customer exists in your customer list."
+      ],
+      "steps": [
+        {
+          "lead": "Press New contract",
+          "rest": "at the top of Contracts and retainers."
+        },
+        {
+          "lead": "Choose the Kind",
+          "rest": "maintenance contract, retainer or prepayment."
+        },
+        {
+          "lead": "Type the Customer (two letters or more)",
+          "rest": "then choose them from the list."
+        },
+        {
+          "lead": "Type the Name",
+          "rest": "for example Generator service, Acme Ltd."
+        },
+        {
+          "lead": "Choose Starts",
+          "rest": "the first day it runs."
+        },
+        {
+          "lead": "Choose Ends",
+          "rest": "the last day it runs."
+        },
+        {
+          "lead": "Type the Fee each period",
+          "rest": "or Paid in advance for a prepayment."
+        },
+        {
+          "lead": "Choose Billed",
+          "rest": "Monthly, Quarterly or Yearly."
+        },
+        {
+          "lead": "Press Make the contract",
+          "rest": "at the bottom of the drawer."
+        }
+      ],
+      "after": "The contract shows in the list with how much of it is used.",
+      "tips": [
+        "A maintenance contract also asks for Visits included, What it covers, Response time and Parts.",
+        "A retainer asks for Hours each period."
+      ]
+    },
+    {
+      "slug": "raise-a-contract-visit",
+      "title": "Raise a visit on a maintenance contract",
+      "summary": "Plan a visit under a maintenance contract; it counts against the visits included.",
+      "page": "/memberships/contracts",
+      "before": [
+        "A maintenance contract that has not ended."
+      ],
+      "steps": [
+        {
+          "lead": "Press Actions",
+          "rest": "on the contract's row."
+        },
+        {
+          "lead": "Choose Raise a visit…",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Choose Planned for",
+          "rest": "the day of the visit."
+        },
+        {
+          "lead": "Type a Note",
+          "rest": "for the person doing it. This is optional."
+        },
+        {
+          "lead": "Press Raise the visit",
+          "rest": "to save it."
+        }
+      ],
+      "after": "The visit shows in the contract's detail, and counts against the visits included.",
+      "tips": [
+        "A visit is a task on the contract's project.",
+        "Choose Renew… in Actions to extend the contract and start the next period's allowance."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "help-module",
+  "module": "get-paid",
+  "sources": [
+    "commerce-api/documentation/FINANCE.md",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "Money coming in, and working out who paid.",
+  "start": [
+    "Check Unidentified receipts for money that arrived without a clear sender."
+  ],
+  "articles": [
+    {
+      "slug": "identify-money-that-came-in",
+      "title": "Find out whose money came in",
+      "summary": "Record money that arrived with no known payer, then match it to a customer's invoices, classify it, or send it back.",
+      "page": "/finance/receive/unidentified",
+      "steps": [
+        {
+          "lead": "Press Record money in,",
+          "rest": "with where it landed, when, the amount, and the reference, sender or narration as the statement shows it."
+        },
+        {
+          "lead": "Open its Actions and choose Identify as a customer's.",
+          "rest": "Who it may be from lists customers, surest first, with the reasons. Press Use on one, or find the customer."
+        },
+        {
+          "lead": "Say what it settles.",
+          "rest": "Oldest invoices fill in first; add any tax withheld, a small amount written off, or what the bank kept."
+        },
+        {
+          "lead": "Press Record.",
+          "rest": "The customer's receipt is made and posted. Anything left is credit on their account."
+        }
+      ],
+      "tips": [
+        "Not a customer's? Classify as another receipt, or Return to the payer with the reference of the transfer back.",
+        "Hand on gives it to a colleague, and Add a note keeps what was tried."
+      ]
+    }
+  ]
+}

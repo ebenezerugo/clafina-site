@@ -14,7 +14,7 @@
       "title": "Set up your shop",
       "intro": "From an empty account to your first invoice: your details, what you sell, your team and your brand.",
       "steps": [
-        { "module": "settings", "article": "set-your-organisation-details" },
+        { "module": "business", "article": "set-your-organisation-details" },
         { "module": "products", "article": "add-an-item" },
         { "module": "products", "article": "add-a-unit-of-measure" },
         { "module": "inventory", "article": "set-reorder-levels" },
@@ -28,13 +28,13 @@
       "title": "Your first month of books",
       "intro": "Money in, money out, the bank agreed, and the month closed. By the end you can read your profit and loss.",
       "steps": [
-        { "module": "finance", "article": "add-a-financial-account" },
+        { "module": "banking", "article": "add-a-financial-account" },
         { "module": "sales", "article": "record-a-payment" },
         { "module": "payables", "article": "enter-a-supplier-bill" },
-        { "module": "finance", "article": "import-a-bank-statement" },
-        { "module": "finance", "article": "reconcile-a-bank-account" },
-        { "module": "finance", "article": "close-a-month" },
-        { "module": "finance", "article": "run-a-finance-report" }
+        { "module": "banking", "article": "import-a-bank-statement" },
+        { "module": "banking", "article": "reconcile-a-bank-account" },
+        { "module": "accounting", "article": "close-a-month" },
+        { "module": "accounting", "article": "run-a-finance-report" }
       ]
     },
     {
@@ -55,7 +55,7 @@
       "title": "Open a restaurant on Clafina",
       "intro": "Switch on the restaurant pack, draw your floor, build the menu and set up the kitchen before the first guest sits down.",
       "steps": [
-        { "module": "settings", "article": "switch-on-an-industry-pack" },
+        { "module": "business", "article": "switch-on-an-industry-pack" },
         { "module": "restaurant", "article": "draw-the-floor" },
         { "module": "restaurant", "article": "make-a-menu" },
         { "module": "restaurant", "article": "add-options" },
@@ -69,7 +69,7 @@
       "title": "Run a guest house or hotel",
       "intro": "Set your rates, get rooms ready, and look after a guest from check-in to the night audit.",
       "steps": [
-        { "module": "settings", "article": "switch-on-an-industry-pack" },
+        { "module": "business", "article": "switch-on-an-industry-pack" },
         { "module": "accommodation", "article": "set-room-rates" },
         { "module": "accommodation", "article": "get-rooms-ready" },
         { "module": "accommodation", "article": "check-in-a-guest" },
@@ -87,7 +87,7 @@
         { "module": "sales", "article": "send-an-invoice" },
         { "module": "customers", "article": "see-what-a-customer-owes" },
         { "module": "customers", "article": "remind-customers-who-owe" },
-        { "module": "finance", "article": "identify-money-that-came-in" }
+        { "module": "get-paid", "article": "identify-money-that-came-in" }
       ]
     },
     {
@@ -127,7 +127,7 @@
         { "module": "business-insights", "article": "see-when-cash-runs-short" },
         { "module": "business-insights", "article": "check-the-figures-agree" },
         { "module": "reports", "article": "schedule-a-report" },
-        { "module": "settings", "article": "set-up-the-weekly-digest" }
+        { "module": "documents", "article": "set-up-the-weekly-digest" }
       ]
     }
   ],

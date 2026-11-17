@@ -1,0 +1,47 @@
+{
+  "kind": "help-module",
+  "module": "security",
+  "sources": [
+    "commerce-api/documentation/WALLET_VERIFICATION.md",
+    "commerce-web/src/app/@core/constants/page-help.ts"
+  ],
+  "intro": "Proving who your business is, so the features that need it can be used.",
+  "start": [
+    "Send your business details for verification in Verification."
+  ],
+  "articles": [
+    {
+      "slug": "verify-your-business",
+      "title": "Verify your business to open wallets",
+      "summary": "Wallets, receiving accounts, payouts and bill payments open once the business and its directors are checked.",
+      "page": "/admin/verification",
+      "steps": [
+        {
+          "lead": "Press Switch on wallets",
+          "rest": "if wallets are not on yet."
+        },
+        {
+          "lead": "Enter the registration (RC) number and press Save the number.",
+          "rest": "Then press Check with the registry."
+        },
+        {
+          "lead": "See the registered name and directors",
+          "rest": "filled in for you."
+        },
+        {
+          "lead": "Check each director.",
+          "rest": "Press Check with BVN or NIN and enter their 11 digits."
+        },
+        {
+          "lead": "Attach documents",
+          "rest": "from Drive: the registration certificate, identification and proof of address."
+        }
+      ],
+      "tips": [
+        "In review means a check is with the registry and has not answered. It is not a failure: do not ask again. The page updates by itself.",
+        "Needs attention means a check did not match. Read the reason under the item, correct the number or the name, then press Check again.",
+        "Once a number has been used for a check, only its last four digits are shown."
+      ]
+    }
+  ]
+}

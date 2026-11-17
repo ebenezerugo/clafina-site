@@ -1,0 +1,215 @@
+{
+  "kind": "help-module",
+  "module": "banking",
+  "sources": [
+    "commerce-api/documentation/FINANCE.md",
+    "commerce-web/src/app/features/treasury/presentation"
+  ],
+  "intro": "Where your money is held: your bank, cash and wallet accounts, transfers, cash flow, the statements that arrive and reconciling them with the books.",
+  "start": [
+    "Add every bank, cash and wallet account in Financial accounts.",
+    "Choose where each account's statement comes from in Statement feeds.",
+    "Import your latest bank statement, then reconcile it so the books and the bank agree."
+  ],
+  "articles": [
+    {
+      "slug": "choose-where-a-statement-comes-from",
+      "title": "Choose where an account's statement comes from",
+      "summary": "Say whether a bank account's statement is uploaded, fetched from the bank or sent by it.",
+      "page": "/finance/statement-feeds",
+      "before": [
+        "A bank account, added under Financial accounts."
+      ],
+      "steps": [
+        {
+          "lead": "Press Actions ▾",
+          "rest": "on the account's row under Accounts."
+        },
+        {
+          "lead": "Choose Statement feed",
+          "rest": "from the menu."
+        },
+        {
+          "lead": "Choose Where the statement comes from",
+          "rest": "Uploaded files, The bank, connected, The bank sends it (API), or The wallet itself."
+        },
+        {
+          "lead": "Press Save the feed",
+          "rest": "to keep it."
+        }
+      ],
+      "after": "The account shows where its statement comes from, and when the last one arrived.",
+      "tips": [
+        "Every way in lands lines that wait to be matched to the books.",
+        "Choose Bring in a statement in Actions to upload a file for an account fed by uploads.",
+        "Each account can choose its own Fetch, look-alike line and match settings, or follow the organisation's under For every account."
+      ]
+    },
+    {
+      "slug": "make-a-statement-api-key",
+      "title": "Make a key for a bank to send statement lines",
+      "summary": "Make a key that lets a bank or system send statement lines as they happen.",
+      "page": "/finance/statement-feeds",
+      "before": [
+        "A feed set to The bank sends it (API)."
+      ],
+      "steps": [
+        {
+          "lead": "Choose Statement API keys",
+          "rest": "at the top of Statement feeds."
+        },
+        {
+          "lead": "Press New key",
+          "rest": "at the top of the page."
+        },
+        {
+          "lead": "Type the Name",
+          "rest": "of who will use it."
+        },
+        {
+          "lead": "Press Make the key",
+          "rest": "to create it."
+        },
+        {
+          "lead": "Press Done",
+          "rest": "after copying the key into the bank's or system's settings."
+        }
+      ],
+      "after": "The key shows in the list with when it was last used.",
+      "tips": [
+        "The key is shown this once and cannot be shown again.",
+        "A key can only send statement lines.",
+        "Choose Rotate or Revoke in the key's Actions ▾ to replace or stop it."
+      ]
+    },
+    {
+      "slug": "add-a-financial-account",
+      "title": "Add a bank, cash or wallet account",
+      "summary": "Add every place money is held, with a minimum balance and what is restricted, and see what is really available.",
+      "page": "/finance/treasury/accounts",
+      "steps": [
+        {
+          "lead": "Press Add an account",
+          "rest": "on Financial accounts."
+        },
+        {
+          "lead": "Choose the kind:",
+          "rest": "bank, cash, petty cash, mobile money, wallet or card. The fields follow the kind."
+        },
+        {
+          "lead": "Fill in its name, currency and details.",
+          "rest": "A card is kept by its last four digits only."
+        },
+        {
+          "lead": "Choose its ledger account,",
+          "rest": "or let it make one of its own. Add a minimum balance and what is restricted if you want."
+        },
+        {
+          "lead": "Press Add account.",
+          "rest": "Its card shows what is available, the book balance and what the bank last said."
+        }
+      ],
+      "tips": [
+        "Available is the book balance, less what is restricted and what is on its way out.",
+        "A changed restricted amount or minimum needs a reason, and goes in the audit trail."
+      ]
+    },
+    {
+      "slug": "move-money-between-accounts",
+      "title": "Move money between your own accounts",
+      "summary": "Move money between banks, pay cash into the bank or draw it out, and confirm each side against its statement.",
+      "page": "/finance/transfers",
+      "steps": [
+        {
+          "lead": "Press New transfer",
+          "rest": "on Transfers and choose the kind."
+        },
+        {
+          "lead": "Choose the accounts it leaves and arrives in,",
+          "rest": "the amount, and the bank's fee if any. Across currencies, say what arrives."
+        },
+        {
+          "lead": "Press Ask for the transfer.",
+          "rest": "Where a policy says so, an approver says yes first."
+        },
+        {
+          "lead": "Choose Send it",
+          "rest": "when the bank has it, with the bank's reference. The money moves into cash in transit."
+        },
+        {
+          "lead": "Choose It arrived",
+          "rest": "when it reaches the other account, and Its leaving is on the statement when the bank shows it."
+        }
+      ],
+      "tips": [
+        "A transfer is never counted as money in or out.",
+        "It failed before it arrived? Mark it failed, and the money is back in the account it left."
+      ]
+    },
+    {
+      "slug": "import-a-bank-statement",
+      "title": "Import a bank statement",
+      "summary": "Bring in your bank's file, check it adds up, and add only the lines that are new.",
+      "page": "/finance/statements",
+      "steps": [
+        {
+          "lead": "Press Import a statement",
+          "rest": "and choose the account and the bank's file."
+        },
+        {
+          "lead": "For a spreadsheet file, choose its column mapping,",
+          "rest": "or press Add a column mapping and say which column holds the date, description and amounts."
+        },
+        {
+          "lead": "Check the preview.",
+          "rest": "It shows the lines, which are new, the balances, and whether it adds up."
+        },
+        {
+          "lead": "Press Import the lines.",
+          "rest": "Lines already brought in are left out, so an overlapping file is safe."
+        }
+      ],
+      "tips": [
+        "If the file has no closing balance, copy it from the bank's statement when asked."
+      ],
+      "related": [
+        "reconcile-a-bank-account"
+      ]
+    },
+    {
+      "slug": "reconcile-a-bank-account",
+      "title": "Reconcile a bank account",
+      "summary": "Match the statement to the books line by line, settle what differs, and have someone else approve it.",
+      "page": "/finance/reconciliation",
+      "before": [
+        "Import the statement first, on Statements."
+      ],
+      "steps": [
+        {
+          "lead": "Press Reconcile an account,",
+          "rest": "choose the account and the statement's last day. For the first one, give the start and the opening balance."
+        },
+        {
+          "lead": "Press Start, and match by rule.",
+          "rest": "Lines with the same reference, amount and date are matched for you."
+        },
+        {
+          "lead": "Match the rest by hand.",
+          "rest": "Under To match, choose statement lines and book entries side by side and press Match selected, with why."
+        },
+        {
+          "lead": "Press Find exceptions, then resolve each one:",
+          "rest": "post an adjustment such as bank charges, record it as money to identify, or mark it a timing difference or accepted."
+        },
+        {
+          "lead": "Press Submit for approval",
+          "rest": "once the difference is nothing. Someone else presses Approve and lock, and the account is locked through that day."
+        }
+      ],
+      "tips": [
+        "Reopen it, with a reason, to change anything. The lock lifts with it.",
+        "Download the report for your records."
+      ]
+    }
+  ]
+}
