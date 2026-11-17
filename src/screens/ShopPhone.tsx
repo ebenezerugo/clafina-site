@@ -18,11 +18,11 @@ export function ShopPhone({ locale }: { locale: Locale }) {
 }
 
 /** A business's own online shop on a phone, in its own colour (brand). */
-export function ShopPhoneView({ c, locale, brand }: { c: z.infer<typeof ShopPhoneScreen>; locale: Locale; brand?: string }) {
+export function ShopPhoneView({ c, locale, brand, height = 844 }: { c: z.infer<typeof ShopPhoneScreen>; locale: Locale; brand?: string; height?: number }) {
   const theme = brand ? ({ ...shop, '--s-brand': brand } as CSSProperties) : shop;
   const m = (n: number) => formatMoney(n, c.currency, locale);
   return (
-    <ScaledScreen width={390} height={844} label={c.label} dir={localeInfo(locale).dir}>
+    <ScaledScreen width={390} height={height} label={c.label} dir={localeInfo(locale).dir}>
       <div style={{ ...theme, display: 'flex', flexDirection: 'column', height: '100%', background: '#fff', color: 'var(--s-ink)' }}>
         <div className="s-row" style={{ height: 60, alignItems: 'center', justifyContent: 'space-between', paddingInline: 16, borderBottom: '1px solid var(--s-line)' }}>
           <span className="s-row" style={{ alignItems: 'center', gap: 10 }}>
