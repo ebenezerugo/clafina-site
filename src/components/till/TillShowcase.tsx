@@ -30,6 +30,8 @@ export function industryParts(locale: Locale, id: string): SlideParts {
     till: (
       <TillSellView locale={locale} c={{
         illustrative: true, label, currency: c.currency, search: ind.search, online: c.online, cashier: ind.cashier,
+        business: { name: ind.phone.shop.name, initials: ind.phone.shop.initials, brand: ind.phone.brand },
+        nav: c.nav.map((n) => ({ ...n, label: n.label.replace('{catalogue}', ind.catalogue), active: n.icon === 'till' })), payIcons: c.payIcons,
         categories: ind.categories, items: ind.items, order: { ...ind.order, pay: c.pay, charge: c.charge },
       }} />
     ),

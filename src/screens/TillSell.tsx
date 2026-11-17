@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element -- static markup inside a scaled screen; the pictures are already small WebP files. */
 import { Fragment, type CSSProperties } from 'react';
 import type { z } from 'zod';
 import { localeInfo, type Locale } from '@/config/locales';
@@ -21,18 +22,34 @@ export function TillSellView({ c, locale }: { c: z.infer<typeof TillSellScreen>;
   const m = (n: number) => formatMoney(n, c.currency, locale);
   const o = c.order;
   return (
-    <ScaledScreen width={1280} height={800} label={c.label} dir={localeInfo(locale).dir}>
+    <ScaledScreen width={c.business ? 1440 : 1280} height={c.business ? 900 : 800} label={c.label} dir={localeInfo(locale).dir}>
       <div style={{ ...till, display: 'contents' }}>
         <TillFrame>
+          {c.business && c.nav && (
+            <nav style={{ ...till, width: 196, flexShrink: 0, background: '#fff', borderInlineEnd: '1px solid var(--s-line)', display: 'flex', flexDirection: 'column', padding: '16px 12px', gap: 4 }}>
+              <span className="s-row" style={{ alignItems: 'center', gap: 10, padding: '2px 6px 16px' }}>
+                <span style={{ width: 36, height: 36, borderRadius: 10, background: c.business.brand, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 14, flexShrink: 0 }}>{c.business.initials}</span>
+                <b style={{ fontSize: 15, lineHeight: 1.2, flex: 1, minWidth: 0 }}>{c.business.name}</b>
+                <span style={{ color: 'var(--s-muted)', transform: 'rotate(90deg)', display: 'flex' }}><Icon name="chevron" size={14} /></span>
+              </span>
+              {c.nav.map((n) => (
+                <span key={n.label} className="s-row" style={{ alignItems: 'center', gap: 12, height: 42, paddingInline: 12, borderRadius: 10, fontSize: 14, ...(n.active ? { background: '#e8eefd', color: '#163ba6', fontWeight: 600 } : { color: '#3d4556' }) }}>
+                  <Icon name={n.icon} size={18} />{n.label}
+                </span>
+              ))}
+            </nav>
+          )}
           <div style={{ ...till, flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', background: 'var(--s-page)' }}>
             <div className="s-row" style={{ height: 68, alignItems: 'center', paddingInline: 20, background: '#fff', borderBottom: '1px solid var(--s-line)' }}>
-              <div className="s-search" style={{ height: 44, maxWidth: 'none', borderRadius: 12, fontSize: 15 }}><Icon name="search" size={18} />{c.search}</div>
+              <div className="s-search" style={{ height: 44, maxWidth: 'none', borderRadius: 12, fontSize: 15 }}><Icon name="search" size={18} /><span style={{ flex: 1, minWidth: 0 }}>{c.search}</span>{c.business && <Icon name="barcode" size={20} />}</div>
               <span className="s-pill" data-tone="good">{c.online}</span>
               <span className="s-row" style={{ alignItems: 'center', gap: 10 }}><span className="s-avatar" style={{ width: 32, height: 32, background: '#ffe7d6', color: '#8a3b0a' }}>{c.cashier.initials}</span><span><b>{c.cashier.name}</b><br /><span className="s-sub" style={{ fontSize: 12 }}>{c.cashier.role}</span></span></span>
+              {c.business && <span style={{ position: 'relative', display: 'flex', color: '#3d4556' }}><Icon name="bell" size={20} /><span style={{ position: 'absolute', top: -2, insetInlineEnd: -2, width: 8, height: 8, borderRadius: 4, background: '#e5484d', boxShadow: '0 0 0 2px #fff' }} /></span>}
             </div>
             <div className="s-row" style={{ padding: '14px 20px 0', gap: 8 }}>
               {c.categories.map((cat) => (
                 <span key={cat.name} style={{ height: 40, paddingInline: 14, borderRadius: 20, display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, whiteSpace: 'nowrap', ...(cat.active ? { background: 'var(--s-brand)', color: '#fff', fontWeight: 600 } : { background: '#fff', border: '1px solid var(--s-line)' }) }}>
+                  {cat.img && <span style={{ width: 24, height: 24, borderRadius: 12, overflow: 'hidden', background: '#fbf3ec', flexShrink: 0, display: 'flex' }}><img src={cat.img} alt="" width={24} height={24} loading="lazy" decoding="async" /></span>}
                   {cat.name}<span style={{ fontSize: 12, padding: '1px 7px', borderRadius: 10, background: cat.active ? 'rgba(255,255,255,.22)' : '#f0f2f6' }}>{cat.count}</span>
                 </span>
               ))}
@@ -44,7 +61,7 @@ export function TillSellView({ c, locale }: { c: z.infer<typeof TillSellScreen>;
                 return (
                   <div key={item.name} className="t-tile" style={{ ['--i' as string]: i, background: '#fff', border: '1px solid var(--s-line)', borderRadius: 16, overflow: 'hidden', opacity: out ? 0.55 : 1 }}>
                     <div style={{ position: 'relative', height: item.img ? 120 : 92, background: item.img ? '#fbf3ec' : bg, color: fg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28, fontWeight: 700 }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element -- static markup inside a scaled screen; already a small WebP */}
+                      
                       {item.img ? <img src={item.img} alt="" width={120} height={120} loading="lazy" decoding="async" style={{ height: '100%', width: 'auto', filter: out ? 'grayscale(1)' : undefined }} /> : item.initials}
                       {item.flag && <span style={{ position: 'absolute', top: 8, insetInlineEnd: 8, fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 10, background: out ? '#14171f' : '#fff2dc', color: out ? '#fff' : '#8a5200' }}>{item.flag}</span>}
                     </div>
@@ -67,12 +84,16 @@ export function TillSellView({ c, locale }: { c: z.infer<typeof TillSellScreen>;
               {o.types.map((t, i) => <span key={t} style={{ height: 38, borderRadius: 9, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, ...(i === 0 ? { background: '#fff', fontWeight: 600, boxShadow: '0 1px 2px rgba(20,23,31,.12)' } : { color: 'var(--s-muted)' }) }}>{t}</span>)}
             </div>
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-              {o.lines.map((l) => (
-                <div key={l.name} className="s-row" style={{ padding: '10px 0', borderBottom: '1px solid var(--s-line)' }}>
-                  <span style={{ flex: 1, minWidth: 0 }}><b>{l.name}</b><br /><span className="s-sub" style={{ fontSize: 12 }}>{l.detail} · ×{l.qty}</span></span>
+              {o.lines.map((l) => {
+                const pic = c.items.find((it) => it.name === l.name)?.img;
+                return (
+                <div key={l.name} className="s-row" style={{ padding: '10px 0', borderBottom: '1px solid var(--s-line)', alignItems: 'center', gap: 10 }}>
+                  {pic && <span style={{ width: 40, height: 40, borderRadius: 10, overflow: 'hidden', background: '#fbf3ec', flexShrink: 0, display: 'flex' }}><img src={pic} alt="" width={40} height={40} loading="lazy" decoding="async" /></span>}
+                  <span style={{ flex: 1, minWidth: 0 }}><b>{l.name}</b><br /><span className="s-sub" style={{ fontSize: 12 }}>{l.detail ? `${l.detail} · ` : ''}×{l.qty}</span></span>
                   <b>{m(l.total)}</b>
                 </div>
-              ))}
+                );
+              })}
             </div>
             <div className="s-row" style={{ padding: '10px 12px', borderRadius: 10, background: '#fff5e5', color: '#7a4600', alignItems: 'center', gap: 8 }}><Icon name="alert" />{o.warning}</div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', rowGap: 6, fontSize: 14 }}>
@@ -80,9 +101,9 @@ export function TillSellView({ c, locale }: { c: z.infer<typeof TillSellScreen>;
               <b style={{ fontSize: 18, paddingTop: 6 }}>{o.totalLabel}</b><b style={{ fontSize: 22, paddingTop: 4 }}>{m(o.total)}</b>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}>
-              {o.pay.map((p, i) => <span key={p} style={{ height: 56, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 600, ...(i === 0 ? { border: '2px solid var(--s-brand)', background: '#eef2fd', color: '#163ba6' } : { border: '1px solid var(--s-line)' }) }}>{p}</span>)}
+              {o.pay.map((p, i) => <span key={p} style={{ height: c.payIcons ? 62 : 56, borderRadius: 12, display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'center', justifyContent: 'center', fontWeight: 600, fontSize: c.payIcons ? 13 : undefined, ...(i === 0 ? { border: '2px solid var(--s-brand)', background: '#eef2fd', color: '#163ba6' } : { border: '1px solid var(--s-line)' }) }}>{c.payIcons?.[i] && <Icon name={c.payIcons[i]!} size={18} />}{p}</span>)}
             </div>
-            <div className="s-row" style={{ height: 60, borderRadius: 14, background: 'var(--s-brand)', color: '#fff', alignItems: 'center', justifyContent: 'space-between', paddingInline: 22, fontSize: 18, fontWeight: 700 }}><span>{o.charge}</span><span>{m(o.total)}</span></div>
+            <div className="s-row" style={{ height: 60, borderRadius: 14, background: 'var(--s-brand)', color: '#fff', alignItems: 'center', justifyContent: 'space-between', paddingInline: 22, fontSize: 18, fontWeight: 700 }}><span className="s-row" style={{ alignItems: 'center', gap: 10 }}>{c.payIcons && <Icon name="card" size={20} />}{o.charge}</span><span>{m(o.total)}</span></div>
           </aside>
         </TillFrame>
       </div>

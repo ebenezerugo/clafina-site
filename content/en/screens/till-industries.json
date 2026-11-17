@@ -31,19 +31,23 @@
         },
         {
           "name": "Bowls",
-          "count": 9
+          "count": 9,
+          "img": "/products/restaurant/jollof.webp"
         },
         {
           "name": "Pizza and pasta",
-          "count": 7
+          "count": 7,
+          "img": "/products/restaurant/pizza.webp"
         },
         {
           "name": "Grills",
-          "count": 6
+          "count": 6,
+          "img": "/products/restaurant/burger.webp"
         },
         {
           "name": "Drinks",
-          "count": 12
+          "count": 12,
+          "img": "/products/restaurant/lemonade.webp"
         }
       ],
       "items": [
@@ -240,7 +244,8 @@
           "label": "View order",
           "amount": 10500
         }
-      }
+      },
+      "catalogue": "Menu"
     },
     {
       "id": "grocery",
@@ -260,19 +265,23 @@
         },
         {
           "name": "Food cupboard",
-          "count": 320
+          "count": 320,
+          "img": "/products/grocery/rice.webp"
         },
         {
           "name": "Fresh",
-          "count": 96
+          "count": 96,
+          "img": "/products/grocery/tomatoes.webp"
         },
         {
           "name": "Household",
-          "count": 140
+          "count": 140,
+          "img": "/products/grocery/detergent.webp"
         },
         {
           "name": "Drinks",
-          "count": 180
+          "count": 180,
+          "img": "/products/grocery/water.webp"
         }
       ],
       "items": [
@@ -460,7 +469,8 @@
           "label": "View order",
           "amount": 3300
         }
-      }
+      },
+      "catalogue": "Products"
     },
     {
       "id": "pharmacy",
@@ -480,19 +490,23 @@
         },
         {
           "name": "Pain and fever",
-          "count": 64
+          "count": 64,
+          "img": "/products/pharmacy/pain-relief.webp"
         },
         {
           "name": "Cough and cold",
-          "count": 48
+          "count": 48,
+          "img": "/products/pharmacy/cough-syrup.webp"
         },
         {
           "name": "Vitamins",
-          "count": 72
+          "count": 72,
+          "img": "/products/pharmacy/vitamin-c.webp"
         },
         {
           "name": "First aid",
-          "count": 40
+          "count": 40,
+          "img": "/products/pharmacy/first-aid.webp"
         }
       ],
       "items": [
@@ -680,7 +694,8 @@
           "label": "View order",
           "amount": 5300
         }
-      }
+      },
+      "catalogue": "Products"
     },
     {
       "id": "fashion",
@@ -700,19 +715,23 @@
         },
         {
           "name": "Women",
-          "count": 120
+          "count": 120,
+          "img": "/products/fashion/ankara-dress.webp"
         },
         {
           "name": "Men",
-          "count": 90
+          "count": 90,
+          "img": "/products/fashion/shirt.webp"
         },
         {
           "name": "Shoes",
-          "count": 48
+          "count": 48,
+          "img": "/products/fashion/sneakers.webp"
         },
         {
           "name": "Accessories",
-          "count": 52
+          "count": 52,
+          "img": "/products/fashion/handbag.webp"
         }
       ],
       "items": [
@@ -908,7 +927,8 @@
           "label": "View order",
           "amount": 70000
         }
-      }
+      },
+      "catalogue": "Products"
     },
     {
       "id": "electronics",
@@ -928,19 +948,23 @@
         },
         {
           "name": "Phones",
-          "count": 80
+          "count": 80,
+          "img": "/products/electronics/smartphone.webp"
         },
         {
           "name": "Laptops",
-          "count": 36
+          "count": 36,
+          "img": "/products/electronics/laptop.webp"
         },
         {
           "name": "Audio",
-          "count": 64
+          "count": 64,
+          "img": "/products/electronics/earbuds.webp"
         },
         {
           "name": "Accessories",
-          "count": 220
+          "count": 220,
+          "img": "/products/electronics/charger.webp"
         }
       ],
       "items": [
@@ -1128,7 +1152,8 @@
           "label": "View order",
           "amount": 330000
         }
-      }
+      },
+      "catalogue": "Products"
     },
     {
       "id": "salon",
@@ -1148,19 +1173,23 @@
         },
         {
           "name": "Hair",
-          "count": 24
+          "count": 24,
+          "img": "/products/salon/braids.webp"
         },
         {
           "name": "Nails",
-          "count": 16
+          "count": 16,
+          "img": "/products/salon/nail-polish.webp"
         },
         {
           "name": "Spa",
-          "count": 14
+          "count": 14,
+          "img": "/products/salon/facial.webp"
         },
         {
           "name": "Products",
-          "count": 32
+          "count": 32,
+          "img": "/products/salon/hair-oil.webp"
         }
       ],
       "items": [
@@ -1347,7 +1376,8 @@
           "label": "View order",
           "amount": 50000
         }
-      }
+      },
+      "catalogue": "Services"
     },
     {
       "id": "bakery",
@@ -1367,19 +1397,23 @@
         },
         {
           "name": "Bread",
-          "count": 10
+          "count": 10,
+          "img": "/products/bakery/bread.webp"
         },
         {
           "name": "Pastries",
-          "count": 18
+          "count": 18,
+          "img": "/products/bakery/croissants.webp"
         },
         {
           "name": "Cakes",
-          "count": 12
+          "count": 12,
+          "img": "/products/bakery/cake.webp"
         },
         {
           "name": "Coffee",
-          "count": 24
+          "count": 24,
+          "img": "/products/bakery/cappuccino.webp"
         }
       ],
       "items": [
@@ -1567,7 +1601,8 @@
           "label": "View order",
           "amount": 6600
         }
-      }
+      },
+      "catalogue": "Menu"
     },
     {
       "id": "hardware",
@@ -1587,19 +1622,23 @@
         },
         {
           "name": "Building",
-          "count": 240
+          "count": 240,
+          "img": "/products/hardware/cement.webp"
         },
         {
           "name": "Paint",
-          "count": 160
+          "count": 160,
+          "img": "/products/hardware/paint.webp"
         },
         {
           "name": "Tools",
-          "count": 380
+          "count": 380,
+          "img": "/products/hardware/hammer.webp"
         },
         {
           "name": "Electrical",
-          "count": 290
+          "count": 290,
+          "img": "/products/hardware/cable.webp"
         }
       ],
       "items": [
@@ -1787,7 +1826,48 @@
           "label": "View order",
           "amount": 24300
         }
-      }
+      },
+      "catalogue": "Products"
     }
+  ],
+  "nav": [
+    {
+      "label": "Dashboard",
+      "icon": "grid"
+    },
+    {
+      "label": "POS",
+      "icon": "till"
+    },
+    {
+      "label": "Orders",
+      "icon": "clipboard"
+    },
+    {
+      "label": "{catalogue}",
+      "icon": "book"
+    },
+    {
+      "label": "Inventory",
+      "icon": "box"
+    },
+    {
+      "label": "Reports",
+      "icon": "chart"
+    },
+    {
+      "label": "Customers",
+      "icon": "users"
+    },
+    {
+      "label": "Settings",
+      "icon": "settings"
+    }
+  ],
+  "payIcons": [
+    "cash",
+    "transfer",
+    "card",
+    "dots"
   ]
 }

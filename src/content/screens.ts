@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { ICON_NAMES } from '../screens/kit/types';
 
 const tone = z.enum(['good', 'warn', 'bad', 'info']);
 const icon = z.enum(['home', 'sales', 'money', 'more', 'plus', 'bell', 'help', 'box', 'bank', 'alert', 'check', 'up', 'down', 'chevron', 'search', 'cart', 'users', 'chart', 'menu', 'phone', 'clock', 'receipt', 'table', 'leaf']);
@@ -22,7 +23,11 @@ export const PhoneHomeScreen = z.object({
 
 export const TillSellScreen = z.object({
   ...base, search: z.string(), online: z.string(), cashier: z.object({ initials: z.string(), name: z.string(), role: z.string() }),
-  categories: z.array(z.object({ name: z.string(), count: z.number(), active: z.boolean().optional() })),
+  /** The business and its back-office menu, shown as a sidebar (the home page's till). */
+  business: z.object({ name: z.string(), initials: z.string(), brand: z.string() }).optional(),
+  nav: z.array(z.object({ label: z.string(), icon: z.enum(ICON_NAMES), active: z.boolean().optional() })).optional(),
+  payIcons: z.array(z.enum(ICON_NAMES)).optional(),
+  categories: z.array(z.object({ name: z.string(), count: z.number(), active: z.boolean().optional(), img: z.string().optional() })),
   items: z.array(z.object({ name: z.string(), price: z.number(), stock: z.string(), initials: z.string().optional(), img: z.string().startsWith('/products/').optional(), flag: z.string().optional() })),
   order: z.object({
     title: z.string(), meta: z.string(), types: z.array(z.string()),
@@ -53,10 +58,11 @@ const Money = z.number().int();
 export const TillIndustriesScreen = z.object({
   illustrative: z.literal(true), currency: z.literal('NGN'), online: z.string(), pay: z.array(z.string()).length(4), charge: z.string(),
   lead: z.string(), chooser: z.string(), label: z.string().includes('{industry}'),
+  nav: z.array(z.object({ label: z.string(), icon: z.enum(ICON_NAMES) })).min(4), payIcons: z.array(z.enum(ICON_NAMES)).length(4),
   industries: z.array(z.object({
-    id: z.string().regex(/^[a-z-]+$/), chip: z.string(), headline: z.string(),
+    id: z.string().regex(/^[a-z-]+$/), chip: z.string(), headline: z.string(), catalogue: z.string(),
     cashier: z.object({ initials: z.string(), name: z.string(), role: z.string() }), search: z.string(),
-    categories: z.array(z.object({ name: z.string(), count: z.number(), active: z.boolean().optional() })),
+    categories: z.array(z.object({ name: z.string(), count: z.number(), active: z.boolean().optional(), img: z.string().startsWith('/products/').optional() })),
     items: z.array(z.object({ name: z.string(), img: z.string().startsWith('/products/'), price: Money, stock: z.string(), flag: z.string().optional() })).length(8),
     order: z.object({
       title: z.string(), meta: z.string(), types: z.array(z.string()).length(3),

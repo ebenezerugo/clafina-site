@@ -51,6 +51,15 @@ export function PhoneDevice({ children, className = '' }: { children: ReactNode;
     <div className={`@container ${className}`}>
       <div className="relative rounded-[15cqw] bg-[#15171d] p-[2.2cqw] shadow-[0_0_0_1px_rgb(255_255_255/0.1),0_40px_80px_-30px_rgb(0_0_0/0.7)]">
         <div aria-hidden="true" className="absolute start-1/2 top-[4.4cqw] z-10 h-[5.4cqw] w-[26cqw] -translate-x-1/2 rounded-full bg-[#0b0c10] rtl:translate-x-1/2" />
+        {/* The status bar either side of the camera pill: what makes a drawn phone read as a real one. */}
+        <div aria-hidden="true" className="absolute inset-x-[11cqw] top-[4.6cqw] z-10 flex items-center justify-between text-[#0b0c10]" dir="ltr">
+          <span className="text-[3.9cqw] font-semibold leading-none tracking-tight">9:41</span>
+          <span className="flex items-center gap-[1.3cqw]">
+            <svg viewBox="0 0 18 12" className="h-[2.9cqw] w-auto" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx=".8" /><rect x="5" y="5.5" width="3" height="6.5" rx=".8" /><rect x="10" y="3" width="3" height="9" rx=".8" /><rect x="15" y="0" width="3" height="12" rx=".8" /></svg>
+            <svg viewBox="0 0 16 12" className="h-[2.9cqw] w-auto" fill="currentColor"><path d="M8 2.6c2.3 0 4.4.9 6 2.4l1.4-1.5A10.4 10.4 0 0 0 8 .5 10.4 10.4 0 0 0 .6 3.5L2 5c1.6-1.5 3.7-2.4 6-2.4zm0 4c1.2 0 2.3.5 3.2 1.2l1.4-1.5A6.7 6.7 0 0 0 8 4.5c-1.8 0-3.4.7-4.6 1.8l1.4 1.5C5.7 7.1 6.8 6.6 8 6.6zm0 4.9 2-2.1A2.9 2.9 0 0 0 8 8.6c-.8 0-1.5.3-2 .8z" /></svg>
+            <svg viewBox="0 0 27 13" className="h-[3cqw] w-auto"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" strokeOpacity=".4" /><rect x="2" y="2" width="18" height="9" rx="2" fill="currentColor" /><path d="M25 4.5v4c.8-.3 1.4-1.1 1.4-2s-.6-1.7-1.4-2z" fill="currentColor" fillOpacity=".45" /></svg>
+          </span>
+        </div>
         <div className="overflow-hidden rounded-[12.8cqw] bg-white pb-[3.5cqw] pt-[11cqw] [&_[data-screen]]:!rounded-none">{children}</div>
       </div>
     </div>
