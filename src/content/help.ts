@@ -110,6 +110,8 @@ export const HelpHome = z.strictObject({
   pagesLabel: z.string(),
   articlesLabel: z.string(),
   openInApp: z.string(),
+  /** The how-to's second button: the same steps as a tour in the web app. */
+  showMe: z.string(),
   onThisPage: z.string(),
   everyPage: z.string(),
   howTo: z.string(),
