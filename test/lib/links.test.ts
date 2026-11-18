@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { campaignFrom } from '@/lib/campaign';
-import { appUrl, openInAppUrl, signupUrl } from '@/lib/links';
+import { appUrl, openInAppUrl, signupUrl, tourUrl } from '@/lib/links';
 
 describe('signupUrl', () => {
   it('carries pack, plan, language, country and campaign in a fixed order, encoded', () => {
@@ -29,6 +29,15 @@ describe('app links', () => {
   it('builds app and open-in-app addresses', () => {
     expect(appUrl('/restaurant/floor')).toBe('https://app.clafina.com/restaurant/floor');
     expect(openInAppUrl('/restaurant/floor')).toBe('https://clafina.com/open/restaurant/floor');
+  });
+});
+
+describe('tourUrl', () => {
+  it('opens the guide page in the web app with the tour asked for', () => {
+    expect(tourUrl('/sales/invoices', 'send-an-invoice')).toBe('https://app.clafina.com/sales/invoices?tour=send-an-invoice');
+  });
+  it('encodes the guide and keeps the page as it is', () => {
+    expect(tourUrl('/procurement/orders', 'a b&c')).toBe('https://app.clafina.com/procurement/orders?tour=a+b%26c');
   });
 });
 

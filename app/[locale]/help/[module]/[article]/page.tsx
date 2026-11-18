@@ -6,6 +6,7 @@ import { localeEnabled } from '@/config/switches';
 import { loadContent } from '@/content/load';
 import { HelpHome } from '@/content/help';
 import { helpArticlePath, helpArticles, helpGuide, helpModulePath, helpModules, openPage } from '@/lib/help';
+import { tourUrl } from '@/lib/links';
 import { HELP_LOCALES, localePath } from '@/lib/paths';
 import { alternates, robotsFor, SITE_ORIGIN } from '@/lib/seo';
 import { HeroAura } from '@/components/sections/ui';
@@ -60,6 +61,7 @@ export default async function HelpArticlePage({ params }: Props) {
             <div className="mt-6 flex flex-wrap items-center gap-4">
               {page && <p className="text-sm font-semibold">{page.where}</p>}
               <a href={openPage(a.page)} className="inline-flex min-h-11 items-center rounded-control bg-primary px-5 font-semibold text-on-primary hover:bg-primary-hover">{c.openInApp}</a>
+              <a href={tourUrl(a.page, a.slug)} className="inline-flex min-h-11 items-center rounded-control border border-line bg-raised px-5 font-semibold hover:border-ink">{c.showMe}</a>
             </div>
           </div>
         </section>

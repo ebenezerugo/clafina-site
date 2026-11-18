@@ -26,6 +26,16 @@ export function appUrl(path: string): string {
   return new URL(path.replace(/^\//, ''), fact(SITE.appUrl) ?? PREVIEW_APP_URL).toString();
 }
 
+/**
+ * A how-to played as a tour in the web app: its page with `?tour=<guide>`. The app walks the person through the
+ * steps there and never presses anything for them. Always the web app: the phone app has no tours.
+ */
+export function tourUrl(page: string, guide: string): string {
+  const url = new URL(appUrl(page));
+  url.searchParams.set('tour', guide);
+  return url.toString();
+}
+
 /** A link the phone app claims through Universal Links and App Links; elsewhere it opens the web app. */
 export function openInAppUrl(path: string): string {
   return `${MARKETING_ORIGIN}/open${path.startsWith('/') ? path : `/${path}`}`;
