@@ -1,5 +1,10 @@
 {
+  "kind": "help-module",
   "module": "performance",
+  "sources": [
+    "commerce-web/src/app/features/channels/presentation/ui/performance/performance-forms.component.ts",
+    "commerce-web/src/app/features/channels/presentation/ui/performance/performance-form-detail.component.ts"
+  ],
   "intro": "See how your online shop is doing, and where your forms lose people. Open a shop from Sales channels and choose its Performance tab.",
   "start": [
     "Open your online shop and choose Performance, then Forms.",
