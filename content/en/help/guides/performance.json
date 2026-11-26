@@ -1,0 +1,65 @@
+{
+  "module": "performance",
+  "intro": "See how your online shop is doing, and where your forms lose people. Open a shop from Sales channels and choose its Performance tab.",
+  "start": [
+    "Open your online shop and choose Performance, then Forms.",
+    "Pick the days and, if you want, one kind of device at the top."
+  ],
+  "articles": [
+    {
+      "slug": "find-where-a-form-loses-people",
+      "title": "Find where a form loses people",
+      "summary": "See how many started a form, how many sent it, and the step and field where the rest left.",
+      "page": "/sales/channels",
+      "before": [
+        "Your shop needs to count visits. If it does not, Performance says so and offers to turn it on."
+      ],
+      "steps": [
+        {
+          "lead": "Open Performance",
+          "rest": "on your online shop and choose Forms."
+        },
+        {
+          "lead": "Read the list.",
+          "rest": "Each form shows how many started, how many were sent, how many left and the usual time a sent one took. Turn Compare on to see the days before."
+        },
+        {
+          "lead": "Press a form's name.",
+          "rest": "A drawer opens with its steps and its fields."
+        },
+        {
+          "lead": "Look for Most leave here",
+          "rest": "on the steps, then sort the fields by Left here, Time, Corrections or Errors."
+        }
+      ],
+      "after": "A form that shows an error often, or that most people leave at one field, is the one to change first. Press Refresh to read the figures again.",
+      "tips": [
+        "A contact form is named by the title of its block on your page.",
+        "A day marked incomplete lost some counts, so its figures may be low."
+      ],
+      "related": [
+        "count-a-sent-form-in-a-funnel"
+      ]
+    },
+    {
+      "slug": "count-a-sent-form-in-a-funnel",
+      "title": "Count a sent form in your own funnel",
+      "summary": "Add a form that was sent as a step of a funnel, to see how many visitors get there.",
+      "page": "/sales/channels",
+      "steps": [
+        {
+          "lead": "Open Your funnels",
+          "rest": "on the Performance overview and press New funnel."
+        },
+        {
+          "lead": "Choose A form sent",
+          "rest": "for a step and pick the form from the list."
+        },
+        {
+          "lead": "Press Save the funnel.",
+          "rest": "Its steps are counted from then on."
+        }
+      ]
+    }
+  ]
+}
