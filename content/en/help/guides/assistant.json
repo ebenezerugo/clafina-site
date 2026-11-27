@@ -50,7 +50,7 @@
       "slug": "write-with-the-assistant",
       "title": "Write with the Assistant on the page you are on",
       "summary": "Open the Assistant on a campaign, a message, a quotation, a product or a support ticket. It sees the page, drafts what you ask for and puts it in the form only when you say so.",
-      "page": "/outreach/campaigns",
+      "page": "/campaigns",
       "steps": [
         {
           "lead": "Press Ask the Assistant",
