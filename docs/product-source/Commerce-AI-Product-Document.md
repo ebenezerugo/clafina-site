@@ -1,4 +1,4 @@
-# Commerce AI — Product Document
+# Clafina Intelligence — Product Document
 
 *Live document: https://claude.ai/artifact/FMHjZEDcojRnJY8pJgJe42 (this file is its copy as of 12 October 2026). It carries forward the Capture document (`Capture-Product-Document.md`).*
 
@@ -19,7 +19,7 @@ Commerce builds and runs its own AI, so organisations never have to bring an AI 
 - **Retention and limits are the organisation's to set,** per location or however it chooses.
 - **Where to start:** where it is best, covering everything in the end (proposed order in section 12).
 
-## 3. What Commerce AI does
+## 3. What Clafina Intelligence does
 
 | Capability | What the person sees |
 | --- | --- |
@@ -37,7 +37,7 @@ Everything in the Capture draft stands (the six-step flow, one schema per docume
 
 - **From Drive:** any file in Drive can be used to create a document ("Create from this file": a bill from a scanned invoice, a sales order from a customer's PDF order), and "Fill from a document" on a form can pick a file from Drive as well as upload one. The document keeps a Drive reference to the file it came from.
 - **From messaging channels:** photos, documents and voice notes sent to the organisation's WhatsApp, Telegram, Instagram, Facebook Messenger or TikTok business accounts land in the Capture inbox as drafts waiting for review, when the organisation turns that on for that channel and location.
-- **Readers are ours:** OCR, layout reading and speech recognition run inside Commerce AI; no organisation needs a cloud OCR or speech account.
+- **Readers are ours:** OCR, layout reading and speech recognition run inside Clafina Intelligence; no organisation needs a cloud OCR or speech account.
 - **First targets:** supplier bills and expense receipts (most often keyed by hand, the easiest to check: totals, VAT, supplier), then delivery notes and goods receipts, then sales orders and quotations by voice, then everything else.
 
 ## 5. Ask: chat with the organisation's data, and reports on request
@@ -58,7 +58,7 @@ Everything in the Capture draft stands (the six-step flow, one schema per docume
 ## 7. Knowledge: retrieval over the organisation's own content (RAG)
 
 - **What is indexed:** Drive files the organisation allows, document text (quotations, invoices, contracts, policies), notes and comments, product descriptions, and Commerce's own help, all per organisation.
-- **Vector store: a dedicated vector database, run as its own service** (decided 12 October), beside Commerce AI the way Commerce AI sits beside Commerce. Recommended: Qdrant (Apache 2.0, written in Rust, light enough for a laptop, with filtering and multi-tenancy built in), with the organisation id on every entry and enforced on every query. Weaviate (BSD) and Milvus (Apache 2.0) are the alternatives; Milvus is heavier to run.
+- **Vector store: a dedicated vector database, run as its own service** (decided 12 October), beside Clafina Intelligence the way Clafina Intelligence sits beside Commerce. Recommended: Qdrant (Apache 2.0, written in Rust, light enough for a laptop, with filtering and multi-tenancy built in), with the organisation id on every entry and enforced on every query. Weaviate (BSD) and Milvus (Apache 2.0) are the alternatives; Milvus is heavier to run.
 - **Isolation:** one organisation's content is never retrievable by another, and never used to answer another's question.
 - **Access at answer time:** retrieved items are checked against the asking person's access in Commerce before they are used, so a document they cannot open is never quoted to them.
 - **Freshness:** Commerce's events (outbox and Kafka) tell the AI service what changed, so the index follows the records.
@@ -148,7 +148,7 @@ Every library and model is licence-checked before it is adopted, and the result 
 
 ## 9. The service
 
-- **Commerce AI**, a Python service in its own repository with its own infrastructure, like the wallet system.
+- **Clafina Intelligence**, a Python service in its own repository with its own infrastructure, like the wallet system.
 - **Inside it:** an API Commerce calls (capture jobs, chat, reports, actions); the model gateway; model serving (Ollama on the Mac now, vLLM-class servers on GPUs in AWS later); OCR and speech pipelines; a client of the vector database service; an MCP client that calls Commerce's MCP tools as the user; usage metering per organisation; an evaluation harness.
 - **Talking to Commerce:** Commerce sends jobs and receives results through its API and events; the AI service never reads Commerce's database. Results land in Commerce as drafts through the same use cases the screens use.
 - **Infrastructure:** GPU servers for the models, sized for the default model first; queueing so a burst of scans waits rather than fails; a small CPU tier for OCR clean-up and light models; separate staging and production.
@@ -202,7 +202,7 @@ The list of ERP AI features you shared (finance, inventory, sales, HR, procureme
 4. **Suggest, explain, let people decide.** Every score and forecast shows why (the figures behind it), lands as a suggestion or a draft, and learns from what people accept or reject.
 5. **Prove it before showing it.** A new model runs silently first ("shadow mode") and is shown only when its back-test beats the simple method on that organisation's own history.
 6. **No raw SQL from a model.** Questions in plain language go through the reporting layer and the person's permissions (section 5), never through text-to-SQL on the database, which would bypass permissions and tenancy.
-7. **Our own service.** The listed cloud tools (Azure Form Recognizer, OpenAI, LangChain, Rasa) are replaced by Commerce AI's own models and tools (sections 8 and 9).
+7. **Our own service.** The listed cloud tools (Azure Form Recognizer, OpenAI, LangChain, Rasa) are replaced by Clafina Intelligence's own models and tools (sections 8 and 9).
 
 ### Feature by feature
 
@@ -254,7 +254,7 @@ All open source and permissively licensed: statsforecast and Prophet for forecas
 
 ## 13. Your answers (12 October)
 
-1. **Bring your own provider:** yes. The existing AI provider slot stays; Commerce AI is the default.
+1. **Bring your own provider:** yes. The existing AI provider slot stays; Clafina Intelligence is the default.
 2. **Training on organisations' data:** opt-in per organisation, off by default.
 3. **Models:** use what we have, Llama through Ollama, behind the gateway; others (gpt-oss, Mistral, Granite, N-ATLaS, and DeepSeek later) plug in as we develop.
 4. **Hosting:** local on the Mac for now (9.1), used from your phone at home; later AWS through infrastructure as code.

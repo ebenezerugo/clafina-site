@@ -1,6 +1,6 @@
 # Capture: Scans and Voice for Data Entry
 
-*Live document: https://claude.ai/artifact/5pq5GoDNym6ugZHNj23CDD (this file is its copy as of 12 October 2026). Kept as Draft 1 for reference; it is carried forward and superseded by the Commerce AI product document (`Commerce-AI-Product-Document.md`), which folds in the answers to its questions.*
+*Live document: https://claude.ai/artifact/5pq5GoDNym6ugZHNj23CDD (this file is its copy as of 12 October 2026). Kept as Draft 1 for reference; it is carried forward and superseded by the Clafina Intelligence product document (`Commerce-AI-Product-Document.md`), which folds in the answers to its questions.*
 
 11 October 2026 · Eben
 
@@ -136,7 +136,7 @@ The organisation chooses each provider in Integrations, as with every other serv
 6. **Learning and reports**: per-counterparty corrections, accuracy and budget reports.
 7. **Phone app**: camera capture and voice on the move, offline queueing.
 
-## 12. Open questions (answered 12 October in the Commerce AI document)
+## 12. Open questions (answered 12 October in the Clafina Intelligence document)
 
 1. **Default providers.** Start with the built-in open-source readers (nothing leaves our servers, lower accuracy on poor handwriting), or a cloud provider by default (higher accuracy, a cost per page or minute)?
 2. **Languages.** Which besides Nigerian English are needed first: Pidgin, Yoruba, Igbo, Hausa? Support varies by provider.
