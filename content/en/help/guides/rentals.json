@@ -6,10 +6,10 @@
     "commerce-api/documentation/INDUSTRY_PACKS.md",
     "commerce-web/src/app/features/rentals/presentation"
   ],
-  "intro": "The rentals pack, for equipment, party, car and tool hire: what you hire out, each agreement from hand-out to return, and what is due back. Switch it on in Settings › Industry packs for the places that hire things out.",
+  "intro": "The rentals pack, for equipment, party, car and tool hire: the products you hire out and their terms, each agreement from hand-out to return, and what is due back. Switch it on in Settings › Industry packs for the places that hire things out.",
   "start": [
     "Switch the rentals pack on in Settings › Industry packs, for the places that hire things out.",
-    "Add each item you hire out on Items, with its rate and deposit, then add its units with their tag codes.",
+    "Choose each product you hire out on Items, with its rates and deposit, then add its units: each unit is an asset of that product.",
     "Reserve your first rental on Agreements, and hand it out when the customer collects it.",
     "Check Returns due each day for what is late and what is due back."
   ],
@@ -17,24 +17,32 @@
     {
       "slug": "add-an-item-to-hire",
       "title": "Add something to hire out",
-      "summary": "An item is what you hire out, with its rate and deposit. Its units are the real pieces, each with a tag you scan at hand-out and return.",
+      "summary": "Hiring out starts from a product in your catalogue: its name, picture and tax come from there. Set its rates and deposit for this place, then add its units. Each unit is an asset, with a tag you scan at hand-out and return.",
       "page": "/rentals/items",
       "steps": [
         {
-          "lead": "Press New item",
+          "lead": "Press Hire out a product",
           "rest": "on Items."
         },
         {
-          "lead": "Give it a name and rate,",
-          "rest": "charged per day or per hour, and the deposit for each unit. Add its own late rate if it has one."
+          "lead": "Choose the product.",
+          "rest": "Search by name, SKU or barcode. If it is not in your catalogue yet, make it there and then; it is set up to be hired out."
         },
         {
-          "lead": "Press Make the item,",
-          "rest": "then open it."
+          "lead": "Set the rates,",
+          "rest": "charged per day or per hour. Add a price a week and a month if you give one, and its own late rate if it has one."
         },
         {
-          "lead": "Enter the new unit's tag code",
-          "rest": "and press Add the unit, once for each piece you own."
+          "lead": "Set the deposit and cover:",
+          "rest": "the deposit for each unit, and the damage cover a day if you offer it."
+        },
+        {
+          "lead": "Press Set the terms,",
+          "rest": "then open the item."
+        },
+        {
+          "lead": "Add its units.",
+          "rest": "Under Units, choose an asset of this product that is not a unit yet, or leave Make a new asset and enter a tag code. Press Add the unit, once for each piece you own."
         },
         {
           "lead": "Use Is it free?",
@@ -42,7 +50,8 @@
         }
       ],
       "tips": [
-        "A unit that needs mending can be taken off for mending, so nobody hires it. Press Put back when it is fixed.",
+        "A product has one set of terms at each place. To change the rates, open the item; to change its name, picture or tax, change the product in the catalogue.",
+        "A unit is off the calendar while its asset is retired or has a maintenance job open. Take off for mending opens that job; Put back cancels one that has not started, and one under way is finished in Assets.",
         "Without its own late rate, an item's late fee follows your rentals settings."
       ],
       "related": [
