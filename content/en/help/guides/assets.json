@@ -88,12 +88,12 @@
           "rest": "on the Asset register or the Overview."
         },
         {
-          "lead": "Give its name and category.",
-          "rest": "Its life, method and residual value fill in from the class or the category."
+          "lead": "Say which product it is,",
+          "rest": "if it is one you keep in your catalogue, then give its name and category. Its life, method and residual value fill in from the class or the category."
         },
         {
           "lead": "Add how you know it:",
-          "rest": "serial number, barcode, RFID or NFC tag, manufacturer and model. None of these can be used by two assets."
+          "rest": "serial number, barcode, RFID or NFC tag, manufacturer and model. None of these can be used by two assets. A product kept by serial number needs one for each asset."
         },
         {
           "lead": "Add where it is, how it is owned and what it cost,",
@@ -106,7 +106,8 @@
       ],
       "tips": [
         "The tag's QR code opens the asset's page. It carries nothing about money or people.",
-        "Only an untouched draft can be deleted. Any other asset is retired, and keeps its history."
+        "Only an untouched draft can be deleted. Any other asset is retired, and keeps its history.",
+        "An asset that is one unit of a product shows the product's picture on its page and keeps its product and serial number. On the register, filter by product to see every asset of one kind."
       ],
       "related": [
         "import-assets",
@@ -342,24 +343,24 @@
     },
     {
       "slug": "put-stock-into-service",
-      "title": "Put bought goods into service as assets",
+      "title": "Put received goods or stock into service as assets",
       "summary": "Turn goods you received or hold in stock into assets, one per unit, at what they cost, with the entry posted for you.",
       "page": "/assets/acquisition",
       "before": [
-        "The item must be held as the Asset inventory type."
+        "You need the permission to put goods into service."
       ],
       "steps": [
         {
           "lead": "Open Put into service.",
-          "rest": "Goods received that are still to put into service are listed."
+          "rest": "Received goods still to put into service are listed. Turn on Ready to put into service to see only the lines marked for use on a receipt."
         },
         {
           "lead": "Choose Put into service",
           "rest": "on the receipt line, or Put stock into service for goods already on the shelf."
         },
         {
-          "lead": "Say how many units,",
-          "rest": "and give each a serial number where one is needed."
+          "lead": "Say how many units.",
+          "rest": "A row appears for each unit: its serial number, tag, place, custodian and condition. Open Category, class and life on a row when that unit differs."
         },
         {
           "lead": "Press Put into service.",
@@ -367,6 +368,8 @@
         }
       ],
       "tips": [
+        "Out of ten received, you can put three into service and leave seven in stock: the other seven stay for sale or the next step.",
+        "A product kept by serial number needs a serial number for each unit.",
         "An asset that costs less than your capitalisation threshold is expensed: it is kept and tracked, but never depreciated.",
         "An asset's page can trace it back to its goods receipt, order, supplier and invoice."
       ],
