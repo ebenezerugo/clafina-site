@@ -6107,7 +6107,7 @@ person. Decided with the user, 12 October:
     posted after the setting; reports' months are UTC; analytics report
     definitions were not added (the page and widgets read the read models).
 
-### Phase 16 — Commerce AI *(written 12 October from the Commerce AI product document, every question answered; ten steps)* ← **steps 1 and 2 built, 13 October; the assistant (steps 4, 6, 7 and 8 together) built, 14 October; step 3 built, 17 October; step 5 built, 17 October; the v3 D boards' API (Assistant and Capture) built, 25 October** ([COMMERCE_AI.md](COMMERCE_AI.md) §19)
+### Phase 16 — Clafina Intelligence *(written 12 October from the Clafina Intelligence product document, every question answered; ten steps)* ← **steps 1 and 2 built, 13 October; the assistant (steps 4, 6, 7 and 8 together) built, 14 October; step 3 built, 17 October; step 5 built, 17 October; the v3 D boards' API (Assistant and Capture) built, 25 October** ([COMMERCE_AI.md](COMMERCE_AI.md) §19)
 
 Commerce's own AI as a separate Python service, `commerce-ai`
 (`~/SoftwareProjects/commerce-ai`, port 8160), behind the existing `ai`
@@ -6175,7 +6175,7 @@ transcript and on each draft's source; recordings' origin, title and the organis
 reading has got, what to do when it failed, how it came (WhatsApp by name, filterable), the inbox's tab numbers and
 attention band from the `capture-inbox-counts` read model (`GET /capture/inbox/counts`, pushed), the measures against
 the period before, and the empty inbox's address, allowance and estimates. Lint and unit run; e2e, drill steps and
-sweep fixtures written, not run. Left: page-by-page progress (needs Commerce AI), the web screens (web lane).
+sweep fixtures written, not run. Left: page-by-page progress (needs Clafina Intelligence), the web screens (web lane).
 
 ### Document lines *(asked 14 October 2026; built 16 October on `feat/document-lines`)*
 
@@ -6448,7 +6448,7 @@ the organisation's own `minimumNet` per group and `belowMinimumNet` on run lines
     currency-aware, each loading on its own and pushed live; arranged by the
     person or set per role; the shared SVG charts; `DASHBOARD.md`)*.
 
-12. **Phase 16 — Commerce AI** *(the product document's ten steps; steps 1 and
+12. **Phase 16 — Clafina Intelligence** *(the product document's ten steps; steps 1 and
     2, the service foundation and the capture of bills and expense receipts,
     built 13 October: API, web and the `commerce-ai` repository; the assistant,
     steps 4, 6, 7 and 8 together, built 14 October: voice notes of meetings into minutes and

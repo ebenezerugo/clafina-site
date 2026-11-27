@@ -42,7 +42,7 @@ The phone queues some writes and not others: approvals and money need a connecti
 - The storefront supports "four languages", which the docs do not name (ROADMAP §5).
 - The web app ships de, en, es, fr and it translation files (features.md). Whether every screen is
   translated is unclear.
-- Commerce AI plans Nigerian English, Pidgin, Yoruba, Igbo and Hausa (AI doc §2). These are plans; do not
+- Clafina Intelligence plans Nigerian English, Pidgin, Yoruba, Igbo and Hausa (AI doc §2). These are plans; do not
   claim them as built.
 
 **Currencies:** every amount carries its currency. The ledger keeps rates, base amounts, revaluation and
@@ -938,7 +938,7 @@ keep the original beside the record.
 - Originals kept in Drive (ROADMAP step 2).
 
 **Not yet (pre-launch):** test lane runs; page-by-page progress (ROADMAP step 3, v3 API); phone-app
-capture with offline queueing (Commerce AI step 10, status unclear).
+capture with offline queueing (Clafina Intelligence step 10, status unclear).
 
 **Surfaces:** web app, phone layout, chat platforms, email.
 

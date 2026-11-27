@@ -42,7 +42,45 @@
       ],
       "related": [
         "record-a-meeting",
-        "share-a-conversation"
+        "share-a-conversation",
+        "write-with-the-assistant"
+      ]
+    },
+    {
+      "slug": "write-with-the-assistant",
+      "title": "Write with the Assistant on the page you are on",
+      "summary": "Open the Assistant on a campaign, a message, a quotation, a product or a support ticket. It sees the page, drafts what you ask for and puts it in the form only when you say so.",
+      "page": "/outreach/campaigns",
+      "steps": [
+        {
+          "lead": "Press Ask the Assistant",
+          "rest": "at the top of the page you are writing on, such as a campaign's Message tab."
+        },
+        {
+          "lead": "Pick a first ask",
+          "rest": "such as Draft this email or Write a subject line, or say what you want in your own words."
+        },
+        {
+          "lead": "Press Use this",
+          "rest": "under a field to put its suggestion in the form, or Use all for every field. Each field shows what is there now and what it would put in."
+        },
+        {
+          "lead": "Press Undo",
+          "rest": "to put the old words back, or Not this to leave a field as it was."
+        },
+        {
+          "lead": "Press Save",
+          "rest": "on the page when you are happy. The Assistant never saves, sends or approves anything."
+        }
+      ],
+      "tips": [
+        "It keeps your {{recipient.firstName}} placeholders and will not use one the page does not know.",
+        "A field that is locked, or that you changed after the suggestion, is left alone.",
+        "On a page with no writing to help with, it still knows which page you are on."
+      ],
+      "related": [
+        "ask-a-question",
+        "record-a-meeting"
       ]
     },
     {
