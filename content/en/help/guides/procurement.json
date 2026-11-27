@@ -158,17 +158,22 @@
           "rest": "Count each line in any unit of the item, such as boxes or each. Add a batch or expiry where the item needs one."
         },
         {
+          "lead": "Say how many are for use,",
+          "rest": "if some of what came is to become assets. A row appears for each of those units to give its serial number, tag, place, custodian and condition. The rest stay in stock."
+        },
+        {
           "lead": "Press Save and receive.",
           "rest": "Nothing is counted into stock until you do. With an approval policy, it waits for an approver."
         },
         {
           "lead": "Once it is approved,",
-          "rest": "the goods are in stock and the order shows them as received. Press Bill it to enter the supplier's bill."
+          "rest": "the goods are in stock and the order shows them as received. The units for use go into service as assets, and the line reads, for example, 10 received · 3 put into service · 7 to stock. Press Bill it to enter the supplier's bill."
         }
       ],
       "tips": [
         "You cannot receive more than the order asked for, beyond the allowance in your settings.",
-        "The Not yet billed tab lists receipts still waiting for the supplier's bill."
+        "The Not yet billed tab lists receipts still waiting for the supplier's bill.",
+        "The For use box shows only to people who may put goods into service. A unit that cannot be put into service yet, such as a serial number already on record, stays on Ready to put into service in Assets."
       ],
       "related": [
         "check-goods-that-arrived",
