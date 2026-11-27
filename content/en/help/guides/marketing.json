@@ -51,7 +51,54 @@
       ],
       "related": [
         "build-an-audience",
-        "set-campaign-categories"
+        "set-campaign-categories",
+        "write-a-campaign-email"
+      ]
+    },
+    {
+      "slug": "write-a-campaign-email",
+      "title": "Write a campaign email with pictures and products",
+      "summary": "Write the email as you would a document, add products with a button to order, and let the Assistant draft it for you to change.",
+      "page": "/campaigns",
+      "steps": [
+        {
+          "lead": "Open the campaign's Message tab",
+          "rest": "and choose the email channel."
+        },
+        {
+          "lead": "Write The email",
+          "rest": "in the box: headings, bold, italic, lists, links, pictures and alignment are in its toolbar. A picture is a PNG or JPEG of 1 MB at most."
+        },
+        {
+          "lead": "Press Personalise",
+          "rest": "to put in a first name or your organisation's name. Each person gets their own."
+        },
+        {
+          "lead": "Press Add products,",
+          "rest": "search by name or SKU, tick the ones you want and press Add. Each becomes a card with its picture, name and price, and a button."
+        },
+        {
+          "lead": "Check the button.",
+          "rest": "With an online shop it says Order now and puts the item in the shopper's cart, ready to check out. With no shop it says Pay now if you chose a payment link for the card, else Reply to order."
+        },
+        {
+          "lead": "Open the Assistant and ask it to draft the email.",
+          "rest": "Its suggestion appears in the conversation: change the words in place, then press Use this, or Use all. Undo puts back what was there."
+        },
+        {
+          "lead": "Press Preview",
+          "rest": "to see the email as one person will get it, with the cards, before you send."
+        }
+      ],
+      "after": "A campaign written as plain text before still opens, shown as paragraphs. Press Write it in blocks if you want a full layout with columns.",
+      "tips": [
+        "The price on a card is your list price.",
+        "SMS and WhatsApp messages stay plain text.",
+        "Clicks on a card's button are counted like any link in the email."
+      ],
+      "related": [
+        "send-a-campaign",
+        "build-an-audience"
       ]
     },
     {
